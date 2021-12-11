@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="90px" height="92px" viewBox="0 0 90 92" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Play button</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Home" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-1081.000000, -1085.000000)">
+        <g id="Play-button" transform="translate(1081.000000, 1085.000000)">
+            <g id="Group-3">
+                <g id="Group-6">
+                    <ellipse id="Oval-2" fill="#B2B7BE" opacity="0.5" cx="45" cy="45.8653846" rx="45" ry="45.8653846"></ellipse>
+                    <path d="M63.3980716,47.9808192 L38.0527092,63.6708054 C37.1135323,64.2522006 35.880865,63.9621613 35.2994697,63.0229843 C35.1037068,62.7067519 35,62.3421972 35,61.9702751 L35,30.5903027 C35,29.4857332 35.8954305,28.5903027 37,28.5903027 C37.3719221,28.5903027 37.7364768,28.6940095 38.0527092,28.8897724 L63.3980716,44.5797586 C64.3372485,45.1611538 64.6272879,46.3938212 64.0458926,47.3329981 C63.8829862,47.5961547 63.6612282,47.8179127 63.3980716,47.9808192 Z" id="Triangle" fill="#FBFBFB"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

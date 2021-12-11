@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="39px" height="39px" viewBox="0 0 39 39" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Download arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Download-arrow">
+            <g id="Group">
+                <rect id="Rectangle" fill="#EFEFEF" x="0" y="0" width="39" height="39"></rect>
+                <rect id="Rectangle-path" fill="#383747" fill-rule="nonzero" x="11" y="30" width="17" height="3"></rect>
+                <polygon id="Shape" fill="#383747" fill-rule="nonzero" points="18.059322 8 18.059322 24.9461906 12.8728814 20.4788547 11 22.6763206 19.5 30 28 22.6763206 26.1271186 20.4788547 20.940678 24.9461906 20.940678 8"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

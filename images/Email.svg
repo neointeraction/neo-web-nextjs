@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="40px" viewBox="0 0 59 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Mail_default</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Contact-us" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-41.000000, -231.000000)" opacity="0.5">
+        <g id="Mail_default" transform="translate(42.000000, 231.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="0.5">
+            <path d="M1.3386223,0.245532203 C0.608604554,0.245532203 -1.33862243e-07,0.861979661 -1.33862243e-07,1.60146441 L-1.33862243e-07,38.211661 C-1.33862243e-07,38.9511186 0.608604554,39.5675932 1.3386223,39.5675932 L56.2221421,39.5675932 C56.9521598,39.5675932 57.5607645,38.9511186 57.5607645,38.211661 L57.5607645,1.60146441 C57.5607645,0.861979661 56.9521598,0.245532203 56.2221421,0.245532203 L1.3386223,0.245532203 Z M1.6732779,1.60146441 L55.8874865,1.60146441 L28.7803823,26.4531525 L1.6732779,1.60146441 Z M1.3386223,3.10570169 L28.3411802,27.8514576 C28.5930385,28.0732705 28.967726,28.0732705 29.2195843,27.8514576 L56.2221421,3.10570169 L56.2221421,38.211661 L1.3386223,38.211661 L1.3386223,3.10570169 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

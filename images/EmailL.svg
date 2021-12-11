@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="59px" height="40px" viewBox="0 0 81 57" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>Mail_Hover</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Contact-us-S2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-41.000000, -252.000000)">
+        <g id="Mail_Hover" transform="translate(42.000000, 253.000000)" fill="#FFFFFF" fill-rule="nonzero" stroke="#FFFFFF" stroke-width="0.689655172">
+            <path d="M1.84637558,0.343745085 C0.839454558,0.343745085 -1.84637577e-07,1.20677153 -1.84637577e-07,2.24205017 L-1.84637577e-07,53.4963254 C-1.84637577e-07,54.5315661 0.839454558,55.3946305 1.84637558,55.3946305 L77.5477822,55.3946305 C78.5547032,55.3946305 79.394158,54.5315661 79.394158,53.4963254 L79.394158,2.24205017 C79.394158,1.20677153 78.5547032,0.343745085 77.5477822,0.343745085 L1.84637558,0.343745085 Z M2.30796952,2.24205017 L77.0861882,2.24205017 L39.697079,37.0344136 L2.30796952,2.24205017 Z M1.84637558,4.34798237 L39.0912831,38.9920407 C39.4386738,39.3025787 39.9554842,39.3025787 40.3028749,38.9920407 L77.5477822,4.34798237 L77.5477822,53.4963254 L1.84637558,53.4963254 L1.84637558,4.34798237 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>

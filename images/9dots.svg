@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <title>9dots</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Blog-Detail" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-610.000000, -3994.000000)">
+        <g id="Group-12" transform="translate(610.000000, 3989.000000)" fill="#4A4A4A">
+            <g id="9dots" transform="translate(0.000000, 5.000000)">
+                <circle id="Oval-12" cx="3" cy="3" r="3"></circle>
+                <circle id="Oval-12-Copy-3" cx="12" cy="3" r="3"></circle>
+                <circle id="Oval-12-Copy-6" cx="21" cy="3" r="3"></circle>
+                <circle id="Oval-12-Copy" cx="3" cy="12" r="3"></circle>
+                <circle id="Oval-12-Copy-4" cx="12" cy="12" r="3"></circle>
+                <circle id="Oval-12-Copy-7" cx="21" cy="12" r="3"></circle>
+                <circle id="Oval-12-Copy-2" cx="3" cy="21" r="3"></circle>
+                <circle id="Oval-12-Copy-5" cx="12" cy="21" r="3"></circle>
+                <circle id="Oval-12-Copy-8" cx="21" cy="21" r="3"></circle>
+            </g>
+        </g>
+    </g>
+</svg>
