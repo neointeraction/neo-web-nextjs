@@ -258,6 +258,10 @@ export default withRouter(
                                           />
                                         </div>
                                       </Link>
+                                      {console.log(
+                                        item.blog_detail.SEODescription,
+                                        "item"
+                                      )}
                                     </div>
                                   ))}
                               </div>

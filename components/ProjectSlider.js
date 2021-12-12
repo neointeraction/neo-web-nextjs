@@ -51,24 +51,34 @@ export default class ProjectSlider extends Component {
                 >
                   {[...context.state.projects].map((item) => (
                     <React.Fragment key={item.id}>
-                      <Link href={`/Projects/${item.id}`}>
-                        <div className="video-card-thumb">
-                          <div className="project-slider-card">
-                            <h1>{item.cardTitle}</h1>
-                            <img
-                              className="video-card-thumb project-card-thumb"
-                              src={`${baseUrl}${item.cardImage.url}`}
-                              alt="carousal-img"
-                            />
-                            <div
-                              className="info-slide-bg fadeInCard"
-                              style={{
-                                display: this.state.isMouseInside
-                                  ? "block"
-                                  : "none",
-                              }}
-                            >
+                      <Link
+                        href={{
+                          pathname: "/ProjectDetailPage",
+                          query: {
+                            id: `${item.id}`,
+                            data: JSON.stringify(item.cardTitle),
+                          },
+                        }}
+                      >
+                        <div className="link">
+                          <div className="video-card-thumb">
+                            <div className="project-slider-card">
                               <h1>{item.cardTitle}</h1>
+                              <img
+                                className="video-card-thumb project-card-thumb"
+                                src={`${baseUrl}${item.cardImage.url}`}
+                                alt="carousal-img"
+                              />
+                              <div
+                                className="info-slide-bg fadeInCard"
+                                style={{
+                                  display: this.state.isMouseInside
+                                    ? "block"
+                                    : "none",
+                                }}
+                              >
+                                <h1>{item.cardTitle}</h1>
+                              </div>
                             </div>
                           </div>
                         </div>

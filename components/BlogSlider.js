@@ -51,24 +51,34 @@ export default class BlogSlider extends Component {
                 >
                   {[...context.state.blogs].map((item) => (
                     <React.Fragment key={item.id}>
-                      <Link href={`/Blog/${item.id}`}>
-                        <div className="video-card-thumb">
-                          <div className="project-slider-card blog-card-thumb">
-                            <h1>{item.blogTitle}</h1>
-                            <img
-                              className="video-card-thumb project-card-thumb  width-100"
-                              src={`${baseUrl}${item.blogCardImage.url}`}
-                              alt="carousal-img"
-                            />
-                            <div
-                              className="info-slide-bg fadeInCard"
-                              style={{
-                                display: this.state.isMouseInside
-                                  ? "block"
-                                  : "none",
-                              }}
-                            >
+                      <Link
+                        href={{
+                          pathname: "/BlogDetailPage",
+                          query: {
+                            id: `${item.id}`,
+                            data: JSON.stringify(item.blogTitle),
+                          },
+                        }}
+                      >
+                        <div className="link">
+                          <div className="video-card-thumb">
+                            <div className="project-slider-card blog-card-thumb">
                               <h1>{item.blogTitle}</h1>
+                              <img
+                                className="video-card-thumb project-card-thumb  width-100"
+                                src={`${baseUrl}${item.blogCardImage.url}`}
+                                alt="carousal-img"
+                              />
+                              <div
+                                className="info-slide-bg fadeInCard"
+                                style={{
+                                  display: this.state.isMouseInside
+                                    ? "block"
+                                    : "none",
+                                }}
+                              >
+                                <h1>{item.blogTitle}</h1>
+                              </div>
                             </div>
                           </div>
                         </div>
