@@ -180,15 +180,27 @@ export default class FilterCard extends Component {
                       key={cards.id}
                     >
                       <div className="card-main-container" key={cards.id}>
-                        <Link href={`/Projects/${cards.id}`}>
-                          <CardTile
-                            key={cards.id}
-                            className={cards.className}
-                            category={cards.categories.map((li) => li.category)}
-                            cardTitle={cards.cardTitle}
-                            backgroundImages={cards.cardImage.url}
-                            cardInfoText={cards.cardInfoText}
-                          />
+                        <Link
+                          href={{
+                            pathname: "/ProjectDetailPage",
+                            query: {
+                              id: `${cards.id}`,
+                              data: JSON.stringify(cards.cardTitle),
+                            },
+                          }}
+                        >
+                          <div className="link">
+                            <CardTile
+                              key={cards.id}
+                              className={cards.className}
+                              category={cards.categories.map(
+                                (li) => li.category
+                              )}
+                              cardTitle={cards.cardTitle}
+                              backgroundImages={cards.cardImage.url}
+                              cardInfoText={cards.cardInfoText}
+                            />
+                          </div>
                         </Link>
                       </div>
                     </ReactWOW>

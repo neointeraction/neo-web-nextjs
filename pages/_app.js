@@ -1,4 +1,5 @@
 import "../css/main.css";
+import Head from "next/head";
 
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
@@ -14,6 +15,9 @@ function MyApp({ Component, pageProps }) {
         <BlogProvider>
           <BFSIProvider>
             <MainLayout>
+              <Head>
+                <link rel="shortcut icon" href="/favicon.png" />
+              </Head>
               <Component {...pageProps} />;
             </MainLayout>
           </BFSIProvider>
