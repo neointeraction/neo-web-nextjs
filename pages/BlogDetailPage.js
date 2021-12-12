@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
-import Head from "next/head";
+// import Head from "next/head";
+import { NextSeo } from "next-seo";
 import moment from "moment";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
@@ -97,16 +98,21 @@ export default withRouter(
 
     render() {
       const { blogInfo } = this.state;
+
       return (
         <div>
-          <Head>
+          {/* <Head>
             <title>{blogInfo.blog_detail.SEOTitle}</title>
             <meta
               name="description"
               content={blogInfo.blog_detail.SEODescription}
             />
             <meta name="keywords" content={blogInfo.blog_detail.SEOKeywords} />
-          </Head>
+          </Head> */}
+          <NextSeo
+            title={`Blog - ${blogInfo.blog_detail.SEOTitle}`}
+            description={blogInfo.blog_detail.SEODescription}
+          />
           {this.state.loading ? (
             <Loader />
           ) : (
