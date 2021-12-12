@@ -1,8 +1,7 @@
 {
     "headers": [
       {
-        "source": "/(.*)",
-        "destination": "https://strapi.neointeraction.com/(.*)",
+        "source": "/api/(.*)",
         "headers": [
           { "key": "Access-Control-Allow-Credentials", "value": "true" },
           { "key": "Access-Control-Allow-Origin", "value": "*" },
