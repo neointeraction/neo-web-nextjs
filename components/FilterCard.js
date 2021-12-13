@@ -182,10 +182,9 @@ export default class FilterCard extends Component {
                       <div className="card-main-container" key={cards.id}>
                         <Link
                           href={{
-                            pathname: "/ProjectDetailPage",
+                            pathname: `/Projects/${cards.id}`,
                             query: {
-                              id: `${cards.id}`,
-                              data: JSON.stringify(cards.cardTitle),
+                              title: JSON.stringify(cards.cardTitle),
                             },
                           }}
                         >

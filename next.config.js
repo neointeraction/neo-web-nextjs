@@ -1,7 +1,3 @@
-module.exports = {
-  reactStrictMode: false,
-};
-
 const withImages = require("next-images");
 module.exports = withImages({
   images: {
@@ -13,12 +9,5 @@ module.exports = withImages({
   devIndicators: {
     buildActivity: false,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/:path*",
-        destination: "https://strapi.neointeraction.com/:path*",
-      },
-    ];
-  },
+  reactStrictMode: true,
 });

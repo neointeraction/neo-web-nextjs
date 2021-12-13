@@ -364,7 +364,14 @@ export default withRouter(
                                 className="col-md-4 card-margin-bottom font-sm"
                                 key={cards.id}
                               >
-                                <Link href={`/Projects/${cards.id}`}>
+                                <Link
+                                  href={{
+                                    pathname: `/Projects/${cards.id}`,
+                                    query: {
+                                      title: JSON.stringify(cards.cardTitle),
+                                    },
+                                  }}
+                                >
                                   <div className="link">
                                     <CardTile
                                       key={cards.id}

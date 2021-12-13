@@ -53,10 +53,9 @@ export default class BlogSlider extends Component {
                     <React.Fragment key={item.id}>
                       <Link
                         href={{
-                          pathname: "/BlogDetailPage",
+                          pathname: `/Blog/${item.id}`,
                           query: {
-                            id: `${item.id}`,
-                            data: JSON.stringify(item.blogTitle),
+                            title: JSON.stringify(item.blogTitle),
                           },
                         }}
                       >

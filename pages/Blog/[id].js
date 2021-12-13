@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
-// import Head from "next/head";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+
 import moment from "moment";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
-import { baseUrl } from "../globalConfig";
+import { baseUrl } from "../../globalConfig";
 import { Twitter, Facebook, Linkedin } from "react-social-sharing";
 import {
   FacebookShareButton,
@@ -16,25 +16,39 @@ import {
 
 import { withRouter } from "next/router";
 
-import Loader from "../components/Loader";
-import SectionTitle from "../components/SectionTitle";
-import BlogSlider from "../components/BlogSlider";
+import Loader from "../../components/Loader";
+import SectionTitle from "../../components/SectionTitle";
+import BlogSlider from "../../components/BlogSlider";
 
-import BackArrow from "../images/BackArrow.svg";
+import BackArrow from "../../images/BackArrow.svg";
 // import Author from "../images/Author2.png";
-import FacebookIcon from "../images/facebook.svg";
-import LinkedInIcon from "../images/linkedIn.svg";
-import TwitterIcon from "../images/twitter.svg";
-import Menu from "../images/9dots.svg";
+import FacebookIcon from "../../images/facebook.svg";
+import LinkedInIcon from "../../images/linkedIn.svg";
+import TwitterIcon from "../../images/twitter.svg";
+import Menu from "../../images/9dots.svg";
 
-export async function getStaticProps(context) {
+export async function getStaticPaths() {
   // Call an external API endpoint to get posts.
   // You can use any data fetching library
-  const res = await fetch(baseUrl + `/blogs/${context}`);
+  const res = await fetch(baseUrl + `/blogs`);
   const data = await res.json();
 
-  // By returning { props: { posts } }, the Blog component
-  // will receive `posts` as a prop at build time
+  const paths = data.map((x) => {
+    return {
+      params: { id: x.id.toString() },
+    };
+  });
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps(context) {
+  const id = context.params.id;
+  const res = await fetch(baseUrl + `/blogs/${id}`);
+  const data = await res.json();
   return {
     props: {
       post: data,
@@ -72,6 +86,9 @@ export default withRouter(
         // console.log(this.state.blogInfo);
 
         this.setState({ loading: false });
+        this.props.post
+          ? this.setState({ loading: false })
+          : this.setState({ loading: true });
       } catch (error) {
         this.setState({ error });
       }
@@ -116,19 +133,21 @@ export default withRouter(
 
       return (
         <div>
-          {/* <Head>
-            <title>{blogInfo.blog_detail.SEOTitle}</title>
+          <Head>
+            <title>{this.props.post.blog_detail.SEOTitle}</title>
             <meta
               name="description"
-              content={blogInfo.blog_detail.SEODescription}
+              content={this.props.post.blog_detail.SEODescription}
             />
-            <meta name="keywords" content={blogInfo.blog_detail.SEOKeywords} />
-          </Head> */}
-          <NextSeo
-            title={`Blog - ${this.props.router.query.id}`}
-            description={blogInfo.blog_detail.SEODescription}
-          />
-          {console.log(this.props.posts, "this.props.posts")}
+            <meta
+              name="keywords"
+              content={this.props.post.blog_detail.SEOKeywords}
+            />
+            <meta
+              property="image"
+              content={`${baseUrl}${this.props.post.blogCardImage.url}`}
+            />
+          </Head>
           {this.state.loading ? (
             <Loader />
           ) : (
@@ -360,7 +379,7 @@ export default withRouter(
                 </ReactWOW>
                 <div className="container position-relative">
                   <div className="carousal-position">
-                    <ReactWOW animation="fadeInUp" delay="0.5s">
+                    <ReactWOW animation="fadeInUp" delay="0s">
                       <div>
                         <BlogSlider />
                       </div>

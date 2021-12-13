@@ -3,22 +3,37 @@ import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
 import moment from "moment";
-import { baseUrl } from "../globalConfig";
+import { baseUrl } from "../../globalConfig";
 import axios from "axios";
 
 import { withRouter } from "next/router";
 
-import Loader from "../components/Loader";
-import { BlogContext } from "../context/BlogContext";
-import SectionTitle from "../components/SectionTitle";
-import CardTileUpfront from "../components/CardTileUpfront";
+import Loader from "../../components/Loader";
+import { BlogContext } from "../../context/BlogContext";
+import SectionTitle from "../../components/SectionTitle";
+import CardTileUpfront from "../../components/CardTileUpfront";
 
-import BackArrow from "../images/BackArrow.svg";
-import Close from "../images/Close.svg";
+import BackArrow from "../../images/BackArrow.svg";
+import Close from "../../images/Close.svg";
+
+// export async function getStaticProps(context) {
+//   // Call an external API endpoint to get posts.
+//   // You can use any data fetching library
+//   const res = await fetch(baseUrl + "/blog-categories");
+//   const data = await res.json();
+
+//   // By returning { props: { posts } }, the Blog component
+//   // will receive `posts` as a prop at build time
+//   return {
+//     props: {
+//       blogData: data,
+//     },
+//   };
+// }
 
 export default withRouter(
   class Blog extends Component {
-    constructor() {
+    constructor(props) {
       super();
       this.state = {
         isMouseInside: false,
@@ -45,6 +60,12 @@ export default withRouter(
         this.setState({ error });
       }
     };
+
+    // componentDidMount = () => {
+    //   this.state.blogCategory
+    //     ? this.setState({ loading: false })
+    //     : this.setState({ loading: true });
+    // };
 
     handleBack() {
       this.props.router.back();
@@ -104,13 +125,13 @@ export default withRouter(
                                 animation="fadeIn"
                                 delay="0s"
                                 offset={-200}
+                                key={item.id}
                               >
                                 <Link
                                   href={{
-                                    pathname: "/BlogDetailPage",
+                                    pathname: `/Blog/${item.id}`,
                                     query: {
-                                      id: `${item.id}`,
-                                      data: JSON.stringify(item.blogTitle),
+                                      title: JSON.stringify(item.blogTitle),
                                     },
                                   }}
                                 >
@@ -231,16 +252,15 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: "/BlogDetailPage",
+                                          pathname: `/Blog/${item.id}`,
                                           query: {
-                                            id: `${item.id}`,
-                                            data: JSON.stringify(
+                                            title: JSON.stringify(
                                               item.blogTitle
                                             ),
                                           },
                                         }}
                                       >
-                                        <div className="link">
+                                        <div className="link" key={item.id}>
                                           <CardTileUpfront
                                             className={item.id}
                                             category={item.blog_categories.map(

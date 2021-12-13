@@ -403,7 +403,14 @@ export default withRouter(
                             <div className="row p-cards">
                               {context.state.blogs.slice(0, 3).map((item) => (
                                 <div className="col-md-4 mb-5" key={item.id}>
-                                  <Link href={`/Blog/${item.id}`}>
+                                  <Link
+                                    href={{
+                                      pathname: `/Blog/${item.id}`,
+                                      query: {
+                                        title: JSON.stringify(item.blogTitle),
+                                      },
+                                    }}
+                                  >
                                     <div className="link">
                                       <CardTileUpfront
                                         className={item.id}

@@ -53,10 +53,9 @@ export default class ProjectSlider extends Component {
                     <React.Fragment key={item.id}>
                       <Link
                         href={{
-                          pathname: "/ProjectDetailPage",
+                          pathname: `/Projects/${item.id}`,
                           query: {
-                            id: `${item.id}`,
-                            data: JSON.stringify(item.cardTitle),
+                            title: JSON.stringify(item.cardTitle),
                           },
                         }}
                       >

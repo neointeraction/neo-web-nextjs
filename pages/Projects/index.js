@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import FilterCardProjects from "../components/FilterCardProjects";
-import BackArrow from "../images/BackArrow.svg";
+import FilterCardProjects from "../../components/FilterCardProjects";
+import BackArrow from "../../images/BackArrow.svg";
 
 import { withRouter } from "next/router";
 
