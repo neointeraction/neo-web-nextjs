@@ -123,8 +123,6 @@ export default withRouter(
             />
             <meta name="keywords" content={blogInfo.blog_detail.SEOKeywords} />
           </Head>
-
-          {console.log(this.props.posts, "this.props.posts")}
           {this.state.loading ? (
             <Loader />
           ) : (
