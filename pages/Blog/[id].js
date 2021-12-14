@@ -7,7 +7,6 @@ import moment from "moment";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
 import { baseUrl } from "../../globalConfig";
-import { Twitter, Facebook, Linkedin } from "react-social-sharing";
 import {
   FacebookShareButton,
   LinkedinShareButton,
@@ -327,15 +326,9 @@ export default withRouter(
                       </h2>
                       <ul className="social-icons cf-basis blog-social">
                         <li id="fb">
-                          {/* <Facebook
-                          link={`https://neointeraction.github.io/neo-website/build/#/Blog/${this.state.pageHref}`}
-                          className="share-icn"
-                        /> */}
                           <FacebookShareButton
                             url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
                             className="share-icn"
-                            quote={blogInfo.blog_detail.SEOTitle}
-                            hashtag="#Blog"
                           />
                           <img src={FacebookIcon} alt="facebook" />
                         </li>
@@ -343,13 +336,12 @@ export default withRouter(
                           <LinkedinShareButton
                             url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
                             className="share-icn"
-                            summary="hello"
                           />
                           <img src={LinkedInIcon} alt="LinkedIn" />
                         </li>
                         <li id="twitter">
-                          <Twitter
-                            link={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                          <TwitterShareButton
+                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
                             className="share-icn"
                           />
                           <img src={TwitterIcon} alt="Twitter" />
