@@ -64,7 +64,7 @@ export default class BFSI extends Component {
             <title>BFSI | Neointeraction</title>
             <meta
               name="description"
-              content="Read interesting blogs on UI/UX designing as well as design case studies and articles of the design industry. Stay up to date by subscribing to newsletter."
+              content="Banking, Financial Services and Insurance"
             />
             <meta
               name="keywords"

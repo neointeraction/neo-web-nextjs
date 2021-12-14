@@ -81,8 +81,6 @@ export default withRouter(
       try {
         const res = await axios.get(baseUrl + `/blogs/${this.state.matchId}`);
         this.setState({ blogInfo: res.data });
-        // console.log(response.data);
-        // console.log(this.state.blogInfo);
 
         this.setState({ loading: false });
         this.props.post
@@ -94,9 +92,8 @@ export default withRouter(
       var str = window.location.href;
       var n = str.lastIndexOf("/");
       var result = str.substring(n + 1);
-      // console.log(result, "sss");
+
       this.setState({ pageHref: result });
-      console.log(this.props.router.query.id, "this.state.match");
     };
 
     componentDidUpdate = async (prevProps) => {
