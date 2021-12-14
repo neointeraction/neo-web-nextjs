@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
-// import Head from "next/head";
-import { NextSeo } from "next-seo";
+import Head from "next/head";
+
 import moment from "moment";
 import axios from "axios";
 import ReactMarkdown from "react-markdown";
@@ -116,18 +116,15 @@ export default withRouter(
 
       return (
         <div>
-          {/* <Head>
+          <Head>
             <title>{blogInfo.blog_detail.SEOTitle}</title>
             <meta
               name="description"
               content={blogInfo.blog_detail.SEODescription}
             />
             <meta name="keywords" content={blogInfo.blog_detail.SEOKeywords} />
-          </Head> */}
-          <NextSeo
-            title={`Blog - ${this.props.router.query.id}`}
-            description={blogInfo.blog_detail.SEODescription}
-          />
+          </Head>
+
           {console.log(this.props.posts, "this.props.posts")}
           {this.state.loading ? (
             <Loader />
