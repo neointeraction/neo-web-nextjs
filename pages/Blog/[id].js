@@ -140,7 +140,7 @@ export default withRouter(
               content={this.props.post.blog_detail.SEOKeywords}
             />
             <meta
-              property="image"
+              property="og:image"
               content={`${baseUrl}${this.props.post.blogCardImage.url}`}
             />
           </Head>
