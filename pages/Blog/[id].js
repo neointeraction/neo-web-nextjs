@@ -141,7 +141,7 @@ export default withRouter(
             />
             <meta
               property="og:image"
-              content={`${baseUrl}${this.props.post.blogCardImage.url}`}
+              content={`${baseUrl}${this.props.post.blogCardHeadImage.url}`}
             />
           </Head>
           {this.state.loading ? (
