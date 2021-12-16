@@ -324,21 +324,21 @@ export default withRouter(
                       <ul className="social-icons cf-basis blog-social">
                         <li id="fb">
                           <FacebookShareButton
-                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                            url={`https://neointeraction.com/Blog/${this.props.router.query.id}`}
                             className="share-icn"
                           />
                           <img src={FacebookIcon} alt="facebook" />
                         </li>
                         <li id="ln">
                           <LinkedinShareButton
-                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                            url={`https://neointeraction.com/Blog/${this.props.router.query.id}`}
                             className="share-icn"
                           />
                           <img src={LinkedInIcon} alt="LinkedIn" />
                         </li>
                         <li id="twitter">
                           <TwitterShareButton
-                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                            url={`https://neointeraction.com/Blog/${this.props.router.query.id}`}
                             className="share-icn"
                           />
                           <img src={TwitterIcon} alt="Twitter" />
