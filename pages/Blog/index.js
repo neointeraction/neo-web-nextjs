@@ -130,9 +130,9 @@ export default withRouter(
                                 <Link
                                   href={{
                                     pathname: `/Blog/${item.id}`,
-                                    query: {
-                                      title: JSON.stringify(item.blogTitle),
-                                    },
+                                    // query: {
+                                    //   title: JSON.stringify(item.blogTitle),
+                                    // },
                                   }}
                                 >
                                   <div className="link">
