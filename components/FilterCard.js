@@ -184,7 +184,9 @@ export default class FilterCard extends Component {
                           href={{
                             pathname: `/Projects/${cards.id}`,
                             query: {
-                              title: JSON.stringify(cards.cardTitle),
+                              title: cards.cardTitle
+                                .replace(/(:|\s+)/g, "-")
+                                .toLowerCase(),
                             },
                           }}
                         >

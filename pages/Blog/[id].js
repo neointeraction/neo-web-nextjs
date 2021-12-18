@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 import moment from "moment";
 import axios from "axios";
@@ -118,7 +119,7 @@ export default withRouter(
       this.setState({ isMouseInside: false });
     };
     handleBack() {
-      this.props.router.back();
+      this.props.router.push("/Blog");
     }
 
     transformImageUri = (input) =>

@@ -47,7 +47,7 @@ export default class Custom404 extends Component {
               available.
             </h4>
             <div className="go-to-home">
-              <Link href="/Home">Go to Home</Link>
+              <Link href="/">Go to Home</Link>
             </div>
           </div>
         </div>

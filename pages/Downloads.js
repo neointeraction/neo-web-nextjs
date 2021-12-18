@@ -258,7 +258,9 @@ export default withRouter(
                                   href={{
                                     pathname: `/Blog/${item.id}`,
                                     query: {
-                                      title: JSON.stringify(item.blogTitle),
+                                      title: item.blogTitle
+                                        .replace(/(:|\s+)/g, "-")
+                                        .toLowerCase(),
                                     },
                                   }}
                                 >

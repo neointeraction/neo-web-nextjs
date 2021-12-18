@@ -55,7 +55,9 @@ export default class ProjectSlider extends Component {
                         href={{
                           pathname: `/Projects/${item.id}`,
                           query: {
-                            title: JSON.stringify(item.cardTitle),
+                            title: item.cardTitle
+                              .replace(/(:|\s+)/g, "-")
+                              .toLowerCase(),
                           },
                         }}
                       >

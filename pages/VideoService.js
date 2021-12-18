@@ -216,7 +216,9 @@ export default withRouter(
                                   href={{
                                     pathname: `/Projects/${cards.id}`,
                                     query: {
-                                      title: JSON.stringify(cards.cardTitle),
+                                      title: cards.cardTitle
+                                        .replace(/(:|\s+)/g, "-")
+                                        .toLowerCase(),
                                     },
                                   }}
                                 >
