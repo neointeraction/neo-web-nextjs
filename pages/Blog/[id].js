@@ -119,7 +119,7 @@ export default withRouter(
       this.setState({ isMouseInside: false });
     };
     handleBack() {
-      this.props.router.push("/Blog");
+      this.props.router.back();
     }
 
     transformImageUri = (input) =>
