@@ -82,7 +82,7 @@ export default withRouter(
             <title>Contact Us | Neointeraction </title>
             <meta
               name="description"
-              content="Contact us at (+91 944-9565-744) or info@neointeraction.com to know all about our designing services. We provide creative solutions for your design queries."
+              content="Contact us at (+91 944-9565-744) or info@neointeraction.com to hire top UI/UX designers. We provide creative solutions for your design queries."
             />
             <meta
               name="keywords"

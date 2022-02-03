@@ -135,7 +135,7 @@ export default withRouter(
             <title>Download Resources | Neointeraction </title>
             <meta
               name="description"
-              content="Download easy to use design templates that will help in your new projects. Drop your email ID and download completely FREE of cost!"
+              content="Get great design assets and resources created by one of the best UI/UX design companies to help in your new projects. Drop your Email to download for free."
             />
             <meta
               name="keywords"

@@ -165,10 +165,10 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>About Us | Neointeraction</title>
+            <title>About Us | Best UI/UX design company in bangalore</title>
             <meta
               name="description"
-              content="Our design agency, with 15years of user experience designing, creates simplified & unique designs to enhance your business's long-term success."
+              content="Best UI/UX design company in Bangalore, with 15years of experience in creating designs that have touched people's lives, thus enabling business success"
             />
             <meta
               name="keywords"

@@ -182,10 +182,12 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>Ux Services | Neointeraction</title>
+            <title>
+              UX Services | Neointeraction is a UI/UX company in india
+            </title>
             <meta
               name="description"
-              content="Neointeraction team evaluates the digital landscape from a design perspective by paving the way for businesses and their end user with a creative UX system."
+              content="Neointeraction is the best UI/UX design firm in Bangalore, Mumbai, with a passionate team that designs simplified & innovative user-centric experiences."
             />
             <meta
               name="keywords"

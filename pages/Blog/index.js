@@ -79,7 +79,7 @@ export default withRouter(
               <title>Blog | Neointeraction</title>
               <meta
                 name="description"
-                content="Read interesting blogs on UI/UX designing as well as design case studies and articles of the design industry. Stay up to date by subscribing to newsletter."
+                content="Read engaging blogs, articles and case studies related to the design industry. Subscribe to our newsletter to stay up to date with the latest UI/UX trends."
               />
               <meta
                 name="keywords"

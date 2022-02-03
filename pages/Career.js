@@ -106,10 +106,10 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>Career opportunities | Neointeraction </title>
+            <title>Career opportunities | Hire Top UX Designers </title>
             <meta
               name="description"
-              content="Take a look at our open positions for UX, UI designers, developers  as well internship opportunities & experience the industry practices to kick start your career. "
+              content="Neointeraction design is one of the best companies for UI/UX designers. We have positions open for UI/UX designers, UI developers, and interns."
             />
             <meta
               name="keywords"

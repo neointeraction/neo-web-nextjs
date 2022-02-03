@@ -875,6 +875,9 @@ input.form-control {
 .process-card button {
   display: none;
 }
+.process-card.overflow {
+  overflow: visible;
+}
 
 .pc-info-box-position {
   position: absolute;
@@ -3095,6 +3098,69 @@ textarea {
   opacity: 1;
   transition: 0.3s all ease-in-out;
 }
+
+.custom-process-card {
+  margin-top: 200px;
+}
+
+.custom-process-card h1 {
+  font-size: 22px;
+}
+
+.custom-process-card .pc-info-box {
+  background: #282828;
+  border-radius: 0 0 1.875rem 1.875rem;
+}
+
+.custom-process-card .pc-text {
+  color: #fff;
+  font-size: 16px;
+}
+
+.custom-process-card .custom-img {
+  width: 299px;
+  height: 359px;
+  object-fit: cover;
+}
+
+.custom-process-card .custom-img.Tablet1 {
+  object-position: 20px -15px;
+}
+
+.custom-process-card .custom-img.Tablet3 {
+  object-position: 20px -29px;
+}
+
+.custom-process-card .custom-img.Tablet2 {
+  object-position: 28px -12px;
+}
+
+.ebook-banner {
+  background-image: url(../images/ebookBanner.jpg);
+  background-size: auto 100vh;
+  background-attachment: fixed;
+  height: 660px;
+  margin: 60px 0 -120px 0;
+}
+
+.banner-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 60px 200px 60px 60px;
+}
+.ebook-banner-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 50px;
+  color: #ffffff;
+  margin-right: 50px;
+}
+
+.ebook-banner-title span {
+  color: #be0315;
+}
+
 /* ===========================================================================
 ----------------   MEDIA QUERIES -----------------------------------------
 =========================================================================== */
@@ -4377,4 +4443,10 @@ textarea {
 
 .go-to-home a {
   color: #f90400;
+}
+
+.grab-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }

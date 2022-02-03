@@ -8,12 +8,10 @@ class Home extends Component {
     return (
       <div>
         <Head>
-          <title>
-            Neointeracton | Creative UX/UI, Motion design and engineering agency
-          </title>
+          <title>Neointeracton | Best UI/UX design agency in India, USA</title>
           <meta
             name="description"
-            content="Neointeraction is a design agency specialized in User experience (UX & UI) designing, engineering as well as motion design with 15 years of experience in B2B enterprise projects."
+            content="Our 15 years of experience & expertise have made us one of the top 10 best UI/UX design & engineering agencies in India, USA focused on B2B applications. "
           />
           <meta
             name="keywords"

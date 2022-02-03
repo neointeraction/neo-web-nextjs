@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactModal from "react-modal";
+import ReactWOW from "react-wow";
 // import "../css/main.css";
 import UxModal from "./UxModal";
 
@@ -30,30 +31,53 @@ export default class ProcessCard extends Component {
   }
 
   render() {
-    const { className, backgroundImages, infoText, cardTitle, cardId } =
-      this.props;
+    const {
+      className,
+      backgroundImages,
+      infoText,
+      cardTitle,
+      cardId,
+      noBg,
+      customClass,
+    } = this.props;
     return (
       <div>
         <div
-          className={`process-card hover-zoom ${className}`}
-          style={{ backgroundImage: `url(${backgroundImages})` }}
+          className={`process-card hover-zoom ${className} ${
+            noBg ? "overflow" : ""
+          }`}
+          style={noBg ? null : { backgroundImage: `url(${backgroundImages})` }}
           onMouseEnter={this.mouseEnter}
           onMouseLeave={this.mouseLeave}
         >
           <div className="pc-info-box-position">
-            <div className="pc-card-title animated fadeIn">
-              <h1>{cardTitle}</h1>
-            </div>
-            <div className="pc-info-box animated slideInUp fast">
-              <p className="pc-text">{infoText}</p>
-              <button
-                className="custom-btn"
-                id={cardId}
-                onClick={this.handleOpenModal}
-              >
-                Apply Now
-              </button>
-            </div>
+            {noBg && (
+              <ReactWOW animation="fadeInDown" delay="0s" offset={0}>
+                <img
+                  src={backgroundImages}
+                  alt={backgroundImages}
+                  className={`custom-img ${customClass}`}
+                />
+              </ReactWOW>
+            )}
+            <ReactWOW animation="fadeIn" delay="0s" offset={0}>
+              <div className="pc-card-title ">
+                <h1>{cardTitle}</h1>
+              </div>
+            </ReactWOW>
+
+            <ReactWOW animation="fadeInUp" delay="0s" offset={0}>
+              <div className="pc-info-box">
+                <p className="pc-text">{infoText}</p>
+                <button
+                  className="custom-btn"
+                  id={cardId}
+                  onClick={this.handleOpenModal}
+                >
+                  Apply Now
+                </button>
+              </div>
+            </ReactWOW>
           </div>
         </div>
         <ReactModal

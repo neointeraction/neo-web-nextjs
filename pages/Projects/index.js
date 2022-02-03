@@ -30,10 +30,10 @@ export default withRouter(
         <div>
           <div>
             <Head>
-              <title>Projects | Neointeraction</title>
+              <title>Projects | UI/UX design company in india</title>
               <meta
                 name="description"
-                content="Check out the best projects we have designed for our happy customers. Our designs are detial-oriented and simplified to boost your business. Contact us now!"
+                content="Check out the projects created by one of the best UI/UX design companies in Bangalore. Our clear and meticulous designs are aimed to boost your business."
               />
               <meta
                 name="keywords"

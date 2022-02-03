@@ -132,7 +132,7 @@ export default withRouter(
             <title>UI Engineering Services | Neointeraction </title>
             <meta
               name="description"
-              content="We provide UI engineering services using Restful API integration and develop UI to pixel specifications by using latest tools & methods to ensure smooth user experience."
+              content="Neointeraction provide pixel perfect UI engineering using popular front end technologies like React.Js, Angular to craft the best Front End experience for users."
             />
             <meta
               name="keywords"
