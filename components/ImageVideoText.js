@@ -16,7 +16,7 @@ export default class ImageVideoText extends Component {
     return (
       <div className="about-project">
         <div className={`row ${componentOrientation}`}>
-          <div className={`col-md-${grid1 || 6}`}>
+          <div className={`col-lg-${grid1 || 6}`}>
             {video === false && (
               <img
                 className="br-7 width-100"
@@ -47,7 +47,7 @@ export default class ImageVideoText extends Component {
               </div>
             )}
           </div>
-          <div className={`col-md-${grid2 || 6}`}>
+          <div className={`col-lg-${grid2 || 6}`}>
             <div className="it-content">
               <h2 className="sub-title text-left mt-0">{titleText}</h2>
               <div className="pd-content">{contentText}</div>
