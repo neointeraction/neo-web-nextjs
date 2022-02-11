@@ -42,7 +42,7 @@ import Menu from "../../images/9dots.svg";
           blogIllustration: {},
         },
         error: null,
-        loading: false,
+        loading: props.loading,
         pageHref: 0,
         data: props.post
       };
@@ -382,17 +382,23 @@ export async function getStaticProps({params}) {
 
   const title = params.slug;
 
+  let loading = true;
+
   const blogRes = await fetch(baseUrl + `/blogs`);
   const blogsData = await blogRes.json();
-
 
   const id = blogsData.find(data => data.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
 
   const res = await fetch(baseUrl + `/blogs/${id}`);
   const data = await res.json();
+
+  if(data) {
+    loading = false;
+  }
   return {
     props: {
       post: data,
+      loading
     },
   };
 }
