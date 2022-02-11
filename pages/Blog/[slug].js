@@ -36,20 +36,32 @@ import Menu from "../../images/9dots.svg";
       this.state = {
         isMouseInside: false,
         matchId: props.post.id,
-        data: {
-          blogCardImage: {},
-          blog_detail: {},
-          blogIllustration: {},
-        },
+        // data: {
+        //   blogCardImage: {},
+        //   blog_detail: {},
+        //   blogIllustration: {},
+        // },
         error: null,
-        loading: props.loading,
+        loading: props.post !== null ? false : true,
         pageHref: 0,
         data: props.post
       };
       // this.componentDidMount = this.componentDidMount.bind(this);
-      // this.componentDidUpdate = this.componentDidUpdate.bind(this);
+      this.componentDidUpdate = this.componentDidUpdate.bind(this);
       this.handleBack = this.handleBack.bind(this);
     }
+
+     componentDidUpdate = async (prevProps) => {
+      // this.componentDidMount();
+      if (this.props.router.query.slug !== prevProps.router.query.slug) {
+        try {
+          this.setState({ data: this.props.post });
+          // this.setState({ loading: false });
+        } catch (error) {
+          this.setState({ error });
+        }
+      }
+    };
 
     // componentDidMount = async () => {
     //   this.setState({ matchId: this.props.router.query.id });
@@ -102,8 +114,6 @@ import Menu from "../../images/9dots.svg";
 
     render() {
       const { data} = this.state;
-
-      console.log("data", data)
 
       return (
         <div>
@@ -374,15 +384,13 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: false,
+    fallback: 'blocking',
   };
 }
 
 export async function getStaticProps({params}) {
 
   const title = params.slug;
-
-  let loading = true;
 
   const blogRes = await fetch(baseUrl + `/blogs`);
   const blogsData = await blogRes.json();
@@ -392,13 +400,9 @@ export async function getStaticProps({params}) {
   const res = await fetch(baseUrl + `/blogs/${id}`);
   const data = await res.json();
 
-  if(data) {
-    loading = false;
-  }
   return {
     props: {
       post: data,
-      loading
     },
   };
 }
