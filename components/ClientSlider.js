@@ -6,29 +6,29 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "@brainhubeu/react-carousel/lib/style.css";
 
-import Clientlogo1 from "../images/icici-logo.jpg"
-import Clientlogo2 from "../images/Geojit-logo.jpg"
-import Clientlogo3 from "../images/bnp-paribas-logo.jpg"
-import Clientlogo4 from "../images/cbd-logo.jpg"
-import Clientlogo5 from "../images/qudos-bank-logo.jpg"
-import Clientlogo6 from "../images/brac-logo.jpg"
-import Clientlogo7 from "../images/cbq-logo.jpg"
-import Clientlogo8 from "../images/clayfin-logo.jpg"
+import Clientlogo1 from "../images/icici-logo.jpg";
+import Clientlogo2 from "../images/Geojit-logo.jpg";
+import Clientlogo3 from "../images/bnp-paribas-logo.jpg";
+import Clientlogo4 from "../images/cbd-logo.jpg";
+import Clientlogo5 from "../images/qudos-bank-logo.jpg";
+import Clientlogo6 from "../images/brac-logo.jpg";
+import Clientlogo7 from "../images/cbq-logo.jpg";
+import Clientlogo8 from "../images/clayfin-logo.jpg";
 
-import Clientlogo10 from "../images/claysol-logo.jpg"
-import Clientlogo11 from "../images/coorg-logo.jpg"
-import Clientlogo12 from "../images/drumbuffer-logo.jpg"
-import Clientlogo13 from "../images/funding-logo.jpg"
-import Clientlogo14 from "../images/Inatech-logo.jpg"
-import Clientlogo15 from "../images/inkmagik-logo.jpg"
-import Clientlogo16 from "../images/intellithink-logo.jpg"
-import Clientlogo17 from "../images/intertrust-logo.jpg"
-import Clientlogo18 from "../images/LifeSignal-logo.jpg"
-import Clientlogo19 from "../images/MobiCom-Logo.jpg"
-import Clientlogo20 from "../images/traveloka-logo.jpg"
-import Clientlogo21 from "../images/vidal-logo.jpg"
-import Clientlogo22 from "../images/wipro-logo.jpg"
-import Clientlogo23 from "../images/yokagawa-logo.jpg"
+import Clientlogo10 from "../images/claysol-logo.jpg";
+import Clientlogo11 from "../images/coorg-logo.jpg";
+import Clientlogo12 from "../images/drumbuffer-logo.jpg";
+import Clientlogo13 from "../images/funding-logo.jpg";
+import Clientlogo14 from "../images/Inatech-logo.jpg";
+import Clientlogo15 from "../images/inkmagik-logo.jpg";
+import Clientlogo16 from "../images/intellithink-logo.jpg";
+import Clientlogo17 from "../images/intertrust-logo.jpg";
+import Clientlogo18 from "../images/LifeSignal-logo.jpg";
+import Clientlogo19 from "../images/mobiCom-Logo.jpg";
+import Clientlogo20 from "../images/traveloka-logo.jpg";
+import Clientlogo21 from "../images/vidal-logo.jpg";
+import Clientlogo22 from "../images/wipro-logo.jpg";
+import Clientlogo23 from "../images/yokagawa-logo.jpg";
 
 
 
@@ -212,39 +212,3 @@ export default class ClientSlider extends Component {
     );
   }
 }
-
-
-// function Comment(props) {
-
-//   return (
-//     <div className="client-box">
-//           <img src={Clientlogo6} alt="Geojit logo" />
-//     </div>
-//   );
-// }
-
- {/* <div>
-          <div className="client-box">
-          <img src={Clientlogo2} alt="Geoit logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo3} alt="bnp paribas logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo4} alt="cbd logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo5} alt="qudos logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo6} alt="Geojit logo" />
-          </div>
-          </div> */}

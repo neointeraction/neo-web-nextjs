@@ -14,7 +14,7 @@ import SectionTitle from "../components/SectionTitle";
 import CardTileUpfront from "../components/CardTileUpfront";
 
 import BackArrow from "../images/BackArrow.svg";
-import Close from "../images/Close.svg";
+
 
 // export async function getStaticProps(context) {
 //   // Call an external API endpoint to get posts.
@@ -74,19 +74,6 @@ export default withRouter(
     render() {
       return (
         <div>
-          <div>
-            <Head>
-              <title>Blog | Neointeraction</title>
-              <meta
-                name="description"
-                content="Read engaging blogs, articles and case studies related to the design industry. Subscribe to our newsletter to stay up to date with the latest UI/UX trends."
-              />
-              <meta
-                name="keywords"
-                content="Best UI/UX design articles, UX blogs,designing blogs, design articles, important design case studies, UI/UX design case studies, download UI/UX case studies"
-              />
-            </Head>
-          </div>
           {this.state.loading ? (
             <Loader />
           ) : (
