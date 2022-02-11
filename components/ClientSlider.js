@@ -23,8 +23,8 @@ import Clientlogo14 from "../images/Inatech-logo.jpg";
 import Clientlogo15 from "../images/inkmagik-logo.jpg";
 import Clientlogo16 from "../images/intellithink-logo.jpg";
 import Clientlogo17 from "../images/intertrust-logo.jpg";
-import Clientlogo18 from "../images/LifeSignal-logo.jpg";
-import Clientlogo19 from "../images/MobiCom-Logo.jpg";
+import Clientlogo18 from "../images/lifeSignal-logo.jpg";
+import Clientlogo19 from "../images/mobiCom-Logo.jpg";
 import Clientlogo20 from "../images/traveloka-logo.jpg";
 import Clientlogo21 from "../images/vidal-logo.jpg";
 import Clientlogo22 from "../images/wipro-logo.jpg";
@@ -200,41 +200,4 @@ export default class ClientSlider extends Component {
       </div>
     );
   }
-}
-
-// function Comment(props) {
-
-//   return (
-//     <div className="client-box">
-//           <img src={Clientlogo6} alt="Geojit logo" />
-//     </div>
-//   );
-// }
-
-{
-  /* <div>
-          <div className="client-box">
-          <img src={Clientlogo2} alt="Geoit logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo3} alt="bnp paribas logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo4} alt="cbd logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo5} alt="qudos logo" />
-          </div>
-          </div>
-          <div>
-          <div className="client-box">
-          <img src={Clientlogo6} alt="Geojit logo" />
-          </div>
-          </div> */
 }
