@@ -9,7 +9,7 @@ import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import FormImage from "../images/image-10.jpg"
+//import FormImage from "../images/image-10.jpg";
 // import ContactImg from "../images/contact-us-banner.jpg";
 
 // const API_PATH =
@@ -208,7 +208,10 @@ export default class FormContactAdLp extends Component {
   render() {
     return (
       <div className="form-group bground-transp">
-        <h1 className="ad-form-title">Better <span className="title-red">Products</span><br/> Built <span className="title-red">Faster</span></h1>
+        <h1 className="ad-form-title">
+          Better <span className="title-red">Products</span>
+          <br /> Built <span className="title-red">Faster</span>
+        </h1>
         <div className="align-items-right p-cards">
           {/* <div className="col-md-6 hide">
             <div className="contact-left-content">
@@ -217,83 +220,83 @@ export default class FormContactAdLp extends Component {
           </div> */}
           <div className="custom-position">
             <div className="wrapper">
-              <form className="form-section ad-form" onSubmit={this.submitEmail}>
-                
+              <form
+                className="form-section ad-form"
+                onSubmit={this.submitEmail}
+              >
                 <div className="row">
                   <div className="col-md-6">
-                  <div className="input-custom-field">
-                    <input
-                      className="input-custom"
-                      type="text"
-                      placeholder="Name"
-                      name="name"
-                      onChange={this.handleChange}
-                      value={this.state.name}
-                    />
+                    <div className="input-custom-field">
+                      <input
+                        className="input-custom"
+                        type="text"
+                        placeholder="Name"
+                        name="name"
+                        onChange={this.handleChange}
+                        value={this.state.name}
+                      />
 
-                    <span className="focus-border">
-                      <i></i>
-                    </span>
-                  </div>
-                  {this.validator.message(
-                    "Name",
-                    this.state.name,
-                    "required|alpha_space"
-                  )}
-                  <div>{this.state.nameError}</div>
+                      <span className="focus-border">
+                        <i></i>
+                      </span>
+                    </div>
+                    {this.validator.message(
+                      "Name",
+                      this.state.name,
+                      "required|alpha_space"
+                    )}
+                    <div>{this.state.nameError}</div>
                   </div>
 
-                    <div className="col-md-6">
-                      <div className="input-custom-field">
-                        <input
-                          className="input-custom"
-                          type="number"
-                          placeholder="Mobile"
-                          name="mobile"
-                          maxlength="10"
-                          onChange={this.handleChange}
-                          value={this.state.mobile}
-                        />
-                        {/* <label>Mobile</label> */}
-                        <span className="focus-border">
-                          <i></i>
-                        </span>
-                      </div>
-                      {this.validator.message(
-                        "mobile",
-                        this.state.mobile,
-                        "required|phone"
-                      )}
-                      <div>{this.state.mobError}</div>
-             
+                  <div className="col-md-6">
+                    <div className="input-custom-field">
+                      <input
+                        className="input-custom"
+                        type="number"
+                        placeholder="Mobile"
+                        name="mobile"
+                        maxlength="10"
+                        onChange={this.handleChange}
+                        value={this.state.mobile}
+                      />
+                      {/* <label>Mobile</label> */}
+                      <span className="focus-border">
+                        <i></i>
+                      </span>
+                    </div>
+                    {this.validator.message(
+                      "mobile",
+                      this.state.mobile,
+                      "required|phone"
+                    )}
+                    <div>{this.state.mobError}</div>
+
                     {/* <div className="side"> */}
-                    
                   </div>
                   <div className="col-md-12">
-                      <div className="input-custom-field">
-                        <input
-                          className="input-custom"
-                          type="email"
-                          placeholder="Email"
-                          name="email"
-                          onChange={this.handleChange}
-                          onBlur={() => this.validator.showMessageFor("email")}
-                          value={this.state.email}
-                        />
-                        <span className="focus-border">
-                          <i></i>
-                        </span>
-                      </div>
-                      {this.validator.message(
-                        "email",
-                        this.state.email,
-                        "required|email"
-                      )}
-                      <div>{this.state.emailError}</div>
+                    <div className="input-custom-field">
+                      <input
+                        className="input-custom"
+                        type="email"
+                        placeholder="Email"
+                        name="email"
+                        onChange={this.handleChange}
+                        onBlur={() => this.validator.showMessageFor("email")}
+                        value={this.state.email}
+                      />
+                      <span className="focus-border">
+                        <i></i>
+                      </span>
                     </div>
+                    {this.validator.message(
+                      "email",
+                      this.state.email,
+                      "required|email"
+                    )}
+                    <div>{this.state.emailError}</div>
+                  </div>
                 </div>
                 <div className="side side-ad">
-
                   {/* <div className="input-custom-field">
                     <textarea
                       className="input-custom"

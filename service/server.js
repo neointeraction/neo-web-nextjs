@@ -87,12 +87,7 @@ app.post("/career", (req, res) => {
 
   var mail = {
     from: email,
-    to: [
-      "shameer@neointeraction.com",
-      "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-    ],
+    to: ["hr@neointeraction.com", "info@neointeraction.com"],
     subject: `Internship request from ${name} <${email}>`,
     text: description,
     attachments: [
@@ -145,12 +140,7 @@ app.post("/jobrequest", (req, res) => {
 
   var mail = {
     from: email,
-    to: [
-      "shameer@neointeraction.com",
-      "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-    ],
+    to: ["hr@neointeraction.com", "info@neointeraction.com"],
     subject: `Job Request for ${jobType} from ${name} <${email}>`,
     // text: description,
     attachments: [
@@ -228,9 +218,8 @@ app.post("/hiredeveloper", (req, res) => {
   var mail = {
     from: email,
     to: [
-      "shameer@neointeraction.com",
+      "hr@neointeraction.com",
       "info@neointeraction.com",
-      "allen@neointeraction.com",
       "sam@neointeraction.com",
     ],
     subject: `Message from ${name} <${email}>`,
