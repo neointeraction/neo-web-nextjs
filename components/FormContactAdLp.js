@@ -25,14 +25,14 @@ export default class FormContactAdLp extends Component {
       mobile: "",
       email: "",
       // description: "",
-      service: "",
+      // service: "",
       // nameError: "",
       // emailError: "",
       // mobError: "",
-      isCaptchaValid: false,
-      isErrorShown: false,
-      isFormValid: false,
-      mailSent: false,
+      // isCaptchaValid: false,
+      // isErrorShown: false,
+      // isFormValid: false,
+      // mailSent: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
@@ -60,15 +60,17 @@ export default class FormContactAdLp extends Component {
   // when submit btn is clicked
 
   submitEmail(e) {
+    console.log("hello",this.state);
+    
     e.preventDefault();
-    if (this.validator.allValid() && this.state.isCaptchaValid) {
+    if (this.validator.allValid() ) {
       this.setState({ mailSent: true });
-      // alert('You submitted the form and stuff!');
-      // e.preventDefault();
+      alert('You submitted the form and stuff!');
+      e.preventDefault();
       axios
-        .post("https://www.neointeraction.com/server/send", this.state)
+        .post("https://www.neointeraction.com/server/sendgad", this.state)
         .then((response) => {
-          if (response.data.status === "success") {
+          if (response.data.status === "success" && this.state.isCaptchaValid) {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
@@ -79,7 +81,7 @@ export default class FormContactAdLp extends Component {
               draggable: true,
               progress: undefined,
             });
-            // alert("Message Sent.");
+            alert("Message Sent.");
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
@@ -334,7 +336,7 @@ export default class FormContactAdLp extends Component {
                     {this.state.mailSent ? "Submitting" : "Submit"}
                   </button> */}
 
-                  <button className="custom-btn loader-btns">
+                  <button className="custom-btn loader-btns" onClick={this.submitEmail}>
                     {this.state.mailSent && this.state.isCaptchaValid ? (
                       <>
                         <span>Submit</span>

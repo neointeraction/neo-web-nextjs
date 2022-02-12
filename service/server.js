@@ -17,7 +17,7 @@ app.use(
   })
 );
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 5000;
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
@@ -52,6 +52,53 @@ app.post("/send", (req, res) => {
      <p>Email:${email}</p>
      <p>Mobile:${mobile}</p>
      <p> description:${description}</p>     
+     </body> 
+     </html>`,
+  };
+
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      res.json({
+        status: "fail",
+      });
+    } else {
+      res.json({
+        status: "success",
+      });
+    }
+  });
+});
+
+app.post("/sendgad", (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "neo@1234",
+    },
+  });
+  // const transporter = nodemailer.createTransport({ 
+  //   host: 'smtp.ethereal.email', port: 587, 
+  //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
+
+  var name = req.body.name;
+  var mobile = req.body.mobile;
+  var email = req.body.email;
+
+  var mail = {
+    from: email,
+    to: [
+      "shameer@neointeraction.com",
+      "info@neointeraction.com",
+      "allen@neointeraction.com",
+      "sam@neointeraction.com",
+    ],
+    subject: `Contact us form submission : ${name} <${email}>`,
+    html: `<html>
+     <body>
+     <p>Name:${name}</p>
+     <p>Email:${email}</p>
+     <p>Mobile:${mobile}</p>  
      </body> 
      </html>`,
   };
