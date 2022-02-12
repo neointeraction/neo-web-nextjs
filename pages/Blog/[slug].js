@@ -42,11 +42,11 @@ import Menu from "../../images/9dots.svg";
         //   blogIllustration: {},
         // },
         error: null,
-        loading: props.post !== null ? false : true,
+        loading: true,
         pageHref: 0,
         data: props.post
       };
-      // this.componentDidMount = this.componentDidMount.bind(this);
+      this.componentDidMount = this.componentDidMount.bind(this);
       this.componentDidUpdate = this.componentDidUpdate.bind(this);
       this.handleBack = this.handleBack.bind(this);
     }
@@ -56,12 +56,16 @@ import Menu from "../../images/9dots.svg";
       if (this.props.router.query.slug !== prevProps.router.query.slug) {
         try {
           this.setState({ data: this.props.post });
-          // this.setState({ loading: false });
+          this.setState({ loading: false });
         } catch (error) {
           this.setState({ error });
         }
       }
     };
+
+     componentDidMount = async () => {
+       this.setState({loading: false})
+     }
 
     // componentDidMount = async () => {
     //   this.setState({ matchId: this.props.router.query.id });
@@ -384,7 +388,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking',
+    fallback: false,
   };
 }
 

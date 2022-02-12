@@ -36,11 +36,9 @@ export async function getStaticPaths() {
   const res = await fetch(baseUrl + `/projects`);
   const data = await res.json();
 
-  const paths = data.map((x) => {
-    return {
-      params: { id: x.id.toString() },
-    };
-  });
+  const paths = data.map((x) => ({
+    params: { slug: x.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-").toString() },
+}))
 
   return {
     paths,
@@ -48,10 +46,29 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps(context) {
-  const id = context.params.id;
+// export async function getStaticProps(context) {
+//   const id = context.params.id;
+//   const res = await fetch(baseUrl + `/projects/${id}`);
+//   const data = await res.json();
+//   return {
+//     props: {
+//       post: data,
+//     },
+//   };
+// }
+
+export async function getStaticProps({params}) {
+
+  const title = params.slug;
+
+  const projectsRes = await fetch(baseUrl + `/projects`);
+  const projectsData = await projectsRes.json();
+
+  const id = projectsData.find(data => data.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+
   const res = await fetch(baseUrl + `/projects/${id}`);
   const data = await res.json();
+
   return {
     props: {
       post: data,
@@ -65,53 +82,71 @@ export default withRouter(
       super();
       this.state = {
         isMouseInside: false,
-        matchId: props.router.query.id,
-        projectInfo: {
-          project_detail: {
-            ProjectDetailLogo: {},
-            introBlockImage: {},
-            solutionImage: {},
-            keyBenefitImage: {},
-          },
-        },
+        // matchId: props.router.query.id,
+        // projectInfo: {
+        //   project_detail: {
+        //     ProjectDetailLogo: {},
+        //     introBlockImage: {},
+        //     solutionImage: {},
+        //     keyBenefitImage: {},
+        //   },
+        // },
         error: null,
         loading: true,
         showModal: false,
         showCaseStudyModal: false,
+        projectInfo: props.post
       };
       this.componentDidMount = this.componentDidMount.bind(this);
       this.componentDidUpdate = this.componentDidUpdate.bind(this);
       this.handleBack = this.handleBack.bind(this);
     }
 
-    componentDidMount = async () => {
-      try {
-        const res = await axios.get(
-          baseUrl + `/projects/${this.state.matchId}`
-        );
-        this.setState({ projectInfo: res.data });
-        // console.log(response.data);
-
-        this.setState({ loading: false });
-      } catch (error) {
-        this.setState({ error });
-      }
-    };
-
+    
     componentDidUpdate = async (prevProps) => {
       // this.componentDidMount();
-      if (this.props.router.query.id !== prevProps.router.query.id) {
+      if (this.props.router.query.slug !== prevProps.router.query.slug) {
         try {
-          const result = await axios.get(
-            baseUrl + `/projects/${this.props.router.query.id}`
-          );
-          this.setState({ projectInfo: result.data });
+          this.setState({ projectInfo: this.props.post });
           this.setState({ loading: false });
         } catch (error) {
           this.setState({ error });
         }
       }
     };
+
+     componentDidMount = async () => {
+       this.setState({loading: false})
+     }
+
+    // componentDidMount = async () => {
+    //   try {
+    //     const res = await axios.get(
+    //       baseUrl + `/projects/${this.state.matchId}`
+    //     );
+    //     this.setState({ projectInfo: res.data });
+    //     // console.log(response.data);
+
+    //     this.setState({ loading: false });
+    //   } catch (error) {
+    //     this.setState({ error });
+    //   }
+    // };
+
+    // componentDidUpdate = async (prevProps) => {
+    //   // this.componentDidMount();
+    //   if (this.props.router.query.id !== prevProps.router.query.id) {
+    //     try {
+    //       const result = await axios.get(
+    //         baseUrl + `/projects/${this.props.router.query.id}`
+    //       );
+    //       this.setState({ projectInfo: result.data });
+    //       this.setState({ loading: false });
+    //     } catch (error) {
+    //       this.setState({ error });
+    //     }
+    //   }
+    // };
 
     mouseEnter = () => {
       this.setState({ isMouseInside: true });
