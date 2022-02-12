@@ -115,6 +115,7 @@ export default withRouter(
                             Learn about us and the design industry via our
                             perspectives and experiences.
                           </h2>
+                        
                           {context.state.blogs
                             .filter((tag) => {
                               if (tag.featured) return true;
@@ -129,12 +130,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Blog/${item.id}`,
-                                    query: {
-                                      title: item.blogTitle
-                                        .replace(/(:|\s+)/g, "-")
-                                        .toLowerCase(),
-                                    },
+                                    pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                    // query: {
+                                    //   title: item.blogTitle
+                                    //     .replace(/(:|\s+)/g, "-")
+                                    //     .toLowerCase(),
+                                    // },
                                   }}
                                 >
                                   <div className="link">
@@ -254,12 +255,13 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: `/Blog/${item.id}`,
-                                          query: {
-                                            title: item.blogTitle
-                                              .replace(/(:|\s+)/g, "-")
-                                              .toLowerCase(),
-                                          },
+                                          pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                          // pathname: `/Blog/${item.id}`,
+                                          // query: {
+                                          //   title: item.blogTitle
+                                          //     .replace(/(:|\s+)/g, "-")
+                                          //     .toLowerCase(),
+                                          // },
                                         }}
                                       >
                                         <div className="link" key={item.id}>

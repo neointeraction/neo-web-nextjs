@@ -69,11 +69,7 @@ const gcampaign = () => {
         </title>
         <meta
           name="description"
-          content="Our 15 years of experience & expertise have made us one of the top 10 best UI/UX design & engineering agencies in India, USA focused on B2B applications. "
-        />
-        <meta
           name="keywords"
-          content="UX design,UI engineering, Motion design, UX services, UI services, UX projects, UI projects, Video services, design team, design agency"
         />
         {/* <script
               async
@@ -95,6 +91,7 @@ const gcampaign = () => {
           </div>
         </ReactWOW>
       </div>
+
       <div className="page-content">
         <div className="container animated fadeIn">
           <ReactWOW animation="fadeInUp" delay="0s">

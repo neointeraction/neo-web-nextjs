@@ -156,7 +156,7 @@ export default class Header extends Component {
                         className="validate"
                         target="_blank"
                         rel="noopener noreferrer"
-                        novalidate
+                        noValidate
                       >
                         <div
                           id="mc_embed_signup_scroll"
@@ -195,7 +195,7 @@ export default class Header extends Component {
                             <input
                               type="text"
                               name="b_10403882a2d5bd04c7fbaf44e_d45c5fcd29"
-                              tabindex="-1"
+                              tabIndex="-1"
                               value=""
                             />
                           </div>

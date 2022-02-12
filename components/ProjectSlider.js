@@ -53,12 +53,13 @@ export default class ProjectSlider extends Component {
                     <React.Fragment key={item.id}>
                       <Link
                         href={{
-                          pathname: `/Projects/${item.id}`,
-                          query: {
-                            title: item.cardTitle
-                              .replace(/(:|\s+)/g, "-")
-                              .toLowerCase(),
-                          },
+                          pathname: `/Projects/${item.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                          // pathname: `/Projects/${item.id}`,
+                          // query: {
+                          //   title: item.cardTitle
+                          //     .replace(/(:|\s+)/g, "-")
+                          //     .toLowerCase(),
+                          // },
                         }}
                       >
                         <div className="link">

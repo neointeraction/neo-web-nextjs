@@ -27,90 +27,80 @@ import LinkedInIcon from "../../images/linkedIn.svg";
 import TwitterIcon from "../../images/twitter.svg";
 import Menu from "../../images/9dots.svg";
 
-export async function getStaticPaths() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  const res = await fetch(baseUrl + `/blogs`);
-  const data = await res.json();
 
-  const paths = data.map((x) => {
-    return {
-      params: { id: x.id.toString() },
-    };
-  });
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
 
-export async function getStaticProps(context) {
-  const id = context.params.id;
-  const res = await fetch(baseUrl + `/blogs/${id}`);
-  const data = await res.json();
-  return {
-    props: {
-      post: data,
-    },
-  };
-}
-
-export default withRouter(
   class ProjectDetailPage extends Component {
     constructor(props) {
       super();
       this.state = {
         isMouseInside: false,
-        matchId: props.router.query.id,
-        blogInfo: {
-          blogCardImage: {},
-          blog_detail: {},
-          blogIllustration: {},
-        },
+        matchId: props.post.id,
+        // data: {
+        //   blogCardImage: {},
+        //   blog_detail: {},
+        //   blogIllustration: {},
+        // },
         error: null,
         loading: true,
         pageHref: 0,
+        data: props.post
       };
       this.componentDidMount = this.componentDidMount.bind(this);
       this.componentDidUpdate = this.componentDidUpdate.bind(this);
       this.handleBack = this.handleBack.bind(this);
     }
 
-    componentDidMount = async () => {
-      this.setState({ matchId: this.props.router.query.id });
-      try {
-        const res = await axios.get(baseUrl + `/blogs/${this.state.matchId}`);
-        this.setState({ blogInfo: res.data });
-
-        this.setState({ loading: false });
-        this.props.post
-          ? this.setState({ loading: false })
-          : this.setState({ loading: true });
-      } catch (error) {
-        this.setState({ error });
-      }
-      var str = window.location.href;
-      var n = str.lastIndexOf("/");
-      var result = str.substring(n + 1);
-
-      this.setState({ pageHref: result });
-    };
-
-    componentDidUpdate = async (prevProps) => {
+     componentDidUpdate = async (prevProps) => {
       // this.componentDidMount();
-      if (this.props.router.query.id !== prevProps.router.query.id) {
+      if (this.props.router.query.slug !== prevProps.router.query.slug) {
         try {
-          const result = await axios.get(
-            baseUrl + `/blogs/${this.props.router.query.id}`
-          );
-          this.setState({ blogInfo: result.data });
+          this.setState({ data: this.props.post });
           this.setState({ loading: false });
         } catch (error) {
           this.setState({ error });
         }
       }
     };
+
+     componentDidMount = async () => {
+       this.setState({loading: false})
+     }
+
+    // componentDidMount = async () => {
+    //   this.setState({ matchId: this.props.router.query.id });
+    //   try {
+    //     const res = await axios.get(baseUrl + `/blogs/${this.state.matchId}`);
+    //     this.setState({ data: res.data });
+
+    //     this.setState({ loading: false });
+    //     this.props.post
+    //       ? this.setState({ loading: false })
+    //       : this.setState({ loading: true });
+    //   } catch (error) {
+    //     this.setState({ error });
+    //   }
+    //   var str = window.location.href;
+    //   var n = str.lastIndexOf("/");
+    //   var result = str.substring(n + 1);
+
+    //   this.setState({ pageHref: result });
+    // };
+
+    // componentDidUpdate = async (prevProps) => {
+    //   // this.componentDidMount();
+    //   if (this.props.router.query.id !== prevProps.router.query.id) {
+    //     try {
+    //       const result = await axios.get(
+    //         baseUrl + `/blogs/${this.props.router.query.id}`
+    //       );
+    //       this.setState({ data: result.data });
+    //       this.setState({ loading: false });
+    //     } catch (error) {
+    //       this.setState({ error });
+    //     }
+    //   }
+    // };
 
     mouseEnter = () => {
       this.setState({ isMouseInside: true });
@@ -122,11 +112,12 @@ export default withRouter(
       this.props.router.back();
     }
 
+
     transformImageUri = (input) =>
       /^https?:/.test(input) ? input : `${baseUrl}${input}`;
 
     render() {
-      const { blogInfo } = this.state;
+      const { data} = this.state;
 
       return (
         <div>
@@ -169,7 +160,7 @@ export default withRouter(
                       <div className="sf-item image-z-negetive">
                         <div className="fb-image">
                           <img
-                            src={`${baseUrl}${blogInfo.blogCardImage.url}`}
+                            src={`${baseUrl}${data.blogCardImage.url}`}
                             alt="blog-cover"
                           />
                         </div>
@@ -178,20 +169,20 @@ export default withRouter(
                         <div className="fb-content">
                           <div>
                             <h1 className="featured-blog-title">
-                              {blogInfo.blogTitle ? blogInfo.blogTitle : null}
+                              {data.blogTitle ? data.blogTitle : null}
                             </h1>
                           </div>
                           <div>
                             <p className="featured-blog-author">
                               by&nbsp;
                               <span className="author-name">
-                                {blogInfo.blogAuthor
-                                  ? blogInfo.blogAuthor
+                                {data.blogAuthor
+                                  ? data.blogAuthor
                                   : null}
                                 &nbsp;
                               </span>
                               <span className="posted-time">
-                                {moment(`${blogInfo.created_at}`)
+                                {moment(`${data.created_at}`)
                                   .startOf("hour")
                                   .fromNow()}
                               </span>
@@ -210,17 +201,17 @@ export default withRouter(
                           className="blog-para"
                           transformImageUri={this.transformImageUri}
                         >
-                          {blogInfo.blog_detail.paragraph1}
+                          {data.blog_detail?.paragraph1}
                         </ReactMarkdown>
                       </p>
                     </ReactWOW>
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <h2 className="blog-subtitle">
-                        {blogInfo.blog_detail.title1}
+                        {data.blog_detail?.title1}
                       </h2>
                       <p className="blog-text">
                         {/* {reactStringReplace(
-                        blogInfo.blog_detail.paragraph2,
+                        data.blog_detail.paragraph2,
                         "**",
                         (match, i) => (
                           <strong></strong>
@@ -230,35 +221,35 @@ export default withRouter(
                           className="blog-para"
                           transformImageUri={this.transformImageUri}
                         >
-                          {blogInfo.blog_detail.paragraph2}
+                          {data.blog_detail?.paragraph2}
                         </ReactMarkdown>
                       </p>
                     </ReactWOW>
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="blog-quote-box">
                         <p className="b-quote-text">
-                          {blogInfo.blog_detail.highlightQuoteText}
+                          {data.blog_detail?.highlightQuoteText}
                         </p>
                       </div>
                     </ReactWOW>
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <h2 className="blog-subtitle">
-                        {blogInfo.blog_detail.title2}
+                        {data.blog_detail?.title2}
                       </h2>
                       <p className="blog-text">
                         <ReactMarkdown
                           className="blog-para"
                           transformImageUri={this.transformImageUri}
                         >
-                          {blogInfo.blog_detail.paragraph3}
+                          {data.blog_detail?.paragraph3}
                         </ReactMarkdown>
                       </p>
                     </ReactWOW>
-                    {blogInfo.blog_detail.blogIllustration ? (
+                    {data.blog_detail?.blogIllustration ? (
                       <ReactWOW animation="fadeIn" offset={-200}>
                         <div className="blog-content-image">
                           <img
-                            src={`${baseUrl}${blogInfo.blog_detail.blogIllustration.url}`}
+                            src={`${baseUrl}${data.blog_detail?.blogIllustration?.url}`}
                             alt="blog-img"
                           />
                         </div>
@@ -267,28 +258,28 @@ export default withRouter(
 
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <h2 className="blog-subtitle">
-                        {blogInfo.blog_detail.title3}
+                        {data.blog_detail?.title3}
                       </h2>
                       <p className="blog-text">
                         <ReactMarkdown
                           className="blog-para"
                           transformImageUri={this.transformImageUri}
                         >
-                          {blogInfo.blog_detail.paragraph4}
+                          {data.blog_detail?.paragraph4}
                         </ReactMarkdown>
                       </p>
                     </ReactWOW>
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <h2 className="blog-subtitle">
-                        {blogInfo.blog_detail.title4}
+                        {data.blog_detail?.title4}
                       </h2>
                       <p className="blog-text mt-3">
                         <ReactMarkdown
                           className="blog-para"
                           transformImageUri={this.transformImageUri}
                         >
-                          {blogInfo.blog_detail.paragraph5
-                            ? blogInfo.blog_detail.paragraph5
+                          {data.blog_detail?.paragraph5
+                            ? data.blog_detail?.paragraph5
                             : null}
                         </ReactMarkdown>
                       </p>
@@ -301,18 +292,18 @@ export default withRouter(
                       <div className="author-card">
                         <div className="row">
                           <div className="col-md-3">
-                            <img
-                              src={`${baseUrl}${blogInfo.blog_detail.authorImg.url}`}
+                            {/* <img
+                              src={`${baseUrl}${data.blog_detail.authorImg.url}`}
                               alt="author-pic"
                               className="author-pic width-100"
-                            />
+                            /> */}
                           </div>
                           <div className="col-md-9">
                             <p className="blog-author-name">
-                              {blogInfo.blogAuthor}
+                              {data.blogAuthor}
                             </p>
                             <p className="blog-text">
-                              {blogInfo.blog_detail.aboutAuthor}
+                              {data.blog_detail?.aboutAuthor}
                             </p>
                           </div>
                         </div>
@@ -325,21 +316,21 @@ export default withRouter(
                       <ul className="social-icons cf-basis blog-social">
                         <li id="fb">
                           <FacebookShareButton
-                            url={`https://neointeraction.com/Blog/${this.props.router.query.id}`}
+                            url={`https://neointeraction.com/Blog/${this.props.post.id}`}
                             className="share-icn"
                           />
                           <img src={FacebookIcon} alt="facebook" />
                         </li>
                         <li id="ln">
                           <LinkedinShareButton
-                            url={`https://neointeraction.com/Blog/${this.props.router.query.id}`}
+                            url={`https://neointeraction.com/Blog/${this.props.post.id}`}
                             className="share-icn"
                           />
                           <img src={LinkedInIcon} alt="LinkedIn" />
                         </li>
                         <li id="twitter">
                           <TwitterShareButton
-                            url={`https://neointeraction.com/Blog/${this.props.router.query.id}`}
+                            url={`https://neointeraction.com/Blog/${this.props.post.id}`}
                             className="share-icn"
                           />
                           <img src={TwitterIcon} alt="Twitter" />
@@ -383,4 +374,41 @@ export default withRouter(
       );
     }
   }
-);
+
+
+
+export async function getStaticPaths() {
+
+  const res = await fetch(baseUrl + `/blogs`);
+  const data = await res.json();
+
+  const paths = data.map((x) => ({
+      params: { slug: x.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-").toString() },
+  }))
+
+  return {
+    paths,
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({params}) {
+
+  const title = params.slug;
+
+  const blogRes = await fetch(baseUrl + `/blogs`);
+  const blogsData = await blogRes.json();
+
+  const id = blogsData.find(data => data.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+
+  const res = await fetch(baseUrl + `/blogs/${id}`);
+  const data = await res.json();
+
+  return {
+    props: {
+      post: data,
+    },
+  };
+}
+
+export default withRouter(ProjectDetailPage);
