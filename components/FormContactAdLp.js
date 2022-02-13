@@ -53,7 +53,7 @@ export default class FormContactAdLp extends Component {
     if (this.captchaDemo) {
       console.log("started, just a second...");
       this.captchaDemo.reset();
-      //this.captchaDemo.execute();
+      this.captchaDemo.execute();
     }
   }
 
@@ -65,12 +65,12 @@ export default class FormContactAdLp extends Component {
     e.preventDefault();
     if (this.validator.allValid() ) {
       this.setState({ mailSent: true });
-      alert('You submitted the form and stuff!');
+      // alert('You submitted the form and stuff!');
       e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendgad", this.state)
         .then((response) => {
-          if (response.data.status === "success" && this.state.isCaptchaValid) {
+          if (response.data.status === "success" && this.state.isCaptchaValid ) {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
@@ -100,8 +100,6 @@ export default class FormContactAdLp extends Component {
       name: "",
       mobile: "",
       email: "",
-      description: "",
-      service: "",
       isCaptchaValid: false,
       isErrorShown: false,
       isFormValid: false,
@@ -196,7 +194,7 @@ export default class FormContactAdLp extends Component {
   onLoadRecaptcha() {
     if (this.captchaDemo) {
       this.captchaDemo.reset();
-      //this.captchaDemo.execute();
+      this.captchaDemo.execute();  
     }
   }
   verifyCallback(recaptchaToken) {
