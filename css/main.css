@@ -3230,6 +3230,7 @@ textarea {
   /* background-attachment: fixed; */
   height: 660px;
   margin: 60px 0 -120px 0;
+  width: 100vw;
 }
 
 .banner-content {
@@ -3238,6 +3239,11 @@ textarea {
   justify-content: flex-end;
   padding: 60px 200px 60px 60px;
 }
+
+.lpsecond-banner .banner-content{
+  padding-right: 100px;
+}
+
 .ebook-banner-title {
   font-weight: 400;
   font-size: 48px;
@@ -4560,6 +4566,9 @@ textarea {
   justify-content: center;
   padding: 60px;
 }
+.lpsecond-banner .banner-content{
+  padding-right: 60px;
+}
 .solution-list {
   line-height: 25px;
 }
@@ -4639,6 +4648,9 @@ textarea {
   padding: 0 16px;
   transform: translateY(10%);
 }
+.lpsecond-banner .banner-content{
+  padding-right: 16px;
+}
 .client-box{
   height: 90px;
 }
@@ -4675,6 +4687,9 @@ margin-top: 20px;
   padding: 0 16px;
   -webkit-transform: translateY(10%);
   transform: translateY(10%);
+}
+.lpsecond-banner .banner-content{
+  padding-right: 16px;
 }
 .overlay-card-slider .slick-next {
   left: 90%;
