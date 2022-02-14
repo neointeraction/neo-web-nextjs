@@ -433,7 +433,7 @@ font-size:2.6rem;
 .video-yt{
   width: 100%;
   margin: auto;
-  padding:0.9375rem;
+  /* padding:0.9375rem; */
 }
 .client-box{
   display: flex !important;
