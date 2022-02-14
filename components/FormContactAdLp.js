@@ -209,8 +209,7 @@ export default class FormContactAdLp extends Component {
     return (
       <div className="form-group bground-transp">
         <h1 className="ad-form-title">
-         Reach our
-          <br /><span className="title-red">Design Team!</span>
+         Reach our <span className="title-red">Team!</span>
            
         </h1>
         <div className="align-items-right p-cards">
