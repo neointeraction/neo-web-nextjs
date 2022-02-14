@@ -53,7 +53,7 @@ export default class FormContactAdLp extends Component {
     if (this.captchaDemo) {
       console.log("started, just a second...");
       this.captchaDemo.reset();
-      this.captchaDemo.execute();
+      // this.captchaDemo.execute();
     }
   }
 
@@ -194,7 +194,7 @@ export default class FormContactAdLp extends Component {
   onLoadRecaptcha() {
     if (this.captchaDemo) {
       this.captchaDemo.reset();
-      this.captchaDemo.execute();  
+      // this.captchaDemo.execute();  
     }
   }
   verifyCallback(recaptchaToken) {
@@ -209,8 +209,9 @@ export default class FormContactAdLp extends Component {
     return (
       <div className="form-group bground-transp">
         <h1 className="ad-form-title">
-          Better <span className="title-red">Products</span>
-          <br /> Built <span className="title-red">Faster</span>
+         Reach our
+          <br /><span className="title-red">Design Team!</span>
+           
         </h1>
         <div className="align-items-right p-cards">
           {/* <div className="col-md-6 hide">

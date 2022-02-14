@@ -78,9 +78,8 @@ const gcampaign = () => {
       </Head>
       <div className="container">
         <div className="home-content">
-          <h1 className="main-title animated fadeIn delay-0.5s">
-            Designs that touches people's lives, <br /> enables business
-            success..
+          <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
+           Neointeraction Design - Enterprise Ux design partner.
           </h1>
         </div>
       </div>

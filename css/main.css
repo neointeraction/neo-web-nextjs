@@ -370,6 +370,9 @@ strong {
   overflow: hidden;
 }
 /* lp2  Google AD*/
+.adPageTitle{
+font-size:2.6rem;
+}
 .bground-transp{
   background-color: rgba(43, 43, 54, .81);
   padding: 40px;
@@ -4667,6 +4670,9 @@ margin-top: 20px;
 }
 .contact-section {
   padding: 0;
+}
+.slick-track{
+  /* transform: translate3d(0px, 0px, 0px)!important; */
 }
 
 
