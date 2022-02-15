@@ -91,8 +91,8 @@ app.post("/sendgad", (req, res) => {
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
       // "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-      "sebin@neointeraction.com"
+      "sam@neointeraction.com",
+      
     ],
     subject: `Contact us form submission : ${name} <${email}>`,
     html: `<html>
