@@ -2,7 +2,6 @@ import { React, useState } from "react";
 import Head from "next/head";
 import ReactWOW from "react-wow";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import {Helmet} from "react-helmet";
 import Script from 'next/script'
 
 // import FormContact from "../components/FormContact";
