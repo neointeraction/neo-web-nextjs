@@ -60,7 +60,7 @@ export default class FormContactAdLp extends Component {
   // when submit btn is clicked
 
   submitEmail(e) {
-    console.log("hello",this.state);
+    // console.log("hello",this.state);
     
     e.preventDefault();
     if (this.validator.allValid() ) {
@@ -81,7 +81,7 @@ export default class FormContactAdLp extends Component {
               draggable: true,
               progress: undefined,
             });
-            alert("Message Sent.");
+            // alert("Message Sent.");
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
@@ -281,7 +281,7 @@ export default class FormContactAdLp extends Component {
                         placeholder="Email"
                         name="email"
                         onChange={this.handleChange}
-                        onBlur={() => this.validator.showMessageFor("email")}
+                        // onBlur={() => this.validator.showMessageFor("email")}
                         value={this.state.email}
                       />
                       <span className="focus-border">
@@ -327,6 +327,7 @@ export default class FormContactAdLp extends Component {
                       sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
                       onloadCallback={this.onLoadRecaptcha}
                       verifyCallback={this.verifyCallback}
+                      className="recaptcha-ad"
                     />
                   </div>
 

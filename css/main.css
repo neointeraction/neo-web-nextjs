@@ -3455,9 +3455,9 @@ textarea {
     max-width: 100%;
     justify-content: center;
   }
-  .social-icons li:nth-child(2) {
+  /* .social-icons li:nth-child(2) {
     margin: 0 15px;
-  }
+  } */
   .back-btn {
     top: 9%;
   }
@@ -4645,12 +4645,19 @@ textarea {
   /* lp2 google ad */
   .bground-transp {
     padding: 30px;
+    width: 100%;
 }
 .banner-content {
   display: flex;
   padding: 0 16px;
   transform: translateY(10%);
 }
+.lpsecond-banner{
+  /* background-image: url(../images/LpSecond-mob.jpg); */
+  background-size:cover;
+  background-position: 90% 40%;
+}
+
 .lpsecond-banner .banner-content{
   padding-right: 16px;
 }
@@ -4679,6 +4686,9 @@ margin-top: 20px;
   padding: 0.9375rem;
   flex-basis: 33%; 
   /* overflow: hidden; */
+}
+.recaptcha-ad{
+  width: 250px;
 }
 
 }
@@ -4713,6 +4723,14 @@ margin-top: 20px;
   transform: translate3d(0px, 0, 0) !important; */
   /* left: -346px !important; */
   max-width: fixed;
+}
+#g-recaptcha {
+  transform:scale(0.75);
+  transform-origin:0 0;
+  }
+  .ad-form {
+    max-width: 250px;
+    margin: auto;
 }
 
 }
