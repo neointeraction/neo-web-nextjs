@@ -17,7 +17,7 @@ app.use(
   })
 );
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
@@ -91,10 +91,10 @@ app.post("/sendgad", (req, res) => {
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
       // "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-      "sebin@neointeraction.com"
+      "sam@neointeraction.com",
+      
     ],
-    subject: `Contact us form submission : ${name} <${email}>`,
+    subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
      <body>
      <p>Name:${name}</p>

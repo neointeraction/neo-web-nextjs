@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
-import AnchorLink from "react-anchor-link-smooth-scroll";
+
 
 
 import ImageVideoText from "../components/ImageVideoText";
@@ -50,12 +50,12 @@ function UIEngineeringImageText() {
                         <p>
                           To know more about how we deliver great experiences,
                           take a look at our{" "}
-                          <AnchorLink
+                          <a
                             className="link-btn-map pl-0"
-                            href="#eng-modal"
+                            href="/UiEngineering#eng-modal"
                           >
                             Engagement Model
-                          </AnchorLink>
+                          </a>
                           .
                         </p>
                       </div>

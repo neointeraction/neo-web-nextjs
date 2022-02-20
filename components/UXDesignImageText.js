@@ -1,19 +1,8 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
-// import Head from "next/head";
-// import { DataContext } from "../context/DataContext";
-// import ReactModal from "react-modal";
-import AnchorLink from "react-anchor-link-smooth-scroll";
-
-// import { withRouter } from "next/router";
 
 import ImageVideoText from "../components/ImageVideoText";
-// import SectionTitle from "../components/SectionTitle";
-// import ModalCard from "../components/ModalCard";
-// import CardTile from "../components/CardTile";
-
-// import BackArrow from "../images/BackArrow.svg";
 import UXImg from "../images/ux-service.jpg";
 
 
@@ -47,12 +36,12 @@ function UXDesignImageText() {
                         <p>
                           To know more about how we deliver great experiences,
                           take a look at our{" "}
-                          <AnchorLink
+                          <a
                             className="link-btn-map pl-0"
-                            href="#eng-modal"
+                            href="/UxService#eng-modal"
                           >
                             Engagement Model
-                          </AnchorLink>
+                          </a>
                         </p>
                       </div>
                     }

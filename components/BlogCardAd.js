@@ -110,12 +110,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Blog/${item.id}`,
-                                    query: {
-                                      title: item.blogTitle
-                                        .replace(/(:|\s+)/g, "-")
-                                        .toLowerCase(),
-                                    },
+                                    pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                    // query: {
+                                    //   title: item.blogTitle
+                                    //     .replace(/(:|\s+)/g, "-")
+                                    //     .toLowerCase(),
+                                    // },
                                   }}
                                 >
                                   <div className="link video-yt">

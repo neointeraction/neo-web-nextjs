@@ -2,6 +2,7 @@ import { React, useState } from "react";
 import Head from "next/head";
 import ReactWOW from "react-wow";
 import AnchorLink from "react-anchor-link-smooth-scroll";
+import Script from 'next/script'
 
 // import FormContact from "../components/FormContact";
 import ClientSlider from "../components/ClientSlider";
@@ -75,7 +76,13 @@ const gcampaign = () => {
               async
               src="https://js.convertflow.co/production/websites/35164.js"
             ></script> */}
+
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1067948097" ></script> 
+          <script dangerouslySetInnerHTML={{
+              __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1067948097');`}} />
+
       </Head>
+     
       <div className="container">
         <div className="home-content">
           <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
