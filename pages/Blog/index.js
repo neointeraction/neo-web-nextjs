@@ -144,7 +144,7 @@ export default withRouter(
                                         <div className="col-md-6">
                                           <div className="fb-image">
                                             <img
-                                              src={`${baseUrl}${item.blogCardImage.url}`}
+                                              src={`${baseUrl}${item.blogCardImage?.url}`}
                                               alt="blog-cover"
                                             />
                                           </div>
@@ -272,7 +272,7 @@ export default withRouter(
                                             )}
                                             cardTitle={item.blogTitle}
                                             backgroundImages={
-                                              item.blogCardImage.url
+                                              item.blogCardImage?.url
                                             }
                                             blogtag1={item.blog_categories.map(
                                               (cat) => cat.blogCategoryName

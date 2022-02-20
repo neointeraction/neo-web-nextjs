@@ -377,24 +377,42 @@ import Menu from "../../images/9dots.svg";
 
 
 
-export async function getStaticPaths() {
+// export async function getStaticPaths() {
 
-  const res = await fetch(baseUrl + `/blogs`);
-  const data = await res.json();
+//   const res = await fetch(baseUrl + `/blogs`);
+//   const data = await res.json();
 
-  const paths = data.map((x) => ({
-      params: { slug: x.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-").toString() },
-  }))
+//   const paths = data.map((x) => ({
+//       params: { slug: x.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-").toString() },
+//   }))
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
-export async function getStaticProps({params}) {
+// export async function getStaticProps({params}) {
 
-  const title = params.slug;
+//   const title = params.slug;
+
+//   const blogRes = await fetch(baseUrl + `/blogs`);
+//   const blogsData = await blogRes.json();
+
+//   const id = blogsData.find(data => data.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+
+//   const res = await fetch(baseUrl + `/blogs/${id}`);
+//   const data = await res.json();
+
+//   return {
+//     props: {
+//       post: data,
+//     },
+//   };
+// }
+
+export async function getServerSideProps(context) {
+  const title = context.params.slug;
 
   const blogRes = await fetch(baseUrl + `/blogs`);
   const blogsData = await blogRes.json();
@@ -404,11 +422,15 @@ export async function getStaticProps({params}) {
   const res = await fetch(baseUrl + `/blogs/${id}`);
   const data = await res.json();
 
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
-    props: {
-      post: data,
-    },
-  };
+    props: { post: data }, // will be passed to the page component as props
+  }
 }
 
 export default withRouter(ProjectDetailPage);

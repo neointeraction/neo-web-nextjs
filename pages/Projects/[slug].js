@@ -30,21 +30,21 @@ import NewCustomerAcquisition from "../../images/process-outcome/NewCustomerAcqu
 import GetQuoteModal from "../../components/GetQuoteModal";
 import CaseStudyModal from "../../components/CaseStudyModal";
 
-export async function getStaticPaths() {
-  // Call an external API endpoint to get posts.
-  // You can use any data fetching library
-  const res = await fetch(baseUrl + `/projects`);
-  const data = await res.json();
+// export async function getStaticPaths() {
+//   // Call an external API endpoint to get posts.
+//   // You can use any data fetching library
+//   const res = await fetch(baseUrl + `/projects`);
+//   const data = await res.json();
 
-  const paths = data.map((x) => ({
-    params: { slug: x.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-").toString() },
-}))
+//   const paths = data.map((x) => ({
+//     params: { slug: x.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-").toString() },
+// }))
 
-  return {
-    paths,
-    fallback: false,
-  };
-}
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// }
 
 // export async function getStaticProps(context) {
 //   const id = context.params.id;
@@ -57,9 +57,27 @@ export async function getStaticPaths() {
 //   };
 // }
 
-export async function getStaticProps({params}) {
+// export async function getStaticProps({params}) {
 
-  const title = params.slug;
+//   const title = params.slug;
+
+//   const projectsRes = await fetch(baseUrl + `/projects`);
+//   const projectsData = await projectsRes.json();
+
+//   const id = projectsData.find(data => data.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+
+//   const res = await fetch(baseUrl + `/projects/${id}`);
+//   const data = await res.json();
+
+//   return {
+//     props: {
+//       post: data,
+//     },
+//   };
+// }
+
+export async function getServerSideProps(context) {
+  const title = context.params.slug;
 
   const projectsRes = await fetch(baseUrl + `/projects`);
   const projectsData = await projectsRes.json();
@@ -69,11 +87,15 @@ export async function getStaticProps({params}) {
   const res = await fetch(baseUrl + `/projects/${id}`);
   const data = await res.json();
 
+  if (!data) {
+    return {
+      notFound: true,
+    }
+  }
+
   return {
-    props: {
-      post: data,
-    },
-  };
+    props: { post: data }, // will be passed to the page component as props
+  }
 }
 
 export default withRouter(
