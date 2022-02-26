@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Head from "next/head";
 
 import FilterCard from "../components/FilterCard";
+import SEOImg from "../images/neo-web-img.jpeg";
 
 class Home extends Component {
   render() {
@@ -17,6 +18,7 @@ class Home extends Component {
             name="keywords"
             content="UX design,UI engineering, Motion design, UX services, UI services, UX projects, UI projects, Video services, design team, design agency"
           />
+          <meta property="og:image" content={SEOImg} />
           {/* <script
             async
             src="https://js.convertflow.co/production/websites/35164.js"
