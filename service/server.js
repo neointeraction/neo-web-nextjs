@@ -39,12 +39,7 @@ app.post("/send", (req, res) => {
 
   var mail = {
     from: email,
-    to: [
-      "shameer@neointeraction.com",
-      "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-    ],
+    to: ["info@neointeraction.com", "sam@neointeraction.com"],
     subject: `Contact us form submission : ${name} <${email}> : ${service} `,
     html: `<html>
      <body>
@@ -77,8 +72,8 @@ app.post("/sendgad", (req, res) => {
       pass: "neo@1234",
     },
   });
-  // const transporter = nodemailer.createTransport({ 
-  //   host: 'smtp.ethereal.email', port: 587, 
+  // const transporter = nodemailer.createTransport({
+  //   host: 'smtp.ethereal.email', port: 587,
   //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
 
   var name = req.body.name;
@@ -92,7 +87,6 @@ app.post("/sendgad", (req, res) => {
       // "info@neointeraction.com",
       // "allen@neointeraction.com",
       "sam@neointeraction.com",
-      
     ],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
