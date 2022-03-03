@@ -213,7 +213,7 @@ export default class FormContactAdLp extends Component {
          Reach our <span className="title-red">Team!</span>
            
         </h1>
-        <div className="align-items-right p-cards">
+        <div className="align-items-right">
           {/* <div className="col-md-6 hide">
             <div className="contact-left-content">
               <img src={FormImage} alt="form-image"/>
