@@ -24,7 +24,7 @@ export default class FormContactAdLp extends Component {
       name: "",
       mobile: "",
       email: "",
-      description: "",
+      // description: "",
       // service: "",
       // nameError: "",
       // emailError: "",
@@ -68,9 +68,9 @@ export default class FormContactAdLp extends Component {
       // alert('You submitted the form and stuff!');
       e.preventDefault();
       axios
-        .post("https://www.neointeraction.com/server/sendgad", this.state)
+        .post("https://www.neointeraction.com/server/sendebk", this.state)
         .then((response) => {
-          if (response.data.status === "success" && this.state.isCaptchaValid ) {
+          if (response.data.status === "success") {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
@@ -98,81 +98,13 @@ export default class FormContactAdLp extends Component {
   resetForm() {
     this.setState({
       name: "",
-      mobile: "",
       email: "",
-      description: "",
       isCaptchaValid: false,
       isErrorShown: false,
       isFormValid: false,
     });
   }
 
-  // handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Test
-  //   if (
-  //     this.state.email.length > 0 &&
-  //     this.state.name.length > 0 &&
-  //     this.state.description.length > 0 &&
-  //     this.state.mobile.length > 0 &&
-  //     this.state.service.length > 0
-  //     // this.state.isCaptchaValid
-  //   ) {
-  //     this.setState({
-  //       isErrorShown: false,
-  //       isFormValid: true,
-  //     });
-
-  //     // Send the form with AJAX
-  //     $.ajax({
-  //       data: this.state,
-  //       type: "POST",
-  //       url: "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php",
-  //       success: function (data) {
-  //         console.info(data);
-  //       },
-  //       error: function (xhr, status, err) {
-  //         console.error(status, err.toString());
-  //       },
-  //     });
-
-  //     // Reset state after sending the form
-  //     this.setState({
-  //       name: "",
-  //       mobile: "",
-  //       email: "",
-  //       description: "",
-  //       service: "",
-  //       isCaptchaValid: false,
-  //       isErrorShown: false,
-  //       isFormValid: false,
-  //     });
-  //   } else {
-  //     // Show error message
-  //     this.setState({
-  //       isErrorShown: true,
-  //     });
-  //   }
-  // };
-
-  // componentDidMount() {
-  //   if (this.captchaDemo) {
-  //     console.log("started, just a second...");
-  //     this.captchaDemo.reset();
-  //   }
-  // }
-  // onLoadRecaptcha() {
-  //   if (this.captchaDemo) {
-  //     this.captchaDemo.reset();
-  //   }
-  // }
-  // verifyCallback(recaptchaToken) {
-  //   this.setState({
-  //     isCaptchaValid: true,
-  //   });
-  //   // Here you will get the final recaptchaToken!!!
-  //   console.log(recaptchaToken, "<= your recaptcha token");
-  // }
   defaultOptions = {
     loop: true,
     autoplay: true,
@@ -192,19 +124,19 @@ export default class FormContactAdLp extends Component {
     </div>
   );
 
-  onLoadRecaptcha() {
-    if (this.captchaDemo) {
-      this.captchaDemo.reset();
-      // this.captchaDemo.execute();  
-    }
-  }
-  verifyCallback(recaptchaToken) {
-    this.setState({
-      isCaptchaValid: true,
-    });
-    // Here you will get the final recaptchaToken!!!
-    console.log(recaptchaToken, "<= your recaptcha token");
-  }
+//   onLoadRecaptcha() {
+//     if (this.captchaDemo) {
+//       this.captchaDemo.reset();
+//       // this.captchaDemo.execute();  
+//     }
+//   }
+//   verifyCallback(recaptchaToken) {
+//     this.setState({
+//       isCaptchaValid: true,
+//     });
+//     // Here you will get the final recaptchaToken!!!
+//     console.log(recaptchaToken, "<= your recaptcha token");
+//   }
 
   render() {
     return (
@@ -249,7 +181,7 @@ export default class FormContactAdLp extends Component {
                     <div>{this.state.nameError}</div>
                   </div>
 
-                  <div className="col-md-6">
+                  {/* <div className="col-md-6">
                     <div className="input-custom-field">
                       <input
                         className="input-custom"
@@ -260,7 +192,6 @@ export default class FormContactAdLp extends Component {
                         onChange={this.handleChange}
                         value={this.state.mobile}
                       />
-                      {/* <label>Mobile</label> */}
                       <span className="focus-border">
                         <i></i>
                       </span>
@@ -271,9 +202,7 @@ export default class FormContactAdLp extends Component {
                       "required|phone"
                     )}
                     <div>{this.state.mobError}</div>
-
-                    {/* <div className="side"> */}
-                  </div>
+                  </div> */}
                   <div className="col-md-12">
                     <div className="input-custom-field">
                       <input
@@ -298,7 +227,7 @@ export default class FormContactAdLp extends Component {
                   </div>
                 </div>
                 <div className="side side-ad">
-                  <div className="input-custom-field">
+                  {/* <div className="input-custom-field">
                     <textarea
                       className="input-custom"
                       rows="4"
@@ -316,7 +245,7 @@ export default class FormContactAdLp extends Component {
                     "description",
                     this.state.description,
                     "required"
-                  )}
+                  )} */}
 
                   <div className="input-custom-field captcha-feild">
                     <ReCaptcha

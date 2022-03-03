@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import ReactWOW from "react-wow";
 import ReactModal from "react-modal";
+import { Helmet } from "react-helmet";
 
 import Quotes from "../components/Quotes";
 import ImageVideoText from "../components/ImageVideoText";
@@ -10,11 +11,62 @@ import ProcessCard from "../components/ProcessCard";
 import GetQuoteModal from "../components/GetQuoteModal";
 
 import Banner from "../images/ebookBanner.jpg";
-import EbookImg from "../images/ebookImgTab.jpg";
+import EbookImg from "../images/ebookImgBook.jpg";
 import Tablet1 from "../images/tablet1.png";
 import Tablet2 from "../images/tablet2.png";
 import Tablet3 from "../images/tablet3.png";
 import { useState } from "react";
+
+
+const axios = require("axios").default;
+
+function loadScript (src){
+  return new Promise(resolve =>{
+
+  
+  const script = document.createElement('script')
+  script.src = src
+  
+  script.onload = () => {
+    resolve(true)
+  }
+  script.onerror = () => {
+    resolve(false)
+  }
+  document.body.appendChild(script)
+})
+}
+
+async function displayRazorpay() {
+  const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+
+  if (!res) {
+    alert('Razorpay SDK failed to load. Are you online?')
+    return
+  }
+
+  const data = await fetch('http://localhost:4000/razorpay', { method: 'POST' }).then((t) =>
+    t.json()
+  )
+
+  console.log(data)
+
+  const options = {
+    key:'rzp_test_TAO1oonl6vzj0n',
+    currency: data.currency,
+    amount: data.amount.toString(),
+    order_id: data.id,
+    name: 'Ebook',
+    description: 'Thank you for purchasing our Ebook',
+    handler: function (response) {
+      alert(response.razorpay_payment_id)
+      alert(response.razorpay_order_id)
+      alert(response.razorpay_signature)
+    },
+  }
+  const paymentObject = new window.Razorpay(options)
+  paymentObject.open()
+  }
 
 const Ebook = () => {
   const [open, setOpen] = useState(false);
@@ -25,6 +77,7 @@ const Ebook = () => {
   const handleCloseModal = () => {
     setOpen(false);
   };
+
   return (
     <div>
       <Head>
@@ -47,28 +100,28 @@ const Ebook = () => {
       <div className="container">
         <div className="home-content">
           <h1 className="main-title animated fadeIn delay-0.5s">
-            Ebook: Establishing an agile UX design process
+            Integrate and practise Agile UX with our E-book
           </h1>
-          <h2 className="sub-title main-sub-title animated fadeIn">
+          {/* <h2 className="sub-title main-sub-title animated fadeIn">
             An ebook which helps you to simplify your UX process
-          </h2>
-          <ReactWOW animation="fadeIn" offset={0}>
+          </h2> */}
+          {/* <ReactWOW animation="fadeIn" offset={0}>
             <div className="grab-button">
               <button className="custom-btn inactive">
                 Grab your E Book Copy Now
               </button>
             </div>
-          </ReactWOW>
+          </ReactWOW> */}
         </div>
       </div>
       <div className="ebook-banner">
         <ReactWOW animation="fadeIn" offset={0}>
-          <div className="banner-content">
+          <div className="banner-content ebk-banner">
             <h1 className="ebook-banner-title">
-              Delve into <span>Agile UX</span> <br />
-              process with our E-Book
+              Learn <span className="title-red">UX</span> <br/>
+              Build <span className="title-red">Products</span>
             </h1>
-            <button className="custom-btn inactive">Buy now @ ₹199</button>
+            <button className="custom-btn inactive" onClick={displayRazorpay}>Buy now @ ₹199</button>
           </div>
         </ReactWOW>
       </div>
@@ -78,9 +131,8 @@ const Ebook = () => {
             <ReactWOW animation="fadeIn" offset={-200}>
               <div>
                 <Quotes
-                  quoteText="We’re experimenting with new methods and techniques,
-                      we’re seeing lots of crazy ideas, and we’re seeing culture
-                      being shaped by the very things we’re designing."
+                  quoteText="Agile UX is a set of processes that may seem restrictive but actually 
+                  prevents development of fixed mindset about a problem as the process is based on iteration and incremental improvements"
                 />
               </div>
             </ReactWOW>
@@ -91,22 +143,24 @@ const Ebook = () => {
                   ProjectVideo=""
                   componentOrientation="image-left"
                   ProjectImage={EbookImg}
-                  titleText="Explore our topics"
+                  titleText="Why should you buy this book ?"
                   contentText={
-                    <div>
-                      <p>
-                        Create great user experience by following the agile ux
-                        design process.
+                    <div className="ebk-ybuy">
+                      <p >
+                      This book guides developers and designers to get into the agile mindset and iterate 
+                      and develop products that the customers want. For the business or other stakeholders this book 
+                      gives a glimpse of the advantages the agile mindset can have in making your product be a great 
+                      experience for the users.
                       </p>
-                      <ul className="solution-list mb-3">
+                      {/* <ul className="solution-list mb-3">
                         <li>Six steps of Agile Ux</li>
                         <li>How business should view user experience?</li>
                         <li>
                           Create great user experience by following the agile ux
                           design
                         </li>
-                      </ul>
-                      <button class="custom-btn btn-text card-btn">
+                      </ul> */}
+                      <button class="custom-btn btn-text card-btn" onClick={displayRazorpay}>
                         Buy now @ ₹199
                       </button>
                     </div>
@@ -171,9 +225,9 @@ const Ebook = () => {
                   ProjectVideo=""
                   componentOrientation="image-left"
                   ProjectImage={EbookImg}
-                  titleText="Subscribe to get preview"
+                  titleText="Drop your email below"
                   contentText={
-                    <div>
+                    <div className="ebk-ybuy">
                       <p>
                         Join our tribe to get some awesome freebies and insights
                         into the world of design and our design process.
@@ -241,7 +295,7 @@ const Ebook = () => {
                 />
               </div>
             </ReactWOW>
-            <ReactWOW animation="fadeIn" offset={-200}>
+            {/* <ReactWOW animation="fadeIn" offset={-200}>
               <div className="contact-section mb-0">
                 <div className="container">
                   <SectionTitle
@@ -253,8 +307,8 @@ const Ebook = () => {
                   </button>
                 </div>
               </div>
-            </ReactWOW>
-            <ReactModal
+            </ReactWOW> */}
+            {/* <ReactModal
               isOpen={open}
               contentLabel="career"
               onRequestClose={handleCloseModal}
@@ -265,7 +319,7 @@ const Ebook = () => {
                 formtitle="Contact us"
                 togglePopover={handleCloseModal}
               />
-            </ReactModal>
+            </ReactModal> */}
           </div>
         </div>
       </div>

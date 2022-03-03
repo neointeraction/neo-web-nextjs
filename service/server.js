@@ -4,10 +4,11 @@ const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const cors = require("cors");
 // const multer = require('multer')
+const Razorpay = require('razorpay'); 
 
 var path = require("path");
 
-app.use(cors());
+app.use(cors())
 app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -90,7 +91,7 @@ app.post("/sendgad", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      // "allen@neointeraction.com",
+      "allen@neointeraction.com",
       "sam@neointeraction.com",
       
     ],
@@ -116,7 +117,117 @@ app.post("/sendgad", (req, res) => {
     }
   });
 });
+// ebook page
+app.post("/sendebk", (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "neo@1234",
+    },
+  });
+  // const transporter = nodemailer.createTransport({ 
+  //   host: 'smtp.ethereal.email', port: 587, 
+  //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
 
+  var name = req.body.name;
+  var mobile = req.body.mobile;
+  var email = req.body.email;
+
+  var mail = {
+    from: email,
+    to: [
+      // "shameer@neointeraction.com",
+      // "info@neointeraction.com",
+      // "allen@neointeraction.com",
+      // "sam@neointeraction.com",
+         "sebin@neointeraction.com"
+    ],
+    subject: `E-Book LP form submission : ${name} <${email}>`,
+    html: `<html>
+     <body>
+     <p>Name:${name}</p>
+     <p>Email:${email}</p>
+     </body> 
+     </html>`,
+  };
+
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      res.json({
+        status: "fail",
+      });
+    } else {
+      res.json({
+        status: "success",
+      });
+    }
+  });
+});
+
+//razorpay payment gateway
+var razorpay = new Razorpay({
+  key_id: 'rzp_test_TAO1oonl6vzj0n',
+  key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+});
+
+
+app.post('/verification', (req, res) => {
+	// do a validation
+	res.json({ status: 'ok' })
+	const secret = '12345678'
+
+	console.log(req.body)
+
+	const crypto = require('crypto')
+
+	const shasum = crypto.createHmac('sha256', secret)
+	shasum.update(JSON.stringify(req.body))
+	const digest = shasum.digest('hex')
+
+	console.log(digest, req.headers['x-razorpay-signature'])
+
+	if (digest === req.headers['x-razorpay-signature']) {
+		console.log('request is legit')
+    console.log(res.email)
+		// process it
+		// require('fs').writeFileSync('payment1.json', JSON.stringify(req.body, null, 4))
+	} else {
+		// pass it
+		console.log('razorpay signature mismatch')
+	}
+	
+})
+
+app.post('/razorpay', async (req, res) => {
+	// const payment_capture = 1
+	const amount = 199
+	const currency = 'INR'
+
+	const options = {
+		amount: amount * 100,
+		currency,
+		// receipt: shortid.generate(),
+		// payment_capture
+	}
+
+	try {
+		const response = await razorpay.orders.create(options)
+		console.log(response)
+		res.json({
+			id: response.id,
+			currency: response.currency,
+			amount: response.amount
+		})
+	} catch (error) {
+		console.log(error)
+	}
+})
+
+
+
+
+// Career page or popup
 app.post("/career", (req, res) => {
   var transporter = nodemailer.createTransport({
     service: "gmail",

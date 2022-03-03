@@ -382,7 +382,7 @@ font-size:2.6rem;
 .side-ad {
   background-color: transparent;
   padding-left: 0!important;
-  padding-right: 1.875rem;
+  padding-right: 0;
   /* 11.25rem */
 }
 .title-red {
@@ -896,6 +896,14 @@ input.form-control {
   font-family: "Avenir";
   font-size: 1.125rem;
   color: #292934;
+}
+.pd-content .ebk-ybuy{
+ 
+  max-width: 500px;
+}
+.ebk-ybuy p{
+  font-size: 24px;
+  line-height: 34px;
 }
 
 .quote-section {
@@ -3223,9 +3231,10 @@ textarea {
 .ebook-banner {
   background-image: url(../images/ebookBanner.jpg);
   background-size: auto 100vh;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   height: 660px;
   margin: 60px 0 -120px 0;
+  display: flex;
 }
 .lpsecond-banner{
   background-image: url(../images/LpSecond.jpg);
@@ -3246,10 +3255,27 @@ textarea {
 .lpsecond-banner .banner-content{
   padding-right: 100px;
 }
+/* .ebk-banner{
+  flex-flow: column;
+  justify-content: center;
+  text-align: left;
+  padding: 248px 150px;
+  align-items: flex-start;
+  transform: translateX(50%);
+} */
+.ebk-banner {
+  flex-flow: column;
+  justify-content: center;
+  /* text-align: left; */
+  padding: 0px;
+  align-items: flex-start;
+  width: 40%;
+  margin-left: 60%;
+}
 
 .ebook-banner-title {
-  font-weight: 400;
-  font-size: 48px;
+  font-weight: 700;
+  font-size: 3rem;
   line-height: 50px;
   color: #ffffff;
   margin-right: 50px;
@@ -4650,7 +4676,7 @@ textarea {
 .banner-content {
   display: flex;
   padding: 0 16px;
-  transform: translateY(10%);
+  transform: translateY(4%);
 }
 .lpsecond-banner{
   /* background-image: url(../images/LpSecond-mob.jpg); */
