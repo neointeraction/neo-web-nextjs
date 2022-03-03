@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import ReactWOW from "react-wow";
 import ReactModal from "react-modal";
-import { Helmet } from "react-helmet";
+
 
 import Quotes from "../components/Quotes";
 import ImageVideoText from "../components/ImageVideoText";
@@ -45,7 +45,7 @@ async function displayRazorpay() {
     return
   }
 
-  const data = await fetch('http://localhost:4000/razorpay', { method: 'POST' }).then((t) =>
+  const data = await fetch('https://www.neointeraction.com/server/razorpay', { method: 'POST' }).then((t) =>
     t.json()
   )
 
