@@ -3249,7 +3249,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 60px 200px 60px 60px;
+  padding: 30px 200px 60px 60px;
 }
 
 .lpsecond-banner .banner-content{
@@ -4593,7 +4593,7 @@ textarea {
   align-items: center;
   -moz-box-pack: end;
   justify-content: center;
-  padding: 60px;
+  padding: 40px;
 }
 .lpsecond-banner .banner-content{
   padding-right: 60px;
@@ -4642,6 +4642,9 @@ textarea {
 }
 .overlay-card-slider .slick-next {
   left: 93%;
+}
+.txt-area{
+  height: 43.6px;
 }
 .video-yt iframe {
   height: 340px;
@@ -4733,7 +4736,7 @@ margin-top: 20px;
   display: flex;
   padding: 0 16px;
   -webkit-transform: translateY(10%);
-  transform: translateY(10%);
+  transform: translateY(5%);
 }
 .lpsecond-banner .banner-content{
   padding-right: 16px;
