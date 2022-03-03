@@ -4644,7 +4644,7 @@ textarea {
   left: 93%;
 }
 .txt-area{
-  height: 43.6px;
+  height: 43.6px !important;
 }
 .video-yt iframe {
   height: 340px;

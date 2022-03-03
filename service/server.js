@@ -80,6 +80,7 @@ app.post("/sendgad", (req, res) => {
   var name = req.body.name;
   var mobile = req.body.mobile;
   var email = req.body.email;
+  var description = req.body.description;
 
   var mail = {
     from: email,
@@ -96,6 +97,7 @@ app.post("/sendgad", (req, res) => {
      <p>Name:${name}</p>
      <p>Email:${email}</p>
      <p>Mobile:${mobile}</p>  
+     <p> description:${description}</p>
      </body> 
      </html>`,
   };

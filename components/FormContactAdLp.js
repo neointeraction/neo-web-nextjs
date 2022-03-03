@@ -65,7 +65,7 @@ export default class FormContactAdLp extends Component {
     e.preventDefault();
     if (this.validator.allValid() ) {
       this.setState({ mailSent: true });
-      // alert('You submitted the form and stuff!');
+      // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/sendgad
       e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendgad", this.state)
@@ -203,7 +203,7 @@ export default class FormContactAdLp extends Component {
       isCaptchaValid: true,
     });
     // Here you will get the final recaptchaToken!!!
-    console.log(recaptchaToken, "<= your recaptcha token");
+    // console.log(recaptchaToken, "<= your recaptcha token");
   }
 
   render() {
@@ -300,7 +300,7 @@ export default class FormContactAdLp extends Component {
                 <div className="side side-ad">
                   <div className="input-custom-field">
                     <textarea
-                      className="input-custom"
+                      className="input-custom txt-area"
                       rows="4"
                       placeholder="Tell us about your business"
                       name="description"
