@@ -86,8 +86,9 @@ app.post("/sendgad", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
+      // "allen@neointeraction.com",
+      // "sam@neointeraction.com",
+      "sebin @neointeraction"
     ],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
