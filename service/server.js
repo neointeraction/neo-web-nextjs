@@ -166,15 +166,19 @@ app.post("/sendebk", (req, res) => {
 
 //razorpay payment gateway
 var razorpay = new Razorpay({
-  key_id: 'rzp_test_TAO1oonl6vzj0n',
-  key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+
+  // For test 
+  key_id: 'rzp_test_vLUUSJ0xpgkzLH',
+  key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
+
+
 });
 
 
 app.post('/verification', (req, res) => {
 	// do a validation
 	res.json({ status: 'ok' })
-	const secret = '12345678'
+	const secret = '16425698231'
 
 	console.log(req.body)
 
@@ -216,7 +220,7 @@ app.post('/verification', (req, res) => {
         html: `<html>
          <body>
          <h4>Thanks for showing intrest !</h4>
-         <p>Download the kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">Ebook</a> </p>     
+         <p>Download the E-book from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>     
          </body> 
          </html>`,
       };
