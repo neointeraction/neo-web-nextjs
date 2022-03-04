@@ -82,7 +82,7 @@ export default class FormContactAdLp extends Component {
               draggable: true,
               progress: undefined,
             });
-             alert("Message Sent.");
+            //  alert("Message Sent.");
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
