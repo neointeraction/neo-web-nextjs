@@ -9,6 +9,7 @@ import ImageVideoText from "../components/ImageVideoText";
 import SectionTitle from "../components/SectionTitle";
 import ProcessCard from "../components/ProcessCard";
 import GetQuoteModal from "../components/GetQuoteModal";
+import FormContactEBkLP from "../components/FormContactEBkLP";
 
 import Banner from "../images/ebookBanner.jpg";
 import EbookImg from "../images/ebookImgBook.jpg";
@@ -232,7 +233,8 @@ const Ebook = () => {
                         Join our tribe to get some awesome freebies and insights
                         into the world of design and our design process.
                       </p>
-                      <div className="form">
+                    {/* <FormContactEBkLP /> */}
+                    <div className="form">
                         <div className="input-custom-field">
                           <input
                             className="input-custom"
