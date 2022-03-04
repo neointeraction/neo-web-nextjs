@@ -60,9 +60,9 @@ async function displayRazorpay() {
     name: 'Ebook',
     description: 'Thank you for purchasing our Ebook',
     handler: function (response) {
-      alert(response.razorpay_payment_id)
-      alert(response.razorpay_order_id)
-      alert(response.razorpay_signature)
+      // alert(response.razorpay_payment_id)
+      // alert(response.razorpay_order_id)
+      // alert(response.razorpay_signature)
     },
   }
   const paymentObject = new window.Razorpay(options)

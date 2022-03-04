@@ -178,7 +178,7 @@ var razorpay = new Razorpay({
 app.post('/verification', (req, res) => {
 	// do a validation
 	res.json({ status: 'ok' })
-	const secret = '16425698231'
+	const secret ='16425698231'
 
 	console.log(req.body)
 
