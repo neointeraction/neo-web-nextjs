@@ -233,8 +233,65 @@ const Ebook = () => {
                         Join our tribe to get some awesome freebies and insights
                         into the world of design and our design process.
                       </p>
-                    <FormContactEBkLP />
-                    
+                    {/* <FormContactEBkLP /> */}
+                    <div className="form">
+                        <div className="input-custom-field">
+                          <input
+                            className="input-custom"
+                            type="text"
+                            placeholder="Name"
+                            name="name"
+                            // onChange={this.handleChange}
+                            // value={this.state.name}
+                          />
+
+                          <span className="focus-border">
+                            <i></i>
+                          </span>
+                        </div>
+                        {/* {this.validator.message(
+                          "Name",
+                          this.state.name,
+                          "required|alpha"
+                        )} */}
+                        <div className="row ">
+                          <div className="col-md-12">
+                            <div className="input-custom-field">
+                              <input
+                                className="input-custom"
+                                type="text"
+                                placeholder="Email"
+                                name="email"
+                                //onChange={this.handleChange}
+                                //value={this.state.email}
+                              />
+                              <span className="focus-border">
+                                <i></i>
+                              </span>
+                            </div>
+                            {/* {this.validator.message(
+                              "email",
+                              this.state.email,
+                              "required|email"
+                            )} */}
+                          </div>
+                        </div>
+                      </div>
+                      <button
+                        className="custom-btn form-submit loader-btns"
+                        //onClick={this.submitEmail}
+                      >
+                        {/* {this.state.submitStatus ? (
+                          <>
+                            <span>Submiting</span>
+                            <div class="progress-bar">
+                              <div class="circle border"></div>
+                            </div>
+                          </>
+                        ) : ( */}
+                        <span>Submit</span>
+                        {/* )} */}
+                      </button>
                     </div>
                   }
                 />
