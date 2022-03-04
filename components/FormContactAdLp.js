@@ -29,10 +29,10 @@ export default class FormContactAdLp extends Component {
       // nameError: "",
       // emailError: "",
       // mobError: "",
-      // isCaptchaValid: false,
-      // isErrorShown: false,
-      // isFormValid: false,
-      // mailSent: false,
+      isCaptchaValid: false,
+      isErrorShown: false,
+      isFormValid: false,
+      mailSent: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
@@ -65,12 +65,13 @@ export default class FormContactAdLp extends Component {
     e.preventDefault();
     if (this.validator.allValid() ) {
       this.setState({ mailSent: true });
-      // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/sendgad
+      // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/sendgad`````` http://localhost:4000/sendgad
+      // && this.state.isCaptchaValid 
       e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendgad", this.state)
         .then((response) => {
-          if (response.data.status === "success" && this.state.isCaptchaValid ) {
+          if (response.data.status === "success"&& this.state.isCaptchaValid) {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
@@ -81,7 +82,7 @@ export default class FormContactAdLp extends Component {
               draggable: true,
               progress: undefined,
             });
-            // alert("Message Sent.");
+             alert("Message Sent.");
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
@@ -203,7 +204,7 @@ export default class FormContactAdLp extends Component {
       isCaptchaValid: true,
     });
     // Here you will get the final recaptchaToken!!!
-    // console.log(recaptchaToken, "<= your recaptcha token");
+    console.log(recaptchaToken, "<= your recaptcha token");
   }
 
   render() {

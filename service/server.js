@@ -2,13 +2,13 @@ const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
-// const cors = require("cors");
+const cors = require("cors");
 // const multer = require('multer')
 // const Razorpay = require('razorpay'); 
 
 var path = require("path");
 
-// app.use(cors())
+app.use(cors())
 app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -87,9 +87,9 @@ app.post("/sendgad", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      // "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-      "sebin @neointeraction"
+      "allen@neointeraction.com",
+      "sam@neointeraction.com",
+      // "sebin@neointeraction.com"
     ],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
@@ -97,7 +97,7 @@ app.post("/sendgad", (req, res) => {
      <p>Name:${name}</p>
      <p>Email:${email}</p>
      <p>Mobile:${mobile}</p>  
-     <p> description:${description}</p>
+     <p>description:${description}</p>
      </body> 
      </html>`,
   };
