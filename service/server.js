@@ -7,6 +7,7 @@ const cors = require("cors");
 const Razorpay = require('razorpay'); 
 
 var path = require("path");
+const { getMaxListeners } = require("process");
 
 app.use(cors())
 app.use(bodyParser.json({ limit: "150mb" }));
@@ -167,10 +168,16 @@ app.post("/sendebk", (req, res) => {
 //razorpay payment gateway
 var razorpay = new Razorpay({
 
-  // For test 
+  // For test sam@neointeraction also change in ebook page add a new ngork tunnel as webhook in rzorpay for local testing
   key_id: 'rzp_test_vLUUSJ0xpgkzLH',
   key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
 
+  // test sebangeorgen@gmail.com
+  // key_id: 'rzp_test_TAO1oonl6vzj0n',
+  // key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+
+  // for live
+ 
 
 });
 
@@ -195,49 +202,43 @@ app.post('/verification', (req, res) => {
     console.log(req.body['payload']['payment']['entity']['email'])
 		// process it
 		// require('fs').writeFileSync('payment1.json', JSON.stringify(req.body, null, 4))
-    
-      var transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-          user: "neointeraction.mailer@gmail.com",
-          pass: "neo@1234",
-        },
-      });
-
-      // const transporter = nodemailer.createTransport({ 
-      //   host: 'smtp.ethereal.email', port: 587, 
-      //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
-    
-    
-      // var email = req.body.email;
-      // var fileUrl = req.body.fileUrl;
-      // var fileName = req.body.fileName;
-    
-      var mail = {
-        from: "info@neointeraction.com",
-        to: req.body['payload']['payment']['entity']['email'],
-        subject: `Neointeraction Ebook test Download Request`,
-        html: `<html>
-         <body>
-         <h4>Thanks for showing intrest !</h4>
-         <p>Download the E-book from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>     
-         </body> 
-         </html>`,
-      };
-    
-      process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-    
-      transporter.sendMail(mail, (err, data) => {
-        if (err) {
-          res.json({
-            status: "fail",
-          });
-        } else {
-          res.json({
-            status: "success",
-          });
-        }
-      });
+    var transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "neointeraction.mailer@gmail.com",
+        pass: "neo@1234",
+      },
+    });
+  
+    var email = req.body['payload']['payment']['entity']['email'];
+    var fileUrl = req.body.fileUrl;
+    var fileName = req.body.fileName;
+  
+    var mail = {
+      from: "info@neointeraction.com",
+      to: email,
+      subject: `Neointeraction Design Download Request`,
+      html: `<html>
+       <body>
+       <h4>Thank you for buying!</h4>
+       <p>Download the E-book from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing"</a> </p>     
+       </body> 
+       </html>`,
+    };
+  
+    process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
+  
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
+    });
 	} else {
 		// pass it
 		console.log('razorpay signature mismatch')
