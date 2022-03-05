@@ -210,7 +210,7 @@ app.post('/verification', (req, res) => {
       },
     });
   
-    var email = req.body['payload']['payment']['entity']['email'];
+    var email = req.body.email;
     var fileUrl = req.body.fileUrl;
     var fileName = req.body.fileName;
   
@@ -221,7 +221,7 @@ app.post('/verification', (req, res) => {
       html: `<html>
        <body>
        <h4>Thank you for buying!</h4>
-       <p>Download the E-book from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing"</a> </p>     
+       <p>Download the E-book from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>     
        </body> 
        </html>`,
     };
