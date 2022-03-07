@@ -139,9 +139,9 @@ app.post("/sendebk", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      // "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-         "sebin@neointeraction.com"
+      "allen@neointeraction.com",
+      "sam@neointeraction.com",
+        //  "sebin@neointeraction.com"
     ],
     subject: `E-Book LP form submission : ${name} <${email}>`,
     html: `<html>

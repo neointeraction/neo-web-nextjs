@@ -4585,6 +4585,19 @@ textarea {
   .pd-content {
     margin-top: 0.875rem;
   }
+
+  /* ebook */
+  .ebook-banner {
+    background-image: url(/_next/static/media/ebookBanner.136189b6.jpg);
+    background-size: contain;
+    /* background-attachment: fixed; */
+    /* height: 100%; */
+    min-height: 600px;
+    margin: 60px 0 -120px 0;
+    display: -moz-box;
+    display: flex;
+    background-repeat: no-repeat;
+  }
 }
 @media only screen and (max-width: 992px) {
 /* lp2 google ad */
@@ -4628,6 +4641,21 @@ textarea {
 
 .pd-content .ebk-ybuy {
   max-width: 700px;
+}
+.ebook-banner {
+  background-image: url(/_next/static/media/ebookBanner.136189b6.jpg);
+  background-size: cover;
+  /* background-attachment: fixed; */
+  height: 100%;
+  min-height: 400px;
+  margin: 60px 0 -120px 0;
+  display: -moz-box;
+  display: flex;
+  background-repeat: no-repeat;
+}
+
+.ebk-banner{
+  align-items: flex-start !important;
 }
 
 }
@@ -4738,6 +4766,45 @@ margin-top: 20px;
 }
 .recaptcha-ad{
   width: 250px;
+}
+/* ebook */
+.ebook-banner {
+  background-image: url(../images/ebookBanner-mob.jpg);
+  background-size: cover;
+  /* background-attachment: fixed; */
+  height: 600px;
+  margin: 60px 0 -120px 0;
+  display: flex;
+}
+.ebk-banner {
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  flex-flow: column;
+  -moz-box-pack: center;
+  justify-content: center;
+  /* text-align: left; */
+  padding: 0px;
+  -moz-box-align: start;
+  align-items: flex-start;
+  width: auto; 
+   margin-left: 5%;
+}
+.ebook-banner-title {
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 50px;
+  color: #ffffff;
+  margin-right: 50px;
+}
+.ebk-banner .title-red{
+  font-size: 2.4rem;
+}
+.ebk-banner {
+  display: -moz-box;
+  display: flex;
+  padding: 0 16px;
+  transform: translateY(-4%)!important;
+  justify-content: flex-end;
 }
 
 }
