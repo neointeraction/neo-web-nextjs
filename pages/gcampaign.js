@@ -70,7 +70,7 @@ const gcampaign = () => {
         </title>
         <meta
           name="description"
-          name="keywords"
+          content="Neointeraction is a design agency specialized in User experience (UX & UI) designing, engineering as well as motion design with 15 years of experience in B2B enterprise projects."
         />
         {/* <script
               async

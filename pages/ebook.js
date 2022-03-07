@@ -53,7 +53,7 @@ async function displayRazorpay() {
   console.log(data)
 
   const options = {
-    key:'rzp_test_TAO1oonl6vzj0n',
+    key:'rzp_live_msovzCS0LY9PTS',
     currency: data.currency,
     amount: data.amount.toString(),
     order_id: data.id,
@@ -126,7 +126,7 @@ const Ebook = () => {
           </div>
         </ReactWOW>
       </div>
-      <div className="container">
+      <div className="container ebk-container">
         <div className="home-content">
           <div>
             <ReactWOW animation="fadeIn" offset={-200}>
@@ -179,7 +179,7 @@ const Ebook = () => {
                   />
                 </div>
                 <div className="row p-cards">
-                  <div className="col-md-4">
+                  <div className="col-xl-4 col-lg-6 col-md-6">
                     <div className="custom-process-card">
                       <ProcessCard
                         className="process-outcom-card"
@@ -191,7 +191,7 @@ const Ebook = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-xl-4 col-lg-6 col-md-6">
                     <div className="custom-process-card">
                       <ProcessCard
                         className="process-outcom-card"
@@ -203,7 +203,7 @@ const Ebook = () => {
                       />
                     </div>
                   </div>
-                  <div className="col-md-4">
+                  <div className="col-xl-4 col-lg-6 col-md-6">
                     <div className="custom-process-card">
                       <ProcessCard
                         className="process-outcom-card"
@@ -233,65 +233,8 @@ const Ebook = () => {
                         Join our tribe to get some awesome freebies and insights
                         into the world of design and our design process.
                       </p>
-                    {/* <FormContactEBkLP /> */}
-                    <div className="form">
-                        <div className="input-custom-field">
-                          <input
-                            className="input-custom"
-                            type="text"
-                            placeholder="Name"
-                            name="name"
-                            // onChange={this.handleChange}
-                            // value={this.state.name}
-                          />
-
-                          <span className="focus-border">
-                            <i></i>
-                          </span>
-                        </div>
-                        {/* {this.validator.message(
-                          "Name",
-                          this.state.name,
-                          "required|alpha"
-                        )} */}
-                        <div className="row ">
-                          <div className="col-md-12">
-                            <div className="input-custom-field">
-                              <input
-                                className="input-custom"
-                                type="text"
-                                placeholder="Email"
-                                name="email"
-                                //onChange={this.handleChange}
-                                //value={this.state.email}
-                              />
-                              <span className="focus-border">
-                                <i></i>
-                              </span>
-                            </div>
-                            {/* {this.validator.message(
-                              "email",
-                              this.state.email,
-                              "required|email"
-                            )} */}
-                          </div>
-                        </div>
-                      </div>
-                      <button
-                        className="custom-btn form-submit loader-btns"
-                        //onClick={this.submitEmail}
-                      >
-                        {/* {this.state.submitStatus ? (
-                          <>
-                            <span>Submiting</span>
-                            <div class="progress-bar">
-                              <div class="circle border"></div>
-                            </div>
-                          </>
-                        ) : ( */}
-                        <span>Submit</span>
-                        {/* )} */}
-                      </button>
+                    <FormContactEBkLP />
+    
                     </div>
                   }
                 />

@@ -17,12 +17,12 @@ import "react-toastify/dist/ReactToastify.css";
 
 const axios = require("axios").default;
 
-export default class FormContactAdLp extends Component {
+export default class FormContactEBkLP extends Component {
   constructor() {
     super();
     this.state = {
       name: "",
-      mobile: "",
+      // mobile: "",
       email: "",
       // description: "",
       // service: "",
@@ -36,8 +36,8 @@ export default class FormContactAdLp extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
-    this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
+    // this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
+    // this.verifyCallback = this.verifyCallback.bind(this);
     this.validator = new SimpleReactValidator();
   }
 
@@ -48,14 +48,14 @@ export default class FormContactAdLp extends Component {
       : this.setState({ [name]: value });
   }
 
-  componentDidMount() {
-    loadReCaptcha();
-    if (this.captchaDemo) {
-      console.log("started, just a second...");
-      this.captchaDemo.reset();
-      // this.captchaDemo.execute();
-    }
-  }
+  // componentDidMount() {
+  //   loadReCaptcha();
+  //   if (this.captchaDemo) {
+  //     console.log("started, just a second...");
+  //     this.captchaDemo.reset();
+  //     // this.captchaDemo.execute();
+  //   }
+  // }
 
   // when submit btn is clicked
 
@@ -65,7 +65,7 @@ export default class FormContactAdLp extends Component {
     e.preventDefault();
     if (this.validator.allValid() ) {
       this.setState({ mailSent: true });
-      // alert('You submitted the form and stuff!');
+      // alert('You submitted the form and stuff!'); "http://localhost:4000/sendebk" https://www.neointeraction.com/server/sendebk
       e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendebk", this.state)
@@ -99,7 +99,7 @@ export default class FormContactAdLp extends Component {
     this.setState({
       name: "",
       email: "",
-      isCaptchaValid: false,
+      // isCaptchaValid: false,
       isErrorShown: false,
       isFormValid: false,
     });
@@ -124,28 +124,24 @@ export default class FormContactAdLp extends Component {
     </div>
   );
 
-//   onLoadRecaptcha() {
-//     if (this.captchaDemo) {
-//       this.captchaDemo.reset();
-//       // this.captchaDemo.execute();  
-//     }
-//   }
-//   verifyCallback(recaptchaToken) {
-//     this.setState({
-//       isCaptchaValid: true,
-//     });
-//     // Here you will get the final recaptchaToken!!!
-//     console.log(recaptchaToken, "<= your recaptcha token");
-//   }
+  // onLoadRecaptcha() {
+  //   if (this.captchaDemo) {
+  //     this.captchaDemo.reset();
+  //     // this.captchaDemo.execute();  
+  //   }
+  // }
+  // verifyCallback(recaptchaToken) {
+  //   this.setState({
+  //     isCaptchaValid: true,
+  //   });
+  //   // Here you will get the final recaptchaToken!!!
+  //   console.log(recaptchaToken, "<= your recaptcha token");
+  // }
 
   render() {
     return (
-      <div className="form-group bground-transp">
-        <h1 className="ad-form-title">
-         Reach our <span className="title-red">Team!</span>
-           
-        </h1>
-        <div className="align-items-right p-cards">
+      <div className="form-group">
+        <div className="align-items-right">
           {/* <div className="col-md-6 hide">
             <div className="contact-left-content">
               <img src={FormImage} alt="form-image"/>
@@ -154,119 +150,51 @@ export default class FormContactAdLp extends Component {
           <div className="custom-position">
             <div className="wrapper">
               <form
-                className="form-section ad-form"
-                onSubmit={this.submitEmail}
-              >
-                <div className="row">
-                  <div className="col-md-6">
-                    <div className="input-custom-field">
-                      <input
-                        className="input-custom"
-                        type="text"
-                        placeholder="Name"
-                        name="name"
-                        onChange={this.handleChange}
-                        value={this.state.name}
-                      />
+                className="form-section"
+                onSubmit={this.submitEmail}>
+                
+                        <div className="input-custom-field">
+                          <input
+                            className="input-custom"
+                            type="text"
+                            placeholder="Name"
+                            name="name"
+                            onChange={this.handleChange}
+                            value={this.state.name}
+                          />
 
-                      <span className="focus-border">
-                        <i></i>
-                      </span>
-                    </div>
-                    {this.validator.message(
-                      "Name",
-                      this.state.name,
-                      "required|alpha_space"
-                    )}
-                    <div>{this.state.nameError}</div>
-                  </div>
+                          <span className="focus-border">
+                            <i></i>
+                          </span>
+                        </div>
+                        {this.validator.message(
+                          "Name",
+                          this.state.name,
+                          "required|alpha_space"
+                        )}
 
-                  {/* <div className="col-md-6">
-                    <div className="input-custom-field">
-                      <input
-                        className="input-custom"
-                        type="number"
-                        placeholder="Mobile"
-                        name="mobile"
-                        maxlength="10"
-                        onChange={this.handleChange}
-                        value={this.state.mobile}
-                      />
-                      <span className="focus-border">
-                        <i></i>
-                      </span>
-                    </div>
-                    {this.validator.message(
-                      "mobile",
-                      this.state.mobile,
-                      "required|phone"
-                    )}
-                    <div>{this.state.mobError}</div>
-                  </div> */}
-                  <div className="col-md-12">
-                    <div className="input-custom-field">
-                      <input
-                        className="input-custom"
-                        type="email"
-                        placeholder="Email"
-                        name="email"
-                        onChange={this.handleChange}
-                        // onBlur={() => this.validator.showMessageFor("email")}
-                        value={this.state.email}
-                      />
-                      <span className="focus-border">
-                        <i></i>
-                      </span>
-                    </div>
-                    {this.validator.message(
-                      "email",
-                      this.state.email,
-                      "required|email"
-                    )}
-                    <div>{this.state.emailError}</div>
-                  </div>
-                </div>
-                <div className="side side-ad">
-                  {/* <div className="input-custom-field">
-                    <textarea
-                      className="input-custom"
-                      rows="4"
-                      placeholder="Tell us about your business"
-                      name="description"
-                      onChange={this.handleChange}
-                      value={this.state.description}
-                    />
-
-                    <span className="focus-border">
-                      <i></i>
-                    </span>
-                  </div>
-                  {this.validator.message(
-                    "description",
-                    this.state.description,
-                    "required"
-                  )} */}
-
-                  <div className="input-custom-field captcha-feild">
-                    <ReCaptcha
-                      ref={(el) => {
-                        this.captchaDemo = el;
-                      }}
-                      size="normal"
-                      render="explicit"
-                      sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
-                      onloadCallback={this.onLoadRecaptcha}
-                      verifyCallback={this.verifyCallback}
-                      className="recaptcha-ad"
-                    />
-                  </div>
-
-                  {/* <button className="custom-btn form-submit">
-                    {this.state.mailSent ? "Submitting" : "Submit"}
-                  </button> */}
-
+                            <div className="input-custom-field">
+                              <input
+                                className="input-custom"
+                                type="text"
+                                placeholder="Email"
+                                name="email"
+                                onChange={this.handleChange}
+                                value={this.state.email}
+                              />
+                              <span className="focus-border">
+                                <i></i>
+                              </span>
+                            </div>
+                            {this.validator.message(
+                              "email",
+                              this.state.email,
+                              "required|email"
+                            )}
+                  
+                      
                   <button className="custom-btn loader-btns" onClick={this.submitEmail}>
-                    {this.state.mailSent && this.state.isCaptchaValid ? (
+                    {this.state.mailSent ? (
                       <>
                         <span>Submit</span>
                         <div class="progress-bar">
@@ -293,7 +221,7 @@ export default class FormContactAdLp extends Component {
                       </fieldset>
                     )}
                   </div>
-                </div>
+               
               </form>
               <div className="result-message">
                 <h1 className="animated fadeInUp delay-2s">

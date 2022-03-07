@@ -119,13 +119,13 @@ app.post("/sendgad", (req, res) => {
 
 // ebook page
 app.post("/sendebk", (req, res) => {
-  // var transporter = nodemailer.createTransport({
-  //   service: "gmail",
-  //   auth: {
-  //     user: "neointeraction.mailer@gmail.com",
-  //     pass: "neo@1234",
-  //   },
-  // });
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "neo@1234",
+    },
+  });
   // const transporter = nodemailer.createTransport({ 
   //   host: 'smtp.ethereal.email', port: 587, 
   //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
@@ -173,11 +173,12 @@ var razorpay = new Razorpay({
   // key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
 
   // test sebangeorgen@gmail.com
-  key_id: 'rzp_test_TAO1oonl6vzj0n',
-  key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+  // key_id: 'rzp_test_TAO1oonl6vzj0n',
+  // key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
 
   // for live
- 
+  key_id: 'rzp_live_msovzCS0LY9PTS',
+  key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
 
 });
 
@@ -222,7 +223,9 @@ app.post('/verification', (req, res) => {
       html: `<html>
        <body>
        <h4>Thank you for buying!</h4>
-       <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>     
+       <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
+       <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>   
+       <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
        </body> 
        </html>`,
     };
