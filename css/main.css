@@ -4588,7 +4588,6 @@ textarea {
 
   /* ebook */
   .ebook-banner {
-    background-image: url(/_next/static/media/ebookBanner.136189b6.jpg);
     background-size: contain;
     /* background-attachment: fixed; */
     /* height: 100%; */
@@ -4643,7 +4642,6 @@ textarea {
   max-width: 700px;
 }
 .ebook-banner {
-  background-image: url(/_next/static/media/ebookBanner.136189b6.jpg);
   background-size: cover;
   /* background-attachment: fixed; */
   height: 100%;
