@@ -224,7 +224,7 @@ app.post('/verification', (req, res) => {
        <body>
        <h4>Thank you for buying!</h4>
        <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-       <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>   
+       <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
        <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
        </body> 
        </html>`,
@@ -253,7 +253,7 @@ app.post('/verification', (req, res) => {
 
 app.post('/razorpay', async (req, res) => {
 	// const payment_capture = 1
-	const amount = 199
+	const amount = 10
 	const currency = 'INR'
 
 	const options = {

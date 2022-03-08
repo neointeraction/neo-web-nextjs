@@ -4849,4 +4849,22 @@ margin-top: 20px;
     margin: auto;
 }
 
+/* ebook */
+/* .ebook-banner {
+  background-size: cover;
+  height: 600px;
+  margin: 60px 0 -120px 0;
+  display: -moz-box;
+  display: flex;
+}
+.ebk-banner {
+  display: -moz-box;
+  display: flex;
+  padding: 0 16px;
+  -webkit-transform: translateY(-4%)!important;
+  -moz-box-pack: end;
+  justify-content: flex-end;
+  max-height: 89%;
+} */
+
 }
