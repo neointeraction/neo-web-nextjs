@@ -173,12 +173,12 @@ var razorpay = new Razorpay({
   // key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
 
   // test sebangeorgen@gmail.com
-  // key_id: 'rzp_test_TAO1oonl6vzj0n',
-  // key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+  key_id: 'rzp_test_TAO1oonl6vzj0n',
+  key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
 
   // for live
-  key_id: 'rzp_live_msovzCS0LY9PTS',
-  key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
+  // key_id: 'rzp_live_msovzCS0LY9PTS',
+  // key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
 
 });
 
