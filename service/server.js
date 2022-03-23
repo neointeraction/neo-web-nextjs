@@ -205,13 +205,13 @@ app.post('/verification', (req, res) => {
 		// require('fs').writeFileSync('payment1.json', JSON.stringify(req.body, null, 4))
 
     // original
-    // var transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: "neointeraction.mailer@gmail.com",
-    //     pass: "neo@1234",
-    //   },
-    // });
+    var transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: "neointeraction.mailer@gmail.com",
+        pass: "neo@1234",
+      },
+    });
   
     var emailrzr = req.body['payload']['payment']['entity']['email'];
 
@@ -219,19 +219,19 @@ app.post('/verification', (req, res) => {
     // var fileName = req.body.fileName;
 
    // original
-    // var mail = {
-    //   from: "info@neointeraction.com",
-    //   to: email,
-    //   subject: `Neointeraction Design Download Request`,
-    //   html: `<html>
-    //    <body>
-    //    <h4>Thank you for buying!</h4>
-    //    <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-    //    <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
-    //    <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
-    //    </body> 
-    //    </html>`,
-    // };
+    var mail = {
+      from: "info@neointeraction.com",
+      to: email,
+      subject: `Neointeraction Design Download Request`,
+      html: `<html>
+       <body>
+       <h4>Thank you for buying!</h4>
+       <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
+       <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
+       <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
+       </body> 
+       </html>`,
+    };
 
 
 
@@ -265,17 +265,17 @@ runEBK();
     // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
      //original
-    // transporter.sendMail(mail, (err, data) => {
-    //   if (err) {
-    //     res.json({
-    //       status: "fail",
-    //     });
-    //   } else {
-    //     res.json({
-    //       status: "success",
-    //     });
-    //   }
-    // });
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
+    });
     
 	} else {
 		// pass it
