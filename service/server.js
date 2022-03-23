@@ -173,12 +173,12 @@ var razorpay = new Razorpay({
   // key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
 
   // test sebangeorgen@gmail.com
-  // key_id: 'rzp_test_TAO1oonl6vzj0n',
-  // key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+  key_id: 'rzp_test_TAO1oonl6vzj0n',
+  key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
 
   // for live sam@neointeraction
-  key_id: 'rzp_live_msovzCS0LY9PTS',
-  key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
+  // key_id: 'rzp_live_msovzCS0LY9PTS',
+  // key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
 
 });
 
@@ -221,7 +221,7 @@ app.post('/verification', (req, res) => {
    // original
     var mail = {
       from: "info@neointeraction.com",
-      to: email,
+      to: emailrzr,
       subject: `Neointeraction Design Download Request`,
       html: `<html>
        <body>
