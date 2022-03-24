@@ -5,13 +5,11 @@ var bodyParser = require("body-parser");
 const cors = require("cors");
 // const multer = require('multer')
 const Razorpay = require('razorpay'); 
-// var handlebars = require('handlebars');
-// var fs = require('fs');
 
 var path = require("path");
 const { getMaxListeners } = require("process");
 
-app.use(cors());
+app.use(cors())
 app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -175,12 +173,12 @@ var razorpay = new Razorpay({
   // key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
 
   // test sebangeorgen@gmail.com
-  key_id: 'rzp_test_TAO1oonl6vzj0n',
-  key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
+  // key_id: 'rzp_test_TAO1oonl6vzj0n',
+  // key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
 
-  // for live sam@neointeraction
-  // key_id: 'rzp_live_msovzCS0LY9PTS',
-  // key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
+  // for live
+  key_id: 'rzp_live_msovzCS0LY9PTS',
+  key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
 
 });
 
@@ -206,7 +204,6 @@ app.post('/verification', (req, res) => {
 		// process it
 		// require('fs').writeFileSync('payment1.json', JSON.stringify(req.body, null, 4))
 
-    // original
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
@@ -215,15 +212,13 @@ app.post('/verification', (req, res) => {
       },
     });
   
-    var emailrzr = req.body['payload']['payment']['entity']['email'];
-
+    var email = req.body['payload']['payment']['entity']['email'];
     // var fileUrl = req.body.fileUrl;
     // var fileName = req.body.fileName;
-
-   // original
+  
     var mail = {
       from: "info@neointeraction.com",
-      to: emailrzr,
+      to: email,
       subject: `Neointeraction Design Download Request`,
       html: `<html>
        <body>
@@ -234,9 +229,9 @@ app.post('/verification', (req, res) => {
        </body> 
        </html>`,
     };
-
+  
     // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-
+  
     transporter.sendMail(mail, (err, data) => {
       if (err) {
         res.json({
@@ -258,7 +253,7 @@ app.post('/verification', (req, res) => {
 
 app.post('/razorpay', async (req, res) => {
 	// const payment_capture = 1
-	const amount = 199
+	const amount = 10
 	const currency = 'INR'
 
 	const options = {
