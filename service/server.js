@@ -5,13 +5,13 @@ var bodyParser = require("body-parser");
 const cors = require("cors");
 // const multer = require('multer')
 const Razorpay = require('razorpay'); 
-var handlebars = require('handlebars');
-var fs = require('fs');
+// var handlebars = require('handlebars');
+// var fs = require('fs');
 
 var path = require("path");
 const { getMaxListeners } = require("process");
 
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -206,19 +206,6 @@ app.post('/verification', (req, res) => {
 		// process it
 		// require('fs').writeFileSync('payment1.json', JSON.stringify(req.body, null, 4))
 
-    var readHTMLFile = function(path, callback) {
-      fs.readFile(path, {encoding: 'utf-8'}, function (err, html) {
-          if (err) {
-             callback(err); 
-             throw err;
-              
-          }
-          else {
-              callback(null, html);
-          }
-      });
-  };
-
     // original
     var transporter = nodemailer.createTransport({
       service: "gmail",
@@ -227,10 +214,6 @@ app.post('/verification', (req, res) => {
         pass: "neo@1234",
       },
     });
-
-    // const transporter = nodemailer.createTransport({ 
-    // host: 'smtp.ethereal.email', port: 587, 
-    // auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
   
     var emailrzr = req.body['payload']['payment']['entity']['email'];
 
@@ -238,61 +221,33 @@ app.post('/verification', (req, res) => {
     // var fileName = req.body.fileName;
 
    // original
-    // var mail = {
-    //   from: "info@neointeraction.com",
-    //   to: emailrzr,
-    //   subject: `Neointeraction Design Download Request`,
-    //   html: `<html>
-    //    <body>
-    //    <h4>Thank you for buying!</h4>
-    //    <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-    //    <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
-    //    <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
-    //    </body> 
-    //    </html>`,
-    // };
-
-
-    readHTMLFile('../pages/EbookMailTemplate/EbkMailTmplt.html', function(err, html) {
-      var template = handlebars.compile(html);
-      var replacements = {
-           username: "John Doe"
-      };
-      var htmlToSend = template(replacements);
-      var mail = {
-        from: "info@neointeraction.com",
-        to: emailrzr,
-        subject: `Neointeraction Design Download Request`,
-        html: htmlToSend,
-      
-      };
-       transporter.sendMail(mail, (err, data) => {
-        if (err) {
-          res.json({
-            status: "fail",
-          });
-        } else {
-          res.json({
-            status: "success",
-          });
-        }
-      });
-  });
+    var mail = {
+      from: "info@neointeraction.com",
+      to: emailrzr,
+      subject: `Neointeraction Design Download Request`,
+      html: `<html>
+       <body>
+       <h4>Thank you for buying!</h4>
+       <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
+       <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
+       <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
+       </body> 
+       </html>`,
+    };
 
     // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
 
-     //original
-    // transporter.sendMail(mail, (err, data) => {
-    //   if (err) {
-    //     res.json({
-    //       status: "fail",
-    //     });
-    //   } else {
-    //     res.json({
-    //       status: "success",
-    //     });
-    //   }
-    // });
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
+    });
     
 	} else {
 		// pass it
@@ -303,7 +258,7 @@ app.post('/verification', (req, res) => {
 
 app.post('/razorpay', async (req, res) => {
 	// const payment_capture = 1
-	const amount = 10
+	const amount = 199
 	const currency = 'INR'
 
 	const options = {
