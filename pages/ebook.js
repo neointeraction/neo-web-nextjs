@@ -38,36 +38,36 @@ function loadScript (src){
 })
 }
 
-async function displayRazorpay() {
-  const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
+// async function displayRazorpay() {
+//   const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
 
-  if (!res) {
-    alert('Razorpay SDK failed to load. Are you online?')
-    return
-  }
+//   if (!res) {
+//     alert('Razorpay SDK failed to load. Are you online?')
+//     return
+//   }
 
-  const data = await fetch('https://www.neointeraction.com/server/razorpay', { method: 'POST' }).then((t) =>
-    t.json()
-  )
+//   const data = await fetch('https://www.neointeraction.com/server/razorpay', { method: 'POST' }).then((t) =>
+//     t.json()
+//   )
 
-  console.log(data)
+//   console.log(data)
 
-  const options = {
-    key:'rzp_live_msovzCS0LY9PTS',
-    currency: data.currency,
-    amount: data.amount.toString(),
-    order_id: data.id,
-    name: 'Ebook',
-    description: 'Thank you for purchasing our Ebook',
-    handler: function (response) {
-      // alert(response.razorpay_payment_id)
-      // alert(response.razorpay_order_id)
-      // alert(response.razorpay_signature)
-    },
-  }
-  const paymentObject = new window.Razorpay(options)
-  paymentObject.open()
-  }
+//   const options = {
+//     key:'rzp_live_msovzCS0LY9PTS',
+//     currency: data.currency,
+//     amount: data.amount.toString(),
+//     order_id: data.id,
+//     name: 'Ebook',
+//     description: 'Thank you for purchasing our Ebook',
+//     handler: function (response) {
+//       // alert(response.razorpay_payment_id)
+//       // alert(response.razorpay_order_id)
+//       // alert(response.razorpay_signature)
+//     },
+//   }
+//   const paymentObject = new window.Razorpay(options)
+//   paymentObject.open()
+//   }
 
 const Ebook = () => {
   const [open, setOpen] = useState(false);
@@ -122,7 +122,9 @@ const Ebook = () => {
               Learn <span className="title-red">UX</span> <br/>
               Build <span className="title-red">Products</span>
             </h1>
-            <button className="custom-btn inactive" onClick={displayRazorpay}>Buy now @ ₹199</button>
+            {/* <button className="custom-btn inactive" onClick={displayRazorpay}>Buy now @ ₹199</button> */}
+            {/* <form> <button className="custom-btn inactive" onClick={displayRazorpay}>Click Me</button> <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ItCgN3ejTHQ3ph" async></script> </form> */}
+            <a className="custom-btn inactive" href="https://buy.stripe.com/test_eVa5kueIxg6SaXK144">Buy now @ ₹199</a>
           </div>
         </ReactWOW>
       </div>
@@ -161,9 +163,7 @@ const Ebook = () => {
                           design
                         </li>
                       </ul> */}
-                      <button class="custom-btn btn-text card-btn" onClick={displayRazorpay}>
-                        Buy now @ ₹199
-                      </button>
+                     <a className="custom-btn inactive" href="https://buy.stripe.com/test_eVa5kueIxg6SaXK144">Buy now @ ₹199</a>
                     </div>
                   }
                 />
