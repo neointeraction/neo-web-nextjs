@@ -4,7 +4,6 @@ const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const cors = require("cors");
 // const multer = require('multer')
-const Razorpay = require('razorpay'); 
 
 var path = require("path");
 const { getMaxListeners } = require("process");
@@ -175,7 +174,8 @@ const stripe = require('stripe');
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 // const endpointSecret = "whsec_fl00vyzzXvgVKhsAPXnUtUU2qnQ4rOms"; // local test
-const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
+// const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
+const endpointSecret = "whsec_NwvYxSSyozzMDnX3FdNO3s5ANPMqeNx3"; // live 
 
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const sig = req.headers['stripe-signature'];
