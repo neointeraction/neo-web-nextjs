@@ -170,12 +170,13 @@ app.post("/sendebk", (req, res) => {
 
 // stripe implementation
 
-const stripe = require('stripe');
+const stripe = require('stripe')('sk_test_51KjjkXSAl3YMvuYHJ42lg6alQHbgV0SGWS1WJIjdTjEf0tjVYbB6PVkMVAkNMKGuAjRCPpTXspISovv45fubsXaV00XyQ0VIOI');
 
 // This is your Stripe CLI webhook secret for testing your endpoint locally.
 // const endpointSecret = "whsec_fl00vyzzXvgVKhsAPXnUtUU2qnQ4rOms"; // local test
-// const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
-const endpointSecret = "whsec_NwvYxSSyozzMDnX3FdNO3s5ANPMqeNx3"; // live 
+const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
+// const endpointSecret = "whsec_NwvYxSSyozzMDnX3FdNO3s5ANPMqeNx3"; // live 
+
 
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const sig = req.headers['stripe-signature'];
