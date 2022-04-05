@@ -50,6 +50,7 @@
     "react-wow": "^1.0.0",
     "simple-react-validator": "^1.6.0",
     "slick-carousel": "^1.8.1",
+    "stripe": "^8.215.0",
     "styled-components": "^5.0.1"
   },
   "devDependencies": {
