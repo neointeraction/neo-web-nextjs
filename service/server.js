@@ -21,10 +21,7 @@ app.use(cors())
 //   })
 // );
 
-app.use(bodyParser.json({ limit: "150mb", verify: (req, res, buf) => {
-  req.rawBody = buf
-}}));
-// raw format needed to verify stripe but this doubles the ram per request
+app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
     limit: "150mb",
