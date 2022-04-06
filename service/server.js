@@ -3,14 +3,28 @@ const app = express();
 const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const cors = require("cors");
+const stripe = require('stripe');
 // const multer = require('multer')
-const Razorpay = require('razorpay'); 
+
+
 
 var path = require("path");
 const { getMaxListeners } = require("process");
 
 app.use(cors())
-app.use(bodyParser.json({ limit: "150mb" }));
+// app.use(bodyParser.json({ limit: "150mb" }));
+// app.use(
+//   bodyParser.urlencoded({
+//     limit: "150mb",
+//     extended: true,
+//     parameterLimit: 50000,
+//   })
+// );
+
+app.use(bodyParser.json({ limit: "150mb", verify: (req, res, buf) => {
+  req.rawBody = buf
+}}));
+// raw format needed to verify stripe but this doubles the ram per request
 app.use(
   bodyParser.urlencoded({
     limit: "150mb",
@@ -165,73 +179,59 @@ app.post("/sendebk", (req, res) => {
   });
 });
 
-//razorpay payment gateway
-var razorpay = new Razorpay({
 
-  // For test sam@neointeraction also change in ebook add a new ngork tunnel as webhook for local testing
-  // key_id: 'rzp_test_vLUUSJ0xpgkzLH',
-  // key_secret: 'mRwRekA87HdQ2pWNSXMTUQJB',
-
-  // test sebangeorgen@gmail.com
-  // key_id: 'rzp_test_TAO1oonl6vzj0n',
-  // key_secret: 'Cd6DBMwxjcVmgVNcTBINYYCu',
-
-  // for live
-  key_id: 'rzp_live_msovzCS0LY9PTS',
-  key_secret: 'qHufCGtFd8JRazfHJi7hraqx',
-
-});
+// stripe implementation
 
 
-app.post('/verification', (req, res) => {
-	// do a validation
-	res.json({ status: 'ok' })
-	const secret ='12345678'
 
-	console.log(req.body)
+// This is your Stripe CLI webhook secret for testing your endpoint locally.
+// const endpointSecret = "whsec_fl00vyzzXvgVKhsAPXnUtUU2qnQ4rOms"; // local test
+const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
+// const endpointSecret = "whsec_NwvYxSSyozzMDnX3FdNO3s5ANPMqeNx3"; // live 
 
-	const crypto = require('crypto')
 
-	const shasum = crypto.createHmac('sha256', secret)
-	shasum.update(JSON.stringify(req.body))
-	const digest = shasum.digest('hex')
+app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
+  const sig = req.headers['stripe-signature'];
 
-	console.log(digest, req.headers['x-razorpay-signature'])
+  let event;
 
-	if (digest === req.headers['x-razorpay-signature']) {
-		console.log('request is legit')
-    console.log(req.body['payload']['payment']['entity']['email'])
-		// process it
-		// require('fs').writeFileSync('payment1.json', JSON.stringify(req.body, null, 4))
+  try {
+    event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret);
+  } catch (err) {
+    res.status(400).send(`Webhook Error: ${err.message}`);
+    return;
+  }
 
-    var transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: "neointeraction.mailer@gmail.com",
-        pass: "neo@1234",
-      },
-    });
-  
-    var email = req.body['payload']['payment']['entity']['email'];
-    // var fileUrl = req.body.fileUrl;
-    // var fileName = req.body.fileName;
-  
-    var mail = {
-      from: "info@neointeraction.com",
-      to: email,
-      subject: `Neointeraction Design Download Request`,
-      html: `<html>
-       <body>
-       <h4>Thank you for buying!</h4>
-       <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-       <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
-       <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
-       </body> 
-       </html>`,
-    };
-  
-    // process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
-  
+  // Handle the event
+  switch (event.type) {
+    case 'payment_intent.succeeded':
+      const strpemail = event.data.object.charges.data[0].billing_details.email;
+      // Then define and call a function to handle the event payment_intent.succeeded
+      console.log("payment intent succesful");
+      // console.log(strpemail);
+     
+      var transporter = nodemailer.createTransport({
+              service: "gmail",
+              auth: {
+                user: "neointeraction.mailer@gmail.com",
+                pass: "neo@1234",
+              },
+            });
+
+            var mail = {
+                    from: "info@neointeraction.com",
+                    to: strpemail,
+                    subject: `Neointeraction Design Download Request`,
+                    html: `<html>
+                     <body>
+                     <h4>Thank you for buying!</h4>
+                     <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
+                     <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
+                     <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
+                     </body> 
+                     </html>`,
+                  };
+
     transporter.sendMail(mail, (err, data) => {
       if (err) {
         res.json({
@@ -243,38 +243,28 @@ app.post('/verification', (req, res) => {
         });
       }
     });
+
+
+      break;
+    // ... handle other event types
+    case 'checkout.session.completed' : 
+    console.log("checkout successful");
+    break;
     
-	} else {
-		// pass it
-		console.log('razorpay signature mismatch')
-	}
-	
-})
 
-app.post('/razorpay', async (req, res) => {
-	// const payment_capture = 1
-	const amount = 199
-	const currency = 'INR'
+    default:
+      console.log(`Unhandled event type ${event.type}`);
+  }
 
-	const options = {
-		amount: amount * 100,
-		currency,
-		// receipt: shortid.generate(),
-		// payment_capture
-	}
+  // Return a 200 response to acknowledge receipt of the event
+  res.send();
+});
 
-	try {
-		const response = await razorpay.orders.create(options)
-		console.log(response)
-		res.json({
-			id: response.id,
-			currency: response.currency,
-			amount: response.amount
-		})
-	} catch (error) {
-		console.log(error)
-	}
-})
+
+
+
+
+
 
 
 
