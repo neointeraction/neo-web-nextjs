@@ -3,7 +3,7 @@ const app = express();
 const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const cors = require("cors");
-const stripe = require('stripe');
+
 // const multer = require('multer')
 
 
@@ -12,15 +12,6 @@ var path = require("path");
 const { getMaxListeners } = require("process");
 
 app.use(cors())
-// app.use(bodyParser.json({ limit: "150mb" }));
-// app.use(
-//   bodyParser.urlencoded({
-//     limit: "150mb",
-//     extended: true,
-//     parameterLimit: 50000,
-//   })
-// );
-
 app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -178,84 +169,86 @@ app.post("/sendebk", (req, res) => {
 
 
 // stripe implementation
+//  const stripe = require('stripe')('pk_test_51KjjkXSAl3YMvuYHuqAXCA9U4YQndZ48Xv4NlPljkyETgRFybpXRroCNZfjRbGbQn2ybBhXSlyZ3QsrdG49Db8Ep00U6h1TNLk', {
+//   apiVersion: '2020-08-27'
+// });
 
 
+// // This is your Stripe CLI webhook secret for testing your endpoint locally.
+// // const endpointSecret = "whsec_fl00vyzzXvgVKhsAPXnUtUU2qnQ4rOms"; // local test
+// const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
+// // const endpointSecret = "whsec_NwvYxSSyozzMDnX3FdNO3s5ANPMqeNx3"; // live 
 
-// This is your Stripe CLI webhook secret for testing your endpoint locally.
-// const endpointSecret = "whsec_fl00vyzzXvgVKhsAPXnUtUU2qnQ4rOms"; // local test
-const endpointSecret = "whsec_dnwgZ0NrrNOVOrKmuxNwvyVjq25wOxEV";  // live testmode
-// const endpointSecret = "whsec_NwvYxSSyozzMDnX3FdNO3s5ANPMqeNx3"; // live 
 
+// app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
+//   const sig = req.headers['stripe-signature'];
 
-app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
-  const sig = req.headers['stripe-signature'];
+//   let event;
 
-  let event;
+//   try {
+//     event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret);
+//   } catch (err) {
+//     res.status(400).send(`Webhook Error: ${err.message}`);
+//     return;
+//   }
 
-  try {
-    event = stripe.webhooks.constructEvent(req.rawBody, sig, endpointSecret);
-  } catch (err) {
-    res.status(400).send(`Webhook Error: ${err.message}`);
-    return;
-  }
-
-  // Handle the event
-  switch (event.type) {
-    case 'payment_intent.succeeded':
-      const strpemail = event.data.object.charges.data[0].billing_details.email;
-      // Then define and call a function to handle the event payment_intent.succeeded
-      console.log("payment intent succesful");
-      // console.log(strpemail);
+//   // Handle the event
+//   switch (event.type) {
+//     case 'payment_intent.succeeded':
+//       const strpemail = event.data.object.charges.data[0].billing_details.email;
+//       // Then define and call a function to handle the event payment_intent.succeeded
+//       console.log("payment intent succesful");
+//       // console.log(strpemail);
      
-      var transporter = nodemailer.createTransport({
-              service: "gmail",
-              auth: {
-                user: "neointeraction.mailer@gmail.com",
-                pass: "neo@1234",
-              },
-            });
+//       var transporter = nodemailer.createTransport({
+//               service: "gmail",
+//               auth: {
+//                 user: "neointeraction.mailer@gmail.com",
+//                 pass: "neo@1234",
+//               },
+//             });
 
-            var mail = {
-                    from: "info@neointeraction.com",
-                    to: strpemail,
-                    subject: `Neointeraction Design Download Request`,
-                    html: `<html>
-                     <body>
-                     <h4>Thank you for buying!</h4>
-                     <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-                     <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
-                     <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
-                     </body> 
-                     </html>`,
-                  };
+//             var mail = {
+//                     from: "info@neointeraction.com",
+//                     to: strpemail,
+//                     subject: `Neointeraction Design Download Request`,
+//                     html: `<html>
+//                      <body>
+//                      <h4>Thank you for buying!</h4>
+//                      <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
+//                      <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
+//                      <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
+//                      </body> 
+//                      </html>`,
+//                   };
 
-    transporter.sendMail(mail, (err, data) => {
-      if (err) {
-        res.json({
-          status: "fail",
-        });
-      } else {
-        res.json({
-          status: "success",
-        });
-      }
-    });
+//     transporter.sendMail(mail, (err, data) => {
+//       if (err) {
+//         res.json({
+//           status: "fail",
+//         });
+//       } else {
+//         res.json({
+//           status: "success",
+//         });
+//       }
+//     });
 
 
-      break;
-    // ... handle other event types
-    case 'checkout.session.completed' : 
-    console.log("checkout successful");
-    break;
+//       break;
+//     // ... handle other event types
+//     case 'checkout.session.completed' : 
+//     console.log("checkout successful");
+//     break;
     
 
-    default:
-      console.log(`Unhandled event type ${event.type}`);
-  }
+//     default:
+//       console.log(`Unhandled event type ${event.type}`);
+//   }
 
-  // Return a 200 response to acknowledge receipt of the event
-  res.send();
-});
+//   // Return a 200 response to acknowledge receipt of the event
+//   res.send();
+// });
 
 
 

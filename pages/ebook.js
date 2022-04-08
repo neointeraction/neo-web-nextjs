@@ -124,8 +124,7 @@ const Ebook = () => {
             </h1>
             {/* <button className="custom-btn inactive" onClick={displayRazorpay}>Buy now @ ₹199</button>  https://buy.stripe.com/test_eVa5kueIxg6SaXK144 */}
             {/* <form> <button className="custom-btn inactive" onClick={displayRazorpay}>Click Me</button> <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ItCgN3ejTHQ3ph" async></script> </form> */} 
-            <a className="custom-btn inactive" href="https://buy.stripe.com/test_eVa5kueIxg6SaXK144">Buy now @ ₹199</a>    
-            {/* https://buy.stripe.com/3csbJp3xxeSz6vm5kl  */}
+            <a className="custom-btn inactive" href="https://buy.stripe.com/aEUaFl7NN8ubdXO6oo">Buy now @ ₹199</a>    
           </div>
         </ReactWOW>
       </div>
@@ -164,7 +163,7 @@ const Ebook = () => {
                           design
                         </li>
                       </ul> */}
-                     <a className="custom-btn inactive" href="https://buy.stripe.com/test_eVa5kueIxg6SaXK144">Buy now @ ₹199</a>
+                     <a className="custom-btn inactive" href="https://buy.stripe.com/aEUaFl7NN8ubdXO6oo">Buy now @ ₹199</a>
                     </div>
                   }
                 />
