@@ -74,7 +74,7 @@ export default class FormContactEBkLP extends Component {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
-              autoClose: 100000,
+              autoClose: 10000,
               hideProgressBar: true,
               closeOnClick: true,
               pauseOnHover: true,

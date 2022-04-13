@@ -4272,7 +4272,7 @@ textarea {
   height: auto;
 }
 
-.success-msg-ebk .width-md {
+.success-msg-ebk.width-md {
   width: 236px;
   height: auto;
 }
@@ -4283,7 +4283,7 @@ textarea {
 }
 .success-msg-ebk .check-wrap {
   margin-right: 10px;
-  flex-basis: 25%;
+  flex-basis: 32% !important;
 }
 .width-md .check-wrap {
   margin-right: 10px;

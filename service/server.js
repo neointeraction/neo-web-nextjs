@@ -3,9 +3,24 @@ const app = express();
 const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const cors = require("cors");
-
+var handlebars = require('handlebars');
+var fs = require('fs');
 // const multer = require('multer')
 
+
+
+var readHTMLFile = function(path, callback) {
+  fs.readFile(path, {encoding: 'utf-8'}, function (err, html) {
+      if (err) {
+         callback(err); 
+         throw err;
+
+      }
+      else {
+          callback(null, html);
+      }
+  });
+};
 
 
 var path = require("path");
@@ -154,19 +169,45 @@ app.post("/sendebk", (req, res) => {
      </html>`,
   };
 
-  var mailebk = {
-    from: "info@neointeraction.com",
-    to: email,
-    subject: `Neointeraction Design Download Request`,
-    html: `<html>
-     <body>
-     <h4>Thank you for buying!</h4>
-     <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-     <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
-     <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
-     </body> 
-     </html>`,
-  };
+  // var mailebk = {
+  //   from: "info@neointeraction.com",
+  //   to: email,
+  //   subject: `Neointeraction Design Download Request`,
+  //   html: `<html>
+  //    <body>
+  //    <h4>Thank you for buying!</h4>
+  //    <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
+  //    <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
+  //    <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
+  //    </body> 
+  //    </html>`,
+  // };
+
+  readHTMLFile('../pages/EbookMailTemplate/EbkMailTmplt.html', function(err, html) {
+    var template = handlebars.compile(html);
+    var replacements = {
+         username: "John Doe"
+    };
+    var htmlToSend = template(replacements);
+    var mailebk = {
+      from: "info@neointeraction.com",
+      to: email,
+      subject: `Neointeraction Design Download Request`,
+      html: htmlToSend,
+    };
+     transporter.sendMail(mailebk, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
+    });
+  });
+
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
@@ -180,18 +221,20 @@ app.post("/sendebk", (req, res) => {
     }
   });
 
-  transporter.sendMail(mailebk, (err, data) => {
-    if (err) {
-      res.json({
-        status: "fail",
-      });
-    } else {
-      res.json({
-        status: "success",
-      });
-    }
-  });
+  // transporter.sendMail(mailebk, (err, data) => {
+  //   if (err) {
+  //     res.json({
+  //       status: "fail",
+  //     });
+  //   } else {
+  //     res.json({
+  //       status: "success",
+  //     });
+  //   }
+  // });
 });
+
+
 
 
 
