@@ -4260,14 +4260,30 @@ textarea {
   justify-content: flex-start;
   align-items: center;
 }
+.success-msg-ebk{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 
 .width-md {
   width: 360px;
+  height: auto;
+}
+
+.success-msg-ebk .width-md {
+  width: 236px;
+  height: auto;
 }
 
 .success-msg-download .check-wrap {
   margin-right: 10px;
   flex-basis: 17%;
+}
+.success-msg-ebk .check-wrap {
+  margin-right: 10px;
+  flex-basis: 25%;
 }
 .width-md .check-wrap {
   margin-right: 10px;
@@ -4275,6 +4291,14 @@ textarea {
 }
 
 .success-msg-download p {
+  animation-name: fadeInCard;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  margin-bottom: 0;
+}
+.success-msg-ebk p {
   animation-name: fadeInCard;
   opacity: 0;
   animation-duration: 2s;

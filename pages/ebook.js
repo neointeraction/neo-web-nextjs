@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import ReactWOW from "react-wow";
 import ReactModal from "react-modal";
-
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import Quotes from "../components/Quotes";
 import ImageVideoText from "../components/ImageVideoText";
@@ -38,36 +38,6 @@ function loadScript (src){
 })
 }
 
-// async function displayRazorpay() {
-//   const res = await loadScript('https://checkout.razorpay.com/v1/checkout.js')
-
-//   if (!res) {
-//     alert('Razorpay SDK failed to load. Are you online?')
-//     return
-//   }
-
-//   const data = await fetch('https://www.neointeraction.com/server/razorpay', { method: 'POST' }).then((t) =>
-//     t.json()
-//   )
-
-//   console.log(data)
-
-//   const options = {
-//     key:'rzp_live_msovzCS0LY9PTS',
-//     currency: data.currency,
-//     amount: data.amount.toString(),
-//     order_id: data.id,
-//     name: 'Ebook',
-//     description: 'Thank you for purchasing our Ebook',
-//     handler: function (response) {
-//       // alert(response.razorpay_payment_id)
-//       // alert(response.razorpay_order_id)
-//       // alert(response.razorpay_signature)
-//     },
-//   }
-//   const paymentObject = new window.Razorpay(options)
-//   paymentObject.open()
-//   }
 
 const Ebook = () => {
   const [open, setOpen] = useState(false);
@@ -124,7 +94,7 @@ const Ebook = () => {
             </h1>
             {/* <button className="custom-btn inactive" onClick={displayRazorpay}>Buy now @ ₹199</button>  https://buy.stripe.com/test_eVa5kueIxg6SaXK144 */}
             {/* <form> <button className="custom-btn inactive" onClick={displayRazorpay}>Click Me</button> <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ItCgN3ejTHQ3ph" async></script> </form> */} 
-            <a className="custom-btn inactive" href="https://buy.stripe.com/aEUaFl7NN8ubdXO6oo">Buy now @ ₹199</a>    
+             <AnchorLink  href="#dwnldSubmit" className="custom-btn inactive"> Download </AnchorLink>    
           </div>
         </ReactWOW>
       </div>
@@ -163,7 +133,7 @@ const Ebook = () => {
                           design
                         </li>
                       </ul> */}
-                     <a className="custom-btn inactive" href="https://buy.stripe.com/aEUaFl7NN8ubdXO6oo">Buy now @ ₹199</a>
+                     <AnchorLink href="#dwnldSubmit" className="custom-btn inactive"> Download </AnchorLink>
                     </div>
                   }
                 />
@@ -220,13 +190,13 @@ const Ebook = () => {
             </div>
 
             <ReactWOW animation="fadeIn" delay="0s" offset={0}>
-              <div>
+              <div id="dwnldSubmit">
                 <ImageVideoText
                   video={false}
                   ProjectVideo=""
                   componentOrientation="image-left"
                   ProjectImage={EbookImg}
-                  titleText="Drop your email below"
+                  titleText="Drop your email below to get the e-book"
                   contentText={
                     <div className="ebk-ybuy">
                       <p>

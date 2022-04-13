@@ -74,7 +74,7 @@ export default class FormContactEBkLP extends Component {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
-              autoClose: 5000,
+              autoClose: 100000,
               hideProgressBar: true,
               closeOnClick: true,
               pauseOnHover: true,
@@ -115,11 +115,10 @@ export default class FormContactEBkLP extends Component {
   };
 
   SuccessToast = () => (
-    <div className="success-msg-download width-md">
+    <div className="success-msg-ebk width-md">
       <div class="check-wrap"></div>
       <p>
-        Thank you for contacting us. We have received your request. Our team
-        will connect with you shortly.!
+        The e-book will be delivered to your email shortly.
       </p>
     </div>
   );
