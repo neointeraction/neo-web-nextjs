@@ -171,13 +171,13 @@ export default withRouter(
                       <button className="custom-btn ">UI Engineering</button>
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link href="/VideoService">
                       <button className="custom-btn inactive">
                         Motion Design
                       </button>
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </div>
               <ReactWOW animation="fadeIn" delay="0s" offset={-200}>

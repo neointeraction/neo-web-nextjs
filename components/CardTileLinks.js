@@ -66,7 +66,7 @@ export default class CardTileLinks extends Component {
                   </div>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link className="link-card" href={`/${LinkThree}`}>
                   <div className="link-card">
                     {LinkThreeName}
@@ -75,7 +75,7 @@ export default class CardTileLinks extends Component {
                     </span>
                   </div>
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>
