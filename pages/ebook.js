@@ -116,10 +116,10 @@ const Ebook = () => {
                   ProjectVideo=""
                   componentOrientation="image-left"
                   ProjectImage={EbookImg}
-                  titleText="Why should you buy this book ?"
+                  titleText="Why do you need this book?"
                   contentText={
                     <div className="ebk-ybuy">
-                      <p >
+                      <p>
                       This book guides developers and designers to get into the agile mindset and iterate 
                       and develop products that the customers want. For the business or other stakeholders this book 
                       gives a glimpse of the advantages the agile mindset can have in making your product be a great 
