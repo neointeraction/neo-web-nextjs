@@ -182,12 +182,13 @@ export default class FilterCard extends Component {
                       <div className="card-main-container" key={cards.id}>
                         <Link
                           href={{
-                            pathname: `/Projects/${cards.id}`,
-                            query: {
-                              title: cards.cardTitle
-                                .replace(/(:|\s+)/g, "-")
-                                .toLowerCase(),
-                            },
+                            pathname: `/Projects/` + cards.cardTitle
+                            .replace(/(:|\s+)/g, "-"),
+                              
+                            // {
+                              
+                            //     // .toLowerCase(),
+                            // },
                           }}
                         >
                           <div className="link">
