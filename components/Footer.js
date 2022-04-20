@@ -295,7 +295,7 @@ export default class Header extends Component {
                 </li>
                 <li id="medium">
                   <a
-                    href="https://medium.com/@neointeraction_design"
+                    href="https://neointeraction-design.medium.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

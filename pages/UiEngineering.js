@@ -332,12 +332,7 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.id}`,
-                                    query: {
-                                      title: cards.cardTitle
-                                        .replace(/(:|\s+)/g, "-")
-                                        .toLowerCase(),
-                                    },
+                                    pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
                                   }}
                                 >
                                   <div className="link">
