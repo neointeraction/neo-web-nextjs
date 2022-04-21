@@ -14,6 +14,9 @@ import CardTileMenuImage from "./CardTileMenuImage";
 import CardTileUpfront from "./CardTileUpfront";
 import CardTileLinks from "./CardTileLinks";
 import CardTileVideo from "./CardTileVideo";
+import BlogCardSlide from "./BlogCardSlide";
+import CardEbook from "./CardEbook";
+import CardAuditUX from "./CardAuditUX";
 import Popover from "./Popover";
 import { DataContext } from "../context/DataContext";
 
@@ -49,10 +52,31 @@ export default class FilterCard extends Component {
           {[...MENU].map((item) => (
             <ReactWOW animation="bounceInCard" offset={0} key={item.id}>
               <div className="card-main-container flex-grow" key={item.id}>
-                {item.cardCategory === "menu" && (
+                {/* {item.cardCategory === "menu" && (
                   <Link href={`/${item.link}`}>
                     <div className="link">
                       <CardTileMenu
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        infoText={item.infoText}
+                        email={item.email}
+                        phone={item.phone}
+                        img1={item.img1}
+                        img2={item.img2}
+                        img1L={item.img1L}
+                        img2L={item.img2L}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
+                )} */}
+                {item.cardCategory === "menu" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <CardAuditUX
                         className={item.className}
                         category={item.category}
                         cardTitle={item.cardTitle}
@@ -121,6 +145,34 @@ export default class FilterCard extends Component {
                     blogtag2={item.blogtag2}
                     blogtag3={item.blogtag3}
                   />
+                )}
+                {item.cardCategory === "blogSlideHome" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <BlogCardSlide
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
+                )}
+                {item.cardCategory === "ebookHome" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <CardEbook
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
                 )}
                 {/* {cards.cardCategory !== "menu" &&
                       cards.cardCategory !== "blog" &&

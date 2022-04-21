@@ -72,10 +72,10 @@ const clients = [
     image: Clientlogo11,
     name: "coorg-logo",
   },
-  {
-    image: Clientlogo12,
-    name: "drumbuffe-logo",
-  },
+  // {
+  //   image: Clientlogo12,
+  //   name: "drumbuffe-logo",
+  // },
   {
     image: Clientlogo13,
     name: "funding-logo",
@@ -84,10 +84,10 @@ const clients = [
     image: Clientlogo14,
     name: "Inatech-logo",
   },
-  {
-    image: Clientlogo15,
-    name: "inkmagik-logo",
-  },
+  // {
+  //   image: Clientlogo15,
+  //   name: "inkmagik-logo",
+  // },
   {
     image: Clientlogo16,
     name: "intellithink-logo",
@@ -100,10 +100,10 @@ const clients = [
     image: Clientlogo18,
     name: "LifeSignal-logo",
   },
-  {
-    image: Clientlogo19,
-    name: "MobiCom-logo",
-  },
+  // {
+  //   image: Clientlogo19,
+  //   name: "MobiCom-logo",
+  // },
   {
     image: Clientlogo20,
     name: "traveloka-logo",

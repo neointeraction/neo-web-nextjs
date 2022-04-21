@@ -1,11 +1,8 @@
 import React, { Component } from "react";
-import Link from "next/link";
 // import "../css/main.css";
 import Arrow from "../images/Arrow.svg";
-import ViewAll from "../images/ViewAll.svg"
-import { baseUrl } from "../globalConfig";
 
-export default class CardTile extends Component {
+export default class CardEbook extends Component {
   constructor() {
     super();
     this.state = {
@@ -21,37 +18,27 @@ export default class CardTile extends Component {
   };
 
   render() {
-    const { category, className, backgroundImages, cardTitle, cardInfoText } =
-      this.props;
+    const {
+      className,
+      bgColor,
+      BackgroundImageCareer,
+      cardTitle,
+      cardInfoText,
+    } = this.props;
     return (
-      <div data-category={category}>
+      <div>
         <div
           className={`card-tile hover-zoom ${className}`}
           style={{
-            backgroundImage: `url('${baseUrl}${backgroundImages}')`,
+            backgroundColor: `${bgColor}`,
+            backgroundImage: `url(${BackgroundImageCareer})`,
           }}
           onMouseEnter={this.mouseEnter}
           onMouseLeave={this.mouseLeave}
         >
-          {/* <div className="arrow-click">
-            <button
-              className={
-                this.state.isMouseInside
-                  ? "card-arrow-btn-hovered"
-                  : "card-arrow-btn"
-              }
-            >
-              <img
-                src={Arrow}
-                alt="logo"
-                style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
-              />
-            </button>
-          </div> */}
           {this.state.isMouseInside ? (
-            <div className="info-box info-box-menu fadeInCard ">
+            <div className="info-box info-box-menu fadeInCard">
               <div className="arrow-click animated fadeInRight delay-04s">
-              <Link href={{ pathname: `/Projects` }}> 
                 <button
                   className={
                     this.state.isMouseInside
@@ -60,13 +47,11 @@ export default class CardTile extends Component {
                   }
                 >
                   <img
-                    src={ViewAll}
+                    src={Arrow}
                     alt="logo"
                     style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
-                    className="viewall"
                   />
                 </button>
-                </Link>
               </div>
               <div className="card-title menu-title animated fadeIn">
                 <h1>{cardTitle}</h1>
@@ -76,7 +61,7 @@ export default class CardTile extends Component {
               </div>
             </div>
           ) : (
-            <div className="card-title animated fadeIn">
+            <div className="card-title menu-title animated fadeIn">
               <h1>{cardTitle}</h1>
             </div>
           )}
