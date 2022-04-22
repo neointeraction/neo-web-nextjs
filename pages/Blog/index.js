@@ -144,7 +144,7 @@ export default withRouter(
                                         <div className="col-md-6">
                                           <div className="fb-image">
                                             <img
-                                              src={`${baseUrl}${item.blogCardImage?.url}`}
+                                              src={`${baseUrl}${item.blogCardHeadImage?.url}`}
                                               alt="blog-cover"
                                             />
                                           </div>
