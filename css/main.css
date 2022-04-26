@@ -4888,5 +4888,9 @@ margin-top: 20px;
   justify-content: flex-end;
   max-height: 89%;
 } */
+.image-z-negetive {
+  z-index: -1;
+  max-height: 260px;
+}
 
 }

@@ -96,12 +96,7 @@ export default class FilterCardProjectsSlider extends Component {
                         <div className={`card-main-container card-${cards.id}`}>
                           <Link
                             href={{
-                              pathname: `/Projects/${cards.id}`,
-                              query: {
-                                title: cards.cardTitle
-                                  .replace(/(:|\s+)/g, "-")
-                                  .toLowerCase(),
-                              },
+                              pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
                             }}
                           >
                             <div className="link">

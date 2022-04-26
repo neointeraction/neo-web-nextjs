@@ -54,12 +54,6 @@ export default class ProjectSlider extends Component {
                       <Link
                         href={{
                           pathname: `/Projects/${item.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
-                          // pathname: `/Projects/${item.id}`,
-                          // query: {
-                          //   title: item.cardTitle
-                          //     .replace(/(:|\s+)/g, "-")
-                          //     .toLowerCase(),
-                          // },
                         }}
                       >
                         <div className="link">

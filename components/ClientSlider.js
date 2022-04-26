@@ -31,6 +31,39 @@ import Clientlogo22 from "../images/wipro-logo.jpg";
 import Clientlogo23 from "../images/yokagawa-logo.jpg";
 
 const clients = [
+  
+  // {
+  //   image: Clientlogo12,
+  //   name: "drumbuffe-logo",
+  // },
+  {
+    image: Clientlogo13,
+    name: "funding-logo",
+  },
+  {
+    image: Clientlogo14,
+    name: "Inatech-logo",
+  },
+  {
+    image: Clientlogo15,
+    name: "inkmagik-logo",
+  },
+  {
+    image: Clientlogo16,
+    name: "intellithink-logo",
+  },
+  {
+    image: Clientlogo17,
+    name: "intertrust-logo",
+  },
+  {
+    image: Clientlogo18,
+    name: "LifeSignal-logo",
+  },
+  // {
+  //   image: Clientlogo19,
+  //   name: "MobiCom-logo",
+  // },
   {
     image: Clientlogo1,
     name: "icici-logo",
@@ -71,38 +104,6 @@ const clients = [
   {
     image: Clientlogo11,
     name: "coorg-logo",
-  },
-  {
-    image: Clientlogo12,
-    name: "drumbuffe-logo",
-  },
-  {
-    image: Clientlogo13,
-    name: "funding-logo",
-  },
-  {
-    image: Clientlogo14,
-    name: "Inatech-logo",
-  },
-  {
-    image: Clientlogo15,
-    name: "inkmagik-logo",
-  },
-  {
-    image: Clientlogo16,
-    name: "intellithink-logo",
-  },
-  {
-    image: Clientlogo17,
-    name: "intertrust-logo",
-  },
-  {
-    image: Clientlogo18,
-    name: "LifeSignal-logo",
-  },
-  {
-    image: Clientlogo19,
-    name: "MobiCom-logo",
   },
   {
     image: Clientlogo20,
