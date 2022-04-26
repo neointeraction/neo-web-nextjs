@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import Head from "next/head";
-import Link from "next/link";
+
 import FilterCard from "../components/FilterCard";
-import ClientSlider from "../components/ClientSlider";
 import SEOImg from "../images/neo-web-img.jpeg";
 
 class Home extends Component {
@@ -35,16 +34,8 @@ class Home extends Component {
             <div>
               <FilterCard />
             </div>
-            <div className="container margin-top">
-              <ClientSlider />
-          </div>
           </div>
         </div>
-        {/* <div className="text-strip">
-        <Link href={{ pathname: `/ContactUs/` }}> 
-        <h5>Get a FREE UX audit for your product - limited period offer</h5>
-        </Link>
-        </div> */}
       </div>
     );
   }
