@@ -111,11 +111,6 @@ export default withRouter(
                                 <Link
                                   href={{
                                     pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
-                                    // query: {
-                                    //   title: item.blogTitle
-                                    //     .replace(/(:|\s+)/g, "-")
-                                    //     .toLowerCase(),
-                                    // },
                                   }}
                                 >
                                   <div className="link video-yt">
@@ -124,7 +119,7 @@ export default withRouter(
                                         <div className="col-md-6">
                                           <div className="fb-image">
                                             <img
-                                              src={`${baseUrl}${item.blogCardImage.url}`}
+                                              src={`${baseUrl}${item.blogCardHeadImage.url}`}
                                               alt="blog-cover"
                                             />
                                           </div>
