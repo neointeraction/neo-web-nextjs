@@ -112,7 +112,7 @@ strong {
 }
 
 .hover-zoom:hover {
-  background-size: 100% !important;
+  background-size: cover !important;
   transition: all 0.5s ease-in-out;
 }
 
