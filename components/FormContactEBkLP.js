@@ -22,7 +22,7 @@ export default class FormContactEBkLP extends Component {
     super();
     this.state = {
       name: "",
-      // mobile: "",
+      mobile: "",
       email: "",
       // description: "",
       // service: "",
@@ -190,7 +190,27 @@ export default class FormContactEBkLP extends Component {
                               this.state.email,
                               "required|email"
                             )}
-                  
+
+                  <div className="input-custom-field">
+                      <input
+                        className="input-custom"
+                        type="number"
+                        placeholder="Mobile"
+                        name="mobile"
+                        maxlength="10"
+                        onChange={this.handleChange}
+                        value={this.state.mobile}
+                      />
+                      {/* <label>Mobile</label> */}
+                      <span className="focus-border">
+                        <i></i>
+                      </span>
+                    </div>
+                    {this.validator.message(
+                      "mobile",
+                      this.state.mobile,
+                      "required|phone"
+                    )}
                       
                   <button className="custom-btn loader-btns" onClick={this.submitEmail}>
                     {this.state.mailSent ? (

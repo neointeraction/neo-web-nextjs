@@ -148,7 +148,7 @@ app.post("/sendebk", (req, res) => {
   //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
 
   var name = req.body.name;
-  // var mobile = req.body.mobile;
+  var mobile = req.body.mobile;
   var email = req.body.email;
 
   var mail = {
@@ -165,6 +165,7 @@ app.post("/sendebk", (req, res) => {
      <body>
      <p>Name:${name}</p>
      <p>Email:${email}</p>
+     <p>Phone:${mobile}</p>
      </body> 
      </html>`,
   };
