@@ -61,17 +61,17 @@ export default class FormContactAdLp extends Component {
 
   submitEmail(e) {
     // console.log("hello",this.state);
-    
+
     e.preventDefault();
-    if (this.validator.allValid() ) {
+    if (this.validator.allValid() && this.state.isCaptchaValid) {
       this.setState({ mailSent: true });
       // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/sendgad`````` http://localhost:4000/sendgad
-      // && this.state.isCaptchaValid 
+      // && this.state.isCaptchaValid
       e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendgad", this.state)
         .then((response) => {
-          if (response.data.status === "success"&& this.state.isCaptchaValid) {
+          if (response.data.status === "success") {
             this.setState({ mailSent: false });
             toast(this.SuccessToast, {
               position: "top-right",
@@ -196,7 +196,7 @@ export default class FormContactAdLp extends Component {
   onLoadRecaptcha() {
     if (this.captchaDemo) {
       this.captchaDemo.reset();
-      // this.captchaDemo.execute();  
+      // this.captchaDemo.execute();
     }
   }
   verifyCallback(recaptchaToken) {
@@ -211,8 +211,7 @@ export default class FormContactAdLp extends Component {
     return (
       <div className="form-group bground-transp">
         <h1 className="ad-form-title">
-         Reach our <span className="title-red">Team!</span>
-           
+          Reach our <span className="title-red">Team!</span>
         </h1>
         <div className="align-items-right">
           {/* <div className="col-md-6 hide">
@@ -337,7 +336,10 @@ export default class FormContactAdLp extends Component {
                     {this.state.mailSent ? "Submitting" : "Submit"}
                   </button> */}
 
-                  <button className="custom-btn loader-btns" onClick={this.submitEmail}>
+                  <button
+                    className="custom-btn loader-btns"
+                    onClick={this.submitEmail}
+                  >
                     {this.state.mailSent && this.state.isCaptchaValid ? (
                       <>
                         <span>Submit</span>
