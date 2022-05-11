@@ -47,7 +47,7 @@ function MyApp({ Component, pageProps }) {
                   src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
                 ></script>
               </Head>
-              <Component {...pageProps} />;
+              <Component {...pageProps} />
             </MainLayout>
           </BFSIProvider>
         </BlogProvider>

@@ -42,6 +42,7 @@ import Menu from "../../images/9dots.svg";
         //   blogIllustration: {},
         // },
         error: null,
+        show404: false,
         loading: true,
         pageHref: 0,
         data: props.post
@@ -64,6 +65,11 @@ import Menu from "../../images/9dots.svg";
     };
 
      componentDidMount = async () => {
+      // Handle invalid slug
+      if (this.state.data.statusCode != undefined && this.state.data.statusCode == 500) {
+        this.state.show404 = true;
+      } 
+
        this.setState({loading: false})
      }
 
@@ -112,34 +118,40 @@ import Menu from "../../images/9dots.svg";
       this.props.router.back();
     }
 
+    redirect() {
+      console.log("redirect called")
+      this.props.router.push('/404');
+    }
+
 
     transformImageUri = (input) =>
       /^https?:/.test(input) ? input : `${baseUrl}${input}`;
 
+      
     render() {
       const { data} = this.state;
 
       return (
         <div>
           <Head>
-            <title>{this.props.post.blog_detail.SEOTitle}</title>
+            <title>{this.props.post.blog_detail ? this.props.post.blog_detail.SEOTitle : "" }</title>
             <meta
               name="description"
-              content={this.props.post.blog_detail.SEODescription}
+              content={this.props.post.blog_detail ? this.props.post.blog_detail.SEODescription : ""}
             />
             <meta
               name="keywords"
-              content={this.props.post.blog_detail.SEOKeywords}
+              content={this.props.post.blog_detail ? this.props.post.blog_detail.SEOKeywords : ""}
             />
             <meta
               property="og:image"
-              content={`${baseUrl}${this.props.post.blogCardHeadImage.url}`}
+              content={`${baseUrl}${this.props.post.blogCardHeadImage ? this.props.post.blogCardHeadImage.url : ""}`}
             />
           </Head>
           {this.state.loading ? (
             <Loader />
-          ) : (
-            <div>
+          ) : (this.state.show404 ? ( this.redirect() ) :
+              <div>
               <a to="#" onClick={this.handleBack}>
                 <div
                   className="back-btn"
@@ -160,7 +172,7 @@ import Menu from "../../images/9dots.svg";
                       <div className="sf-item image-z-negetive">
                         <div className="fb-image">
                           <img
-                            src={`${baseUrl}${data.blogCardImage.url}`}
+                            src={`${baseUrl}${data.blogCardImage ? data.blogCardImage.url : ""}`}
                             alt="blog-cover"
                           />
                         </div>
@@ -369,7 +381,8 @@ import Menu from "../../images/9dots.svg";
                 </div>
               </div>
             </div>
-          )}
+            )}
+           
         </div>
       );
     }
