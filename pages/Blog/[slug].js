@@ -358,7 +358,7 @@ import Menu from "../../images/9dots.svg";
                 </div>
                 {/* container-end ==== */}
                 <ReactWOW animation="fadeIn" offset={-200}>
-                  <div className="contact-section">
+                  <div className="contact-section mb-15rem">
                     <div className="container">
                       <SectionTitle
                         title="Want help with your business?"

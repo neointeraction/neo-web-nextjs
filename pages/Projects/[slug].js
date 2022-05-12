@@ -138,6 +138,10 @@ export default withRouter(
     };
 
      componentDidMount = async () => {
+        // Handle invalid slug
+      if (this.state.projectInfo.statusCode != undefined && this.state.projectInfo.statusCode == 500) {
+        this.state.show404 = true;
+         } 
        this.setState({loading: false})
      }
 
@@ -197,24 +201,30 @@ export default withRouter(
       this.props.router.back();
     }
 
+    redirect() {
+      console.log("redirect called")
+      this.props.router.push('/404');
+    }
+
     render() {
       const { projectInfo } = this.state;
       return (
         <div>
           <Head>
-            <title>{this.props.post.project_detail.SEOTitle}</title>
+            <title>{this.props.post.project_detail ? this.props.post.project_detail.SEOTitle : ""}</title>
             <meta
               name="description"
-              content={this.props.post.project_detail.SEODescription}
+              content={this.props.post.project_detail ? this.props.post.project_detail.SEODescription : ""}
             />
             <meta
               name="keywords"
-              content={this.props.post.project_detail.SEOKeywords}
+              content={this.props.post.project_detail ? this.props.post.project_detail.SEOKeywords : ""}
             />
           </Head>
           {this.state.loading ? (
             <Loader />
           ) : (
+            (this.state.show404 ? ( this.redirect() ) :
             <div>
               <a to="#" onClick={this.handleBack}>
                 <div
@@ -236,21 +246,21 @@ export default withRouter(
                       {projectInfo.cardTitle}
                     </h1>
                     <h2 className="sub-title main-sub-title animated fadeIn ">
-                      {projectInfo.project_detail.projectDetailSubtitle}
+                      {projectInfo.project_detail ? projectInfo.project_detail.projectDetailSubtitle : ""}
                     </h2>
                     <div className="tags animated fadeIn nc-tag">
                       <ul>
-                        {projectInfo.project_detail.projectDetailTag1 ? (
+                        {(projectInfo.project_detail ? projectInfo.project_detail.projectDetailTag1 : "" ) ? (
                           <li>
                             {projectInfo.project_detail.projectDetailTag1}
                           </li>
                         ) : null}
-                        {projectInfo.project_detail.projectDetailTag2 ? (
+                        {( projectInfo.project_detail ? projectInfo.project_detail.projectDetailTag2 : "" ) ? (
                           <li>
                             {projectInfo.project_detail.projectDetailTag2}
                           </li>
                         ) : null}
-                        {projectInfo.project_detail.projectDetailTag3 ? (
+                        {( projectInfo.project_detail ? projectInfo.project_detail.projectDetailTag3 : "" ) ? (
                           <li>
                             {projectInfo.project_detail.projectDetailTag3}
                           </li>
@@ -259,7 +269,7 @@ export default withRouter(
                     </div>
                     <div className="tags detail-tags animated fadeIn ">
                       <ul>
-                        {projectInfo.project_detail.ProjectDetailLogo ? (
+                        {(projectInfo.project_detail ? projectInfo.project_detail.ProjectDetailLogo : "" ) ? (
                           <li>
                             <img
                               src={`${baseUrl}${projectInfo.project_detail.ProjectDetailLogo.url}`}
@@ -267,7 +277,7 @@ export default withRouter(
                             />
                           </li>
                         ) : null}
-                        {projectInfo.project_detail.caseStudyUrl ? (
+                        {( projectInfo.project_detail ? projectInfo.project_detail.caseStudyUrl : "" ) ? (
                           <li>
                             <div
                               className="btn-link"
@@ -293,7 +303,7 @@ export default withRouter(
                       </ul>
                     </div>
                     {/* ===== */}
-                    {projectInfo.project_detail.introBlockTitle ? (
+                    {(projectInfo.project_detail ? projectInfo.project_detail.introBlockTitle : "") ? (
                       <ReactWOW animation="fadeIn" delay="0s" offset={0}>
                         <div>
                           <ImageVideoText
@@ -326,11 +336,11 @@ export default withRouter(
                   <div className="section-padding">
                     <ProjectUiBanner
                       ProjectUiSrc={`${baseUrl}${
-                        projectInfo.project_detail.bannerVideoUrl
+                        (projectInfo.project_detail ? projectInfo.project_detail.bannerVideoUrl : "")
                           ? null
-                          : projectInfo.project_detail.projectUiBanner.url
+                          : (projectInfo.project_detail ? projectInfo.project_detail.projectUiBanner.url : "")
                       }`}
-                      ProjectVidSrc={projectInfo.project_detail.bannerVideoUrl}
+                      ProjectVidSrc={projectInfo.project_detail ? projectInfo.project_detail.bannerVideoUrl : ""}
                     />
                   </div>
                 </ReactWOW>
@@ -338,13 +348,13 @@ export default withRouter(
                   <div>
                     <Quotes
                       quoteText={
-                        projectInfo.project_detail.TestimonialKeyHighlight
+                        projectInfo.project_detail ? projectInfo.project_detail.TestimonialKeyHighlight : ""
                       }
                     />
                   </div>
                 </ReactWOW>
                 <div className="container animated fadeIn">
-                  {projectInfo.project_detail.processTitle ? (
+                  {(projectInfo.project_detail ? projectInfo.project_detail.processTitle : "") ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="process-section">
                         <div className="container">
@@ -390,7 +400,7 @@ export default withRouter(
                       </div>
                     </ReactWOW>
                   ) : null}
-                  {projectInfo.project_detail.solutionTitle ? (
+                  {(projectInfo.project_detail ? projectInfo.project_detail.solutionTitle : "") ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="container">
                         <ImageVideoText
@@ -410,7 +420,7 @@ export default withRouter(
                       </div>
                     </ReactWOW>
                   ) : null}
-                  {projectInfo.project_detail.keyBenefitTitle ? (
+                  {(projectInfo.project_detail ? projectInfo.project_detail.keyBenefitTitle : "" ) ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="container">
                         <ImageVideoText
@@ -434,7 +444,7 @@ export default withRouter(
                     </ReactWOW>
                   ) : null}
 
-                  {projectInfo.project_detail.outcomeTitle ? (
+                  {(projectInfo.project_detail ? projectInfo.project_detail.outcomeTitle : "") ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="process-section">
                         <div className="container">
@@ -474,7 +484,7 @@ export default withRouter(
                   ) : null}
                 </div>
                 <ReactWOW animation="fadeIn" offset={-200}>
-                  <div className="contact-section">
+                  <div className="contact-section mb-15rem">
                     <div className="container">
                       <SectionTitle
                         title="Do you have a  similar project ?"
@@ -520,12 +530,12 @@ export default withRouter(
                   <CaseStudyModal
                     formtitle="Download Casestudy"
                     togglePopover={this.handleCloseCSModal}
-                    caseStudyUrlLink={projectInfo.project_detail.caseStudyUrl}
+                    caseStudyUrlLink={(projectInfo.project_detail ? projectInfo.project_detail.caseStudyUrl : "")}
                   />
                 </ReactModal>
               </div>
             </div>
-          )}
+          ))}
         </div>
       );
     }
