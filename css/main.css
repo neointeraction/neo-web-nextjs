@@ -76,6 +76,10 @@ strong {
   margin-bottom: 30px !important;
 }
 
+.mb-15rem{
+  margin-bottom: 15.125rem !important;
+}
+
 .image-left {
   flex-direction: row;
 }
@@ -1050,7 +1054,7 @@ input.form-control {
 .carousal-position {
   position: absolute;
   /* right: 0; */
-  bottom: -83px;
+  bottom: -1px;
   /* height: 23.8125rem; */
   height: 12rem;
   overflow: hidden;
