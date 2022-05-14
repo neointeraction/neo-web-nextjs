@@ -60,14 +60,12 @@ export default class FormContactAdLp extends Component {
   // when submit btn is clicked
 
   submitEmail(e) {
-    // console.log("hello",this.state);
-
     e.preventDefault();
     if (this.validator.allValid() && this.state.isCaptchaValid) {
       this.setState({ mailSent: true });
       // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/sendgad`````` http://localhost:4000/sendgad
       // && this.state.isCaptchaValid
-      e.preventDefault();
+      // e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendgad", this.state)
         .then((response) => {
@@ -328,7 +326,6 @@ export default class FormContactAdLp extends Component {
                       sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
                       onloadCallback={this.onLoadRecaptcha}
                       verifyCallback={this.verifyCallback}
-                      className="recaptcha-ad"
                     />
                   </div>
 
