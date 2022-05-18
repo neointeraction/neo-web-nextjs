@@ -82,7 +82,13 @@ export async function getServerSideProps(context) {
   const projectsRes = await fetch(baseUrl + `/projects`);
   const projectsData = await projectsRes.json();
 
-  const id = projectsData.find(data => data.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+  let id = 0;
+
+  if(/^[0-9]+$/.test(title)) {
+    id = title;
+  }else{
+    id =  projectsData.find(data => data.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+  }
 
   const res = await fetch(baseUrl + `/projects/${id}`);
   const data = await res.json();
@@ -211,14 +217,14 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>{this.props.post.project_detail ? this.props.post.project_detail.SEOTitle : ""}</title>
+            <title>{this.props.post.project_detail ? this.props.post.project_detail?.SEOTitle : ""}</title>
             <meta
               name="description"
-              content={this.props.post.project_detail ? this.props.post.project_detail.SEODescription : ""}
+              content={this.props.post.project_detail ? this.props.post.project_detail?.SEODescription : ""}
             />
             <meta
               name="keywords"
-              content={this.props.post.project_detail ? this.props.post.project_detail.SEOKeywords : ""}
+              content={this.props.post.project_detail ? this.props.post.project_detail?.SEOKeywords : ""}
             />
           </Head>
           {this.state.loading ? (

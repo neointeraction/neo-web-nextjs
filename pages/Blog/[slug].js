@@ -429,8 +429,14 @@ export async function getServerSideProps(context) {
 
   const blogRes = await fetch(baseUrl + `/blogs`);
   const blogsData = await blogRes.json();
+  
+  let id = 0;
 
-  const id = blogsData.find(data => data.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+  if(/^[0-9]+$/.test(title)) {
+    id = title;
+  }else{
+    id =  blogsData.find(data => data.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+  }
 
   const res = await fetch(baseUrl + `/blogs/${id}`);
   const data = await res.json();
