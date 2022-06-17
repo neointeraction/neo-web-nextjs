@@ -31,95 +31,95 @@ import Clientlogo22 from "../images/wipro-logo.jpg";
 import Clientlogo23 from "../images/yokagawa-logo.jpg";
 
 const clients = [
-  
+ 
+  {
+    image: Clientlogo8,
+    name: "clayfin",
+  },
+
+  {
+    image: Clientlogo10,
+    name: "claysol",
+  },
+  {
+    image: Clientlogo11,
+    name: "coorg-wildlife",
+  },
   // {
   //   image: Clientlogo12,
   //   name: "drumbuffe-logo",
   // },
   {
     image: Clientlogo13,
-    name: "funding-logo",
+    name: "funding",
   },
   {
     image: Clientlogo14,
-    name: "Inatech-logo",
+    name: "Inatech",
   },
-  {
-    image: Clientlogo15,
-    name: "inkmagik-logo",
-  },
+  // {
+  //   image: Clientlogo15,
+  //   name: "inkmagik-logo",
+  // },
   {
     image: Clientlogo16,
-    name: "intellithink-logo",
+    name: "intellithink",
   },
   {
     image: Clientlogo17,
-    name: "intertrust-logo",
+    name: "intertrust",
   },
-  {
-    image: Clientlogo18,
-    name: "LifeSignal-logo",
-  },
-  // {
-  //   image: Clientlogo19,
-  //   name: "MobiCom-logo",
-  // },
   {
     image: Clientlogo1,
-    name: "icici-logo",
+    name: "icici",
   },
   {
     image: Clientlogo2,
-    name: "Geojit-logo",
+    name: "Geojit",
   },
   {
     image: Clientlogo3,
-    name: "bnp-paribas-logo",
+    name: "bnp-paribas",
   },
   {
     image: Clientlogo4,
-    name: "cbd-logo",
+    name: "commercial-bank",
   },
   {
     image: Clientlogo5,
-    name: "qudos-logo",
+    name: "qudos",
   },
   {
     image: Clientlogo6,
-    name: "brac-logo",
+    name: "brac-bank",
   },
   {
     image: Clientlogo7,
     name: "cbq-logo",
   },
   {
-    image: Clientlogo8,
-    name: "clayfin-logo",
+    image: Clientlogo18,
+    name: "LifeSignal",
   },
-
-  {
-    image: Clientlogo10,
-    name: "claysol-logo",
-  },
-  {
-    image: Clientlogo11,
-    name: "coorg-logo",
-  },
+  // {
+  //   image: Clientlogo19,
+  //   name: "MobiCom-logo",
+  // },
   {
     image: Clientlogo20,
-    name: "traveloka-logo",
+    name: "traveloka",
   },
   {
     image: Clientlogo21,
-    name: "vidal-logo",
+    name: "vidal",
   },
   {
     image: Clientlogo22,
-    name: "wipro-logo",
+    name: "wipro",
   },
   {
     image: Clientlogo23,
-    name: "yokagawa-logo",
+    name: "yokagawa",
   },
 ];
 

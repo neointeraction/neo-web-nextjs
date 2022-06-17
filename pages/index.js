@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import Head from "next/head";
 
 import FilterCard from "../components/FilterCard";
+import ClientSlider from "../components/ClientSlider";
 import SEOImg from "../images/neo-web-img.jpeg";
+
 
 class Home extends Component {
   render() {
@@ -33,6 +35,9 @@ class Home extends Component {
             </h1>
             <div>
               <FilterCard />
+            </div>
+            <div className="container margin-top">
+              <ClientSlider />
             </div>
           </div>
         </div>
