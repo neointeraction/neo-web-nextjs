@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import Head from "next/head";
-
+import Link from "next/link";
 import FilterCard from "../components/FilterCard";
 import ClientSlider from "../components/ClientSlider";
 import SEOImg from "../images/neo-web-img.jpeg";
-
+import { Badge } from "react-bootstrap";
+import AuditBadge from "../components/AuditBadge";
 
 class Home extends Component {
   render() {
@@ -27,12 +28,20 @@ class Home extends Component {
           ></script> */}
         </Head>
         <div className="container">
+            <div>
+              <AuditBadge />
+            </div>
           <div className="home-content">
             <h1 className="main-title animated fadeIn delay-0.5s">
               Designs that touches people's lives,
               <br />
               enables business success..
             </h1>
+                <div className="pullside square-base-mob">
+                  <Link href={`/UXAudit`}>
+                  <p>Click here for a free ✨UX Audit</p>
+                  </Link>
+                </div>
             <div>
               <FilterCard />
             </div>

@@ -34,37 +34,25 @@ export default class CardTile extends Component {
           onMouseEnter={this.mouseEnter}
           onMouseLeave={this.mouseLeave}
         >
-          {/* <div className="arrow-click">
-            <button
-              className={
-                this.state.isMouseInside
-                  ? "card-arrow-btn-hovered"
-                  : "card-arrow-btn"
-              }
-            >
-              <img
-                src={Arrow}
-                alt="logo"
-                style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
-              />
-            </button>
-          </div> */}
           {this.state.isMouseInside ? (
             <div className="info-box info-box-menu fadeInCard ">
               <div className="arrow-click animated fadeInRight delay-04s">
-              <button
-              className={
-                this.state.isMouseInside
-                  ? "card-arrow-btn-hovered"
-                  : "card-arrow-btn"
-              }
-            >
-              <img
-                src={Arrow}
-                alt="logo"
-                style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
-              />
-            </button>
+              <Link href={{ pathname: `/Projects` }}> 
+                <button
+                  className={
+                    this.state.isMouseInside
+                      ? "card-view-btn-hovered"
+                      : "card-view-btn"
+                  }
+                >
+                  <img
+                    src={ViewAll}
+                    alt="logo"
+                    style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
+                    className="viewall"
+                  />
+                </button>
+                </Link>
               </div>
               <div className="card-title menu-title animated fadeIn">
                 <h1>{cardTitle}</h1>

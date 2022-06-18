@@ -8,12 +8,17 @@ import ReactWOW from "react-wow";
 //TO ADD NEW CARDS GO TO THIS FILE
 import MENU from "../json/MENU";
 
-import CardTile from "./CardTile";
+import FeaturedProject from "./FeaturedProject";
 import CardTileMenu from "./CardTileMenu";
 import CardTileMenuImage from "./CardTileMenuImage";
+import CardTileMenuImageSlider from "./CardTileMenuImageSlider";
+import CardTileMenuImageCareer from "./CardTileMenuImageCareer";
 import CardTileUpfront from "./CardTileUpfront";
 import CardTileLinks from "./CardTileLinks";
 import CardTileVideo from "./CardTileVideo";
+import BlogCardSlide from "./BlogCardSlide";
+import CardEbook from "./CardEbook";
+import CardAuditUX from "./CardAuditUX";
 import Popover from "./Popover";
 import { DataContext } from "../context/DataContext";
 
@@ -70,10 +75,59 @@ export default class FilterCard extends Component {
                     </div>
                   </Link>
                 )}
-                {item.cardCategory === "menuImage" && (
+                {/* {item.cardCategory === "menu" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <CardAuditUX
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        infoText={item.infoText}
+                        email={item.email}
+                        phone={item.phone}
+                        img1={item.img1}
+                        img2={item.img2}
+                        img1L={item.img1L}
+                        img2L={item.img2L}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
+                )} */}
+                {/* {item.cardCategory === "menuImage" && (
                   <Link href={`/${item.link}`}>
                     <div className="link">
                       <CardTileMenuImage
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
+                )} */}
+                {item.cardCategory === "menuImage" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <CardTileMenuImageCareer
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        // BackgroundImageCareer={item.BackgroundImageCareer}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
+                )}
+                {item.cardCategory === "menuImageSlider" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <CardTileMenuImageSlider
                         className={item.className}
                         category={item.category}
                         cardTitle={item.cardTitle}
@@ -121,6 +175,34 @@ export default class FilterCard extends Component {
                     blogtag2={item.blogtag2}
                     blogtag3={item.blogtag3}
                   />
+                )}
+                {item.cardCategory === "blogSlideHome" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <BlogCardSlide
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
+                )}
+                {item.cardCategory === "ebookHome" && (
+                  <Link href={`/${item.link}`}>
+                    <div className="link">
+                      <CardEbook
+                        className={item.className}
+                        category={item.category}
+                        cardTitle={item.cardTitle}
+                        bgColor={item.bgColor}
+                        BackgroundImageCareer={item.BackgroundImageCareer}
+                        cardInfoText={item.cardInfoText}
+                      />
+                    </div>
+                  </Link>
                 )}
                 {/* {cards.cardCategory !== "menu" &&
                       cards.cardCategory !== "blog" &&
@@ -186,7 +268,7 @@ export default class FilterCard extends Component {
                           }}
                         >
                           <div className="link">
-                            <CardTile
+                            <FeaturedProject
                               key={cards.id}
                               className={cards.className}
                               category={cards.categories.map(

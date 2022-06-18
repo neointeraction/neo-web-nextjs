@@ -3,6 +3,8 @@ import Link from "next/link";
 
 // import "../css/main.css";
 import ArrowRight from "../images/SlideArrow.svg";
+import CardTwoOne from "../images/cardtwo-1.svg"
+import CardTwoTwo from "../images/cardtwo-2.svg"
 
 export default class CardTileLinks extends Component {
   constructor() {
@@ -77,8 +79,21 @@ export default class CardTileLinks extends Component {
                 </Link>
               </li> */}
             </ul>
+            <div className="animation-area">
+          <ul className="svg-card-two ">
+            <li>
+             <img src={CardTwoOne} />
+            </li>
+            <li>
+            <img src={CardTwoTwo} />
+            </li>
+
+          </ul>
           </div>
+          </div>
+
         </div>
+        
       </div>
     );
   }

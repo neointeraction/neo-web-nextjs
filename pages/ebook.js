@@ -10,6 +10,8 @@ import SectionTitle from "../components/SectionTitle";
 import ProcessCard from "../components/ProcessCard";
 import GetQuoteModal from "../components/GetQuoteModal";
 import FormContactEBkLP from "../components/FormContactEBkLP";
+import FilterCardProjectsSlider from "../components/FilterCardProjectsSlider";
+import BlogCardAd from "../components/BlogCardAd";
 
 import Banner from "../images/ebookBanner.jpg";
 import EbookImg from "../images/ebookImgBook.jpg";
@@ -210,31 +212,14 @@ const Ebook = () => {
                 />
               </div>
             </ReactWOW>
-            {/* <ReactWOW animation="fadeIn" offset={-200}>
-              <div className="contact-section mb-0">
-                <div className="container">
-                  <SectionTitle
-                    title="Do you want to drop us message ?"
-                    subtitle="Want to have a talk with the team."
-                  />
-                  <button className="custom-btn" onClick={handleOpenModal}>
-                    Contact us
-                  </button>
-                </div>
-              </div>
-            </ReactWOW> */}
-            {/* <ReactModal
-              isOpen={open}
-              contentLabel="career"
-              onRequestClose={handleCloseModal}
-              className="career-modal animated zoomIn"
-              overlayClassName="Overlay"
-            >
-              <GetQuoteModal
-                formtitle="Contact us"
-                togglePopover={handleCloseModal}
-              />
-            </ReactModal> */}
+            <div className="section-padding">
+            <ReactWOW animation="fadeIn" offset={-200}>
+              <FilterCardProjectsSlider />
+            </ReactWOW>
+          </div>
+          <div className="section-padding">
+            <BlogCardAd />
+          </div>
           </div>
         </div>
       </div>
