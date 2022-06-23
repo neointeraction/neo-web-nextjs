@@ -94,7 +94,7 @@ const gcampaign = () => {
       <div className="container">
         <div className="home-content">
           <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
-            Neointeraction Design - Reimagine your product.
+            Neointeraction Design - Reimagine your product
           </h1>
         </div>
       </div>

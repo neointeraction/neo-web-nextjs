@@ -320,7 +320,7 @@ export default class FormContactUxAudit extends Component {
                   )}
 
                   <div className="input-custom-field captcha-feild">
-                    <ReCaptcha
+                    {/* <ReCaptcha
                       ref={(el) => {
                         this.captchaDemo = el;
                       }}
@@ -330,7 +330,7 @@ export default class FormContactUxAudit extends Component {
                       onloadCallback={this.onLoadRecaptcha}
                       verifyCallback={this.verifyCallback}
                       className="recaptcha-ad"
-                    />
+                    /> */}
                   </div>
 
                   {/* <button className="custom-btn form-submit">
