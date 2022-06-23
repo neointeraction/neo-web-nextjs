@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 // import "../css/main.css";
 import Arrow from "../images/Arrow.svg";
-import CardOneOne from "../images/cardone-1.svg";
-import CardOneTwo from "../images/cardone-2.svg";
-import CardOneThree from "../images/cardone-3.svg";
-import CardFiveOne from "../images/cardfive-1.svg";
-import CardFiveTwo from "../images/cardfive-2.svg";
+import CardFourOne from "../images/cardfour-1.svg";
+import CardFourTwo from "../images/cardfour-2.svg";
+import CardFourThree from "../images/cardfour-3.svg";
 
-export default class CardTileMenuImage extends Component {
+export default class CardEbook extends Component {
   constructor() {
     super();
     this.state = {
@@ -64,32 +62,20 @@ export default class CardTileMenuImage extends Component {
               <div className="info-text-p animated fadeIn">
                 <p>{cardInfoText}</p>
               </div>
-              {cardTitle == "about us" ? (
-                <div className=" animation-area">
-                  <ul className="svg-card-two ">
-                    <li>
-                      <img src={CardOneOne} />
-                    </li>
-                    <li>
-                      <img src={CardOneTwo} />
-                    </li>
-                    <li>
-                      <img src={CardOneThree} />
-                    </li>
-                  </ul>
-                </div>
-              ) : (
-                <div className=" animation-area">
-                  <ul className="svg-card-two ">
-                    <li>
-                      <img src={CardFiveOne} />
-                    </li>
-                    <li>
-                      <img src={CardFiveTwo} />
-                    </li>
-                  </ul>
-                </div>
-              )}
+
+              <div className="animation-area">
+                <ul className="svg-card-four ">
+              <li>
+               <img src={CardFourOne} />
+              </li>
+              <li>
+              <img src={CardFourTwo} />
+              </li>
+              <li>
+              <img src={CardFourThree} />
+              </li>
+            </ul>
+            </div>
             </div>
           ) : (
             <div className="card-title menu-title animated fadeIn">

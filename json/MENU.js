@@ -11,6 +11,7 @@ import LocationL from "../images/LocationL.svg";
 import BackgroundImageVideo from "../images/clientSpeak.jpg";
 import AboutUsImg from "../images/about-us.jpeg";
 import ProjectImg from "../images/Projectcard.png";
+import EbookCrdImg from "../images/ebookcard.png";
 // JSON DATA
 
 const MENU = [
@@ -20,7 +21,7 @@ const MENU = [
     category: "menu",
     cardCategory: "menuImage",
     cardTitle: "careers",
-    bgColor: "",
+    bgColor: "#0d0d10",
     BackgroundImageCareer: BackgroundImageCareer,
     cardInfoText: "apply for our available job & internship opportunities",
     link: "Career",
@@ -32,7 +33,7 @@ const MENU = [
     category: "menu",
     cardCategory: "menu",
     cardTitle: "contact us",
-    bgColor: "#99b400",
+    bgColor: "#0d0d10", // #99b400
     backgroundImages: "none",
     infoText:
       "Success for our designs is always gauged by the way it has enabled .",
@@ -45,13 +46,68 @@ const MENU = [
     cardInfoText: "locate us or say hello!",
     link: "ContactUs",
   },
+  // {
+  //   key: 2,
+  //   className: "",
+  //   category: "menu",
+  //   cardCategory: "menu",
+  //   cardslide : [
+  //     {
+  //       cardTitle1: "contact us",
+  //       bgColor: "#ababab", // #99b400
+  //       backgroundImages1: "none",
+  //       infoText1:
+  //         "Success for our designs is always gauged by the way it has enabled .",
+  //       email1: "info@neointeraction.com",
+  //       phone1: "",
+  //       img1: <img src={Mail} alt="Mail" />,
+  //       img2: <img src={Location} alt="Mail" />,
+  //       img1L: <img src={MailL} alt="Mail" />,
+  //       img2L: <img src={LocationL} alt="Mail" />,
+  //       cardInfoText1: "locate us or say hello!",
+  //       link: "ContactUs",
+  //     },
+  //     {
+  //       cardTitle1: "Audit ux",
+  //       bgColor: "#ababab", // #99b400
+  //       backgroundImages1: "none",
+  //       infoText1:
+  //         "Success for our designs is always gauged by the way it has enabled .",
+  //       email1: "info@neointeraction.com",
+  //       phone1: "",
+  //       img1: <img src={Mail} alt="Mail" />,
+  //       img2: <img src={Location} alt="Mail" />,
+  //       img1L: <img src={MailL} alt="Mail" />,
+  //       img2L: <img src={LocationL} alt="Mail" />,
+  //       cardInfoText1: "locate us or say hello!",
+  //       link: "ContactUs",
+  //     }
+  //   ]
+      
+    
+  //   // cardTitle2: "Audit UX",
+  //   // backgroundImages2: "none",
+  //   // infoText2:
+  //   //   "Success for our designs is always gauged by the way it has enabled .",
+  //   // email2: "info@neointeraction.com",
+  //   // phone2: "",
+  //   // img12: <img src={Mail} alt="Mail" />,
+  //   // img22: <img src={EbookCrdImg} alt="Mail" />,
+  //   // img1L2: <img src={MailL} alt="Mail" />,
+  //   // img2L2: <img src={LocationL} alt="Mail" />,
+  //   // cardInfoText2: "locate us or say hello!",
+  //   // link: "ContactUs",
+
+    
+  // },
+
   {
     key: 3,
     className: "animated slideInUp",
     category: "menu",
-    cardCategory: "menuImage",
+    cardCategory: "menuImageSlider",
     cardTitle: "about us",
-    bgColor: "",
+    bgColor: "#0d0d10",
     BackgroundImageCareer: AboutUsImg,
     cardInfoText: `learn about our services, team and vision`,
     link: "AboutUs",
@@ -78,28 +134,52 @@ const MENU = [
     LinkTwo: "UiEngineering",
     LinkThree: "VideoService",
   },
-  {
-    key: 6,
-    className: "animated slideInUp",
-    category: "menu",
-    cardCategory: "menuImage",
-    cardTitle: "projects",
-    bgColor: "",
-    BackgroundImageCareer: ProjectImg,
-    cardInfoText: `selected enterprise Ux engagements`,
-    link: "Projects",
-  },
+  // {
+  //   key: 6,
+  //   className: "animated slideInUp",
+  //   category: "menu",
+  //   cardCategory: "menuImage",
+  //   cardTitle: "projects",
+  //   bgColor: "",
+  //   BackgroundImageCareer: ProjectImg,
+  //   cardInfoText: `selected enterprise Ux engagements`,
+  //   link: "Projects",
+  // },
+  // {
+  //   key: 7,
+  //   className: "animated slideInUp",
+  //   category: "menu",
+  //   cardCategory: "menuImage",
+  //   cardTitle: "blog",
+  //   bgColor: "#ababab",
+  //   // BackgroundImageCareer: BlogBgMain,
+  //   cardInfoText:
+  //     "a specially curated list of articles to help understand the world of design",
+  //   link: "Blog",
+  // },
   {
     key: 7,
     className: "animated slideInUp",
     category: "menu",
-    cardCategory: "menuImage",
+    cardCategory: "blogSlideHome",
     cardTitle: "blog",
-    bgColor: "",
-    BackgroundImageCareer: BlogBgMain,
+    bgColor: "#0d0d10",
+    // BackgroundImageCareer: BlogBgMain,
     cardInfoText:
       "a specially curated list of articles to help understand the world of design",
     link: "Blog",
+  },
+  {
+    key: 8,
+    className: "animated slideInUp",
+    category: "menu",
+    cardCategory: "ebookHome",
+    cardTitle: "ebook",
+    bgColor: "#0d0d10", //#ababab
+    BackgroundImageCareer: EbookCrdImg,
+    cardInfoText:
+      "the agile mindset helps you iterate and develop products that the customers want",
+    link: "ebook",
   },
 ];
 
