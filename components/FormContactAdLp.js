@@ -317,7 +317,7 @@ export default class FormContactAdLp extends Component {
                   )}
 
                   <div className="input-custom-field captcha-feild">
-                    <ReCaptcha
+                    {/* <ReCaptcha
                       ref={(el) => {
                         this.captchaDemo = el;
                       }}
@@ -326,7 +326,7 @@ export default class FormContactAdLp extends Component {
                       sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
                       onloadCallback={this.onLoadRecaptcha}
                       verifyCallback={this.verifyCallback}
-                    />
+                    /> */}
                   </div>
 
                   {/* <button className="custom-btn form-submit">

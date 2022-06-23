@@ -47,8 +47,7 @@ export default class BlogCardSlide extends Component {
           onMouseLeave={this.mouseLeave}
         >
           {this.state.isMouseInside ? (
-            <div  className="info-box info-box-menu fadeInCard menu-title">
-               
+            <div className="info-box info-box-menu fadeInCard menu-title">
               <div className="arrow-click animated fadeInRight delay-04s">
                 <button
                   className={
@@ -71,83 +70,83 @@ export default class BlogCardSlide extends Component {
                 <p>{cardInfoText}</p>
               </div>
               <div className="animation-area">
-                    <ul className="box-area">
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    </ul>
-               </div>
+                <ul className="box-area">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
             </div>
           ) : (
             <div className="card-title menu-title animated fadeIn">
               <h1>{cardTitle}</h1>
               <div className="blogsliderhome">
-          {/* <BlogSlider  /> */}
-        <BlogContext.Consumer>
-          {(context) => (
-            <React.Fragment>
-              <div
-                className="project-carousal"
-                onMouseEnter={this.mouseEnter}
-                onMouseLeave={this.mouseLeave}
-              >
-                <Carousel
-                  autoPlay={4000}
-                  slidesPerPage={1}
-                  addArrowClickHandler
-                  infinite
-                  offset={0}
-                  itemWidth={360}
-                  stopAutoPlayOnHover={true}
-                  animationSpeed={1500}
-                >
-                  {[...context.state.blogs].map((item) => (
-                    <React.Fragment key={item.id}>
-                      <Link
-                        href={{
-                          pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
-                        }}
+                {/* <BlogSlider  /> */}
+                <BlogContext.Consumer>
+                  {(context) => (
+                    <React.Fragment>
+                      <div
+                        className="project-carousal"
+                        onMouseEnter={this.mouseEnter}
+                        onMouseLeave={this.mouseLeave}
                       >
-                        <div className="link">
-                          <div className="video-card-thumb">
-                            <div className="project-slider-card blog-card-thumb">
-                              <h1>{item.blogTitle}</h1>
-                              <img
-                                className="video-card-thumb project-card-thumb  width-100"
-                                src={`${baseUrl}${item.blogCardImage.url}`}
-                                alt="carousal-img"
-                              />
-                              <div
-                                className="info-slide-bg fadeInCard"
-                                style={{
-                                  display: this.state.isMouseInside
-                                    ? "block"
-                                    : "none",
+                        <Carousel
+                          autoPlay={8000}
+                          slidesPerPage={1}
+                          addArrowClickHandler
+                          infinite
+                          offset={0}
+                          itemWidth={360}
+                          stopAutoPlayOnHover={true}
+                          animationSpeed={1500}
+                        >
+                          {[...context.state.blogs].map((item) => (
+                            <React.Fragment key={item.id}>
+                              <Link
+                                href={{
+                                  pathname: `/Blog/${item.blogTitle
+                                    .replace(
+                                      /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                      ""
+                                    )
+                                    .replace(/ /g, "-")}`,
                                 }}
                               >
-                                <h1>{item.blogTitle}</h1>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </Link>
+                                <div className="link">
+                                  <div className="video-card-thumb">
+                                    <div className="project-slider-card blog-card-thumb">
+                                      <h1 className="blog-title-home">{item.blogTitle}</h1>
+                                      <img
+                                        className="video-card-thumb project-card-thumb  width-100"
+                                        src={`${baseUrl}${item.blogCardImage.url}`}
+                                        alt="carousal-img"
+                                      />
+                                      <div
+                                        className="info-slide-bg fadeInCard"
+                                        style={{
+                                          display: this.state.isMouseInside
+                                            ? "block"
+                                            : "none",
+                                        }}
+                                      >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </Link>
+                            </React.Fragment>
+                          ))}
+                        </Carousel>
+                      </div>
                     </React.Fragment>
-                  ))}
-                </Carousel>
+                  )}
+                </BlogContext.Consumer>
               </div>
-            </React.Fragment>
-          )}
-        </BlogContext.Consumer>
-          </div>
             </div>
           )}
-          
-
-          
-          
         </div>
       </div>
     );

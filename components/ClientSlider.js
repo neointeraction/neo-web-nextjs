@@ -17,14 +17,11 @@ import Clientlogo8 from "../images/clayfin-logo.jpg";
 
 import Clientlogo10 from "../images/claysol-logo.jpg";
 import Clientlogo11 from "../images/coorg-logo.jpg";
-import Clientlogo12 from "../images/drumbuffer-logo.jpg";
 import Clientlogo13 from "../images/funding-logo.jpg";
 import Clientlogo14 from "../images/Inatech-logo.jpg";
-import Clientlogo15 from "../images/inkmagik-logo.jpg";
 import Clientlogo16 from "../images/intellithink-logo.jpg";
 import Clientlogo17 from "../images/intertrust-logo.jpg";
 import Clientlogo18 from "../images/lifeSignal-logo.jpg";
-import Clientlogo19 from "../images/mobiCom-Logo.jpg";
 import Clientlogo20 from "../images/traveloka-logo.jpg";
 import Clientlogo21 from "../images/vidal-logo.jpg";
 import Clientlogo22 from "../images/wipro-logo.jpg";
@@ -45,10 +42,6 @@ const clients = [
     image: Clientlogo11,
     name: "coorg-wildlife",
   },
-  // {
-  //   image: Clientlogo12,
-  //   name: "drumbuffe-logo",
-  // },
   {
     image: Clientlogo13,
     name: "funding",
@@ -57,10 +50,6 @@ const clients = [
     image: Clientlogo14,
     name: "Inatech",
   },
-  // {
-  //   image: Clientlogo15,
-  //   name: "inkmagik-logo",
-  // },
   {
     image: Clientlogo16,
     name: "intellithink",
@@ -101,10 +90,6 @@ const clients = [
     image: Clientlogo18,
     name: "LifeSignal",
   },
-  // {
-  //   image: Clientlogo19,
-  //   name: "MobiCom-logo",
-  // },
   {
     image: Clientlogo20,
     name: "traveloka",
@@ -128,14 +113,12 @@ export default class ClientSlider extends Component {
     var settings = {
       dots: false,
       infinite: true,
-      speed: 500,
       slidesToShow: 5,
       initialSlide: 0,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 3000,
-      autoplaySpeed: 3000,
-      cssEase: "linear",
+      speed: 4000,
+      autoplaySpeed: 4000,
       arrows: false,
       responsive: [
         {
@@ -143,46 +126,33 @@ export default class ClientSlider extends Component {
           settings: {
             slidesToShow: 3,
             slidesToScroll: 3,
-            infinite: true,
-            dots: false,
-            autoplay: true,
-            speed: 3000,
-            autoplaySpeed: 3000,
-            cssEase: "linear",
           },
         },
         {
           breakpoint: 768,
           settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 2,
-            autoplay: true,
-            speed: 3000,
-            autoplaySpeed: 3000,
-            cssEase: "linear",
+            slidesToShow: 3,
+            slidesToScroll: 1,
           },
         },
         {
           breakpoint: 576,
           settings: {
             slidesToShow: 2,
-            slidesToScroll: 2,
-            autoplay: true,
-            speed: 3000,
-            autoplaySpeed: 3000,
-            cssEase: "linear",
+            slidesToScroll: 1,
+            speed: 5000,
+            autoplaySpeed: 5000,
+            initialSlide: 7,
           },
         },
         {
           breakpoint: 426,
           settings: {
-            slidesToShow: 1.5,
-            slidesToScroll: 1.5,
-            autoplay: true,
-            speed: 3000,
-            autoplaySpeed: 3000,
-            cssEase: "linear",
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            speed: 5000,
+            autoplaySpeed: 5000,
+            initialSlide: 7,
           },
         },
       ],
