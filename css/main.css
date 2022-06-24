@@ -4303,7 +4303,7 @@ textarea {
 
 
 .width-md {
-  width: 360px;
+  width: 300px;
   height: auto;
 }
 
@@ -4719,15 +4719,6 @@ textarea {
 }
 .app-download svg{
 
-}
-.circle {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  color: #fff;
-  background: #000;
-  border-radius: 50%;
-  border: 2px solid;
 }
 
 .badge-logo {
