@@ -105,9 +105,9 @@ app.post("/sendgad", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-      // "sebin@neointeraction.com"
+      // "allen@neointeraction.com",
+      // "sam@neointeraction.com",
+      "sebin@neointeraction.com"
     ],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
@@ -156,9 +156,9 @@ app.post("/sendebk", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-        //  "sebin@neointeraction.com"
+      // "allen@neointeraction.com",
+      // "sam@neointeraction.com",
+         "sebin@neointeraction.com"
     ],
     subject: `E-Book LP form submission : ${name} <${email}>`,
     html: `<html>
@@ -243,6 +243,7 @@ app.post("/senduxaudit", (req, res) => {
       pass: "neo@1234",
     },
   });
+
   // const transporter = nodemailer.createTransport({
   //   host: 'smtp.ethereal.email', port: 587,
   //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
@@ -257,9 +258,9 @@ app.post("/senduxaudit", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-      // "sebin@neointeraction.com"
+      // "allen@neointeraction.com",
+      // "sam@neointeraction.com",
+      "sebin@neointeraction.com"
     ],
     subject: `UX Audit form submission : ${name} <${email}>`,
     html: `<html>
