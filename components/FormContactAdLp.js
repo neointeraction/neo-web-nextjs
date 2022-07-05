@@ -29,15 +29,15 @@ export default class FormContactAdLp extends Component {
       // nameError: "",
       // emailError: "",
       // mobError: "",
-      // isCaptchaValid: false,
-      // isErrorShown: false,
-      // isFormValid: false,
-      // mailSent: false,
+      isCaptchaValid: false,
+      isErrorShown: false,
+      isFormValid: false,
+      mailSent: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
-    // this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
-    // this.verifyCallback = this.verifyCallback.bind(this);
+    this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
+    this.verifyCallback = this.verifyCallback.bind(this);
     this.validator = new SimpleReactValidator();
   }
 
@@ -61,11 +61,11 @@ export default class FormContactAdLp extends Component {
 
   submitEmail(e) {
     e.preventDefault();
-    if (this.validator.allValid()) {
+    if (this.validator.allValid() && this.state.isCaptchaValid) {
       this.setState({ mailSent: true });
       // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/sendgad`````` http://localhost:4000/sendgad
       // && this.state.isCaptchaValid
-      e.preventDefault();
+      // e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/sendgad", this.state)
         .then((response) => {
@@ -100,7 +100,7 @@ export default class FormContactAdLp extends Component {
       mobile: "",
       email: "",
       description: "",
-      // isCaptchaValid: false,
+      isCaptchaValid: false,
       isErrorShown: false,
       isFormValid: false,
     });
@@ -191,19 +191,19 @@ export default class FormContactAdLp extends Component {
     </div>
   );
 
-  // onLoadRecaptcha() {
-  //   if (this.captchaDemo) {
-  //     this.captchaDemo.reset();
-  //     // this.captchaDemo.execute();
-  //   }
-  // }
-  // verifyCallback(recaptchaToken) {
-  //   this.setState({
-  //     isCaptchaValid: true,
-  //   });
-  //   // Here you will get the final recaptchaToken!!!
-  //   console.log(recaptchaToken, "<= your recaptcha token");
-  // }
+  onLoadRecaptcha() {
+    if (this.captchaDemo) {
+      this.captchaDemo.reset();
+      // this.captchaDemo.execute();
+    }
+  }
+  verifyCallback(recaptchaToken) {
+    this.setState({
+      isCaptchaValid: true,
+    });
+    // Here you will get the final recaptchaToken!!!
+    console.log(recaptchaToken, "<= your recaptcha token");
+  }
 
   render() {
     return (
@@ -317,7 +317,7 @@ export default class FormContactAdLp extends Component {
                   )}
 
                   <div className="input-custom-field captcha-feild">
-                    {/* <ReCaptcha
+                    <ReCaptcha
                       ref={(el) => {
                         this.captchaDemo = el;
                       }}
@@ -326,7 +326,7 @@ export default class FormContactAdLp extends Component {
                       sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
                       onloadCallback={this.onLoadRecaptcha}
                       verifyCallback={this.verifyCallback}
-                    /> */}
+                    />
                   </div>
 
                   {/* <button className="custom-btn form-submit">
@@ -337,7 +337,7 @@ export default class FormContactAdLp extends Component {
                     className="custom-btn loader-btns"
                     onClick={this.submitEmail}
                   >
-                    {this.state.mailSent ? (
+                    {this.state.mailSent && this.state.isCaptchaValid ? (
                       <>
                         <span>Submit</span>
                         <div class="progress-bar">
@@ -391,3 +391,4 @@ export default class FormContactAdLp extends Component {
     );
   }
 }
+
