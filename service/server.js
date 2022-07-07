@@ -105,7 +105,7 @@ app.post("/sendgad", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      // "allen@neointeraction.com",
+      "allen@neointeraction.com",
       // "sam@neointeraction.com",
       "sebin@neointeraction.com"
     ],
@@ -156,9 +156,9 @@ app.post("/sendebk", (req, res) => {
     to: [
       // "shameer@neointeraction.com",
       // "info@neointeraction.com",
-      // "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-         "sebin@neointeraction.com"
+      "allen@neointeraction.com",
+      "sam@neointeraction.com",
+        //  "sebin@neointeraction.com"
     ],
     subject: `E-Book LP form submission : ${name} <${email}>`,
     html: `<html>
@@ -235,56 +235,7 @@ app.post("/sendebk", (req, res) => {
   // });
 });
 
-app.post("/senduxaudit", (req, res) => {
-  var transporter = nodemailer.createTransport({
-    service: "gmail",
-    auth: {
-      user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
-    },
-  });
 
-  // const transporter = nodemailer.createTransport({
-  //   host: 'smtp.ethereal.email', port: 587,
-  //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
-
-  var name = req.body.name;
-  var mobile = req.body.mobile;
-  var email = req.body.email;
-  var description = req.body.description;
-
-  var mail = {
-    from: email,
-    to: [
-      // "shameer@neointeraction.com",
-      // "info@neointeraction.com",
-      // "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-      "sebin@neointeraction.com"
-    ],
-    subject: `UX Audit form submission : ${name} <${email}>`,
-    html: `<html>
-     <body>
-     <p>Name:${name}</p>
-     <p>Email:${email}</p>
-     <p>Mobile:${mobile}</p>  
-     <p>description:${description}</p>
-     </body> 
-     </html>`,
-  };
-
-  transporter.sendMail(mail, (err, data) => {
-    if (err) {
-      res.json({
-        status: "fail",
-      });
-    } else {
-      res.json({
-        status: "success",
-      });
-    }
-  });
-});
 
 
 
