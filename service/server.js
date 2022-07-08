@@ -41,7 +41,7 @@ app.post("/send", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
 
@@ -88,7 +88,7 @@ app.post("/sendgad", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
   // const transporter = nodemailer.createTransport({
@@ -139,7 +139,7 @@ app.post("/sendebk", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
   // const transporter = nodemailer.createTransport({
@@ -243,7 +243,7 @@ app.post("/career", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
 
@@ -291,7 +291,7 @@ app.post("/jobrequest", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
 
@@ -373,7 +373,7 @@ app.post("/hiredeveloper", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
 
