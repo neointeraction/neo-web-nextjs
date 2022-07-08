@@ -27,7 +27,7 @@ app.post("/casestudy", (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
-      pass: "neo@1234",
+      pass: "unlhgudojkwsqwxg",
     },
   });
 
