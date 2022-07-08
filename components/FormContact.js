@@ -84,6 +84,9 @@ export default class FormContact extends Component {
             alert("Message failed to send.");
             console.log(response.data, "response.data");
           }
+        })
+        .catch(function (error) {
+          console.log(error.response.data.message);
         });
     } else {
       this.validator.showMessages();
