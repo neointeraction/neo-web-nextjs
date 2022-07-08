@@ -73,6 +73,7 @@ app.post("/send", (req, res) => {
     if (err) {
       res.json({
         status: "fail",
+        error: err,
       });
     } else {
       res.json({
