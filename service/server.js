@@ -56,7 +56,7 @@ app.post("/send", (req, res) => {
     to: [
       "info@neointeraction.com",
       "sam@neointeraction.com",
-      "shameer@neoinetraction.com",
+      "shameer@neointeraction.com",
     ],
     subject: `Contact us form submission : ${name} <${email}> : ${service} `,
     html: `<html>
