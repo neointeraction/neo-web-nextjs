@@ -83,10 +83,12 @@ export default class FormContact extends Component {
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
             console.log(response.data, "response.data");
+            console.log(response, "response");
           }
         })
         .catch(function (error) {
-          console.log(error.response.data.message);
+          console.log(error, "erro1");
+          console.log({ error }, "error2");
         });
     } else {
       this.validator.showMessages();

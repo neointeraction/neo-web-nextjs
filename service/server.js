@@ -3,30 +3,25 @@ const app = express();
 const nodemailer = require("nodemailer");
 var bodyParser = require("body-parser");
 const cors = require("cors");
-var handlebars = require('handlebars');
-var fs = require('fs');
+var handlebars = require("handlebars");
+var fs = require("fs");
 // const multer = require('multer')
 
-
-
-var readHTMLFile = function(path, callback) {
-  fs.readFile(path, {encoding: 'utf-8'}, function (err, html) {
-      if (err) {
-         callback(err); 
-         throw err;
-
-      }
-      else {
-          callback(null, html);
-      }
+var readHTMLFile = function (path, callback) {
+  fs.readFile(path, { encoding: "utf-8" }, function (err, html) {
+    if (err) {
+      callback(err);
+      throw err;
+    } else {
+      callback(null, html);
+    }
   });
 };
-
 
 var path = require("path");
 const { getMaxListeners } = require("process");
 
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json({ limit: "150mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -58,7 +53,11 @@ app.post("/send", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["info@neointeraction.com", "sam@neointeraction.com"],
+    to: [
+      "info@neointeraction.com",
+      "sam@neointeraction.com",
+      "shameer@neoinetraction.com",
+    ],
     subject: `Contact us form submission : ${name} <${email}> : ${service} `,
     html: `<html>
      <body>
@@ -107,7 +106,7 @@ app.post("/sendgad", (req, res) => {
       // "info@neointeraction.com",
       "allen@neointeraction.com",
       // "sam@neointeraction.com",
-      "sebin@neointeraction.com"
+      "sebin@neointeraction.com",
     ],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
@@ -133,8 +132,7 @@ app.post("/sendgad", (req, res) => {
   });
 });
 
-
-// ebook page collects email info as well as sends ebook 
+// ebook page collects email info as well as sends ebook
 app.post("/sendebk", (req, res) => {
   var transporter = nodemailer.createTransport({
     service: "gmail",
@@ -143,8 +141,8 @@ app.post("/sendebk", (req, res) => {
       pass: "neo@1234",
     },
   });
-  // const transporter = nodemailer.createTransport({ 
-  //   host: 'smtp.ethereal.email', port: 587, 
+  // const transporter = nodemailer.createTransport({
+  //   host: 'smtp.ethereal.email', port: 587,
   //   auth: { user: 'fnrflpoeb4fyk222@ethereal.email', pass: 'gDDFC95NURZV52Rpbf' } });
 
   var name = req.body.name;
@@ -158,7 +156,7 @@ app.post("/sendebk", (req, res) => {
       // "info@neointeraction.com",
       "allen@neointeraction.com",
       "sam@neointeraction.com",
-        //  "sebin@neointeraction.com"
+      //  "sebin@neointeraction.com"
     ],
     subject: `E-Book LP form submission : ${name} <${email}>`,
     html: `<html>
@@ -178,37 +176,39 @@ app.post("/sendebk", (req, res) => {
   //    <body>
   //    <h4>Thank you for buying!</h4>
   //    <p>Download the Ebook from here: <a href="https://drive.google.com/file/d/1yeXER7_ItSi6e72DDRgpltzbAKntLhQY/view?usp=sharing">Ebook</a> </p>
-  //    <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>   
-  //    <p> Hold Tight! We will contact you with more information about the one day workshop</p>  
-  //    </body> 
+  //    <p>Download the UI kit from here: <a href="https://drive.google.com/file/d/1C7rWf9pxJb5pnZjEE0xmjbtM0HdSULVg/view?usp=sharing">UI Kit</a> </p>
+  //    <p> Hold Tight! We will contact you with more information about the one day workshop</p>
+  //    </body>
   //    </html>`,
   // };
 
-  readHTMLFile('../pages/EbookMailTemplate/EbkMailTmplt.html', function(err, html) {
-    var template = handlebars.compile(html);
-    var replacements = {
-         username: "John Doe"
-    };
-    var htmlToSend = template(replacements);
-    var mailebk = {
-      from: "info@neointeraction.com",
-      to: email,
-      subject: `Neointeraction Design Download Request`,
-      html: htmlToSend,
-    };
-     transporter.sendMail(mailebk, (err, data) => {
-      if (err) {
-        res.json({
-          status: "fail",
-        });
-      } else {
-        res.json({
-          status: "success",
-        });
-      }
-    });
-  });
-
+  readHTMLFile(
+    "../pages/EbookMailTemplate/EbkMailTmplt.html",
+    function (err, html) {
+      var template = handlebars.compile(html);
+      var replacements = {
+        username: "John Doe",
+      };
+      var htmlToSend = template(replacements);
+      var mailebk = {
+        from: "info@neointeraction.com",
+        to: email,
+        subject: `Neointeraction Design Download Request`,
+        html: htmlToSend,
+      };
+      transporter.sendMail(mailebk, (err, data) => {
+        if (err) {
+          res.json({
+            status: "fail",
+          });
+        } else {
+          res.json({
+            status: "success",
+          });
+        }
+      });
+    }
+  );
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
@@ -234,10 +234,6 @@ app.post("/sendebk", (req, res) => {
   //   }
   // });
 });
-
-
-
-
 
 // Career page or popup
 app.post("/career", (req, res) => {
