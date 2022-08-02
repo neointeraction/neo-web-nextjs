@@ -598,7 +598,7 @@ strong {
 
 .footer-container {
   margin-top: 3.75rem;
-  background: #383747;
+  background: #2f3841;
   padding-top: 1.875rem;
 }
 
@@ -4046,11 +4046,11 @@ textarea {
 }
 
 .slick-next {
-  right: 0 !important;
+  right: 0;
   z-index: 9;
 }
 .slick-prev {
-  left: 0 !important;
+  left: 0;
   z-index: 9;
 }
 

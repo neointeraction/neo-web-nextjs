@@ -30,10 +30,10 @@ const Header = () => {
   };
 
   const slashMotion = {
-    rest: { x: 0, opacity: 0, ease: "easeOut", duration: 0.4, type: "tween" },
+    rest: { x: 0, opacity: 1, ease: "easeOut", duration: 0.4, type: "tween" },
     hover: {
       opacity: 1,
-      x: 10,
+      x: 5,
       transition: {
         duration: 0.4,
         type: "tween",
@@ -83,7 +83,10 @@ const Header = () => {
             Menu
           </motion.p>
         </motion.div>
-        <div className="logo-container n-logo-container">
+        <div
+          className="logo-container n-logo-container"
+          onClick={() => handleRoute("/")}
+        >
           <div className="logo-container n-logo-container">
             <div className="logo-block block1 blockflip1" />
             <div className="logo-block block2 blockflip2" />
