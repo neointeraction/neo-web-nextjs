@@ -597,9 +597,9 @@ strong {
 /* footer */
 
 .footer-container {
-  margin-top: 3.75rem;
+  /* margin: 3.75rem 0; */
   background: #2f3841;
-  padding-top: 1.875rem;
+  padding: 1.875rem 0;
 }
 
 .footer-label {
@@ -2979,6 +2979,7 @@ textarea {
   color: #ffffff;
   letter-spacing: 0;
   font-weight: 600;
+  margin: 20px 0;
 }
 
 .footer-quick-links {
@@ -2989,12 +2990,13 @@ textarea {
 
 .footer-quick-links li .link {
   font-size: 16px;
-  color: #a9a8c0;
+  color: #a5a5a5;
   letter-spacing: 0;
   font-weight: 400;
-  margin-bottom: 12px;
+  margin-bottom: 20px;
   display: block;
   transition: 0.3s all ease-in-out;
+  cursor: auto;
 }
 
 .footer-quick-links li .link:hover {

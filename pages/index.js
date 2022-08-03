@@ -6,6 +6,7 @@ import HomeBanner from "../pageComponents/HomeBanner";
 import ProjectSlider from "../pageComponents/ProjectSlider";
 
 import SEOImg from "../images/neo-web-img.jpeg";
+import ServiceSection from "../pageComponents/ServiceSection";
 
 const Home = () => {
   const router = useRouter();
@@ -40,7 +41,9 @@ const Home = () => {
           <section className="section">
             <ProjectSlider />
           </section>
-          <section className="section">section 3</section>
+          <section className="section">
+            <ServiceSection />
+          </section>
           <section className="section">section 4</section>
         </div>
       </div>
