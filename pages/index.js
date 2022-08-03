@@ -7,6 +7,7 @@ import ProjectSlider from "../pageComponents/ProjectSlider";
 
 import SEOImg from "../images/neo-web-img.jpeg";
 import ServiceSection from "../pageComponents/ServiceSection";
+import Clients from "../pageComponents/Clients";
 
 const Home = () => {
   const router = useRouter();
@@ -44,7 +45,9 @@ const Home = () => {
           <section className="section">
             <ServiceSection />
           </section>
-          <section className="section">section 4</section>
+          <section className="section">
+            <Clients />
+          </section>
         </div>
       </div>
     </>
