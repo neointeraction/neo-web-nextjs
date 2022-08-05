@@ -2,13 +2,15 @@ import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import HomeBanner from "../pageComponents/HomeBanner";
-import ProjectSlider from "../pageComponents/ProjectSlider";
+import HomeBanner from "../homePageComponents/HomeBanner";
+import ProjectSlider from "../homePageComponents/ProjectSlider";
 
 import SEOImg from "../images/neo-web-img.jpeg";
-import ServiceSection from "../pageComponents/ServiceSection";
-import Clients from "../pageComponents/Clients";
-import HomeTeam from "../pageComponents/HomeTeam";
+import ServiceSection from "../homePageComponents/ServiceSection";
+import Clients from "../homePageComponents/Clients";
+import HomeTeam from "../homePageComponents/HomeTeam";
+import BlogSection from "../homePageComponents/BlogSection";
+import ContactSection from "../homePageComponents/ContactSection";
 
 const Home = () => {
   const router = useRouter();
@@ -51,6 +53,12 @@ const Home = () => {
           </section>
           <section className="section">
             <HomeTeam />
+          </section>
+          <section className="section">
+            <BlogSection />
+          </section>
+          <section className="section">
+            <ContactSection />
           </section>
         </div>
       </div>

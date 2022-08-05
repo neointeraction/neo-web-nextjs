@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/router";
 
 import LinkedIn from "../images/linkedIn.svg";
 import Instagram from "../images/instagram.svg";
@@ -6,6 +7,10 @@ import Dribble from "../images/dribbble.svg";
 import Behance from "../images/behance.svg";
 
 const Footer = () => {
+  const handleRoute = (path) => {
+    Router.push(path);
+  };
+
   return (
     <div>
       <div className="footer-container">
@@ -14,16 +19,16 @@ const Footer = () => {
             <div className="col-md-3">
               <div className="footer-menu">
                 <ul className="footer-menu-link">
-                  <li>About</li>
-                  <li>Our Work</li>
-                  <li>Contact Us</li>
-                  <li>Careers</li>
-                  <li>Services</li>
-                  <li>Blogs</li>
+                  <li onClick={() => handleRoute("/AboutUs")}>About</li>
+                  <li onClick={() => handleRoute("/Projects")}>Our Work</li>
+                  <li onClick={() => handleRoute("/ContactUs")}>Contact Us</li>
+                  <li onClick={() => handleRoute("/Career")}>Careers</li>
+                  <li onClick={() => handleRoute("/UxService")}>Services</li>
+                  <li onClick={() => handleRoute("/Blog")}>Blogs</li>
                 </ul>
                 <ul className="secondary-menu-links">
-                  <li>Downloads</li>
-                  <li>Agency Terms</li>
+                  <li onClick={() => handleRoute("/Downloads")}>Downloads</li>
+                  <li onClick={() => handleRoute("/Terms")}>Agency Terms</li>
                 </ul>
               </div>
             </div>

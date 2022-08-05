@@ -200,17 +200,14 @@ strong {
 
 .card-tile {
   background-size: cover !important;
-  /* border-radius: 0.4375rem 0.4375rem 0 0; */
-  border-radius: 1.875rem;
   padding: 1.25rem;
-  height: 21.26rem;
+  height: 474px;
   width: 100%;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 15px;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
-  /* border-bottom: 0.125rem solid #8f8f8f; */
-  /* border: 1px solid #dddddd; */
 }
 
 .card-title {
@@ -303,13 +300,13 @@ strong {
   transition: 0.3s all ease-in-out;
 }
 .info-box {
-  background: #be0315;
+  background: #ee4947;
   padding: 1.25rem;
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  border-radius: 1.875rem;
+  border-radius: 15px;
 }
 
 .fadeInCard {
@@ -599,7 +596,7 @@ strong {
 .footer-container {
   /* margin: 3.75rem 0; */
   background: #2f3841;
-  padding: 1.875rem 0;
+  padding: 5.875rem 0 1.875rem 0;
 }
 
 .footer-label {
@@ -5689,3 +5686,10 @@ textarea {
 @import url("./new-styles.css");
 
 /* NEW STYLE INCLUDE  */
+
+@media only screen and (min-width: 1900px) {
+  .client-content {
+    width: 1440px !important;
+    margin: auto;
+  }
+}

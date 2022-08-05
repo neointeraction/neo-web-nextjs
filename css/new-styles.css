@@ -584,6 +584,52 @@
 }
 
 .client-content {
-  width: 1321px;
+  width: 100%;
   margin: auto;
+}
+
+.n-blog-section {
+  text-align: center;
+}
+
+.n-contact-card {
+  background: #fcf0eb;
+  border-radius: 15px;
+  padding: 60px 50px;
+  position: relative;
+}
+
+.n-contact-card p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000000;
+}
+
+.n-contact-card h1 {
+  font-weight: 800;
+  font-size: 44px;
+  line-height: 53px;
+  color: #262525;
+  margin: 30px 0;
+}
+
+.contact-cards-section {
+  margin-bottom: -70px;
+}
+
+.n-contact-card.bg2 {
+  background: #fdf7e4;
+}
+
+.cc-image {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.cc-image-top {
+  position: absolute;
+  top: 0px;
+  right: 5px;
 }
