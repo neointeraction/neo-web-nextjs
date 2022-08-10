@@ -1,14 +1,69 @@
 @import "slick-carousel/slick/slick.css";
 @import "slick-carousel/slick/slick-theme.css";
 
+/* scrollbar */
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+body::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 4px;
+}
+
+/* Handle */
+body::-webkit-scrollbar-thumb {
+  background: #cecece;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
 .n-header-container {
   background: #f9f7f7;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
-  padding: 12px 30px;
+  padding: 20px 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
+  transition: 0.3s all ease-in-out;
+}
+
+.header-with-panel {
+  height: 115px;
+}
+
+.menu-opened .header-with-panel.fixed .n-header-container {
+  right: 10px;
+}
+
+.menu-opened .header-with-panel.fixed .n-header-container .n-menu {
+  margin-left: 10px;
+}
+
+.header-with-panel.fixed .n-header-container {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    #f9f7f7 0%,
+    rgba(249, 247, 247, 0.77) 96.87%,
+    rgba(249, 247, 247, 0) 100%
+  );
+  backdrop-filter: blur(1px);
+  padding: 16px 30px;
+  transition: 0.3s all ease-in-out;
+}
+
+.header-with-panel.fixed .logo-container {
+  transform: scale(0.98);
+  transition: 0.3s all ease-in-out;
 }
 
 .n-logo-container {
@@ -16,8 +71,8 @@
 }
 
 .n-logo-container .logo-block {
-  width: 28px;
-  height: 61px;
+  width: 34px;
+  height: 73px;
 }
 
 .n-logo-container .logo-text p {
@@ -67,9 +122,11 @@
   bottom: 0;
   width: 100%;
   height: 100vh;
-  background: #151e27;
+  background: #2f3841;
   padding: 30px 40px;
   opacity: 0;
+  background-image: url(../images/n-images/menu-bg.png);
+  background-size: cover;
 }
 
 .n-menu-content {
@@ -77,16 +134,42 @@
   justify-content: center;
   flex-direction: column;
   height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.n-menu-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+.n-menu-content::-webkit-scrollbar-track {
+  background: #eee;
+  border-radius: 4px;
+}
+
+/* Handle */
+.n-menu-content::-webkit-scrollbar-thumb {
+  background: #cecece;
+  border-radius: 8px;
+}
+
+/* Handle on hover */
+.n-menu-content::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
 }
 
 .menu-opened {
   overflow: hidden;
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .n-menu-list {
   list-style: none;
   padding: 40px 0;
+  background: #ee4947;
+  border-radius: 15px;
+  padding: 50px;
 }
 
 .n-menu-item {
@@ -94,18 +177,18 @@
   font-size: 44px;
   line-height: 53px;
   color: #ffffff;
-  margin-bottom: 50px;
+  margin-bottom: 26px;
   transition: 0.3s all ease-in-out;
   cursor: pointer;
 }
 
 .n-menu-item:hover {
-  color: #fe5f55;
+  color: rgba(255, 255, 255, 0.8);
   transition: 0.3s all ease-in-out;
 }
 
 .n-menu-item.active {
-  color: #fe5f55;
+  color: #2f3841;
   transition: 0.3s all ease-in-out;
 }
 
@@ -119,7 +202,8 @@
 
 .n-social-icons {
   max-width: 100% !important;
-  width: 50%;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .n-social-icons li {
@@ -130,11 +214,10 @@
 
 .menu-right-content {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
-  padding: 60px 0;
 }
 
 .menu-close {
@@ -161,9 +244,13 @@
 }
 
 .section-home {
-  height: calc(100vh - 140px);
+  /* height: calc(100vh - 140px); */
   scroll-snap-align: start;
   margin: 25px 0;
+}
+
+.n-banner-img {
+  margin-top: 50px;
 }
 
 .n-banner-container {
@@ -404,18 +491,25 @@
 
 .accordion__button {
   font-weight: 750 !important;
-  font-size: 44px !important;
+  font-size: 28px !important;
   line-height: 53px !important;
   color: rgba(113, 113, 113, 0.75) !important;
   background: rgba(233, 233, 233, 0.44) !important;
   border-radius: 15px !important;
   padding: 10px 18px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .accordion__button[aria-expanded="true"] {
   color: #262525 !important;
   background: #f9f9f9 !important;
   border-radius: 15px 15px 0 0 !important;
+}
+
+.accordion__button[aria-expanded="true"] .n-link-btn {
+  display: inline-block;
 }
 
 .accordion__panel {
@@ -632,4 +726,14 @@
   position: absolute;
   top: 0px;
   right: 5px;
+}
+
+.n-link-btn {
+  font-family: "Avenir" !important;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #f73c31;
+  background: transparent;
+  display: none;
 }

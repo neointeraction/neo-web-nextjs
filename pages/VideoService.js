@@ -2,26 +2,26 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 import ReactModal from "react-modal";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import CardTile from "../components/CardTile";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import CardTile from "components/CardTile";
 
-import BackArrow from "../images/BackArrow.svg";
-import UXImg from "../images/Video_Services.jpg";
+import BackArrow from "assets/images/BackArrow.svg";
+import UXImg from "assets/images/Video_Services.jpg";
 
-import script from "../images/script.png";
-import stroyboard from "../images/stroyboard.png";
-import voiceOver from "../images/voice-over.png";
-import lowVideo from "../images/low-video.png";
-import finalAnim from "../images/final-animation.png";
+import script from "assets/images/script.png";
+import stroyboard from "assets/images/stroyboard.png";
+import voiceOver from "assets/images/voice-over.png";
+import lowVideo from "assets/images/low-video.png";
+import finalAnim from "assets/images/final-animation.png";
 
-import GetQuoteModal from "../components/GetQuoteModal";
-import DevelopmentProcessCard from "../components/DevelopmentProcessCard";
+import GetQuoteModal from "components/GetQuoteModal";
+import DevelopmentProcessCard from "components/DevelopmentProcessCard";
 
 const PROCESSIMAGE = [
   {
@@ -108,7 +108,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">Motion Design</h1>
               <h2 className="sub-title main-sub-title animated fadeIn">
@@ -214,7 +214,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
+                                    pathname: `/Projects/${cards.cardTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">

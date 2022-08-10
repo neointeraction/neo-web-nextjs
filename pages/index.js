@@ -2,15 +2,15 @@ import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 
-import HomeBanner from "../homePageComponents/HomeBanner";
-import ProjectSlider from "../homePageComponents/ProjectSlider";
+import HomeBanner from "pageComponents/homepage/HomeBanner";
+import ProjectSlider from "pageComponents/homepage/ProjectSlider";
 
-import SEOImg from "../images/neo-web-img.jpeg";
-import ServiceSection from "../homePageComponents/ServiceSection";
-import Clients from "../homePageComponents/Clients";
-import HomeTeam from "../homePageComponents/HomeTeam";
-import BlogSection from "../homePageComponents/BlogSection";
-import ContactSection from "../homePageComponents/ContactSection";
+import SEOImg from "assets/images/neo-web-img.jpeg";
+import ServiceSection from "pageComponents/homepage/ServiceSection";
+import Clients from "pageComponents/homepage/Clients";
+import HomeTeam from "pageComponents/homepage/HomeTeam";
+import BlogSection from "pageComponents/homepage/BlogSection";
+import ContactSection from "pageComponents/homepage/ContactSection";
 
 const Home = () => {
   const router = useRouter();
@@ -37,7 +37,7 @@ const Home = () => {
             src="https://js.convertflow.co/production/websites/35164.js"
           ></script> */}
       </Head>
-      <div className="section-container">
+      <div className="section-container body-page">
         <div className="container-fluid">
           <section className="section-home">
             <HomeBanner />

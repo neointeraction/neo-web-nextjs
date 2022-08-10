@@ -12,10 +12,10 @@ import {
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
-import UX from "../images/n-images/ux.svg";
-import Product from "../images/n-images/product.svg";
-import UI from "../images/n-images/ui.svg";
-import Design from "../images/n-images/design.svg";
+import UX from "assets/images/n-images/ux.svg";
+import Product from "assets/images/n-images/product.svg";
+import UI from "assets/images/n-images/ui.svg";
+import Design from "assets/images/n-images/design.svg";
 
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -49,17 +49,26 @@ const ServiceSection = () => {
         <div className="col-md-6">
           <AnimatePresence>
             {activeAccord === "ux" && (
-              <motion.img
-                // initial={{ opacity: 0 }}
-                // animate={{ opacity: 1, transition: { duration: 0.5 } }}
-                // exit={{ opacity: 0 }}
-                key="ux"
+              // <motion.img
+              //   // initial={{ opacity: 0 }}
+              //   // animate={{ opacity: 1, transition: { duration: 0.5 } }}
+              //   // exit={{ opacity: 0 }}
+              //   key="ux"
+              //   initial={{ x: -200, y: 0, opacity: 0 }}
+              //   animate={{ x: 0, y: 0, opacity: 1 }}
+              //   src={UX}
+              //   alt="UX"
+              //   className="service-img"
+              // />
+              <motion.div
+                key="product"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
-                src={UX}
-                alt="UX"
-                className="service-img"
-              />
+              >
+                <object type="image/svg+xml" data={UX}>
+                  <img key="ux" src={UX} alt="UX" />
+                </object>
+              </motion.div>
             )}
           </AnimatePresence>
           <AnimatePresence>
@@ -109,7 +118,9 @@ const ServiceSection = () => {
               className={`accordion__item ${activeAccord === "ux" ? "ux" : ""}`}
             >
               <AccordionItemHeading>
-                <AccordionItemButton>UX Design</AccordionItemButton>
+                <AccordionItemButton>
+                  UX Design <button className="n-link-btn">View More</button>
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
                 <ul className="service-list">

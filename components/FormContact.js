@@ -9,7 +9,7 @@ import animationData from "../Lotties/cycle-anim.json";
 import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import ContactImg from "../images/contact-us-banner.jpg";
+// import ContactImg from "assets/images/contact-us-banner.jpg";
 
 // const API_PATH =
 //   "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php";

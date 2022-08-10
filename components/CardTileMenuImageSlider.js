@@ -5,24 +5,22 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
-import CardOneOne from "../images/cardone-1.svg";
-import CardOneTwo from "../images/cardone-2.svg";
-import CardOneThree from "../images/cardone-3.svg";
-import CardFiveOne from "../images/cardfive-1.svg";
-import CardFiveTwo from "../images/cardfive-2.svg";
+import Arrow from "assets/images/Arrow.svg";
+import CardOneOne from "assets/images/cardone-1.svg";
+import CardOneTwo from "assets/images/cardone-2.svg";
+import CardOneThree from "assets/images/cardone-3.svg";
+import CardFiveOne from "assets/images/cardfive-1.svg";
+import CardFiveTwo from "assets/images/cardfive-2.svg";
 
-// import AboutUsImg from "../images/about-us.jpeg";
-import AboutUsImgOne from "../images/about-us-1.jpg"
-import AboutUsImgTwo from "../images/about-us-2.jpg"
-import AboutUsImgFour from "../images/about-us-4.jpg"
-import AboutUsImgFive from "../images/about-us-5.jpg"
-import AboutUsImgSix from "../images/about-us-6.jpg"
-import AboutUsImgSeven from "../images/about-us-7.jpg"
-// import CarousalLeft from "../images/White_arrow_left.svg";
-// import CarousalRight from "../images/White_arrow_right.svg";
-
-
+// import AboutUsImg from "assets/images/about-us.jpeg";
+import AboutUsImgOne from "assets/images/about-us-1.jpg";
+import AboutUsImgTwo from "assets/images/about-us-2.jpg";
+import AboutUsImgFour from "assets/images/about-us-4.jpg";
+import AboutUsImgFive from "assets/images/about-us-5.jpg";
+import AboutUsImgSix from "assets/images/about-us-6.jpg";
+import AboutUsImgSeven from "assets/images/about-us-7.jpg";
+// import CarousalLeft from "assets/images/White_arrow_left.svg";
+// import CarousalRight from "assets/images/White_arrow_right.svg";
 
 const aboutimages = [
   // {
@@ -60,7 +58,6 @@ const aboutimages = [
     image: AboutUsImgSeven,
     name: "AboutUsImg",
   },
-
 ];
 
 export default class CardTileMenuImageSlider extends Component {
@@ -68,11 +65,11 @@ export default class CardTileMenuImageSlider extends Component {
     super();
     this.state = {
       isMouseInside: false,
-      divstyle : { 
+      divstyle: {
         visibility: "visible",
         opacity: 1,
         transition: "opacity 2s linear",
-      }
+      },
     };
   }
 
@@ -84,14 +81,14 @@ export default class CardTileMenuImageSlider extends Component {
   };
   onSlideChange = () => {
     this.setState({
-      divstyle : {
+      divstyle: {
         ...this.state.divstyle,
         visibility: "hidden",
         opacity: 0,
         transition: "visibility 0s 1s, opacity 1s linear",
-      }
-      })
-  }
+      },
+    });
+  };
 
   render() {
     const {
@@ -101,7 +98,6 @@ export default class CardTileMenuImageSlider extends Component {
       cardTitle,
       cardInfoText,
     } = this.props;
-
 
     var settings = {
       dots: false,
@@ -157,7 +153,6 @@ export default class CardTileMenuImageSlider extends Component {
         },
       ],
     };
-
 
     return (
       <div>
@@ -230,13 +225,15 @@ export default class CardTileMenuImageSlider extends Component {
                   <h1>{cardTitle}</h1>
                 </div>
                 <div className="blogsliderhome">
-
-                     <Slider {...settings}>
-                     {aboutimages.map((item) => (
-                      <img src={item.image} className="imageslider" style={this.state.divstyle}/>
+                  <Slider {...settings}>
+                    {aboutimages.map((item) => (
+                      <img
+                        src={item.image}
+                        className="imageslider"
+                        style={this.state.divstyle}
+                      />
                     ))}
-                     </Slider>
-                   
+                  </Slider>
                 </div>
               </div>
             )}

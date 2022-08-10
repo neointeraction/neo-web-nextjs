@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
+import Arrow from "assets/images/Arrow.svg";
 
 export default class CardAuditUX extends Component {
   constructor() {
@@ -94,7 +94,7 @@ export default class CardAuditUX extends Component {
         },
       ],
     };
-    
+
     return (
       <div>
         {/* <Slider {...settings}>

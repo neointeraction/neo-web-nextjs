@@ -2,30 +2,30 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 import axios from "axios";
 import { baseUrl } from "../globalConfig";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import CardTileMenuImage from "../components/CardTileMenuImage";
-import CardTileUpfront from "../components/CardTileUpfront";
-import ModalCard from "../components/ModalCard";
-import CardTileTeam from "../components/CardTileTeam";
-import Faq from "../components/Faq";
-import Loader from "../components/Loader";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import CardTileMenuImage from "components/CardTileMenuImage";
+import CardTileUpfront from "components/CardTileUpfront";
+import ModalCard from "components/ModalCard";
+import CardTileTeam from "components/CardTileTeam";
+import Faq from "components/Faq";
+import Loader from "components/Loader";
 
-import BackArrow from "../images/BackArrow.svg";
-import ProjectImage from "../images/who-are-we.jpeg";
-import uxServiceImg from "../images/ux-service.jpg";
-import uiEngineeringImg from "../images/ui-engineering.jpg";
-import videoServiceImg from "../images/video-service.jpg";
+import BackArrow from "assets/images/BackArrow.svg";
+import ProjectImage from "assets/images/who-are-we.jpeg";
+import uxServiceImg from "assets/images/ux-service.jpg";
+import uiEngineeringImg from "assets/images/ui-engineering.jpg";
+import videoServiceImg from "assets/images/video-service.jpg";
 
-import Clients from "../images/clientl-logos.png";
-import OurTeamImg from "../images/our-team.jpg";
-import teamOuting from "../images/team-outings.jpg";
+import Clients from "assets/images/clientl-logos.png";
+import OurTeamImg from "assets/images/our-team.jpg";
+import teamOuting from "assets/images/team-outings.jpg";
 
 const SERVICES = [
   {
@@ -192,7 +192,7 @@ export default withRouter(
                   />
                 </div>
               </a>
-              <div className="page-content">
+              <div className="page-content body-page">
                 <div className="container animated fadeIn">
                   <h1 className="main-title animated fadeIn">about us</h1>
                   <h2 className="sub-title main-sub-title animated fadeIn">
@@ -405,7 +405,12 @@ export default withRouter(
                                 <div className="col-md-4 mb-5" key={item.id}>
                                   <Link
                                     href={{
-                                      pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                      pathname: `/Blog/${item.blogTitle
+                                        .replace(
+                                          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                          ""
+                                        )
+                                        .replace(/ /g, "-")}`,
                                     }}
                                   >
                                     <div className="link">

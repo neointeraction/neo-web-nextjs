@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import Link from "next/link";
 
-import Facebook from "../images/facebook.svg";
-import LinkedIn from "../images/linkedIn.svg";
-import Twitter from "../images/twitter.svg";
-import Instagram from "../images/instagram.svg";
-import Dribble from "../images/dribbble.svg";
-import Behance from "../images/behance.svg";
-import Youtube from "../images/youtube.svg";
-import Medium from "../images/medium.svg";
+import Facebook from "assets/images/facebook.svg";
+import LinkedIn from "assets/images/linkedIn.svg";
+import Twitter from "assets/images/twitter.svg";
+import Instagram from "assets/images/instagram.svg";
+import Dribble from "assets/images/dribbble.svg";
+import Behance from "assets/images/behance.svg";
+import Youtube from "assets/images/youtube.svg";
+import Medium from "assets/images/medium.svg";
 import SimpleReactValidator from "simple-react-validator";
 import axios from "axios";
 

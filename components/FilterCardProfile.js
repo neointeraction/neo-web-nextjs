@@ -16,7 +16,7 @@ import CardTileLinks from "./CardTileLinks";
 import CardTileVideo from "./CardTileVideo";
 import Popover from "./Popover";
 
-import Close from "../images/Close.svg";
+import Close from "assets/images/Close.svg";
 
 export default class FilterCardProfile extends Component {
   constructor() {

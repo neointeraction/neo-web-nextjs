@@ -9,8 +9,8 @@ import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-//import FormImage from "../images/image-10.jpg";
-// import ContactImg from "../images/contact-us-banner.jpg";
+//import FormImage from "assets/images/image-10.jpg";
+// import ContactImg from "assets/images/contact-us-banner.jpg";
 
 // const API_PATH =
 //   "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php";
@@ -61,9 +61,9 @@ export default class FormContactEBkLP extends Component {
 
   submitEmail(e) {
     // console.log("hello",this.state);
-    
+
     e.preventDefault();
-    if (this.validator.allValid() ) {
+    if (this.validator.allValid()) {
       this.setState({ mailSent: true });
       // alert('You submitted the form and stuff!'); "http://localhost:4000/sendebk" https://www.neointeraction.com/server/sendebk
       e.preventDefault();
@@ -117,16 +117,14 @@ export default class FormContactEBkLP extends Component {
   SuccessToast = () => (
     <div className="success-msg-ebk width-md">
       <div class="check-wrap"></div>
-      <p>
-        The e-book will be delivered to your email shortly.
-      </p>
+      <p>The e-book will be delivered to your email shortly.</p>
     </div>
   );
 
   // onLoadRecaptcha() {
   //   if (this.captchaDemo) {
   //     this.captchaDemo.reset();
-  //     // this.captchaDemo.execute();  
+  //     // this.captchaDemo.execute();
   //   }
   // }
   // verifyCallback(recaptchaToken) {
@@ -148,99 +146,97 @@ export default class FormContactEBkLP extends Component {
           </div> */}
           <div className="custom-position">
             <div className="wrapper">
-              <form
-                className="form-section"
-                onSubmit={this.submitEmail}>
-                
-                        <div className="input-custom-field">
-                          <input
-                            className="input-custom"
-                            type="text"
-                            placeholder="Name"
-                            name="name"
-                            onChange={this.handleChange}
-                            value={this.state.name}
-                          />
+              <form className="form-section" onSubmit={this.submitEmail}>
+                <div className="input-custom-field">
+                  <input
+                    className="input-custom"
+                    type="text"
+                    placeholder="Name"
+                    name="name"
+                    onChange={this.handleChange}
+                    value={this.state.name}
+                  />
 
-                          <span className="focus-border">
-                            <i></i>
-                          </span>
-                        </div>
-                        {this.validator.message(
-                          "Name",
-                          this.state.name,
-                          "required|alpha_space"
-                        )}
+                  <span className="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+                {this.validator.message(
+                  "Name",
+                  this.state.name,
+                  "required|alpha_space"
+                )}
 
-                            <div className="input-custom-field">
-                              <input
-                                className="input-custom"
-                                type="text"
-                                placeholder="Email"
-                                name="email"
-                                onChange={this.handleChange}
-                                value={this.state.email}
-                              />
-                              <span className="focus-border">
-                                <i></i>
-                              </span>
-                            </div>
-                            {this.validator.message(
-                              "email",
-                              this.state.email,
-                              "required|email"
-                            )}
+                <div className="input-custom-field">
+                  <input
+                    className="input-custom"
+                    type="text"
+                    placeholder="Email"
+                    name="email"
+                    onChange={this.handleChange}
+                    value={this.state.email}
+                  />
+                  <span className="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+                {this.validator.message(
+                  "email",
+                  this.state.email,
+                  "required|email"
+                )}
 
-                  <div className="input-custom-field">
-                      <input
-                        className="input-custom"
-                        type="number"
-                        placeholder="Mobile"
-                        name="mobile"
-                        maxlength="10"
-                        onChange={this.handleChange}
-                        value={this.state.mobile}
-                      />
-                      {/* <label>Mobile</label> */}
-                      <span className="focus-border">
-                        <i></i>
-                      </span>
-                    </div>
-                    {this.validator.message(
-                      "mobile",
-                      this.state.mobile,
-                      "required|phone"
-                    )}
-                      
-                  <button className="custom-btn loader-btns" onClick={this.submitEmail}>
-                    {this.state.mailSent ? (
-                      <>
-                        <span>Submit</span>
-                        <div class="progress-bar">
-                          <div class="circle border"></div>
-                        </div>
-                      </>
-                    ) : (
+                <div className="input-custom-field">
+                  <input
+                    className="input-custom"
+                    type="number"
+                    placeholder="Mobile"
+                    name="mobile"
+                    maxlength="10"
+                    onChange={this.handleChange}
+                    value={this.state.mobile}
+                  />
+                  {/* <label>Mobile</label> */}
+                  <span className="focus-border">
+                    <i></i>
+                  </span>
+                </div>
+                {this.validator.message(
+                  "mobile",
+                  this.state.mobile,
+                  "required|phone"
+                )}
+
+                <button
+                  className="custom-btn loader-btns"
+                  onClick={this.submitEmail}
+                >
+                  {this.state.mailSent ? (
+                    <>
                       <span>Submit</span>
-                    )}
-                  </button>
-                  <div>
-                    {this.state.isFormSubmitted && (
-                      <fieldset>
-                        <p>
-                          Thank you for contacting me. I will reply in four
-                          days.
-                        </p>
-                      </fieldset>
-                    )}
+                      <div class="progress-bar">
+                        <div class="circle border"></div>
+                      </div>
+                    </>
+                  ) : (
+                    <span>Submit</span>
+                  )}
+                </button>
+                <div>
+                  {this.state.isFormSubmitted && (
+                    <fieldset>
+                      <p>
+                        Thank you for contacting me. I will reply in four days.
+                      </p>
+                    </fieldset>
+                  )}
 
-                    {this.state.isErrorShown && (
-                      <fieldset className="error-text mt-10">
-                        <p>Please, make sure to fill all fields.</p>
-                      </fieldset>
-                    )}
-                  </div>
-               
+                  {this.state.isErrorShown && (
+                    <fieldset className="error-text mt-10">
+                      <p>Please, make sure to fill all fields.</p>
+                    </fieldset>
+                  )}
+                </div>
               </form>
               <div className="result-message">
                 <h1 className="animated fadeInUp delay-2s">

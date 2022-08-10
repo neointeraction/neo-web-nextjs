@@ -3,9 +3,9 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 
-import Right from "../images/n-images/slider-right.svg";
-import Left from "../images/n-images/slider-left.svg";
-import ProjImage from "../images/n-images/proj1.png";
+import Right from "assets/images/n-images/slider-right.svg";
+import Left from "assets/images/n-images/slider-left.svg";
+import ProjImage from "assets/images/n-images/proj1.png";
 import HomeBanner from "./HomeBanner";
 
 const titleVariant = {

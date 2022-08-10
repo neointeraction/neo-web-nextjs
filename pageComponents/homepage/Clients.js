@@ -1,23 +1,23 @@
 import React, { useEffect } from "react";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import ClientBox from "../components/ClientBox";
+import ClientBox from "components/ClientBox";
 
-import ITG from "../images/n-images/clients/itg.svg";
-import INT from "../images/n-images/clients/int.svg";
-import Traveloka from "../images/n-images/clients/traveloka.svg";
-import BNP from "../images/n-images/clients/bnp.svg";
-import Qudos from "../images/n-images/clients/qudos.svg";
-import CBD from "../images/n-images/clients/cbd.svg";
-import Yoko from "../images/n-images/clients/yoko.svg";
-import FS from "../images/n-images/clients/fs.svg";
-import Inatech from "../images/n-images/clients/inatech.svg";
-import CS from "../images/n-images/clients/cs.svg";
-import Clayfin from "../images/n-images/clients/clayfin.svg";
-import Brac from "../images/n-images/clients/brac.svg";
-import Wipro from "../images/n-images/clients/wipro.svg";
-import LS from "../images/n-images/clients/LS.svg";
-import ICICI from "../images/n-images/clients/ICICI.svg";
+import ITG from "assets/images/n-images/clients/itg.svg";
+import INT from "assets/images/n-images/clients/int.svg";
+import Traveloka from "assets/images/n-images/clients/traveloka.svg";
+import BNP from "assets/images/n-images/clients/bnp.svg";
+import Qudos from "assets/images/n-images/clients/qudos.svg";
+import CBD from "assets/images/n-images/clients/cbd.svg";
+import Yoko from "assets/images/n-images/clients/yoko.svg";
+import FS from "assets/images/n-images/clients/fs.svg";
+import Inatech from "assets/images/n-images/clients/inatech.svg";
+import CS from "assets/images/n-images/clients/cs.svg";
+import Clayfin from "assets/images/n-images/clients/clayfin.svg";
+import Brac from "assets/images/n-images/clients/brac.svg";
+import Wipro from "assets/images/n-images/clients/wipro.svg";
+import LS from "assets/images/n-images/clients/LS.svg";
+import ICICI from "assets/images/n-images/clients/ICICI.svg";
 
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },

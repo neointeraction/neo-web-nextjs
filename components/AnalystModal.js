@@ -7,8 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { ReCaptcha } from "react-recaptcha-google";
 import { loadReCaptcha } from "react-recaptcha-google";
 
-import CloseModal from "../images/Black_close_icn.svg";
-import Attach from "../images/attach_file_Icon.svg";
+import CloseModal from "assets/images/Black_close_icn.svg";
+import Attach from "assets/images/attach_file_Icon.svg";
 import SimpleReactValidator from "simple-react-validator";
 import axios from "axios";
 

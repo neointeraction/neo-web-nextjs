@@ -2,31 +2,31 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import ModalCard from "../components/ModalCard";
-import CardTile from "../components/CardTile";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import ModalCard from "components/ModalCard";
+import CardTile from "components/CardTile";
 
-import BackArrow from "../images/BackArrow.svg";
-import UXImg from "../images/ux-service.jpg";
+import BackArrow from "assets/images/BackArrow.svg";
+import UXImg from "assets/images/ux-service.jpg";
 
-// import captureReq from "../images/capture-req.png";
-// import keyScenarios from "../images/key-scenarios.png";
-// import alternatives from "../images/alternatives.png";
-// import evaluate from "../images/evaluate.png";
-// import refine from "../images/refine.png";
-// import detailSpecs from "../images/detail-specs.png";
-// import uiSolution from "../images/ui-solution.png";
+// import captureReq from "assets/images/capture-req.png";
+// import keyScenarios from "assets/images/key-scenarios.png";
+// import alternatives from "assets/images/alternatives.png";
+// import evaluate from "assets/images/evaluate.png";
+// import refine from "assets/images/refine.png";
+// import detailSpecs from "assets/images/detail-specs.png";
+// import uiSolution from "assets/images/ui-solution.png";
 
-// import CombinedShapeCard from "../components/CombinedShapeCard";
-import GetQuoteModal from "../components/GetQuoteModal";
-import DesignProcess from "../images/design-process.png";
+// import CombinedShapeCard from "components/CombinedShapeCard";
+import GetQuoteModal from "components/GetQuoteModal";
+import DesignProcess from "assets/images/design-process.png";
 
 const PROCESSCONTENT = [
   {
@@ -207,7 +207,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">UX Design</h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
@@ -368,7 +368,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
+                                    pathname: `/Projects/${cards.cardTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">

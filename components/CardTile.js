@@ -1,10 +1,9 @@
 import React, { Component } from "react";
 import Link from "next/link";
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
-import ViewAll from "../images/ViewAll.svg"
+import Arrow from "assets/images/Arrow.svg";
+import ViewAll from "assets/images/ViewAll.svg";
 import { baseUrl } from "../globalConfig";
-
 
 export default class CardTile extends Component {
   constructor() {
@@ -52,19 +51,19 @@ export default class CardTile extends Component {
           {this.state.isMouseInside ? (
             <div className="info-box info-box-menu fadeInCard ">
               <div className="arrow-click animated fadeInRight delay-04s">
-              <button
-              className={
-                this.state.isMouseInside
-                  ? "card-arrow-btn-hovered"
-                  : "card-arrow-btn"
-              }
-            >
-              <img
-                src={Arrow}
-                alt="logo"
-                style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
-              />
-            </button>
+                <button
+                  className={
+                    this.state.isMouseInside
+                      ? "card-arrow-btn-hovered"
+                      : "card-arrow-btn"
+                  }
+                >
+                  <img
+                    src={Arrow}
+                    alt="logo"
+                    style={{ opacity: this.state.isMouseInside ? 1 : 0.6 }}
+                  />
+                </button>
               </div>
               <div className="card-title menu-title animated fadeIn">
                 <h1>{cardTitle}</h1>

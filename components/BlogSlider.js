@@ -5,10 +5,10 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { baseUrl } from "../globalConfig";
 
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 
-import CarousalLeft from "../images/White_arrow_left.svg";
-import CarousalRight from "../images/White_arrow_right.svg";
+import CarousalLeft from "assets/images/White_arrow_left.svg";
+import CarousalRight from "assets/images/White_arrow_right.svg";
 
 export default class BlogSlider extends Component {
   constructor() {
@@ -54,7 +54,12 @@ export default class BlogSlider extends Component {
                       <Link
                         href={{
                           // pathname: `/Blog/${item.id}`,
-                          pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                          pathname: `/Blog/${item.blogTitle
+                            .replace(
+                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                              ""
+                            )
+                            .replace(/ /g, "-")}`,
                           // query: {
                           //   title: item.blogTitle
                           //     .replace(/(:|\s+)/g, "-")

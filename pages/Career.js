@@ -6,23 +6,23 @@ import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { baseUrl } from "../globalConfig";
 import axios from "axios";
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 
 import { withRouter } from "next/router";
 
-import SectionTitle from "../components/SectionTitle";
-import Faq from "../components/Faq";
-import ModalCard from "../components/ModalCard";
-import ImageVideoText from "../components/ImageVideoText";
-import InternModal from "../components/InternModal";
-import CardTileUpfront from "../components/CardTileUpfront";
+import SectionTitle from "components/SectionTitle";
+import Faq from "components/Faq";
+import ModalCard from "components/ModalCard";
+import ImageVideoText from "components/ImageVideoText";
+import InternModal from "components/InternModal";
+import CardTileUpfront from "components/CardTileUpfront";
 
-import BackArrow from "../images/BackArrow.svg";
-// import CareerImg1 from "../images/ux-img.jpg";
-// import CareerImg2 from "../images/ux-img.jpg";
-// import CareerImg3 from "../images/ux-img.jpg";
-import internImg from "../images/internship.jpeg";
-// import testVideo from "../images/testimonial-temp.png";
+import BackArrow from "assets/images/BackArrow.svg";
+// import CareerImg1 from "assets/images/ux-img.jpg";
+// import CareerImg2 from "assets/images/ux-img.jpg";
+// import CareerImg3 from "assets/images/ux-img.jpg";
+import internImg from "assets/images/internship.jpeg";
+// import testVideo from "assets/images/testimonial-temp.png";
 
 const FAQ = [
   {
@@ -129,7 +129,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">
                 career opportunities
@@ -335,7 +335,12 @@ export default withRouter(
                           <div className="col-md-4 mb-5" key={item.id}>
                             <Link
                               href={{
-                                pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                pathname: `/Blog/${item.blogTitle
+                                  .replace(
+                                    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                    ""
+                                  )
+                                  .replace(/ /g, "-")}`,
                               }}
                             >
                               <div className="link">

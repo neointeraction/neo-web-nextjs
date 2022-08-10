@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useTrail, a } from "react-spring";
 import Link from "next/link";
 
-import ArrowRightIntro from "../images/arrowRightIntro.svg";
+import ArrowRightIntro from "assets/images/arrowRightIntro.svg";
 
 function Trail({ open, children, ...props }) {
   const items = React.Children.toArray(children);

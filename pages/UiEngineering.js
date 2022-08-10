@@ -2,33 +2,33 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import ModalCard from "../components/ModalCard";
-import CardTile from "../components/CardTile";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import ModalCard from "components/ModalCard";
+import CardTile from "components/CardTile";
 
-import BackArrow from "../images/BackArrow.svg";
-import UXImg from "../images/ui-engineering.jpg";
+import BackArrow from "assets/images/BackArrow.svg";
+import UXImg from "assets/images/ui-engineering.jpg";
 
-import GetQuoteModal from "../components/GetQuoteModal";
+import GetQuoteModal from "components/GetQuoteModal";
 
 // tch-img
 
-import Technology from "../images/technology.png";
+import Technology from "assets/images/technology.png";
 
-import wireframe from "../images/wireFrame.png";
-import uiStyling from "../images/uiStyling.png";
-import componentDevelopment from "../images/componentDevelopment.png";
-import interactions from "../images/interactions.png";
-import testing from "../images/testing.png";
+import wireframe from "assets/images/wireFrame.png";
+import uiStyling from "assets/images/uiStyling.png";
+import componentDevelopment from "assets/images/componentDevelopment.png";
+import interactions from "assets/images/interactions.png";
+import testing from "assets/images/testing.png";
 
-import DevelopmentProcessCard from "../components/DevelopmentProcessCard";
+import DevelopmentProcessCard from "components/DevelopmentProcessCard";
 
 const PROCESSIMAGE = [
   {
@@ -152,7 +152,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">UI Engineering</h1>
               <h2 className="sub-title main-sub-title animated fadeIn">
@@ -332,7 +332,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
+                                    pathname: `/Projects/${cards.cardTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">

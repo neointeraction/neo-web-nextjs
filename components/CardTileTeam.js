@@ -2,8 +2,8 @@ import React, { Component } from "react";
 // import "../css/main.css";
 import { baseUrl } from "../globalConfig";
 
-import LinkedIn from "../images/linkedIn.svg";
-import Dribble from "../images/dribbble.svg";
+import LinkedIn from "assets/images/linkedIn.svg";
+import Dribble from "assets/images/dribbble.svg";
 
 export default class CardTileTeam extends Component {
   constructor() {

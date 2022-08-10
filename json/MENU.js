@@ -2,16 +2,16 @@ import React from "react";
 
 // ADD IMAGES / ICONS FOR CARDS HERE
 
-import BackgroundImageCareer from "../images/careersTile.png";
-import BlogBgMain from "../images/Blog.png";
-import Mail from "../images/Email.svg";
-import Location from "../images/Location.svg";
-import MailL from "../images/EmailL.svg";
-import LocationL from "../images/LocationL.svg";
-import BackgroundImageVideo from "../images/clientSpeak.jpg";
-import AboutUsImg from "../images/about-us.jpeg";
-import ProjectImg from "../images/Projectcard.png";
-import EbookCrdImg from "../images/ebookcard.png";
+import BackgroundImageCareer from "assets/images/careersTile.png";
+import BlogBgMain from "assets/images/Blog.png";
+import Mail from "assets/images/Email.svg";
+import Location from "assets/images/Location.svg";
+import MailL from "assets/images/EmailL.svg";
+import LocationL from "assets/images/LocationL.svg";
+import BackgroundImageVideo from "assets/images/clientSpeak.jpg";
+import AboutUsImg from "assets/images/about-us.jpeg";
+import ProjectImg from "assets/images/Projectcard.png";
+import EbookCrdImg from "assets/images/ebookcard.png";
 // JSON DATA
 
 const MENU = [
@@ -83,8 +83,7 @@ const MENU = [
   //       link: "ContactUs",
   //     }
   //   ]
-      
-    
+
   //   // cardTitle2: "Audit UX",
   //   // backgroundImages2: "none",
   //   // infoText2:
@@ -98,7 +97,6 @@ const MENU = [
   //   // cardInfoText2: "locate us or say hello!",
   //   // link: "ContactUs",
 
-    
   // },
 
   {

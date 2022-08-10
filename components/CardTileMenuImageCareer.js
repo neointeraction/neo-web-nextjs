@@ -3,16 +3,12 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import Arrow from "../images/Arrow.svg";
-import CardOneOne from "../images/cardone-1.svg";
-import CardOneTwo from "../images/cardone-2.svg";
-import CardOneThree from "../images/cardone-3.svg";
-import CardFiveOne from "../images/cardfive-1.svg";
-import CardFiveTwo from "../images/cardfive-2.svg";
-
-
-
-
+import Arrow from "assets/images/Arrow.svg";
+import CardOneOne from "assets/images/cardone-1.svg";
+import CardOneTwo from "assets/images/cardone-2.svg";
+import CardOneThree from "assets/images/cardone-3.svg";
+import CardFiveOne from "assets/images/cardfive-1.svg";
+import CardFiveTwo from "assets/images/cardfive-2.svg";
 
 const openings = [
   {
@@ -95,7 +91,7 @@ export default class CardTileMenuImage extends Component {
     var settings = {
       dots: false,
       infinite: true,
-      vertical:true,
+      vertical: true,
       slidesToShow: 4,
       slidesToScroll: 1,
       autoplay: true,
@@ -137,19 +133,19 @@ export default class CardTileMenuImage extends Component {
                 <h1>{cardTitle}</h1>
               </div>
               <div className="info-text-p animated fadeIn">
-                <p>{cardInfoText}</p>     
+                <p>{cardInfoText}</p>
               </div>
               <div className="career-opt inside-red career-scroll">
-              <Slider {...settings}> 
-              {openings.map((item) => (
-                <div className="job-roles">
-                <h4>{item.role}</h4>
-                <ul>
-                <li>{item.experience}</li>
-                <li className="wrkschdle">{item.wrkschedule}</li>
-                </ul>
-                </div>
-                ))}
+                <Slider {...settings}>
+                  {openings.map((item) => (
+                    <div className="job-roles">
+                      <h4>{item.role}</h4>
+                      <ul>
+                        <li>{item.experience}</li>
+                        <li className="wrkschdle">{item.wrkschedule}</li>
+                      </ul>
+                    </div>
+                  ))}
                 </Slider>
               </div>
               {cardTitle == "about us" ? (
@@ -181,50 +177,42 @@ export default class CardTileMenuImage extends Component {
             </div>
           ) : (
             <div>
-            <div className="card-title menu-title animated fadeIn">
-              <h1>{cardTitle}</h1>
-            </div>
-            <div>
-            <div className="career-opt">
-            <Slider {...settings}> 
-            {openings.map((item) => (
-                       <div className="job-roles">
-                       <h4>{item.role}</h4>
-                           <ul>
-                           <li>{item.experience}</li>
-                           <li>{item.technology}</li>
-                           <li className="wrkschdle">{item.wrkschedule}</li>
-                           </ul>
-                       </div>
-             ))}
-              </Slider>
-            </div>
-            {cardTitle == "contact us" ? (
-                <div className="animation-area">
-                  <ul className="svg-card-two ">
-                    <li>
-                      <img src={CardOneOne} />
-                    </li>
-                    <li>
-                      <img src={CardOneTwo} />
-                    </li>
-                    <li>
-                      <img src={CardOneThree} />
-                    </li>
-                  </ul>
+              <div className="card-title menu-title animated fadeIn">
+                <h1>{cardTitle}</h1>
+              </div>
+              <div>
+                <div className="career-opt">
+                  <Slider {...settings}>
+                    {openings.map((item) => (
+                      <div className="job-roles">
+                        <h4>{item.role}</h4>
+                        <ul>
+                          <li>{item.experience}</li>
+                          <li>{item.technology}</li>
+                          <li className="wrkschdle">{item.wrkschedule}</li>
+                        </ul>
+                      </div>
+                    ))}
+                  </Slider>
                 </div>
-              ) : (
-                <div>
-                </div>
-              )}
-
-
-
-
-
-            </div>
-           
-
+                {cardTitle == "contact us" ? (
+                  <div className="animation-area">
+                    <ul className="svg-card-two ">
+                      <li>
+                        <img src={CardOneOne} />
+                      </li>
+                      <li>
+                        <img src={CardOneTwo} />
+                      </li>
+                      <li>
+                        <img src={CardOneThree} />
+                      </li>
+                    </ul>
+                  </div>
+                ) : (
+                  <div></div>
+                )}
+              </div>
             </div>
           )}
         </div>

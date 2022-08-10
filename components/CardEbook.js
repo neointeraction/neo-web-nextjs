@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
-import CardFourOne from "../images/cardfour-1.svg";
-import CardFourTwo from "../images/cardfour-2.svg";
-import CardFourThree from "../images/cardfour-3.svg";
+import Arrow from "assets/images/Arrow.svg";
+import CardFourOne from "assets/images/cardfour-1.svg";
+import CardFourTwo from "assets/images/cardfour-2.svg";
+import CardFourThree from "assets/images/cardfour-3.svg";
 
 export default class CardEbook extends Component {
   constructor() {
@@ -65,17 +65,17 @@ export default class CardEbook extends Component {
 
               <div className="animation-area">
                 <ul className="svg-card-four ">
-              <li>
-               <img src={CardFourOne} />
-              </li>
-              <li>
-              <img src={CardFourTwo} />
-              </li>
-              <li>
-              <img src={CardFourThree} />
-              </li>
-            </ul>
-            </div>
+                  <li>
+                    <img src={CardFourOne} />
+                  </li>
+                  <li>
+                    <img src={CardFourTwo} />
+                  </li>
+                  <li>
+                    <img src={CardFourThree} />
+                  </li>
+                </ul>
+              </div>
             </div>
           ) : (
             <div className="card-title menu-title animated fadeIn">

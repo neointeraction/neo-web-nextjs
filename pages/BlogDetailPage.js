@@ -15,16 +15,16 @@ import {
 
 import { withRouter } from "next/router";
 
-import Loader from "../components/Loader";
-import SectionTitle from "../components/SectionTitle";
-import BlogSlider from "../components/BlogSlider";
+import Loader from "components/Loader";
+import SectionTitle from "components/SectionTitle";
+import BlogSlider from "components/BlogSlider";
 
-import BackArrow from "../images/BackArrow.svg";
-// import Author from "../images/Author2.png";
-import FacebookIcon from "../images/facebook.svg";
-import LinkedInIcon from "../images/linkedIn.svg";
-import TwitterIcon from "../images/twitter.svg";
-import Menu from "../images/9dots.svg";
+import BackArrow from "assets/images/BackArrow.svg";
+// import Author from "assets/images/Author2.png";
+import FacebookIcon from "assets/images/facebook.svg";
+import LinkedInIcon from "assets/images/linkedIn.svg";
+import TwitterIcon from "assets/images/twitter.svg";
+import Menu from "assets/images/9dots.svg";
 
 export async function getStaticProps(context) {
   // Call an external API endpoint to get posts.
@@ -140,7 +140,7 @@ export default withRouter(
                   />
                 </div>
               </a>
-              <div className="page-content">
+              <div className="page-content body-page">
                 <ReactWOW animation="fadeIn" delay="0s" offset={0}>
                   <div className="featured-blog-section">
                     <div className="section-flex">

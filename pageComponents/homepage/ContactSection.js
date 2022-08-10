@@ -1,7 +1,7 @@
 import React from "react";
 
-import CareerImg from "../images/n-images/career-card.svg";
-import ContactImg from "../images/n-images/contact-card.svg";
+import CareerImg from "assets/images/n-images/career-card.svg";
+import ContactImg from "assets/images/n-images/contact-card.svg";
 
 const ContactSection = () => {
   return (
@@ -14,7 +14,8 @@ const ContactSection = () => {
             </p>
             <h1>Work with us</h1>
             <button class="custom-btn">Career</button>
-            <img src={CareerImg} alt="CareerImg" className="cc-image" />
+
+            <img src={ContactImg} alt="ContactImg" className="cc-image-top" />
           </div>
         </div>
         <div className="col-md-6">
@@ -24,7 +25,7 @@ const ContactSection = () => {
             </p>
             <h1>Connect with us</h1>
             <button class="custom-btn">Contact Us</button>
-            <img src={ContactImg} alt="ContactImg" className="cc-image-top" />
+            <img src={CareerImg} alt="CareerImg" className="cc-image" />
           </div>
         </div>
       </div>

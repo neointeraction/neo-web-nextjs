@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import BannerImage from "../images/n-images/home-svg.svg";
+import BannerImage from "assets/images/n-images/home-svg.svg";
 
 const HomeBanner = () => {
   return (

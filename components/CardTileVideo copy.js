@@ -8,9 +8,9 @@ import "slick-carousel/slick/slick-theme.css";
 import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 
-import { VideoContext } from "../context/VideoContext";
+import { VideoContext } from "context/VideoContext";
 
-import Play from "../images/Play.svg";
+import Play from "assets/images/Play.svg";
 
 export default class CardTileVideo extends Component {
   constructor() {

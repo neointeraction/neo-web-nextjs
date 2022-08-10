@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Link from "next/link";
 import { timers } from "jquery";
-import UxBadge from "../images/website-badge.svg";
+import UxBadge from "assets/images/website-badge.svg";
 
 export default class AuditBadge extends Component {
   constructor(props) {

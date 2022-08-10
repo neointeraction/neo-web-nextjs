@@ -8,7 +8,7 @@ import UiEngineerModal from "./UiEngineerModal";
 import MarketingModal from "./MarketingModal";
 import ManagerModal from "./ManagerModal";
 import AnalystModal from "./AnalystModal";
-import GetQuoteModal from "../components/GetQuoteModal";
+import GetQuoteModal from "components/GetQuoteModal";
 
 export default class ModalCard extends Component {
   constructor() {

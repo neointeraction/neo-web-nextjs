@@ -3,22 +3,22 @@ import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { Noise } from "noisejs";
 
-import Shameer from "../images/n-images/team/shameer.jpg";
-import Team1 from "../images/n-images/team/team1.jpg";
-import Sam from "../images/n-images/team/sam.jpg";
-import Midhun from "../images/n-images/team/midhun.jpg";
-import Team2 from "../images/n-images/team/team2.jpg";
-import Vignesh from "../images/n-images/team/vignesh.jpg";
-import Team3 from "../images/n-images/team/team3.jpg";
-import Team4 from "../images/n-images/team/team4.jpg";
-import Team5 from "../images/n-images/team/team5.jpg";
-import Allen from "../images/n-images/team/allen.jpg";
-import Eldhos from "../images/n-images/team/Eldhos.jpg";
-import Clifford from "../images/n-images/team/clifford.jpg";
-import Team6 from "../images/n-images/team/team6.jpg";
-import Rakshanda from "../images/n-images/team/rakshanda.jpg";
-import Sebin from "../images/n-images/team/sebin.jpg";
-import Ashutosh from "../images/n-images/team/Ash.jpg";
+import Shameer from "assets/images/n-images/team/shameer.jpg";
+import Team1 from "assets/images/n-images/team/team1.jpg";
+import Sam from "assets/images/n-images/team/sam.jpg";
+import Midhun from "assets/images/n-images/team/midhun.jpg";
+import Team2 from "assets/images/n-images/team/team2.jpg";
+import Vignesh from "assets/images/n-images/team/vignesh.jpg";
+import Team3 from "assets/images/n-images/team/team3.jpg";
+import Team4 from "assets/images/n-images/team/team4.jpg";
+import Team5 from "assets/images/n-images/team/team5.jpg";
+import Allen from "assets/images/n-images/team/allen.jpg";
+import Eldhos from "assets/images/n-images/team/Eldhos.jpg";
+import Clifford from "assets/images/n-images/team/clifford.jpg";
+import Team6 from "assets/images/n-images/team/team6.jpg";
+import Rakshanda from "assets/images/n-images/team/rakshanda.jpg";
+import Sebin from "assets/images/n-images/team/sebin.jpg";
+import Ashutosh from "assets/images/n-images/team/Ash.jpg";
 
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },

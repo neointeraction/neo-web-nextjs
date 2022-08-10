@@ -1,10 +1,10 @@
 import React from "react";
 import Router from "next/router";
 
-import LinkedIn from "../images/linkedIn.svg";
-import Instagram from "../images/instagram.svg";
-import Dribble from "../images/dribbble.svg";
-import Behance from "../images/behance.svg";
+import LinkedIn from "assets/images/linkedIn.svg";
+import Instagram from "assets/images/instagram.svg";
+import Dribble from "assets/images/dribbble.svg";
+import Behance from "assets/images/behance.svg";
 
 const Footer = () => {
   const handleRoute = (path) => {

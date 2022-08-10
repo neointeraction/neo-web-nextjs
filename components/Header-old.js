@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import Link from "next/link";
 
-// import Logo from "../images/LOGO.svg";
+// import Logo from "assets/images/LOGO.svg";
 
-import Home from "../images/Home.svg";
-import Close from "../images/closeMenu.svg";
+import Home from "assets/images/Home.svg";
+import Close from "assets/images/closeMenu.svg";
 
 export default class Header extends Component {
   constructor() {

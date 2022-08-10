@@ -6,29 +6,28 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "@brainhubeu/react-carousel/lib/style.css";
 
-import Clientlogo1 from "../images/icici-logo.jpg";
-import Clientlogo2 from "../images/Geojit-logo.jpg";
-import Clientlogo3 from "../images/bnp-paribas-logo.jpg";
-import Clientlogo4 from "../images/cbd-logo.jpg";
-import Clientlogo5 from "../images/qudos-bank-logo.jpg";
-import Clientlogo6 from "../images/brac-logo.jpg";
-import Clientlogo7 from "../images/cbq-logo.jpg";
-import Clientlogo8 from "../images/clayfin-logo.jpg";
+import Clientlogo1 from "assets/images/icici-logo.jpg";
+import Clientlogo2 from "assets/images/Geojit-logo.jpg";
+import Clientlogo3 from "assets/images/bnp-paribas-logo.jpg";
+import Clientlogo4 from "assets/images/cbd-logo.jpg";
+import Clientlogo5 from "assets/images/qudos-bank-logo.jpg";
+import Clientlogo6 from "assets/images/brac-logo.jpg";
+import Clientlogo7 from "assets/images/cbq-logo.jpg";
+import Clientlogo8 from "assets/images/clayfin-logo.jpg";
 
-import Clientlogo10 from "../images/claysol-logo.jpg";
-import Clientlogo11 from "../images/coorg-logo.jpg";
-import Clientlogo13 from "../images/funding-logo.jpg";
-import Clientlogo14 from "../images/Inatech-logo.jpg";
-import Clientlogo16 from "../images/intellithink-logo.jpg";
-import Clientlogo17 from "../images/intertrust-logo.jpg";
-import Clientlogo18 from "../images/lifeSignal-logo.jpg";
-import Clientlogo20 from "../images/traveloka-logo.jpg";
-import Clientlogo21 from "../images/vidal-logo.jpg";
-import Clientlogo22 from "../images/wipro-logo.jpg";
-import Clientlogo23 from "../images/yokagawa-logo.jpg";
+import Clientlogo10 from "assets/images/claysol-logo.jpg";
+import Clientlogo11 from "assets/images/coorg-logo.jpg";
+import Clientlogo13 from "assets/images/funding-logo.jpg";
+import Clientlogo14 from "assets/images/Inatech-logo.jpg";
+import Clientlogo16 from "assets/images/intellithink-logo.jpg";
+import Clientlogo17 from "assets/images/intertrust-logo.jpg";
+import Clientlogo18 from "assets/images/lifeSignal-logo.jpg";
+import Clientlogo20 from "assets/images/traveloka-logo.jpg";
+import Clientlogo21 from "assets/images/vidal-logo.jpg";
+import Clientlogo22 from "assets/images/wipro-logo.jpg";
+import Clientlogo23 from "assets/images/yokagawa-logo.jpg";
 
 const clients = [
- 
   {
     image: Clientlogo8,
     name: "clayfin",

@@ -6,13 +6,13 @@ import Head from "next/head";
 import { baseUrl } from "../globalConfig";
 import axios from "axios";
 
-import Loader from "../components/Loader";
-import { BFSIContext } from "../context/BFSIContext";
-import GetQuoteModal from "../components/GetQuoteModal";
+import Loader from "components/Loader";
+import { BFSIContext } from "context/BFSIContext";
+import GetQuoteModal from "components/GetQuoteModal";
 
-// import BackArrow from "../images/BackArrow.svg";
-import Close from "../images/Close.svg";
-import ArrowRightBlack from "../images/arrowRightBlack.svg";
+// import BackArrow from "assets/images/BackArrow.svg";
+import Close from "assets/images/Close.svg";
+import ArrowRightBlack from "assets/images/arrowRightBlack.svg";
 
 export default class BFSI extends Component {
   constructor() {
@@ -93,7 +93,7 @@ export default class BFSI extends Component {
               {(context) => (
                 <div>
                   <div>
-                    <div className="page-content">
+                    <div className="page-content body-page">
                       <div className="container animated fadeIn">
                         <h1 className="main-title animated fadeIn">
                           Banking, Financial Services and Insurance

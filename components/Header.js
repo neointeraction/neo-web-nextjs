@@ -1,18 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
 
-import Menu from "../images/n-images/menu.svg";
-import Close from "../images/n-images/close.svg";
-import Facebook from "../images/facebook.svg";
-import LinkedIn from "../images/linkedIn.svg";
-import Twitter from "../images/twitter.svg";
-import Instagram from "../images/instagram.svg";
-import Dribble from "../images/dribbble.svg";
-import Behance from "../images/behance.svg";
-import Youtube from "../images/youtube.svg";
-import Medium from "../images/medium.svg";
+import Menu from "assets/images/n-images/menu.svg";
+import Close from "assets/images/n-images/close.svg";
+import Facebook from "assets/images/facebook.svg";
+import LinkedIn from "assets/images/linkedIn.svg";
+import Twitter from "assets/images/twitter.svg";
+import Instagram from "assets/images/instagram.svg";
+import Dribble from "assets/images/dribbble.svg";
+import Behance from "assets/images/behance.svg";
+import Youtube from "assets/images/youtube.svg";
+import Medium from "assets/images/medium.svg";
+import Contact from "assets/images/n-images/header-contact.svg";
+import Illustration from "assets/images/n-images/menu-illustration.svg";
 
 const Header = () => {
   const router = useRouter();
@@ -44,8 +46,6 @@ const Header = () => {
 
   const textMotion = {
     rest: {
-      color: "grey",
-
       transition: {
         duration: 1,
         type: "tween",
@@ -53,8 +53,6 @@ const Header = () => {
       },
     },
     hover: {
-      color: "blue",
-
       transition: {
         duration: 0.4,
         type: "tween",
@@ -68,8 +66,21 @@ const Header = () => {
     handleMenuClose();
   };
 
+  const [fixed, setfixed] = useState(false);
+
+  useEffect(() => {
+    document.addEventListener("scroll", () => {
+      const scrollCheck = window.scrollY > 0;
+      if (scrollCheck) {
+        setfixed(true);
+      } else {
+        setfixed(false);
+      }
+    });
+  });
+
   return (
-    <div className="header-with-panel">
+    <div className={`header-with-panel ${fixed ? "fixed" : ""}`}>
       <div className="n-header-container">
         <motion.div
           className="n-menu"
@@ -105,9 +116,18 @@ const Header = () => {
           </div>
         </div>
         <div className="n-header-contact">
-          <button class="custom-btn" onClick={() => handleRoute("/ContactUs")}>
-            Contact Us
-          </button>
+          <motion.div
+            className="n-menu"
+            onClick={() => handleRoute("/ContactUs")}
+            initial="rest"
+            whileHover="hover"
+            animate="rest"
+          >
+            <motion.img src={Contact} alt="Contact" variants={textMotion} />
+            <motion.p variants={slashMotion} className="n-menu-text">
+              Contact Us
+            </motion.p>
+          </motion.div>
         </div>
       </div>
       <AnimatePresence>
@@ -132,8 +152,13 @@ const Header = () => {
               className="n-menu-content"
             >
               <div className="row ">
-                <div className="col-md-6">
-                  <ul className="n-menu-list">
+                <div className="col-md-4">
+                  <motion.ul
+                    className="n-menu-list"
+                    initial="hidden"
+                    animate={{ x: [-300, 0], opacity: [0, 1] }}
+                    transition={{ delay: 0.7, duration: 0.5 }}
+                  >
                     <li
                       className={`n-menu-item ${
                         router.pathname === "/" ? "active" : ""
@@ -185,55 +210,54 @@ const Header = () => {
                     >
                       Blog
                     </li>
-                  </ul>
-                </div>
-                <div className="col-md-6 text-end">
-                  <div className="menu-right-content">
-                    <button
-                      class="custom-btn"
-                      onClick={() => handleRoute("/ContactUs")}
-                    >
-                      Contact Us
-                    </button>
-                    <ul className="social-icons n-social-icons no-bg">
-                      <li id="ln">
-                        <a
-                          href="https://www.linkedin.com/company/neointeraction-designs/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img src={LinkedIn} alt="LinkedIn" />
-                        </a>
-                      </li>
+                    <li>
+                      <ul className="social-icons n-social-icons no-bg">
+                        <li id="ln">
+                          <a
+                            href="https://www.linkedin.com/company/neointeraction-designs/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={LinkedIn} alt="LinkedIn" />
+                          </a>
+                        </li>
 
-                      <li id="insta">
-                        <a
-                          href="https://www.instagram.com/neointeraction/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img src={Instagram} alt="Instagram" />
-                        </a>
-                      </li>
-                      <li id="dribble">
-                        <a
-                          href="https://dribbble.com/neointeraction"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img src={Dribble} alt="Dribble" />
-                        </a>
-                      </li>
-                      <li id="behance">
-                        <a
-                          href="https://www.behance.net/neointeraction"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <img src={Behance} alt="Behance" />
-                        </a>
-                      </li>
-                    </ul>
+                        <li id="insta">
+                          <a
+                            href="https://www.instagram.com/neointeraction/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={Instagram} alt="Instagram" />
+                          </a>
+                        </li>
+                        <li id="dribble">
+                          <a
+                            href="https://dribbble.com/neointeraction"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={Dribble} alt="Dribble" />
+                          </a>
+                        </li>
+                        <li id="behance">
+                          <a
+                            href="https://www.behance.net/neointeraction"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={Behance} alt="Behance" />
+                          </a>
+                        </li>
+                      </ul>
+                    </li>
+                  </motion.ul>
+                </div>
+                <div className="col-md-8 text-end">
+                  <div className="menu-right-content">
+                    <div className="menu-illustration">
+                      <img src={Illustration} alt="Illustration" />
+                    </div>
                   </div>
                 </div>
               </div>

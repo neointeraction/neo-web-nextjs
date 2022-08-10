@@ -8,16 +8,16 @@ import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { baseUrl } from "../globalConfig";
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 
 import { withRouter } from "next/router";
 
-import Loader from "../components/Loader";
-import ImageVideoText from "../components/ImageVideoText";
-import CardTileUpfront from "../components/CardTileUpfront";
-import SectionTitle from "../components/SectionTitle";
+import Loader from "components/Loader";
+import ImageVideoText from "components/ImageVideoText";
+import CardTileUpfront from "components/CardTileUpfront";
+import SectionTitle from "components/SectionTitle";
 
-import BackArrow from "../images/BackArrow.svg";
+import BackArrow from "assets/images/BackArrow.svg";
 
 export default withRouter(
   class Downloads extends Component {
@@ -159,7 +159,7 @@ export default withRouter(
                   />
                 </div>
               </a>
-              <div className="page-content">
+              <div className="page-content body-page">
                 <div className="container animated fadeIn">
                   <h1 className="main-title animated fadeIn">
                     Download resources
@@ -256,7 +256,12 @@ export default withRouter(
                               <div className="col-md-4 mb-5" key={item.id}>
                                 <Link
                                   href={{
-                                    pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                    pathname: `/Blog/${item.blogTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">

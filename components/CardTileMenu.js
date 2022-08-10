@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
-import CardThreeOne from "../images/cardthree-1.svg"
-import CardThreeTwo from "../images/cardthree-2.svg"
-
+import Arrow from "assets/images/Arrow.svg";
+import CardThreeOne from "assets/images/cardthree-1.svg";
+import CardThreeTwo from "assets/images/cardthree-2.svg";
 
 export default class CardTileMenu extends Component {
   constructor() {
@@ -108,14 +107,14 @@ export default class CardTileMenu extends Component {
           </div> */}
 
           <div className=" animation-area">
-          <ul className="svg-card-two ">
-            <li>
-            <img src={CardThreeOne} />
-            </li>
-            <li>
-            <img src={CardThreeTwo} />
-            </li>
-          </ul>
+            <ul className="svg-card-two ">
+              <li>
+                <img src={CardThreeOne} />
+              </li>
+              <li>
+                <img src={CardThreeTwo} />
+              </li>
+            </ul>
           </div>
         </div>
       </div>

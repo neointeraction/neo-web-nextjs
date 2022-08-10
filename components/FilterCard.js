@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import Link from "next/link";
 // // import "../css/main.css";
-// import { BlogContext } from "../context/BlogContext";
+// import { BlogContext } from "context/BlogContext";
 // import ReactModal from "react-modal";
 import ReactWOW from "react-wow";
 
@@ -20,7 +20,7 @@ import BlogCardSlide from "./BlogCardSlide";
 import CardEbook from "./CardEbook";
 import CardAuditUX from "./CardAuditUX";
 import Popover from "./Popover";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 
 export default class FilterCard extends Component {
   constructor() {
@@ -264,7 +264,12 @@ export default class FilterCard extends Component {
                       <div className="card-main-container" key={cards.id}>
                         <Link
                           href={{
-                            pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
+                            pathname: `/Projects/${cards.cardTitle
+                              .replace(
+                                /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                ""
+                              )
+                              .replace(/ /g, "-")}`,
                           }}
                         >
                           <div className="link">

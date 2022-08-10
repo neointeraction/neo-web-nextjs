@@ -1,10 +1,10 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 import { useAnimation, motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
-import CardTileUpfront from "../components/CardTileUpfront";
+import CardTileUpfront from "components/CardTileUpfront";
 
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },

@@ -2,23 +2,23 @@ import { React, useState } from "react";
 import Head from "next/head";
 import ReactWOW from "react-wow";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import Script from 'next/script'
+import Script from "next/script";
 
-// import FormContact from "../components/FormContact";
-import ClientSlider from "../components/ClientSlider";
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import Quotes from "../components/Quotes";
-import FilterCardProjectsSlider from "../components/FilterCardProjectsSlider";
-import FormContactAdLp from "../components/FormContactAdLp";
+// import FormContact from "components/FormContact";
+import ClientSlider from "components/ClientSlider";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import Quotes from "components/Quotes";
+import FilterCardProjectsSlider from "components/FilterCardProjectsSlider";
+import FormContactAdLp from "components/FormContactAdLp";
 
-import ProjectImage from "../images/who-are-we.jpeg";
-import uxServiceImg from "../images/ux-service.jpg";
-import uiEngineeringImg from "../images/ui-engineering.jpg";
-import videoServiceImg from "../images/video-service.jpg";
-import BlogCardAd from "../components/BlogCardAd";
-import UXDesignImageText from "../components/UXDesignImageText";
-import UIEngineeringImageText from "../components/UIEngineeringImageText";
+import ProjectImage from "assets/images/who-are-we.jpeg";
+import uxServiceImg from "assets/images/ux-service.jpg";
+import uiEngineeringImg from "assets/images/ui-engineering.jpg";
+import videoServiceImg from "assets/images/video-service.jpg";
+import BlogCardAd from "components/BlogCardAd";
+import UXDesignImageText from "components/UXDesignImageText";
+import UIEngineeringImageText from "components/UIEngineeringImageText";
 
 const SERVICES = [
   {
@@ -77,16 +77,21 @@ const gcampaign = () => {
               src="https://js.convertflow.co/production/websites/35164.js"
             ></script> */}
 
-          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-1067948097" ></script> 
-          <script dangerouslySetInnerHTML={{
-              __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1067948097');`}} />
-
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=AW-1067948097"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1067948097');`,
+          }}
+        />
       </Head>
-     
+
       <div className="container">
         <div className="home-content">
           <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
-           Neointeraction Design - Enterprise Ux design partner.
+            Neointeraction Design - Enterprise Ux design partner.
           </h1>
         </div>
       </div>
@@ -98,7 +103,7 @@ const gcampaign = () => {
         </ReactWOW>
       </div>
 
-      <div className="page-content">
+      <div className="page-content body-page">
         <div className="container animated fadeIn">
           <ReactWOW animation="fadeInUp" delay="0s">
             <div>

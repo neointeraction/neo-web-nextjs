@@ -8,13 +8,12 @@ import axios from "axios";
 
 import { withRouter } from "next/router";
 
-import Loader from "../components/Loader";
-import { BlogContext } from "../context/BlogContext";
-import SectionTitle from "../components/SectionTitle";
-import CardTileUpfront from "../components/CardTileUpfront";
+import Loader from "components/Loader";
+import { BlogContext } from "context/BlogContext";
+import SectionTitle from "components/SectionTitle";
+import CardTileUpfront from "components/CardTileUpfront";
 
-import BackArrow from "../images/BackArrow.svg";
-
+import BackArrow from "assets/images/BackArrow.svg";
 
 // export async function getStaticProps(context) {
 //   // Call an external API endpoint to get posts.
@@ -95,70 +94,77 @@ export default withRouter(
                 {(context) => (
                   <div>
                     <div>
-                          <h2 className="sub-title animated text-center fadeIn">Blogs</h2>
-                          {context.state.blogs
-                            .filter((tag) => {
-                              if (tag.featured) return true;
-                              return null;
-                            })
-                            .map((item) => (
-                              <ReactWOW
-                                animation="fadeIn"
-                                delay="0s"
-                                offset={-200}
-                                key={item.id}
-                              >
-                                <Link
-                                  href={{
-                                    pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
-                                  }}
-                                >
-                                  <div className="link video-yt">
-                                    <div className="featured-blog-card">
-                                      <div className="row">
-                                        <div className="col-md-6">
-                                          <div className="fb-image">
-                                            <img
-                                              src={`${baseUrl}${item.blogCardHeadImage.url}`}
-                                              alt="blog-cover"
-                                            />
-                                          </div>
+                      <h2 className="sub-title animated text-center fadeIn">
+                        Blogs
+                      </h2>
+                      {context.state.blogs
+                        .filter((tag) => {
+                          if (tag.featured) return true;
+                          return null;
+                        })
+                        .map((item) => (
+                          <ReactWOW
+                            animation="fadeIn"
+                            delay="0s"
+                            offset={-200}
+                            key={item.id}
+                          >
+                            <Link
+                              href={{
+                                pathname: `/Blog/${item.blogTitle
+                                  .replace(
+                                    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                    ""
+                                  )
+                                  .replace(/ /g, "-")}`,
+                              }}
+                            >
+                              <div className="link video-yt">
+                                <div className="featured-blog-card">
+                                  <div className="row">
+                                    <div className="col-md-6">
+                                      <div className="fb-image">
+                                        <img
+                                          src={`${baseUrl}${item.blogCardHeadImage.url}`}
+                                          alt="blog-cover"
+                                        />
+                                      </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                      <div className="fb-content">
+                                        <div>
+                                          <h1 className="featured-blog-title">
+                                            {item.blogTitle}
+                                          </h1>
                                         </div>
-                                        <div className="col-md-6">
-                                          <div className="fb-content">
-                                            <div>
-                                              <h1 className="featured-blog-title">
-                                                {item.blogTitle}
-                                              </h1>
-                                            </div>
-                                            <div>
-                                              <p className="featured-blog-summary">
-                                                {item.blogSummary}
-                                              </p>
-                                            </div>
-                                            <div>
-                                              <p className="featured-blog-author">
-                                                by{" "}
-                                                <span className="author-name">
-                                                  {item.blogAuthor}&nbsp;
-                                                </span>
-                                                <span className="posted-time">
-                                                  {moment(`${item.created_at}`)
-                                                    .startOf("hour")
-                                                    .fromNow()}
-                                                </span>
-                                              </p>
-                                            </div>
-                                          </div>
+                                        <div>
+                                          <p className="featured-blog-summary">
+                                            {item.blogSummary}
+                                          </p>
+                                        </div>
+                                        <div>
+                                          <p className="featured-blog-author">
+                                            by{" "}
+                                            <span className="author-name">
+                                              {item.blogAuthor}&nbsp;
+                                            </span>
+                                            <span className="posted-time">
+                                              {moment(`${item.created_at}`)
+                                                .startOf("hour")
+                                                .fromNow()}
+                                            </span>
+                                          </p>
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                                </Link>
-                              </ReactWOW>
-                            ))}
+                                </div>
+                              </div>
+                            </Link>
+                          </ReactWOW>
+                        ))}
 
-                          {/* <ReactWOW animation="fadeIn" offset={-200}>
+                      {/* <ReactWOW animation="fadeIn" offset={-200}>
                             <div className="blog-listing-section">
                               <SectionTitle
                                 title="Blog Articles"
@@ -261,7 +267,6 @@ export default withRouter(
                               </div>
                             </div>
                           </ReactWOW> */}
-                
                     </div>
                   </div>
                 )}

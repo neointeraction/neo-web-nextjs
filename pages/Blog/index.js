@@ -8,13 +8,13 @@ import axios from "axios";
 
 import { withRouter } from "next/router";
 
-import Loader from "../../components/Loader";
-import { BlogContext } from "../../context/BlogContext";
-import SectionTitle from "../../components/SectionTitle";
-import CardTileUpfront from "../../components/CardTileUpfront";
+import Loader from "components/Loader";
+import { BlogContext } from "../context/BlogContext";
+import SectionTitle from "components/SectionTitle";
+import CardTileUpfront from "components/CardTileUpfront";
 
-import BackArrow from "../../images/BackArrow.svg";
-import Close from "../../images/Close.svg";
+import BackArrow from "assets/images/BackArrow.svg";
+import Close from "assets/images/Close.svg";
 
 // export async function getStaticProps(context) {
 //   // Call an external API endpoint to get posts.
@@ -108,14 +108,14 @@ export default withRouter(
                 {(context) => (
                   <div>
                     <div>
-                      <div className="page-content">
+                      <div className="page-content body-page">
                         <div className="container animated fadeIn">
                           <h1 className="main-title animated fadeIn">blog</h1>
                           <h2 className="sub-title main-sub-title animated fadeIn ">
                             Learn about us and the design industry via our
                             perspectives and experiences.
                           </h2>
-                        
+
                           {context.state.blogs
                             .filter((tag) => {
                               if (tag.featured) return true;
@@ -130,7 +130,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                    pathname: `/Blog/${item.blogTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">
@@ -250,7 +255,12 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                          pathname: `/Blog/${item.blogTitle
+                                            .replace(
+                                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                              ""
+                                            )
+                                            .replace(/ /g, "-")}`,
                                         }}
                                       >
                                         <div className="link" key={item.id}>
