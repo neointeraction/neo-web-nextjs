@@ -9,7 +9,7 @@ import axios from "axios";
 import { withRouter } from "next/router";
 
 import Loader from "components/Loader";
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 import SectionTitle from "components/SectionTitle";
 import CardTileUpfront from "components/CardTileUpfront";
 
