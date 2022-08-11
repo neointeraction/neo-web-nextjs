@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import Router from "next/router";
+
 import { useAnimation, motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
@@ -16,10 +18,16 @@ import UX from "assets/images/n-images/ux.svg";
 import Product from "assets/images/n-images/product.svg";
 import UI from "assets/images/n-images/ui.svg";
 import Design from "assets/images/n-images/design.svg";
+import ArrowRight from "assets/images/n-images/view-more-arrow.svg";
 
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   hidden: { opacity: 0, y: -5 },
+};
+
+const subTitleVariant = {
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  hidden: { opacity: 0, y: 5 },
 };
 
 const ServiceSection = () => {
@@ -34,6 +42,10 @@ const ServiceSection = () => {
 
   const [activeAccord, setActiveAccord] = useState("ux");
 
+  const handleRoute = (path) => {
+    Router.push(path);
+  };
+
   return (
     <div className="service-container">
       <motion.h1
@@ -44,6 +56,15 @@ const ServiceSection = () => {
         className="n-banner-title"
       >
         Our <span className="highlight">Services</span>
+        <motion.h4
+          ref={ref}
+          initial="hidden"
+          animate={controls}
+          variants={subTitleVariant}
+          className="n-banner-subtext"
+        >
+          We have worked with some cool people to make their tech user friendly
+        </motion.h4>
       </motion.h1>
       <div className="row">
         <div className="col-md-6">
@@ -103,6 +124,7 @@ const ServiceSection = () => {
                 animate={{ x: 0, y: 0, opacity: 1 }}
                 src={Design}
                 alt="Design"
+                className="service-img"
               />
             )}
           </AnimatePresence>
@@ -119,7 +141,18 @@ const ServiceSection = () => {
             >
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  UX Design <button className="n-link-btn">View More</button>
+                  UX Design
+                  <button
+                    className="n-link-btn"
+                    onClick={() => {
+                      handleRoute("/UxService");
+                    }}
+                  >
+                    View More
+                    <span className="btn-arrow">
+                      <img src={ArrowRight} alt="ArrowRight" />
+                    </span>
+                  </button>
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
@@ -140,7 +173,15 @@ const ServiceSection = () => {
               }`}
             >
               <AccordionItemHeading>
-                <AccordionItemButton>Product Design</AccordionItemButton>
+                <AccordionItemButton>
+                  Product Design
+                  <button className="n-link-btn">
+                    View More
+                    <span className="btn-arrow">
+                      <img src={ArrowRight} alt="ArrowRight" />
+                    </span>
+                  </button>
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
                 <ul className="service-list">
@@ -157,7 +198,18 @@ const ServiceSection = () => {
               className={`accordion__item ${activeAccord === "ui" ? "ui" : ""}`}
             >
               <AccordionItemHeading>
-                <AccordionItemButton>UI Engineering</AccordionItemButton>
+                <AccordionItemButton>
+                  UI Engineering
+                  <button
+                    className="n-link-btn"
+                    onClick={(e) => handleRoute("/UiEngineering")}
+                  >
+                    View More
+                    <span className="btn-arrow">
+                      <img src={ArrowRight} alt="ArrowRight" />
+                    </span>
+                  </button>
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
                 <ul className="service-list">
@@ -176,7 +228,15 @@ const ServiceSection = () => {
               }`}
             >
               <AccordionItemHeading>
-                <AccordionItemButton>Design Transformation</AccordionItemButton>
+                <AccordionItemButton>
+                  Design Transformation
+                  <button className="n-link-btn">
+                    View More
+                    <span className="btn-arrow">
+                      <img src={ArrowRight} alt="ArrowRight" />
+                    </span>
+                  </button>
+                </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
                 <ul className="service-list">

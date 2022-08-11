@@ -78,7 +78,7 @@ const ProjectSlider = () => {
               className="n-banner-title"
             >
               Share Trading Platform UX Redesign -
-              <span className="highlight"> Geojit (Fintech) </span>
+              <span className="highlight"> www.Geojit.com </span>
             </motion.h1>
             <motion.h4
               ref={ref}

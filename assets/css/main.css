@@ -5693,3 +5693,9 @@ textarea {
     margin: auto;
   }
 }
+
+/* RESPONSIVE INCLUDE  */
+
+@import url("./responsive.css");
+
+/* RESPONSIVE INCLUDE  */

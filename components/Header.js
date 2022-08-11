@@ -136,6 +136,9 @@ const Header = () => {
             initial="hidden"
             animate={{ y: [-1000, 0], opacity: [0.5, 1] }}
             exit={{ y: [0, -1000] }}
+            // initial={{ opacity: [0, 1] }}
+            // animate={{ opacity: [0, 1] }}
+            // exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
             className={`nav-menu ${openMenu ? "open" : "close"}`}
           >
