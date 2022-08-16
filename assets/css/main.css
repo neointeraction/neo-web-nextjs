@@ -201,10 +201,10 @@ strong {
 .card-tile {
   background-size: cover !important;
   padding: 1.25rem;
-  height: 474px;
+  height: 21.26rem;
   width: 100%;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-  border-radius: 15px;
+  border-radius: 1.875rem;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   position: relative;
   overflow: hidden;
@@ -2977,6 +2977,7 @@ textarea {
   letter-spacing: 0;
   font-weight: 600;
   margin: 20px 0;
+  cursor: pointer;
 }
 
 .footer-quick-links {

@@ -34,9 +34,10 @@ const ProjectSlider = () => {
   }, [controls, inView]);
 
   var slideSettings = {
+    autoplay: true,
     fade: true,
     dots: false,
-    infinite: false,
+    infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,

@@ -26,6 +26,45 @@ const Footer = () => {
                   <li onClick={() => handleRoute("/UxService")}>Services</li>
                   <li onClick={() => handleRoute("/Blog")}>Blogs</li>
                 </ul>
+                <ul className="social-icons n-social-icons no-bg  mob-view-social">
+                  <li id="ln">
+                    <a
+                      href="https://www.linkedin.com/company/neointeraction-designs/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={LinkedIn} alt="LinkedIn" />
+                    </a>
+                  </li>
+                  <li id="behance">
+                    <a
+                      href="https://www.behance.net/neointeraction"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Behance} alt="Behance" />
+                    </a>
+                  </li>
+
+                  <li id="dribble">
+                    <a
+                      href="https://dribbble.com/neointeraction"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Dribble} alt="Dribble" />
+                    </a>
+                  </li>
+                  <li id="insta">
+                    <a
+                      href="https://www.instagram.com/neointeraction/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Instagram} alt="Instagram" />
+                    </a>
+                  </li>
+                </ul>
                 <ul className="secondary-menu-links">
                   <li onClick={() => handleRoute("/Downloads")}>Downloads</li>
                   <li onClick={() => handleRoute("/Terms")}>Agency Terms</li>
@@ -35,7 +74,12 @@ const Footer = () => {
             <div className="col-md-9">
               <div className="row">
                 <div className="col-md-3">
-                  <h4 className="footer-links-title">UX Design</h4>
+                  <h4
+                    className="footer-links-title"
+                    onClick={() => handleRoute("/UxService")}
+                  >
+                    UX Design
+                  </h4>
                   <ul className="footer-quick-links">
                     <li>
                       <div className="link">User Research</div>
@@ -78,7 +122,12 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="col-md-3">
-                  <h4 className="footer-links-title">UI Engineering</h4>
+                  <h4
+                    className="footer-links-title"
+                    onClick={() => handleRoute("/UiEngineering")}
+                  >
+                    UI Engineering
+                  </h4>
                   <ul className="footer-quick-links">
                     <li>
                       <div className="link">UI handoff dev team</div>

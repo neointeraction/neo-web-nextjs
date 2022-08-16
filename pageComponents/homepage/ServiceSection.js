@@ -85,6 +85,7 @@ const ServiceSection = () => {
                 key="product"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
+                className="service-img"
               >
                 <object type="image/svg+xml" data={UX}>
                   <img key="ux" src={UX} alt="UX" />
@@ -148,7 +149,7 @@ const ServiceSection = () => {
                       handleRoute("/UxService");
                     }}
                   >
-                    View More
+                    <span className="view-txt">View More</span>
                     <span className="btn-arrow">
                       <img src={ArrowRight} alt="ArrowRight" />
                     </span>
@@ -156,6 +157,16 @@ const ServiceSection = () => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
+                <motion.div
+                  key="product"
+                  initial={{ x: -200, y: 0, opacity: 0 }}
+                  animate={{ x: 0, y: 0, opacity: 1 }}
+                  className="service-img service-img-mob"
+                >
+                  <object type="image/svg+xml" data={UX}>
+                    <img key="ux" src={UX} alt="UX" />
+                  </object>
+                </motion.div>
                 <ul className="service-list">
                   <li>User Research</li>
                   <li>IA Validation</li>
@@ -176,7 +187,7 @@ const ServiceSection = () => {
                 <AccordionItemButton>
                   Product Design
                   <button className="n-link-btn">
-                    View More
+                    <span className="view-txt">View More</span>
                     <span className="btn-arrow">
                       <img src={ArrowRight} alt="ArrowRight" />
                     </span>
@@ -184,6 +195,14 @@ const ServiceSection = () => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
+                <motion.img
+                  key="product"
+                  initial={{ x: -200, y: 0, opacity: 0 }}
+                  animate={{ x: 0, y: 0, opacity: 1 }}
+                  src={Product}
+                  alt="Product"
+                  className="service-img service-img-mob"
+                />
                 <ul className="service-list">
                   <li>Define Product Vision</li>
                   <li>Product Research</li>
@@ -204,7 +223,7 @@ const ServiceSection = () => {
                     className="n-link-btn"
                     onClick={(e) => handleRoute("/UiEngineering")}
                   >
-                    View More
+                    <span className="view-txt">View More</span>
                     <span className="btn-arrow">
                       <img src={ArrowRight} alt="ArrowRight" />
                     </span>
@@ -212,6 +231,14 @@ const ServiceSection = () => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
+                <motion.img
+                  key="ui"
+                  initial={{ x: -200, y: 0, opacity: 0 }}
+                  animate={{ x: 0, y: 0, opacity: 1 }}
+                  src={UI}
+                  alt="UI"
+                  className="service-img service-img-mob"
+                />
                 <ul className="service-list">
                   <li>UI handoff dev team</li>
                   <li>Building react components</li>
@@ -231,7 +258,7 @@ const ServiceSection = () => {
                 <AccordionItemButton>
                   Design Transformation
                   <button className="n-link-btn">
-                    View More
+                    <span className="view-txt">View More</span>
                     <span className="btn-arrow">
                       <img src={ArrowRight} alt="ArrowRight" />
                     </span>
@@ -239,6 +266,14 @@ const ServiceSection = () => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
+                <motion.img
+                  key="design"
+                  initial={{ x: -200, y: 0, opacity: 0 }}
+                  animate={{ x: 0, y: 0, opacity: 1 }}
+                  src={Design}
+                  alt="Design"
+                  className="service-img service-img-mob"
+                />
                 <ul className="service-list">
                   <li>Set a design foundation</li>
                   <li>Achieving Human Friendly UX</li>
