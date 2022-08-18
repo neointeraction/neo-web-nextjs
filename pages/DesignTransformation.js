@@ -28,51 +28,43 @@ import UXImg from "assets/images/ux-service.jpg";
 import GetQuoteModal from "components/GetQuoteModal";
 import DesignProcess from "assets/images/design-process.png";
 
-import UX1 from "assets/images/n-images/services/ux1.svg";
-import UX2 from "assets/images/n-images/services/ux2.svg";
-import UX3 from "assets/images/n-images/services/ux3.svg";
-import UX4 from "assets/images/n-images/services/ux4.svg";
-import UX5 from "assets/images/n-images/services/ux5.svg";
+import d1 from "assets/images/n-images/services/d1.svg";
+import d2 from "assets/images/n-images/services/d2.svg";
+import d3 from "assets/images/n-images/services/d3.svg";
+import d4 from "assets/images/n-images/services/d4.svg";
 
 const PROCESSCONTENT = [
   {
     key: 1,
-    image: UX1,
-    title: "Understanding the Goals",
-    text: "The discovery phase of the project requires close study of user needs& business goals. our team strts a project by studying the context,user types, ad functional flow. A design project is strategized around a user problem that need solving",
+    image: d1,
+    title: "Discovery",
+    text: "Discovery phase involves a thorough study of the business domain collaborating with stakeholders. Understand users journeys, navigational patterns, UI component documentation etc is done in detail",
     textItalic: "- User profiling, Personas, Market study, Competitor analysis",
   },
   {
     key: 2,
-    image: UX2,
-    title: "Design to Implementation",
-    text: "The success of any design depends on how well it is implemented. We understand the importance of following the best standard practices for a  pixel-perfect UI implementation for the web and mobile.",
+    image: d2,
+    title: "Evaluate design pattern",
+    text: "Analyze the benefits and drawbacks of the company's existing design language and examing the branding science",
     textItalic:
       "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
   },
   {
     key: 3,
-    image: UX3,
-    title: "Setting up the Ux strategy",
-    text: "Focusing on bringing the right web & mobile products to end-users, we apply the principles of design thinking by listening to our stakeholders feedback. We strongly believe that with the right strategy & planning, business can bring measurable outcomes.",
+    image: d3,
+    title: "Build design system",
+    text: "Atoms and molecules make up the building design system, which directs the developer in selecting and using the assets and Reusable components are used to prevent over-creating designs.",
     textItalic:
       "- Information Architecture, Card sorting,  Affinity Mapping, Business Goals,Design Systems",
   },
   {
     key: 4,
-    image: UX4,
-    title: `Interaction Design`,
-    text: "After understanding the users goals, the navigation experience will be designed, prototyped, and linked to various user journeys. The Interaction Design process is always done in collaboration with the user, business owners, and the technical team.",
+    image: d4,
+    title: `Bring unified 
+    experience `,
+    text: "Regardless of the platform and framework, create a unified experience by using a common design language across the entire product.",
     textItalic:
       "- Information Architecture, User Journey, Affinity Mapping,  Heuristic Evaluation, Interviews, Navigation Design, Storyboarding & Prototyping",
-  },
-  {
-    key: 5,
-    image: UX5,
-    title: "Bringing the WOW factor",
-    text: "Interaction Design is enhanced by a beautifully-crafted visual design. The end-user interacts at the UI level for better discovery, engagement, and transactions. Our UI Design team understands the need of following pixel-level detailing and standards.",
-    textItalic:
-      " - Detailed Layouts, UI elements, Dashboards & Data Visualization, Icons and, Illustrations, Micro-interactions",
   },
 ];
 
@@ -161,7 +153,7 @@ const HIREDESIGNERSCONTENT = [
 // ];
 
 export default withRouter(
-  class UxService extends Component {
+  class DesignTransformation extends Component {
     constructor() {
       super();
       this.state = {
@@ -194,7 +186,7 @@ export default withRouter(
         <div>
           <Head>
             <title>
-              UX Services | Neointeraction is a UI/UX company in india
+              Design Transformation | Neointeraction is a UI/UX company in india
             </title>
             <meta
               name="description"
@@ -220,14 +212,18 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
-              <h1 className="main-title animated fadeIn">UX Design</h1>
+              <h1 className="main-title animated fadeIn">
+                Design Transformation
+              </h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Design to shape tomorrow's digital experiences.
               </h2>
               <div className="tags service-tags animated fadeIn">
                 <ul>
                   <li>
-                    <button className="custom-btn">UX Design</button>
+                    <Link href="/UxService">
+                      <button className="custom-btn inactive">UX Design</button>
+                    </Link>
                   </li>
                   <li>
                     <Link href="/ProductService">
@@ -238,7 +234,7 @@ export default withRouter(
                   </li>
                   <li>
                     <Link href="/DesignTransformation">
-                      <button className="custom-btn inactive">
+                      <button className="custom-btn ">
                         Design Transformation
                       </button>
                     </Link>
@@ -266,22 +262,18 @@ export default withRouter(
                     ProjectVideo=""
                     componentOrientation="image-left"
                     ProjectImage={UXImg}
-                    titleText="Experience Design"
+                    titleText="Design Transformation "
                     contentText={
                       <div>
                         <p>
-                          We at Neointeraction Design have a well-defined design
-                          delivery process which enables us to work closely with
-                          client stakeholders and meet their business goals.
-                          With a Digital Transformation, every business goes
-                          through a change in their business model, branding,
-                          technology stack etc. Design plays a major role in
-                          bringing the right direction to the business and to
-                          their end-users. Our team evaluates the digital
-                          landscape from a design perspective and defines the
-                          design system to bring a unified experience.
+                          We assist company in standardizing the design
+                          experience across their platform ireespective
+                          softwares and front end UI framework by building
+                          design system which helps to create consistent design
+                          language across the product that abides the company’s
+                          branding science
                         </p>
-                        <p>
+                        {/* <p>
                           To know more about how we deliver great experiences,
                           take a look at our{" "}
                           <AnchorLink
@@ -290,7 +282,7 @@ export default withRouter(
                           >
                             Engagement Model
                           </AnchorLink>
-                        </p>
+                        </p> */}
                       </div>
                     }
                   />

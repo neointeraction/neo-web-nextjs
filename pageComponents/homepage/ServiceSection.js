@@ -186,7 +186,10 @@ const ServiceSection = () => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   Product Design
-                  <button className="n-link-btn">
+                  <button
+                    className="n-link-btn"
+                    onClick={(e) => handleRoute("/ProductService")}
+                  >
                     <span className="view-txt">View More</span>
                     <span className="btn-arrow">
                       <img src={ArrowRight} alt="ArrowRight" />
@@ -257,7 +260,10 @@ const ServiceSection = () => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   Design Transformation
-                  <button className="n-link-btn">
+                  <button
+                    className="n-link-btn"
+                    onClick={(e) => handleRoute("/DesignTransformation")}
+                  >
                     <span className="view-txt">View More</span>
                     <span className="btn-arrow">
                       <img src={ArrowRight} alt="ArrowRight" />

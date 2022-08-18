@@ -37,14 +37,16 @@ export default class ModalCard extends Component {
   }
 
   render() {
-    const { title, text, className, cardId, textItalic, buttonText } =
+    const { title, text, className, cardId, textItalic, buttonText, image } =
       this.props;
     return (
       <div className={`modal-card ${className}`}>
+        {image && <img src={image} alt="image" className="modal-card-img" />}
+
         <div>
           <h2 className="mc-title">{title}</h2>
           <h3 className="mc-text">{text}</h3>
-          <h3 className="mc-text italic">{textItalic}</h3>
+          {textItalic && <h3 className="mc-text italic">{textItalic}</h3>}
           <button
             className="custom-btn btn-text card-btn"
             id={cardId}

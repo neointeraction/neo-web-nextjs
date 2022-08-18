@@ -28,49 +28,59 @@ import UXImg from "assets/images/ux-service.jpg";
 import GetQuoteModal from "components/GetQuoteModal";
 import DesignProcess from "assets/images/design-process.png";
 
-import UX1 from "assets/images/n-images/services/ux1.svg";
-import UX2 from "assets/images/n-images/services/ux2.svg";
-import UX3 from "assets/images/n-images/services/ux3.svg";
-import UX4 from "assets/images/n-images/services/ux4.svg";
-import UX5 from "assets/images/n-images/services/ux5.svg";
+import P1 from "assets/images/n-images/services/p1.svg";
+import P2 from "assets/images/n-images/services/p2.svg";
+import P3 from "assets/images/n-images/services/p3.svg";
+import P4 from "assets/images/n-images/services/p4.svg";
+import P5 from "assets/images/n-images/services/p5.svg";
+import P6 from "assets/images/n-images/services/p6.svg";
 
 const PROCESSCONTENT = [
   {
     key: 1,
-    image: UX1,
-    title: "Understanding the Goals",
-    text: "The discovery phase of the project requires close study of user needs& business goals. our team strts a project by studying the context,user types, ad functional flow. A design project is strategized around a user problem that need solving",
+    image: P1,
+    title: "Define Product Vision",
+    text: "The process begins with the definition of the product use cases,  business requirements, define target audience, competitor evaluation.",
     textItalic: "- User profiling, Personas, Market study, Competitor analysis",
   },
   {
     key: 2,
-    image: UX2,
-    title: "Design to Implementation",
-    text: "The success of any design depends on how well it is implemented. We understand the importance of following the best standard practices for a  pixel-perfect UI implementation for the web and mobile.",
+    image: P2,
+    title: "Product Research",
+    text: "Try to understand the user with both qualitative and quantitative research techniques, create use story boards to evaluate  user journey’s with different scenarios.",
     textItalic:
       "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
   },
   {
     key: 3,
-    image: UX3,
-    title: "Setting up the Ux strategy",
-    text: "Focusing on bringing the right web & mobile products to end-users, we apply the principles of design thinking by listening to our stakeholders feedback. We strongly believe that with the right strategy & planning, business can bring measurable outcomes.",
+    image: P3,
+    title: "Agile Design Sprints",
+    text: "Create fresh concepts and ideas to put into practise with quick design iterations, as well as concurrently trying to develop them in a working prototype. Rapid prototyping is done using both low-fidelity and high-fidelity wireframes.",
     textItalic:
       "- Information Architecture, Card sorting,  Affinity Mapping, Business Goals,Design Systems",
   },
   {
     key: 4,
-    image: UX4,
-    title: `Interaction Design`,
-    text: "After understanding the users goals, the navigation experience will be designed, prototyped, and linked to various user journeys. The Interaction Design process is always done in collaboration with the user, business owners, and the technical team.",
+    image: P4,
+    title: `Rapid 
+    Prototyping`,
+    text: "We create a design system and document all of the components and assets with a high level of UI detailing. We also create visual design mockups and prototype the UI to assist developers in implementing the design.",
     textItalic:
       "- Information Architecture, User Journey, Affinity Mapping,  Heuristic Evaluation, Interviews, Navigation Design, Storyboarding & Prototyping",
   },
   {
     key: 5,
-    image: UX5,
-    title: "Bringing the WOW factor",
-    text: "Interaction Design is enhanced by a beautifully-crafted visual design. The end-user interacts at the UI level for better discovery, engagement, and transactions. Our UI Design team understands the need of following pixel-level detailing and standards.",
+    image: P5,
+    title: "Front end Development",
+    text: "To solve the design issue, we try to divide the work into sprints based on UX and UI tasks, which will then be assigned to the team. We then hold regular sprint meetings to review and validate the idea, which helps us to increase production and finish the project.",
+    textItalic:
+      " - Detailed Layouts, UI elements, Dashboards & Data Visualization, Icons and, Illustrations, Micro-interactions",
+  },
+  {
+    key: 6,
+    image: P6,
+    title: "Visual Design / UI",
+    text: "Design team closely work with Front end developers to assist in component development, API integration, and design development using the front end UI frameworks. We also conduct comprehensive UI testing using agile working practises.",
     textItalic:
       " - Detailed Layouts, UI elements, Dashboards & Data Visualization, Icons and, Illustrations, Micro-interactions",
   },
@@ -161,7 +171,7 @@ const HIREDESIGNERSCONTENT = [
 // ];
 
 export default withRouter(
-  class UxService extends Component {
+  class ProductService extends Component {
     constructor() {
       super();
       this.state = {
@@ -194,7 +204,7 @@ export default withRouter(
         <div>
           <Head>
             <title>
-              UX Services | Neointeraction is a UI/UX company in india
+              Product Service | Neointeraction is a UI/UX company in india
             </title>
             <meta
               name="description"
@@ -220,21 +230,19 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
-              <h1 className="main-title animated fadeIn">UX Design</h1>
+              <h1 className="main-title animated fadeIn">Product Design</h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Design to shape tomorrow's digital experiences.
               </h2>
               <div className="tags service-tags animated fadeIn">
                 <ul>
                   <li>
-                    <button className="custom-btn">UX Design</button>
+                    <Link href="/UxService">
+                      <button className="custom-btn inactive">UX Design</button>
+                    </Link>
                   </li>
                   <li>
-                    <Link href="/ProductService">
-                      <button className="custom-btn inactive">
-                        Product Design
-                      </button>
-                    </Link>
+                    <button className="custom-btn">Product Design</button>
                   </li>
                   <li>
                     <Link href="/DesignTransformation">
@@ -250,13 +258,6 @@ export default withRouter(
                       </button>
                     </Link>
                   </li>
-                  {/* <li>
-                    <Link href="/VideoService">
-                      <button className="custom-btn inactive">
-                        Motion Design
-                      </button>
-                    </Link>
-                  </li> */}
                 </ul>
               </div>
               <ReactWOW animation="fadeIn" delay="0s" offset={-200}>
@@ -266,22 +267,30 @@ export default withRouter(
                     ProjectVideo=""
                     componentOrientation="image-left"
                     ProjectImage={UXImg}
-                    titleText="Experience Design"
+                    titleText="Digital product innovation"
                     contentText={
                       <div>
                         <p>
-                          We at Neointeraction Design have a well-defined design
-                          delivery process which enables us to work closely with
-                          client stakeholders and meet their business goals.
-                          With a Digital Transformation, every business goes
-                          through a change in their business model, branding,
-                          technology stack etc. Design plays a major role in
-                          bringing the right direction to the business and to
-                          their end-users. Our team evaluates the digital
-                          landscape from a design perspective and defines the
-                          design system to bring a unified experience.
+                          We help clients envision their business vision by
+                          laying the foundation for their product development
+                          with UX strategies.
                         </p>
+                        <ul className="solution-list prod-list">
+                          <li>
+                            By applying user psychology to customer experience,
+                            we design engaging digital products used by millions
+                            of people.
+                          </li>
+                          <li>
+                            an agile design/development process is followed to
+                            build a minimum viable product.
+                          </li>
+                        </ul>
                         <p>
+                          We also help in building the product using the front
+                          end technologies
+                        </p>
+                        {/* <p>
                           To know more about how we deliver great experiences,
                           take a look at our{" "}
                           <AnchorLink
@@ -290,7 +299,7 @@ export default withRouter(
                           >
                             Engagement Model
                           </AnchorLink>
-                        </p>
+                        </p> */}
                       </div>
                     }
                   />

@@ -102,7 +102,12 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="col-md-3">
-                  <h4 className="footer-links-title">Product Design</h4>
+                  <h4
+                    className="footer-links-title"
+                    onClick={(e) => handleRoute("/ProductService")}
+                  >
+                    Product Design
+                  </h4>
                   <ul className="footer-quick-links">
                     <li>
                       <div className="link">Define Product Vision</div>
@@ -147,7 +152,12 @@ const Footer = () => {
                   </ul>
                 </div>
                 <div className="col-md-3">
-                  <h4 className="footer-links-title">Design transformation</h4>
+                  <h4
+                    className="footer-links-title"
+                    onClick={(e) => handleRoute("/DesignTransformation")}
+                  >
+                    Design transformation
+                  </h4>
                   <ul className="footer-quick-links">
                     <li>
                       <div className="link">Set a design foundation</div>

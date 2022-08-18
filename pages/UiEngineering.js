@@ -30,31 +30,51 @@ import testing from "assets/images/testing.png";
 
 import DevelopmentProcessCard from "components/DevelopmentProcessCard";
 
-const PROCESSIMAGE = [
+import UI1 from "assets/images/n-images/services/ui1.svg";
+import UI2 from "assets/images/n-images/services/ui2.svg";
+import UI3 from "assets/images/n-images/services/ui3.svg";
+import UI4 from "assets/images/n-images/services/ui4.svg";
+import UI5 from "assets/images/n-images/services/ui5.svg";
+
+const PROCESSCONTENT = [
   {
     key: 1,
-    titleText: "Wireframes",
-    img: wireframe,
+    image: UI1,
+    title: "UI Handoff for development team",
+    text: "Once the designs are approved it need to be hand coded with pixel perfect detailing. During design handoff stage design team provides all the UI specifications for the developers to implement the finished design.",
+    textItalic: "- User profiling, Personas, Market study, Competitor analysis",
   },
   {
     key: 2,
-    titleText: "UI Styling",
-    img: uiStyling,
+    image: UI2,
+    title: "Building UI component",
+    text: "UI elements are the core building blocks for all applications.UI elements or user interface elements are created using front end technologies like React, Angular, VUE Js etc for both web and mobile applications",
+    textItalic:
+      "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
   },
   {
     key: 3,
-    titleText: "Component Development",
-    img: componentDevelopment,
+    image: UI3,
+    title: "Creating interactive flows ",
+    text: "Front End developers will start building the page layout frameworks and integrate UI components page wise. Once its done it can be linked as meaningful flow that will help with API integrating process.",
+    textItalic:
+      "- Information Architecture, Card sorting,  Affinity Mapping, Business Goals,Design Systems",
   },
   {
     key: 4,
-    titleText: "Interactions/ Linking",
-    img: interactions,
+    image: UI4,
+    title: "Integrating services",
+    text: "After Front End developers develop UI components & page layout, API integration will start. Various business data points are linked and for having a meaningful user journey. API integration considers business flows, page rendering speed, userexperience factors,performance etc.",
+    textItalic:
+      "- Information Architecture, User Journey, Affinity Mapping,  Heuristic Evaluation, Interviews, Navigation Design, Storyboarding & Prototyping",
   },
   {
     key: 5,
-    titleText: "Testing",
-    img: testing,
+    image: UI5,
+    title: "Testing the business flows,validation ",
+    text: "Once the API integration is done the design is validated with actual data rendering. Based on this the user flow may need design fine tuning. Key stake holders can give meaningful feedbacks at this stage.",
+    textItalic:
+      " - Detailed Layouts, UI elements, Dashboards & Data Visualization, Icons and, Illustrations, Micro-interactions",
   },
 ];
 const ENGAGEMENTCONTENT = [
@@ -167,6 +187,20 @@ export default withRouter(
                     </Link>
                   </li>
                   <li>
+                    <Link href="/ProductService">
+                      <button className="custom-btn inactive">
+                        Product Design
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/DesignTransformation">
+                      <button className="custom-btn inactive">
+                        Design Transformation
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
                     <Link href="/UiEngineering">
                       <button className="custom-btn ">UI Engineering</button>
                     </Link>
@@ -245,7 +279,7 @@ export default withRouter(
                     {/* <div className="service-process-img">
                     <img src={processImg} alt="processImg" />
                   </div> */}
-                    <div className="row p-cards justify-content-between">
+                    {/* <div className="row p-cards justify-content-between">
                       {[...PROCESSIMAGE].map((data) => (
                         <React.Fragment key={data.key}>
                           <DevelopmentProcessCard
@@ -253,6 +287,21 @@ export default withRouter(
                             Image={data.img}
                           />
                         </React.Fragment>
+                      ))}
+                    </div> */}
+                    <div className="row p-cards">
+                      {[...PROCESSCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard
+                            image={engage.image}
+                            title={engage.title}
+                            text={engage.text}
+                            // textItalic={engage.textItalic}
+                          />
+                        </div>
                       ))}
                     </div>
                   </div>
