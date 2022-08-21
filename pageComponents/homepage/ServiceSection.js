@@ -48,7 +48,7 @@ const ServiceSection = () => {
 
   return (
     <div className="service-container">
-      <motion.h1
+      <motion.h2
         ref={ref}
         initial="hidden"
         animate={controls}
@@ -65,7 +65,7 @@ const ServiceSection = () => {
         >
           We have worked with some cool people to make their tech user friendly
         </motion.h4>
-      </motion.h1>
+      </motion.h2>
       <div className="row">
         <div className="col-md-6">
           <AnimatePresence>

@@ -788,3 +788,50 @@ body::-webkit-scrollbar-thumb:hover {
   padding-left: 40px !important;
   margin-bottom: 20px;
 }
+/* footer  */
+
+.mobile-accord {
+  display: none;
+  margin-top: 20px;
+}
+
+.mobile-accord .accordion__button {
+  background: transparent !important;
+  font-size: 20px !important;
+  color: #ffffff !important;
+  letter-spacing: 0 !important;
+  font-weight: 600 !important;
+  margin: 20px 0 !important;
+  cursor: pointer !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.mobile-accord .accordion__button::after {
+  content: url(../images/n-images/accord-arrow.svg);
+  margin-right: 5px;
+}
+
+.mobile-accord .accordion__button[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+  margin-top: -5px;
+}
+
+.mobile-accord .accordion__heading {
+  background: #3f4851 !important;
+  border-radius: 15px;
+  padding: 0 10px;
+}
+
+.mobile-accord .accordion__panel {
+  background: transparent !important;
+  padding: 0 10px;
+}
+
+.mobile-accord .accordion__item {
+  box-shadow: none;
+}
+
+.pl-0 {
+  padding-left: 0 !important;
+}

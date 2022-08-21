@@ -254,7 +254,7 @@ const HomeTeam = () => {
     <div className="home-team-container" ref={ref}>
       <div className="client-content">
         <div className="boxes-wrapper">
-          <motion.h1
+          <motion.h3
             ref={ref}
             initial="hidden"
             animate={controls}
@@ -263,7 +263,7 @@ const HomeTeam = () => {
           >
             <span className="highlight"> Designs </span> that touches people's
             lives, enables business success
-          </motion.h1>
+          </motion.h3>
           <div className="boxes">
             {boxes.map((box, index) => (
               <div

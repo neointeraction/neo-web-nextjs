@@ -30,7 +30,7 @@ const BlogSection = () => {
     <div className="margin-adjust">
       <div className="container ">
         <div className="n-blog-section">
-          <motion.h1
+          <motion.h2
             ref={ref}
             initial="hidden"
             animate={controls}
@@ -38,7 +38,7 @@ const BlogSection = () => {
             className="n-banner-title"
           >
             <span className="highlight"> Newly </span> in
-          </motion.h1>
+          </motion.h2>
           <motion.h4
             ref={ref}
             initial="hidden"

@@ -34,7 +34,7 @@ const ProjectSlider = () => {
   }, [controls, inView]);
 
   var slideSettings = {
-    autoplay: true,
+    // autoplay: true,
     fade: true,
     dots: false,
     infinite: true,
@@ -71,7 +71,7 @@ const ProjectSlider = () => {
       <div>
         <div className="slider-container">
           <div className="slider-content">
-            <motion.h1
+            <motion.h2
               ref={ref}
               initial="hidden"
               animate={controls}
@@ -80,7 +80,7 @@ const ProjectSlider = () => {
             >
               Share Trading Platform UX Redesign -
               <span className="highlight"> www.Geojit.com </span>
-            </motion.h1>
+            </motion.h2>
             <motion.h4
               ref={ref}
               initial="hidden"
@@ -108,7 +108,7 @@ const ProjectSlider = () => {
       <div>
         <div className="slider-container slide-2">
           <div className="slider-content">
-            <motion.h1
+            <motion.h2
               animate={{ opacity: [0, 1], y: [5, 0] }}
               initial="hidden"
               transition={{ delay: 0.5, duration: 0.5 }}
@@ -116,7 +116,7 @@ const ProjectSlider = () => {
             >
               Online Tutoring Platform
               <span className="highlight"> 90+ Tution App</span>
-            </motion.h1>
+            </motion.h2>
             <motion.h4
               animate={{ opacity: [0, 1], y: [5, 0] }}
               initial="hidden"
@@ -135,14 +135,14 @@ const ProjectSlider = () => {
       <div>
         <div className="slider-container slide-3">
           <div className="slider-content">
-            <motion.h1
+            <motion.h2
               animate={{ opacity: [0, 1], y: [5, 0] }}
               initial="hidden"
               transition={{ delay: 0.5, duration: 0.5 }}
               className="n-banner-title"
             >
               Internet Banking - <span className="highlight">Dubai Bank</span>
-            </motion.h1>
+            </motion.h2>
             <motion.h4
               animate={{ opacity: [0, 1], y: [5, 0] }}
               initial="hidden"

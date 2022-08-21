@@ -42,7 +42,7 @@ const Clients = () => {
   return (
     <div className="client-container">
       <div className="client-title">
-        <motion.h1
+        <motion.h2
           ref={ref}
           initial="hidden"
           animate={controls}
@@ -51,7 +51,7 @@ const Clients = () => {
         >
           Our Satisfied
           <span className="highlight"> Customers </span>
-        </motion.h1>
+        </motion.h2>
         <motion.h4
           ref={ref}
           initial="hidden"

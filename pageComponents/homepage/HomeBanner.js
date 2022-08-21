@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BannerImage from "assets/images/n-images/home-svg.svg";
+import UX from "assets/images/n-images/ux.svg";
 
 const HomeBanner = () => {
   return (
@@ -45,6 +46,16 @@ const HomeBanner = () => {
             src={BannerImage}
             alt="BannerImage"
           />
+
+          {/* <motion.div
+            // key="product"
+            initial={{ x: 0, y: 0, opacity: 0 }}
+            animate={{ x: 0, y: 0, opacity: 1 }}
+          >
+            <object type="image/svg+xml" src={BannerImage}>
+              <img key="ux" src={BannerImage} alt="UX" />
+            </object>
+          </motion.div> */}
         </div>
       </motion.div>
     </div>
