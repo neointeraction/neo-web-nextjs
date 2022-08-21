@@ -4,7 +4,6 @@ import Link from "next/link";
 import FilterCard from "components/FilterCard";
 import ClientSlider from "components/ClientSlider";
 import SEOImg from "assets/images/neo-web-img.jpeg";
-import { Badge } from "react-bootstrap";
 import AuditBadge from "components/AuditBadge";
 
 class Home extends Component {
