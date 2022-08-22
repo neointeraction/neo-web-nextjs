@@ -26,6 +26,7 @@ import videoServiceImg from "assets/images/video-service.jpg";
 import Clients from "assets/images/clientl-logos.png";
 import OurTeamImg from "assets/images/our-team.jpg";
 import teamOuting from "assets/images/team-outings.jpg";
+import ServiceSection from "pageComponents/homepage/ServiceSection";
 
 const SERVICES = [
   {
@@ -238,7 +239,7 @@ export default withRouter(
                     <div className="section-padding">
                       <div className="container">
                         <SectionTitle title="Our Services" />
-                        <div className="row p-cards">
+                        {/* <div className="row p-cards">
                           {[...SERVICES].map((service) => (
                             <div
                               className="col-md-4 card-margin-bottom font-sm"
@@ -260,7 +261,8 @@ export default withRouter(
                               </Link>
                             </div>
                           ))}
-                        </div>
+                        </div> */}
+                        <ServiceSection inner />
                       </div>
                     </div>
                   </ReactWOW>

@@ -14,10 +14,10 @@ const ContactSection = () => {
       <div className="row">
         <div className="col-md-6">
           <div className="n-contact-card">
-            <p>
+            <h4>
               Passion and excitement are our <br /> chai and coffee
-            </p>
-            <h1>Work with us</h1>
+            </h4>
+            <h3>Work with us</h3>
             <button class="custom-btn" onClick={() => handleRoute("/Career")}>
               Career
             </button>
@@ -31,10 +31,10 @@ const ContactSection = () => {
         </div>
         <div className="col-md-6">
           <div className="n-contact-card bg2">
-            <p>
+            <h4>
               Enhance your business design <br /> intelligence
-            </p>
-            <h1>Connect with us</h1>
+            </h4>
+            <h3>Connect with us</h3>
             <button
               class="custom-btn"
               onClick={() => handleRoute("/ContactUs")}

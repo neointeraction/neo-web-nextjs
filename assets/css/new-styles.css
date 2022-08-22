@@ -76,11 +76,22 @@ body::-webkit-scrollbar-thumb:hover {
 
 .header-with-panel.fixed .logo-container {
   transform: scale(0.98);
+  transform: translate(0, -22px);
   transition: 0.3s all ease-in-out;
 }
 
+.header-with-panel.fixed .n-header-container {
+  padding: 3px 30px;
+}
+
+/* .header-with-panel.fixed {
+  height: 90px;
+} */
+
 .n-logo-container {
   margin: 0;
+  transform: translate(0, 0);
+  transition: 0.3s all ease-in-out;
 }
 
 .n-logo-container .logo-block {
@@ -187,10 +198,10 @@ body::-webkit-scrollbar-thumb:hover {
 
 .n-menu-item {
   font-weight: 800;
-  font-size: 44px;
+  font-size: 40px;
   line-height: 53px;
   color: #ffffff;
-  margin-bottom: 26px;
+  margin-bottom: 16px;
   transition: 0.3s all ease-in-out;
   cursor: pointer;
 }
@@ -265,6 +276,8 @@ body::-webkit-scrollbar-thumb:hover {
 .n-banner-img {
   margin-top: 60px;
   margin-bottom: -18px;
+  width: 45%;
+  margin: auto auto -50px auto;
 }
 
 .n-banner-container {
@@ -272,11 +285,11 @@ body::-webkit-scrollbar-thumb:hover {
   border-radius: 15px;
   padding: 50px 20px;
   height: 100%;
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  flex-direction: column;
+  flex-direction: column; */
 }
 
 .n-banner-container img {
@@ -301,6 +314,11 @@ body::-webkit-scrollbar-thumb:hover {
   color: #262525;
   width: 76%;
   margin: 20px auto;
+  height: 48px;
+}
+
+.n-banner-content {
+  text-align: center;
 }
 
 .n-banner-content img {
@@ -380,10 +398,10 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .slider-content {
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
-.slider-container.slide-2 {
+.slide:nth-child(odd) .slider-container {
   background: #fdf7e4;
 }
 
@@ -476,10 +494,19 @@ body::-webkit-scrollbar-thumb:hover {
   /* height: 100vh; */
 }
 
+.service-container.nobg {
+  background: transparent;
+  padding: 30px 0 0px 0;
+}
+
 .service-container .n-banner-title {
   text-align: center;
   margin-bottom: 40px;
 }
+
+/* .nobg .service-list li {
+  font-size: 18px;
+} */
 
 /* accordiaon  */
 
@@ -545,6 +572,10 @@ body::-webkit-scrollbar-thumb:hover {
   transform: translate(-200px, 0);
 }
 
+.col-md-5 .service-img {
+  width: 100%;
+}
+
 .service-list {
   display: flex;
   justify-content: space-between;
@@ -552,7 +583,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-wrap: wrap;
   list-style-type: disc;
   padding-left: 40px;
-  margin-top: 10px;
+  margin-top: 0px;
 }
 
 .service-list li {
@@ -708,14 +739,14 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 
-.n-contact-card p {
+.n-contact-card h4 {
   font-weight: 400;
   font-size: 20px;
   line-height: 28px;
   color: #000000;
 }
 
-.n-contact-card h1 {
+.n-contact-card h3 {
   font-weight: 800;
   font-size: 44px;
   line-height: 53px;
@@ -834,4 +865,90 @@ body::-webkit-scrollbar-thumb:hover {
 
 .pl-0 {
   padding-left: 0 !important;
+}
+
+.link-banner {
+  cursor: pointer;
+}
+
+/* carousal react  */
+
+.carousel.carousel-slider li.slide.selected {
+  z-index: 0 !important;
+}
+
+.carousel-status {
+  display: none;
+}
+
+.carousel-slider {
+  position: relative;
+}
+
+.nav-l {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: 80px;
+  top: 25%;
+  border: 1px solid #ebd3d3;
+  border-radius: 8px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  height: 40px;
+  width: 40px;
+  padding: 11px;
+  transition: 0.3s all ease-in-out;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.14));
+}
+
+.nav-r {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  right: 20px;
+  top: 25%;
+  border: 1px solid #ebd3d3;
+  border-radius: 8px;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  height: 40px;
+  width: 40px;
+  padding: 11px;
+  transition: 0.3s all ease-in-out;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.14));
+}
+
+.slick-prev,
+.slick-next {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ebd3d3;
+  border-radius: 5px;
+  border-radius: 8px;
+  top: 25%;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.14));
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  transition: 0.3s all ease-in-out;
+}
+
+.nav-r:hover,
+.nav-l:hover {
+  cursor: pointer;
+  background: #ecebeb;
+  filter: none;
+  transition: 0.3s all ease-in-out;
+}
+
+.slider-image {
+  cursor: pointer;
+}
+
+.n-project-section {
+  min-height: 200px;
 }

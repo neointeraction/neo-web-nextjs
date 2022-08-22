@@ -179,4 +179,11 @@
   .slider-container {
     min-height: 400px;
   }
+  .nav-l,
+  .nav-r {
+    top: 2%;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+  }
 }
