@@ -14,7 +14,7 @@ import Behance from "assets/images/behance.svg";
 import Youtube from "assets/images/youtube.svg";
 import Medium from "assets/images/medium.svg";
 import Contact from "assets/images/n-images/header-contact.svg";
-import Illustration from "assets/images/n-images/menu-illustration.svg";
+import Illustration from "assets/images/n-images/animated/menu-illustration.svg";
 
 const Header = () => {
   const router = useRouter();
@@ -258,9 +258,16 @@ const Header = () => {
                 </div>
                 <div className="col-md-8 text-end">
                   <div className="menu-right-content">
-                    <div className="menu-illustration">
-                      <img src={Illustration} alt="Illustration" />
-                    </div>
+                    <motion.div
+                      initial="hidden"
+                      animate={{ opacity: [0, 1] }}
+                      transition={{ delay: 0.1, duration: 0.5 }}
+                      className="menu-illustration"
+                    >
+                      <object type="image/svg+xml" data={Illustration}>
+                        <img src={Illustration} alt="Illustration" />
+                      </object>
+                    </motion.div>
                   </div>
                 </div>
               </div>

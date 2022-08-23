@@ -14,10 +14,10 @@ import {
 } from "react-accessible-accordion";
 
 import "react-accessible-accordion/dist/fancy-example.css";
-import UX from "assets/images/n-images/ux.svg";
-import Product from "assets/images/n-images/product.svg";
-import UI from "assets/images/n-images/ui.svg";
-import Design from "assets/images/n-images/design.svg";
+import UX from "assets/images/n-images/animated/ux.svg";
+import Product from "assets/images/n-images/animated/product.svg";
+import UI from "assets/images/n-images/animated/ui.svg";
+import Design from "assets/images/n-images/animated/design.svg";
 import ArrowRight from "assets/images/n-images/view-more-arrow.svg";
 
 const titleVariant = {
@@ -99,38 +99,44 @@ const ServiceSection = ({ inner }) => {
           </AnimatePresence>
           <AnimatePresence>
             {activeAccord === "product" && (
-              <motion.img
+              <motion.div
                 key="product"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
-                src={Product}
-                alt="Product"
                 className="service-img"
-              />
+              >
+                <object type="image/svg+xml" data={Product}>
+                  <img key="ux" src={Product} alt="UX" />
+                </object>
+              </motion.div>
             )}
           </AnimatePresence>
           <AnimatePresence>
             {activeAccord === "ui" && (
-              <motion.img
-                key="ui"
+              <motion.div
+                key="product"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
-                src={UI}
-                alt="UI"
                 className="service-img"
-              />
+              >
+                <object type="image/svg+xml" data={UI}>
+                  <img key="ux" src={UI} alt="UX" />
+                </object>
+              </motion.div>
             )}
           </AnimatePresence>
           <AnimatePresence>
             {activeAccord === "design" && (
-              <motion.img
-                key="design"
+              <motion.div
+                key="product"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
-                src={Design}
-                alt="Design"
                 className="service-img"
-              />
+              >
+                <object type="image/svg+xml" data={Design}>
+                  <img key="ux" src={Design} alt="UX" />
+                </object>
+              </motion.div>
             )}
           </AnimatePresence>
         </div>

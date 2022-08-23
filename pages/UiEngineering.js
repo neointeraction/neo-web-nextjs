@@ -259,19 +259,7 @@ export default withRouter(
                   />
                 </div>
               </ReactWOW>
-              <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
-                  <div className="container">
-                    <SectionTitle
-                      title="Technologies we use"
-                      subtitle="Our design engineering philosophy aims at gaining digital excellence in whatever we do. It entails using industry’s finest practices, tools & techniques. All in a bid to give you that rich, non-bumpy & smooth user experience."
-                    />
-                    <div className="img-sprite mt-2">
-                      <img src={Technology} alt="tech-img" />
-                    </div>
-                  </div>
-                </div>
-              </ReactWOW>
+
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div className="section-padding">
                   <div className="container">
@@ -307,28 +295,19 @@ export default withRouter(
                   </div>
                 </div>
               </ReactWOW>
-
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding" id="eng-modal">
+                <div className="section-padding">
                   <div className="container">
                     <SectionTitle
-                      title="The Engagement Model"
-                      subtitle="Based on your core business, the models below may suit well that will add the right value for your short and long term project goals. Our team is familiar with the Agile & Learn methods of design delivery."
+                      title="Technologies we use"
+                      subtitle="Our design engineering philosophy aims at gaining digital excellence in whatever we do. It entails using industry’s finest practices, tools & techniques. All in a bid to give you that rich, non-bumpy & smooth user experience."
                     />
-                    <div className="row p-cards">
-                      {[...ENGAGEMENTCONTENT].map((engage) => (
-                        <div
-                          className="col-md-4 card-margin-bottom"
-                          key={engage.key}
-                        >
-                          <ModalCard title={engage.title} text={engage.text} />
-                        </div>
-                      ))}
+                    <div className="img-sprite mt-2">
+                      <img src={Technology} alt="tech-img" />
                     </div>
                   </div>
                 </div>
               </ReactWOW>
-
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div className="section-padding">
                   <div className="container">
@@ -355,7 +334,26 @@ export default withRouter(
                   </div>
                 </div>
               </ReactWOW>
-
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="section-padding" id="eng-modal">
+                  <div className="container">
+                    <SectionTitle
+                      title="The Engagement Model"
+                      subtitle="Based on your core business, the models below may suit well that will add the right value for your short and long term project goals. Our team is familiar with the Agile & Learn methods of design delivery."
+                    />
+                    <div className="row p-cards">
+                      {[...ENGAGEMENTCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard title={engage.title} text={engage.text} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div>
                   <div className="container">

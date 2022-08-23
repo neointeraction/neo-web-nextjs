@@ -1,8 +1,8 @@
 import React from "react";
 import Router from "next/router";
-
-import CareerImg from "assets/images/n-images/career-card.svg";
-import ContactImg from "assets/images/n-images/contact-card.svg";
+import { motion } from "framer-motion";
+import CareerImg from "assets/images/n-images/animated/career-card.svg";
+import ContactImg from "assets/images/n-images/animated/contact-card.svg";
 
 const ContactSection = () => {
   const handleRoute = (path) => {
@@ -22,11 +22,19 @@ const ContactSection = () => {
               Career
             </button>
 
-            <img
+            <object
+              type="image/svg+xml"
+              data={ContactImg}
+              className="cc-image-top card-img"
+            >
+              <img src={ContactImg} alt="ContactImg" />
+            </object>
+
+            {/* <img
               src={ContactImg}
               alt="ContactImg"
               className="cc-image-top card-img"
-            />
+            /> */}
           </div>
         </div>
         <div className="col-md-6">
@@ -41,11 +49,18 @@ const ContactSection = () => {
             >
               Contact Us
             </button>
-            <img
+            {/* <img
               src={CareerImg}
               alt="CareerImg"
               className="cc-image card-img"
-            />
+            /> */}
+            <object
+              type="image/svg+xml"
+              data={CareerImg}
+              className="cc-image card-img"
+            >
+              <img src={CareerImg} alt="ContactImg" />
+            </object>
           </div>
         </div>
       </div>

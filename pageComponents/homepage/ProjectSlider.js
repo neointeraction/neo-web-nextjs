@@ -3,6 +3,7 @@ import { useAnimation, motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Slider from "react-slick";
 import { DataContext } from "context/DataContext";
+import { baseUrl } from "globalConfig";
 
 import Right from "assets/images/n-images/slider-right.svg";
 import Left from "assets/images/n-images/slider-left.svg";
@@ -89,6 +90,7 @@ const ProjectSlider = () => {
                 )}
               >
                 {[...context.state.projects]
+                  .reverse()
                   .filter((name) => {
                     console.log(name, "name");
                     return name.showInHomepage;
@@ -131,7 +133,7 @@ const ProjectSlider = () => {
                             initial={{ opacity: [0.8, 1] }}
                             animate={controls}
                             variants={imageVariant}
-                            src={ProjImage}
+                            src={`${baseUrl}${cards.homePageBannerImg?.url}`}
                             alt="ProjImage"
                             style={{ width: "100%" }}
                             className="link-banner"

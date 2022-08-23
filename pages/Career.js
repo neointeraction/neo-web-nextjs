@@ -155,7 +155,7 @@ export default withRouter(
             </div>
             <ReactWOW animation="fadeIn" delay="0s" offset={-200}>
               <div className="what-its-like">
-                <div className="container">
+                {/* <div className="container">
                   <SectionTitle title="What’s it like to work here?" />
                   <ol className="wl-list">
                     <li>Work Ownership</li>
@@ -165,7 +165,7 @@ export default withRouter(
                     <li>Industry Experience</li>
                     <li>Creative Thinking</li>
                   </ol>
-                </div>
+                </div> */}
               </div>
             </ReactWOW>
 

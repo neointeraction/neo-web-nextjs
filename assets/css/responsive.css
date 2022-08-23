@@ -47,7 +47,7 @@
     padding: 20px 20px;
   }
   .n-banner-img {
-    margin-bottom: 0;
+    margin-bottom: -25px;
   }
   .n-banner-container img {
     margin-bottom: -10px;
@@ -185,5 +185,11 @@
     width: 32px;
     height: 32px;
     padding: 6px;
+  }
+  object {
+    width: 100%;
+  }
+  .slider-image {
+    min-height: auto;
   }
 }

@@ -275,9 +275,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .n-banner-img {
   margin-top: 60px;
-  margin-bottom: -18px;
-  width: 45%;
-  margin: auto auto -50px auto;
+  margin-bottom: -55px;
+  text-align: center;
 }
 
 .n-banner-container {
@@ -570,6 +569,10 @@ body::-webkit-scrollbar-thumb:hover {
 .service-img {
   opacity: 0;
   transform: translate(-200px, 0);
+}
+
+.col-md-5 .service-img object {
+  width: 100%;
 }
 
 .col-md-5 .service-img {
@@ -947,6 +950,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .slider-image {
   cursor: pointer;
+  min-height: 400px;
+  max-height: 400px;
 }
 
 .n-project-section {
