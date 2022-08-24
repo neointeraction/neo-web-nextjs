@@ -266,12 +266,24 @@ export default withRouter(
                     contentText={
                       <div>
                         <p>
-                          We assist company in standardizing the design
-                          experience across their platform ireespective
-                          softwares and front end UI framework by building
-                          design system which helps to create consistent design
-                          language across the product that abides the company’s
-                          branding science
+                          Technology & user expectations change with time and
+                          organizations are not nimble enough to adopt new
+                          technologies as it requires retraining staff and
+                          reworking existing systems, creating more overheads.
+                        </p>
+                        <p>
+                          Digital transformation isn’t just about using more
+                          software tools and upgrading a company’s IT
+                          infrastructure. When an organization decides to
+                          implement technologies in its business operations, the
+                          way it engages with customers changes as well.
+                        </p>
+                        <p>
+                          What this means is that if the user experience doesn’t
+                          get enough attention, chances are the entire process
+                          will fail. For the digital transformation of your
+                          company to be successful, go for a Design
+                          Transformation approach.
                         </p>
                         {/* <p>
                           To know more about how we deliver great experiences,

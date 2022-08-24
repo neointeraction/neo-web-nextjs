@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { useAnimation, motion, AnimatePresence } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import Slider from "react-slick";
 import { DataContext } from "context/DataContext";
 import { baseUrl } from "globalConfig";
 
 import Right from "assets/images/n-images/slider-right.svg";
 import Left from "assets/images/n-images/slider-left.svg";
-import ProjImage from "assets/images/n-images/proj1.png";
 import Link from "next/link";
-import CardTile from "components/CardTile";
 
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import Carousel from "react-responsive-carousel/lib/js/components/Carousel/index";
@@ -51,6 +48,7 @@ const ProjectSlider = () => {
           {(context) => (
             <div>
               <Carousel
+                swipeable={false}
                 autoPlay
                 infiniteLoop
                 interval={5000}

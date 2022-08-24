@@ -271,11 +271,14 @@ export default withRouter(
                     contentText={
                       <div>
                         <p>
-                          We help clients envision their business vision by
-                          laying the foundation for their product development
-                          with UX strategies.
+                          Validate product ideas at the early stage of the
+                          product development stage with an agile design first
+                          approach. We believe collaboration yields innovative
+                          ideas, so working in a collaborative environment with
+                          the support of a cross-functional team helps us to
+                          design outstanding user experiences.
                         </p>
-                        <ul className="solution-list prod-list">
+                        {/* <ul className="solution-list prod-list">
                           <li>
                             By applying user psychology to customer experience,
                             we design engaging digital products used by millions
@@ -285,10 +288,17 @@ export default withRouter(
                             an agile design/development process is followed to
                             build a minimum viable product.
                           </li>
-                        </ul>
+                        </ul> */}
                         <p>
-                          We also help in building the product using the front
-                          end technologies
+                          Common problem is a lack of holistic thinking,
+                          clarity, and simplicity. We help businesses launch new
+                          products/services. We help diagnose process gaps in
+                          customer journeys and optimize the experiences.
+                        </p>
+                        <p>
+                          Our Ux researchers can assist you in validating the
+                          ideas, with market research which gives a boost to
+                          product performance and vision to the next stage.
                         </p>
                         {/* <p>
                           To know more about how we deliver great experiences,

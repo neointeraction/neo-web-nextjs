@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 import Router from "next/router";
 
+import Facebook from "assets/images/facebook.svg";
 import LinkedIn from "assets/images/linkedIn.svg";
+import Twitter from "assets/images/twitter.svg";
 import Instagram from "assets/images/instagram.svg";
 import Dribble from "assets/images/dribbble.svg";
 import Behance from "assets/images/behance.svg";
+import Youtube from "assets/images/youtube.svg";
+import Medium from "assets/images/medium.svg";
+
 import {
   Accordion,
   AccordionItem,
@@ -45,16 +50,15 @@ const Footer = () => {
                       <img src={LinkedIn} alt="LinkedIn" />
                     </a>
                   </li>
-                  <li id="behance">
+                  <li id="medium">
                     <a
-                      href="https://www.behance.net/neointeraction"
+                      href="https://neointeraction-design.medium.com/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <img src={Behance} alt="Behance" />
+                      <img src={Medium} alt="medium" />
                     </a>
                   </li>
-
                   <li id="dribble">
                     <a
                       href="https://dribbble.com/neointeraction"
@@ -71,6 +75,15 @@ const Footer = () => {
                       rel="noopener noreferrer"
                     >
                       <img src={Instagram} alt="Instagram" />
+                    </a>
+                  </li>
+                  <li id="fb">
+                    <a
+                      href="https://www.facebook.com/Neointeraction/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <img src={Facebook} alt="facebook" />
                     </a>
                   </li>
                 </ul>
@@ -196,16 +209,15 @@ const Footer = () => {
                     <img src={LinkedIn} alt="LinkedIn" />
                   </a>
                 </li>
-                <li id="behance">
+                <li id="medium">
                   <a
-                    href="https://www.behance.net/neointeraction"
+                    href="https://neointeraction-design.medium.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img src={Behance} alt="Behance" />
+                    <img src={Medium} alt="medium" />
                   </a>
                 </li>
-
                 <li id="dribble">
                   <a
                     href="https://dribbble.com/neointeraction"
@@ -222,6 +234,33 @@ const Footer = () => {
                     rel="noopener noreferrer"
                   >
                     <img src={Instagram} alt="Instagram" />
+                  </a>
+                </li>
+                <li id="twitter">
+                  <a
+                    href="https://twitter.com/neointeraction?lang=en"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={Twitter} alt="Twitter" />
+                  </a>
+                </li>
+                <li id="fb">
+                  <a
+                    href="https://www.facebook.com/Neointeraction/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={Facebook} alt="facebook" />
+                  </a>
+                </li>
+                <li id="behance">
+                  <a
+                    href="https://www.behance.net/neointeraction"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={Behance} alt="Behance" />
                   </a>
                 </li>
               </ul>

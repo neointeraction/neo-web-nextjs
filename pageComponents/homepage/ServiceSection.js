@@ -208,14 +208,16 @@ const ServiceSection = ({ inner }) => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <motion.img
+                <motion.div
                   key="product"
                   initial={{ x: -200, y: 0, opacity: 0 }}
                   animate={{ x: 0, y: 0, opacity: 1 }}
-                  src={Product}
-                  alt="Product"
                   className="service-img service-img-mob"
-                />
+                >
+                  <object type="image/svg+xml" data={Product}>
+                    <img key="ux" src={Product} alt="UX" />
+                  </object>
+                </motion.div>
                 <ul className="service-list">
                   <li>Define Product Vision</li>
                   <li>Product Research</li>
@@ -244,14 +246,16 @@ const ServiceSection = ({ inner }) => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <motion.img
-                  key="ui"
+                <motion.div
+                  key="product"
                   initial={{ x: -200, y: 0, opacity: 0 }}
                   animate={{ x: 0, y: 0, opacity: 1 }}
-                  src={UI}
-                  alt="UI"
                   className="service-img service-img-mob"
-                />
+                >
+                  <object type="image/svg+xml" data={UI}>
+                    <img key="ux" src={UI} alt="UX" />
+                  </object>
+                </motion.div>
                 <ul className="service-list">
                   <li>UI handoff dev team</li>
                   <li>Building react components</li>
@@ -282,14 +286,16 @@ const ServiceSection = ({ inner }) => {
                 </AccordionItemButton>
               </AccordionItemHeading>
               <AccordionItemPanel>
-                <motion.img
-                  key="design"
+                <motion.div
+                  key="product"
                   initial={{ x: -200, y: 0, opacity: 0 }}
                   animate={{ x: 0, y: 0, opacity: 1 }}
-                  src={Design}
-                  alt="Design"
                   className="service-img service-img-mob"
-                />
+                >
+                  <object type="image/svg+xml" data={Design}>
+                    <img key="ux" src={Design} alt="UX" />
+                  </object>
+                </motion.div>
                 <ul className="service-list">
                   <li>Set a design foundation</li>
                   <li>Achieving Human Friendly UX</li>

@@ -470,7 +470,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .footer-social-icns {
-  width: 210px;
+  width: 500px;
   margin-top: 20px;
 }
 
@@ -956,4 +956,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .n-project-section {
   min-height: 200px;
+}
+
+.n-cc-card {
 }

@@ -342,7 +342,7 @@ export default withRouter(
                             text={engage.text}
                             cardId={engage.cardId}
                             buttonText="Hire Now"
-                            className="career-card"
+                            className="career-card n-cc-card"
                           />
                         </div>
                       ))}

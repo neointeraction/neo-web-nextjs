@@ -711,7 +711,7 @@ input.form-control {
   transition: all 1s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
-.social-icons li:hover#fb {
+/* .social-icons li:hover#fb {
   background: #3b5998;
 }
 
@@ -741,7 +741,7 @@ input.form-control {
 
 .social-icons li:hover#medium {
   background: #66cdaa;
-}
+} */
 
 .cf-basis {
   flex-basis: 20%;

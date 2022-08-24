@@ -224,14 +224,13 @@ const Header = () => {
                             <img src={LinkedIn} alt="LinkedIn" />
                           </a>
                         </li>
-
-                        <li id="insta">
+                        <li id="medium">
                           <a
-                            href="https://www.instagram.com/neointeraction/"
+                            href="https://neointeraction-design.medium.com/"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <img src={Instagram} alt="Instagram" />
+                            <img src={Medium} alt="medium" />
                           </a>
                         </li>
                         <li id="dribble">
@@ -243,13 +242,22 @@ const Header = () => {
                             <img src={Dribble} alt="Dribble" />
                           </a>
                         </li>
-                        <li id="behance">
+                        <li id="insta">
                           <a
-                            href="https://www.behance.net/neointeraction"
+                            href="https://www.instagram.com/neointeraction/"
                             target="_blank"
                             rel="noopener noreferrer"
                           >
-                            <img src={Behance} alt="Behance" />
+                            <img src={Instagram} alt="Instagram" />
+                          </a>
+                        </li>
+                        <li id="fb">
+                          <a
+                            href="https://www.facebook.com/Neointeraction/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <img src={Facebook} alt="facebook" />
                           </a>
                         </li>
                       </ul>
