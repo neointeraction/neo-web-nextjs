@@ -195,7 +195,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/UxService")}
                     >
-                      Service
+                      Services
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -204,6 +204,14 @@ const Header = () => {
                       onClick={() => handleRoute("/Career")}
                     >
                       Career
+                    </li>
+                    <li
+                      className={`n-menu-item ${
+                        router.pathname === "/ContactUs" ? "active" : ""
+                      }`}
+                      onClick={() => handleRoute("/ContactUs")}
+                    >
+                      Contact Us
                     </li>
                     <li
                       className={`n-menu-item ${

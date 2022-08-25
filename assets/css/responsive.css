@@ -176,9 +176,6 @@
   .mobile-accord {
     display: block;
   }
-  .slider-container {
-    min-height: 400px;
-  }
   .nav-l,
   .nav-r {
     top: 2%;
@@ -191,5 +188,14 @@
   }
   .slider-image {
     min-height: auto;
+  }
+  .slider-container {
+    min-height: 370px;
+  }
+  .n-contact-card h4 {
+    width: 200px;
+  }
+  .contact-card-img {
+    width: 43%;
   }
 }

@@ -42,7 +42,7 @@ const Home = () => {
           <section className="section-home">
             <HomeBanner />
           </section>
-          <section className="section">
+          <section className="section section-project">
             <ProjectSlider />
           </section>
           <section className="section">

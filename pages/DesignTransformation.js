@@ -14,7 +14,7 @@ import ModalCard from "components/ModalCard";
 import CardTile from "components/CardTile";
 
 import BackArrow from "assets/images/BackArrow.svg";
-import UXImg from "assets/images/ux-service.jpg";
+import UXImg from "assets/images/n-images/dt-banner.jpg";
 
 // import captureReq from "assets/images/capture-req.png";
 // import keyScenarios from "assets/images/key-scenarios.png";
@@ -89,20 +89,20 @@ const ENGAGEMENTCONTENT = [
 const HIREDESIGNERSCONTENT = [
   {
     key: 1,
-    title: "UX Designers",
-    text: "Responsible for functional design solutions creating better product experiences. The broad responsibility of a UX designer is to ensure that the product logically flows from one step to the next. ",
+    title: "UX Researher/ Business Analyst",
+    text: "As a key member of the Product Design team, you will be the “doctor” of our product - doing regular check-ups to see if the experience is healthy, and can precisely articulate what worked well, and what needs to be improved to make our customers succeed. ",
     cardId: "quote",
   },
   {
     key: 2,
-    title: "UX Researchers",
-    text: "As a key member of the Product Design team, you will be the “doctor” of our product - doing regular check-ups to see if the experience is healthy, and can precisely articulate what worked well, and what needs to be improved to make our customers succeed.",
+    title: "UX Designer",
+    text: "Responsible for functional design solutions creating better product experiences. The broad responsibility of a UX designer is to ensure that the product logically flows from one step to the next.",
     cardId: "quote",
   },
   {
     key: 3,
-    title: "UI Designers",
-    text: "A creative individual who is responsible for creating the aesthetic look and feel of a product by using standard design principles and practices.",
+    title: "UI Engineer",
+    text: "UI Engineer who can take the designer’s pixels to codes using the latest UI programming languages. We are looking for candidates who believe in design and are ready to adapt to the latest UI technologies and standards.",
     cardId: "quote",
   },
 ];
@@ -352,7 +352,7 @@ export default withRouter(
                 <div className="section-padding">
                   <div className="container">
                     <SectionTitle
-                      title="Hire Designers"
+                      title="Hire Consultants"
                       subtitle="If your project demands experienced hands, reach us today."
                     />
                     <div className="row p-cards">

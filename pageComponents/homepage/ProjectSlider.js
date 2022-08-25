@@ -126,6 +126,9 @@ const ProjectSlider = () => {
                         }}
                       >
                         <div className="slider-image" style={{ zIndex: 2 }}>
+                          <div className="p-overlay">
+                            <button class="custom-btn">Read more</button>
+                          </div>
                           <motion.img
                             ref={ref}
                             initial={{ opacity: [0.8, 1] }}

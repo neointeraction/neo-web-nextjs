@@ -25,7 +25,7 @@ const ContactSection = () => {
             <object
               type="image/svg+xml"
               data={ContactImg}
-              className="cc-image-top card-img"
+              className="cc-image-top card-img contact-card-img"
             >
               <img src={ContactImg} alt="ContactImg" />
             </object>
@@ -57,7 +57,7 @@ const ContactSection = () => {
             <object
               type="image/svg+xml"
               data={CareerImg}
-              className="cc-image card-img"
+              className="cc-image card-img contact-card-img"
             >
               <img src={CareerImg} alt="ContactImg" />
             </object>

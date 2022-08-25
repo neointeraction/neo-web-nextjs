@@ -952,11 +952,41 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
   min-height: 400px;
   max-height: 400px;
+  position: relative;
+  transition: 0.3s all ease-in-out;
+}
+
+.p-overlay {
+  transition: 0.3s all ease-in-out;
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% + 40px);
+  position: absolute;
+  bottom: -50px;
+  border-radius: 15px 15px 0px 0px;
+  width: 100%;
+  background: rgba(27, 27, 27, 0.4);
+}
+
+.slider-image:hover .p-overlay {
+  transition: 0.3s all ease-in-out;
+  opacity: 1;
 }
 
 .n-project-section {
   min-height: 200px;
 }
 
-.n-cc-card {
+.section-project {
+  margin-bottom: -24px;
+}
+
+.contact-left-content object {
+  width: 100%;
+}
+
+.Overlay {
+  z-index: 99999999990 !important;
 }

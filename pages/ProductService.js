@@ -14,7 +14,7 @@ import ModalCard from "components/ModalCard";
 import CardTile from "components/CardTile";
 
 import BackArrow from "assets/images/BackArrow.svg";
-import UXImg from "assets/images/ux-service.jpg";
+import UXImg from "assets/images/n-images/pd-banner.jpg";
 
 // import captureReq from "assets/images/capture-req.png";
 // import keyScenarios from "assets/images/key-scenarios.png";
@@ -107,14 +107,14 @@ const ENGAGEMENTCONTENT = [
 const HIREDESIGNERSCONTENT = [
   {
     key: 1,
-    title: "UX Designers",
-    text: "Responsible for functional design solutions creating better product experiences. The broad responsibility of a UX designer is to ensure that the product logically flows from one step to the next. ",
+    title: "UX Researhers",
+    text: "As a key member of the Product Design team, you will be the “doctor” of our product - doing regular check-ups to see if the experience is healthy, and can precisely articulate what worked well, and what needs to be improved to make our customers succeed.",
     cardId: "quote",
   },
   {
     key: 2,
-    title: "UX Researchers",
-    text: "As a key member of the Product Design team, you will be the “doctor” of our product - doing regular check-ups to see if the experience is healthy, and can precisely articulate what worked well, and what needs to be improved to make our customers succeed.",
+    title: "Product Designers",
+    text: "Responsible for functional design solutions creating better product experiences. The broad responsibility of a product designer is to ensure that the product logically flows from one step to the next.",
     cardId: "quote",
   },
   {
@@ -367,7 +367,7 @@ export default withRouter(
                 <div className="section-padding">
                   <div className="container">
                     <SectionTitle
-                      title="Hire Designers"
+                      title="Hire Design Team"
                       subtitle="If your project demands experienced hands, reach us today."
                     />
                     <div className="row p-cards">
