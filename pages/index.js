@@ -51,9 +51,9 @@ const Home = () => {
           <section className="section">
             <Clients />
           </section>
-          <section className="section">
+          {/* <section className="section">
             <HomeTeam />
-          </section>
+          </section> */}
           <section className="section">
             <BlogSection />
           </section>
