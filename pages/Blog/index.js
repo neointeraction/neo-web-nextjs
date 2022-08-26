@@ -184,7 +184,7 @@ export default withRouter(
                             ))}
 
                           <ReactWOW animation="fadeIn" offset={-200}>
-                            <div className="blog-listing-section">
+                            <div className="blog-listing-section mb-spacing">
                               <SectionTitle
                                 title="Blog Articles"
                                 subtitle="Check out our latest articles written by our team of expert designers"

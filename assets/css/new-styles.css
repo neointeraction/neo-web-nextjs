@@ -990,3 +990,7 @@ body::-webkit-scrollbar-thumb:hover {
 .Overlay {
   z-index: 99999999990 !important;
 }
+
+.btn-text {
+  background: #fe5f55 !important;
+}

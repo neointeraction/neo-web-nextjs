@@ -596,6 +596,9 @@ strong {
 .footer-container {
   /* margin: 3.75rem 0; */
   background: #2f3841;
+  padding: 1.875rem 0 1.875rem 0;
+}
+.footer-container.home {
   padding: 5.875rem 0 1.875rem 0;
 }
 

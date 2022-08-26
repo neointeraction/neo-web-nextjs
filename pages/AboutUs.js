@@ -392,7 +392,7 @@ export default withRouter(
                     </div>
                   </div>
                 </ReactWOW>
-                <div className="section-padding">
+                <div className="section-padding mb-spacing">
                   <div className="container">
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div>

@@ -42,7 +42,7 @@ export default class FilterCardProjects extends Component {
               <Loader />
             ) : (
               <div>
-                <div className="filter-btn-group animated fadeIn ">
+                <div className="filter-btn-group animated fadeIn mob-hide ">
                   <button
                     className="filter-btn"
                     onClick={() => {

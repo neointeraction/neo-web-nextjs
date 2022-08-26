@@ -213,7 +213,7 @@ export default withRouter(
           <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">
-                Design Transformation
+                design transformation
               </h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Design to shape tomorrow's digital experiences.
@@ -429,7 +429,7 @@ export default withRouter(
               </ReactWOW>
             </div>
             <ReactWOW animation="fadeIn" offset={-200}>
-              <div className="contact-section no-slider mb-20">
+              <div className="contact-section no-slider mb-20 mb-spacing">
                 <div className="container">
                   <SectionTitle
                     title="Do you have a similar project ?"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Router from "next/router";
-
+import { useRouter } from "next/router";
 import Facebook from "assets/images/facebook.svg";
 import LinkedIn from "assets/images/linkedIn.svg";
 import Twitter from "assets/images/twitter.svg";
@@ -19,6 +19,8 @@ import {
 } from "react-accessible-accordion";
 
 const Footer = () => {
+  const router = useRouter();
+
   const handleRoute = (path) => {
     Router.push(path);
   };
@@ -27,17 +29,19 @@ const Footer = () => {
 
   return (
     <div>
-      <div className="footer-container">
+      <div
+        className={`footer-container ${router.pathname === "/" ? "home" : ""}`}
+      >
         <div className="container-fluid">
           <div className="row">
             <div className="col-md-3">
               <div className="footer-menu">
                 <ul className="footer-menu-link">
-                  <li onClick={() => handleRoute("/AboutUs")}>About</li>
-                  <li onClick={() => handleRoute("/Projects")}>Our Work</li>
-                  <li onClick={() => handleRoute("/ContactUs")}>Contact Us</li>
-                  <li onClick={() => handleRoute("/Career")}>Careers</li>
+                  <li onClick={() => handleRoute("/AboutUs")}>About Us</li>
+                  <li onClick={() => handleRoute("/Projects")}>Projects</li>
                   <li onClick={() => handleRoute("/UxService")}>Services</li>
+                  <li onClick={() => handleRoute("/Career")}>Careers</li>
+                  <li onClick={() => handleRoute("/ContactUs")}>Contact Us</li>
                   <li onClick={() => handleRoute("/Blog")}>Blogs</li>
                 </ul>
                 <ul className="social-icons n-social-icons no-bg  mob-view-social">
