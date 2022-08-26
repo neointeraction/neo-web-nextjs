@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import BannerImage from "assets/images/n-images/animated/home-svg.svg";
-import UX from "assets/images/n-images/ux.svg";
 
 const HomeBanner = () => {
   return (
