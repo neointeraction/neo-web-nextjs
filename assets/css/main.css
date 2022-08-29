@@ -2994,10 +2994,15 @@ textarea {
   color: #a5a5a5;
   letter-spacing: 0;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
   display: block;
   transition: 0.3s all ease-in-out;
-  cursor: auto;
+  cursor: pointer;
+}
+
+.footer-links-title:hover {
+  color: rgba(255, 255, 255, 0.8);
+  transition: 0.3s all ease-in-out;
 }
 
 .footer-quick-links li .link:hover {

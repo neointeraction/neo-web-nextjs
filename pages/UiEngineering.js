@@ -261,7 +261,7 @@ export default withRouter(
               </ReactWOW>
 
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle title="Our Process" />
                     {/* <div className="service-process-img">
@@ -296,7 +296,7 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle
                       title="Technologies we use"
@@ -309,7 +309,7 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle
                       title="Hire Engineers"
@@ -335,7 +335,7 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding" id="eng-modal">
+                <div className="section-padding pt-0" id="eng-modal">
                   <div className="container">
                     <SectionTitle
                       title="The Engagement Model"

@@ -297,35 +297,37 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="container">
-                  <SectionTitle title="Our Design Process" />
-                  {/* <div className="section-padding"> */}
-                  {/* <CombinedShapeCard content={PROCESSIMAGES} /> */}
-                  {/* <img
+                <div className="section-padding pt-0">
+                  <div className="container">
+                    <SectionTitle title="Our Design Process" />
+                    {/* <div className="section-padding"> */}
+                    {/* <CombinedShapeCard content={PROCESSIMAGES} /> */}
+                    {/* <img
                       src={DesignProcess}
                       alt="DesignProcess"
                       className="design-process"
                     /> */}
-                  {/* </div> */}
-                  <div className="row p-cards">
-                    {[...PROCESSCONTENT].map((engage) => (
-                      <div
-                        className="col-md-4 card-margin-bottom"
-                        key={engage.key}
-                      >
-                        <ModalCard
-                          image={engage.image}
-                          title={engage.title}
-                          text={engage.text}
-                          // textItalic={engage.textItalic}
-                        />
-                      </div>
-                    ))}
+                    {/* </div> */}
+                    <div className="row p-cards">
+                      {[...PROCESSCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard
+                            image={engage.image}
+                            title={engage.title}
+                            text={engage.text}
+                            // textItalic={engage.textItalic}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle
                       title="Hire Designers"
@@ -351,7 +353,7 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding" id="eng-modal">
+                <div className="section-padding pt-0" id="eng-modal">
                   <div className="container">
                     <SectionTitle
                       title="The Engagement Model"

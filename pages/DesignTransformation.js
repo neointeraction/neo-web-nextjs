@@ -301,47 +301,29 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="container">
-                  <SectionTitle title="Our Design Process" />
-                  {/* <div className="section-padding"> */}
-                  {/* <CombinedShapeCard content={PROCESSIMAGES} /> */}
-                  {/* <img
+                <div className="section-padding pt-0">
+                  <div className="container">
+                    <SectionTitle title="Our Design Process" />
+                    {/* <div className="section-padding"> */}
+                    {/* <CombinedShapeCard content={PROCESSIMAGES} /> */}
+                    {/* <img
                       src={DesignProcess}
                       alt="DesignProcess"
                       className="design-process"
                     /> */}
-                  {/* </div> */}
-                  <div className="row p-cards">
-                    {[...PROCESSCONTENT].map((engage) => (
-                      <div
-                        className="col-md-4 card-margin-bottom"
-                        key={engage.key}
-                      >
-                        <ModalCard
-                          image={engage.image}
-                          title={engage.title}
-                          text={engage.text}
-                          // textItalic={engage.textItalic}
-                        />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </ReactWOW>
-              <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding" id="eng-modal">
-                  <div className="container">
-                    <SectionTitle
-                      title="The Engagement Model"
-                      subtitle="Based on your core business, the models below may suit well that will add the right value for your short and long term project goals. Our team is familiar with the Agile & Learn methods of design delivery."
-                    />
+                    {/* </div> */}
                     <div className="row p-cards">
-                      {[...ENGAGEMENTCONTENT].map((engage) => (
+                      {[...PROCESSCONTENT].map((engage) => (
                         <div
                           className="col-md-4 card-margin-bottom"
                           key={engage.key}
                         >
-                          <ModalCard title={engage.title} text={engage.text} />
+                          <ModalCard
+                            image={engage.image}
+                            title={engage.title}
+                            text={engage.text}
+                            // textItalic={engage.textItalic}
+                          />
                         </div>
                       ))}
                     </div>
@@ -349,7 +331,7 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle
                       title="Hire Consultants"
@@ -374,6 +356,27 @@ export default withRouter(
                   </div>
                 </div>
               </ReactWOW>
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="section-padding pt-0" id="eng-modal">
+                  <div className="container">
+                    <SectionTitle
+                      title="The Engagement Model"
+                      subtitle="Based on your core business, the models below may suit well that will add the right value for your short and long term project goals. Our team is familiar with the Agile & Learn methods of design delivery."
+                    />
+                    <div className="row p-cards">
+                      {[...ENGAGEMENTCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard title={engage.title} text={engage.text} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ReactWOW>
+
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div>
                   <div className="container">

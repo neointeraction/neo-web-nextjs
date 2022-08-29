@@ -238,7 +238,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .menu-right-content {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
   align-items: flex-end;
   height: 100%;
@@ -541,6 +541,12 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: 0.3s all ease-in-out;
+}
+
+.accordion__button:hover {
+  background: #fff !important;
+  transition: 0.3s all ease-in-out;
 }
 
 .accordion__button[aria-expanded="true"] {
@@ -569,6 +575,7 @@ body::-webkit-scrollbar-thumb:hover {
 .service-img {
   opacity: 0;
   transform: translate(-200px, 0);
+  text-align: center;
 }
 
 .col-md-5 .service-img object {
@@ -962,9 +969,9 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% + 40px);
+  height: calc(100% + 42px);
   position: absolute;
-  bottom: -50px;
+  bottom: -42px;
   border-radius: 15px 15px 0px 0px;
   width: 100%;
   background: rgba(27, 27, 27, 0.4);
@@ -993,4 +1000,8 @@ body::-webkit-scrollbar-thumb:hover {
 
 .btn-text {
   background: #fe5f55 !important;
+}
+
+.pt-0 {
+  padding-top: 0 !important;
 }

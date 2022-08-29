@@ -106,7 +106,10 @@ const Footer = () => {
                   >
                     UX Design
                   </h4>
-                  <ul className="footer-quick-links">
+                  <ul
+                    className="footer-quick-links"
+                    onClick={() => handleRoute("/UxService")}
+                  >
                     <li>
                       <div className="link">User Research</div>
                     </li>
@@ -134,7 +137,10 @@ const Footer = () => {
                   >
                     Product Design
                   </h4>
-                  <ul className="footer-quick-links">
+                  <ul
+                    className="footer-quick-links"
+                    onClick={(e) => handleRoute("/ProductService")}
+                  >
                     <li>
                       <div className="link">Define Product Vision</div>
                     </li>
@@ -159,7 +165,10 @@ const Footer = () => {
                   >
                     UI Engineering
                   </h4>
-                  <ul className="footer-quick-links">
+                  <ul
+                    className="footer-quick-links"
+                    onClick={() => handleRoute("/UiEngineering")}
+                  >
                     <li>
                       <div className="link">UI handoff dev team</div>
                     </li>
@@ -184,7 +193,10 @@ const Footer = () => {
                   >
                     Design transformation
                   </h4>
-                  <ul className="footer-quick-links">
+                  <ul
+                    className="footer-quick-links"
+                    onClick={(e) => handleRoute("/DesignTransformation")}
+                  >
                     <li>
                       <div className="link">Set a design foundation</div>
                     </li>

@@ -88,7 +88,7 @@ const ProjectSlider = () => {
                 )}
               >
                 {[...context.state.projects]
-                  .reverse()
+                  .sort((a, b) => a.projectId - b.projectId)
                   .filter((name) => {
                     console.log(name, "name");
                     return name.showInHomepage;
@@ -104,6 +104,7 @@ const ProjectSlider = () => {
                           className="n-banner-title"
                         >
                           {cards.cardTitle}
+                          {console.log(context.state.projects, "cards")}
                         </motion.h2>
                         <motion.h4
                           ref={ref}
