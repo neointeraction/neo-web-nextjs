@@ -46,6 +46,18 @@ function MyApp({ Component, pageProps }) {
                   async
                   src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
                 ></script>
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `
+     (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "cr09zcax3l");
+`,
+                  }}
+                />
+                ;
               </Head>
               <Component {...pageProps} />
             </MainLayout>
