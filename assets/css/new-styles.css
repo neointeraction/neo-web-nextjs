@@ -545,8 +545,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .accordion__button:hover {
-  background: #fff !important;
+  background: rgba(233, 233, 233, 0.96) !important;
   transition: 0.3s all ease-in-out;
+  color: #5b4d4dd6 !important;
 }
 
 .accordion__button[aria-expanded="true"] {
@@ -1004,4 +1005,13 @@ body::-webkit-scrollbar-thumb:hover {
 
 .pt-0 {
   padding-top: 0 !important;
+}
+
+.accord-arrow {
+  transform: rotate(90deg);
+  margin-right: 10px;
+}
+
+.accordion__button[aria-expanded="true"] .accord-arrow {
+  display: none;
 }

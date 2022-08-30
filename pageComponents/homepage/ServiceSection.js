@@ -153,6 +153,11 @@ const ServiceSection = ({ inner }) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <h4>UX Design</h4>
+                  <img
+                    src={ArrowRight}
+                    alt="ArrowRight"
+                    className="accord-arrow"
+                  />
                   <button
                     className="n-link-btn"
                     onClick={() => {
@@ -196,6 +201,11 @@ const ServiceSection = ({ inner }) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <h4>Product Design</h4>
+                  <img
+                    src={ArrowRight}
+                    alt="ArrowRight"
+                    className="accord-arrow"
+                  />
                   <button
                     className="n-link-btn"
                     onClick={(e) => handleRoute("/ProductService")}
@@ -234,6 +244,11 @@ const ServiceSection = ({ inner }) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <h4>UI Engineering</h4>
+                  <img
+                    src={ArrowRight}
+                    alt="ArrowRight"
+                    className="accord-arrow"
+                  />
                   <button
                     className="n-link-btn"
                     onClick={(e) => handleRoute("/UiEngineering")}
@@ -274,6 +289,11 @@ const ServiceSection = ({ inner }) => {
               <AccordionItemHeading>
                 <AccordionItemButton>
                   <h4>Design Transformation</h4>
+                  <img
+                    src={ArrowRight}
+                    alt="ArrowRight"
+                    className="accord-arrow"
+                  />
                   <button
                     className="n-link-btn"
                     onClick={(e) => handleRoute("/DesignTransformation")}
