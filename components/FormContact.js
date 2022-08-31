@@ -230,7 +230,9 @@ export default class FormContact extends Component {
             <div className="wrapper">
               <form className="form-section" onSubmit={this.submitEmail}>
                 <div className="side">
-                  <h1 className="form-title">Get in touch with us</h1>
+                  <h1 className="form-title contact-form-title">
+                    Get in touch with us
+                  </h1>
                   <div className="InputGroup" style={{ display: "none" }}>
                     <input
                       type="radio"

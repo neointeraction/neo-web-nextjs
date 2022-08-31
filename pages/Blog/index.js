@@ -76,7 +76,7 @@ export default withRouter(
         <div>
           <div>
             <Head>
-              <title>Blog | Neointeraction</title>
+              <title>Blog | Best UI/UX design company in India</title>
               <meta
                 name="description"
                 content="Read engaging blogs, articles and case studies related to the design industry. Subscribe to our newsletter to stay up to date with the latest UI/UX trends."

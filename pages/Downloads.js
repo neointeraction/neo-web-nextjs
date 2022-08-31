@@ -132,7 +132,9 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>Download Resources | Neointeraction </title>
+            <title>
+              Download Resources | Best UI/UX design company in India
+            </title>
             <meta
               name="description"
               content="Get great design assets and resources created by one of the best UI/UX design companies to help in your new projects. Drop your Email to download for free."

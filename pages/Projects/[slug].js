@@ -406,7 +406,7 @@ export default withRouter(
                     />
                   </div>
                 </ReactWOW>
-                <ReactWOW animation="fadeIn" offset={-200}>
+                {/* <ReactWOW animation="fadeIn" offset={-200}>
                   <div>
                     <Quotes
                       quoteText={
@@ -416,7 +416,18 @@ export default withRouter(
                       }
                     />
                   </div>
-                </ReactWOW>
+                </ReactWOW> */}
+                <div className="container animated fadeIn">
+                  <ReactWOW animation="fadeIn" offset={-200}>
+                    <div className="blog-quote-box project-quote-box">
+                      <p className="b-quote-text">
+                        {projectInfo.project_detail
+                          ? projectInfo.project_detail.TestimonialKeyHighlight
+                          : ""}
+                      </p>
+                    </div>
+                  </ReactWOW>
+                </div>
                 <div className="container animated fadeIn">
                   {(
                     projectInfo.project_detail

@@ -1017,3 +1017,19 @@ body::-webkit-scrollbar-thumb:hover {
 .accordion__button[aria-expanded="true"] .accord-arrow {
   display: none;
 }
+
+.margin-footer {
+  margin-top: 43px !important;
+}
+
+.modal-card {
+  border-radius: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+}
+
+.project-mb-spacing {
+  margin-bottom: 20px;
+}
+
+.project-quote-box {
+  margin: auto !important;
+}

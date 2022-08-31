@@ -102,14 +102,26 @@ const Ebook = () => {
       <div className="container ebk-container">
         <div className="home-content">
           <div>
-            <ReactWOW animation="fadeIn" offset={-200}>
+            {/* <ReactWOW animation="fadeIn" offset={-200}>
               <div>
                 <Quotes
                   quoteText="Agile UX is a set of processes that may seem restrictive but actually 
                   prevents development of fixed mindset about a problem as the process is based on iteration and incremental improvements"
                 />
               </div>
-            </ReactWOW>
+            </ReactWOW> */}
+            <div className="container animated fadeIn">
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="blog-quote-box project-quote-box">
+                  <p className="b-quote-text">
+                    Agile UX is a set of processes that may seem restrictive but
+                    actually prevents development of fixed mindset about a
+                    problem as the process is based on iteration and incremental
+                    improvements
+                  </p>
+                </div>
+              </ReactWOW>
+            </div>
             <ReactWOW animation="fadeIn" delay="0s" offset={0}>
               <div>
                 <ImageVideoText

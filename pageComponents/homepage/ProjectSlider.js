@@ -51,7 +51,7 @@ const ProjectSlider = () => {
                 swipeable={false}
                 autoPlay
                 infiniteLoop
-                interval={5000}
+                interval={3000}
                 showIndicators={false}
                 animationHandler="fade"
                 renderArrowPrev={(clickHandler, hasPrev) => (

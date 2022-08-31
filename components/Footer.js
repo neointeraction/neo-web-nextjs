@@ -98,7 +98,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="col-md-9">
-              <div className="row mob-hide">
+              <div className="row mob-hide margin-footer">
                 <div className="col-md-3">
                   <h4
                     className="footer-links-title"

@@ -202,7 +202,7 @@ export default withRouter(
             />
             <meta
               name="keywords"
-              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing user experience design agency, ui mobile app design"
+              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing, user experience design agency, ui mobile app design"
             />
           </Head>
           <a to="#" onClick={this.handleBack}>

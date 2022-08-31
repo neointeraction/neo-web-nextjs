@@ -22,6 +22,7 @@ import BackArrow from "assets/images/BackArrow.svg";
 // import CareerImg2 from "assets/images/ux-img.jpg";
 // import CareerImg3 from "assets/images/ux-img.jpg";
 import internImg from "assets/images/internship.jpeg";
+import HomeTeam from "pageComponents/homepage/HomeTeam";
 // import testVideo from "assets/images/testimonial-temp.png";
 
 const FAQ = [
@@ -249,7 +250,9 @@ export default withRouter(
                 </div>
               </div>
             </ReactWOW>
-
+            <div className="career-team-banner">
+              <HomeTeam />
+            </div>
             <ReactWOW animation="fadeIn" offset={-200}>
               <div className="intern-section" id="intern">
                 <div className="container">

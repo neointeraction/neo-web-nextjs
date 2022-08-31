@@ -2706,32 +2706,47 @@ textarea {
 .loader-logo {
   width: 100px;
   pointer-events: none;
+  margin-left: -20px;
 }
 
 .loader-logo .logo-block {
-  height: 2.5rem;
+  height: 16px;
+  width: 16px;
+  border-radius: 50% !important;
+  flex: inherit !important;
+  margin-right: 2px;
+  opacity: 0.7;
 }
 
 .loader-logo .blockflip1 {
-  -webkit-animation: flip 1.8s;
-  animation: flip 1.8s;
+  -webkit-animation: pulse 1.8s;
+  animation: pulse 1.8s;
   animation-iteration-count: infinite;
 }
 .loader-logo .blockflip2 {
-  -webkit-animation: flip 1.8s;
-  animation: flip 1.8s;
+  -webkit-animation: pulse 1.8s;
+  animation: pulse 1.8s;
   animation-iteration-count: infinite;
 }
 .loader-logo .blockflip3 {
-  -webkit-animation: flip 1.8s;
-  animation: flip 1.8s;
+  -webkit-animation: pulse 1.8s;
+  animation: pulse 1.8s;
   animation-iteration-count: infinite;
 }
 .loader-logo .blockflip4 {
-  -webkit-animation: flip 1.8s;
-  animation: flip 1.8s;
+  -webkit-animation: pulse 1.8s;
+  animation: pulse 1.8s;
   animation-iteration-count: infinite;
   border-radius: 0;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #001f3f;
+  }
+  100% {
+    background-color: #ff4136;
+  }
 }
 
 /* info-box-blog */
@@ -2994,7 +3009,7 @@ textarea {
   color: #a5a5a5;
   letter-spacing: 0;
   font-weight: 400;
-  margin-bottom: 16px;
+  margin-bottom: 10px !important;
   display: block;
   transition: 0.3s all ease-in-out;
   cursor: pointer;
@@ -3185,6 +3200,7 @@ textarea {
 
 .img-sprite img {
   width: 100%;
+  margin-top: 20px;
 }
 
 .design-process {
@@ -3272,23 +3288,25 @@ textarea {
   background-size: cover;
   /* background-attachment: fixed; */
   height: 660px;
-  margin: 60px 0 -120px 0;
+  /* margin: 60px 0 -120px 0; */
   display: flex;
+  margin-top: 60px;
 }
 .lpsecond-banner {
   background-image: url(../images/LpSecond.jpg);
   background-size: cover;
   /* background-attachment: fixed; */
   height: 660px;
-  margin: 60px 0 -120px 0;
+  /* margin: 60px 0 -120px 0; */
   width: 100%;
+  margin-top: 60px;
 }
 .uxaudit-banner {
   background-image: url(../images/ux-audit-bnr.jpg);
   background-size: cover;
   /* background-attachment: fixed; */
   height: 660px;
-  margin: 60px 0 -120px 0;
+  /* margin: 60px 0 -120px 0; */
   width: 100%;
 }
 
@@ -5376,7 +5394,7 @@ textarea {
     /* background-attachment: fixed; */
     /* height: 100%; */
     min-height: 600px;
-    margin: 60px 0 -120px 0;
+    /* margin: 60px 0 -120px 0; */
     display: -moz-box;
     display: flex;
     background-repeat: no-repeat;
@@ -5430,7 +5448,7 @@ textarea {
     /* background-attachment: fixed; */
     height: 100%;
     min-height: 400px;
-    margin: 60px 0 -120px 0;
+    /* margin: 60px 0 -120px 0; */
     display: -moz-box;
     display: flex;
     background-repeat: no-repeat;
@@ -5496,9 +5514,9 @@ textarea {
     border-radius: 1.875rem;
   }
 
-  .video-yt .featured-blog-card {
+  /* .video-yt .featured-blog-card {
     max-height: 500px;
-  }
+  } */
 
   .featured-blog-summary {
     display: none;
@@ -5581,7 +5599,7 @@ textarea {
     background-size: cover;
     /* background-attachment: fixed; */
     height: 600px;
-    margin: 60px 0 -120px 0;
+    /* margin: 60px 0 -120px 0; */
     display: flex;
   }
   .ebk-banner {

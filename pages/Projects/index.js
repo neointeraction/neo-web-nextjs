@@ -30,7 +30,7 @@ export default withRouter(
         <div>
           <div>
             <Head>
-              <title>Projects | UI/UX design company in india</title>
+              <title>Projects | Best UI/UX design company in India</title>
               <meta
                 name="description"
                 content="Check out the projects created by one of the best UI/UX design companies in Bangalore. Our clear and meticulous designs are aimed to boost your business."
@@ -55,7 +55,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="body-page">
+          <div className="body-page ">
             <div className="container">
               <div className="home-content">
                 <h1 className="main-title animated fadeIn delay-0.5s">

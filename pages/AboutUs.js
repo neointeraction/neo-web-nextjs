@@ -166,7 +166,7 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>About Us | Best UI/UX design company in bangalore</title>
+            <title>About Us | Best UI/UX design company in India</title>
             <meta
               name="description"
               content="Best UI/UX design company in Bangalore, with 15years of experience in creating designs that have touched people's lives, thus enabling business success"

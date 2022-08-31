@@ -196,14 +196,25 @@ const gcampaign = () => {
             <UIEngineeringImageText />
           </div>
 
-          <ReactWOW animation="fadeIn" offset={-200}>
+          {/* <ReactWOW animation="fadeIn" offset={-200}>
             <div>
               <Quotes
                 quoteText="We were looking for a partner who would help bring our applications to the 21st century 
                   by using some of the latest technology,that's when we found Neointeraction."
               />
             </div>
-          </ReactWOW>
+          </ReactWOW> */}
+          <div className="container animated fadeIn">
+            <ReactWOW animation="fadeIn" offset={-200}>
+              <div className="blog-quote-box project-quote-box">
+                <p className="b-quote-text">
+                  We were looking for a partner who would help bring our
+                  applications to the 21st century by using some of the latest
+                  technology,that's when we found Neointeraction.
+                </p>
+              </div>
+            </ReactWOW>
+          </div>
 
           <div className="section-padding">
             <ReactWOW animation="fadeIn" offset={-200}>
@@ -230,7 +241,7 @@ const gcampaign = () => {
           <FormContactAdLp />
           </div> */}
 
-          <div className="section-padding">
+          <div className="section-padding mb-spacing">
             <BlogCardAd />
           </div>
           <ReactWOW animation="fadeIn" offset={-200}>

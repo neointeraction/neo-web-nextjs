@@ -41,7 +41,7 @@ export default class FilterCardProjects extends Component {
             {this.state.loading ? (
               <Loader />
             ) : (
-              <div>
+              <div className="project-mb-spacing">
                 <div className="filter-btn-group animated fadeIn mob-hide ">
                   <button
                     className="filter-btn"

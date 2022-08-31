@@ -79,7 +79,7 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>Contact Us | Neointeraction </title>
+            <title>Contact Us | Best UI/UX design company in India </title>
             <meta
               name="description"
               content="Contact us at (+91 944-9565-744) or info@neointeraction.com to hire top UI/UX designers. We provide creative solutions for your design queries."
