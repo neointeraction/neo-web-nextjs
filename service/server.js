@@ -53,7 +53,7 @@ app.post("/send", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["info@neointeraction.com", "shameer@neointeraction.com"],
+    to: ["sam@neointeraction.com", "shameer@neointeraction.com"],
     subject: `Contact us form submission : ${name} <${email}> : ${service} `,
     html: `<html>
      <body>
@@ -98,7 +98,7 @@ app.post("/sendgad", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["info@neointeraction.com"],
+    to: ["sam@neointeraction.com"],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
      <body>
@@ -142,7 +142,7 @@ app.post("/sendebk", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["info@neointeraction.com"],
+    to: ["sam@neointeraction.com"],
     subject: `E-Book LP form submission : ${name} <${email}>`,
     html: `<html>
      <body>
@@ -176,7 +176,7 @@ app.post("/sendebk", (req, res) => {
       };
       var htmlToSend = template(replacements);
       var mailebk = {
-        from: "info@neointeraction.com",
+        from: "sam@neointeraction.com",
         to: email,
         subject: `Neointeraction Design Download Request`,
         html: htmlToSend,
@@ -239,7 +239,7 @@ app.post("/career", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["hr@neointeraction.com", "info@neointeraction.com"],
+    to: ["hr@neointeraction.com", "sam@neointeraction.com"],
     subject: `Internship request from ${name} <${email}>`,
     text: description,
     attachments: [
@@ -294,7 +294,7 @@ app.post("/jobrequest", (req, res) => {
     from: email,
     to: [
       "hr@neointeraction.com",
-      "info@neointeraction.com",
+      "sam@neointeraction.com",
       "shameer@neointeraction.com",
     ],
     subject: `Job Request for ${jobType} from ${name} <${email}>`,
@@ -373,7 +373,7 @@ app.post("/hiredeveloper", (req, res) => {
   var description = req.body.description;
   var mail = {
     from: email,
-    to: ["hr@neointeraction.com", "info@neointeraction.com"],
+    to: ["hr@neointeraction.com", "sam@neointeraction.com"],
     subject: `Hire Developer - Message from ${name} <${email}>`,
     // text: description,
     html: `<html>
