@@ -53,7 +53,7 @@ app.post("/send", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["info@neointeraction.com"],
+    to: ["info@neointeraction.com", "shameer@neointeraction.com"],
     subject: `Contact us form submission : ${name} <${email}> : ${service} `,
     html: `<html>
      <body>
@@ -292,7 +292,11 @@ app.post("/jobrequest", (req, res) => {
 
   var mail = {
     from: email,
-    to: ["hr@neointeraction.com", "info@neointeraction.com"],
+    to: [
+      "hr@neointeraction.com",
+      "info@neointeraction.com",
+      "shameer@neointeraction.com",
+    ],
     subject: `Job Request for ${jobType} from ${name} <${email}>`,
     // text: description,
     attachments: [
