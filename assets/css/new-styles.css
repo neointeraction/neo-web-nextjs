@@ -1033,3 +1033,7 @@ body::-webkit-scrollbar-thumb:hover {
 .project-quote-box {
   margin: auto !important;
 }
+
+.mb-spacing-landing {
+  margin-bottom: 20px !important;
+}

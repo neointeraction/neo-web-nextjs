@@ -241,11 +241,11 @@ const gcampaign = () => {
           <FormContactAdLp />
           </div> */}
 
-          <div className="section-padding mb-spacing">
+          <div className="section-padding ">
             <BlogCardAd />
           </div>
           <ReactWOW animation="fadeIn" offset={-200}>
-            <div className="contact-section no-slider mb-20">
+            <div className="contact-section no-slider mb-20 mb-spacing-landing">
               <div className="container">
                 <SectionTitle
                   title="Contact US"

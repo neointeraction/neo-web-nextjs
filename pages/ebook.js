@@ -235,7 +235,7 @@ const Ebook = () => {
                 <FilterCardProjectsSlider />
               </ReactWOW>
             </div>
-            <div className="section-padding">
+            <div className="section-padding mb-spacing-landing">
               <BlogCardAd />
             </div>
           </div>
