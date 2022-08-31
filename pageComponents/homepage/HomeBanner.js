@@ -28,8 +28,8 @@ const HomeBanner = () => {
             transition={{ delay: 0.6, duration: 0.5 }}
             className="n-banner-subtext"
           >
-            focusing on User Centric Digital product experiences enabling design
-            transformations for businesses
+            Focusing on User Centric Digital product experience enables business
+            success
           </motion.h4>
         </div>
         <div className="n-banner-img">

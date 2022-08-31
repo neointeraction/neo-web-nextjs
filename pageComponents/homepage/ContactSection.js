@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Router from "next/router";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import CareerImg from "assets/images/n-images/animated/career-card.svg";
 import ContactImg from "assets/images/n-images/animated/contact-card.svg";
+
+const titleVariant = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { duration: 0.5 } },
+};
 
 const ContactSection = () => {
   const handleRoute = (path) => {
     Router.push(path);
   };
 
+  const { ref, inView } = useInView({
+    rootMargin: "-80px 0px -150px 0px",
+  });
+
   return (
-    <div className="contact-cards-section">
+    <div className="contact-cards-section" ref={ref}>
       <div className="row">
         <div className="col-md-6">
           <div className="n-contact-card">
@@ -54,13 +64,17 @@ const ContactSection = () => {
               alt="CareerImg"
               className="cc-image card-img"
             /> */}
-            <object
-              type="image/svg+xml"
-              data={CareerImg}
-              className="cc-image card-img contact-card-img"
-            >
-              <img src={CareerImg} alt="ContactImg" />
-            </object>
+            <AnimatePresence>
+              {inView && (
+                <object
+                  type="image/svg+xml"
+                  data={CareerImg}
+                  className="cc-image card-img contact-card-img"
+                >
+                  <img src={CareerImg} alt="ContactImg" />
+                </object>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </div>

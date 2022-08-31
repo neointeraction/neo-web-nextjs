@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import { useRouter } from "next/router";
 import { motion, AnimatePresence } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 import Menu from "assets/images/n-images/menu.svg";
 import Close from "assets/images/n-images/close.svg";
@@ -79,6 +80,10 @@ const Header = () => {
     });
   });
 
+  const { ref, inView } = useInView({
+    rootMargin: "-80px 0px -150px 0px",
+  });
+
   return (
     <div className={`header-with-panel ${fixed ? "fixed" : ""}`}>
       <div className="n-header-container">
@@ -148,10 +153,10 @@ const Header = () => {
               onClick={handleMenuClose}
               className="menu-close"
             />
-            <motion.div
+            <div
               initial="hidden"
               animate={{ opacity: [0, 1] }}
-              transition={{ delay: 0.5, duration: 0.5 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
               className="n-menu-content"
             >
               <div className="row ">
@@ -160,7 +165,7 @@ const Header = () => {
                     className="n-menu-list"
                     initial="hidden"
                     animate={{ x: [-300, 0], opacity: [0, 1] }}
-                    transition={{ delay: 0.7, duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
                   >
                     <li
                       className={`n-menu-item ${
@@ -273,21 +278,25 @@ const Header = () => {
                   </motion.ul>
                 </div>
                 <div className="col-md-8 text-end">
-                  <div className="menu-right-content">
-                    <motion.div
-                      initial="hidden"
-                      animate={{ opacity: [0, 1] }}
-                      transition={{ delay: 0.1, duration: 0.5 }}
-                      className="menu-illustration"
-                    >
-                      <object type="image/svg+xml" data={Illustration}>
-                        <img src={Illustration} alt="Illustration" />
-                      </object>
-                    </motion.div>
+                  <div className="menu-right-content" ref={ref}>
+                    <AnimatePresence>
+                      {inView && (
+                        <motion.div
+                          initial="hidden"
+                          animate={{ opacity: 1 }}
+                          transition={{ delay: 0.1, duration: 0.2 }}
+                          className="menu-illustration"
+                        >
+                          <object type="image/svg+xml" data={Illustration}>
+                            <img src={Illustration} alt="Illustration" />
+                          </object>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
               </div>
-            </motion.div>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

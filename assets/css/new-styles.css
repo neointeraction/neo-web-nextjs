@@ -822,7 +822,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 .mc-text {
   font-size: 16px !important;
-  line-height: 19px !important;
+  line-height: 23px !important;
   color: #000000 !important;
 }
 
@@ -958,10 +958,11 @@ body::-webkit-scrollbar-thumb:hover {
 
 .slider-image {
   cursor: pointer;
-  min-height: 400px;
-  max-height: 400px;
+  /* min-height: 400px;
+  max-height: 400px; */
   position: relative;
   transition: 0.3s all ease-in-out;
+  position: relative;
 }
 
 .p-overlay {
@@ -970,9 +971,10 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc(100% + 42px);
+  /* height: calc(100% + 42px); */
+  height: 112.5%;
   position: absolute;
-  bottom: -42px;
+  bottom: -50px;
   border-radius: 15px 15px 0px 0px;
   width: 100%;
   background: rgba(27, 27, 27, 0.4);

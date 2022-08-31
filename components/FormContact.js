@@ -15,7 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 // const API_PATH =
 //   "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php";
 
-import Illustration from "assets/images/n-images/animated/menu-illustration.svg";
+import Illustration from "assets/images/n-images/contact-illustration.svg";
 
 const axios = require("axios").default;
 
