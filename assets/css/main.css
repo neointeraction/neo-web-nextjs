@@ -2710,12 +2710,12 @@ textarea {
 }
 
 .loader-logo .logo-block {
-  height: 16px;
-  width: 16px;
-  border-radius: 50% !important;
+  height: 2px;
+  width: 2px;
+  border-radius: 100% !important;
   flex: inherit !important;
   margin-right: 2px;
-  opacity: 0.7;
+  opacity: 1;
 }
 
 .loader-logo .blockflip1 {
@@ -2743,9 +2743,11 @@ textarea {
 @keyframes pulse {
   0% {
     background-color: #001f3f;
+    border-radius: 100% !important;
   }
   100% {
     background-color: #ff4136;
+    border-radius: 100% !important;
   }
 }
 
