@@ -256,11 +256,11 @@ export default class FormContact extends Component {
                       type="radio"
                       name="service"
                       id="size_3"
-                      value="Motion Design"
-                      checked={this.state.service === "Motion Design"}
+                      value="Product Design"
+                      checked={this.state.service === "Product Design"}
                       onChange={this.handleChange}
                     />
-                    <label htmlFor="size_3">Motion Design</label>
+                    <label htmlFor="size_3">Product Design</label>
                   </div>
                   {this.validator.message(
                     "service",
