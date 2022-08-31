@@ -1919,6 +1919,7 @@ textarea {
   align-items: center;
   position: relative;
   cursor: pointer;
+  margin-left: 26px;
 }
 
 .logo-block {

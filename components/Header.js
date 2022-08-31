@@ -173,7 +173,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/")}
                     >
-                      Home
+                      home
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -181,7 +181,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/AboutUs")}
                     >
-                      About Us
+                      about us
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -189,7 +189,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/Projects")}
                     >
-                      Projects
+                      projects
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -200,7 +200,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/UxService")}
                     >
-                      Services
+                      services
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -208,7 +208,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/Career")}
                     >
-                      Career
+                      career
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -216,7 +216,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/ContactUs")}
                     >
-                      Contact Us
+                      contact us
                     </li>
                     <li
                       className={`n-menu-item ${
@@ -224,7 +224,7 @@ const Header = () => {
                       }`}
                       onClick={() => handleRoute("/Blog")}
                     >
-                      Blog
+                      blog
                     </li>
                     <li>
                       <ul className="social-icons n-social-icons no-bg">

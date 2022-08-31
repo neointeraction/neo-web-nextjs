@@ -25,7 +25,7 @@ const titleVariant = {
   hidden: { opacity: 0, y: -5 },
 };
 
-const HomeTeam = () => {
+const HomeTeam = ({ careerText }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
 
@@ -261,8 +261,14 @@ const HomeTeam = () => {
             variants={titleVariant}
             className="n-banner-title"
           >
-            <span className="highlight"> Designs </span> that touches people's
-            lives, enables business success
+            {careerText ? (
+              "Grow your skills and expertise centered with a design thinking approach"
+            ) : (
+              <>
+                <span className="highlight"> Designs </span> that touches
+                people's lives, enables business success
+              </>
+            )}
           </motion.h3>
           <div className="boxes">
             {boxes.map((box, index) => (

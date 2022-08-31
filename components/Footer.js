@@ -37,12 +37,12 @@ const Footer = () => {
             <div className="col-md-3">
               <div className="footer-menu">
                 <ul className="footer-menu-link">
-                  <li onClick={() => handleRoute("/AboutUs")}>About Us</li>
-                  <li onClick={() => handleRoute("/Projects")}>Projects</li>
-                  <li onClick={() => handleRoute("/UxService")}>Services</li>
-                  <li onClick={() => handleRoute("/Career")}>Careers</li>
-                  <li onClick={() => handleRoute("/ContactUs")}>Contact Us</li>
-                  <li onClick={() => handleRoute("/Blog")}>Blogs</li>
+                  <li onClick={() => handleRoute("/AboutUs")}>about us</li>
+                  <li onClick={() => handleRoute("/Projects")}>projects</li>
+                  <li onClick={() => handleRoute("/UxService")}>services</li>
+                  <li onClick={() => handleRoute("/Career")}>careers</li>
+                  <li onClick={() => handleRoute("/ContactUs")}>contact us</li>
+                  <li onClick={() => handleRoute("/Blog")}>blogs</li>
                 </ul>
                 <ul className="social-icons n-social-icons no-bg  mob-view-social">
                   <li id="ln">
@@ -104,7 +104,7 @@ const Footer = () => {
                     className="footer-links-title"
                     onClick={() => handleRoute("/UxService")}
                   >
-                    UX Design
+                    ux design
                   </h4>
                   <ul
                     className="footer-quick-links"
@@ -135,7 +135,7 @@ const Footer = () => {
                     className="footer-links-title"
                     onClick={(e) => handleRoute("/ProductService")}
                   >
-                    Product Design
+                    product design
                   </h4>
                   <ul
                     className="footer-quick-links"
@@ -163,7 +163,7 @@ const Footer = () => {
                     className="footer-links-title"
                     onClick={() => handleRoute("/UiEngineering")}
                   >
-                    UI Engineering
+                    ui engineering
                   </h4>
                   <ul
                     className="footer-quick-links"
@@ -191,7 +191,7 @@ const Footer = () => {
                     className="footer-links-title"
                     onClick={(e) => handleRoute("/DesignTransformation")}
                   >
-                    Design transformation
+                    design transformation
                   </h4>
                   <ul
                     className="footer-quick-links"

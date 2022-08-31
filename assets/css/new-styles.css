@@ -193,7 +193,7 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 40px 0;
   background: #ee4947;
   border-radius: 15px;
-  padding: 50px;
+  padding: 40px 50px;
 }
 
 .n-menu-item {
@@ -201,7 +201,7 @@ body::-webkit-scrollbar-thumb:hover {
   font-size: 40px;
   line-height: 53px;
   color: #ffffff;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
   transition: 0.3s all ease-in-out;
   cursor: pointer;
 }
@@ -1045,7 +1045,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: center;
   height: 90vh;
-  margin-left: -50px;
+  /* margin-left: -50px; */
 }
 
 .ripple-loader {

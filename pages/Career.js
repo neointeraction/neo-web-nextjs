@@ -251,7 +251,7 @@ export default withRouter(
               </div>
             </ReactWOW>
             <div className="career-team-banner">
-              <HomeTeam />
+              <HomeTeam careerText="Grow your skills and expertise centered with a design thinking approach" />
             </div>
             <ReactWOW animation="fadeIn" offset={-200}>
               <div className="intern-section" id="intern">
