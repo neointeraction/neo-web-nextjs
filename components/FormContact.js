@@ -233,7 +233,7 @@ export default class FormContact extends Component {
                   <h1 className="form-title contact-form-title">
                     Get in touch with us
                   </h1>
-                  <div className="InputGroup" style={{ display: "none" }}>
+                  <div className="InputGroup">
                     <input
                       type="radio"
                       name="service"
