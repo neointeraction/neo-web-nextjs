@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import ReactWOW from "react-wow";
 // import "../css/main.css";
 
-import ModalFormContact from "../components/ModalFormContact";
+import ModalFormContact from "components/ModalFormContact";
 
-import CloseModal from "../images/Black_close_icn.svg";
-// import Attach from "../images/attach_file_Icon.svg";
+import CloseModal from "assets/images/Black_close_icn.svg";
+// import Attach from "assets/images/attach_file_Icon.svg";
 
 export default class GetQuoteModal extends Component {
   constructor() {

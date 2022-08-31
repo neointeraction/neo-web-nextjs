@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
+import Arrow from "assets/images/Arrow.svg";
 import { baseUrl } from "../globalConfig";
 import moment from "moment";
 

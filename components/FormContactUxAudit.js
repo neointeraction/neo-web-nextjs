@@ -9,8 +9,8 @@ import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-//import FormImage from "../images/image-10.jpg";
-// import ContactImg from "../images/contact-us-banner.jpg";
+//import FormImage from "assets/images/image-10.jpg";
+// import ContactImg from "assets/images/contact-us-banner.jpg";
 
 // const API_PATH =
 //   "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php";
@@ -61,12 +61,12 @@ export default class FormContactUxAudit extends Component {
 
   submitEmail(e) {
     // console.log("hello",this.state);
-    
+
     e.preventDefault();
-    if (this.validator.allValid() ) {
+    if (this.validator.allValid()) {
       this.setState({ mailSent: true });
       // alert('You submitted the form and stuff!'); https://www.neointeraction.com/server/senduxaudit`````` http://localhost:4000/senduxaudit
-      // && this.state.isCaptchaValid 
+      // && this.state.isCaptchaValid
       e.preventDefault();
       axios
         .post("https://www.neointeraction.com/server/senduxaudit", this.state)
@@ -196,7 +196,7 @@ export default class FormContactUxAudit extends Component {
   // onLoadRecaptcha() {
   //   if (this.captchaDemo) {
   //     this.captchaDemo.reset();
-  //     // this.captchaDemo.execute();  
+  //     // this.captchaDemo.execute();
   //   }
   // }
   // verifyCallback(recaptchaToken) {
@@ -211,8 +211,7 @@ export default class FormContactUxAudit extends Component {
     return (
       <div className="form-group bground-transp">
         <h1 className="ad-form-title">
-         Reach our <span className="title-red">Team!</span>
-           
+          Reach our <span className="title-red">Team!</span>
         </h1>
         <div className="align-items-right">
           {/* <div className="col-md-6 hide">
@@ -337,7 +336,10 @@ export default class FormContactUxAudit extends Component {
                     {this.state.mailSent ? "Submitting" : "Submit"}
                   </button> */}
 
-                  <button className="custom-btn loader-btns" onClick={this.submitEmail}>
+                  <button
+                    className="custom-btn loader-btns"
+                    onClick={this.submitEmail}
+                  >
                     {this.state.mailSent ? (
                       <>
                         <span>Submit</span>

@@ -2,66 +2,77 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import ModalCard from "../components/ModalCard";
-import CardTile from "../components/CardTile";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import ModalCard from "components/ModalCard";
+import CardTile from "components/CardTile";
 
-import BackArrow from "../images/BackArrow.svg";
-import UXImg from "../images/ux-service.jpg";
+import BackArrow from "assets/images/BackArrow.svg";
+import UXImg from "assets/images/ux-service.jpg";
 
-// import captureReq from "../images/capture-req.png";
-// import keyScenarios from "../images/key-scenarios.png";
-// import alternatives from "../images/alternatives.png";
-// import evaluate from "../images/evaluate.png";
-// import refine from "../images/refine.png";
-// import detailSpecs from "../images/detail-specs.png";
-// import uiSolution from "../images/ui-solution.png";
+// import captureReq from "assets/images/capture-req.png";
+// import keyScenarios from "assets/images/key-scenarios.png";
+// import alternatives from "assets/images/alternatives.png";
+// import evaluate from "assets/images/evaluate.png";
+// import refine from "assets/images/refine.png";
+// import detailSpecs from "assets/images/detail-specs.png";
+// import uiSolution from "assets/images/ui-solution.png";
 
-// import CombinedShapeCard from "../components/CombinedShapeCard";
-import GetQuoteModal from "../components/GetQuoteModal";
-import DesignProcess from "../images/design-process.png";
+// import CombinedShapeCard from "components/CombinedShapeCard";
+import GetQuoteModal from "components/GetQuoteModal";
+import DesignProcess from "assets/images/design-process.png";
+
+import UX1 from "assets/images/n-images/services/ux1.svg";
+import UX2 from "assets/images/n-images/services/ux2.svg";
+import UX3 from "assets/images/n-images/services/ux3.svg";
+import UX4 from "assets/images/n-images/services/ux4.svg";
+import UX5 from "assets/images/n-images/services/ux5.svg";
 
 const PROCESSCONTENT = [
   {
     key: 1,
+    image: UX1,
     title: "Understanding the Goals",
-    text: "The discovery phase of the project requires close study of user needs & business goals. Our team starts a project by studying this context, it’s user types, and the functional flow. A design project is strategized around a user problem that needs solving.",
+    text: "The discovery phase of the project requires close study of user needs& business goals. our team strts a project by studying the context,user types, ad functional flow. A design project is strategized around a user problem that need solving",
     textItalic: "- User profiling, Personas, Market study, Competitor analysis",
   },
   {
     key: 2,
-    title: "Setting the Ux strategy",
+    image: UX2,
+    title: "Design to Implementation",
+    text: "The success of any design depends on how well it is implemented. We understand the importance of following the best standard practices for a  pixel-perfect UI implementation for the web and mobile.",
+    textItalic:
+      "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
+  },
+  {
+    key: 3,
+    image: UX3,
+    title: "Setting up the Ux strategy",
     text: "Focusing on bringing the right web & mobile products to end-users, we apply the principles of design thinking by listening to our stakeholders feedback. We strongly believe that with the right strategy & planning, business can bring measurable outcomes.",
     textItalic:
       "- Information Architecture, Card sorting,  Affinity Mapping, Business Goals,Design Systems",
   },
   {
-    key: 3,
-    title: "Interaction Design",
+    key: 4,
+    image: UX4,
+    title: `Interaction Design`,
     text: "After understanding the users goals, the navigation experience will be designed, prototyped, and linked to various user journeys. The Interaction Design process is always done in collaboration with the user, business owners, and the technical team.",
     textItalic:
       "- Information Architecture, User Journey, Affinity Mapping,  Heuristic Evaluation, Interviews, Navigation Design, Storyboarding & Prototyping",
   },
   {
-    key: 4,
+    key: 5,
+    image: UX5,
     title: "Bringing the WOW factor",
     text: "Interaction Design is enhanced by a beautifully-crafted visual design. The end-user interacts at the UI level for better discovery, engagement, and transactions. Our UI Design team understands the need of following pixel-level detailing and standards.",
     textItalic:
       " - Detailed Layouts, UI elements, Dashboards & Data Visualization, Icons and, Illustrations, Micro-interactions",
-  },
-  {
-    key: 5,
-    title: "Design to Implementation",
-    text: "The success of any design depends on how well it is implemented. We understand the importance of following the best standard practices for a  pixel-perfect UI implementation for the web and mobile.",
-    textItalic:
-      "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
   },
 ];
 
@@ -191,7 +202,7 @@ export default withRouter(
             />
             <meta
               name="keywords"
-              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing user experience design agency, ui mobile app design"
+              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing, user experience design agency, ui mobile app design"
             />
           </Head>
           <a to="#" onClick={this.handleBack}>
@@ -207,9 +218,9 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
-              <h1 className="main-title animated fadeIn">UX Design</h1>
+              <h1 className="main-title animated fadeIn">ux design</h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Design to shape tomorrow's digital experiences.
               </h2>
@@ -217,6 +228,20 @@ export default withRouter(
                 <ul>
                   <li>
                     <button className="custom-btn">UX Design</button>
+                  </li>
+                  <li>
+                    <Link href="/ProductService">
+                      <button className="custom-btn inactive">
+                        Product Design
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/DesignTransformation">
+                      <button className="custom-btn inactive">
+                        Design Transformation
+                      </button>
+                    </Link>
                   </li>
                   <li>
                     <Link href="/UiEngineering">
@@ -272,34 +297,63 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="container">
-                  <SectionTitle title="Our Design Process" />
-                  <div className="section-padding">
+                <div className="section-padding pt-0">
+                  <div className="container">
+                    <SectionTitle title="Our Design Process" />
+                    {/* <div className="section-padding"> */}
                     {/* <CombinedShapeCard content={PROCESSIMAGES} /> */}
-                    <img
+                    {/* <img
                       src={DesignProcess}
                       alt="DesignProcess"
                       className="design-process"
-                    />
-                  </div>
-                  <div className="row p-cards">
-                    {[...PROCESSCONTENT].map((engage) => (
-                      <div
-                        className="col-md-4 card-margin-bottom"
-                        key={engage.key}
-                      >
-                        <ModalCard
-                          title={engage.title}
-                          text={engage.text}
-                          textItalic={engage.textItalic}
-                        />
-                      </div>
-                    ))}
+                    /> */}
+                    {/* </div> */}
+                    <div className="row p-cards">
+                      {[...PROCESSCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard
+                            image={engage.image}
+                            title={engage.title}
+                            text={engage.text}
+                            // textItalic={engage.textItalic}
+                          />
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding" id="eng-modal">
+                <div className="section-padding pt-0">
+                  <div className="container">
+                    <SectionTitle
+                      title="Hire Designers"
+                      subtitle="If your project demands experienced hands, reach us today."
+                    />
+                    <div className="row p-cards">
+                      {[...HIREDESIGNERSCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard
+                            title={engage.title}
+                            text={engage.text}
+                            cardId={engage.cardId}
+                            buttonText="Hire Now"
+                            className="career-card n-cc-card"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ReactWOW>
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="section-padding pt-0" id="eng-modal">
                   <div className="container">
                     <SectionTitle
                       title="The Engagement Model"
@@ -318,32 +372,7 @@ export default withRouter(
                   </div>
                 </div>
               </ReactWOW>
-              <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
-                  <div className="container">
-                    <SectionTitle
-                      title="Hire Designers"
-                      subtitle="If your project demands experienced hands, reach us today."
-                    />
-                    <div className="row p-cards">
-                      {[...HIREDESIGNERSCONTENT].map((engage) => (
-                        <div
-                          className="col-md-4 card-margin-bottom"
-                          key={engage.key}
-                        >
-                          <ModalCard
-                            title={engage.title}
-                            text={engage.text}
-                            cardId={engage.cardId}
-                            buttonText="Hire Now"
-                            className="career-card"
-                          />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </ReactWOW>
+
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div>
                   <div className="container">
@@ -368,7 +397,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
+                                    pathname: `/Projects/${cards.cardTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">
@@ -394,7 +428,7 @@ export default withRouter(
               </ReactWOW>
             </div>
             <ReactWOW animation="fadeIn" offset={-200}>
-              <div className="contact-section no-slider mb-20">
+              <div className="contact-section no-slider mb-20 mb-spacing">
                 <div className="container">
                   <SectionTitle
                     title="Do you have a similar project ?"

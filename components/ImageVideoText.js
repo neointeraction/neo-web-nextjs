@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Image from "next/image";
 // import "../css/main.css";
 
 export default class ImageVideoText extends Component {
@@ -23,6 +24,16 @@ export default class ImageVideoText extends Component {
                 src={ProjectImage}
                 alt="ProjectImage"
               />
+              // <div>
+              //   <Image
+              //     className="br-7"
+              //     src={ProjectImage}
+              //     alt="ProjectImage"
+              //     width={540}
+              //     height={500}
+              //     // objectFit="contain"
+              //   />
+              // </div>
             )}
             {video === true && (
               // <video

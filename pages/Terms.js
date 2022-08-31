@@ -7,9 +7,9 @@ import { baseUrl } from "../globalConfig";
 
 import { withRouter } from "next/router";
 
-import Loader from "../components/Loader";
+import Loader from "components/Loader";
 
-import BackArrow from "../images/BackArrow.svg";
+import BackArrow from "assets/images/BackArrow.svg";
 
 export default withRouter(
   class Terms extends Component {
@@ -71,7 +71,7 @@ export default withRouter(
                   />
                 </div>
               </a>
-              <div className="page-content">
+              <div className="page-content body-page">
                 <div className="container animated fadeIn">
                   <h1 className="main-title animated fadeIn">Agency Terms</h1>
                   <h2 className="sub-title main-sub-title animated fadeIn delay-1s">

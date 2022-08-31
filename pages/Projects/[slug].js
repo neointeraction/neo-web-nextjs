@@ -9,26 +9,26 @@ import { baseUrl } from "../../globalConfig";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../../components/ImageVideoText";
-import Quotes from "../../components/Quotes";
-import SectionTitle from "../../components/SectionTitle";
-import ProcessCard from "../../components/ProcessCard";
-import OutcomeCard from "../../components/OutcomeCard";
-import ProjectSlider from "../../components/ProjectSlider";
-import Loader from "../../components/Loader";
-import ProjectUiBanner from "../../components/ProjectUiBanner";
+import ImageVideoText from "components/ImageVideoText";
+import Quotes from "components/Quotes";
+import SectionTitle from "components/SectionTitle";
+import ProcessCard from "components/ProcessCard";
+import OutcomeCard from "components/OutcomeCard";
+import ProjectSlider from "components/ProjectSlider";
+import Loader from "components/Loader";
+import ProjectUiBanner from "components/ProjectUiBanner";
 
-import BackArrow from "../../images/BackArrow.svg";
-import DownloadArrow from "../../images/DownloadArrow.svg";
-import Challenge from "../../images/process-outcome/Challenge.svg";
-import Innovation from "../../images/process-outcome/Innovation.svg";
-import Profits from "../../images/process-outcome/Profits.svg";
-import Strategy from "../../images/process-outcome/Strategy.svg";
-import NewUserEngagement from "../../images/process-outcome/NewUserEngagement.svg";
-import NewCustomerAcquisition from "../../images/process-outcome/NewCustomerAcquisition.svg";
+import BackArrow from "assets/images/BackArrow.svg";
+import DownloadArrow from "assets/images/DownloadArrow.svg";
+import Challenge from "assets/images/process-outcome/Challenge.svg";
+import Innovation from "assets/images/process-outcome/Innovation.svg";
+import Profits from "assets/images/process-outcome/Profits.svg";
+import Strategy from "assets/images/process-outcome/Strategy.svg";
+import NewUserEngagement from "assets/images/process-outcome/NewUserEngagement.svg";
+import NewCustomerAcquisition from "assets/images/process-outcome/NewCustomerAcquisition.svg";
 
-import GetQuoteModal from "../../components/GetQuoteModal";
-import CaseStudyModal from "../../components/CaseStudyModal";
+import GetQuoteModal from "components/GetQuoteModal";
+import CaseStudyModal from "components/CaseStudyModal";
 
 // export async function getStaticPaths() {
 //   // Call an external API endpoint to get posts.
@@ -84,10 +84,15 @@ export async function getServerSideProps(context) {
 
   let id = 0;
 
-  if(/^[0-9]+$/.test(title)) {
+  if (/^[0-9]+$/.test(title)) {
     id = title;
-  }else{
-    id =  projectsData.find(data => data.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-") === title)?.id;
+  } else {
+    id = projectsData.find(
+      (data) =>
+        data.cardTitle
+          .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
+          .replace(/ /g, "-") === title
+    )?.id;
   }
 
   const res = await fetch(baseUrl + `/projects/${id}`);
@@ -96,12 +101,12 @@ export async function getServerSideProps(context) {
   if (!data) {
     return {
       notFound: true,
-    }
+    };
   }
 
   return {
     props: { post: data }, // will be passed to the page component as props
-  }
+  };
 }
 
 export default withRouter(
@@ -123,14 +128,13 @@ export default withRouter(
         loading: true,
         showModal: false,
         showCaseStudyModal: false,
-        projectInfo: props.post
+        projectInfo: props.post,
       };
       this.componentDidMount = this.componentDidMount.bind(this);
       this.componentDidUpdate = this.componentDidUpdate.bind(this);
       this.handleBack = this.handleBack.bind(this);
     }
 
-    
     componentDidUpdate = async (prevProps) => {
       // this.componentDidMount();
       if (this.props.router.query.slug !== prevProps.router.query.slug) {
@@ -143,13 +147,16 @@ export default withRouter(
       }
     };
 
-     componentDidMount = async () => {
-        // Handle invalid slug
-      if (this.state.projectInfo.statusCode != undefined && this.state.projectInfo.statusCode == 500) {
+    componentDidMount = async () => {
+      // Handle invalid slug
+      if (
+        this.state.projectInfo.statusCode != undefined &&
+        this.state.projectInfo.statusCode == 500
+      ) {
         this.state.show404 = true;
-         } 
-       this.setState({loading: false})
-     }
+      }
+      this.setState({ loading: false });
+    };
 
     // componentDidMount = async () => {
     //   try {
@@ -208,8 +215,8 @@ export default withRouter(
     }
 
     redirect() {
-      console.log("redirect called")
-      this.props.router.push('/404');
+      console.log("redirect called");
+      this.props.router.push("/404");
     }
 
     render() {
@@ -217,20 +224,33 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>{this.props.post.project_detail ? this.props.post.project_detail?.SEOTitle : ""}</title>
+            <title>
+              {this.props.post.project_detail
+                ? this.props.post.project_detail?.SEOTitle
+                : ""}
+            </title>
             <meta
               name="description"
-              content={this.props.post.project_detail ? this.props.post.project_detail?.SEODescription : ""}
+              content={
+                this.props.post.project_detail
+                  ? this.props.post.project_detail?.SEODescription
+                  : ""
+              }
             />
             <meta
               name="keywords"
-              content={this.props.post.project_detail ? this.props.post.project_detail?.SEOKeywords : ""}
+              content={
+                this.props.post.project_detail
+                  ? this.props.post.project_detail?.SEOKeywords
+                  : ""
+              }
             />
           </Head>
           {this.state.loading ? (
             <Loader />
+          ) : this.state.show404 ? (
+            this.redirect()
           ) : (
-            (this.state.show404 ? ( this.redirect() ) :
             <div>
               <a to="#" onClick={this.handleBack}>
                 <div
@@ -252,21 +272,35 @@ export default withRouter(
                       {projectInfo.cardTitle}
                     </h1>
                     <h2 className="sub-title main-sub-title animated fadeIn ">
-                      {projectInfo.project_detail ? projectInfo.project_detail.projectDetailSubtitle : ""}
+                      {projectInfo.project_detail
+                        ? projectInfo.project_detail.projectDetailSubtitle
+                        : ""}
                     </h2>
                     <div className="tags animated fadeIn nc-tag">
                       <ul>
-                        {(projectInfo.project_detail ? projectInfo.project_detail.projectDetailTag1 : "" ) ? (
+                        {(
+                          projectInfo.project_detail
+                            ? projectInfo.project_detail.projectDetailTag1
+                            : ""
+                        ) ? (
                           <li>
                             {projectInfo.project_detail.projectDetailTag1}
                           </li>
                         ) : null}
-                        {( projectInfo.project_detail ? projectInfo.project_detail.projectDetailTag2 : "" ) ? (
+                        {(
+                          projectInfo.project_detail
+                            ? projectInfo.project_detail.projectDetailTag2
+                            : ""
+                        ) ? (
                           <li>
                             {projectInfo.project_detail.projectDetailTag2}
                           </li>
                         ) : null}
-                        {( projectInfo.project_detail ? projectInfo.project_detail.projectDetailTag3 : "" ) ? (
+                        {(
+                          projectInfo.project_detail
+                            ? projectInfo.project_detail.projectDetailTag3
+                            : ""
+                        ) ? (
                           <li>
                             {projectInfo.project_detail.projectDetailTag3}
                           </li>
@@ -275,7 +309,11 @@ export default withRouter(
                     </div>
                     <div className="tags detail-tags animated fadeIn ">
                       <ul>
-                        {(projectInfo.project_detail ? projectInfo.project_detail.ProjectDetailLogo : "" ) ? (
+                        {(
+                          projectInfo.project_detail
+                            ? projectInfo.project_detail.ProjectDetailLogo
+                            : ""
+                        ) ? (
                           <li>
                             <img
                               src={`${baseUrl}${projectInfo.project_detail.ProjectDetailLogo.url}`}
@@ -283,7 +321,11 @@ export default withRouter(
                             />
                           </li>
                         ) : null}
-                        {( projectInfo.project_detail ? projectInfo.project_detail.caseStudyUrl : "" ) ? (
+                        {(
+                          projectInfo.project_detail
+                            ? projectInfo.project_detail.caseStudyUrl
+                            : ""
+                        ) ? (
                           <li>
                             <div
                               className="btn-link"
@@ -309,7 +351,11 @@ export default withRouter(
                       </ul>
                     </div>
                     {/* ===== */}
-                    {(projectInfo.project_detail ? projectInfo.project_detail.introBlockTitle : "") ? (
+                    {(
+                      projectInfo.project_detail
+                        ? projectInfo.project_detail.introBlockTitle
+                        : ""
+                    ) ? (
                       <ReactWOW animation="fadeIn" delay="0s" offset={0}>
                         <div>
                           <ImageVideoText
@@ -342,25 +388,52 @@ export default withRouter(
                   <div className="section-padding">
                     <ProjectUiBanner
                       ProjectUiSrc={`${baseUrl}${
-                        (projectInfo.project_detail ? projectInfo.project_detail.bannerVideoUrl : "")
+                        (
+                          projectInfo.project_detail
+                            ? projectInfo.project_detail.bannerVideoUrl
+                            : ""
+                        )
                           ? null
-                          : (projectInfo.project_detail ? projectInfo.project_detail.projectUiBanner.url : "")
+                          : projectInfo.project_detail
+                          ? projectInfo.project_detail.projectUiBanner.url
+                          : ""
                       }`}
-                      ProjectVidSrc={projectInfo.project_detail ? projectInfo.project_detail.bannerVideoUrl : ""}
-                    />
-                  </div>
-                </ReactWOW>
-                <ReactWOW animation="fadeIn" offset={-200}>
-                  <div>
-                    <Quotes
-                      quoteText={
-                        projectInfo.project_detail ? projectInfo.project_detail.TestimonialKeyHighlight : ""
+                      ProjectVidSrc={
+                        projectInfo.project_detail
+                          ? projectInfo.project_detail.bannerVideoUrl
+                          : ""
                       }
                     />
                   </div>
                 </ReactWOW>
+                {/* <ReactWOW animation="fadeIn" offset={-200}>
+                  <div>
+                    <Quotes
+                      quoteText={
+                        projectInfo.project_detail
+                          ? projectInfo.project_detail.TestimonialKeyHighlight
+                          : ""
+                      }
+                    />
+                  </div>
+                </ReactWOW> */}
                 <div className="container animated fadeIn">
-                  {(projectInfo.project_detail ? projectInfo.project_detail.processTitle : "") ? (
+                  <ReactWOW animation="fadeIn" offset={-200}>
+                    <div className="blog-quote-box project-quote-box">
+                      <p className="b-quote-text">
+                        {projectInfo.project_detail
+                          ? projectInfo.project_detail.TestimonialKeyHighlight
+                          : ""}
+                      </p>
+                    </div>
+                  </ReactWOW>
+                </div>
+                <div className="container animated fadeIn">
+                  {(
+                    projectInfo.project_detail
+                      ? projectInfo.project_detail.processTitle
+                      : ""
+                  ) ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="process-section">
                         <div className="container">
@@ -406,7 +479,11 @@ export default withRouter(
                       </div>
                     </ReactWOW>
                   ) : null}
-                  {(projectInfo.project_detail ? projectInfo.project_detail.solutionTitle : "") ? (
+                  {(
+                    projectInfo.project_detail
+                      ? projectInfo.project_detail.solutionTitle
+                      : ""
+                  ) ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="container">
                         <ImageVideoText
@@ -426,7 +503,11 @@ export default withRouter(
                       </div>
                     </ReactWOW>
                   ) : null}
-                  {(projectInfo.project_detail ? projectInfo.project_detail.keyBenefitTitle : "" ) ? (
+                  {(
+                    projectInfo.project_detail
+                      ? projectInfo.project_detail.keyBenefitTitle
+                      : ""
+                  ) ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="container">
                         <ImageVideoText
@@ -450,7 +531,11 @@ export default withRouter(
                     </ReactWOW>
                   ) : null}
 
-                  {(projectInfo.project_detail ? projectInfo.project_detail.outcomeTitle : "") ? (
+                  {(
+                    projectInfo.project_detail
+                      ? projectInfo.project_detail.outcomeTitle
+                      : ""
+                  ) ? (
                     <ReactWOW animation="fadeIn" offset={-200}>
                       <div className="process-section">
                         <div className="container">
@@ -536,12 +621,16 @@ export default withRouter(
                   <CaseStudyModal
                     formtitle="Download Casestudy"
                     togglePopover={this.handleCloseCSModal}
-                    caseStudyUrlLink={(projectInfo.project_detail ? projectInfo.project_detail.caseStudyUrl : "")}
+                    caseStudyUrlLink={
+                      projectInfo.project_detail
+                        ? projectInfo.project_detail.caseStudyUrl
+                        : ""
+                    }
                   />
                 </ReactModal>
               </div>
             </div>
-          ))}
+          )}
         </div>
       );
     }

@@ -8,13 +8,13 @@ import axios from "axios";
 
 import { withRouter } from "next/router";
 
-import Loader from "../../components/Loader";
-import { BlogContext } from "../../context/BlogContext";
-import SectionTitle from "../../components/SectionTitle";
-import CardTileUpfront from "../../components/CardTileUpfront";
+import Loader from "components/Loader";
+import { BlogContext } from "context/BlogContext";
+import SectionTitle from "components/SectionTitle";
+import CardTileUpfront from "components/CardTileUpfront";
 
-import BackArrow from "../../images/BackArrow.svg";
-import Close from "../../images/Close.svg";
+import BackArrow from "assets/images/BackArrow.svg";
+import Close from "assets/images/Close.svg";
 
 // export async function getStaticProps(context) {
 //   // Call an external API endpoint to get posts.
@@ -76,7 +76,7 @@ export default withRouter(
         <div>
           <div>
             <Head>
-              <title>Blog | Neointeraction</title>
+              <title>Blog | Best UI/UX design company in India</title>
               <meta
                 name="description"
                 content="Read engaging blogs, articles and case studies related to the design industry. Subscribe to our newsletter to stay up to date with the latest UI/UX trends."
@@ -108,14 +108,14 @@ export default withRouter(
                 {(context) => (
                   <div>
                     <div>
-                      <div className="page-content">
+                      <div className="page-content body-page">
                         <div className="container animated fadeIn">
                           <h1 className="main-title animated fadeIn">blog</h1>
                           <h2 className="sub-title main-sub-title animated fadeIn ">
                             Learn about us and the design industry via our
                             perspectives and experiences.
                           </h2>
-                        
+
                           {context.state.blogs
                             .filter((tag) => {
                               if (tag.featured) return true;
@@ -130,7 +130,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                    pathname: `/Blog/${item.blogTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">
@@ -179,7 +184,7 @@ export default withRouter(
                             ))}
 
                           <ReactWOW animation="fadeIn" offset={-200}>
-                            <div className="blog-listing-section">
+                            <div className="blog-listing-section mb-spacing">
                               <SectionTitle
                                 title="Blog Articles"
                                 subtitle="Check out our latest articles written by our team of expert designers"
@@ -250,7 +255,12 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                          pathname: `/Blog/${item.blogTitle
+                                            .replace(
+                                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                              ""
+                                            )
+                                            .replace(/ /g, "-")}`,
                                         }}
                                       >
                                         <div className="link" key={item.id}>

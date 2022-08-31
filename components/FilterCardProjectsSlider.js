@@ -10,13 +10,12 @@ import "slick-carousel/slick/slick-theme.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 import CardTile from "./CardTile";
-import Loader from "../components/Loader";
-import { DataContext } from "../context/DataContext";
+import Loader from "components/Loader";
+import { DataContext } from "context/DataContext";
 
-
-import CarousalLeft from "../images/White_arrow_left.svg";
-import CarousalRight from "../images/White_arrow_right.svg";
-import Close from "../images/Close.svg";
+import CarousalLeft from "assets/images/White_arrow_left.svg";
+import CarousalRight from "assets/images/White_arrow_right.svg";
+import Close from "assets/images/Close.svg";
 
 export default class FilterCardProjectsSlider extends Component {
   constructor() {
@@ -41,46 +40,44 @@ export default class FilterCardProjectsSlider extends Component {
   };
 
   render() {
-
     var settings = {
-        dots: false,
-        infinite: false,
-        speed: 500,
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        initialSlide: 0,
-        nextArrow: <img src={CarousalRight} alt="CarousalRight" />,
-        prevArrow: <img src={CarousalLeft} alt="CarousalLeft" />,
-        responsive: [
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-              infinite: true,
-              dots: false
-            }
+      dots: false,
+      infinite: false,
+      speed: 500,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      initialSlide: 0,
+      nextArrow: <img src={CarousalRight} alt="CarousalRight" />,
+      prevArrow: <img src={CarousalLeft} alt="CarousalLeft" />,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: false,
           },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 2,
-            }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 2,
           },
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              infinite: true,
-            }
-          }
-        ]
-      };
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: true,
+          },
+        },
+      ],
+    };
 
     return (
-     
       <DataContext.Consumer>
         {(context) => (
           <div>
@@ -88,43 +85,42 @@ export default class FilterCardProjectsSlider extends Component {
               <Loader />
             ) : (
               <div>
-             
                 <div className="overlay-card-slider  animated fadeIn ">
-                <Slider {...settings}>
-                  {[...context.state.projects]
-                    .map((cards, i) => (
-                        <div className={`card-main-container card-${cards.id}`}>
-                          <Link
-                            href={{
-                              pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
-                            }}
-                          >
-                            <div className="link">
-                              <CardTile
-                                // key={cards.id}
-                                className={cards.className}
-                                category={cards.categories.map(
-                                  (li) => li.categoryName
-                                )}
-                                cardTitle={cards.cardTitle}
-                                backgroundImages={cards.cardImage.url}
-                                cardInfoText={cards.cardInfoText}
-                              />
-                            </div>
-                          </Link>
-                        </div>
+                  <Slider {...settings}>
+                    {[...context.state.projects].map((cards, i) => (
+                      <div className={`card-main-container card-${cards.id}`}>
+                        <Link
+                          href={{
+                            pathname: `/Projects/${cards.cardTitle
+                              .replace(
+                                /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                ""
+                              )
+                              .replace(/ /g, "-")}`,
+                          }}
+                        >
+                          <div className="link">
+                            <CardTile
+                              // key={cards.id}
+                              className={cards.className}
+                              category={cards.categories.map(
+                                (li) => li.categoryName
+                              )}
+                              cardTitle={cards.cardTitle}
+                              backgroundImages={cards.cardImage.url}
+                              cardInfoText={cards.cardInfoText}
+                            />
+                          </div>
+                        </Link>
+                      </div>
                     ))}
-                   </Slider>
+                  </Slider>
                 </div>
-                
               </div>
-              
             )}
-           
           </div>
         )}
       </DataContext.Consumer>
-      
     );
   }
 }

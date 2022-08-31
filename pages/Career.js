@@ -6,23 +6,24 @@ import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { baseUrl } from "../globalConfig";
 import axios from "axios";
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 
 import { withRouter } from "next/router";
 
-import SectionTitle from "../components/SectionTitle";
-import Faq from "../components/Faq";
-import ModalCard from "../components/ModalCard";
-import ImageVideoText from "../components/ImageVideoText";
-import InternModal from "../components/InternModal";
-import CardTileUpfront from "../components/CardTileUpfront";
+import SectionTitle from "components/SectionTitle";
+import Faq from "components/Faq";
+import ModalCard from "components/ModalCard";
+import ImageVideoText from "components/ImageVideoText";
+import InternModal from "components/InternModal";
+import CardTileUpfront from "components/CardTileUpfront";
 
-import BackArrow from "../images/BackArrow.svg";
-// import CareerImg1 from "../images/ux-img.jpg";
-// import CareerImg2 from "../images/ux-img.jpg";
-// import CareerImg3 from "../images/ux-img.jpg";
-import internImg from "../images/internship.jpeg";
-// import testVideo from "../images/testimonial-temp.png";
+import BackArrow from "assets/images/BackArrow.svg";
+// import CareerImg1 from "assets/images/ux-img.jpg";
+// import CareerImg2 from "assets/images/ux-img.jpg";
+// import CareerImg3 from "assets/images/ux-img.jpg";
+import internImg from "assets/images/internship.jpeg";
+import HomeTeam from "pageComponents/homepage/HomeTeam";
+// import testVideo from "assets/images/testimonial-temp.png";
 
 const FAQ = [
   {
@@ -129,7 +130,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">
                 career opportunities
@@ -155,7 +156,7 @@ export default withRouter(
             </div>
             <ReactWOW animation="fadeIn" delay="0s" offset={-200}>
               <div className="what-its-like">
-                <div className="container">
+                {/* <div className="container">
                   <SectionTitle title="What’s it like to work here?" />
                   <ol className="wl-list">
                     <li>Work Ownership</li>
@@ -165,7 +166,7 @@ export default withRouter(
                     <li>Industry Experience</li>
                     <li>Creative Thinking</li>
                   </ol>
-                </div>
+                </div> */}
               </div>
             </ReactWOW>
 
@@ -249,7 +250,9 @@ export default withRouter(
                 </div>
               </div>
             </ReactWOW>
-
+            <div className="career-team-banner">
+              <HomeTeam />
+            </div>
             <ReactWOW animation="fadeIn" offset={-200}>
               <div className="intern-section" id="intern">
                 <div className="container">
@@ -320,7 +323,7 @@ export default withRouter(
               </div>
             </ReactWOW>
           </div>
-          <div className="section-padding">
+          <div className="section-padding mb-spacing">
             <div className="container">
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div>
@@ -335,7 +338,12 @@ export default withRouter(
                           <div className="col-md-4 mb-5" key={item.id}>
                             <Link
                               href={{
-                                pathname: `/Blog/${item.blogTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                                pathname: `/Blog/${item.blogTitle
+                                  .replace(
+                                    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                    ""
+                                  )
+                                  .replace(/ /g, "-")}`,
                               }}
                             >
                               <div className="link">

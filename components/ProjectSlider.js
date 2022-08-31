@@ -5,10 +5,10 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { baseUrl } from "../globalConfig";
 
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 
-import CarousalLeft from "../images/White_arrow_left.svg";
-import CarousalRight from "../images/White_arrow_right.svg";
+import CarousalLeft from "assets/images/White_arrow_left.svg";
+import CarousalRight from "assets/images/White_arrow_right.svg";
 
 export default class ProjectSlider extends Component {
   constructor() {
@@ -53,7 +53,12 @@ export default class ProjectSlider extends Component {
                     <React.Fragment key={item.id}>
                       <Link
                         href={{
-                          pathname: `/Projects/${item.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                          pathname: `/Projects/${item.cardTitle
+                            .replace(
+                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                              ""
+                            )
+                            .replace(/ /g, "-")}`,
                         }}
                       >
                         <div className="link">

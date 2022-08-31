@@ -2,59 +2,79 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { DataContext } from "../context/DataContext";
+import { DataContext } from "context/DataContext";
 import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import ModalCard from "../components/ModalCard";
-import CardTile from "../components/CardTile";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import ModalCard from "components/ModalCard";
+import CardTile from "components/CardTile";
 
-import BackArrow from "../images/BackArrow.svg";
-import UXImg from "../images/ui-engineering.jpg";
+import BackArrow from "assets/images/BackArrow.svg";
+import UXImg from "assets/images/ui-engineering.jpg";
 
-import GetQuoteModal from "../components/GetQuoteModal";
+import GetQuoteModal from "components/GetQuoteModal";
 
 // tch-img
 
-import Technology from "../images/technology.png";
+import Technology from "assets/images/technology.png";
 
-import wireframe from "../images/wireFrame.png";
-import uiStyling from "../images/uiStyling.png";
-import componentDevelopment from "../images/componentDevelopment.png";
-import interactions from "../images/interactions.png";
-import testing from "../images/testing.png";
+import wireframe from "assets/images/wireFrame.png";
+import uiStyling from "assets/images/uiStyling.png";
+import componentDevelopment from "assets/images/componentDevelopment.png";
+import interactions from "assets/images/interactions.png";
+import testing from "assets/images/testing.png";
 
-import DevelopmentProcessCard from "../components/DevelopmentProcessCard";
+import DevelopmentProcessCard from "components/DevelopmentProcessCard";
 
-const PROCESSIMAGE = [
+import UI1 from "assets/images/n-images/services/ui1.svg";
+import UI2 from "assets/images/n-images/services/ui2.svg";
+import UI3 from "assets/images/n-images/services/ui3.svg";
+import UI4 from "assets/images/n-images/services/ui4.svg";
+import UI5 from "assets/images/n-images/services/ui5.svg";
+
+const PROCESSCONTENT = [
   {
     key: 1,
-    titleText: "Wireframes",
-    img: wireframe,
+    image: UI1,
+    title: "UI Handoff for development team",
+    text: "Once the designs are approved it need to be hand coded with pixel perfect detailing. During design handoff stage design team provides all the UI specifications for the developers to implement the finished design.",
+    textItalic: "- User profiling, Personas, Market study, Competitor analysis",
   },
   {
     key: 2,
-    titleText: "UI Styling",
-    img: uiStyling,
+    image: UI2,
+    title: "Building UI component",
+    text: "UI elements are the core building blocks for all applications.UI elements or user interface elements are created using front end technologies like React, Angular, VUE Js etc for both web and mobile applications",
+    textItalic:
+      "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
   },
   {
     key: 3,
-    titleText: "Component Development",
-    img: componentDevelopment,
+    image: UI3,
+    title: "Creating interactive flows ",
+    text: "Front End developers will start building the page layout frameworks and integrate UI components page wise. Once its done it can be linked as meaningful flow that will help with API integrating process.",
+    textItalic:
+      "- Information Architecture, Card sorting,  Affinity Mapping, Business Goals,Design Systems",
   },
   {
     key: 4,
-    titleText: "Interactions/ Linking",
-    img: interactions,
+    image: UI4,
+    title: "Integrating services",
+    text: "After Front End developers develop UI components & page layout, API integration will start. Various business data points are linked and for having a meaningful user journey. API integration considers business flows, page rendering speed, userexperience factors,performance etc.",
+    textItalic:
+      "- Information Architecture, User Journey, Affinity Mapping,  Heuristic Evaluation, Interviews, Navigation Design, Storyboarding & Prototyping",
   },
   {
     key: 5,
-    titleText: "Testing",
-    img: testing,
+    image: UI5,
+    title: "Testing the business flows,validation ",
+    text: "Once the API integration is done the design is validated with actual data rendering. Based on this the user flow may need design fine tuning. Key stake holders can give meaningful feedbacks at this stage.",
+    textItalic:
+      " - Detailed Layouts, UI elements, Dashboards & Data Visualization, Icons and, Illustrations, Micro-interactions",
   },
 ];
 const ENGAGEMENTCONTENT = [
@@ -152,9 +172,9 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
-              <h1 className="main-title animated fadeIn">UI Engineering</h1>
+              <h1 className="main-title animated fadeIn">ui engineering</h1>
               <h2 className="sub-title main-sub-title animated fadeIn">
                 Giving life to your ideas through the latest technologies and
                 softwares.
@@ -164,6 +184,20 @@ export default withRouter(
                   <li>
                     <Link href="/UxService">
                       <button className="custom-btn inactive">UX Design</button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/ProductService">
+                      <button className="custom-btn inactive">
+                        Product Design
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/DesignTransformation">
+                      <button className="custom-btn inactive">
+                        Design Transformation
+                      </button>
                     </Link>
                   </li>
                   <li>
@@ -225,8 +259,44 @@ export default withRouter(
                   />
                 </div>
               </ReactWOW>
+
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
+                  <div className="container">
+                    <SectionTitle title="Our Process" />
+                    {/* <div className="service-process-img">
+                    <img src={processImg} alt="processImg" />
+                  </div> */}
+                    {/* <div className="row p-cards justify-content-between">
+                      {[...PROCESSIMAGE].map((data) => (
+                        <React.Fragment key={data.key}>
+                          <DevelopmentProcessCard
+                            titleText={data.titleText}
+                            Image={data.img}
+                          />
+                        </React.Fragment>
+                      ))}
+                    </div> */}
+                    <div className="row p-cards">
+                      {[...PROCESSCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard
+                            image={engage.image}
+                            title={engage.title}
+                            text={engage.text}
+                            // textItalic={engage.textItalic}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ReactWOW>
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle
                       title="Technologies we use"
@@ -239,49 +309,7 @@ export default withRouter(
                 </div>
               </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
-                  <div className="container">
-                    <SectionTitle title="Our Process" />
-                    {/* <div className="service-process-img">
-                    <img src={processImg} alt="processImg" />
-                  </div> */}
-                    <div className="row p-cards justify-content-between">
-                      {[...PROCESSIMAGE].map((data) => (
-                        <React.Fragment key={data.key}>
-                          <DevelopmentProcessCard
-                            titleText={data.titleText}
-                            Image={data.img}
-                          />
-                        </React.Fragment>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </ReactWOW>
-
-              <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding" id="eng-modal">
-                  <div className="container">
-                    <SectionTitle
-                      title="The Engagement Model"
-                      subtitle="Based on your core business, the models below may suit well that will add the right value for your short and long term project goals. Our team is familiar with the Agile & Learn methods of design delivery."
-                    />
-                    <div className="row p-cards">
-                      {[...ENGAGEMENTCONTENT].map((engage) => (
-                        <div
-                          className="col-md-4 card-margin-bottom"
-                          key={engage.key}
-                        >
-                          <ModalCard title={engage.title} text={engage.text} />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </ReactWOW>
-
-              <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="section-padding">
+                <div className="section-padding pt-0">
                   <div className="container">
                     <SectionTitle
                       title="Hire Engineers"
@@ -306,7 +334,26 @@ export default withRouter(
                   </div>
                 </div>
               </ReactWOW>
-
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="section-padding pt-0" id="eng-modal">
+                  <div className="container">
+                    <SectionTitle
+                      title="The Engagement Model"
+                      subtitle="Based on your core business, the models below may suit well that will add the right value for your short and long term project goals. Our team is familiar with the Agile & Learn methods of design delivery."
+                    />
+                    <div className="row p-cards">
+                      {[...ENGAGEMENTCONTENT].map((engage) => (
+                        <div
+                          className="col-md-4 card-margin-bottom"
+                          key={engage.key}
+                        >
+                          <ModalCard title={engage.title} text={engage.text} />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </ReactWOW>
               <ReactWOW animation="fadeIn" offset={-200}>
                 <div>
                   <div className="container">
@@ -332,7 +379,12 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`
+                                    pathname: `/Projects/${cards.cardTitle
+                                      .replace(
+                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                        ""
+                                      )
+                                      .replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">
@@ -358,7 +410,7 @@ export default withRouter(
               </ReactWOW>
             </div>
             <ReactWOW animation="fadeIn" offset={-200}>
-              <div className="contact-section no-slider mb-20">
+              <div className="contact-section no-slider mb-20 mb-spacing">
                 <div className="container">
                   <SectionTitle
                     title="Do you have a similar project ?"

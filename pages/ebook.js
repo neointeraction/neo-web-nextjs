@@ -4,42 +4,38 @@ import ReactWOW from "react-wow";
 import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
-import Quotes from "../components/Quotes";
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import ProcessCard from "../components/ProcessCard";
-import GetQuoteModal from "../components/GetQuoteModal";
-import FormContactEBkLP from "../components/FormContactEBkLP";
-import FilterCardProjectsSlider from "../components/FilterCardProjectsSlider";
-import BlogCardAd from "../components/BlogCardAd";
+import Quotes from "components/Quotes";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import ProcessCard from "components/ProcessCard";
+import GetQuoteModal from "components/GetQuoteModal";
+import FormContactEBkLP from "components/FormContactEBkLP";
+import FilterCardProjectsSlider from "components/FilterCardProjectsSlider";
+import BlogCardAd from "components/BlogCardAd";
 
-import Banner from "../images/ebookBanner.jpg";
-import EbookImg from "../images/ebookImgBook.jpg";
-import Tablet1 from "../images/tablet1.png";
-import Tablet2 from "../images/tablet2.png";
-import Tablet3 from "../images/tablet3.png";
+import Banner from "assets/images/ebookBanner.jpg";
+import EbookImg from "assets/images/ebookImgBook.jpg";
+import Tablet1 from "assets/images/tablet1.png";
+import Tablet2 from "assets/images/tablet2.png";
+import Tablet3 from "assets/images/tablet3.png";
 import { useState } from "react";
-
 
 const axios = require("axios").default;
 
-function loadScript (src){
-  return new Promise(resolve =>{
+function loadScript(src) {
+  return new Promise((resolve) => {
+    const script = document.createElement("script");
+    script.src = src;
 
-  
-  const script = document.createElement('script')
-  script.src = src
-  
-  script.onload = () => {
-    resolve(true)
-  }
-  script.onerror = () => {
-    resolve(false)
-  }
-  document.body.appendChild(script)
-})
+    script.onload = () => {
+      resolve(true);
+    };
+    script.onerror = () => {
+      resolve(false);
+    };
+    document.body.appendChild(script);
+  });
 }
-
 
 const Ebook = () => {
   const [open, setOpen] = useState(false);
@@ -91,26 +87,41 @@ const Ebook = () => {
         <ReactWOW animation="fadeIn" offset={0}>
           <div className="banner-content ebk-banner">
             <h1 className="ebook-banner-title">
-              Learn <span className="title-red">UX</span> <br/>
+              Learn <span className="title-red">UX</span> <br />
               Build <span className="title-red">Products</span>
             </h1>
             {/* <button className="custom-btn inactive" onClick={displayRazorpay}>Buy now @ ₹199</button>  https://buy.stripe.com/test_eVa5kueIxg6SaXK144 */}
-            {/* <form> <button className="custom-btn inactive" onClick={displayRazorpay}>Click Me</button> <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ItCgN3ejTHQ3ph" async></script> </form> */} 
-             <AnchorLink  href="#dwnldSubmit" className="custom-btn inactive"> Download </AnchorLink>    
+            {/* <form> <button className="custom-btn inactive" onClick={displayRazorpay}>Click Me</button> <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_ItCgN3ejTHQ3ph" async></script> </form> */}
+            <AnchorLink href="#dwnldSubmit" className="custom-btn inactive">
+              {" "}
+              Download{" "}
+            </AnchorLink>
           </div>
         </ReactWOW>
       </div>
       <div className="container ebk-container">
         <div className="home-content">
           <div>
-            <ReactWOW animation="fadeIn" offset={-200}>
+            {/* <ReactWOW animation="fadeIn" offset={-200}>
               <div>
                 <Quotes
                   quoteText="Agile UX is a set of processes that may seem restrictive but actually 
                   prevents development of fixed mindset about a problem as the process is based on iteration and incremental improvements"
                 />
               </div>
-            </ReactWOW>
+            </ReactWOW> */}
+            <div className="container animated fadeIn">
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <div className="blog-quote-box project-quote-box">
+                  <p className="b-quote-text">
+                    Agile UX is a set of processes that may seem restrictive but
+                    actually prevents development of fixed mindset about a
+                    problem as the process is based on iteration and incremental
+                    improvements
+                  </p>
+                </div>
+              </ReactWOW>
+            </div>
             <ReactWOW animation="fadeIn" delay="0s" offset={0}>
               <div>
                 <ImageVideoText
@@ -122,10 +133,12 @@ const Ebook = () => {
                   contentText={
                     <div className="ebk-ybuy">
                       <p>
-                      This book guides developers and designers to get into the agile mindset and iterate 
-                      and develop products that the customers want. For the business or other stakeholders this book 
-                      gives a glimpse of the advantages the agile mindset can have in making your product be a great 
-                      experience for the users.
+                        This book guides developers and designers to get into
+                        the agile mindset and iterate and develop products that
+                        the customers want. For the business or other
+                        stakeholders this book gives a glimpse of the advantages
+                        the agile mindset can have in making your product be a
+                        great experience for the users.
                       </p>
                       {/* <ul className="solution-list mb-3">
                         <li>Six steps of Agile Ux</li>
@@ -135,7 +148,13 @@ const Ebook = () => {
                           design
                         </li>
                       </ul> */}
-                     <AnchorLink href="#dwnldSubmit" className="custom-btn inactive"> Download </AnchorLink>
+                      <AnchorLink
+                        href="#dwnldSubmit"
+                        className="custom-btn inactive"
+                      >
+                        {" "}
+                        Download{" "}
+                      </AnchorLink>
                     </div>
                   }
                 />
@@ -205,21 +224,20 @@ const Ebook = () => {
                         Join our tribe to get some awesome freebies and insights
                         into the world of design and our design process.
                       </p>
-                    <FormContactEBkLP />
-    
+                      <FormContactEBkLP />
                     </div>
                   }
                 />
               </div>
             </ReactWOW>
             <div className="section-padding">
-            <ReactWOW animation="fadeIn" offset={-200}>
-              <FilterCardProjectsSlider />
-            </ReactWOW>
-          </div>
-          <div className="section-padding">
-            <BlogCardAd />
-          </div>
+              <ReactWOW animation="fadeIn" offset={-200}>
+                <FilterCardProjectsSlider />
+              </ReactWOW>
+            </div>
+            <div className="section-padding mb-spacing-landing">
+              <BlogCardAd />
+            </div>
           </div>
         </div>
       </div>

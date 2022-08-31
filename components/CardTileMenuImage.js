@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 // import "../css/main.css";
-import Arrow from "../images/Arrow.svg";
-import CardOneOne from "../images/cardone-1.svg";
-import CardOneTwo from "../images/cardone-2.svg";
-import CardOneThree from "../images/cardone-3.svg";
-import CardFiveOne from "../images/cardfive-1.svg";
-import CardFiveTwo from "../images/cardfive-2.svg";
+import Arrow from "assets/images/Arrow.svg";
+import CardOneOne from "assets/images/cardone-1.svg";
+import CardOneTwo from "assets/images/cardone-2.svg";
+import CardOneThree from "assets/images/cardone-3.svg";
+import CardFiveOne from "assets/images/cardfive-1.svg";
+import CardFiveTwo from "assets/images/cardfive-2.svg";
 
 export default class CardTileMenuImage extends Component {
   constructor() {

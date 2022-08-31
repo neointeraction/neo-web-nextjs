@@ -1,7 +1,7 @@
 // ADD IMAGES / ICONS FOR CARDS HERE
-//import BackgroundImage from "../images/Card.png";
-//import GmtImage from "../images/GMTimage.jpg";
-//import BlogBg from "../images/ux-img.jpg";
+//import BackgroundImage from "assets/images/Card.png";
+//import GmtImage from "assets/images/GMTimage.jpg";
+//import BlogBg from "assets/images/ux-img.jpg";
 
 // JSON DATA
 

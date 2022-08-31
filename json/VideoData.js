@@ -1,6 +1,6 @@
 // ADD IMAGES / ICONS FOR CARDS HERE
-import imageOne from "../images/image1.jpg";
-import imageTwo from "../images/image2.jpg";
+import imageOne from "assets/images/image1.jpg";
+import imageTwo from "assets/images/image2.jpg";
 
 // JSON DATA
 

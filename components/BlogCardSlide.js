@@ -6,11 +6,11 @@ import Carousel from "@brainhubeu/react-carousel";
 import "@brainhubeu/react-carousel/lib/style.css";
 import { baseUrl } from "../globalConfig";
 
-import { BlogContext } from "../context/BlogContext";
+import { BlogContext } from "context/BlogContext";
 
-import Arrow from "../images/Arrow.svg";
-import CarousalLeft from "../images/White_arrow_left.svg";
-import CarousalRight from "../images/White_arrow_right.svg";
+import Arrow from "assets/images/Arrow.svg";
+import CarousalLeft from "assets/images/White_arrow_left.svg";
+import CarousalRight from "assets/images/White_arrow_right.svg";
 
 export default class BlogCardSlide extends Component {
   constructor() {
@@ -118,7 +118,9 @@ export default class BlogCardSlide extends Component {
                                 <div className="link">
                                   <div className="video-card-thumb">
                                     <div className="project-slider-card blog-card-thumb">
-                                      <h1 className="blog-title-home">{item.blogTitle}</h1>
+                                      <h1 className="blog-title-home">
+                                        {item.blogTitle}
+                                      </h1>
                                       <img
                                         className="video-card-thumb project-card-thumb  width-100"
                                         src={`${baseUrl}${item.blogCardImage.url}`}
@@ -131,8 +133,7 @@ export default class BlogCardSlide extends Component {
                                             ? "block"
                                             : "none",
                                         }}
-                                      >
-                                      </div>
+                                      ></div>
                                     </div>
                                   </div>
                                 </div>

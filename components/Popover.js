@@ -10,11 +10,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "@brainhubeu/react-carousel/lib/style.css";
 
 //TO ADD VIDEOS GO TO THIS FILE
-import { VideoContext } from "../context/VideoContext";
+import { VideoContext } from "context/VideoContext";
 
-import CarousalLeft from "../images/White_arrow_left.svg";
-import CarousalRight from "../images/White_arrow_right.svg";
-import CloseModal from "../images/White_close_icn.svg";
+import CarousalLeft from "assets/images/White_arrow_left.svg";
+import CarousalRight from "assets/images/White_arrow_right.svg";
+import CloseModal from "assets/images/White_close_icn.svg";
 
 export default class Popover extends Component {
   constructor(props) {

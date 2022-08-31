@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 // import "../css/main.css";
 
-import mail from "../images/addr-mail.svg";
-import phone from "../images/addr-phone.svg";
-import locationImg from "../images/addr-location.svg";
+import mail from "assets/images/addr-mail.svg";
+import phone from "assets/images/addr-phone.svg";
+import locationImg from "assets/images/addr-location.svg";
 
 export default class AddressCard extends Component {
   render() {

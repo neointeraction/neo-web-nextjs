@@ -4,12 +4,12 @@ import { loadReCaptcha } from "react-recaptcha-google";
 import ReactWOW from "react-wow";
 // import "../css/main.css";
 
-import ContactImg from "../images/DownloadCase study.png";
+import ContactImg from "assets/images/DownloadCase study.png";
 import SimpleReactValidator from "simple-react-validator";
 import axios from "axios";
 
-import CloseModal from "../images/Black_close_icn.svg";
-// import Attach from "../images/attach_file_Icon.svg";
+import CloseModal from "assets/images/Black_close_icn.svg";
+// import Attach from "assets/images/attach_file_Icon.svg";
 
 export default class CaseStudyModal extends Component {
   constructor() {

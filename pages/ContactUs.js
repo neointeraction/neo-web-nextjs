@@ -6,17 +6,17 @@ import { loadReCaptcha } from "react-recaptcha-google";
 
 import { withRouter } from "next/router";
 
-import FormContact from "../components/FormContact";
-import SectionTitle from "../components/SectionTitle";
-import AddressCard from "../components/AddressCard";
+import FormContact from "components/FormContact";
+import SectionTitle from "components/SectionTitle";
+import AddressCard from "components/AddressCard";
 
-import BackArrow from "../images/BackArrow.svg";
-import img1 from "../images/Bangalore.png";
-import img2 from "../images/Chennai.png";
-import img3 from "../images/Cochin.png";
+import BackArrow from "assets/images/BackArrow.svg";
+import img1 from "assets/images/Bangalore.png";
+import img2 from "assets/images/Chennai.png";
+import img3 from "assets/images/Cochin.png";
 
-// import EmailText from "../images/email-text.png";
-// import PhoneText from "../images/mob-text.png";
+// import EmailText from "assets/images/email-text.png";
+// import PhoneText from "assets/images/mob-text.png";
 
 const LOCATIONS = [
   {
@@ -79,7 +79,7 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>Contact Us | Neointeraction </title>
+            <title>Contact Us | Best UI/UX design company in India </title>
             <meta
               name="description"
               content="Contact us at (+91 944-9565-744) or info@neointeraction.com to hire top UI/UX designers. We provide creative solutions for your design queries."
@@ -102,7 +102,7 @@ export default withRouter(
               />
             </div>
           </a>
-          <div className="page-content">
+          <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">contact us</h1>
               <h2 className="sub-title main-sub-title animated fadeIn">

@@ -2,9 +2,9 @@ import React, { Component } from "react";
 import Link from "next/link";
 
 // import "../css/main.css";
-import ArrowRight from "../images/SlideArrow.svg";
-import CardTwoOne from "../images/cardtwo-1.svg"
-import CardTwoTwo from "../images/cardtwo-2.svg"
+import ArrowRight from "assets/images/SlideArrow.svg";
+import CardTwoOne from "assets/images/cardtwo-1.svg";
+import CardTwoTwo from "assets/images/cardtwo-2.svg";
 
 export default class CardTileLinks extends Component {
   constructor() {
@@ -80,20 +80,17 @@ export default class CardTileLinks extends Component {
               </li> */}
             </ul>
             <div className="animation-area">
-          <ul className="svg-card-two ">
-            <li>
-             <img src={CardTwoOne} />
-            </li>
-            <li>
-            <img src={CardTwoTwo} />
-            </li>
-
-          </ul>
+              <ul className="svg-card-two ">
+                <li>
+                  <img src={CardTwoOne} />
+                </li>
+                <li>
+                  <img src={CardTwoTwo} />
+                </li>
+              </ul>
+            </div>
           </div>
-          </div>
-
         </div>
-        
       </div>
     );
   }

@@ -4,7 +4,7 @@ import { ReCaptcha } from "react-recaptcha-google";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import ContactImg from "../images/quote-banner.jpg";
+import ContactImg from "assets/images/quote-banner.jpg";
 import SimpleReactValidator from "simple-react-validator";
 import axios from "axios";
 

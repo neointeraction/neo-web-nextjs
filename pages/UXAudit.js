@@ -5,23 +5,23 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import Script from "next/script";
 import Link from "next/link";
 
-// import FormContact from "../components/FormContact";
-import ClientSlider from "../components/ClientSlider";
-import ImageVideoText from "../components/ImageVideoText";
-import SectionTitle from "../components/SectionTitle";
-import Quotes from "../components/Quotes";
-import FilterCardProjectsSlider from "../components/FilterCardProjectsSlider";
-import FormContactUxAudit from "../components/FormContactUxAudit";
-import CardTileMenuImage from "../components/CardTileMenuImage";
+// import FormContact from "components/FormContact";
+import ClientSlider from "components/ClientSlider";
+import ImageVideoText from "components/ImageVideoText";
+import SectionTitle from "components/SectionTitle";
+import Quotes from "components/Quotes";
+import FilterCardProjectsSlider from "components/FilterCardProjectsSlider";
+import FormContactUxAudit from "components/FormContactUxAudit";
+import CardTileMenuImage from "components/CardTileMenuImage";
 
-import uxAuditImg from "../images/uxaudit-one.jpg";
-import uxServiceImg from "../images/ux-service.jpg";
-import uiEngineeringImg from "../images/ui-engineering.jpg";
-import videoServiceImg from "../images/video-service.jpg";
-import BlogCardAd from "../components/BlogCardAd";
-import UXDesignImageText from "../components/UXDesignImageText";
-import UIEngineeringImageText from "../components/UIEngineeringImageText";
-import UXImg from "../images/ux-service.jpg";
+import uxAuditImg from "assets/images/uxaudit-one.jpg";
+import uxServiceImg from "assets/images/ux-service.jpg";
+import uiEngineeringImg from "assets/images/ui-engineering.jpg";
+import videoServiceImg from "assets/images/video-service.jpg";
+import BlogCardAd from "components/BlogCardAd";
+import UXDesignImageText from "components/UXDesignImageText";
+import UIEngineeringImageText from "components/UIEngineeringImageText";
+import UXImg from "assets/images/ux-service.jpg";
 
 const SERVICES = [
   {
@@ -107,7 +107,7 @@ const gcampaign = () => {
         </ReactWOW>
       </div>
 
-      <div className="page-content">
+      <div className="page-content body-page">
         <div className="container animated fadeIn">
           <ReactWOW animation="fadeInUp" delay="0s">
             <div>
@@ -198,14 +198,16 @@ const gcampaign = () => {
                       </p>
                       <p>It is good to do a holistic audit :</p>
                       <ul className="solution-list">
-                      <li>If you want to know more about your users and grow
-                          your business</li>
-                      <li>Redesign of an website application</li>
-                      <li>New functionality</li>
-                      <li>Reduced development costs</li>
-                      <li>Validate new product design</li>
-                      <li>Validate your minimum viable product</li>
-                    </ul>
+                        <li>
+                          If you want to know more about your users and grow
+                          your business
+                        </li>
+                        <li>Redesign of an website application</li>
+                        <li>New functionality</li>
+                        <li>Reduced development costs</li>
+                        <li>Validate new product design</li>
+                        <li>Validate your minimum viable product</li>
+                      </ul>
                     </div>
                   }
                 />

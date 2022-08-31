@@ -6,10 +6,10 @@ import { baseUrl } from "../globalConfig";
 import ReactWOW from "react-wow";
 
 import CardTile from "./CardTile";
-import Loader from "../components/Loader";
-import { DataContext } from "../context/DataContext";
+import Loader from "components/Loader";
+import { DataContext } from "context/DataContext";
 
-import Close from "../images/Close.svg";
+import Close from "assets/images/Close.svg";
 
 export default class FilterCardProjects extends Component {
   constructor() {
@@ -41,8 +41,8 @@ export default class FilterCardProjects extends Component {
             {this.state.loading ? (
               <Loader />
             ) : (
-              <div>
-                <div className="filter-btn-group animated fadeIn ">
+              <div className="project-mb-spacing">
+                <div className="filter-btn-group animated fadeIn mob-hide ">
                   <button
                     className="filter-btn"
                     onClick={() => {
@@ -115,7 +115,12 @@ export default class FilterCardProjects extends Component {
                         <div className={`card-main-container card-${cards.id}`}>
                           <Link
                             href={{
-                              pathname: `/Projects/${cards.cardTitle.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/ /g,"-")}`,
+                              pathname: `/Projects/${cards.cardTitle
+                                .replace(
+                                  /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                  ""
+                                )
+                                .replace(/ /g, "-")}`,
                             }}
                           >
                             <div className="link">

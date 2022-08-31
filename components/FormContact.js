@@ -3,16 +3,19 @@ import React, { Component } from "react";
 // import "../css/main.css";
 import { ReCaptcha } from "react-recaptcha-google";
 import { loadReCaptcha } from "react-recaptcha-google";
+import { motion, AnimatePresence } from "framer-motion";
 
-import Lottie from "react-lottie";
+// import Lottie from "react-lottie";
 import animationData from "../Lotties/cycle-anim.json";
 import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import ContactImg from "../images/contact-us-banner.jpg";
+// import ContactImg from "assets/images/contact-us-banner.jpg";
 
 // const API_PATH =
 //   "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php";
+
+import Illustration from "assets/images/n-images/contact-illustration.svg";
 
 const axios = require("axios").default;
 
@@ -210,15 +213,27 @@ export default class FormContact extends Component {
         <div className="row align-items-center">
           <div className="col-md-6 hide">
             <div className="contact-left-content">
-              <Lottie options={this.defaultOptions} height={400} width={400} />
+              {/* <Lottie options={this.defaultOptions} height={400} width={400} /> */}
+              <motion.div
+                initial="hidden"
+                animate={{ opacity: [0, 1] }}
+                transition={{ delay: 0.1, duration: 0.5 }}
+                className="menu-illustration"
+              >
+                <object type="image/svg+xml" data={Illustration}>
+                  <img src={Illustration} alt="Illustration" />
+                </object>
+              </motion.div>
             </div>
           </div>
           <div className="col-md-6 custom-position">
             <div className="wrapper">
               <form className="form-section" onSubmit={this.submitEmail}>
                 <div className="side">
-                  <h1 className="form-title">Get in touch with us</h1>
-                  <div className="InputGroup">
+                  <h1 className="form-title contact-form-title">
+                    Get in touch with us
+                  </h1>
+                  <div className="InputGroup" style={{ display: "none" }}>
                     <input
                       type="radio"
                       name="service"

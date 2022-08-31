@@ -9,26 +9,26 @@ import { baseUrl } from "../globalConfig";
 
 import { withRouter } from "next/router";
 
-import ImageVideoText from "../components/ImageVideoText";
-import Quotes from "../components/Quotes";
-import SectionTitle from "../components/SectionTitle";
-import ProcessCard from "../components/ProcessCard";
-import OutcomeCard from "../components/OutcomeCard";
-import ProjectSlider from "../components/ProjectSlider";
-import Loader from "../components/Loader";
-import ProjectUiBanner from "../components/ProjectUiBanner";
+import ImageVideoText from "components/ImageVideoText";
+import Quotes from "components/Quotes";
+import SectionTitle from "components/SectionTitle";
+import ProcessCard from "components/ProcessCard";
+import OutcomeCard from "components/OutcomeCard";
+import ProjectSlider from "components/ProjectSlider";
+import Loader from "components/Loader";
+import ProjectUiBanner from "components/ProjectUiBanner";
 
-import BackArrow from "../images/BackArrow.svg";
-import DownloadArrow from "../images/DownloadArrow.svg";
-import Challenge from "../images/process-outcome/Challenge.svg";
-import Innovation from "../images/process-outcome/Innovation.svg";
-import Profits from "../images/process-outcome/Profits.svg";
-import Strategy from "../images/process-outcome/Strategy.svg";
-import NewUserEngagement from "../images/process-outcome/NewUserEngagement.svg";
-import NewCustomerAcquisition from "../images/process-outcome/NewCustomerAcquisition.svg";
+import BackArrow from "assets/images/BackArrow.svg";
+import DownloadArrow from "assets/images/DownloadArrow.svg";
+import Challenge from "assets/images/process-outcome/Challenge.svg";
+import Innovation from "assets/images/process-outcome/Innovation.svg";
+import Profits from "assets/images/process-outcome/Profits.svg";
+import Strategy from "assets/images/process-outcome/Strategy.svg";
+import NewUserEngagement from "assets/images/process-outcome/NewUserEngagement.svg";
+import NewCustomerAcquisition from "assets/images/process-outcome/NewCustomerAcquisition.svg";
 
-import GetQuoteModal from "../components/GetQuoteModal";
-import CaseStudyModal from "../components/CaseStudyModal";
+import GetQuoteModal from "components/GetQuoteModal";
+import CaseStudyModal from "components/CaseStudyModal";
 
 export default withRouter(
   class ProjectDetailPage extends Component {
@@ -143,7 +143,7 @@ export default withRouter(
                   />
                 </div>
               </a>
-              <div className="page-content">
+              <div className="page-content body-page">
                 <div className="container animated fadeIn">
                   <div key={projectInfo.id}>
                     <h1 className="main-title animated fadeIn">

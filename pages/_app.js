@@ -1,12 +1,12 @@
-import "../css/main.css";
+import "assets/css/main.css";
 import Head from "next/head";
 
-import MainLayout from "../layouts/MainLayout/MainLayout";
+import MainLayout from "layouts/MainLayout/MainLayout";
 
-import { DataProvider } from "../context/DataContext";
-import { VideoProvider } from "../context/VideoContext";
-import { BlogProvider } from "../context/BlogContext";
-import { BFSIProvider } from "../context/BFSIContext";
+import { DataProvider } from "context/DataContext";
+import { VideoProvider } from "context/VideoContext";
+import { BlogProvider } from "context/BlogContext";
+import { BFSIProvider } from "context/BFSIContext";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
@@ -46,6 +46,18 @@ function MyApp({ Component, pageProps }) {
                   async
                   src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
                 ></script>
+                <script
+                  dangerouslySetInnerHTML={{
+                    __html: `
+     (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "cr09zcax3l");
+`,
+                  }}
+                />
+                ;
               </Head>
               <Component {...pageProps} />
             </MainLayout>

@@ -53,11 +53,7 @@ app.post("/send", (req, res) => {
 
   var mail = {
     from: email,
-    to: [
-      "info@neointeraction.com",
-      "sam@neointeraction.com",
-      "shameer@neointeraction.com",
-    ],
+    to: ["info@neointeraction.com"],
     subject: `Contact us form submission : ${name} <${email}> : ${service} `,
     html: `<html>
      <body>
@@ -102,13 +98,7 @@ app.post("/sendgad", (req, res) => {
 
   var mail = {
     from: email,
-    to: [
-      // "shameer@neointeraction.com",
-      // "info@neointeraction.com",
-      "allen@neointeraction.com",
-      // "sam@neointeraction.com",
-      "sebin@neointeraction.com",
-    ],
+    to: ["info@neointeraction.com"],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
      <body>
@@ -152,13 +142,7 @@ app.post("/sendebk", (req, res) => {
 
   var mail = {
     from: email,
-    to: [
-      // "shameer@neointeraction.com",
-      // "info@neointeraction.com",
-      "allen@neointeraction.com",
-      "sam@neointeraction.com",
-      //  "sebin@neointeraction.com"
-    ],
+    to: ["info@neointeraction.com"],
     subject: `E-Book LP form submission : ${name} <${email}>`,
     html: `<html>
      <body>
@@ -385,12 +369,8 @@ app.post("/hiredeveloper", (req, res) => {
   var description = req.body.description;
   var mail = {
     from: email,
-    to: [
-      "hr@neointeraction.com",
-      "info@neointeraction.com",
-      "sam@neointeraction.com",
-    ],
-    subject: `Message from ${name} <${email}>`,
+    to: ["hr@neointeraction.com", "info@neointeraction.com"],
+    subject: `Hire Developer - Message from ${name} <${email}>`,
     // text: description,
     html: `<html>
      <body>
