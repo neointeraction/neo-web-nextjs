@@ -92,7 +92,7 @@ export default class UxModal extends Component {
 
   SuccessToast = () => (
     <div className="success-msg-download">
-      <div class="check-wrap"></div>
+      <div className="check-wrap"></div>
       <p>Mail Sent ! Your request has been successfully submitted!</p>
     </div>
   );
@@ -450,8 +450,8 @@ export default class UxModal extends Component {
                             {this.state.submitStatus ? (
                               <>
                                 <span>Submiting</span>
-                                <div class="progress-bar">
-                                  <div class="circle border"></div>
+                                <div className="progress-bar">
+                                  <div className="circle border"></div>
                                 </div>
                               </>
                             ) : (

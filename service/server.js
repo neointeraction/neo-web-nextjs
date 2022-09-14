@@ -49,12 +49,12 @@ app.post("/send", (req, res) => {
   var mobile = req.body.mobile;
   var email = req.body.email;
   var description = req.body.description;
-  var service = req.body.service;
+  // var service = req.body.service;
 
   var mail = {
     from: email,
     to: ["sam@neointeraction.com", "info@neointeraction.com"],
-    subject: `Contact us form submission : ${name} <${email}> : ${service} `,
+    subject: `Contact us form submission : ${name} <${email}> `,
     html: `<html>
      <body>
      <p>Name:${name}</p>

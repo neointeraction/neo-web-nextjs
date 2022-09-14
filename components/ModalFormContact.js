@@ -182,7 +182,7 @@ export default class ModalFormContact extends Component {
 
   SuccessToast = () => (
     <div className="success-msg-download width-md">
-      <div class="check-wrap"></div>
+      <div className="check-wrap"></div>
       <p>
         Your request has been submitted successfully ! You will receive a
         call/email from our team shortly.
@@ -366,8 +366,8 @@ export default class ModalFormContact extends Component {
                     {this.state.submitStatus ? (
                       <>
                         <span>Submiting</span>
-                        <div class="progress-bar">
-                          <div class="circle border"></div>
+                        <div className="progress-bar">
+                          <div className="circle border"></div>
                         </div>
                       </>
                     ) : (

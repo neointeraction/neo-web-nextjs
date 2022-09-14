@@ -74,7 +74,7 @@ export default withRouter(
 
     SuccessToast = () => (
       <div className="success-msg-download">
-        <div class="check-wrap"></div>
+        <div className="check-wrap"></div>
         <p>Success ! We have sent a mail with the download link!</p>
       </div>
     );
@@ -220,8 +220,8 @@ export default withRouter(
                                     {this.state.downloadSent ? (
                                       <>
                                         <span>Sending..</span>
-                                        <div class="progress-bar">
-                                          <div class="circle border"></div>
+                                        <div className="progress-bar">
+                                          <div className="circle border"></div>
                                         </div>
                                       </>
                                     ) : (

@@ -27,7 +27,7 @@ export default class FormContact extends Component {
       mobile: "",
       email: "",
       description: "",
-      service: "",
+      // service: "",
       // nameError: "",
       // emailError: "",
       // mobError: "",
@@ -101,7 +101,7 @@ export default class FormContact extends Component {
       mobile: "",
       email: "",
       description: "",
-      service: "",
+      // service: "",
       isCaptchaValid: false,
       isErrorShown: false,
       isFormValid: false,
@@ -185,7 +185,7 @@ export default class FormContact extends Component {
 
   SuccessToast = () => (
     <div className="success-msg-download width-md">
-      <div class="check-wrap"></div>
+      <div className="check-wrap"></div>
       <p>
         Thank you for contacting us. We have received your request. Our team
         will connect with you shortly.!
@@ -233,7 +233,7 @@ export default class FormContact extends Component {
                   <h1 className="form-title contact-form-title">
                     Get in touch with us
                   </h1>
-                  <div className="InputGroup">
+                  {/* <div className="InputGroup">
                     <input
                       type="radio"
                       name="service"
@@ -261,12 +261,12 @@ export default class FormContact extends Component {
                       onChange={this.handleChange}
                     />
                     <label htmlFor="size_3">Product Design</label>
-                  </div>
-                  {this.validator.message(
+                  </div> */}
+                  {/* {this.validator.message(
                     "service",
                     this.state.service,
                     "required"
-                  )}
+                  )} */}
                   <div className="input-custom-field">
                     <input
                       className="input-custom"
@@ -376,8 +376,8 @@ export default class FormContact extends Component {
                     {this.state.mailSent && this.state.isCaptchaValid ? (
                       <>
                         <span>Submit</span>
-                        <div class="progress-bar">
-                          <div class="circle border"></div>
+                        <div className="progress-bar">
+                          <div className="circle border"></div>
                         </div>
                       </>
                     ) : (

@@ -134,6 +134,16 @@ body::-webkit-scrollbar-thumb:hover {
   margin-bottom: 0;
 }
 
+.contact-menu-btn {
+  /* border: 5px solid; */
+  /* border-image: linear-gradient(60deg, #00a7e1 50%, #f6531d 0, black 0) 20; */
+  background-image: url(../images/n-images/buttonBorder.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9px 24px;
+  font-size: 14px;
+}
+
 .header-with-panel {
   position: relative;
   z-index: 9999999999;
@@ -904,7 +914,8 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 1;
   right: 80px;
   top: 25%;
-  border: 1px solid #ebd3d3;
+  /* border: 1px solid #ebd3d3; */
+  background: #fe5f55;
   border-radius: 8px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   height: 40px;
@@ -922,7 +933,8 @@ body::-webkit-scrollbar-thumb:hover {
   z-index: 1;
   right: 20px;
   top: 25%;
-  border: 1px solid #ebd3d3;
+  /* border: 1px solid #ebd3d3; */
+  background: #fe5f55;
   border-radius: 8px;
   transform: matrix(-1, 0, 0, 1, 0, 0);
   height: 40px;
@@ -951,7 +963,7 @@ body::-webkit-scrollbar-thumb:hover {
 .nav-r:hover,
 .nav-l:hover {
   cursor: pointer;
-  background: #ecebeb;
+  background: #be0315;
   filter: none;
   transition: 0.3s all ease-in-out;
 }
@@ -1085,4 +1097,75 @@ body::-webkit-scrollbar-thumb:hover {
     height: 84px;
     opacity: 0;
   }
+}
+
+.career-card div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.career-card div .mc-text {
+  flex-grow: 1;
+}
+
+.card-tile::after {
+  content: "";
+  background: linear-gradient(
+    360deg,
+    rgba(62, 51, 51, 0.7) 50.92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  margin-top: 80px;
+  height: 100%;
+  display: flex;
+  z-index: 0 !important;
+  margin-left: -20px;
+  margin-right: -20px;
+  transition: 1s all ease-in-out;
+}
+
+.blog-cards:after {
+  content: "";
+  background: linear-gradient(
+    360deg,
+    rgba(62, 51, 51, 0.7) 50.92%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  margin-top: 100px;
+  height: 100%;
+  display: flex;
+  z-index: 0 !important;
+  margin-left: -20px;
+  margin-right: -20px;
+  transition: 1s all ease-in-out;
+}
+
+.card-tile:hover::after {
+  display: none;
+}
+
+.card-title {
+  width: 100%;
+  height: auto !important;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  /* white-space: nowrap; */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+}
+
+.project-card-n .card-title {
+  position: absolute;
+  bottom: 20px;
+}
+
+.contact-mob {
+  display: none;
 }

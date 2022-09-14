@@ -128,8 +128,16 @@ const Header = () => {
             whileHover="hover"
             animate="rest"
           >
-            <motion.img src={Contact} alt="Contact" variants={textMotion} />
-            <motion.p variants={slashMotion} className="n-menu-text">
+            <motion.img
+              src={Contact}
+              alt="Contact"
+              variants={textMotion}
+              className="contact-mob"
+            />
+            <motion.p
+              variants={slashMotion}
+              className="n-menu-text contact-menu-btn"
+            >
               Contact Us
             </motion.p>
           </motion.div>

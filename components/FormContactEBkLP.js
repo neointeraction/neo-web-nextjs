@@ -116,7 +116,7 @@ export default class FormContactEBkLP extends Component {
 
   SuccessToast = () => (
     <div className="success-msg-ebk width-md">
-      <div class="check-wrap"></div>
+      <div className="check-wrap"></div>
       <p>The e-book will be delivered to your email shortly.</p>
     </div>
   );
@@ -214,8 +214,8 @@ export default class FormContactEBkLP extends Component {
                   {this.state.mailSent ? (
                     <>
                       <span>Submit</span>
-                      <div class="progress-bar">
-                        <div class="circle border"></div>
+                      <div className="progress-bar">
+                        <div className="circle border"></div>
                       </div>
                     </>
                   ) : (

@@ -265,7 +265,7 @@ export default withRouter(
                                       >
                                         <div className="link" key={item.id}>
                                           <CardTileUpfront
-                                            className={item.id}
+                                            className="blog-cards" //item.id
                                             category={item.blog_categories.map(
                                               (cat) => cat.blogCategoryName
                                             )}
@@ -276,8 +276,8 @@ export default withRouter(
                                             blogtag1={item.blog_categories.map(
                                               (cat) => cat.blogCategoryName
                                             )}
-                                            author={item.blogAuthor}
-                                            postedTime={item.created_at}
+                                            // author={item.blogAuthor}
+                                            // postedTime={item.created_at}
                                           />
                                         </div>
                                       </Link>

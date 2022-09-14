@@ -320,11 +320,11 @@ class ProjectDetailPage extends Component {
                     <div className="author-card">
                       <div className="row">
                         <div className="col-md-3">
-                          {/* <img
-                              src={`${baseUrl}${data.blog_detail.authorImg.url}`}
-                              alt="author-pic"
-                              className="author-pic width-100"
-                            /> */}
+                          <img
+                            src={`${baseUrl}${data.blog_detail.authorImg.url}`}
+                            alt="author-pic"
+                            className="author-pic width-100"
+                          />
                         </div>
                         <div className="col-md-9">
                           <p className="blog-author-name">{data.blogAuthor}</p>

@@ -200,7 +200,7 @@ export default class BFSI extends Component {
                                                 }}
                                               >
                                                 <div className="link-btn-card">
-                                                  <div class="btn-link">
+                                                  <div className="btn-link">
                                                     Learn More
                                                     <span>
                                                       <img
@@ -216,7 +216,7 @@ export default class BFSI extends Component {
                                             )}
 
                                             <button
-                                              class="custom-btn hidden-btn-card"
+                                              className="custom-btn hidden-btn-card"
                                               onClick={this.handleOpenModal}
                                             >
                                               Contact Us

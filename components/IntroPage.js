@@ -93,27 +93,27 @@ function IntroPage(props) {
 
       {id === "intro1" && (
         <TrailDot openDot={openDot}>
-          <span class="pulse pulse1"></span>
-          <span class="pulse pulse2"></span>
-          <span class="pulse pulse3"></span>
+          <span className="pulse pulse1"></span>
+          <span className="pulse pulse2"></span>
+          <span className="pulse pulse3"></span>
         </TrailDot>
       )}
 
       {id === "intro2" && (
         <TrailDot openDot={openDot}>
-          <span class="pulse pulse4"></span>
-          <span class="pulse pulse5"></span>
+          <span className="pulse pulse4"></span>
+          <span className="pulse pulse5"></span>
         </TrailDot>
       )}
       {id === "intro3" && (
         <TrailDot openDot={openDot}>
-          <span class="pulse pulse6"></span>
+          <span className="pulse pulse6"></span>
         </TrailDot>
       )}
       {id === "intro4" && (
         <TrailDot openDot={openDot}>
-          <span class="pulse pulse7"></span>
-          <span class="pulse pulse8"></span>
+          <span className="pulse pulse7"></span>
+          <span className="pulse pulse8"></span>
         </TrailDot>
       )}
     </div>

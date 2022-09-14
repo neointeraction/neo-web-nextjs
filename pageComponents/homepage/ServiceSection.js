@@ -64,8 +64,7 @@ const ServiceSection = ({ inner }) => {
             variants={subTitleVariant}
             className="n-banner-subtext"
           >
-            We have worked with some cool people to make their tech user
-            friendly
+            We offer end 2 end service from design to development
           </motion.h4>
         </motion.h2>
       )}

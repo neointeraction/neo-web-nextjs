@@ -257,8 +257,8 @@ export default class CaseStudyModal extends Component {
                             this.state.isCaptchaValid ? (
                               <>
                                 <span>Submit</span>
-                                <div class="progress-bar">
-                                  <div class="circle border"></div>
+                                <div className="progress-bar">
+                                  <div className="circle border"></div>
                                 </div>
                               </>
                             ) : (

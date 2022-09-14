@@ -95,8 +95,8 @@ export default class CardTileMenu extends Component {
               </div>
             </div>
           )}
-          {/* <div class="animation-area">
-            <ul class="blob">
+          {/* <div className="animation-area">
+            <ul className="blob">
             <li></li>
             <li></li>
             <li></li>

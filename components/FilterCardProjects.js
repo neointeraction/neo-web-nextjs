@@ -126,7 +126,7 @@ export default class FilterCardProjects extends Component {
                             <div className="link">
                               <CardTile
                                 // key={cards.id}
-                                className={cards.className}
+                                className="project-card-n"
                                 category={cards.categories.map(
                                   (li) => li.categoryName
                                 )}

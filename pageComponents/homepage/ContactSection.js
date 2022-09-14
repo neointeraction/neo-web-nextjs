@@ -28,7 +28,10 @@ const ContactSection = () => {
               Passion and excitement are our <br /> chai and coffee
             </h4>
             <h3>Work with us</h3>
-            <button class="custom-btn" onClick={() => handleRoute("/Career")}>
+            <button
+              className="custom-btn"
+              onClick={() => handleRoute("/Career")}
+            >
               Career
             </button>
 
@@ -54,7 +57,7 @@ const ContactSection = () => {
             </h4>
             <h3>Connect with us</h3>
             <button
-              class="custom-btn"
+              className="custom-btn"
               onClick={() => handleRoute("/ContactUs")}
             >
               Contact Us

@@ -70,12 +70,14 @@ export default class CardTileUpfront extends Component {
                 <div className="card-title animated fadeIn">
                   <h1>{cardTitle}</h1>
                 </div>
-                <p className="infoText">
-                  by <span className="author-name">{author}</span>
-                  <span className="time-posted">
-                    {moment(`${postedTime}`).startOf("hour").fromNow()}
-                  </span>
-                </p>
+                {author && (
+                  <p className="infoText">
+                    by <span className="author-name">{author}</span>
+                    <span className="time-posted">
+                      {moment(`${postedTime}`).startOf("hour").fromNow()}
+                    </span>
+                  </p>
+                )}
               </div>
             </div>
           )}

@@ -183,7 +183,7 @@ export default class FormContactAdLp extends Component {
 
   SuccessToast = () => (
     <div className="success-msg-download width-md">
-      <div class="check-wrap"></div>
+      <div className="check-wrap"></div>
       <p>
         Thank you for contacting us. We have received your request. Our team
         will connect with you shortly.!
@@ -340,8 +340,8 @@ export default class FormContactAdLp extends Component {
                     {this.state.mailSent && this.state.isCaptchaValid ? (
                       <>
                         <span>Submit</span>
-                        <div class="progress-bar">
-                          <div class="circle border"></div>
+                        <div className="progress-bar">
+                          <div className="circle border"></div>
                         </div>
                       </>
                     ) : (
