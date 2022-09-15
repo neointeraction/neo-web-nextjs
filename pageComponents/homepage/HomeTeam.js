@@ -19,6 +19,7 @@ import Team6 from "assets/images/n-images/team/team6.jpg";
 import Rakshanda from "assets/images/n-images/team/rakshanda.jpg";
 import Sebin from "assets/images/n-images/team/sebin.jpg";
 import Ashutosh from "assets/images/n-images/team/Ash.jpg";
+import Team7 from "assets/images/n-images/team/team7.jpg";
 
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -154,7 +155,7 @@ const HomeTeam = ({ careerText }) => {
     },
     {
       s: 1,
-      x: 654,
+      x: 684,
       y: 425,
       bg: Team6,
       width: 250,
@@ -162,23 +163,24 @@ const HomeTeam = ({ careerText }) => {
     },
     {
       s: 0.8,
-      x: 494,
+      x: 404,
       y: 395,
-      bg: Rakshanda,
-      width: 130,
+      bg: Team7,
+      width: 280,
       height: 190,
     },
     {
       s: 0.8,
-      x: 334,
+      x: 284,
       y: 425,
-      bg: Sebin,
-      width: 130,
-      height: 190,
+      bg: Rakshanda,
+      width: 126,
+      height: 180,
     },
+
     {
       s: 0.8,
-      x: 54,
+      x: 24,
       y: 405,
       bg: Ashutosh,
       width: 280,

@@ -122,7 +122,7 @@ const Header = () => {
         </div>
         <div className="n-header-contact">
           <motion.div
-            className="n-menu"
+            className="n-menu contact-menu-btn"
             onClick={() => handleRoute("/ContactUs")}
             initial="rest"
             whileHover="hover"
@@ -134,10 +134,7 @@ const Header = () => {
               variants={textMotion}
               className="contact-mob"
             />
-            <motion.p
-              variants={slashMotion}
-              className="n-menu-text contact-menu-btn"
-            >
+            <motion.p variants={slashMotion} className="n-menu-text ">
               Contact Us
             </motion.p>
           </motion.div>

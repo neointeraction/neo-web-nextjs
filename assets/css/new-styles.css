@@ -135,13 +135,18 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 .contact-menu-btn {
-  /* border: 5px solid; */
-  /* border-image: linear-gradient(60deg, #00a7e1 50%, #f6531d 0, black 0) 20; */
-  background-image: url(../images/n-images/buttonBorder.png);
+  padding: 10px;
+  background-image: url(/_next/static/media/buttonBorder.0441e10b.png);
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 9px 24px;
-  font-size: 14px;
+  background-position: 0px 0px;
+  width: 124px;
+  justify-content: center;
+}
+
+.contact-menu-btn p {
+  font-size: 14px !important;
+  margin-left: 0;
 }
 
 .header-with-panel {
