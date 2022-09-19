@@ -44,7 +44,9 @@ export default class FilterCardProjects extends Component {
               <div className="project-mb-spacing">
                 <div className="filter-btn-group animated fadeIn mob-hide ">
                   <button
-                    className="filter-btn"
+                    className={`filter-btn ${
+                      this.state.filter === undefined ? "active" : "inactive"
+                    }`}
                     onClick={() => {
                       this.setState({
                         filter: undefined,

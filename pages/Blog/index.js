@@ -191,7 +191,11 @@ export default withRouter(
                               />
                               <div className="filter-btn-group animated fadeIn delay-1s">
                                 <button
-                                  className="filter-btn"
+                                  className={`filter-btn ${
+                                    this.state.filter === undefined
+                                      ? "active"
+                                      : "inactive"
+                                  }`}
                                   onClick={() => {
                                     this.setState({
                                       filter: undefined,
@@ -248,6 +252,7 @@ export default withRouter(
                                         .map((li) => li.blogCategoryName)
                                         .includes(`${this.state.filter}`);
                                   })
+                                  .sort((a, b) => b.id - a.id)
                                   .map((item) => (
                                     <div
                                       className="col-md-4 mb-5"

@@ -327,6 +327,13 @@ strong {
   height: 100%;
 }
 
+.info-box-menu-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 100%;
+}
+
 .info-box-menu .menu-title h1 {
   opacity: 0.3 !important;
 }

@@ -54,15 +54,18 @@ export default class CardTileUpfront extends Component {
                   />
                 </button>
               </div>
-              <div className="card-title menu-title animated fadeIn">
-                <h1>{cardTitle}</h1>
+              <div className="info-box-menu-content">
+                <div>
+                  <ul className="blog-tag-flex">
+                    {blogtag1.map((item) => (
+                      <li>{item}</li>
+                    ))}
+                  </ul>
+                  <div className="card-title menu-title animated fadeIn">
+                    <h1>{cardTitle}</h1>
+                  </div>
+                </div>
               </div>
-
-              <ul className="blog-tag-flex">
-                {blogtag1.map((item) => (
-                  <li>{item}</li>
-                ))}
-              </ul>
             </div>
           ) : (
             <div>

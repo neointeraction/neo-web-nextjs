@@ -325,4 +325,9 @@
   .contact-mob {
     display: block;
   }
+  .contact-menu-btn {
+    background-image: none;
+    width: auto;
+    padding: 0;
+  }
 }
