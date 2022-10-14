@@ -303,7 +303,7 @@ class ProjectDetailPage extends Component {
                     </h2>
                     <p className="blog-text mt-3">
                       <ReactMarkdown
-                        className="blog-para"
+                        className="blog-para multi-level"
                         transformImageUri={this.transformImageUri}
                       >
                         {data.blog_detail?.paragraph5
