@@ -31,15 +31,15 @@ export default class FormContact extends Component {
       // nameError: "",
       // emailError: "",
       // mobError: "",
-      isCaptchaValid: false,
+      isCaptchaValid: true,
       isErrorShown: false,
       isFormValid: false,
       mailSent: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
-    this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
+    // this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
+    // this.verifyCallback = this.verifyCallback.bind(this);
     this.validator = new SimpleReactValidator();
   }
 
@@ -50,14 +50,14 @@ export default class FormContact extends Component {
       : this.setState({ [name]: value });
   }
 
-  componentDidMount() {
-    loadReCaptcha();
-    if (this.captchaDemo) {
-      console.log("started, just a second...");
-      this.captchaDemo.reset();
-      //this.captchaDemo.execute();
-    }
-  }
+  // componentDidMount() {
+  //   loadReCaptcha();
+  //   if (this.captchaDemo) {
+  //     console.log("started, just a second...");
+  //     this.captchaDemo.reset();
+  //     //this.captchaDemo.execute();
+  //   }
+  // }
 
   // when submit btn is clicked
 
@@ -102,7 +102,7 @@ export default class FormContact extends Component {
       email: "",
       description: "",
       // service: "",
-      isCaptchaValid: false,
+      isCaptchaValid: true,
       isErrorShown: false,
       isFormValid: false,
     });
@@ -193,19 +193,19 @@ export default class FormContact extends Component {
     </div>
   );
 
-  onLoadRecaptcha() {
-    if (this.captchaDemo) {
-      this.captchaDemo.reset();
-      //this.captchaDemo.execute();
-    }
-  }
-  verifyCallback(recaptchaToken) {
-    this.setState({
-      isCaptchaValid: true,
-    });
-    // Here you will get the final recaptchaToken!!!
-    console.log(recaptchaToken, "<= your recaptcha token");
-  }
+  // onLoadRecaptcha() {
+  //   if (this.captchaDemo) {
+  //     this.captchaDemo.reset();
+  //     //this.captchaDemo.execute();
+  //   }
+  // }
+  // verifyCallback(recaptchaToken) {
+  //   this.setState({
+  //     isCaptchaValid: true,
+  //   });
+  //   // Here you will get the final recaptchaToken!!!
+  //   console.log(recaptchaToken, "<= your recaptcha token");
+  // }
 
   render() {
     return (
@@ -356,7 +356,7 @@ export default class FormContact extends Component {
                     "required"
                   )}
                   <div className="input-custom-field captcha-feild">
-                    <ReCaptcha
+                    {/* <ReCaptcha
                       ref={(el) => {
                         this.captchaDemo = el;
                       }}
@@ -365,7 +365,7 @@ export default class FormContact extends Component {
                       sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
                       onloadCallback={this.onLoadRecaptcha}
                       verifyCallback={this.verifyCallback}
-                    />
+                    /> */}
                   </div>
 
                   {/* <button className="custom-btn form-submit">
