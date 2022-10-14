@@ -82,6 +82,7 @@ export default class FormContact extends Component {
               progress: undefined,
             });
             // alert("Message Sent.");
+            this.validator.hideMessages();
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
@@ -107,54 +108,6 @@ export default class FormContact extends Component {
       isFormValid: false,
     });
   }
-
-  // handleFormSubmit = (e) => {
-  //   e.preventDefault();
-  //   // Test
-  //   if (
-  //     this.state.email.length > 0 &&
-  //     this.state.name.length > 0 &&
-  //     this.state.description.length > 0 &&
-  //     this.state.mobile.length > 0 &&
-  //     this.state.service.length > 0
-  //     // this.state.isCaptchaValid
-  //   ) {
-  //     this.setState({
-  //       isErrorShown: false,
-  //       isFormValid: true,
-  //     });
-
-  //     // Send the form with AJAX
-  //     $.ajax({
-  //       data: this.state,
-  //       type: "POST",
-  //       url: "https://neointeraction.com/NEO_PROJECTS/neo_webiste_build/mailer.php",
-  //       success: function (data) {
-  //         console.info(data);
-  //       },
-  //       error: function (xhr, status, err) {
-  //         console.error(status, err.toString());
-  //       },
-  //     });
-
-  //     // Reset state after sending the form
-  //     this.setState({
-  //       name: "",
-  //       mobile: "",
-  //       email: "",
-  //       description: "",
-  //       service: "",
-  //       isCaptchaValid: false,
-  //       isErrorShown: false,
-  //       isFormValid: false,
-  //     });
-  //   } else {
-  //     // Show error message
-  //     this.setState({
-  //       isErrorShown: true,
-  //     });
-  //   }
-  // };
 
   // componentDidMount() {
   //   if (this.captchaDemo) {
@@ -319,7 +272,7 @@ export default class FormContact extends Component {
                           placeholder="Email"
                           name="email"
                           onChange={this.handleChange}
-                          onBlur={() => this.validator.showMessageFor("email")}
+                          // onBlur={() => this.validator.showMessageFor("email")}
                           value={this.state.email}
                         />
                         <span className="focus-border">

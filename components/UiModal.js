@@ -51,13 +51,13 @@ export default class UxModal extends Component {
       link: "",
       submitStatus: false,
       jobType: "UI Designer",
-      isCaptchaValid: false,
+      isCaptchaValid: true,
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
-    this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
-    this.verifyCallback = this.verifyCallback.bind(this);
+    // this.onLoadRecaptcha = this.onLoadRecaptcha.bind(this);
+    // this.verifyCallback = this.verifyCallback.bind(this);
     this.validator = new SimpleReactValidator();
   }
 
@@ -116,6 +116,7 @@ export default class UxModal extends Component {
               draggable: true,
               progress: undefined,
             });
+            this.validator.hideMessages();
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
@@ -129,27 +130,27 @@ export default class UxModal extends Component {
     }
   }
 
-  componentDidMount() {
-    loadReCaptcha();
-    if (this.captchaDemo) {
-      console.log("started, just a second...");
-      this.captchaDemo.reset();
-      //this.captchaDemo.execute();
-    }
-  }
-  onLoadRecaptcha() {
-    if (this.captchaDemo) {
-      this.captchaDemo.reset();
-      //this.captchaDemo.execute();
-    }
-  }
-  verifyCallback(recaptchaToken) {
-    this.setState({
-      isCaptchaValid: true,
-    });
-    // Here you will get the final recaptchaToken!!!
-    console.log(recaptchaToken, "<= your recaptcha token");
-  }
+  // componentDidMount() {
+  //   loadReCaptcha();
+  //   if (this.captchaDemo) {
+  //     console.log("started, just a second...");
+  //     this.captchaDemo.reset();
+  //     //this.captchaDemo.execute();
+  //   }
+  // }
+  // onLoadRecaptcha() {
+  //   if (this.captchaDemo) {
+  //     this.captchaDemo.reset();
+  //     //this.captchaDemo.execute();
+  //   }
+  // }
+  // verifyCallback(recaptchaToken) {
+  //   this.setState({
+  //     isCaptchaValid: true,
+  //   });
+  //   // Here you will get the final recaptchaToken!!!
+  //   console.log(recaptchaToken, "<= your recaptcha token");
+  // }
   resetForm() {
     this.setState({
       name: "",
@@ -418,7 +419,7 @@ export default class UxModal extends Component {
                             "required"
                           )}
                           <div className="input-custom-field captcha-feild">
-                            <ReCaptcha
+                            {/* <ReCaptcha
                               ref={(el) => {
                                 this.captchaDemo = el;
                               }}
@@ -427,7 +428,7 @@ export default class UxModal extends Component {
                               sitekey="6LefvnYcAAAAAOvQEHRZMlSVNv9WNqIm9OpQ3e8F"
                               onloadCallback={this.onLoadRecaptcha}
                               verifyCallback={this.verifyCallback}
-                            />
+                            /> */}
                           </div>
                           <button
                             className="custom-btn form-submit loader-btns"
