@@ -39,6 +39,10 @@ export default withRouter(
                 name="keywords"
                 content="design projects, best design case studies, UI/UX design projects, ui/ux ux design case study, best ux design projects"
               />
+              <link
+                rel="canonical"
+                href="https://www.neointeraction.com/Projects"
+              />
             </Head>
           </div>
 

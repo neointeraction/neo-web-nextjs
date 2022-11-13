@@ -36,6 +36,7 @@ const Home = () => {
             async
             src="https://js.convertflow.co/production/websites/35164.js"
           ></script> */}
+        <link rel="canonical" href="https://www.neointeraction.com/" />
       </Head>
       <div className="section-container body-page">
         <div className="container-fluid">

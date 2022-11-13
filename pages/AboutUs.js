@@ -175,6 +175,10 @@ export default withRouter(
               name="keywords"
               content="Design experience company,digital experience, design consultants, design agency, design company"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/AboutUs"
+            />
           </Head>
           {this.state.loading ? (
             <Loader />

@@ -88,6 +88,10 @@ export default withRouter(
               name="keywords"
               content="design services, design project, design experiences, UI/UX design, Motion design, creative design, design agency, Video designing"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/ContactUs"
+            />
           </Head>
           <a to="#" onClick={this.handleBack}>
             <div

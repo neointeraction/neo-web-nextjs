@@ -94,6 +94,10 @@ export default withRouter(
               name="keywords"
               content="motion design, video services, story boarding,marketing  videos,motion graphic designing, motion graphics"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/VideoService"
+            />
           </Head>
           <a to="#" onClick={this.handleBack}>
             <div

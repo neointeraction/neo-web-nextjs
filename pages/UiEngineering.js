@@ -158,6 +158,10 @@ export default withRouter(
               name="keywords"
               content="UI engineering, developmentui design services company,front end development agency"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/UiEngineering"
+            />
           </Head>
           <a to="#" onClick={this.handleBack}>
             <div

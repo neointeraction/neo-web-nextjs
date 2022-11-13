@@ -116,6 +116,10 @@ export default withRouter(
               name="keywords"
               content="internships, job openings, industry experience, open job positions, job opportunities"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/Career"
+            />
           </Head>
           <a to="#" onClick={this.handleBack}>
             <div

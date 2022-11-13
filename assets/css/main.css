@@ -706,7 +706,7 @@ input.form-control {
 }
 
 .social-icons li {
-  background: #909090;
+  /* background: #909090; */
   border-radius: 50%;
   height: 2.25rem;
   width: 2.25rem;
@@ -2970,6 +2970,7 @@ textarea {
 .go-to-blog {
   text-align: center;
   padding: 60px 0 20px 0;
+  cursor: pointer;
 }
 
 .blog-card-thumb {

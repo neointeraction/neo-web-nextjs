@@ -214,6 +214,10 @@ export default withRouter(
               name="keywords"
               content="UX design,user experience design services,ux design and development, ux design agency, ux auditing, user experience design agency, ui mobile app design"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/ProductService"
+            />
           </Head>
           <a to="#" onClick={this.handleBack}>
             <div

@@ -65,6 +65,7 @@ const Ebook = () => {
             async
             src="https://js.convertflow.co/production/websites/35164.js"
           ></script> */}
+        <link rel="canonical" href="https://www.neointeraction.com/ebook" />
       </Head>
       <div className="container">
         <div className="home-content">

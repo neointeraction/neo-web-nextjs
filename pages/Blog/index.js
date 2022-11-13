@@ -85,6 +85,10 @@ export default withRouter(
                 name="keywords"
                 content="Best UI/UX design articles, UX blogs,designing blogs, design articles, important design case studies, UI/UX design case studies, download UI/UX case studies"
               />
+              <link
+                rel="canonical"
+                href="https://www.neointeraction.com/Blog"
+              />
             </Head>
           </div>
           {this.state.loading ? (

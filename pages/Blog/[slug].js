@@ -23,9 +23,9 @@ import BlogSlider from "components/BlogSlider";
 import BackArrow from "assets/images/BackArrow.svg";
 // import Author from "assets/images/Author2.png";
 import FacebookIcon from "assets/images/n-images/fb-blog.svg";
-import LinkedInIcon from "assets/images/n-images/li-blog.svg";
-import TwitterIcon from "assets/images/n-images/tw-blog.svg";
-import Menu from "assets/images/9dots.svg";
+import LinkedInIcon from "assets/images/n-images/lin-blog.svg";
+import TwitterIcon from "assets/images/n-images/tr-blog.svg";
+import Menu from "assets/images/n-images/more-blog.svg";
 
 class ProjectDetailPage extends Component {
   constructor(props) {

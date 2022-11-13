@@ -143,6 +143,10 @@ export default withRouter(
               name="keywords"
               content="design templates, free illustrations, download design templates, New project template, B2B project template, best design illustrations, download free templates, download free illustrations of Indian cities"
             />
+            <link
+              rel="canonical"
+              href="https://www.neointeraction.com/Downloads"
+            />
           </Head>
           {this.state.loading ? (
             <Loader />

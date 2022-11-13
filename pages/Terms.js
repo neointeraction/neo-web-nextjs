@@ -53,6 +53,7 @@ export default withRouter(
               name="description"
               content="Neointeraction terms and conditions."
             />
+            <link rel="canonical" href="https://www.neointeraction.com/Terms" />
           </Head>
           {this.state.loading ? (
             <Loader />

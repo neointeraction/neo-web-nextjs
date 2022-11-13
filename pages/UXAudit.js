@@ -89,6 +89,7 @@ const gcampaign = () => {
             __html: `window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-1067948097');`,
           }}
         />
+        <link rel="canonical" href="https://www.neointeraction.com/UXAudit" />
       </Head>
 
       <div className="container">
