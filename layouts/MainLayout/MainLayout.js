@@ -3,7 +3,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 function MainLayout({ children }) {
-  const [width, setWidth] = useState("");
+  const [width, setWidth] = useState(1366);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
