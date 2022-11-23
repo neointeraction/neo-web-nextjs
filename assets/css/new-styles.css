@@ -80,6 +80,11 @@ body::-webkit-scrollbar-thumb:hover {
   transition: 0.3s all ease-in-out;
 }
 
+.header-with-panel.fixed .logo-container.upfront-logo-container {
+  transform: translate(0, 15px) scale(0.8) !important;
+  transition: 0.3s all ease-in-out;
+}
+
 .header-with-panel.fixed .n-header-container {
   padding: 3px 30px;
 }
@@ -1173,4 +1178,77 @@ body::-webkit-scrollbar-thumb:hover {
 
 .contact-mob {
   display: none;
+}
+
+.more-link-container {
+  position: relative;
+  margin: 40px 0;
+}
+.more-blog-icon {
+  position: absolute;
+  top: 23px;
+  z-index: 0;
+}
+
+.go-to-blog {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+}
+
+.cliclable-link {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  height: 100px;
+  z-index: 1;
+}
+
+.mb-20p {
+  margin-bottom: 20px !important;
+}
+
+.blog-section-no-margin .margin-adjust {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.horizontal-menu-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  flex-grow: 1;
+}
+
+.horizontal-menu-list li {
+  margin-left: 40px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 34px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.header-with-panel.fixed .horizontal-menu-list li {
+  margin-left: 30px;
+  font-size: 19px;
+  transition: 0.3s all ease-in-out;
+}
+
+.header-with-panel.fixed .horizontal-menu-list li:first-child {
+  margin-left: 20px;
+}
+
+.horizontal-menu-list li.active {
+  font-weight: 600;
+  color: #f90400;
+  transition: 0.3s all ease-in-out;
+}
+
+.horizontal-menu-list li:hover {
+  color: #f90400;
+  transition: 0.3s all ease-in-out;
 }

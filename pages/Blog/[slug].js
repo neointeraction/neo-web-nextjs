@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import Link from "next/link";
 import ReactWOW from "react-wow";
 import Head from "next/head";
-import { useRouter } from "next/router";
 
 import moment from "moment";
 import axios from "axios";
@@ -26,6 +25,7 @@ import FacebookIcon from "assets/images/n-images/fb-blog.svg";
 import LinkedInIcon from "assets/images/n-images/lin-blog.svg";
 import TwitterIcon from "assets/images/n-images/tr-blog.svg";
 import Menu from "assets/images/n-images/more-blog.svg";
+import BlogSection from "pageComponents/homepage/BlogSection";
 
 class ProjectDetailPage extends Component {
   constructor(props) {
@@ -362,17 +362,29 @@ class ProjectDetailPage extends Component {
                         <img src={TwitterIcon} alt="Twitter" />
                       </li>
                     </ul>
-                    <div className="go-to-blog">
-                      <Link href="/Blog">
-                        <img src={Menu} alt="menu" />
-                      </Link>
+                    {/* <Link href="/Blog" className="link-blog"> */}
+                    <div className="more-link-container">
+                      <div className="go-to-blog">
+                        <div
+                          className="cliclable-link"
+                          onClick={() => this.props.router.push("/Blog")}
+                        ></div>
+                        <object
+                          type="image/svg+xml"
+                          data={Menu}
+                          className="more-blog-icon"
+                        >
+                          <img key="ux" src={Menu} alt="UX" />
+                        </object>
+                      </div>
                     </div>
+                    {/* </Link> */}
                   </ReactWOW>
                 </div>
               </div>
               {/* container-end ==== */}
               <ReactWOW animation="fadeIn" offset={-200}>
-                <div className="contact-section mb-15rem">
+                <div className="contact-section mb-20p">
                   <div className="container">
                     <SectionTitle
                       title="Want help with your business?"
@@ -384,14 +396,18 @@ class ProjectDetailPage extends Component {
                   </div>
                 </div>
               </ReactWOW>
-              <div className="container position-relative">
+              {/* <div className="container position-relative">
                 <div className="carousal-position">
                   <ReactWOW animation="fadeInUp" delay="0s">
                     <div>
                       <BlogSlider />
+                     
                     </div>
                   </ReactWOW>
                 </div>
+              </div> */}
+              <div className="blog-section-no-margin">
+                <BlogSection />
               </div>
             </div>
           </div>

@@ -24,6 +24,7 @@ export default class FormContactAdLp extends Component {
       name: "",
       mobile: "",
       email: "",
+      projectType: "",
       description: "",
       // service: "",
       // nameError: "",
@@ -99,6 +100,7 @@ export default class FormContactAdLp extends Component {
       name: "",
       mobile: "",
       email: "",
+      projectType: "",
       description: "",
       isCaptchaValid: true,
       isErrorShown: false,
@@ -293,6 +295,38 @@ export default class FormContactAdLp extends Component {
                       "required|email"
                     )}
                     <div>{this.state.emailError}</div>
+                  </div>
+                  <div className="col-md-12">
+                    <div className="input-custom-field">
+                      <select
+                        className="input-custom"
+                        name="projectType"
+                        id="Duration"
+                        onChange={this.handleChange}
+                        value={this.state.projectType}
+                      >
+                        <option value="">What are you looking for ?</option>
+                        <option value="Design a Web / Mobile Application">
+                          Design a Web / Mobile Application
+                        </option>
+                        <option value="Hire a Ux Designer">
+                          Hire a Ux Designer
+                        </option>
+                        <option value="Hire a UI Developer">
+                          Hire a UI Developer
+                        </option>
+                      </select>
+
+                      <span className="focus-border">
+                        <i></i>
+                      </span>
+                    </div>
+                    {/* <div>{this.state.emailError}</div> */}
+                    {this.validator.message(
+                      "looking for",
+                      this.state.projectType,
+                      "required"
+                    )}
                   </div>
                 </div>
                 <div className="side side-ad">

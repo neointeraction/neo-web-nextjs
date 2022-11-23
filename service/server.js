@@ -94,17 +94,19 @@ app.post("/sendgad", (req, res) => {
   var name = req.body.name;
   var mobile = req.body.mobile;
   var email = req.body.email;
+  var projectType = req.body.projectType;
   var description = req.body.description;
 
   var mail = {
     from: email,
-    to: ["sam@neointeraction.com"],
+    to: ["sam@neointeraction.com", "allen@neointeraction.com"],
     subject: `Google Ad form submission : ${name} <${email}>`,
     html: `<html>
      <body>
      <p>Name:${name}</p>
      <p>Email:${email}</p>
      <p>Mobile:${mobile}</p>  
+     <p>Looking for:${projectType}</p>  
      <p>description:${description}</p>
      </body> 
      </html>`,
