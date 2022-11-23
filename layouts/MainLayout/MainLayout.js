@@ -11,7 +11,7 @@ function MainLayout({ children }) {
   useEffect(() => {
     setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowSizeChange);
-  }, [width]);
+  }, []);
 
   return (
     <div>
