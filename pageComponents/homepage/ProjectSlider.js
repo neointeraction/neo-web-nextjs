@@ -33,8 +33,6 @@ const ProjectSlider = () => {
 
   const [path, setPath] = useState("");
 
-  console.log(path, "path");
-
   useEffect(() => {
     if (inView) {
       controls.start("visible");
@@ -90,7 +88,6 @@ const ProjectSlider = () => {
                 {[...context.state.projects]
                   .sort((a, b) => a.projectId - b.projectId)
                   .filter((name) => {
-                    console.log(name, "name");
                     return name.showInHomepage;
                   })
                   .map((cards, i) => (
@@ -104,7 +101,6 @@ const ProjectSlider = () => {
                           className="n-banner-title"
                         >
                           {cards.cardTitle}
-                          {console.log(context.state.projects, "cards")}
                         </motion.h2>
                         <motion.h4
                           ref={ref}

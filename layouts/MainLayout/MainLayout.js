@@ -9,8 +9,9 @@ function MainLayout({ children }) {
     setWidth(window.innerWidth);
   }
   useEffect(() => {
+    setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowSizeChange);
-  }, []);
+  }, [width]);
 
   return (
     <div>
