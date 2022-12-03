@@ -326,8 +326,49 @@
     display: block;
   }
   .contact-menu-btn {
-    background-image: none;
+    background-image: none !important;
     width: auto;
     padding: 0;
+  }
+
+  /* banner  */
+  .banner-section-home {
+    margin-top: 0;
+  }
+  .banner-slider1 {
+    height: 400px;
+  }
+  .banner-slider2 {
+    height: 400px;
+  }
+  .banner-slider3 {
+    height: 400px;
+  }
+  .banner-slider4 {
+    height: 400px;
+  }
+  .b-banner-title {
+    font-size: 28px;
+    line-height: 38px;
+  }
+  .b-banner-subtext {
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  .banner-slider-container {
+    width: 100%;
+  }
+  .banner-section-home .slider-content {
+    margin-bottom: 0;
+  }
+  .banner-slider-container {
+    padding: 20px 20px 60px 20px;
+  }
+  .b-banner-subtext .underline-highlight::after {
+    bottom: -12px;
+  }
+  .banner-section-home .slick-prev,
+  .banner-section-home .slick-next {
+    top: 6%;
   }
 }

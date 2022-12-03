@@ -11,6 +11,7 @@ import Clients from "pageComponents/homepage/Clients";
 import HomeTeam from "pageComponents/homepage/HomeTeam";
 import BlogSection from "pageComponents/homepage/BlogSection";
 import ContactSection from "pageComponents/homepage/ContactSection";
+import HomeBannerSlider from "pageComponents/homepage/HomeBannerSlider";
 
 const Home = () => {
   const router = useRouter();
@@ -40,8 +41,10 @@ const Home = () => {
       </Head>
       <div className="section-container body-page">
         <div className="container-fluid">
-          <section className="section-home">
-            <HomeBanner />
+          {/* section-home */}
+          <section className="banner-section-home">
+            {/* <HomeBanner /> */}
+            <HomeBannerSlider />
           </section>
           <section className="section section-project">
             <ProjectSlider />

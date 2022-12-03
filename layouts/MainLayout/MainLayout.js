@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "components/Header";
 import Footer from "components/Footer";
+import HeaderNew from "components/HeaderNew";
 
 function MainLayout({ children }) {
   const [width, setWidth] = useState(1366);
@@ -15,7 +16,12 @@ function MainLayout({ children }) {
 
   return (
     <div>
-      <Header upfront={width <= 768 ? false : true} />
+      {width <= 768 ? (
+        <Header upfront={width <= 768 ? false : true} />
+      ) : (
+        <HeaderNew />
+      )}
+
       {children}
       <Footer />
     </div>

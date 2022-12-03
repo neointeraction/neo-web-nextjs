@@ -141,9 +141,9 @@ body::-webkit-scrollbar-thumb:hover {
 
 .contact-menu-btn {
   padding: 10px;
-  background-image: url(../images/n-images/buttonBorder.png);
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url(../images/n-images/buttonBorder.png) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
   background-position: 0px 0px;
   width: 124px;
   justify-content: center;
@@ -1251,4 +1251,212 @@ body::-webkit-scrollbar-thumb:hover {
 .horizontal-menu-list li:hover {
   color: #f90400;
   transition: 0.3s all ease-in-out;
+}
+
+/* Header v2  */
+
+.header-block {
+  height: 120px;
+}
+
+.header-floating {
+  position: fixed;
+  top: 20px;
+  width: 100%;
+  z-index: 9;
+  transition: 0.3s all ease-in-out;
+}
+
+.header-floating.fixed {
+  top: 0;
+  transition: 0.3s all ease-in-out;
+}
+
+.header-floating .n-header-container {
+  background: rgba(41, 41, 52, 0.9);
+  width: 90%;
+  margin: auto;
+  border-radius: 2px 2px 20px 20px;
+  padding: 0 30px;
+}
+
+.header-floating .logo-container {
+  margin-left: 0;
+}
+
+.header-floating .n-logo-container .logo-block {
+  width: 28px;
+  height: 55px;
+}
+
+.n-logo-container .logo-text p {
+  font-size: 10px;
+  width: 50%;
+}
+
+.header-floating .horizontal-menu-list li {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 34px 20px;
+  border-top: 6px solid transparent;
+  border-radius: 2px;
+  margin-left: 4px;
+}
+.header-floating .horizontal-menu-list li:first-child {
+  margin-left: 34px;
+}
+
+.header-floating.fixed .horizontal-menu-list li {
+  padding: 34px 20px;
+}
+
+.header-floating .contact-menu-btn {
+  background: #fff;
+  border-radius: 6px;
+}
+
+.header-floating .horizontal-menu-list li.active {
+  border-top: 6px solid #c20200;
+}
+
+.header-floating .horizontal-menu-list li:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.right-menu-flex {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.join-menu p {
+  margin-right: 20px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 34px 20px;
+  border-top: 6px solid transparent;
+  border-radius: 2px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+.header-floating .join-menu p.active {
+  border-top: 6px solid #c20200;
+}
+
+.join-menu p:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* banner  */
+
+.banner-section-home {
+  margin-left: -15px;
+  margin-right: -15px;
+  margin-top: -120px;
+}
+
+.banner-slider1 {
+  background-image: url(../images/n-images/Homepage_1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner-slider2 {
+  background-image: url(../images/n-images/Homepage_2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner-slider3 {
+  background-image: url(../images/n-images/Homepage_3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.banner-slider4 {
+  background-image: url(../images/n-images/Homepage_4.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.slick-prev,
+.slick-next {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  top: 85%;
+  filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.14));
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+  transition: 0.3s all ease-in-out;
+  background: rgba(41, 41, 52, 0.9);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: #be0315;
+}
+
+.slick-next {
+  right: 2.5% !important;
+}
+
+.slick-prev {
+  left: 90.5% !important;
+}
+
+.banner-slider-container {
+  padding: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  height: 100%;
+  text-align: left;
+  width: 900px;
+}
+
+.b-banner-title {
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 118%;
+  letter-spacing: -0.022em;
+  color: #f8f8f8;
+}
+
+.b-banner-title .highlight {
+  color: #f24822;
+}
+
+.b-banner-subtext {
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  letter-spacing: -0.011em;
+  color: #f8f8f8;
+  margin-top: 20px;
+}
+.b-banner-subtext .underline-highlight {
+  position: relative;
+}
+.b-banner-subtext .underline-highlight::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  height: 6px;
+  width: 100%;
+  background: #d2fd59;
+  border-radius: 11px;
 }
