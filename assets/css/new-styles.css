@@ -144,7 +144,7 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: url(../images/n-images/buttonBorder.png) !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
-  background-position: 0px 0px;
+  background-position: 0px -1px;
   width: 124px;
   justify-content: center;
 }
@@ -152,6 +152,12 @@ body::-webkit-scrollbar-thumb:hover {
 .contact-menu-btn p {
   font-size: 14px !important;
   margin-left: 0;
+}
+
+.contact-block-btn {
+  background: #fff;
+  border-radius: 6px;
+  height: 42px;
 }
 
 .header-with-panel {
@@ -1303,6 +1309,9 @@ body::-webkit-scrollbar-thumb:hover {
   border-top: 6px solid transparent;
   border-radius: 2px;
   margin-left: 4px;
+  /* max-width: 110px;
+  min-width: 100px;
+  text-align: center; */
 }
 .header-floating .horizontal-menu-list li:first-child {
   margin-left: 34px;
@@ -1311,10 +1320,8 @@ body::-webkit-scrollbar-thumb:hover {
 .header-floating.fixed .horizontal-menu-list li {
   padding: 34px 20px;
 }
-
-.header-floating .contact-menu-btn {
-  background: #fff;
-  border-radius: 6px;
+.header-floating.fixed .n-header-container {
+  backdrop-filter: blur(7px);
 }
 
 .header-floating .horizontal-menu-list li.active {

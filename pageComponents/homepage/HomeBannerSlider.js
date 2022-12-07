@@ -139,7 +139,7 @@ const HomeBannerSlider = () => {
                 className="b-banner-title"
               >
                 Design
-                <span className="highlight"> (Transformation) </span> and
+                <span className="highlight"> (Transformation) </span>
                 Partner
               </motion.h2>
               <motion.h4

@@ -36,7 +36,7 @@ const HeaderNew = ({ upfront }) => {
     rest: { x: 0, opacity: 1, ease: "easeOut", duration: 0.4, type: "tween" },
     hover: {
       opacity: 1,
-      x: 5,
+      x: 0,
       transition: {
         duration: 0.4,
         type: "tween",
@@ -161,23 +161,25 @@ const HeaderNew = ({ upfront }) => {
                     join us
                   </p>
                 </div>
-                <motion.div
-                  className="n-menu contact-menu-btn"
-                  onClick={() => handleRoute("/ContactUs")}
-                  initial="rest"
-                  whileHover="hover"
-                  animate="rest"
-                >
-                  <motion.img
-                    src={Contact}
-                    alt="Contact"
-                    variants={textMotion}
-                    className="contact-mob"
-                  />
-                  <motion.p variants={slashMotion} className="n-menu-text ">
-                    Contact Us
-                  </motion.p>
-                </motion.div>
+                <div className="contact-block-btn">
+                  <motion.div
+                    className="n-menu contact-menu-btn"
+                    onClick={() => handleRoute("/ContactUs")}
+                    initial="rest"
+                    whileHover="hover"
+                    animate="rest"
+                  >
+                    <motion.img
+                      src={Contact}
+                      alt="Contact"
+                      variants={textMotion}
+                      className="contact-mob"
+                    />
+                    <motion.p variants={slashMotion} className="n-menu-text ">
+                      Contact Us
+                    </motion.p>
+                  </motion.div>
+                </div>
               </div>
             </div>
           </div>
