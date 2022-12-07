@@ -43,6 +43,10 @@
     background: #fff;
   }
 
+  .page-content {
+    padding-top: 90px !important;
+  }
+
   .n-menu-text {
     display: none;
   }
