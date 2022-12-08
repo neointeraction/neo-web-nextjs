@@ -36,7 +36,7 @@ const HomeBannerSlider = () => {
   }, [controls, inView, inView1, controls1]);
 
   var slideSettings = {
-    // autoplay: true,
+    autoplay: true,
     autoplaySpeed: 6000,
     fade: true,
     dots: false,
