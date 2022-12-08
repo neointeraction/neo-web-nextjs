@@ -397,6 +397,6 @@
   }
   .banner-section-home .slick-prev,
   .banner-section-home .slick-next {
-    top: 6%;
+    display: none !important;
   }
 }

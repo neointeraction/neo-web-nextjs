@@ -4,7 +4,7 @@ import Footer from "components/Footer";
 import HeaderNew from "components/HeaderNew";
 
 function MainLayout({ children }) {
-  const [width, setWidth] = useState(1366);
+  const [width, setWidth] = useState(0);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -18,9 +18,9 @@ function MainLayout({ children }) {
     <div>
       {width <= 768 ? (
         <Header upfront={width <= 768 ? false : true} />
-      ) : (
+      ) : width >= 768 ? (
         <HeaderNew />
-      )}
+      ) : null}
 
       {children}
       <Footer />
