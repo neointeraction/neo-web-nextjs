@@ -31,7 +31,7 @@
     right: 0;
     top: 8px;
     height: 63px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
   }
 
   .header-with-panel.fixed .n-header-container {
@@ -40,7 +40,8 @@
     left: 0;
     right: 0;
     height: 63px;
-    background: #fff;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(7px);
   }
 
   .page-content {
@@ -359,9 +360,17 @@
   .banner-section-home {
     margin-top: 0;
   }
+  .mob-bsb {
+    display: block;
+    width: 220px;
+  }
+  .b-banner-subtext .underline-highlight::after {
+    height: 4px;
+  }
+
   .banner-slider1 {
+    background-image: url(../images/n-images/Homepage_1-mob.jpg);
     height: 600px;
-    background-position: 65% 0;
   }
   .banner-slider2 {
     height: 600px;

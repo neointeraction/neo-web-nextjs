@@ -11,14 +11,17 @@ function MainLayout({ children }) {
   }
   useEffect(() => {
     setWidth(window.innerWidth);
+
     window.addEventListener("resize", handleWindowSizeChange);
   }, []);
 
+  console.log(width, "width");
+
   return (
     <div>
-      {width <= 768 ? (
+      {width === 0 ? null : width <= 768 ? (
         <Header upfront={width <= 768 ? false : true} />
-      ) : width >= 768 ? (
+      ) : width >= 769 ? (
         <HeaderNew />
       ) : null}
 

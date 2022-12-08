@@ -36,7 +36,7 @@ const HomeBannerSlider = () => {
   }, [controls, inView, inView1, controls1]);
 
   var slideSettings = {
-    autoplay: true,
+    // autoplay: true,
     autoplaySpeed: 6000,
     fade: true,
     dots: false,
@@ -92,7 +92,7 @@ const HomeBannerSlider = () => {
                 className="b-banner-subtext"
               >
                 Simple and Impactful{" "}
-                <span className="underline-highlight">
+                <span className="underline-highlight mob-bsb">
                   User Centric digital experiences
                 </span>
               </motion.h4>
