@@ -101,7 +101,7 @@ const HeaderNew = ({ upfront }) => {
                 <motion.div
                   animate={{ opacity: [0, 1] }}
                   initial="hidden"
-                  transition={{ delay: 0.5, duration: 0.5 }}
+                  transition={{ delay: 0.4, duration: 0.5 }}
                   className="logo-text"
                 >
                   <div className="logo-text">
@@ -146,7 +146,7 @@ const HeaderNew = ({ upfront }) => {
                 className={`${router.pathname === "/Blog" ? "active" : ""}`}
                 onClick={() => handleRoute("/Blog")}
               >
-                blog
+                blogs
               </li>
             </ul>
             <div className="n-header-contact">

@@ -146,7 +146,7 @@ const Header = ({ upfront }) => {
                 className={`${router.pathname === "/Blog" ? "active" : ""}`}
                 onClick={() => handleRoute("/Blog")}
               >
-                blog
+                blogs
               </li>
             </ul>
             <div className="n-header-contact">
@@ -258,7 +258,7 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/Blog")}
                         >
-                          blog
+                          blogs
                         </li>
                         <li>
                           <ul className="social-icons n-social-icons no-bg">

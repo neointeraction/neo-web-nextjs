@@ -107,10 +107,13 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>Career opportunities | Hire Top UX Designers </title>
+            <title>
+              Career Opportunities | UI/UX Design Services - Neointeraction
+              Design{" "}
+            </title>
             <meta
               name="description"
-              content="Neointeraction design is one of the best companies for UI/UX designers. We have positions open for UI/UX designers, UI developers, and interns."
+              content="Neointeraction Design - a global UX design company is always on the lookout for talented UI UX designers, UX researchers, UI developers, and interns."
             />
             <meta
               name="keywords"
@@ -146,12 +149,20 @@ export default withRouter(
               <div className="tags animated fadeIn ">
                 <ul className="anchor-links">
                   <li>
-                    <AnchorLink className="custom-btn" href="#openings">
+                    <AnchorLink
+                      offset={() => 60}
+                      className="custom-btn"
+                      href="#openings"
+                    >
                       Job Openings
                     </AnchorLink>
                   </li>
                   <li>
-                    <AnchorLink className="custom-btn" href="#intern">
+                    <AnchorLink
+                      offset={() => 60}
+                      className="custom-btn"
+                      href="#intern"
+                    >
                       Internships
                     </AnchorLink>
                   </li>

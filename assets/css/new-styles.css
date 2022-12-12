@@ -173,7 +173,7 @@ input[type="number"] {
 
 .header-with-panel {
   position: relative;
-  z-index: 9999999999;
+  z-index: 99999999;
 }
 
 .nav-menu {
@@ -1477,4 +1477,12 @@ input[type="number"] {
   width: 100%;
   background: #d2fd59;
   border-radius: 11px;
+}
+
+.hd-mob {
+  display: inherit;
+}
+
+.sh-mob {
+  display: none;
 }

@@ -49,7 +49,7 @@ const ServiceSection = ({ inner }) => {
   return (
     <div className={`service-container ${inner ? "nobg" : ""}`}>
       {!inner && (
-        <motion.h2
+        <motion.h1
           ref={ref}
           initial="hidden"
           animate={controls}
@@ -66,7 +66,7 @@ const ServiceSection = ({ inner }) => {
           >
             We offer end 2 end service from design to development
           </motion.h4>
-        </motion.h2>
+        </motion.h1>
       )}
 
       <div className="row">
@@ -151,7 +151,7 @@ const ServiceSection = ({ inner }) => {
             >
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <h4>UX Design</h4>
+                  <h2>UX Design</h2>
                   <img
                     src={ArrowRight}
                     alt="ArrowRight"
@@ -199,7 +199,7 @@ const ServiceSection = ({ inner }) => {
             >
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <h4>Product Design</h4>
+                  <h2>Product Design</h2>
                   <img
                     src={ArrowRight}
                     alt="ArrowRight"
@@ -242,7 +242,7 @@ const ServiceSection = ({ inner }) => {
             >
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <h4>UI Engineering</h4>
+                  <h2>UI Engineering</h2>
                   <img
                     src={ArrowRight}
                     alt="ArrowRight"
@@ -287,7 +287,7 @@ const ServiceSection = ({ inner }) => {
             >
               <AccordionItemHeading>
                 <AccordionItemButton>
-                  <h4>Design Transformation</h4>
+                  <h2>Design Transformation</h2>
                   <img
                     src={ArrowRight}
                     alt="ArrowRight"

@@ -166,15 +166,15 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>About Us | Best UI/UX design company in India</title>
+            <title>
+              About Us | Hire Best React Developer in India, USA -
+              Neointeraction Design
+            </title>
             <meta
               name="description"
-              content="Best UI/UX design company in Bangalore, with 15years of experience in creating designs that have touched people's lives, thus enabling business success"
+              content="The Neointeraction Design Team has provided UX UI design and UI engineering services for international clients from the United States, Europe, the Middle East, Asia, and Australia for the past 15 years."
             />
-            <meta
-              name="keywords"
-              content="Design experience company,digital experience, design consultants, design agency, design company"
-            />
+            <meta name="keywords" content="hire react developer" />
             <link
               rel="canonical"
               href="https://www.neointeraction.com/AboutUs"
@@ -215,6 +215,7 @@ export default withRouter(
                         ProjectVideo=""
                         componentOrientation="image-left"
                         ProjectImage={ProjectImage}
+                        imageAlt="Hire React Developer - Neointeraction"
                         titleText="Who are we?"
                         contentText={
                           <div>
@@ -311,12 +312,13 @@ export default withRouter(
                         componentOrientation="image-left"
                         grid1="6"
                         grid2="6"
+                        imageAlt="Our Team - Neointeraction"
                         ProjectImage={OurTeamImg}
                         titleText="Our Team"
                         contentText={
                           <div>
                             <p>
-                              Neointeration studio was founded in 2005, under
+                              Neointeraction studio was founded in 2005, under
                               the vision of the chief designer and founder, Sam
                               Thomas - a post-graduate in Visual Communication
                               Design from Indian Institute of Technology Bombay
@@ -327,7 +329,7 @@ export default withRouter(
                               designer during the early years of his career. He
                               also holds a bachelor’s degree in Architecture [B
                               Arch ]. With 20-years of design experience at
-                              Neointraction, he is instrumental in positioning
+                              Neointeraction, he is instrumental in positioning
                               the company as a customer-centric Experience
                               design firm working with some of the best
                               professionals in the industry.

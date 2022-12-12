@@ -204,16 +204,14 @@ export default withRouter(
         <div>
           <Head>
             <title>
-              Product Service | Neointeraction is a UI/UX company in india
+              Hire Best Product Design Services in Bangalore - Neointeraction
+              Design
             </title>
             <meta
               name="description"
-              content="Neointeraction is the best UI/UX design firm in Bangalore, Mumbai, with a passionate team that designs simplified & innovative user-centric experiences."
+              content="Work with a reputable product design team comprised of user researchers, ux designers, and UI engineers who will put the needs of the user first to create wonderful transactional delight."
             />
-            <meta
-              name="keywords"
-              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing, user experience design agency, ui mobile app design"
-            />
+            <meta name="keywords" content="product design services bangalore" />
             <link
               rel="canonical"
               href="https://www.neointeraction.com/ProductService"
@@ -271,6 +269,7 @@ export default withRouter(
                     ProjectVideo=""
                     componentOrientation="image-left"
                     ProjectImage={UXImg}
+                    imageAlt="Product Design Services in Bangalore  - Neointeraction "
                     titleText="Digital product innovation"
                     contentText={
                       <div>

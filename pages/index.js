@@ -23,10 +23,13 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Neointeracton | Best UI/UX design agency in India, USA</title>
+        <title>
+          Best UI/UX Design Services Agency in India, USA - Neointeraction
+          Design
+        </title>
         <meta
           name="description"
-          content="Our 15 years of experience & expertise have made us one of the top 10 best UI/UX design & engineering agencies in India, USA focused on B2B applications. "
+          content="Global Enterprise clients have benefited from Neointeraction's Ux Design services for Banking, Fintech, and Share Trading platforms by increasing customer satisfaction and business success."
         />
         <meta
           name="keywords"

@@ -13,6 +13,7 @@ export default class ImageVideoText extends Component {
       ProjectVideo,
       grid1,
       grid2,
+      imageAlt,
     } = this.props;
     return (
       <div className="about-project">
@@ -22,7 +23,7 @@ export default class ImageVideoText extends Component {
               <img
                 className="br-7 width-100"
                 src={ProjectImage}
-                alt="ProjectImage"
+                alt={imageAlt ? imageAlt : "ProjectImage"}
               />
               // <div>
               //   <Image

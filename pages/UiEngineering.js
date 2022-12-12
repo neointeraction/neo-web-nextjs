@@ -149,15 +149,14 @@ export default withRouter(
       return (
         <div>
           <Head>
-            <title>UI Engineering Services | Neointeraction </title>
+            <title>
+              Best UI Engineering Services in Bangalore - Neointeraction Design{" "}
+            </title>
             <meta
               name="description"
-              content="Neointeraction provide pixel perfect UI engineering using popular front end technologies like React.Js, Angular to craft the best Front End experience for users."
+              content="To develop your web and mobile applications, use our highly skilled and design-sensitive React developers. This is necessary because your company needs a user-centric product experience."
             />
-            <meta
-              name="keywords"
-              content="UI engineering, developmentui design services company,front end development agency"
-            />
+            <meta name="keywords" content="ui engineering services bangalore" />
             <link
               rel="canonical"
               href="https://www.neointeraction.com/UiEngineering"
@@ -226,6 +225,7 @@ export default withRouter(
                     componentOrientation="image-left"
                     ProjectImage={UXImg}
                     titleText="Pixel to Code"
+                    imageAlt="UI Engineering Services in Bangalore  - Neointeraction"
                     contentText={
                       <div>
                         <p>

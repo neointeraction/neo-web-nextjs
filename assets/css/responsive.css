@@ -360,12 +360,12 @@
   .banner-section-home {
     margin-top: 0;
   }
-  .mob-bsb {
+  /* .mob-bsb {
     display: block;
     width: 220px;
-  }
+  } */
   .b-banner-subtext .underline-highlight::after {
-    height: 4px;
+    height: 3px;
   }
 
   .banner-slider1 {
@@ -402,10 +402,23 @@
     padding: 20px 20px 60px 20px;
   }
   .b-banner-subtext .underline-highlight::after {
-    bottom: -12px;
+    bottom: -8px;
   }
   .banner-section-home .slick-prev,
   .banner-section-home .slick-next {
     display: none !important;
+  }
+  .sh-mob {
+    display: block;
+  }
+  .hd-mob {
+    display: none;
+  }
+  .p-overlay {
+    opacity: 1;
+  }
+  .p-overlay button {
+    background: #fff;
+    color: #fe5f55;
   }
 }

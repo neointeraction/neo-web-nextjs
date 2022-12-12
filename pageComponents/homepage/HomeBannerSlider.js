@@ -93,8 +93,10 @@ const HomeBannerSlider = () => {
               >
                 Simple and Impactful{" "}
                 <span className="underline-highlight mob-bsb">
-                  User Centric digital experiences
+                  User Centric digital{" "}
+                  <span className="hd-mob">experiences</span>
                 </span>
+                <span className="sh-mob">experiences</span>
               </motion.h4>
             </div>
           </div>

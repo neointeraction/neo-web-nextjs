@@ -194,15 +194,21 @@ export default withRouter(
         <div>
           <Head>
             <title>
-              UX Services | Neointeraction is a UI/UX company in india
+              Hire UI/UX Designer Services Company in Bangalore - Neointeraction
+              Design
             </title>
             <meta
               name="description"
-              content="Neointeraction is the best UI/UX design firm in Bangalore, Mumbai, with a passionate team that designs simplified & innovative user-centric experiences."
+              content="Hire our Ux Design consultants and React developers who adhere to a well defined delivery strategy and emphasize on customer satisfaction to successfully create your digital product experiences."
             />
             <meta
               name="keywords"
-              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing, user experience design agency, ui mobile app design"
+              content="ui ux design
+              ui ux design services
+              ui ux design company in bangalore
+              ux design services in bangalore
+              ui ux developer
+              hire ux designer India"
             />
             <link
               rel="canonical"
@@ -270,6 +276,7 @@ export default withRouter(
                     ProjectVideo=""
                     componentOrientation="image-left"
                     ProjectImage={UXImg}
+                    imageAlt="UX Design Services Bangalore - Neointeraction "
                     titleText="Experience Design"
                     contentText={
                       <div>

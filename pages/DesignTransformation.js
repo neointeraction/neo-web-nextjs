@@ -186,15 +186,16 @@ export default withRouter(
         <div>
           <Head>
             <title>
-              Design Transformation | Neointeraction is a UI/UX company in india
+              Hire Best Design Transformation Services in Bangalore -
+              Neointeraction Design
             </title>
             <meta
               name="description"
-              content="Neointeraction is the best UI/UX design firm in Bangalore, Mumbai, with a passionate team that designs simplified & innovative user-centric experiences."
+              content="Make an investment in your company's design transformation to stay up with the shifting customer expectations and to improve business ROI through a unified experience that will attract and retain users."
             />
             <meta
               name="keywords"
-              content="UX design,user experience design services,ux design and development, ux design agency, ux auditing user experience design agency, ui mobile app design"
+              content="Design Transformation services bangalore"
             />
             <link
               rel="canonical"
@@ -266,6 +267,7 @@ export default withRouter(
                     ProjectVideo=""
                     componentOrientation="image-left"
                     ProjectImage={UXImg}
+                    imageAlt="Design Transformation Services in Bangalore  - Neointeraction "
                     titleText="Design Transformation "
                     contentText={
                       <div>

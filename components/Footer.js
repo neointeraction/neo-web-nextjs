@@ -293,27 +293,61 @@ const Footer = () => {
                     }`}
                   >
                     <AccordionItemHeading>
-                      <AccordionItemButton>UX Design</AccordionItemButton>
+                      <AccordionItemButton>
+                        <span onClick={() => handleRoute("/UxService")}>
+                          UX Design
+                        </span>
+                      </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <ul className="footer-quick-links pl-0">
                         <li>
-                          <div className="link">User Research</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UxService")}
+                          >
+                            User Research
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Heuristic Evaluvation</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UxService")}
+                          >
+                            Heuristic Evaluvation
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Persona Devolopment</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UxService")}
+                          >
+                            Persona Devolopment
+                          </div>
                         </li>
                         <li>
-                          <div className="link">IA Validation</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UxService")}
+                          >
+                            IA Validation
+                          </div>
                         </li>
                         <li>
-                          <div className="link">User Journey Mapping</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UxService")}
+                          >
+                            User Journey Mapping
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Wireframing</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UxService")}
+                          >
+                            Wireframing
+                          </div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
@@ -325,24 +359,53 @@ const Footer = () => {
                     }`}
                   >
                     <AccordionItemHeading>
-                      <AccordionItemButton>Product Design</AccordionItemButton>
+                      <AccordionItemButton>
+                        <span onClick={(e) => handleRoute("/ProductService")}>
+                          Product Design
+                        </span>
+                      </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <ul className="footer-quick-links">
                         <li>
-                          <div className="link">Define Product Vision</div>
+                          <div
+                            className="link"
+                            onClick={(e) => handleRoute("/ProductService")}
+                          >
+                            Define Product Vision
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Product Research</div>
+                          <div
+                            className="link"
+                            onClick={(e) => handleRoute("/ProductService")}
+                          >
+                            Product Research
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Structure Ideas</div>
+                          <div
+                            className="link"
+                            onClick={(e) => handleRoute("/ProductService")}
+                          >
+                            Structure Ideas
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Agile Design Sprints</div>
+                          <div
+                            className="link"
+                            onClick={(e) => handleRoute("/ProductService")}
+                          >
+                            Agile Design Sprints
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Rapid Prototyping</div>
+                          <div
+                            className="link"
+                            onClick={(e) => handleRoute("/ProductService")}
+                          >
+                            Rapid Prototyping
+                          </div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
@@ -354,24 +417,53 @@ const Footer = () => {
                     }`}
                   >
                     <AccordionItemHeading>
-                      <AccordionItemButton>UI Engineering</AccordionItemButton>
+                      <AccordionItemButton>
+                        <span onClick={() => handleRoute("/UiEngineering")}>
+                          UI Engineering
+                        </span>
+                      </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <ul className="footer-quick-links">
                         <li>
-                          <div className="link">UI handoff dev team</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UiEngineering")}
+                          >
+                            UI handoff dev team
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Building react components</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UiEngineering")}
+                          >
+                            Building react components
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Creating Interactive flows</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UiEngineering")}
+                          >
+                            Creating Interactive flows
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Integrating service</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UiEngineering")}
+                          >
+                            Integrating service
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Testing business flow</div>
+                          <div
+                            className="link"
+                            onClick={() => handleRoute("/UiEngineering")}
+                          >
+                            Testing business flow
+                          </div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
@@ -384,27 +476,64 @@ const Footer = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        Design Transformation
+                        <span
+                          onClick={(e) => handleRoute("/DesignTransformation")}
+                        >
+                          Design Transformation
+                        </span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <ul className="footer-quick-links">
                         <li>
-                          <div className="link">Set a design foundation</div>
+                          <div
+                            className="link"
+                            onClick={(e) =>
+                              handleRoute("/DesignTransformation")
+                            }
+                          >
+                            Set a design foundation
+                          </div>
                         </li>
                         <li>
-                          <div className="link">
+                          <div
+                            className="link"
+                            onClick={(e) =>
+                              handleRoute("/DesignTransformation")
+                            }
+                          >
                             Achieving Human Friendly UX
                           </div>
                         </li>
                         <li>
-                          <div className="link">Build Design Strategy</div>
+                          <div
+                            className="link"
+                            onClick={(e) =>
+                              handleRoute("/DesignTransformation")
+                            }
+                          >
+                            Build Design Strategy
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Documentation of design</div>
+                          <div
+                            className="link"
+                            onClick={(e) =>
+                              handleRoute("/DesignTransformation")
+                            }
+                          >
+                            Documentation of design
+                          </div>
                         </li>
                         <li>
-                          <div className="link">Bridging UX and UI</div>
+                          <div
+                            className="link"
+                            onClick={(e) =>
+                              handleRoute("/DesignTransformation")
+                            }
+                          >
+                            Bridging UX and UI
+                          </div>
                         </li>
                       </ul>
                     </AccordionItemPanel>

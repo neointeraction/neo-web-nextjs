@@ -76,10 +76,13 @@ export default withRouter(
         <div>
           <div>
             <Head>
-              <title>Blog | Best UI/UX design company in India</title>
+              <title>
+                Blogs | UI/UX Design Services in Bangalore - Neointeraction
+                Design
+              </title>
               <meta
                 name="description"
-                content="Read engaging blogs, articles and case studies related to the design industry. Subscribe to our newsletter to stay up to date with the latest UI/UX trends."
+                content="Learn about design and how it affects business success by reading interesting blogs, articles, and case studies. Join our newsletter to be updated about the newest UI/UX developments."
               />
               <meta
                 name="keywords"
@@ -114,7 +117,7 @@ export default withRouter(
                     <div>
                       <div className="page-content body-page">
                         <div className="container animated fadeIn">
-                          <h1 className="main-title animated fadeIn">blog</h1>
+                          <h1 className="main-title animated fadeIn">blogs</h1>
                           <h2 className="sub-title main-sub-title animated fadeIn ">
                             Learn about us and the design industry via our
                             perspectives and experiences.
@@ -272,23 +275,25 @@ export default withRouter(
                                             .replace(/ /g, "-")}`,
                                         }}
                                       >
-                                        <div className="link" key={item.id}>
-                                          <CardTileUpfront
-                                            className="blog-cards" //item.id
-                                            category={item.blog_categories.map(
-                                              (cat) => cat.blogCategoryName
-                                            )}
-                                            cardTitle={item.blogTitle}
-                                            backgroundImages={
-                                              item.blogCardImage?.url
-                                            }
-                                            blogtag1={item.blog_categories.map(
-                                              (cat) => cat.blogCategoryName
-                                            )}
-                                            // author={item.blogAuthor}
-                                            // postedTime={item.created_at}
-                                          />
-                                        </div>
+                                        <a target="_blank">
+                                          <div className="link" key={item.id}>
+                                            <CardTileUpfront
+                                              className="blog-cards" //item.id
+                                              category={item.blog_categories.map(
+                                                (cat) => cat.blogCategoryName
+                                              )}
+                                              cardTitle={item.blogTitle}
+                                              backgroundImages={
+                                                item.blogCardImage?.url
+                                              }
+                                              blogtag1={item.blog_categories.map(
+                                                (cat) => cat.blogCategoryName
+                                              )}
+                                              // author={item.blogAuthor}
+                                              // postedTime={item.created_at}
+                                            />
+                                          </div>
+                                        </a>
                                       </Link>
                                     </div>
                                   ))}
