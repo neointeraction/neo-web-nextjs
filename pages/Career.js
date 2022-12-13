@@ -60,7 +60,7 @@ const FAQ = [
 ];
 
 export default withRouter(
-  class Career extends Component {
+  class career extends Component {
     constructor() {
       super();
       this.state = {
