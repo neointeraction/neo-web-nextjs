@@ -38,7 +38,7 @@ function UIEngineeringImageText() {
                   look at our{" "}
                   <a
                     className="link-btn-map pl-0"
-                    href="/UiEngineering#eng-modal"
+                    href="/ui-engineering-services-bangalore-india#eng-modal"
                   >
                     Engagement Model
                   </a>

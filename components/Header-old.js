@@ -73,14 +73,14 @@ export default class Header extends Component {
                     </li>
 
                     <li>
-                      <Link href="/UxService">
+                      <Link href="/ui-ux-design-developer-services-company-bangalore">
                         <span onClick={this.closeMenu} className="menu-link">
                           services
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/AboutUs">
+                      <Link href="/about-us">
                         <span onClick={this.closeMenu} className="menu-link">
                           about us
                         </span>
@@ -94,21 +94,21 @@ export default class Header extends Component {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/Career">
+                      <Link href="/career">
                         <span onClick={this.closeMenu} className="menu-link">
                           careers
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/Blog">
+                      <Link href="/blogs">
                         <span onClick={this.closeMenu} className="menu-link">
                           blogs
                         </span>
                       </Link>
                     </li>
                     <li>
-                      <Link href="/ContactUs">
+                      <Link href="/contact-us">
                         <span onClick={this.closeMenu} className="menu-link">
                           contact us
                         </span>

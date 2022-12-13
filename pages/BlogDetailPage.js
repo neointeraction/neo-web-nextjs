@@ -303,28 +303,28 @@ export default withRouter(
                       <ul className="social-icons cf-basis blog-social">
                         <li id="fb">
                           <FacebookShareButton
-                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                            url={`https://neointeraction.com/blogs/${this.state.pageHref}`}
                             className="share-icn"
                           />
                           <img src={FacebookIcon} alt="facebook" />
                         </li>
                         <li id="ln">
                           <LinkedinShareButton
-                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                            url={`https://neointeraction.com/blogs/${this.state.pageHref}`}
                             className="share-icn"
                           />
                           <img src={LinkedInIcon} alt="LinkedIn" />
                         </li>
                         <li id="twitter">
                           <TwitterShareButton
-                            url={`https://neointeraction.com/Blog/${this.state.pageHref}`}
+                            url={`https://neointeraction.com/blogs/${this.state.pageHref}`}
                             className="share-icn"
                           />
                           <img src={TwitterIcon} alt="Twitter" />
                         </li>
                       </ul>
                       <div className="go-to-blog">
-                        <Link href="/Blog">
+                        <Link href="/blogs">
                           <img src={Menu} alt="menu" />
                         </Link>
                       </div>
@@ -339,7 +339,7 @@ export default withRouter(
                         title="Want help with your business?"
                         subtitle="We can help you achieve your goals through excellent design processes and techniques."
                       />
-                      <Link href="/ContactUs">
+                      <Link href="/contact-us">
                         <button className="custom-btn">Contact Us</button>
                       </Link>
                     </div>

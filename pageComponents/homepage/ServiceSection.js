@@ -160,7 +160,9 @@ const ServiceSection = ({ inner }) => {
                   <button
                     className="n-link-btn"
                     onClick={() => {
-                      handleRoute("/UxService");
+                      handleRoute(
+                        "/ui-ux-design-developer-services-company-bangalore"
+                      );
                     }}
                   >
                     <span className="view-txt">more</span>
@@ -207,7 +209,9 @@ const ServiceSection = ({ inner }) => {
                   />
                   <button
                     className="n-link-btn"
-                    onClick={(e) => handleRoute("/ProductService")}
+                    onClick={(e) =>
+                      handleRoute("/product-design-services-bangalore-india")
+                    }
                   >
                     <span className="view-txt">more</span>
                     <span className="btn-arrow">
@@ -250,7 +254,9 @@ const ServiceSection = ({ inner }) => {
                   />
                   <button
                     className="n-link-btn"
-                    onClick={(e) => handleRoute("/UiEngineering")}
+                    onClick={(e) =>
+                      handleRoute("/ui-engineering-services-bangalore-india")
+                    }
                   >
                     <span className="view-txt">more</span>
                     <span className="btn-arrow">
@@ -295,7 +301,11 @@ const ServiceSection = ({ inner }) => {
                   />
                   <button
                     className="n-link-btn"
-                    onClick={(e) => handleRoute("/DesignTransformation")}
+                    onClick={(e) =>
+                      handleRoute(
+                        "/design-transformation-services-bangalore-india"
+                      )
+                    }
                   >
                     <span className="view-txt">more</span>
                     <span className="btn-arrow">

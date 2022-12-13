@@ -92,7 +92,7 @@ export default withRouter(
             />
             <link
               rel="canonical"
-              href="https://www.neointeraction.com/ContactUs"
+              href="https://www.neointeraction.com/contact-us"
             />
           </Head>
           <a to="#" onClick={this.handleBack}>

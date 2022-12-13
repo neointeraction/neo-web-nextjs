@@ -33,7 +33,10 @@ function UXDesignImageText() {
                 <p>
                   To know more about how we deliver great experiences, take a
                   look at our{" "}
-                  <a className="link-btn-map pl-0" href="/UxService#eng-modal">
+                  <a
+                    className="link-btn-map pl-0"
+                    href="/ui-ux-design-developer-services-company-bangalore#eng-modal"
+                  >
                     Engagement Model
                   </a>
                 </p>

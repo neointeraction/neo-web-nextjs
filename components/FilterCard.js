@@ -227,7 +227,7 @@ export default class FilterCard extends Component {
                   })
                   .map((item, i) => (
                     <div className="card-main-container" key={item.id}>
-                      <Link   href={`/Blog/${item.id}`}>
+                      <Link   href={`/blogs/${item.id}`}>
                         <CardTileUpfront
                           className={item.id}
                           category={item.blog_categories.map(

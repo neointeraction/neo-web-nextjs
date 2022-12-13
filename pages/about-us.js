@@ -37,7 +37,7 @@ const SERVICES = [
     bgColor: "",
     BackgroundImageCareer: uxServiceImg,
     cardInfoText: `From user research to the final product delivery, we make sure that your vision comes to life just as you had envisioned it to be.`,
-    link: "UxService",
+    link: "ui-ux-design-developer-services-company-bangalore",
   },
   {
     key: 2,
@@ -47,7 +47,7 @@ const SERVICES = [
     bgColor: "",
     BackgroundImageCareer: uiEngineeringImg,
     cardInfoText: `We promise to deliver a top-notch functional product with high levels of efficient design flows.`,
-    link: "UiEngineering",
+    link: "ui-engineering-services-bangalore-india",
   },
   {
     key: 3,
@@ -390,7 +390,7 @@ export default withRouter(
                         title="Interested in joining our team?"
                         subtitle="We’re always open to meet talented & empathetic minds with passion for great design."
                       />
-                      <Link href="/Career">
+                      <Link href="/career">
                         <button className="custom-btn margin-top">
                           View Opening
                         </button>
@@ -413,7 +413,7 @@ export default withRouter(
                                 <div className="col-md-4 mb-5" key={item.id}>
                                   <Link
                                     href={{
-                                      pathname: `/Blog/${item.blogTitle
+                                      pathname: `/blogs/${item.blogTitle
                                         .replace(
                                           /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                           ""

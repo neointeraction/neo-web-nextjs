@@ -128,8 +128,8 @@ const MENU = [
     LinkOneName: "UX Design",
     LinkTwoName: "UI Engineering",
     LinkThreeName: "Motion Design",
-    LinkOne: "UxService",
-    LinkTwo: "UiEngineering",
+    LinkOne: "ui-ux-design-developer-services-company-bangalore",
+    LinkTwo: "ui-engineering-services-bangalore-india",
     LinkThree: "VideoService",
   },
   // {

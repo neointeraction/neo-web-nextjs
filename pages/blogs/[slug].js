@@ -342,32 +342,32 @@ class ProjectDetailPage extends Component {
                     <ul className="social-icons cf-basis blog-social">
                       <li id="fb">
                         <FacebookShareButton
-                          url={`https://neointeraction.com/Blog/${this.props.post.id}`}
+                          url={`https://neointeraction.com/blogs/${this.props.post.id}`}
                           className="share-icn"
                         />
                         <img src={FacebookIcon} alt="facebook" />
                       </li>
                       <li id="ln">
                         <LinkedinShareButton
-                          url={`https://neointeraction.com/Blog/${this.props.post.id}`}
+                          url={`https://neointeraction.com/blogs/${this.props.post.id}`}
                           className="share-icn"
                         />
                         <img src={LinkedInIcon} alt="LinkedIn" />
                       </li>
                       <li id="twitter">
                         <TwitterShareButton
-                          url={`https://neointeraction.com/Blog/${this.props.post.id}`}
+                          url={`https://neointeraction.com/blogs/${this.props.post.id}`}
                           className="share-icn"
                         />
                         <img src={TwitterIcon} alt="Twitter" />
                       </li>
                     </ul>
-                    {/* <Link href="/Blog" className="link-blog"> */}
+                    {/* <Link href="/blogs" className="link-blog"> */}
                     <div className="more-link-container">
                       <div className="go-to-blog">
                         <div
                           className="cliclable-link"
-                          onClick={() => this.props.router.push("/Blog")}
+                          onClick={() => this.props.router.push("/blogs")}
                         ></div>
                         <object
                           type="image/svg+xml"
@@ -390,7 +390,7 @@ class ProjectDetailPage extends Component {
                       title="Want help with your business?"
                       subtitle="We can help you achieve your goals through excellent design processes and techniques."
                     />
-                    <Link href="/ContactUs">
+                    <Link href="/contact-us">
                       <button className="custom-btn">Contact Us</button>
                     </Link>
                   </div>

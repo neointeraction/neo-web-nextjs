@@ -72,17 +72,17 @@ export default class Header extends Component {
                     </Link>
                   </li>
                   <li>
-                    <Link href="/ContactUs">
+                    <Link href="/contact-us">
                       <div className="link">Contact Us</div>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/Career">
+                    <Link href="/career">
                       <div className="link">Careers</div>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/Blog">
+                    <Link href="/blogs">
                       <div className="link">Blog</div>
                     </Link>
                   </li>
@@ -92,12 +92,12 @@ export default class Header extends Component {
                 <h4 className="footer-links-title">Services</h4>
                 <ul className="footer-quick-links">
                   <li>
-                    <Link href="/UxService">
+                    <Link href="/ui-ux-design-developer-services-company-bangalore">
                       <div className="link">UX Design</div>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/UiEngineering">
+                    <Link href="/ui-engineering-services-bangalore-india">
                       <div className="link">UI Engineering</div>
                     </Link>
                   </li>

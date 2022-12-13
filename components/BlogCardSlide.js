@@ -107,7 +107,7 @@ export default class BlogCardSlide extends Component {
                             <React.Fragment key={item.id}>
                               <Link
                                 href={{
-                                  pathname: `/Blog/${item.blogTitle
+                                  pathname: `/blogs/${item.blogTitle
                                     .replace(
                                       /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                       ""

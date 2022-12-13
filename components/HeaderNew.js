@@ -118,19 +118,26 @@ const HeaderNew = ({ upfront }) => {
                 home
               </li>
               <li
-                className={` ${router.pathname === "/AboutUs" ? "active" : ""}`}
-                onClick={() => handleRoute("/AboutUs")}
+                className={` ${
+                  router.pathname === "/about-us" ? "active" : ""
+                }`}
+                onClick={() => handleRoute("/about-us")}
               >
                 about us
               </li>
               <li
                 className={` ${
-                  router.pathname === "/UxService" ||
-                  router.pathname === "/UiEngineering"
+                  router.pathname ===
+                    "/ui-ux-design-developer-services-company-bangalore" ||
+                  router.pathname === "/ui-engineering-services-bangalore-india"
                     ? "active"
                     : ""
                 }`}
-                onClick={() => handleRoute("/UxService")}
+                onClick={() =>
+                  handleRoute(
+                    "/ui-ux-design-developer-services-company-bangalore"
+                  )
+                }
               >
                 services
               </li>
@@ -143,8 +150,8 @@ const HeaderNew = ({ upfront }) => {
                 projects
               </li>
               <li
-                className={`${router.pathname === "/Blog" ? "active" : ""}`}
-                onClick={() => handleRoute("/Blog")}
+                className={`${router.pathname === "/blogs" ? "active" : ""}`}
+                onClick={() => handleRoute("/blogs")}
               >
                 blogs
               </li>
@@ -154,9 +161,9 @@ const HeaderNew = ({ upfront }) => {
                 <div className="join-menu">
                   <p
                     className={`${
-                      router.pathname === "/Career" ? "active" : ""
+                      router.pathname === "/career" ? "active" : ""
                     }`}
-                    onClick={() => handleRoute("/Career")}
+                    onClick={() => handleRoute("/career")}
                   >
                     join us
                   </p>
@@ -164,7 +171,7 @@ const HeaderNew = ({ upfront }) => {
                 <div className="contact-block-btn">
                   <motion.div
                     className="n-menu contact-menu-btn"
-                    onClick={() => handleRoute("/ContactUs")}
+                    onClick={() => handleRoute("/contact-us")}
                     initial="rest"
                     whileHover="hover"
                     animate="rest"

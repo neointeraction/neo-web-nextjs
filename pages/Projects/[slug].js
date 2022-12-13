@@ -339,7 +339,7 @@ export default withRouter(
                           </li>
                         ) : null}
                         <li>
-                          {/* <Link to="/ContactUs"> */}
+                          {/* <Link to="/contact-us"> */}
                           <button
                             className="custom-btn"
                             onClick={this.handleOpenModal}

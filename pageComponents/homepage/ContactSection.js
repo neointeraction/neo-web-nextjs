@@ -30,7 +30,7 @@ const ContactSection = () => {
             <h3>Work with us</h3>
             <button
               className="custom-btn"
-              onClick={() => handleRoute("/Career")}
+              onClick={() => handleRoute("/career")}
             >
               Career
             </button>
@@ -58,7 +58,7 @@ const ContactSection = () => {
             <h3>Connect with us</h3>
             <button
               className="custom-btn"
-              onClick={() => handleRoute("/ContactUs")}
+              onClick={() => handleRoute("/contact-us")}
             >
               Contact Us
             </button>

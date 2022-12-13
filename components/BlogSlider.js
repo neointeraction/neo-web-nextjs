@@ -53,8 +53,8 @@ export default class BlogSlider extends Component {
                     <React.Fragment key={item.id}>
                       <Link
                         href={{
-                          // pathname: `/Blog/${item.id}`,
-                          pathname: `/Blog/${item.blogTitle
+                          // pathname: `/blogs/${item.id}`,
+                          pathname: `/blogs/${item.blogTitle
                             .replace(
                               /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                               ""

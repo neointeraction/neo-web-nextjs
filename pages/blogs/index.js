@@ -90,7 +90,7 @@ export default withRouter(
               />
               <link
                 rel="canonical"
-                href="https://www.neointeraction.com/Blog"
+                href="https://www.neointeraction.com/blogs"
               />
             </Head>
           </div>
@@ -137,7 +137,7 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Blog/${item.blogTitle
+                                    pathname: `/blogs/${item.blogTitle
                                       .replace(
                                         /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                         ""
@@ -267,7 +267,7 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: `/Blog/${item.blogTitle
+                                          pathname: `/blogs/${item.blogTitle
                                             .replace(
                                               /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                               ""

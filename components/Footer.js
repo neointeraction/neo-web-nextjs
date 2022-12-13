@@ -37,12 +37,20 @@ const Footer = () => {
             <div className="col-md-3">
               <div className="footer-menu">
                 <ul className="footer-menu-link">
-                  <li onClick={() => handleRoute("/AboutUs")}>about us</li>
+                  <li onClick={() => handleRoute("/about-us")}>about us</li>
                   <li onClick={() => handleRoute("/Projects")}>projects</li>
-                  <li onClick={() => handleRoute("/UxService")}>services</li>
-                  <li onClick={() => handleRoute("/Career")}>careers</li>
-                  <li onClick={() => handleRoute("/ContactUs")}>contact us</li>
-                  <li onClick={() => handleRoute("/Blog")}>blogs</li>
+                  <li
+                    onClick={() =>
+                      handleRoute(
+                        "/ui-ux-design-developer-services-company-bangalore"
+                      )
+                    }
+                  >
+                    services
+                  </li>
+                  <li onClick={() => handleRoute("/career")}>careers</li>
+                  <li onClick={() => handleRoute("/contact-us")}>contact us</li>
+                  <li onClick={() => handleRoute("/blogs")}>blogs</li>
                 </ul>
                 <ul className="social-icons n-social-icons no-bg  mob-view-social">
                   <li id="ln">
@@ -102,13 +110,21 @@ const Footer = () => {
                 <div className="col-md-3">
                   <h4
                     className="footer-links-title"
-                    onClick={() => handleRoute("/UxService")}
+                    onClick={() =>
+                      handleRoute(
+                        "/ui-ux-design-developer-services-company-bangalore"
+                      )
+                    }
                   >
                     ux design
                   </h4>
                   <ul
                     className="footer-quick-links"
-                    onClick={() => handleRoute("/UxService")}
+                    onClick={() =>
+                      handleRoute(
+                        "/ui-ux-design-developer-services-company-bangalore"
+                      )
+                    }
                   >
                     <li>
                       <div className="link">User Research</div>
@@ -133,13 +149,17 @@ const Footer = () => {
                 <div className="col-md-3">
                   <h4
                     className="footer-links-title"
-                    onClick={(e) => handleRoute("/ProductService")}
+                    onClick={(e) =>
+                      handleRoute("/product-design-services-bangalore-india")
+                    }
                   >
                     product design
                   </h4>
                   <ul
                     className="footer-quick-links"
-                    onClick={(e) => handleRoute("/ProductService")}
+                    onClick={(e) =>
+                      handleRoute("/product-design-services-bangalore-india")
+                    }
                   >
                     <li>
                       <div className="link">Define Product Vision</div>
@@ -161,13 +181,17 @@ const Footer = () => {
                 <div className="col-md-3">
                   <h4
                     className="footer-links-title"
-                    onClick={() => handleRoute("/UiEngineering")}
+                    onClick={() =>
+                      handleRoute("/ui-engineering-services-bangalore-india")
+                    }
                   >
                     ui engineering
                   </h4>
                   <ul
                     className="footer-quick-links"
-                    onClick={() => handleRoute("/UiEngineering")}
+                    onClick={() =>
+                      handleRoute("/ui-engineering-services-bangalore-india")
+                    }
                   >
                     <li>
                       <div className="link">UI handoff dev team</div>
@@ -189,13 +213,21 @@ const Footer = () => {
                 <div className="col-md-3">
                   <h4
                     className="footer-links-title"
-                    onClick={(e) => handleRoute("/DesignTransformation")}
+                    onClick={(e) =>
+                      handleRoute(
+                        "/design-transformation-services-bangalore-india"
+                      )
+                    }
                   >
                     design transformation
                   </h4>
                   <ul
                     className="footer-quick-links"
-                    onClick={(e) => handleRoute("/DesignTransformation")}
+                    onClick={(e) =>
+                      handleRoute(
+                        "/design-transformation-services-bangalore-india"
+                      )
+                    }
                   >
                     <li>
                       <div className="link">Set a design foundation</div>
@@ -294,7 +326,13 @@ const Footer = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span onClick={() => handleRoute("/UxService")}>
+                        <span
+                          onClick={() =>
+                            handleRoute(
+                              "/ui-ux-design-developer-services-company-bangalore"
+                            )
+                          }
+                        >
                           UX Design
                         </span>
                       </AccordionItemButton>
@@ -304,7 +342,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UxService")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-ux-design-developer-services-company-bangalore"
+                              )
+                            }
                           >
                             User Research
                           </div>
@@ -312,7 +354,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UxService")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-ux-design-developer-services-company-bangalore"
+                              )
+                            }
                           >
                             Heuristic Evaluvation
                           </div>
@@ -320,7 +366,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UxService")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-ux-design-developer-services-company-bangalore"
+                              )
+                            }
                           >
                             Persona Devolopment
                           </div>
@@ -328,7 +378,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UxService")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-ux-design-developer-services-company-bangalore"
+                              )
+                            }
                           >
                             IA Validation
                           </div>
@@ -336,7 +390,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UxService")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-ux-design-developer-services-company-bangalore"
+                              )
+                            }
                           >
                             User Journey Mapping
                           </div>
@@ -344,7 +402,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UxService")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-ux-design-developer-services-company-bangalore"
+                              )
+                            }
                           >
                             Wireframing
                           </div>
@@ -360,7 +422,13 @@ const Footer = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span onClick={(e) => handleRoute("/ProductService")}>
+                        <span
+                          onClick={(e) =>
+                            handleRoute(
+                              "/product-design-services-bangalore-india"
+                            )
+                          }
+                        >
                           Product Design
                         </span>
                       </AccordionItemButton>
@@ -370,7 +438,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={(e) => handleRoute("/ProductService")}
+                            onClick={(e) =>
+                              handleRoute(
+                                "/product-design-services-bangalore-india"
+                              )
+                            }
                           >
                             Define Product Vision
                           </div>
@@ -378,7 +450,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={(e) => handleRoute("/ProductService")}
+                            onClick={(e) =>
+                              handleRoute(
+                                "/product-design-services-bangalore-india"
+                              )
+                            }
                           >
                             Product Research
                           </div>
@@ -386,7 +462,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={(e) => handleRoute("/ProductService")}
+                            onClick={(e) =>
+                              handleRoute(
+                                "/product-design-services-bangalore-india"
+                              )
+                            }
                           >
                             Structure Ideas
                           </div>
@@ -394,7 +474,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={(e) => handleRoute("/ProductService")}
+                            onClick={(e) =>
+                              handleRoute(
+                                "/product-design-services-bangalore-india"
+                              )
+                            }
                           >
                             Agile Design Sprints
                           </div>
@@ -402,7 +486,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={(e) => handleRoute("/ProductService")}
+                            onClick={(e) =>
+                              handleRoute(
+                                "/product-design-services-bangalore-india"
+                              )
+                            }
                           >
                             Rapid Prototyping
                           </div>
@@ -418,7 +506,13 @@ const Footer = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span onClick={() => handleRoute("/UiEngineering")}>
+                        <span
+                          onClick={() =>
+                            handleRoute(
+                              "/ui-engineering-services-bangalore-india"
+                            )
+                          }
+                        >
                           UI Engineering
                         </span>
                       </AccordionItemButton>
@@ -428,7 +522,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UiEngineering")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-engineering-services-bangalore-india"
+                              )
+                            }
                           >
                             UI handoff dev team
                           </div>
@@ -436,7 +534,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UiEngineering")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-engineering-services-bangalore-india"
+                              )
+                            }
                           >
                             Building react components
                           </div>
@@ -444,7 +546,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UiEngineering")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-engineering-services-bangalore-india"
+                              )
+                            }
                           >
                             Creating Interactive flows
                           </div>
@@ -452,7 +558,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UiEngineering")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-engineering-services-bangalore-india"
+                              )
+                            }
                           >
                             Integrating service
                           </div>
@@ -460,7 +570,11 @@ const Footer = () => {
                         <li>
                           <div
                             className="link"
-                            onClick={() => handleRoute("/UiEngineering")}
+                            onClick={() =>
+                              handleRoute(
+                                "/ui-engineering-services-bangalore-india"
+                              )
+                            }
                           >
                             Testing business flow
                           </div>
@@ -477,7 +591,11 @@ const Footer = () => {
                     <AccordionItemHeading>
                       <AccordionItemButton>
                         <span
-                          onClick={(e) => handleRoute("/DesignTransformation")}
+                          onClick={(e) =>
+                            handleRoute(
+                              "/design-transformation-services-bangalore-india"
+                            )
+                          }
                         >
                           Design Transformation
                         </span>
@@ -489,7 +607,9 @@ const Footer = () => {
                           <div
                             className="link"
                             onClick={(e) =>
-                              handleRoute("/DesignTransformation")
+                              handleRoute(
+                                "/design-transformation-services-bangalore-india"
+                              )
                             }
                           >
                             Set a design foundation
@@ -499,7 +619,9 @@ const Footer = () => {
                           <div
                             className="link"
                             onClick={(e) =>
-                              handleRoute("/DesignTransformation")
+                              handleRoute(
+                                "/design-transformation-services-bangalore-india"
+                              )
                             }
                           >
                             Achieving Human Friendly UX
@@ -509,7 +631,9 @@ const Footer = () => {
                           <div
                             className="link"
                             onClick={(e) =>
-                              handleRoute("/DesignTransformation")
+                              handleRoute(
+                                "/design-transformation-services-bangalore-india"
+                              )
                             }
                           >
                             Build Design Strategy
@@ -519,7 +643,9 @@ const Footer = () => {
                           <div
                             className="link"
                             onClick={(e) =>
-                              handleRoute("/DesignTransformation")
+                              handleRoute(
+                                "/design-transformation-services-bangalore-india"
+                              )
                             }
                           >
                             Documentation of design
@@ -529,7 +655,9 @@ const Footer = () => {
                           <div
                             className="link"
                             onClick={(e) =>
-                              handleRoute("/DesignTransformation")
+                              handleRoute(
+                                "/design-transformation-services-bangalore-india"
+                              )
                             }
                           >
                             Bridging UX and UI

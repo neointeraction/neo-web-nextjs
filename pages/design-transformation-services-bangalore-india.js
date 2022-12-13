@@ -199,7 +199,7 @@ export default withRouter(
             />
             <link
               rel="canonical"
-              href="https://www.neointeraction.com/DesignTransformation"
+              href="https://www.neointeraction.com/design-transformation-services-bangalore-india"
             />
           </Head>
           <a to="#" onClick={this.handleBack}>
@@ -226,26 +226,26 @@ export default withRouter(
               <div className="tags service-tags animated fadeIn">
                 <ul>
                   <li>
-                    <Link href="/UxService">
+                    <Link href="/ui-ux-design-developer-services-company-bangalore">
                       <button className="custom-btn inactive">UX Design</button>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/ProductService">
+                    <Link href="/product-design-services-bangalore-india">
                       <button className="custom-btn inactive">
                         Product Design
                       </button>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/DesignTransformation">
+                    <Link href="/design-transformation-services-bangalore-india">
                       <button className="custom-btn ">
                         Design Transformation
                       </button>
                     </Link>
                   </li>
                   <li>
-                    <Link href="/UiEngineering">
+                    <Link href="/ui-engineering-services-bangalore-india">
                       <button className="custom-btn inactive">
                         UI Engineering
                       </button>

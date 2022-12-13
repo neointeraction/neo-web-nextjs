@@ -111,7 +111,7 @@ export default withRouter(
                           >
                             <Link
                               href={{
-                                pathname: `/Blog/${item.blogTitle
+                                pathname: `/blogs/${item.blogTitle
                                   .replace(
                                     /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                     ""
@@ -236,7 +236,7 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: `/Blog/${item.id}`,
+                                          pathname: `/blogs/${item.id}`,
                                           query: {
                                             title: item.blogTitle
                                               .replace(/(:|\s+)/g, "-")

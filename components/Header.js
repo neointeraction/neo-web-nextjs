@@ -118,19 +118,26 @@ const Header = ({ upfront }) => {
                 home
               </li>
               <li
-                className={` ${router.pathname === "/AboutUs" ? "active" : ""}`}
-                onClick={() => handleRoute("/AboutUs")}
+                className={` ${
+                  router.pathname === "/about-us" ? "active" : ""
+                }`}
+                onClick={() => handleRoute("/about-us")}
               >
                 about us
               </li>
               <li
                 className={` ${
-                  router.pathname === "/UxService" ||
-                  router.pathname === "/UiEngineering"
+                  router.pathname ===
+                    "/ui-ux-design-developer-services-company-bangalore" ||
+                  router.pathname === "/ui-engineering-services-bangalore-india"
                     ? "active"
                     : ""
                 }`}
-                onClick={() => handleRoute("/UxService")}
+                onClick={() =>
+                  handleRoute(
+                    "/ui-ux-design-developer-services-company-bangalore"
+                  )
+                }
               >
                 services
               </li>
@@ -143,8 +150,8 @@ const Header = ({ upfront }) => {
                 projects
               </li>
               <li
-                className={`${router.pathname === "/Blog" ? "active" : ""}`}
-                onClick={() => handleRoute("/Blog")}
+                className={`${router.pathname === "/blogs" ? "active" : ""}`}
+                onClick={() => handleRoute("/blogs")}
               >
                 blogs
               </li>
@@ -152,7 +159,7 @@ const Header = ({ upfront }) => {
             <div className="n-header-contact">
               <motion.div
                 className="n-menu contact-menu-btn"
-                onClick={() => handleRoute("/ContactUs")}
+                onClick={() => handleRoute("/contact-us")}
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
@@ -211,9 +218,9 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/AboutUs" ? "active" : ""
+                            router.pathname === "/about-us" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/AboutUs")}
+                          onClick={() => handleRoute("/about-us")}
                         >
                           about us
                         </li>
@@ -227,36 +234,42 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/UxService" ||
-                            router.pathname === "/UiEngineering"
+                            router.pathname ===
+                              "/ui-ux-design-developer-services-company-bangalore" ||
+                            router.pathname ===
+                              "/ui-engineering-services-bangalore-india"
                               ? "active"
                               : ""
                           }`}
-                          onClick={() => handleRoute("/UxService")}
+                          onClick={() =>
+                            handleRoute(
+                              "/ui-ux-design-developer-services-company-bangalore"
+                            )
+                          }
                         >
                           services
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/Career" ? "active" : ""
+                            router.pathname === "/career" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/Career")}
+                          onClick={() => handleRoute("/career")}
                         >
                           career
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/ContactUs" ? "active" : ""
+                            router.pathname === "/contact-us" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/ContactUs")}
+                          onClick={() => handleRoute("/contact-us")}
                         >
                           contact us
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/Blog" ? "active" : ""
+                            router.pathname === "/blogs" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/Blog")}
+                          onClick={() => handleRoute("/blogs")}
                         >
                           blogs
                         </li>
@@ -374,7 +387,7 @@ const Header = ({ upfront }) => {
             <div className="n-header-contact">
               <motion.div
                 className="n-menu contact-menu-btn"
-                onClick={() => handleRoute("/ContactUs")}
+                onClick={() => handleRoute("/contact-us")}
                 initial="rest"
                 whileHover="hover"
                 animate="rest"
@@ -433,9 +446,9 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/AboutUs" ? "active" : ""
+                            router.pathname === "/about-us" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/AboutUs")}
+                          onClick={() => handleRoute("/about-us")}
                         >
                           about us
                         </li>
@@ -449,36 +462,42 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/UxService" ||
-                            router.pathname === "/UiEngineering"
+                            router.pathname ===
+                              "/ui-ux-design-developer-services-company-bangalore" ||
+                            router.pathname ===
+                              "/ui-engineering-services-bangalore-india"
                               ? "active"
                               : ""
                           }`}
-                          onClick={() => handleRoute("/UxService")}
+                          onClick={() =>
+                            handleRoute(
+                              "/ui-ux-design-developer-services-company-bangalore"
+                            )
+                          }
                         >
                           services
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/Career" ? "active" : ""
+                            router.pathname === "/career" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/Career")}
+                          onClick={() => handleRoute("/career")}
                         >
                           career
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/ContactUs" ? "active" : ""
+                            router.pathname === "/contact-us" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/ContactUs")}
+                          onClick={() => handleRoute("/contact-us")}
                         >
                           contact us
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/Blog" ? "active" : ""
+                            router.pathname === "/blogs" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/Blog")}
+                          onClick={() => handleRoute("/blogs")}
                         >
                           blog
                         </li>

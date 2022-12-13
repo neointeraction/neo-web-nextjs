@@ -121,7 +121,7 @@ export default withRouter(
             />
             <link
               rel="canonical"
-              href="https://www.neointeraction.com/Career"
+              href="https://www.neointeraction.com/career"
             />
           </Head>
           <a to="#" onClick={this.handleBack}>
@@ -353,7 +353,7 @@ export default withRouter(
                           <div className="col-md-4 mb-5" key={item.id}>
                             <Link
                               href={{
-                                pathname: `/Blog/${item.blogTitle
+                                pathname: `/blogs/${item.blogTitle
                                   .replace(
                                     /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                     ""
