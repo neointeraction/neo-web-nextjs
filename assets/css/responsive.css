@@ -422,6 +422,6 @@
     color: #fe5f55;
   }
   .modal-close:hover {
-    animation: none;
+    animation: none !important;
   }
 }
