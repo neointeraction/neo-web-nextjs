@@ -138,6 +138,9 @@ export default class ModalFormContact extends Component {
 
             this.validator.hideMessages();
             this.resetForm();
+            setTimeout(() => {
+              this.props.togglePopover();
+            }, 2000);
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");
           }

@@ -44,7 +44,10 @@ export default class GetQuoteModal extends Component {
             </button>
           </div>
           <ReactWOW animation="fadeIn" offset={-200}>
-            <ModalFormContact formtitle={this.props.formtitle} />
+            <ModalFormContact
+              formtitle={this.props.formtitle}
+              togglePopover={togglePopover}
+            />
           </ReactWOW>
         </div>
       </div>

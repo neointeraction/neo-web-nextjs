@@ -64,7 +64,7 @@ const PROCESSCONTENT = [
     key: 4,
     image: UI4,
     title: "Integrating services",
-    text: "After Front End developers develop UI components & page layout, API integration will start. Various business data points are linked and for having a meaningful user journey. API integration considers business flows, page rendering speed, userexperience factors,performance etc.",
+    text: "After Front End developers develop UI components & page layout, API integration will start. Various business data points are linked and for having a meaningful user journey. API integration considers business flows, page rendering speed, user experience factors,performance etc.",
     textItalic:
       "- Information Architecture, User Journey, Affinity Mapping,  Heuristic Evaluation, Interviews, Navigation Design, Storyboarding & Prototyping",
   },
@@ -253,6 +253,7 @@ export default withRouter(
                           <AnchorLink
                             className="link-btn-map pl-0"
                             href="#eng-modal"
+                            offset={() => 100}
                           >
                             Engagement Model
                           </AnchorLink>

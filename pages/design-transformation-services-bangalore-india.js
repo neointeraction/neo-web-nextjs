@@ -45,7 +45,7 @@ const PROCESSCONTENT = [
     key: 2,
     image: d2,
     title: "Evaluate design pattern",
-    text: "Analyze the benefits and drawbacks of the company's existing design language and examing the branding science",
+    text: "Analyze the benefits and drawbacks of the company's existing design language and examining the branding science",
     textItalic:
       "- Html, Css, Micro Interactions, Design systems, React Js, Storybook, Angular JS, VUE.js",
   },
@@ -291,16 +291,17 @@ export default withRouter(
                           company to be successful, go for a Design
                           Transformation approach.
                         </p>
-                        {/* <p>
+                        <p>
                           To know more about how we deliver great experiences,
                           take a look at our{" "}
                           <AnchorLink
                             className="link-btn-map pl-0"
                             href="#eng-modal"
+                            offset={() => 100}
                           >
                             Engagement Model
                           </AnchorLink>
-                        </p> */}
+                        </p>
                       </div>
                     }
                   />

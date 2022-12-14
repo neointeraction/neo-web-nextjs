@@ -303,16 +303,17 @@ export default withRouter(
                           ideas, with market research which gives a boost to
                           product performance and vision to the next stage.
                         </p>
-                        {/* <p>
+                        <p>
                           To know more about how we deliver great experiences,
                           take a look at our{" "}
                           <AnchorLink
                             className="link-btn-map pl-0"
                             href="#eng-modal"
+                            offset={() => 100}
                           >
                             Engagement Model
                           </AnchorLink>
-                        </p> */}
+                        </p>
                       </div>
                     }
                   />

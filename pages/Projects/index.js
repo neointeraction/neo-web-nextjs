@@ -61,7 +61,7 @@ export default withRouter(
           </a>
           <div className="body-page ">
             <div className="container">
-              <div className="home-content">
+              <div className="page-content">
                 <h1 className="main-title animated fadeIn delay-0.5s">
                   Projects
                 </h1>
