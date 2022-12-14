@@ -199,7 +199,7 @@ export default withRouter(
               </a>
               <div className="page-content body-page">
                 <div className="container animated fadeIn">
-                  <h1 className="main-title animated fadeIn">about us</h1>
+                  <h1 className="main-title animated fadeIn">About Us</h1>
                   <h2 className="sub-title main-sub-title animated fadeIn">
                     A passionate design team for tomorrow’s business success
                   </h2>

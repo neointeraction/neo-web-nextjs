@@ -168,7 +168,7 @@ export default withRouter(
               <div className="page-content body-page">
                 <div className="container animated fadeIn">
                   <h1 className="main-title animated fadeIn">
-                    Download resources
+                    Download Resources
                   </h1>
                   <h2 className="sub-title main-sub-title animated fadeIn">
                     Assets and design resources we would like to share with the

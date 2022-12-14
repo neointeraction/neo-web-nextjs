@@ -140,7 +140,7 @@ export default withRouter(
           <div className="page-content body-page">
             <div className="container animated fadeIn">
               <h1 className="main-title animated fadeIn">
-                career opportunities
+                Career Opportunities
               </h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Take a look at our open positions for work and internship

@@ -442,7 +442,7 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/")}
                         >
-                          home
+                          Home
                         </li>
                         <li
                           className={`n-menu-item ${
@@ -450,7 +450,7 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/about-us")}
                         >
-                          about us
+                          About Us
                         </li>
                         <li
                           className={`n-menu-item ${
@@ -458,14 +458,18 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/Projects")}
                         >
-                          projects
+                          Projects
                         </li>
                         <li
                           className={`n-menu-item ${
                             router.pathname ===
                               "/ui-ux-design-developer-services-company-bangalore" ||
                             router.pathname ===
-                              "/ui-engineering-services-bangalore-india"
+                              "/ui-engineering-services-bangalore-india" ||
+                            router.pathname ===
+                              "/design-transformation-services-bangalore-india" ||
+                            router.pathname ===
+                              "/product-design-services-bangalore-india"
                               ? "active"
                               : ""
                           }`}
@@ -475,7 +479,7 @@ const Header = ({ upfront }) => {
                             )
                           }
                         >
-                          services
+                          Services
                         </li>
                         <li
                           className={`n-menu-item ${
@@ -483,7 +487,7 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/career")}
                         >
-                          career
+                          Careers
                         </li>
                         <li
                           className={`n-menu-item ${
@@ -491,7 +495,7 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/contact-us")}
                         >
-                          contact us
+                          Contact Us
                         </li>
                         <li
                           className={`n-menu-item ${
@@ -499,7 +503,7 @@ const Header = ({ upfront }) => {
                           }`}
                           onClick={() => handleRoute("/blogs")}
                         >
-                          blog
+                          Blogs
                         </li>
                         <li>
                           <ul className="social-icons n-social-icons no-bg">

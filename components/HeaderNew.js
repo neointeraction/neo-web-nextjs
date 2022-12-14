@@ -115,7 +115,7 @@ const HeaderNew = ({ upfront }) => {
                 className={`${router.pathname === "/" ? "active" : ""}`}
                 onClick={() => handleRoute("/")}
               >
-                home
+                Home
               </li>
               <li
                 className={` ${
@@ -123,13 +123,17 @@ const HeaderNew = ({ upfront }) => {
                 }`}
                 onClick={() => handleRoute("/about-us")}
               >
-                about us
+                About Us
               </li>
               <li
                 className={` ${
                   router.pathname ===
                     "/ui-ux-design-developer-services-company-bangalore" ||
-                  router.pathname === "/ui-engineering-services-bangalore-india"
+                  router.pathname ===
+                    "/ui-engineering-services-bangalore-india" ||
+                  router.pathname ===
+                    "/design-transformation-services-bangalore-india" ||
+                  router.pathname === "/product-design-services-bangalore-india"
                     ? "active"
                     : ""
                 }`}
@@ -139,7 +143,7 @@ const HeaderNew = ({ upfront }) => {
                   )
                 }
               >
-                services
+                Services
               </li>
               <li
                 className={` ${
@@ -147,13 +151,13 @@ const HeaderNew = ({ upfront }) => {
                 }`}
                 onClick={() => handleRoute("/Projects")}
               >
-                projects
+                Projects
               </li>
               <li
                 className={`${router.pathname === "/blogs" ? "active" : ""}`}
                 onClick={() => handleRoute("/blogs")}
               >
-                blogs
+                Blogs
               </li>
             </ul>
             <div className="n-header-contact">
@@ -165,7 +169,7 @@ const HeaderNew = ({ upfront }) => {
                     }`}
                     onClick={() => handleRoute("/career")}
                   >
-                    join us
+                    Join Us
                   </p>
                 </div>
                 <div className="contact-block-btn">

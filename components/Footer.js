@@ -37,8 +37,8 @@ const Footer = () => {
             <div className="col-md-3">
               <div className="footer-menu">
                 <ul className="footer-menu-link">
-                  <li onClick={() => handleRoute("/about-us")}>about us</li>
-                  <li onClick={() => handleRoute("/Projects")}>projects</li>
+                  <li onClick={() => handleRoute("/about-us")}>About Us</li>
+                  <li onClick={() => handleRoute("/Projects")}>Projects</li>
                   <li
                     onClick={() =>
                       handleRoute(
@@ -46,11 +46,11 @@ const Footer = () => {
                       )
                     }
                   >
-                    services
+                    Services
                   </li>
-                  <li onClick={() => handleRoute("/career")}>careers</li>
-                  <li onClick={() => handleRoute("/contact-us")}>contact us</li>
-                  <li onClick={() => handleRoute("/blogs")}>blogs</li>
+                  <li onClick={() => handleRoute("/career")}>Careers</li>
+                  <li onClick={() => handleRoute("/contact-us")}>Contact Us</li>
+                  <li onClick={() => handleRoute("/blogs")}>Blogs</li>
                 </ul>
                 <ul className="social-icons n-social-icons no-bg  mob-view-social">
                   <li id="ln">
@@ -116,7 +116,7 @@ const Footer = () => {
                       )
                     }
                   >
-                    ux design
+                    UX Design
                   </h4>
                   <ul
                     className="footer-quick-links"
@@ -153,7 +153,7 @@ const Footer = () => {
                       handleRoute("/product-design-services-bangalore-india")
                     }
                   >
-                    product design
+                    Product Design
                   </h4>
                   <ul
                     className="footer-quick-links"
@@ -185,7 +185,7 @@ const Footer = () => {
                       handleRoute("/ui-engineering-services-bangalore-india")
                     }
                   >
-                    ui engineering
+                    UI Engineering
                   </h4>
                   <ul
                     className="footer-quick-links"
@@ -219,7 +219,7 @@ const Footer = () => {
                       )
                     }
                   >
-                    design transformation
+                    Design Transformation
                   </h4>
                   <ul
                     className="footer-quick-links"

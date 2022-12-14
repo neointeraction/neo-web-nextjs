@@ -117,7 +117,7 @@ export default withRouter(
                     <div>
                       <div className="page-content body-page">
                         <div className="container animated fadeIn">
-                          <h1 className="main-title animated fadeIn">blogs</h1>
+                          <h1 className="main-title animated fadeIn">Blogs</h1>
                           <h2 className="sub-title main-sub-title animated fadeIn ">
                             Learn about us and the design industry via our
                             perspectives and experiences.

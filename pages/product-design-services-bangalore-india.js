@@ -232,7 +232,7 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
-              <h1 className="main-title animated fadeIn">product design</h1>
+              <h1 className="main-title animated fadeIn">Product Design</h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Design to shape tomorrow's digital experiences.
               </h2>
