@@ -87,7 +87,7 @@ export default class Header extends Component {
                       </Link>
                     </li>
                     <li>
-                      <Link href="/Projects">
+                      <Link href="/projects">
                         <span onClick={this.closeMenu} className="menu-link">
                           projects
                         </span>

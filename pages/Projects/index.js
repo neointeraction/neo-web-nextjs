@@ -41,7 +41,7 @@ export default withRouter(
               />
               <link
                 rel="canonical"
-                href="https://www.neointeraction.com/Projects"
+                href="https://www.neointeraction.com/projects"
               />
             </Head>
           </div>

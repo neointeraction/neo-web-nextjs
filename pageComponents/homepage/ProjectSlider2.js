@@ -75,7 +75,7 @@ const ProjectSlider = () => {
 
   const handleRoute = (path) => {
     Router.push(
-      `/Projects/${path
+      `/projects/${path
         .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
         .replace(/ /g, "-")}`
     );

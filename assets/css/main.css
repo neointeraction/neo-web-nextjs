@@ -1020,6 +1020,8 @@ input.form-control {
 .pc-info-box {
   padding: 1.25rem;
   background: #f6f8fa;
+  min-height: 115px;
+  max-height: 115px;
 }
 
 .pc-info-box button {
@@ -4093,8 +4095,8 @@ textarea {
 
 .process-outcom-card {
   background-color: transparent !important;
-  background-size: 60% !important;
-  background-position: 50% 0 !important;
+  background-size: 45% !important;
+  background-position: 40% 10px !important;
 }
 
 .process-outcom-card.outcome-card {

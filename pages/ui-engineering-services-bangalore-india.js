@@ -384,7 +384,7 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle
+                                    pathname: `/projects/${cards.cardTitle
                                       .replace(
                                         /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                         ""
@@ -395,7 +395,7 @@ export default withRouter(
                                   <div className="link">
                                     <CardTile
                                       key={cards.id}
-                                      className={cards.className}
+                                      className="project-card-n"
                                       category={cards.categories.map(
                                         (li) => li.categoryName
                                       )}

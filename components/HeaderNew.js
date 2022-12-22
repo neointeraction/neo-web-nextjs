@@ -147,9 +147,9 @@ const HeaderNew = ({ upfront }) => {
               </li>
               <li
                 className={` ${
-                  router.pathname === "/Projects" ? "active" : ""
+                  router.pathname === "/projects" ? "active" : ""
                 }`}
-                onClick={() => handleRoute("/Projects")}
+                onClick={() => handleRoute("/projects")}
               >
                 Projects
               </li>

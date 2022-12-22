@@ -38,7 +38,7 @@ const Footer = () => {
               <div className="footer-menu">
                 <ul className="footer-menu-link">
                   <li onClick={() => handleRoute("/about-us")}>About Us</li>
-                  <li onClick={() => handleRoute("/Projects")}>Projects</li>
+                  <li onClick={() => handleRoute("/projects")}>Projects</li>
                   <li
                     onClick={() =>
                       handleRoute(

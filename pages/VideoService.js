@@ -218,7 +218,7 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/Projects/${cards.cardTitle
+                                    pathname: `/projects/${cards.cardTitle
                                       .replace(
                                         /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                         ""

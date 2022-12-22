@@ -143,9 +143,9 @@ const Header = ({ upfront }) => {
               </li>
               <li
                 className={` ${
-                  router.pathname === "/Projects" ? "active" : ""
+                  router.pathname === "/projects" ? "active" : ""
                 }`}
-                onClick={() => handleRoute("/Projects")}
+                onClick={() => handleRoute("/projects")}
               >
                 projects
               </li>
@@ -226,9 +226,9 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/Projects" ? "active" : ""
+                            router.pathname === "/projects" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/Projects")}
+                          onClick={() => handleRoute("/projects")}
                         >
                           projects
                         </li>
@@ -454,9 +454,9 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/Projects" ? "active" : ""
+                            router.pathname === "/projects" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/Projects")}
+                          onClick={() => handleRoute("/projects")}
                         >
                           Projects
                         </li>

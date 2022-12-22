@@ -36,7 +36,7 @@ export default class CardTile extends Component {
           {this.state.isMouseInside ? (
             <div className="info-box info-box-menu fadeInCard ">
               <div className="arrow-click animated fadeInRight delay-04s">
-                <Link href={{ pathname: `/Projects` }}>
+                <Link href={{ pathname: `/projects` }}>
                   <button
                     className={
                       this.state.isMouseInside
