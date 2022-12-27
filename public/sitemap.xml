@@ -1,149 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="2.0" encoding="UTF-8"?>
 <urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+      xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.sitemaps.org/schemas/sitemap/0.9
+            https://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 <url>
   <loc>https://www.neointeraction.com/</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <lastmod>2022-12-21</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.neointeraction.com/AboutUs</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <loc>https://www.neointeraction.com/about-us</loc>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.neointeraction.com/ui-ux-design-developer-services-company-bangalore</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.neointeraction.com/product-design-services-bangalore-india</loc>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.neointeraction.com/design-transformation-services-bangalore-india</loc>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.neointeraction.com/ui-engineering-services-bangalore-india</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.neointeraction.com/contact-us</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.neointeraction.com/career</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.neointeraction.com/projects</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.neointeraction.com/blogs</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
+  <loc>https://www.neointeraction.com/blogs/loc>
+  <lastmod>2022-12-21</lastmod>
+  <priority>0.80</priority>
 </url>
-<url>
-  <loc>https://www.neointeraction.com/Downloads</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/Terms</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/ebook</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/bfsi</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://www.neointeraction.com/projects/Inkmagik--A-Graphic-Design-Tool</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/projects/Internet-Banking--Dubai-Bank</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/projects/Player-Transfer-System</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/projects/Cashless-Treatment</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/projects/Intertrust-BPM-Tool</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/projects/Intertrust-Navigate</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/projects/Share-Trading-Platform-Redesign</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-
-
-<url>
-  <loc>https://www.neointeraction.com/blogs/UX-design-the-core-of-Digital-Transformation</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Importance-of-Wireframes-in-UIUX-design</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/UX-Audit--Redesigning-of-LIC-Website-with-Heuristics-Valuations</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/UX-of-a-Business-Dashboard--What-How-and-Why</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Benefits-of-having-UX-Design-partner-for-your-business</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/The-Design-Process-we-follow-here-at-Neointeraction</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Pros--Cons-of-Website-Templates</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Tribute-to-Virgil-Abloh-An-outstanding-Designer-and-Artist</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/The-Ultimate-Guide-to-UX-prototyping</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Why-business-objectives-are-central-to-good-design</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Design-Thinking-in-UX-design</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/Why-do-illustrations-matter-in-UIUX-design</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-
-<url>
-  <loc>https://www.neointeraction.com/blogs/How-Fintech-apps-depend-on-Design-for-it%E2%80%99s-success</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-<url>
-  <loc>https://www.neointeraction.com/blogs/UIUX-Terminologies--Demystified</loc>
-  <lastmod>2022-05-12T08:01:02+00:00</lastmod>
-</url>
-
-
 
 </urlset>
