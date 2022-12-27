@@ -15,8 +15,6 @@ function MainLayout({ children }) {
     window.addEventListener("resize", handleWindowSizeChange);
   }, []);
 
-  console.log(width, "width");
-
   return (
     <div>
       {width === 0 ? null : width <= 768 ? (

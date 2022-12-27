@@ -89,9 +89,10 @@ export async function getServerSideProps(context) {
   } else {
     id = projectsData.find(
       (data) =>
-        data.cardTitle
-          .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
-          .replace(/ /g, "-") === title
+        data.project_detail.SEOUrl.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+          ""
+        ).replace(/ /g, "-") === title
     )?.id;
   }
 
