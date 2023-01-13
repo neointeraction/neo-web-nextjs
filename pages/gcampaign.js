@@ -96,10 +96,24 @@ const gcampaign = () => {
           </h1>
         </div>
       </div>
-      <div className="lpsecond-banner">
+      <div className="lpsecond-banner ">
         <ReactWOW animation="fadeIn" offset={0}>
-          <div className="banner-content" id="formid">
-            <FormContactAdLp />
+          <div className="lp-banner-flex">
+            <div className="lpbanner-video">
+              <iframe
+                width="600"
+                height="400"
+                src="https://www.youtube.com/embed/qmCMqpcNE0Q"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+
+            <div className="banner-content" id="formid">
+              <FormContactAdLp />
+            </div>
           </div>
         </ReactWOW>
       </div>

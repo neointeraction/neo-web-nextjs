@@ -671,7 +671,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-copyright">
-            <p>© Neointeraction Design, All rights reserved.</p>
+            <p>© Neointeraction Design 2023, All rights reserved</p>
           </div>
         </div>
       </div>
