@@ -137,12 +137,10 @@ export default withRouter(
                               >
                                 <Link
                                   href={{
-                                    pathname: `/blogs/${item.blogTitle
-                                      .replace(
-                                        /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
-                                        ""
-                                      )
-                                      .replace(/ /g, "-")}`,
+                                    pathname: `/blogs/${item.blog_detail.SEOUrl.replace(
+                                      /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                      ""
+                                    ).replace(/ /g, "-")}`,
                                   }}
                                 >
                                   <div className="link">
@@ -267,16 +265,15 @@ export default withRouter(
                                     >
                                       <Link
                                         href={{
-                                          pathname: `/blogs/${item.blogTitle
-                                            .replace(
-                                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
-                                              ""
-                                            )
-                                            .replace(/ /g, "-")}`,
+                                          pathname: `/blogs/${item.blog_detail.SEOUrl.replace(
+                                            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                            ""
+                                          ).replace(/ /g, "-")}`,
                                         }}
                                       >
                                         <a target="_blank">
                                           <div className="link" key={item.id}>
+                                            {console.log(item, "item")}
                                             <CardTileUpfront
                                               className="blog-cards" //item.id
                                               category={item.blog_categories.map(

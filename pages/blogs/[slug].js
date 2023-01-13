@@ -464,9 +464,10 @@ export async function getServerSideProps(context) {
   } else {
     id = blogsData.find(
       (data) =>
-        data.blogTitle
-          .replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, "")
-          .replace(/ /g, "-") === title
+        data.blog_detail.SEOUrl.replace(
+          /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+          ""
+        ).replace(/ /g, "-") === title
     )?.id;
   }
 

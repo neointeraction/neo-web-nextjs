@@ -54,12 +54,10 @@ export default class BlogSlider extends Component {
                       <Link
                         href={{
                           // pathname: `/blogs/${item.id}`,
-                          pathname: `/blogs/${item.blogTitle
-                            .replace(
-                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
-                              ""
-                            )
-                            .replace(/ /g, "-")}`,
+                          pathname: `/blogs/${item.blog_detail.SEOUrl.replace(
+                            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                            ""
+                          ).replace(/ /g, "-")}`,
                           // query: {
                           //   title: item.blogTitle
                           //     .replace(/(:|\s+)/g, "-")

@@ -353,12 +353,10 @@ export default withRouter(
                           <div className="col-md-4 mb-5" key={item.id}>
                             <Link
                               href={{
-                                pathname: `/blogs/${item.blogTitle
-                                  .replace(
-                                    /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
-                                    ""
-                                  )
-                                  .replace(/ /g, "-")}`,
+                                pathname: `/blogs/${item.blog_detail.SEOUrl.replace(
+                                  /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                                  ""
+                                ).replace(/ /g, "-")}`,
                               }}
                             >
                               <div className="link">
