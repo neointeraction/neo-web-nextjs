@@ -14,7 +14,6 @@ export class DataProvider extends Component {
     try {
       const response = await axios.get(baseUrl + "/projects");
       this.setState({ projects: response.data });
-      console.log(response.data, "resp");
     } catch (error) {
       this.setState({ error });
     }

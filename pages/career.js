@@ -92,7 +92,6 @@ export default withRouter(
       try {
         const response = await axios.get(baseUrl + "/careers");
         this.setState({ career: response.data });
-        console.log(this.state.career);
         this.setState({ loading: false });
       } catch (error) {
         this.setState({ error });

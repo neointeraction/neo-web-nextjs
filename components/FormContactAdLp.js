@@ -329,7 +329,7 @@ export default class FormContactAdLp extends Component {
                     )}
                   </div>
                 </div>
-                <div className="side side-ad">
+                <div className="side content-aside">
                   <div className="input-custom-field">
                     <textarea
                       className="input-custom txt-area"

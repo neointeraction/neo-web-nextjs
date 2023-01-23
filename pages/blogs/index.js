@@ -273,7 +273,6 @@ export default withRouter(
                                       >
                                         <a target="_blank">
                                           <div className="link" key={item.id}>
-                                            {console.log(item, "item")}
                                             <CardTileUpfront
                                               className="blog-cards" //item.id
                                               category={item.blog_categories.map(

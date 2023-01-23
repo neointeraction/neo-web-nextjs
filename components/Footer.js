@@ -101,7 +101,10 @@ const Footer = () => {
                 </ul>
                 <ul className="secondary-menu-links">
                   <li onClick={() => handleRoute("/Downloads")}>Downloads</li>
-                  <li onClick={() => handleRoute("/Terms")}>Agency Terms</li>
+                  {/* <li onClick={() => handleRoute("/Terms")}>Agency Terms</li> */}
+                  <li onClick={() => handleRoute("/privacy-policy")}>
+                    Privacy Policy
+                  </li>
                 </ul>
               </div>
             </div>

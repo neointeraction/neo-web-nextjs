@@ -297,7 +297,7 @@ export default class FormContactUxAudit extends Component {
                     <div>{this.state.emailError}</div>
                   </div>
                 </div>
-                <div className="side side-ad">
+                <div className="side content-aside">
                   <div className="input-custom-field">
                     <textarea
                       className="input-custom txt-area"

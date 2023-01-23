@@ -412,7 +412,7 @@ strong {
   backdrop-filter: blur(10px);
   border-radius: 1.25rem;
 }
-.side-ad {
+.content-aside {
   background-color: transparent;
   padding-left: 0 !important;
   padding-right: 0 !important;

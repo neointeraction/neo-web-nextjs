@@ -24,8 +24,6 @@ const HomeBannerSlider = () => {
 
   const [path, setPath] = useState([]);
 
-  console.log(path, "path");
-
   useEffect(() => {
     if (inView) {
       controls.start("visible");

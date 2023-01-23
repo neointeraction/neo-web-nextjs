@@ -53,8 +53,7 @@ export default withRouter(
       try {
         const response = await axios.get(baseUrl + "/downloads");
         this.setState({ downloads: response.data });
-        // console.log(response.data);
-        console.log(this.state.downloads);
+
         this.setState({ loading: false });
       } catch (error) {
         this.setState({ error });
