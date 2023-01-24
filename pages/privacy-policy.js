@@ -77,7 +77,7 @@ export default withRouter(
                     <div className="about-project">
                       {this.state.privacy.map((item) => (
                         <p className="sub-text">
-                          <ReactMarkdown className="terms-para">
+                          <ReactMarkdown className="privacy-para">
                             {item.privacyText ? item.privacyText : null}
                           </ReactMarkdown>
                         </p>
