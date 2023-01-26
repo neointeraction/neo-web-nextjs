@@ -33,6 +33,7 @@ import UX2 from "assets/images/n-images/services/ux2.svg";
 import UX3 from "assets/images/n-images/services/ux3.svg";
 import UX4 from "assets/images/n-images/services/ux4.svg";
 import UX5 from "assets/images/n-images/services/ux5.svg";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 const PROCESSCONTENT = [
   {
@@ -230,6 +231,18 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
+              <Breadcrumbs
+                containerClassName="breadcrumb"
+                activeItemClassName="bc-active"
+                inactiveItemClassName="bc-inactive"
+                listClassName="bc-list"
+                replaceCharacterList={[
+                  {
+                    from: "ui-ux-design-developer-services-company-bangalore",
+                    to: "Services  /  UX Design",
+                  },
+                ]}
+              />
               <h1 className="main-title animated fadeIn">UX Design</h1>
               <h2 className="sub-title main-sub-title animated fadeIn ">
                 Design to shape tomorrow's digital experiences.

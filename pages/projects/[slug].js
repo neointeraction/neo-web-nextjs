@@ -6,7 +6,6 @@ import Head from "next/head";
 import ReactMarkdown from "react-markdown";
 import axios from "axios";
 import { baseUrl } from "../../globalConfig";
-
 import { withRouter } from "next/router";
 
 import ImageVideoText from "components/ImageVideoText";
@@ -29,6 +28,7 @@ import NewCustomerAcquisition from "assets/images/process-outcome/NewCustomerAcq
 
 import GetQuoteModal from "components/GetQuoteModal";
 import CaseStudyModal from "components/CaseStudyModal";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 // export async function getStaticPaths() {
 //   // Call an external API endpoint to get posts.
@@ -269,6 +269,21 @@ export default withRouter(
               <div className="page-content">
                 <div className="container animated fadeIn">
                   <div key={projectInfo.id}>
+                    <Breadcrumbs
+                      containerClassName="breadcrumb"
+                      activeItemClassName="bc-active"
+                      inactiveItemClassName="bc-inactive"
+                      listClassName="bc-list"
+                      replaceCharacterList={[
+                        {
+                          from: `${this.props.router.asPath.substring(
+                            this.props.router.asPath.lastIndexOf("/") + 1
+                          )}`,
+                          to: `${projectInfo.cardTitle}`,
+                        },
+                      ]}
+                    />
+
                     <h1 className="main-title animated fadeIn">
                       {projectInfo.cardTitle}
                     </h1>

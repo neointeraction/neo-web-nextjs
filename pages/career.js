@@ -23,6 +23,7 @@ import BackArrow from "assets/images/BackArrow.svg";
 // import CareerImg3 from "assets/images/ux-img.jpg";
 import internImg from "assets/images/internship.jpeg";
 import HomeTeam from "pageComponents/homepage/HomeTeam";
+import Breadcrumbs from "nextjs-breadcrumbs";
 // import testVideo from "assets/images/testimonial-temp.png";
 
 const FAQ = [
@@ -138,6 +139,18 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
+              <Breadcrumbs
+                containerClassName="breadcrumb"
+                activeItemClassName="bc-active"
+                inactiveItemClassName="bc-inactive"
+                listClassName="bc-list"
+                replaceCharacterList={[
+                  {
+                    from: "career",
+                    to: "Career",
+                  },
+                ]}
+              />
               <h1 className="main-title animated fadeIn">
                 Career Opportunities
               </h1>

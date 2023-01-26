@@ -14,6 +14,7 @@ import BackArrow from "assets/images/BackArrow.svg";
 import img1 from "assets/images/Bangalore.png";
 import img2 from "assets/images/Chennai.png";
 import img3 from "assets/images/Cochin.png";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 // import EmailText from "assets/images/email-text.png";
 // import PhoneText from "assets/images/mob-text.png";
@@ -110,6 +111,18 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
+              <Breadcrumbs
+                containerClassName="breadcrumb"
+                activeItemClassName="bc-active"
+                inactiveItemClassName="bc-inactive"
+                listClassName="bc-list"
+                replaceCharacterList={[
+                  {
+                    from: "contact-us",
+                    to: "Contact Us",
+                  },
+                ]}
+              />
               <h1 className="main-title animated fadeIn">Contact Us</h1>
               <h2 className="sub-title main-sub-title animated fadeIn">
                 Reach out to us by filling up the form below

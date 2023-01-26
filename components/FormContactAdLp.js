@@ -82,6 +82,7 @@ export default class FormContactAdLp extends Component {
               progress: undefined,
             });
             //  alert("Message Sent.");
+            this.validator.hideMessages();
             this.resetForm();
           } else if (response.data.status === "fail") {
             alert("Message failed to send.");

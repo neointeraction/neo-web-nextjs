@@ -4,6 +4,7 @@ import FilterCardProjects from "components/FilterCardProjects";
 import BackArrow from "assets/images/BackArrow.svg";
 
 import { withRouter } from "next/router";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 export default withRouter(
   class Projects extends Component {
@@ -62,6 +63,18 @@ export default withRouter(
           <div className="body-page ">
             <div className="container">
               <div className="page-content">
+                <Breadcrumbs
+                  containerClassName="breadcrumb"
+                  activeItemClassName="bc-active"
+                  inactiveItemClassName="bc-inactive"
+                  listClassName="bc-list"
+                  replaceCharacterList={[
+                    {
+                      from: "projects",
+                      to: "Projects",
+                    },
+                  ]}
+                />
                 <h1 className="main-title animated fadeIn delay-0.5s">
                   Projects
                 </h1>

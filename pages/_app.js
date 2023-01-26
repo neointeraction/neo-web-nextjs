@@ -1,4 +1,5 @@
 import "assets/css/main.css";
+import "nextjs-breadcrumbs/dist/index.css";
 import Head from "next/head";
 
 import MainLayout from "layouts/MainLayout/MainLayout";

@@ -128,7 +128,7 @@ export default class ClientSlider extends Component {
           },
         },
         {
-          breakpoint: 768,
+          breakpoint: 767,
           settings: {
             slidesToShow: 3,
             slidesToScroll: 1,
@@ -147,11 +147,10 @@ export default class ClientSlider extends Component {
         {
           breakpoint: 426,
           settings: {
-            slidesToShow: 1,
+            slidesToShow: 2,
             slidesToScroll: 1,
             speed: 5000,
             autoplaySpeed: 5000,
-            initialSlide: 7,
           },
         },
       ],

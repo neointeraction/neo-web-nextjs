@@ -13,6 +13,7 @@ import GetQuoteModal from "components/GetQuoteModal";
 // import BackArrow from "assets/images/BackArrow.svg";
 import Close from "assets/images/Close.svg";
 import ArrowRightBlack from "assets/images/arrowRightBlack.svg";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 export default class BFSI extends Component {
   constructor() {
@@ -96,6 +97,18 @@ export default class BFSI extends Component {
                   <div>
                     <div className="page-content body-page">
                       <div className="container animated fadeIn">
+                        <Breadcrumbs
+                          containerClassName="breadcrumb"
+                          activeItemClassName="bc-active"
+                          inactiveItemClassName="bc-inactive"
+                          listClassName="bc-list"
+                          replaceCharacterList={[
+                            {
+                              from: "bfsi",
+                              to: "BFSI",
+                            },
+                          ]}
+                        />
                         <h1 className="main-title animated fadeIn">
                           Banking, Financial Services and Insurance
                         </h1>

@@ -90,7 +90,7 @@ const gcampaign = () => {
       </Head>
 
       <div className="container">
-        <div className="home-content">
+        <div className="page-content body-page">
           <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
             Neointeraction Design - Enterprise Ux design partner.
           </h1>
@@ -111,14 +111,14 @@ const gcampaign = () => {
               ></iframe>
             </div>
 
-            <div className="banner-content" id="formid">
+            <div className="banner-content gform-content" id="formid">
               <FormContactAdLp />
             </div>
           </div>
         </ReactWOW>
       </div>
 
-      <div className="page-content body-page">
+      <div className="page-content gcamp-pagecontent">
         <div className="container animated fadeIn">
           <ReactWOW animation="fadeInUp" delay="0s">
             <div>

@@ -35,6 +35,7 @@ import UI2 from "assets/images/n-images/services/ui2.svg";
 import UI3 from "assets/images/n-images/services/ui3.svg";
 import UI4 from "assets/images/n-images/services/ui4.svg";
 import UI5 from "assets/images/n-images/services/ui5.svg";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 const PROCESSCONTENT = [
   {
@@ -177,6 +178,18 @@ export default withRouter(
           </a>
           <div className="page-content body-page">
             <div className="container animated fadeIn">
+              <Breadcrumbs
+                containerClassName="breadcrumb"
+                activeItemClassName="bc-active"
+                inactiveItemClassName="bc-inactive"
+                listClassName="bc-list"
+                replaceCharacterList={[
+                  {
+                    from: "ui-engineering-services-bangalore-india",
+                    to: "Services  /  UI Engineering",
+                  },
+                ]}
+              />
               <h1 className="main-title animated fadeIn">UI Engineering</h1>
               <h2 className="sub-title main-sub-title animated fadeIn">
                 Giving life to your ideas through the latest technologies and

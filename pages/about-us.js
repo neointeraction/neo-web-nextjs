@@ -5,6 +5,7 @@ import Head from "next/head";
 import { BlogContext } from "context/BlogContext";
 import axios from "axios";
 import { baseUrl } from "../globalConfig";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 import { withRouter } from "next/router";
 
@@ -199,6 +200,15 @@ export default withRouter(
               </a>
               <div className="page-content body-page">
                 <div className="container animated fadeIn">
+                  <Breadcrumbs
+                    containerClassName="breadcrumb"
+                    activeItemClassName="bc-active"
+                    inactiveItemClassName="bc-inactive"
+                    listClassName="bc-list"
+                    replaceCharacterList={[
+                      { from: "about-us", to: "About Us " },
+                    ]}
+                  />
                   <h1 className="main-title animated fadeIn">About Us</h1>
                   <h2 className="sub-title main-sub-title animated fadeIn">
                     A passionate design team for tomorrow’s business success

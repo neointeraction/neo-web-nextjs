@@ -26,6 +26,7 @@ import LinkedInIcon from "assets/images/n-images/lin-blog.svg";
 import TwitterIcon from "assets/images/n-images/tr-blog.svg";
 import Menu from "assets/images/n-images/more-blog.svg";
 import BlogSection from "pageComponents/homepage/BlogSection";
+import Breadcrumbs from "nextjs-breadcrumbs";
 
 class ProjectDetailPage extends Component {
   constructor(props) {
@@ -198,6 +199,20 @@ class ProjectDetailPage extends Component {
                     <div className="sf-item">
                       <div className="fb-content">
                         <div>
+                          <Breadcrumbs
+                            containerClassName="breadcrumb blog-inner-breadcrumb"
+                            activeItemClassName="bc-active"
+                            inactiveItemClassName="bc-inactive"
+                            listClassName="bc-list"
+                            replaceCharacterList={[
+                              {
+                                from: `${this.props.router.asPath.substring(
+                                  this.props.router.asPath.lastIndexOf("/") + 1
+                                )}`,
+                                to: `${data.blogTitle}`,
+                              },
+                            ]}
+                          />
                           <h1 className="featured-blog-title">
                             {data.blogTitle ? data.blogTitle : null}
                           </h1>

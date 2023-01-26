@@ -1555,3 +1555,55 @@ input[type="number"] {
   padding-left: 30px;
   margin: 10px 0 20px 0;
 }
+
+/* breadcrumb  */
+
+.breadcrumb {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.bc-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+
+.bc-list li a {
+  text-decoration: none;
+  font-family: "Avenir";
+  font-weight: 500;
+  font-size: 16px;
+  color: #2f2f38;
+  letter-spacing: 0;
+  margin-top: 0.625rem;
+  text-transform: capitalize;
+}
+
+.bc-active a {
+  color: #a5a5a5 !important;
+  pointer-events: none;
+}
+
+.bc-inactive a:hover {
+  text-decoration: underline;
+}
+
+.bc-inactive {
+  position: relative;
+}
+
+.bc-inactive::after {
+  content: ">";
+  position: absolute;
+  right: -20px;
+  color: #a5a5a5 !important;
+}
+
+.blog-inner-breadcrumb {
+  justify-content: flex-start;
+}
