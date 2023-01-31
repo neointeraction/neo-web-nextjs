@@ -18,7 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 const axios = require("axios").default;
 
 export default class FormContactAdLp extends Component {
-  constructor() {
+  constructor(props) {
     super();
     this.state = {
       name: "",
@@ -72,6 +72,7 @@ export default class FormContactAdLp extends Component {
         .then((response) => {
           if (response.data.status === "success") {
             this.setState({ mailSent: false });
+            this.props.setActive(true);
             toast(this.SuccessToast, {
               position: "top-right",
               autoClose: 5000,
@@ -175,14 +176,14 @@ export default class FormContactAdLp extends Component {
   //   // Here you will get the final recaptchaToken!!!
   //   console.log(recaptchaToken, "<= your recaptcha token");
   // }
-  defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
+  // defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
 
   SuccessToast = () => (
     <div className="success-msg-download width-md">
@@ -227,7 +228,7 @@ export default class FormContactAdLp extends Component {
                 onSubmit={this.submitEmail}
               >
                 <div className="row">
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-6">
                     <div className="input-custom-field">
                       <input
                         className="input-custom"
@@ -250,7 +251,7 @@ export default class FormContactAdLp extends Component {
                     <div>{this.state.nameError}</div>
                   </div>
 
-                  <div className="col-md-6">
+                  <div className="col-md-6 col-6">
                     <div className="input-custom-field">
                       <input
                         className="input-custom"
@@ -421,7 +422,6 @@ export default class FormContactAdLp extends Component {
             </div>
           </div>
         </div>
-        <ToastContainer />
       </div>
     );
   }

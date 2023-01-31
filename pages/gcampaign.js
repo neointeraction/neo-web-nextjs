@@ -19,6 +19,8 @@ import videoServiceImg from "assets/images/video-service.jpg";
 import BlogCardAd from "components/BlogCardAd";
 import UXDesignImageText from "components/UXDesignImageText";
 import UIEngineeringImageText from "components/UIEngineeringImageText";
+import { useEffect } from "react";
+import { ToastContainer } from "react-toastify";
 
 const SERVICES = [
   {
@@ -91,7 +93,7 @@ const gcampaign = () => {
 
       <div className="container">
         <div className="page-content body-page">
-          <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
+          <h1 className="main-title adPageTitle animated fadeIn delay-0.5s gmob-title">
             Neointeraction Design - Enterprise Ux design partner.
           </h1>
         </div>
@@ -99,7 +101,7 @@ const gcampaign = () => {
       <div className="lpsecond-banner ">
         <ReactWOW animation="fadeIn" offset={0}>
           <div className="lp-banner-flex">
-            <div className="lpbanner-video">
+            <div className="lpbanner-video gmob">
               <iframe
                 width="600"
                 height="400"
@@ -109,10 +111,13 @@ const gcampaign = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
+              <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
+                Neointeraction Design - Enterprise Ux design partner.
+              </h1>
             </div>
 
             <div className="banner-content gform-content" id="formid">
-              <FormContactAdLp />
+              <FormContactAdLp setActive={setActive} />
             </div>
           </div>
         </ReactWOW>
@@ -274,6 +279,7 @@ const gcampaign = () => {
           </ReactWOW>
         </div>
       </div>
+      {active && <ToastContainer />}
     </div>
   );
 };

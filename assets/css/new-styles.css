@@ -1609,3 +1609,12 @@ input[type="number"] {
 .blog-inner-breadcrumb {
   justify-content: flex-start;
 }
+
+.gmob h1 {
+  display: none;
+}
+
+.col-6 {
+  max-width: 100%;
+  flex: 0 0 100%;
+}
