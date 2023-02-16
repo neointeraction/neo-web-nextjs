@@ -114,12 +114,10 @@ const ProjectSlider = () => {
                       </div>
                       <Link
                         href={{
-                          pathname: `/projects/${cards.cardTitle
-                            .replace(
-                              /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
-                              ""
-                            )
-                            .replace(/ /g, "-")}`,
+                          pathname: `/projects/${cards.project_detail.SEOUrl.replace(
+                            /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
+                            ""
+                          ).replace(/ /g, "-")}`,
                         }}
                       >
                         <div className="slider-image" style={{ zIndex: 2 }}>
