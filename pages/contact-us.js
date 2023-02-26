@@ -25,7 +25,7 @@ const LOCATIONS = [
     imgBlock: img1,
     location: "Bangalore",
     mailText: "info@neointeraction.com",
-    phoneText: "+91 944-9565-744",
+    phoneText: "+91 95133 38744",
     locationText:
       "Neointeraction Designs, # M-98, 2nd Floor, LIC housing colony, HAL 3rd stage, Jeevan Bhima Nagar, Bangalore - 560 075",
     googleMapLink: "https://goo.gl/maps/5WW3GofFRY7CornF9",
@@ -35,7 +35,7 @@ const LOCATIONS = [
     imgBlock: img2,
     location: "Chennai",
     mailText: "info@neointeraction.com",
-    phoneText: "+91 944-9565-744",
+    phoneText: "+91 95133 38744",
     locationText:
       "Subham Complex, 2A, T-45, A & B, 7th Avenue (Velankanni Church Rd.) Besant Nagar, Chennai, Tamil Nadu - 600090",
     googleMapLink: "https://goo.gl/maps/zdvvR77jFdsgE2dJ7",
@@ -45,7 +45,7 @@ const LOCATIONS = [
     imgBlock: img3,
     location: "Cochin",
     mailText: "info@neointeraction.com",
-    phoneText: "+91 944-9565-744",
+    phoneText: "+91 95133 38744",
     locationText:
       "DD Vyapar Bhavan, 307, 4th Floor, K. P. Vallon Rd., Kadavanthra, Kochi – 682 020",
     googleMapLink: "https://goo.gl/maps/2Cjeo2XotWfJJgc46",

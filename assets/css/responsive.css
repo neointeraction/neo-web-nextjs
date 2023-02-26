@@ -437,7 +437,7 @@
   .lpsecond-banner {
     margin-top: -18px !important;
     height: 620px !important;
-    background-position: 77% 35% !important;
+    background-position: 70% 35% !important;
   }
   .gform-content {
     margin-top: -40px;
@@ -456,8 +456,8 @@
   }
 
   .gmob iframe {
-    width: 50%;
-    height: 100px;
+    width: 34%;
+    height: 75px;
   }
 
   .gmob h1 {

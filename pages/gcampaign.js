@@ -112,7 +112,11 @@ const gcampaign = () => {
                 allowfullscreen
               ></iframe>
               <h1 className="main-title adPageTitle animated fadeIn delay-0.5s">
-                Neointeraction Design - Enterprise Ux design partner.
+                Neointeraction Design - Enterprise{" "}
+                <span className="highlight" style={{ color: "#f24822" }}>
+                  (UX)
+                </span>{" "}
+                design partner.
               </h1>
             </div>
 

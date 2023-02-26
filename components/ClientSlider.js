@@ -116,8 +116,8 @@ export default class ClientSlider extends Component {
       initialSlide: 0,
       slidesToScroll: 1,
       autoplay: true,
-      speed: 4000,
-      autoplaySpeed: 4000,
+      speed: 1000,
+      autoplaySpeed: 1000,
       arrows: false,
       responsive: [
         {
@@ -139,8 +139,8 @@ export default class ClientSlider extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            speed: 5000,
-            autoplaySpeed: 5000,
+            speed: 1000,
+            autoplaySpeed: 2000,
             initialSlide: 7,
           },
         },
@@ -149,8 +149,8 @@ export default class ClientSlider extends Component {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            speed: 5000,
-            autoplaySpeed: 5000,
+            speed: 1000,
+            autoplaySpeed: 2000,
           },
         },
       ],
