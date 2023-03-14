@@ -47,13 +47,35 @@ export default class ModalCard extends Component {
           <h2 className="mc-title">{title}</h2>
           <h3 className="mc-text">{text}</h3>
           {textItalic && <h3 className="mc-text italic">{textItalic}</h3>}
-          <button
+          {/* <button
             className="custom-btn btn-text card-btn"
             id={cardId}
             onClick={this.handleOpenModal}
           >
             {buttonText}
-          </button>
+          </button> */}
+
+          <a
+            className="custom-btn btn-text card-btn"
+            href={
+              title === "ux designer"
+                ? "https://forms.gle/QwyuiTkGd9MjoiPj7"
+                : title === "ui designer"
+                ? "https://forms.gle/QwyuiTkGd9MjoiPj7"
+                : title === "ui engineer"
+                ? "https://forms.gle/eFqkRfQpJ8PzGnMo8"
+                : title === "digital marketing"
+                ? "https://forms.gle/GeGXwatjxHqeK9oe6"
+                : title === "project manager"
+                ? "https://forms.gle/qSMkP3PAtiS5nCzY6"
+                : title === "business analyst"
+                ? "https://forms.gle/Gbz6SKgWQgqKxmFT9"
+                : null
+            }
+            target="_blank"
+          >
+            {buttonText}
+          </a>
         </div>
         <ReactModal
           isOpen={this.state.showModal}

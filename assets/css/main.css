@@ -2495,7 +2495,7 @@ textarea {
 }
 
 .career-card:hover .btn-text {
-  padding: 0.6rem 0.875rem;
+  /* padding: 0.6rem 0.875rem; */
   transition: 0.3s all ease-in-out;
   background: #f90400;
   color: #ffffff;
