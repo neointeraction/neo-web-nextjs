@@ -156,47 +156,54 @@ export default withRouter(
                                     ).replace(/ /g, "-")}`,
                                   }}
                                 >
-                                  <div className="link">
-                                    <div className="featured-blog-card">
-                                      <div className="row">
-                                        <div className="col-md-6">
-                                          <div className="fb-image">
-                                            <img
-                                              src={`${baseUrl}${item.blogCardHeadImage?.url}`}
-                                              alt="blog-cover"
-                                            />
+                                  <a
+                                    target="_blank"
+                                    style={{ textDecoration: "none" }}
+                                  >
+                                    <div className="link">
+                                      <div className="featured-blog-card">
+                                        <div className="row">
+                                          <div className="col-md-6">
+                                            <div className="fb-image">
+                                              <img
+                                                src={`${baseUrl}${item.blogCardHeadImage?.url}`}
+                                                alt="blog-cover"
+                                              />
+                                            </div>
                                           </div>
-                                        </div>
-                                        <div className="col-md-6">
-                                          <div className="fb-content">
-                                            <div>
-                                              <h1 className="featured-blog-title">
-                                                {item.blogTitle}
-                                              </h1>
-                                            </div>
-                                            <div>
-                                              <p className="featured-blog-summary">
-                                                {item.blogSummary}
-                                              </p>
-                                            </div>
-                                            <div>
-                                              <p className="featured-blog-author">
-                                                by{" "}
-                                                <span className="author-name">
-                                                  {item.blogAuthor}&nbsp;
-                                                </span>
-                                                <span className="posted-time">
-                                                  {moment(`${item.created_at}`)
-                                                    .startOf("hour")
-                                                    .fromNow()}
-                                                </span>
-                                              </p>
+                                          <div className="col-md-6">
+                                            <div className="fb-content">
+                                              <div>
+                                                <h1 className="featured-blog-title">
+                                                  {item.blogTitle}
+                                                </h1>
+                                              </div>
+                                              <div>
+                                                <p className="featured-blog-summary">
+                                                  {item.blogSummary}
+                                                </p>
+                                              </div>
+                                              <div>
+                                                <p className="featured-blog-author">
+                                                  by{" "}
+                                                  <span className="author-name">
+                                                    {item.blogAuthor}&nbsp;
+                                                  </span>
+                                                  <span className="posted-time">
+                                                    {moment(
+                                                      `${item.created_at}`
+                                                    )
+                                                      .startOf("hour")
+                                                      .fromNow()}
+                                                  </span>
+                                                </p>
+                                              </div>
                                             </div>
                                           </div>
                                         </div>
                                       </div>
                                     </div>
-                                  </div>
+                                  </a>
                                 </Link>
                               </ReactWOW>
                             ))}

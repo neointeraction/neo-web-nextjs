@@ -54,28 +54,34 @@ export default class ModalCard extends Component {
           >
             {buttonText}
           </button> */}
-
-          <a
-            className="custom-btn btn-text card-btn"
-            href={
-              title === "ux designer"
-                ? "https://forms.gle/QwyuiTkGd9MjoiPj7"
-                : title === "ui designer"
-                ? "https://forms.gle/QwyuiTkGd9MjoiPj7"
-                : title === "ui engineer"
-                ? "https://forms.gle/eFqkRfQpJ8PzGnMo8"
-                : title === "digital marketing"
-                ? "https://forms.gle/GeGXwatjxHqeK9oe6"
-                : title === "project manager"
-                ? "https://forms.gle/qSMkP3PAtiS5nCzY6"
-                : title === "business analyst"
-                ? "https://forms.gle/Gbz6SKgWQgqKxmFT9"
-                : null
-            }
-            target="_blank"
-          >
-            {buttonText}
-          </a>
+          {title === "ux designer" ||
+          title === "ui designer" ||
+          title === "ui engineer" ||
+          title === "digital marketing" ||
+          title === "project manager" ||
+          title === "business analyst" ? (
+            <a
+              className="custom-btn btn-text card-btn"
+              href={
+                title === "ux designer"
+                  ? "https://forms.gle/QwyuiTkGd9MjoiPj7"
+                  : title === "ui designer"
+                  ? "https://forms.gle/QwyuiTkGd9MjoiPj7"
+                  : title === "ui engineer"
+                  ? "https://forms.gle/eFqkRfQpJ8PzGnMo8"
+                  : title === "digital marketing"
+                  ? "https://forms.gle/GeGXwatjxHqeK9oe6"
+                  : title === "project manager"
+                  ? "https://forms.gle/qSMkP3PAtiS5nCzY6"
+                  : title === "business analyst"
+                  ? "https://forms.gle/Gbz6SKgWQgqKxmFT9"
+                  : null
+              }
+              target="_blank"
+            >
+              {buttonText}
+            </a>
+          ) : null}
         </div>
         <ReactModal
           isOpen={this.state.showModal}
