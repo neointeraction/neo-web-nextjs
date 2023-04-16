@@ -5778,3 +5778,21 @@ textarea {
   font-weight: 500;
   margin: 10px 0;
 }
+
+.chat-container {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+}
+
+.whatsapp-button {
+  background: #25d366;
+  padding: 14px;
+  height: 72px;
+  width: 72px;
+  border-radius: 50px;
+}
+
+.whatsapp-button svg {
+  stroke: #fff;
+}
