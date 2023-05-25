@@ -49,18 +49,20 @@ app.post("/send", (req, res) => {
   var mobile = req.body.mobile;
   var email = req.body.email;
   var description = req.body.description;
+  const ip = req.ip;
   // var service = req.body.service;
 
   var mail = {
     from: email,
     to: ["sam@neointeraction.com", "info@neointeraction.com"],
-    subject: `Contact us form submission : ${name} <${email}> `,
+    subject: `Contact us form submission : ${name}`,
     html: `<html>
      <body>
      <p>Name:${name}</p>
      <p>Email:${email}</p>
      <p>Mobile:${mobile}</p>
-     <p> description:${description}</p>     
+     <p>IP Address:${ip}</p>
+     <p>description:${description}</p>     
      </body> 
      </html>`,
   };
@@ -100,7 +102,7 @@ app.post("/sendgad", (req, res) => {
   var mail = {
     from: email,
     to: ["sam@neointeraction.com", "allen@neointeraction.com"],
-    subject: `Google Ad form submission : ${name} <${email}>`,
+    subject: `Google Ad form submission : ${name}`,
     html: `<html>
      <body>
      <p>Name:${name}</p>
@@ -145,7 +147,7 @@ app.post("/sendebk", (req, res) => {
   var mail = {
     from: email,
     to: ["sam@neointeraction.com"],
-    subject: `E-Book LP form submission : ${name} <${email}>`,
+    subject: `E-Book LP form submission : ${name}`,
     html: `<html>
      <body>
      <p>Name:${name}</p>
@@ -242,7 +244,7 @@ app.post("/career", (req, res) => {
   var mail = {
     from: email,
     to: ["hr@neointeraction.com", "sam@neointeraction.com"],
-    subject: `Internship request from ${name} <${email}>`,
+    subject: `Internship request from ${name}`,
     text: description,
     attachments: [
       {
@@ -299,7 +301,7 @@ app.post("/jobrequest", (req, res) => {
       "sam@neointeraction.com",
       "info@neointeraction.com",
     ],
-    subject: `Job Request for ${jobType} from ${name} <${email}>`,
+    subject: `Job Request for ${jobType} from ${name}`,
     // text: description,
     attachments: [
       {
@@ -376,7 +378,7 @@ app.post("/hiredeveloper", (req, res) => {
   var mail = {
     from: email,
     to: ["hr@neointeraction.com", "sam@neointeraction.com"],
-    subject: `Hire Developer - Message from ${name} <${email}>`,
+    subject: `Hire Developer - Message from ${name}`,
     // text: description,
     html: `<html>
      <body>
