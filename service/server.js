@@ -121,7 +121,7 @@ app.post("/send", async (req, res) => {
        <p>Name - ${name}</p>
        <p>Email - ${email}</p>
        <p>Mobile - ${mobile}</p>
-       <p>Location - ${location === "" ? "IN" : location}</p>
+       <p>Location - ${location === undefined ? "IN" : location}</p>
        <p>IP Address - ${ip}</p>
        <p>description - ${description}</p>     
        </body> 
