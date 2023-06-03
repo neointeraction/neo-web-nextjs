@@ -102,7 +102,7 @@ app.post("/send", async (req, res) => {
   var mobile = req.body.mobile;
   var email = req.body.email;
   var description = req.body.description;
-  var location = req.body.location;
+  var location = req.body.location.value;
 
   try {
     const response = await axios.get("https://api.ipify.org?format=json");

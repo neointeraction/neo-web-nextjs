@@ -5797,3 +5797,26 @@ textarea {
 .whatsapp-button svg {
   stroke: #fff;
 }
+
+.react-select__control {
+  border: 0.0625rem solid #e3e3e3 !important;
+  padding: 3px;
+  transition: 0.4s;
+  background: #f6f8fa !important;
+  width: 100%;
+  border-radius: 0.25rem;
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #2f2f38 !important;
+  transition: 0.3s all ease-in-out;
+  font-family: inherit;
+}
+
+.react-select__control--is-focused {
+  border-color: red !important;
+  box-shadow: none !important;
+}
+
+.react-select__placeholder {
+  color: #ababab !important;
+}
