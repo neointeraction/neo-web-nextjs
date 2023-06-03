@@ -27,7 +27,7 @@ export default class FormContact extends Component {
       mobile: "",
       email: "",
       description: "",
-      location: "IN",
+      location: "",
       // service: "",
       // nameError: "",
 
@@ -104,7 +104,7 @@ export default class FormContact extends Component {
       mobile: "",
       email: "",
       description: "",
-      location: "IN",
+      location: "",
       isCaptchaValid: true,
       isErrorShown: false,
       isFormValid: false,

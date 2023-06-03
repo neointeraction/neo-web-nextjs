@@ -63,12 +63,12 @@ app.post("/send", (req, res) => {
     subject: `Contact us form submission : ${name}`,
     html: `<html>
      <body>
-     <p>Name:${name}</p>
-     <p>Email:${email}</p>
-     <p>Mobile:${mobile}</p>
-     <p>Mobile:${location}</p>
-     <p>IP Address:${ip.replace("::ffff:", "")}</p>
-     <p>description:${description}</p>     
+     <p>Name - ${name}</p>
+     <p>Email - ${email}</p>
+     <p>Mobile - ${mobile}</p>
+     <p>Location - ${location === "" ? "IN" : location}</p>
+     <p>IP Address - ${ip.replace("::ffff:", "")}</p>
+     <p>description - ${description}</p>     
      </body> 
      </html>`,
   };
