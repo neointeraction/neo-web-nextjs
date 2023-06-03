@@ -49,19 +49,25 @@ app.post("/send", (req, res) => {
   var mobile = req.body.mobile;
   var email = req.body.email;
   var description = req.body.description;
+  var location = req.body.location;
   const ip = req.ip;
   // var service = req.body.service;
 
   var mail = {
     from: email,
-    to: ["sam@neointeraction.com", "info@neointeraction.com"],
+    to: [
+      "sam@neointeraction.com",
+      "info@neointeraction.com",
+      "shameer@neointeraction.com",
+    ],
     subject: `Contact us form submission : ${name}`,
     html: `<html>
      <body>
      <p>Name:${name}</p>
      <p>Email:${email}</p>
      <p>Mobile:${mobile}</p>
-     <p>IP Address:${ip}</p>
+     <p>Mobile:${location}</p>
+     <p>IP Address:${ip.replace("::ffff:", "")}</p>
      <p>description:${description}</p>     
      </body> 
      </html>`,
