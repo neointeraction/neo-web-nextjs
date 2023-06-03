@@ -5,6 +5,7 @@ var bodyParser = require("body-parser");
 const cors = require("cors");
 var handlebars = require("handlebars");
 var fs = require("fs");
+const axios = require("axios");
 // const multer = require('multer')
 
 var readHTMLFile = function (path, callback) {
@@ -52,7 +53,7 @@ app.post("/send", (req, res) => {
   var location = req.body.location;
   const ip = req.ip;
   // var service = req.body.service;
-
+  // <p>IP Address - ${ip.replace("::ffff:", "")}</p>
   var mail = {
     from: email,
     to: [
@@ -67,11 +68,25 @@ app.post("/send", (req, res) => {
      <p>Email - ${email}</p>
      <p>Mobile - ${mobile}</p>
      <p>Location - ${location === "" ? "IN" : location}</p>
-     <p>IP Address - ${ip.replace("::ffff:", "")}</p>
+    
+     <p>IP Address - Loading...</p>
      <p>description - ${description}</p>     
      </body> 
      </html>`,
   };
+
+  axios
+    .get("https://api.ipify.org?format=json")
+    .then((response) => {
+      const publicIP = response.data.ip;
+      mail.html = mail.html.replace("Loading...", publicIP); // Replace the placeholder with the public IP address
+
+      // Send the email or perform other operations using the updated `mail` object
+      // ...
+    })
+    .catch((error) => {
+      console.error("Error retrieving public IP:", error.message);
+    });
 
   transporter.sendMail(mail, (err, data) => {
     if (err) {
