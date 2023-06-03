@@ -37,7 +37,59 @@ const port = process.env.PORT || 4000;
 app.listen(port, () => {
   console.log(`Server listening on port ${port}`);
 });
-app.post("/send", (req, res) => {
+// app.post("/send", (req, res) => {
+//   var transporter = nodemailer.createTransport({
+//     service: "gmail",
+//     auth: {
+//       user: "neointeraction.mailer@gmail.com",
+//       pass: "unlhgudojkwsqwxg",
+//     },
+//   });
+
+//   var name = req.body.name;
+//   var mobile = req.body.mobile;
+//   var email = req.body.email;
+//   var description = req.body.description;
+//   var location = req.body.location;
+//   const ip = req.ip;
+//   // var service = req.body.service;
+// // <p>IP Address - ${ip.replace("::ffff:", "")}</p>
+//   var mail = {
+//     from: email,
+//     to: [
+//       "sam@neointeraction.com",
+//       "info@neointeraction.com",
+//       "shameer@neointeraction.com",
+//     ],
+//     subject: `Contact us form submission : ${name}`,
+//     html: `<html>
+//      <body>
+//      <p>Name - ${name}</p>
+//      <p>Email - ${email}</p>
+//      <p>Mobile - ${mobile}</p>
+//      <p>Location - ${location === "" ? "IN" : location}</p>
+
+//      <p>IP Address - Loading...</p>
+//      <p>description - ${description}</p>
+//      </body>
+//      </html>`,
+//   };
+
+//   transporter.sendMail(mail, (err, data) => {
+//     if (err) {
+//       res.json({
+//         status: "fail",
+//         error: err,
+//       });
+//     } else {
+//       res.json({
+//         status: "success",
+//       });
+//     }
+//   });
+// });
+
+app.post("/send", async (req, res) => {
   var transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -51,55 +103,50 @@ app.post("/send", (req, res) => {
   var email = req.body.email;
   var description = req.body.description;
   var location = req.body.location;
-  const ip = req.ip;
-  // var service = req.body.service;
-  // <p>IP Address - ${ip.replace("::ffff:", "")}</p>
-  var mail = {
-    from: email,
-    to: [
-      "sam@neointeraction.com",
-      "info@neointeraction.com",
-      "shameer@neointeraction.com",
-    ],
-    subject: `Contact us form submission : ${name}`,
-    html: `<html>
-     <body>
-     <p>Name - ${name}</p>
-     <p>Email - ${email}</p>
-     <p>Mobile - ${mobile}</p>
-     <p>Location - ${location === "" ? "IN" : location}</p>
-    
-     <p>IP Address - Loading...</p>
-     <p>description - ${description}</p>     
-     </body> 
-     </html>`,
-  };
 
-  axios
-    .get("https://api.ipify.org?format=json")
-    .then((response) => {
-      const publicIP = response.data.ip;
-      mail.html = mail.html.replace("Loading...", publicIP); // Replace the placeholder with the public IP address
+  try {
+    const response = await axios.get("https://api.ipify.org?format=json");
+    const ip = response.data.ip;
 
-      // Send the email or perform other operations using the updated `mail` object
-      // ...
-    })
-    .catch((error) => {
-      console.error("Error retrieving public IP:", error.message);
+    var mail = {
+      from: email,
+      to: [
+        "sam@neointeraction.com",
+        "info@neointeraction.com",
+        "shameer@neointeraction.com",
+      ],
+      subject: `Contact us form submission : ${name}`,
+      html: `<html>
+       <body>
+       <p>Name - ${name}</p>
+       <p>Email - ${email}</p>
+       <p>Mobile - ${mobile}</p>
+       <p>Location - ${location === "" ? "IN" : location}</p>
+       <p>IP Address - ${ip}</p>
+       <p>description - ${description}</p>     
+       </body> 
+       </html>`,
+    };
+
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+          error: err,
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
     });
-
-  transporter.sendMail(mail, (err, data) => {
-    if (err) {
-      res.json({
-        status: "fail",
-        error: err,
-      });
-    } else {
-      res.json({
-        status: "success",
-      });
-    }
-  });
+  } catch (error) {
+    console.error("Error retrieving public IP:", error.message);
+    res.json({
+      status: "fail",
+      error: error.message,
+    });
+  }
 });
 
 app.post("/sendgad", (req, res) => {
