@@ -110,11 +110,7 @@ app.post("/send", async (req, res) => {
 
     var mail = {
       from: email,
-      to: [
-        "sam@neointeraction.com",
-        "info@neointeraction.com",
-        "shameer@neointeraction.com",
-      ],
+      to: ["sam@neointeraction.com", "info@neointeraction.com"],
       subject: `Contact us form submission : ${name}`,
       html: `<html>
        <body>
