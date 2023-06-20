@@ -158,7 +158,10 @@ export default class ClientSlider extends Component {
 
     return (
       <div>
-        <h2 className="sub-title text-center"> Our Clients </h2>
+        {this.props.landing ? null : (
+          <h2 className="sub-title text-center"> Our Clients </h2>
+        )}
+
         <Slider {...settings}>
           {clients.map((item) => (
             <div className="client-box">

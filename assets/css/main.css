@@ -657,6 +657,7 @@ input.form-control {
   padding: 0.6rem 1.875rem;
   transition: 0.3s all ease-in-out;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .custom-btn:hover {
@@ -5820,3 +5821,5 @@ textarea {
 .react-select__placeholder {
   color: #ababab !important;
 }
+
+@import url("./landing.css");

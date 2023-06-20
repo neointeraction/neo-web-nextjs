@@ -3,12 +3,14 @@ import "nextjs-breadcrumbs/dist/index.css";
 import Head from "next/head";
 
 import MainLayout from "layouts/MainLayout/MainLayout";
+import LandingLayout from "layouts/LandingLayout/LandingLayout";
 
 import { DataProvider } from "context/DataContext";
 import { VideoProvider } from "context/VideoContext";
 import { BlogProvider } from "context/BlogContext";
 import { BFSIProvider } from "context/BFSIContext";
 import { useEffect } from "react";
+import { useRouter } from "next/router";
 
 function MyApp({ Component, pageProps }) {
   // useEffect(() => {
@@ -25,6 +27,8 @@ function MyApp({ Component, pageProps }) {
   //   })();
   // }, []);
 
+  console.log(pageProps, "Component");
+
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
     function gtag() {
@@ -35,12 +39,22 @@ function MyApp({ Component, pageProps }) {
     gtag("config", "UA-12661901-1");
   }, []);
 
+  const router = useRouter();
+  const { pathname } = router;
+
+  let Layout = MainLayout; // Default layout component
+
+  // Check if the current page needs a different layout
+  if (pathname === "/design-event-landing") {
+    Layout = LandingLayout;
+  }
+
   return (
     <DataProvider>
       <VideoProvider>
         <BlogProvider>
           <BFSIProvider>
-            <MainLayout>
+            <Layout>
               <Head>
                 <link rel="shortcut icon" href="/favicon.png" />
                 <script
@@ -61,12 +75,22 @@ function MyApp({ Component, pageProps }) {
                 ;
               </Head>
               <Component {...pageProps} />
-            </MainLayout>
+            </Layout>
           </BFSIProvider>
         </BlogProvider>
       </VideoProvider>
     </DataProvider>
   );
+}
+
+function getLayout(Component) {
+  // Add conditions to return the desired layout component for specific pages
+  if (Component === "") {
+    return LandingLayout;
+  }
+
+  // Default layout component
+  return MainLayout;
 }
 
 export default MyApp;
