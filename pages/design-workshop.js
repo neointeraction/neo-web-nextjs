@@ -168,7 +168,7 @@ const faqData = [
   },
   {
     question:
-      "Can I share my password to someone else if i am not able to make it ?",
+      "Can I share my registration to someone else if i am not able to make it ?",
     answer:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc in turpis vel lectus ultrices cursus.",
   },
@@ -300,7 +300,7 @@ const DesignEventLanding = () => {
         <div className="container animated fadeIn">
           <ReactWOW animation="fadeIn" delay="0s">
             <div>
-              <h1 className="landing-title text-center mb-3">Our Clients</h1>
+              <h1 className="landing-title text-center mb-3">Trusted By</h1>
               <ClientSlider landing />
             </div>
           </ReactWOW>
@@ -332,6 +332,12 @@ const DesignEventLanding = () => {
                     Our goal is to enrich aspiring design heads and uplift their
                     design career path. This is your chance to take your design
                     skills to the next level.
+                  </p>
+                  <p className="landing-body-text">
+                    Neointeration Design studio started in 2008, has delivered
+                    User experience (UX & UI) designing, and UI Engineering
+                    services for B2B, B2C, Startups from different business
+                    domains.
                   </p>
                 </ReactWOW>
                 <ReactWOW animation="fadeInUp" delay="0s">
@@ -455,7 +461,7 @@ const DesignEventLanding = () => {
         <div className="register-container">
           <div className="container">
             <h1 className="landing-title">Register Now </h1>
-            <p className="landing-subtitle">Limited seats . 5 Days Left !</p>
+            {/* <p className="landing-subtitle">Limited seats . 5 Days Left !</p> */}
             <div className="price-card-block">
               <div className="row">
                 {pricing.map((item) => (
@@ -544,11 +550,13 @@ const DesignEventLanding = () => {
                 {testimonial.map((item) => (
                   <div className="col-md-4">
                     <div className="testimonial-card">
-                      <img
-                        className=""
-                        src={item.img}
-                        alt={"BannerSectionImage"}
-                      />
+                      <div className="testimonial-img-container">
+                        <img
+                          className=""
+                          src={item.img}
+                          alt={"BannerSectionImage"}
+                        />
+                      </div>
                       <h1 className="t-title">{item.name}</h1>
                       <h1 className="t-quote">{item.quote}</h1>
                     </div>
@@ -564,7 +572,9 @@ const DesignEventLanding = () => {
           <div className="container">
             <div className="row align-center">
               <div className="col-md-5">
-                <h1 className="landing-title">Latest Design News for You!</h1>
+                <h1 className="landing-title max-w-80">
+                  Subscribe to our latest design news
+                </h1>
               </div>
               <div className="col-md-7">
                 <div className="form-flex">
@@ -587,7 +597,7 @@ const DesignEventLanding = () => {
       <ReactWOW animation="fadeInUp" delay="0s">
         <div className="faq-section">
           <div className="container">
-            <h1 className="landing-title">FAQ!</h1>
+            <h1 className="landing-title">FAQ's</h1>
             <div className="faq-block">
               <FAQAccordion data={faqData} />
             </div>

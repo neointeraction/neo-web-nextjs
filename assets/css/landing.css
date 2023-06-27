@@ -51,7 +51,7 @@
   font-size: 22px;
   color: #0d0d10;
   position: relative;
-  padding: 0 10px;
+  padding: 0 10px 0 14px;
 }
 
 .vc-item:first-child::after {
@@ -354,7 +354,6 @@
   font-size: 20px;
   line-height: 150%;
   color: #2b2b36;
-  margin-top: 20px;
 }
 
 .price-card-block {
@@ -583,6 +582,7 @@
   .testimonial-card {
     margin-bottom: 30px;
   }
+
   .accordion-header {
     font-size: 16px;
     padding-right: 20px;
@@ -625,4 +625,14 @@
     font-size: 16px;
     margin-top: 16px;
   }
+}
+.max-w-80 {
+  max-width: 80%;
+}
+.testimonial-card .testimonial-img-container {
+  width: 102px;
+  height: 102px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: auto;
 }
