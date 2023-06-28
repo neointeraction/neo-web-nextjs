@@ -467,3 +467,73 @@ app.post("/hiredeveloper", (req, res) => {
     }
   });
 });
+
+app.post("/workshopmail", async (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "unlhgudojkwsqwxg",
+    },
+  });
+
+  const { name, mobile, email, company, ip } = req.body;
+
+  try {
+    var mail = {
+      from: email,
+      to: ["sam@neointeraction.com", "info@neointeraction.com"],
+      subject: `Contact us - Design workshop : ${name}`,
+      html: `<html>
+       <body>
+       <p>Name - ${name}</p>
+       <p>Email - ${email}</p>
+       <p>Mobile - ${mobile}</p>
+       <p>IP Address - ${ip}</p>
+       <p>company - ${company}</p>     
+       </body> 
+       </html>`,
+    };
+
+    var acknowledgementMail = {
+      from: "Neointeraction <info@neointeraction.com>",
+      to: email,
+      subject: `Thank You for Contacting Us`,
+      html: `<html>
+       <body>
+       <h4>Hey ${name},</h4>
+       <h4>Thankyou for contacting us! We have received your details and our team will be reaching out to you soon. </h4>
+       </body> 
+       </html>`,
+    };
+
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+          error: err,
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+        transporter.sendMail(acknowledgementMail, (err, data) => {
+          if (err) {
+            res.json({
+              status: "fail",
+            });
+          } else {
+            res.json({
+              status: "success",
+            });
+          }
+        });
+      }
+    });
+  } catch (error) {
+    res.json({
+      status: "fail",
+      error: error.message,
+    });
+  }
+});

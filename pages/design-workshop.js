@@ -1,7 +1,6 @@
 import ClientSlider from "components/ClientSlider";
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import ReactWOW from "react-wow";
-
 import BannerSectionImage from "../assets/images/landing/banner-section.png";
 import BadgeText from "../assets/images/landing/badge.svg";
 import SpeakerCard from "components/SpeakerCard";
@@ -13,6 +12,12 @@ import T1 from "../assets/images/landing/t1.jpg";
 import T2 from "../assets/images/landing/t2.jpg";
 import T3 from "../assets/images/landing/t3.jpg";
 import FAQAccordion from "components/FAQAccordion";
+import SimpleReactValidator from "simple-react-validator";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useEffect } from "react";
+
+const axios = require("axios");
 
 const data = [
   {
@@ -104,6 +109,16 @@ const pricing = [
   },
 ];
 
+const SuccessToast = () => (
+  <div className="success-msg-download width-md">
+    <div className="check-wrap"></div>
+    <p>
+      Thank you for contacting us. We have received your request. Our team will
+      connect with you shortly.!
+    </p>
+  </div>
+);
+
 const testimonial = [
   {
     img: T1,
@@ -181,6 +196,10 @@ const DesignEventLanding = () => {
     email: "",
     company: "",
   });
+  const [submitted, setSubmitted] = useState(false);
+  const simpleValidator = useRef(new SimpleReactValidator());
+  const [, forceUpdate] = useState();
+  const [ip, setIp] = useState("");
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -190,9 +209,60 @@ const DesignEventLanding = () => {
     }));
   };
 
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get("https://api.ipify.org?format=json");
+      const ipAddress = response.data.ip;
+      if (ipAddress) {
+        setIp(ipAddress);
+      }
+    })();
+  }, []);
+
+  const resetForm = () => {
+    setFormData({
+      name: "",
+      mobile: "",
+      email: "",
+      company: "",
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(formData);
+    if (simpleValidator.current.allValid()) {
+      setSubmitted(true);
+      formData["ip"] = ip;
+      try {
+        axios
+          .post("https://www.neointeraction.com/server/workshopmail", {
+            ...formData,
+          })
+          .then((response) => {
+            if (response.data.status === "success") {
+              toast(SuccessToast, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
+              resetForm();
+            } else if (response.data.status === "fail") {
+              alert("Message failed to send.");
+            }
+          });
+      } catch (err) {
+        console.log("Error", err);
+      }
+    } else {
+      simpleValidator.current.showMessages();
+      forceUpdate(1);
+    }
+
+    setSubmitted(false);
   };
 
   return (
@@ -241,7 +311,10 @@ const DesignEventLanding = () => {
               <ReactWOW animation="zoomIn" delay="0s" duration="0.8s">
                 <div className="contact-form-landing">
                   <h1 className="landing-form-title">Contact Us</h1>
-                  <form onSubmit={handleSubmit}>
+                  <form
+                    onSubmit={handleSubmit}
+                    className="design-workshop__form"
+                  >
                     <div className="form-block">
                       <input
                         type="text"
@@ -250,9 +323,19 @@ const DesignEventLanding = () => {
                         value={formData.name}
                         onChange={handleChange}
                         placeholder="Name"
-                        className="input-custom dark"
+                        className={`input-custom  ${
+                          formData?.name ? "" : "dark"
+                        }`}
+                        onBlur={() =>
+                          simpleValidator.current.showMessageFor("name")
+                        }
                       />
                     </div>
+                    {simpleValidator.current.message(
+                      "Name",
+                      formData?.name,
+                      "required|alpha"
+                    )}
                     <div className="form-block">
                       <input
                         type="text"
@@ -260,10 +343,17 @@ const DesignEventLanding = () => {
                         name="mobile"
                         value={formData.mobile}
                         onChange={handleChange}
-                        className="input-custom dark"
+                        className={`input-custom  ${
+                          formData?.mobile ? "" : "dark"
+                        }`}
                         placeholder="Mobile"
                       />
                     </div>
+                    {simpleValidator.current.message(
+                      "Mobile",
+                      formData?.mobile,
+                      "required|phone"
+                    )}
                     <div className="form-block">
                       <input
                         type="email"
@@ -271,10 +361,17 @@ const DesignEventLanding = () => {
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        className="input-custom dark"
+                        className={`input-custom  ${
+                          formData?.email ? "" : "dark"
+                        }`}
                         placeholder="Email"
                       />
                     </div>
+                    {simpleValidator.current.message(
+                      "email",
+                      formData?.email,
+                      "required|email"
+                    )}
                     <div className="form-block">
                       <input
                         type="text"
@@ -282,11 +379,17 @@ const DesignEventLanding = () => {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="input-custom dark"
+                        className={`input-custom  ${
+                          formData?.company ? "" : "dark"
+                        }`}
                         placeholder="Company"
                       />
                     </div>
-                    <button type="submit" class="custom-btn submit-btn-landing">
+                    <button
+                      type="submit"
+                      class="custom-btn submit-btn-landing"
+                      disabled={submitted}
+                    >
                       Submit
                     </button>
                   </form>
@@ -604,6 +707,7 @@ const DesignEventLanding = () => {
           </div>
         </div>
       </ReactWOW>
+      <ToastContainer />
     </div>
   );
 };
