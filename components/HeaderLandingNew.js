@@ -87,7 +87,9 @@ const HeaderLandingNew = ({ upfront }) => {
   return (
     <>
       <div className="header-block">
-        <div className={`header-floating ${fixed ? "fixed" : ""}`}>
+        <div
+          className={`header-floating  header-landing  ${fixed ? "fixed" : ""}`}
+        >
           <div className="n-header-container">
             <div
               className="logo-container n-logo-container upfront-logo-container"

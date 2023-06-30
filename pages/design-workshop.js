@@ -8,9 +8,9 @@ import SpeakerCard from "components/SpeakerCard";
 import Sp1 from "../assets/images/landing/sp1.jpg";
 import Sp2 from "../assets/images/landing/sp2.jpg";
 
-import T1 from "../assets/images/landing/t1.jpg";
+import T1 from "../assets/images/landing/t1.png";
 import T2 from "../assets/images/landing/t2.jpg";
-import T3 from "../assets/images/landing/t3.jpg";
+import T3 from "../assets/images/landing/t3.png";
 import FAQAccordion from "components/FAQAccordion";
 import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
@@ -122,9 +122,9 @@ const SuccessToast = () => (
 const testimonial = [
   {
     img: T1,
-    name: "Allen Stephen",
+    name: "Noah James",
     quote:
-      "I really  like using this product! Hands down, one of the best apps out there!",
+      "It was an eye-opening experience, the  presentations were very informative!",
   },
   {
     img: T2,
@@ -143,18 +143,17 @@ const faqData = [
   {
     question: "If I pay and decide to cancel will I get a refund?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+      "In case of cancellations upto 2 weeks prior to the event you will be accommodated for the upcoming events.",
   },
   {
     question: "Want to understand more about the event how can I ?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+    answer: `You can get in touch with us by sending us an email to <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a> . If you have any questions or require further assistance, please feel free to drop us a message in the mentioned email address. We will be more than happy to help you !`,
   },
   {
     question:
       "Will you provide accommodation if I am coming from outside the city?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+      "Please note that we are unable to provide accommodation services. However, we can provide recommendations and guidance to help you find the perfect place for your stay.",
   },
   {
     question: "Where is the event happening?",
@@ -163,29 +162,25 @@ const faqData = [
   },
   {
     question: "What all is covered in the fee?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+    answer: `Included within the registration fee, participants will have access to the following amenities at no additional cost : <ol type="1"><li>Real life UX design case studies</li><li>Skill development practices</li><li>Participation certificate</li><li>Giveaways or goodies from our team</li></ol>`,
   },
   {
     question: "Will i get  participation certificate?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc in turpis vel lectus ultrices cursus. ",
+      "Upon attending this event,you will be presented with a participation certificate as a token of acknowledgement for your active involvement and engagement.",
   },
   {
     question: "What is the last date for registration ?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+    answer: "Last date of registration: Aug 08, 2023",
   },
   {
     question: "Is there any other way to register for this event ?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+    answer: `You can register for this event  by sending us an email to <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a> . If you have any questions or require further assistance, please feel free to drop us a message in the mentioned email address. We will be more than happy to help you !`,
   },
   {
     question:
       "Can I share my registration to someone else if i am not able to make it ?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nunc in turpis vel lectus ultrices cursus.",
+    answer: `You are welcome to share your registration with others two weeks before the event.We kindly request that you keep us informed about this by sending an email to <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a> with the other participants details.`,
   },
 ];
 
@@ -601,13 +596,13 @@ const DesignEventLanding = () => {
       <div className="contact-terms-section">
         <div className="container">
           <div className="row">
-            <div className="col-md-4">
+            {/* <div className="col-md-4">
               <h1 className="contact-title">Contact</h1>
               <p className="landing-text">Allen Stephen</p>
               <p className="landing-text">+91 95133 38744</p>
               <p className="landing-text">allen@neointeraction.com</p>
-            </div>
-            <div className="col-md-8">
+            </div> */}
+            <div className="col-md-12">
               <h1 className="contact-title">Terms & Conditions</h1>
               <p className="landing-text width-100">
                 Participation in event implies agreement to event rules and

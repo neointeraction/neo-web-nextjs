@@ -31,7 +31,7 @@ const FAQAccordion = ({ data }) => {
               index === activeIndex ? "active" : ""
             }`}
           >
-            <div className="ac-block">{item.answer}</div>
+            <div className="ac-block" dangerouslySetInnerHTML={{__html:item.answer}}></div>
           </div>
         </div>
       ))}

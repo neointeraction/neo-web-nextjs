@@ -5822,4 +5822,14 @@ textarea {
   color: #ababab !important;
 }
 
+.footer-landing {
+  background: #2B2B36;
+}
+
+.footer-landing .custom-btn, .header-landing .custom-btn{
+  background: #E5283F;
+}
+
+
+
 @import url("./landing.css");

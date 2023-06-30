@@ -20,6 +20,7 @@ import {
 
 const FooterLanding = () => {
   const router = useRouter();
+  const [email, setEmail] = useState("");
 
   const handleRoute = (path) => {
     Router.push(path);
@@ -30,7 +31,9 @@ const FooterLanding = () => {
   return (
     <div>
       <div
-        className={`footer-container ${router.pathname === "/" ? "home" : ""}`}
+        className={`footer-container footer-landing ${
+          router.pathname === "/" ? "home" : ""
+        }`}
       >
         <div className="container">
           <div className="row">
@@ -131,18 +134,20 @@ const FooterLanding = () => {
                 <div className="col-md-6">
                   <h4 className="footer-links-title">Subscribe Newsletter</h4>
 
+                  {/* <form onSubmit={(e) => e.stopPropagation()}> */}
                   <div className="form-flex">
                     <input
-                      type="text"
+                      type="email"
                       id="company"
                       name="company"
-                      value={""}
-                      onChange={() => {}}
-                      className="input-custom dark"
+                      className={`input-custom ${email ? "" : "dark"}`}
                       placeholder="E-mail ID"
+                      value={email}
+                      onChange={(e) => setEmail(e.currentTarget.value)}
                     />
-                    <button class="custom-btn">Submit</button>
+                    <button class="custom-btn">Subscribe</button>
                   </div>
+                  {/* </form> */}
                 </div>
               </div>
               {/* <ul className="social-icons n-social-icons no-bg footer-social-icns">

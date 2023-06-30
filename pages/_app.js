@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
   let Layout = MainLayout; // Default layout component
 
   // Check if the current page needs a different layout
-  if (pathname === "/design-event-landing") {
+  if (pathname === "/design-workshop") {
     Layout = LandingLayout;
   }
 
