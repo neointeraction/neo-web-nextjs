@@ -6,7 +6,9 @@ const cors = require("cors");
 var handlebars = require("handlebars");
 var fs = require("fs");
 const axios = require("axios");
+const Razorpay = require("razorpay");
 // const multer = require('multer')
+require("dotenv").config();
 
 var readHTMLFile = function (path, callback) {
   fs.readFile(path, { encoding: "utf-8" }, function (err, html) {
@@ -94,6 +96,7 @@ app.post("/send", async (req, res) => {
     service: "gmail",
     auth: {
       user: "neointeraction.mailer@gmail.com",
+
       pass: "unlhgudojkwsqwxg",
     },
   });
@@ -535,5 +538,106 @@ app.post("/workshopmail", async (req, res) => {
       status: "fail",
       error: error.message,
     });
+  }
+});
+
+app.post("/payment/orders", async (req, res) => {
+  try {
+    const instance = new Razorpay({
+      key_id: process.env.NEXT_APP_RAZORPAY_ID,
+      key_secret: process.env.NEXT_APP_RAZORPAY_SECRET,
+    });
+
+    const options = {
+      amount: 12000, // amount in smallest currency unit
+      currency: "INR",
+      receipt: "receipt_order_74394",
+    };
+
+    const order = await instance.orders.create(options);
+
+    if (!order) return res.status(500).send("Some error occured");
+
+    res.json(order);
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+app.post("/workshop/payment", async (req, res) => {
+  try {
+    // getting the details back from our font-end
+    const {
+      orderCreationId,
+      razorpayPaymentId,
+      razorpayOrderId,
+      razorpaySignature,
+    } = req.body;
+
+    // Creating our own digest
+    // The format should be like this:
+    // digest = hmac_sha256(orderCreationId + "|" + razorpayPaymentId, secret);
+    // const shasum = crypto.createHmac("sha256", "w2lBtgmeuDUfnJVp43UpcaiT");
+
+    // shasum.update(`${orderCreationId}|${razorpayPaymentId}`);
+
+    // const digest = shasum.digest("hex");
+
+    // comaparing our digest with the actual signature
+    // if (digest !== razorpaySignature)
+    //     return res.status(400).json({ msg: "Transaction not legit!" });
+
+    // THE PAYMENT IS LEGIT & VERIFIED
+    // YOU CAN SAVE THE DETAILS IN YOUR DATABASE IF YOU WANT
+
+    const { name, email } = req.body;
+
+    var acknowledgementMail = {
+      from: "Neointeraction <info@neointeraction.com>",
+      to: email,
+      subject: `Registration Confirmed`,
+      html: `<html>
+       <body>
+       <h4>Hey ${name},</h4>
+       <p>Thank You for registering for our Design Workshop! We are thrilled to have you join us and be a part of this program.</p>
+
+       <p>Event Details: </br>
+       Event Name: Design Workshop, 2023</br>
+       Date: 1st July 2023</br>
+       Time: 10:00 am to 05:00 pm</br>
+       Venue: Orchid Hotel, Banglore</br>
+       Address: </br>
+       </p>
+
+       <p>We have lined up an incredible set of speakers and activities that promise to be both informative and engaging. The event aims to provide valuable insights and networking opportunities for all attendees.</p>
+
+       <p>If you have any questions, concerns or need further assistance, please do not hesitate to contact us at :</p>
+       <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a>
+       <p>Ph number: +91 95133 38744</p>
+
+       </body> 
+       </html>`,
+    };
+
+    transporter.sendMail(acknowledgementMail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+          error: err,
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
+    });
+
+    res.json({
+      msg: "success",
+      orderId: razorpayOrderId,
+      paymentId: razorpayPaymentId,
+    });
+  } catch (error) {
+    res.status(500).send(error);
   }
 });

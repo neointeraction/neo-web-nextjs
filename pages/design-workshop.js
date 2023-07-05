@@ -16,6 +16,7 @@ import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
+import logo from "../assets/images/LOGO.svg";
 
 const axios = require("axios");
 
@@ -195,6 +196,7 @@ const DesignEventLanding = () => {
   const simpleValidator = useRef(new SimpleReactValidator());
   const [, forceUpdate] = useState();
   const [ip, setIp] = useState("");
+  const [mailSent, setMailSent] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -227,6 +229,7 @@ const DesignEventLanding = () => {
     e.preventDefault();
     if (simpleValidator.current.allValid()) {
       setSubmitted(true);
+      setMailSent(true);
       formData["ip"] = ip;
       try {
         axios
@@ -245,6 +248,7 @@ const DesignEventLanding = () => {
                 progress: undefined,
               });
               resetForm();
+              setMailSent(false);
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
             }
@@ -256,9 +260,76 @@ const DesignEventLanding = () => {
       simpleValidator.current.showMessages();
       forceUpdate(1);
     }
-
-    setSubmitted(false);
+    setTimeout(() => setSubmitted(false), 5000);
   };
+
+  function loadScript(src) {
+    return new Promise((resolve) => {
+      const script = document.createElement("script");
+      script.src = src;
+      script.onload = () => {
+        resolve(true);
+      };
+      script.onerror = () => {
+        resolve(false);
+      };
+      document.body.appendChild(script);
+    });
+  }
+
+  async function displayRazorpay() {
+    const res = await loadScript(
+      "https://checkout.razorpay.com/v1/checkout.js"
+    );
+
+    if (!res) {
+      alert("Razorpay SDK failed to load. Are you online?");
+      return;
+    }
+
+    // creating a new order
+    const result = await axios.post(
+      "https://www.neointeraction.com/payment/orders"
+    );
+
+    if (!result) {
+      alert("Server error. Are you online?");
+      return;
+    }
+
+    // Getting the order details back
+    const { amount, id: order_id, currency } = result.data;
+
+    const options = {
+      key: process.env.NEXT_APP_RAZORPAY_ID,
+      amount: amount.toString(),
+      currency: currency,
+      name: "Neointeraction Designs",
+      description: "Test Transaction",
+      image: { logo },
+      order_id: order_id,
+      handler: async function (response) {
+        const data = {
+          orderCreationId: order_id,
+          razorpayPaymentId: response.razorpay_payment_id,
+          razorpayOrderId: response.razorpay_order_id,
+          razorpaySignature: response.razorpay_signature,
+          name: "John Doe",
+          email: "sam@neointeractin.com",
+        };
+
+        const result = await axios.post(
+          "http://localhost:5000/payment/success",
+          data
+        );
+
+        alert(result.data.msg);
+      },
+    };
+
+    const paymentObject = new window.Razorpay(options);
+    paymentObject.open();
+  }
 
   return (
     <div className="de-landing-container">
@@ -297,7 +368,9 @@ const DesignEventLanding = () => {
                   design centric workshop is perfect for you.
                 </p>
                 <div className="registerblock-banner">
-                  <button class="custom-btn">Register Now !</button>
+                  <a href="https://rzp.io/l/oKso1anR64">
+                    <button class="custom-btn">Register Now !</button>
+                  </a>
                   <p className="landing-text">*Limited seats</p>
                 </div>
               </ReactWOW>
@@ -329,7 +402,7 @@ const DesignEventLanding = () => {
                     {simpleValidator.current.message(
                       "Name",
                       formData?.name,
-                      "required|alpha"
+                      "required|alpha_space"
                     )}
                     <div className="form-block">
                       <input
@@ -382,10 +455,19 @@ const DesignEventLanding = () => {
                     </div>
                     <button
                       type="submit"
-                      class="custom-btn submit-btn-landing"
+                      class={`loader-btns custom-btn submit-btn-landing ${
+                        submitted ? "pointer-events-none" : ""
+                      }`}
                       disabled={submitted}
                     >
                       Submit
+                      {mailSent ? (
+                        <div className="progress-bar">
+                          <div className="circle border"></div>
+                        </div>
+                      ) : (
+                        <></>
+                      )}
                     </button>
                   </form>
                 </div>

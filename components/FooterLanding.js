@@ -131,7 +131,21 @@ const FooterLanding = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-6">
+                <div className="col-md-2">
+                  <h4 className="footer-links-title">Contact</h4>
+                  <ul className="footer-quick-links">
+                    <li>
+                      <div className="link">Allen Stephen</div>
+                    </li>
+                    <li>
+                      <div className="link">+91 95133 38744</div>
+                    </li>
+                    <li>
+                      <div className="link">allen@neointeraction.com</div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-md-4">
                   <h4 className="footer-links-title">Subscribe Newsletter</h4>
 
                   {/* <form onSubmit={(e) => e.stopPropagation()}> */}
@@ -145,9 +159,10 @@ const FooterLanding = () => {
                       value={email}
                       onChange={(e) => setEmail(e.currentTarget.value)}
                     />
-                    <button class="custom-btn">Subscribe</button>
                   </div>
+                  <br />
                   {/* </form> */}
+                  <button class="custom-btn subscribe-btn">Subscribe</button>
                 </div>
               </div>
               {/* <ul className="social-icons n-social-icons no-bg footer-social-icns">
