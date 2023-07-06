@@ -4,7 +4,7 @@ import ReactWOW from "react-wow";
 import Head from "next/head";
 import ReactModal from "react-modal";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import { baseUrl } from "../globalConfig";
+import { baseUrl } from "../../globalConfig";
 import axios from "axios";
 import { BlogContext } from "context/BlogContext";
 
@@ -62,7 +62,7 @@ const FAQ = [
 
 export default withRouter(
   class career extends Component {
-    constructor() {
+    constructor(props) {
       super();
       this.state = {
         isMouseInside: false,
@@ -89,25 +89,38 @@ export default withRouter(
       this.setState({ showModal: false });
     };
 
-    componentDidMount = async () => {
-      const JobrolesURL =
-        "https://api-vidrec.neointeraction.com/api/v1/plugin/getJobRolesUnderOrganization";
-      try {
-        const response = await axios.post(
-          JobrolesURL,
-          {
-            orgId: 2,
-          },
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
+    componentDidUpdate = async (prevProps, prevState) => {
+      if (
+        this.props.roomId !== prevProps.roomId ||
+        this.state.serverUrl !== prevState.serverUrl
+      ) {
+        this.destroyConnection();
+        this.setupConnection();
+      }
+      if (this.props.router.query.slug !== prevProps.router.query.slug) {
+        try {
+          const JobrolesURL =
+            "https://api-vidrec.neointeraction.com/api/v1/plugin/getJobRolesUnderOrganization";
+          try {
+            const response = await axios.post(
+              JobrolesURL,
+              {
+                orgId: parseInt(this.props.router.query.slug),
+              },
+              {
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              }
+            );
+            this.setState({ career: response.data.data });
+            this.setState({ loading: false });
+          } catch (error) {
+            this.setState({ error });
           }
-        );
-        this.setState({ career: response.data.data });
-        this.setState({ loading: false });
-      } catch (error) {
-        this.setState({ error });
+        } catch (error) {
+          this.setState({ error });
+        }
       }
     };
 

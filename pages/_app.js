@@ -27,7 +27,7 @@ function MyApp({ Component, pageProps }) {
   //   })();
   // }, []);
 
-  console.log(pageProps, "Component");
+  // console.log(pageProps, "Component");
 
   useEffect(() => {
     window.dataLayer = window.dataLayer || [];
