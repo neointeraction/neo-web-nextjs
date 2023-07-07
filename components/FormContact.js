@@ -38,6 +38,7 @@ export default class FormContact extends Component {
       isErrorShown: false,
       isFormValid: false,
       mailSent: false,
+      ip: "",
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitEmail = this.submitEmail.bind(this);
@@ -55,6 +56,18 @@ export default class FormContact extends Component {
 
   handleChangeCountry = (selectedOption) => {
     this.setState({ location: selectedOption });
+  };
+
+  componentDidMount = async () => {
+    try {
+      const response = await axios.get("https://api.ipify.org?format=json");
+      const ipAddress = response.data.ip;
+      if (ipAddress) {
+        this.setState({ ip: ipAddress });
+      }
+    } catch (error) {
+      this.setState({ error });
+    }
   };
 
   // componentDidMount() {

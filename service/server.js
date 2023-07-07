@@ -106,11 +106,9 @@ app.post("/send", async (req, res) => {
   var email = req.body.email;
   var description = req.body.description;
   var location = req.body.location.value;
+  var ip = req.body.ip;
 
   try {
-    const response = await axios.get("https://api.ipify.org?format=json");
-    const ip = response.data.ip;
-
     var mail = {
       from: email,
       to: ["sam@neointeraction.com", "info@neointeraction.com"],
@@ -140,7 +138,6 @@ app.post("/send", async (req, res) => {
       }
     });
   } catch (error) {
-    console.error("Error retrieving public IP:", error.message);
     res.json({
       status: "fail",
       error: error.message,
