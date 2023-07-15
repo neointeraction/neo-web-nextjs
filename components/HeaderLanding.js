@@ -306,7 +306,7 @@ const HeaderLanding = ({ upfront }) => {
                 </motion.div>
               </div>
             </div>
-            <div className="n-header-contact">
+            <div className="n-header-contact" style={{ visibility: "hidden" }}>
               <motion.div
                 className="n-menu contact-menu-btn"
                 onClick={() => handleRoute("/contact-us")}

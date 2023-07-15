@@ -360,14 +360,16 @@ const DesignEventLanding = () => {
             <div className="row">
               <div className="col-md-7">
                 <ReactWOW animation="fadeInDown" delay="0s">
-                  <img
-                    style={{ marginBottom: 10 }}
-                    src={BadgeText}
-                    alt={"BadgeText"}
-                  />
+                  <div className="badge-img">
+                    <img
+                      style={{ marginBottom: 10 }}
+                      src={BadgeText}
+                      alt={"BadgeText"}
+                    />
+                  </div>
                 </ReactWOW>
                 <ReactWOW animation="fadeInDown" delay="0s">
-                  <h1 className="landing-title">
+                  <h1 className="landing-title mob-center">
                     <span className="highlight">
                       Practical and Effective Tools{" "}
                     </span>
@@ -377,9 +379,11 @@ const DesignEventLanding = () => {
                 <ReactWOW animation="fadeInDown" delay="0s">
                   <div className="venue-container">
                     <ul className="vc-list">
-                      <li className="vc-item">1st July 2023</li>
-                      <li className="vc-item">10:00 am - 05:00 pm</li>
-                      <li className="vc-item">Orchid Hotel, Bangalore</li>
+                      <li className="vc-item mob-one">
+                        Orchid Hotel, Bangalore
+                      </li>
+                      <li className="vc-item mob-two">1st July 2023</li>
+                      <li className="vc-item mob-three">10:00 am - 05:00 pm</li>
                     </ul>
                   </div>
                 </ReactWOW>
@@ -390,10 +394,15 @@ const DesignEventLanding = () => {
                     this design centric workshop is perfect for you.
                   </p>
                   <div className="registerblock-banner">
-                    <a href="https://rzp.io/l/oKso1anR64">
-                      <button class="custom-btn">Register Now !</button>
+                    <a
+                      href="https://rzp.io/l/oKso1anR64"
+                      style={{ textDecoration: "none" }}
+                    >
+                      <button class="custom-btn mob-btn-center">
+                        Register Now !
+                      </button>
                     </a>
-                    <p className="landing-text">*Limited seats</p>
+                    <p className="landing-text mob-hide">*Limited seats</p>
                   </div>
                 </ReactWOW>
               </div>

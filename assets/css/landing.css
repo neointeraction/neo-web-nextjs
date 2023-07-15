@@ -531,12 +531,12 @@
     flex-direction: column;
     gap: 20px;
   }
-  .vc-item {
+  .vc-list li {
     width: 272px;
     text-align: center;
     font-size: 18px;
   }
-  .vc-item::after {
+  .vc-list li::after {
     content: "";
     width: 20px;
     height: 3px;

@@ -106,16 +106,7 @@ const FooterLanding = () => {
                   </ul>
                 </div>
                 <div className="col-md-2">
-                  <h4
-                    className="footer-links-title"
-                    onClick={(e) =>
-                      handleRoute(
-                        "/design-transformation-services-bangalore-india"
-                      )
-                    }
-                  >
-                    Others
-                  </h4>
+                  <h4 className="footer-links-title">Others</h4>
                   <ul className="footer-quick-links">
                     <li onClick={(e) => handleRoute("/Downloads")}>
                       <div className="link">Downloads</div>
@@ -238,90 +229,25 @@ const FooterLanding = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span
-                          onClick={() =>
-                            handleRoute(
-                              "/ui-ux-design-developer-services-company-bangalore"
-                            )
-                          }
-                        >
-                          UX Design
-                        </span>
+                        <span>Studio</span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
-                      <ul className="footer-quick-links pl-0">
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-ux-design-developer-services-company-bangalore"
-                              )
-                            }
-                          >
-                            User Research
-                          </div>
+                      <ul className="footer-quick-links">
+                        <li onClick={() => handleRoute("/about-us")}>
+                          <div className="link">About</div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-ux-design-developer-services-company-bangalore"
-                              )
-                            }
-                          >
-                            Heuristic Evaluvation
-                          </div>
+                        <li onClick={() => handleRoute("/projects")}>
+                          <div className="link">Projects</div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-ux-design-developer-services-company-bangalore"
-                              )
-                            }
-                          >
-                            Persona Devolopment
-                          </div>
+                        <li onClick={() => handleRoute("/contact-us")}>
+                          <div className="link">Contact Us</div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-ux-design-developer-services-company-bangalore"
-                              )
-                            }
-                          >
-                            IA Validation
-                          </div>
+                        <li onClick={() => handleRoute("/career")}>
+                          <div className="link">Careers</div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-ux-design-developer-services-company-bangalore"
-                              )
-                            }
-                          >
-                            User Journey Mapping
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-ux-design-developer-services-company-bangalore"
-                              )
-                            }
-                          >
-                            Wireframing
-                          </div>
+                        <li onClick={() => handleRoute("/blogs")}>
+                          <div className="link">Blog</div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
@@ -334,78 +260,46 @@ const FooterLanding = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span
+                        <span>Services</span>
+                      </AccordionItemButton>
+                    </AccordionItemHeading>
+                    <AccordionItemPanel>
+                      <ul className="footer-quick-links">
+                        <li
+                          onClick={(e) =>
+                            handleRoute(
+                              "/ui-ux-design-developer-services-company-bangalore"
+                            )
+                          }
+                        >
+                          <div className="link">UX Design</div>
+                        </li>
+                        <li
                           onClick={(e) =>
                             handleRoute(
                               "/product-design-services-bangalore-india"
                             )
                           }
                         >
-                          Product Design
-                        </span>
-                      </AccordionItemButton>
-                    </AccordionItemHeading>
-                    <AccordionItemPanel>
-                      <ul className="footer-quick-links">
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/product-design-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Define Product Vision
-                          </div>
+                          <div className="link">Product Design </div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/product-design-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Product Research
-                          </div>
+                        <li
+                          onClick={(e) =>
+                            handleRoute(
+                              "/design-transformation-services-bangalore-india"
+                            )
+                          }
+                        >
+                          <div className="link">Design Tranformation</div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/product-design-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Structure Ideas
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/product-design-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Agile Design Sprints
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/product-design-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Rapid Prototyping
-                          </div>
+                        <li
+                          onClick={(e) =>
+                            handleRoute(
+                              "/ui-engineering-services-bangalore-india"
+                            )
+                          }
+                        >
+                          <div className="link">UI Engineering</div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
@@ -418,78 +312,16 @@ const FooterLanding = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span
-                          onClick={() =>
-                            handleRoute(
-                              "/ui-engineering-services-bangalore-india"
-                            )
-                          }
-                        >
-                          UI Engineering
-                        </span>
+                        <span>Others</span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <ul className="footer-quick-links">
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-engineering-services-bangalore-india"
-                              )
-                            }
-                          >
-                            UI handoff dev team
-                          </div>
+                        <li onClick={(e) => handleRoute("/Downloads")}>
+                          <div className="link">Downloads</div>
                         </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-engineering-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Building react components
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-engineering-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Creating Interactive flows
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-engineering-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Integrating service
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={() =>
-                              handleRoute(
-                                "/ui-engineering-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Testing business flow
-                          </div>
+                        <li onClick={(e) => handleRoute("/privacy-policy")}>
+                          <div className="link">Privacy Policy</div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
@@ -502,83 +334,43 @@ const FooterLanding = () => {
                   >
                     <AccordionItemHeading>
                       <AccordionItemButton>
-                        <span
-                          onClick={(e) =>
-                            handleRoute(
-                              "/design-transformation-services-bangalore-india"
-                            )
-                          }
-                        >
-                          Design Transformation
-                        </span>
+                        <span>Contact</span>
                       </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                       <ul className="footer-quick-links">
                         <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/design-transformation-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Set a design foundation
-                          </div>
+                          <div className="link">Allen Stephen</div>
                         </li>
                         <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/design-transformation-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Achieving Human Friendly UX
-                          </div>
+                          <div className="link">+91 95133 38744</div>
                         </li>
                         <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/design-transformation-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Build Design Strategy
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/design-transformation-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Documentation of design
-                          </div>
-                        </li>
-                        <li>
-                          <div
-                            className="link"
-                            onClick={(e) =>
-                              handleRoute(
-                                "/design-transformation-services-bangalore-india"
-                              )
-                            }
-                          >
-                            Bridging UX and UI
-                          </div>
+                          <div className="link">allen@neointeraction.com</div>
                         </li>
                       </ul>
                     </AccordionItemPanel>
                   </AccordionItem>
                 </Accordion>
+                <div className="mob-nletter">
+                  <h4 className="footer-links-title">Subscribe Newsletter</h4>
+
+                  {/* <form onSubmit={(e) => e.stopPropagation()}> */}
+                  <div className="form-flex">
+                    <input
+                      type="email"
+                      id="company"
+                      name="company"
+                      className={`input-custom ${email ? "" : "dark"}`}
+                      placeholder="E-mail ID"
+                      value={email}
+                      onChange={(e) => setEmail(e.currentTarget.value)}
+                    />
+                  </div>
+                  <br />
+                  {/* </form> */}
+                  <button class="custom-btn subscribe-btn">Subscribe</button>
+                </div>
               </div>
             </div>
           </div>

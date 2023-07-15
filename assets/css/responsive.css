@@ -491,4 +491,24 @@
   .title-red {
     font-size: 28px !important;
   }
+  .badge-img {
+    text-align: center;
+  }
+  .mob-center {
+    text-align: center;
+  }
+  .vc-list {
+    background: #fef6f7;
+  }
+  .mob-two {
+    color: #e5283f !important;
+  }
+  .mob-btn-center {
+    display: flex;
+    margin: auto;
+    margin-bottom: 30px !important;
+  }
+  .mob-hide {
+    display: none;
+  }
 }
