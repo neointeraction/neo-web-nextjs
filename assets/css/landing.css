@@ -143,7 +143,7 @@
   padding: 60px;
 }
 
-.lbs-block h1 {
+.lbs-block h2 {
   color: #fff;
   margin-bottom: 20px;
 }
@@ -385,7 +385,7 @@
   padding: 20px 0;
 }
 
-.download-brochure h1 {
+.download-brochure h2 {
   font-weight: 600;
   color: #fff;
 }
@@ -448,7 +448,6 @@
   cursor: pointer;
   transition: background-color 0.3s;
   padding: 18px;
-  border-bottom: 1px solid #eeeeee;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -467,6 +466,11 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.accordion-content.active {
+  border-bottom: 1px solid #eeeeee;
 }
 
 .ac-block {
@@ -649,7 +653,7 @@
 }
 
 .de-landing-container .custom-btn {
-  background: #E5283F;
+  background: #e5283f;
 }
 
 .pointer-events-none {
@@ -657,10 +661,14 @@
   cursor: none;
 }
 
-.footer-landing .footer-quick-links li .link, .footer-landing .footer-copyright p{
-  color: #FFFFFF;
+.footer-landing .footer-quick-links li .link,
+.footer-landing .footer-copyright p {
+  color: #ffffff;
 }
 
+.footer-landing .footer-quick-links li {
+  margin-bottom: 10px;
+}
 
 @media screen and (min-width: 768px) {
   .footer-landing .footer-copyright {
@@ -671,5 +679,4 @@
 .subscribe-btn {
   margin-left: auto;
   display: block;
-
 }

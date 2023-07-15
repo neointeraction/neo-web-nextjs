@@ -50,54 +50,58 @@ const FooterLanding = () => {
                   >
                     Studio
                   </h4>
-                  <ul
-                    className="footer-quick-links"
-                    onClick={() =>
-                      handleRoute(
-                        "/ui-ux-design-developer-services-company-bangalore"
-                      )
-                    }
-                  >
-                    <li>
+                  <ul className="footer-quick-links">
+                    <li onClick={() => handleRoute("/about-us")}>
                       <div className="link">About</div>
                     </li>
-                    <li>
+                    <li onClick={() => handleRoute("/projects")}>
                       <div className="link">Projects</div>
                     </li>
-                    <li>
+                    <li onClick={() => handleRoute("/contact-us")}>
                       <div className="link">Contact Us</div>
                     </li>
-                    <li>
+                    <li onClick={() => handleRoute("/career")}>
                       <div className="link">Careers</div>
                     </li>
-                    <li>
+                    <li onClick={() => handleRoute("/blogs")}>
                       <div className="link">Blog</div>
                     </li>
                   </ul>
                 </div>
                 <div className="col-md-2">
-                  <h4
-                    className="footer-links-title"
-                    onClick={(e) =>
-                      handleRoute("/product-design-services-bangalore-india")
-                    }
-                  >
-                    Services
-                  </h4>
-                  <ul
-                    className="footer-quick-links"
-                    onClick={(e) =>
-                      handleRoute("/product-design-services-bangalore-india")
-                    }
-                  >
-                    <li>
+                  <h4 className="footer-links-title">Services</h4>
+                  <ul className="footer-quick-links">
+                    <li
+                      onClick={(e) =>
+                        handleRoute(
+                          "/ui-ux-design-developer-services-company-bangalore"
+                        )
+                      }
+                    >
                       <div className="link">UX Design</div>
                     </li>
-                    <li>
-                      <div className="link">UI Engineering</div>
+                    <li
+                      onClick={(e) =>
+                        handleRoute("/product-design-services-bangalore-india")
+                      }
+                    >
+                      <div className="link">Product Design </div>
                     </li>
-                    <li>
-                      <div className="link">Video Production</div>
+                    <li
+                      onClick={(e) =>
+                        handleRoute(
+                          "/design-transformation-services-bangalore-india"
+                        )
+                      }
+                    >
+                      <div className="link">Design Tranformation</div>
+                    </li>
+                    <li
+                      onClick={(e) =>
+                        handleRoute("/ui-engineering-services-bangalore-india")
+                      }
+                    >
+                      <div className="link">UI Engineering</div>
                     </li>
                   </ul>
                 </div>
@@ -112,22 +116,12 @@ const FooterLanding = () => {
                   >
                     Others
                   </h4>
-                  <ul
-                    className="footer-quick-links"
-                    onClick={(e) =>
-                      handleRoute(
-                        "/design-transformation-services-bangalore-india"
-                      )
-                    }
-                  >
-                    <li>
+                  <ul className="footer-quick-links">
+                    <li onClick={(e) => handleRoute("/Downloads")}>
                       <div className="link">Downloads</div>
                     </li>
-                    <li>
-                      <div className="link">Agency Terms</div>
-                    </li>
-                    <li>
-                      <div className="link">Legal & IP</div>
+                    <li onClick={(e) => handleRoute("/privacy-policy")}>
+                      <div className="link">Privacy Policy</div>
                     </li>
                   </ul>
                 </div>

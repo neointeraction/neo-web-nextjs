@@ -17,6 +17,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import logo from "../assets/images/LOGO.svg";
+import Head from "next/head";
 
 const axios = require("axios");
 
@@ -332,460 +333,491 @@ const DesignEventLanding = () => {
   }
 
   return (
-    <div className="de-landing-container">
-      <div className="landing-banner pattern-right">
-        <div className="container-fluid custom-container">
-          <div className="row">
-            <div className="col-md-7">
-              <ReactWOW animation="fadeIn" delay="0s" duration="3s">
-                <img
-                  style={{ marginBottom: 10 }}
-                  src={BadgeText}
-                  alt={"BadgeText"}
-                />
-              </ReactWOW>
-              <ReactWOW animation="fadeInDown" delay="0s">
-                <h1 className="landing-title">
-                  <span className="highlight">
-                    Practical and Effective Tools{" "}
-                  </span>
-                  to Accelerate Design Solutions
-                </h1>
-              </ReactWOW>
-              <ReactWOW animation="fadeIn" delay="0s" duration="4s">
-                <div className="venue-container">
-                  <ul className="vc-list">
-                    <li className="vc-item">1st July 2023</li>
-                    <li className="vc-item">10:00 am - 05:00 pm</li>
-                    <li className="vc-item">Orchid Hotel, Bangalore</li>
-                  </ul>
-                </div>
-              </ReactWOW>
-              <ReactWOW animation="fadeInUp" delay="0s">
-                <p className="landing-text">
-                  If you strongly believe that design can touch people's lives,
-                  solve user problems, and improve daily experiences, this
-                  design centric workshop is perfect for you.
-                </p>
-                <div className="registerblock-banner">
-                  <a href="https://rzp.io/l/oKso1anR64">
-                    <button class="custom-btn">Register Now !</button>
-                  </a>
-                  <p className="landing-text">*Limited seats</p>
-                </div>
-              </ReactWOW>
-            </div>
-            <div className="col-md-5">
-              <ReactWOW animation="zoomIn" delay="0s" duration="0.8s">
-                <div className="contact-form-landing">
-                  <h1 className="landing-form-title">Contact Us</h1>
-                  <form
-                    onSubmit={handleSubmit}
-                    className="design-workshop__form"
-                  >
-                    <div className="form-block">
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        placeholder="Name"
-                        className={`input-custom  ${
-                          formData?.name ? "" : "dark"
-                        }`}
-                        onBlur={() =>
-                          simpleValidator.current.showMessageFor("name")
-                        }
-                      />
-                    </div>
-                    {simpleValidator.current.message(
-                      "Name",
-                      formData?.name,
-                      "required|alpha_space"
-                    )}
-                    <div className="form-block">
-                      <input
-                        type="text"
-                        id="mobile"
-                        name="mobile"
-                        value={formData.mobile}
-                        onChange={handleChange}
-                        className={`input-custom  ${
-                          formData?.mobile ? "" : "dark"
-                        }`}
-                        placeholder="Mobile"
-                      />
-                    </div>
-                    {simpleValidator.current.message(
-                      "Mobile",
-                      formData?.mobile,
-                      "required|phone"
-                    )}
-                    <div className="form-block">
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        className={`input-custom  ${
-                          formData?.email ? "" : "dark"
-                        }`}
-                        placeholder="Email"
-                      />
-                    </div>
-                    {simpleValidator.current.message(
-                      "email",
-                      formData?.email,
-                      "required|email"
-                    )}
-                    <div className="form-block">
-                      <input
-                        type="text"
-                        id="company"
-                        name="company"
-                        value={formData.company}
-                        onChange={handleChange}
-                        className={`input-custom  ${
-                          formData?.company ? "" : "dark"
-                        }`}
-                        placeholder="Company"
-                      />
-                    </div>
-                    <button
-                      type="submit"
-                      class={`loader-btns custom-btn submit-btn-landing ${
-                        submitted ? "pointer-events-none" : ""
-                      }`}
-                      disabled={submitted}
-                    >
-                      Submit
-                      {mailSent ? (
-                        <div className="progress-bar">
-                          <div className="circle border"></div>
-                        </div>
-                      ) : (
-                        <></>
-                      )}
-                    </button>
-                  </form>
-                </div>
-              </ReactWOW>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="landing-client">
-        <div className="container animated fadeIn">
-          <ReactWOW animation="fadeIn" delay="0s">
-            <div>
-              <h1 className="landing-title text-center mb-3">Trusted By</h1>
-              <ClientSlider landing />
-            </div>
-          </ReactWOW>
-        </div>
-      </div>
-      <div className="l-about-section">
-        <div>
-          <ReactWOW animation="fadeIn" delay="0s">
-            <div className="landing-about-section">
-              <div className="lbs-block">
-                <img
-                  className="width-100"
-                  src={BannerSectionImage}
-                  alt={"BannerSectionImage"}
-                />
-              </div>
-              <div className="lbs-block content">
+    <>
+      <Head>
+        <title>
+          Master UX UI Design Workshop : Accelerate Your Design Career with
+          these Practical and Effective Tools
+        </title>
+        <meta
+          name="description"
+          content="1-day UXUI design workshop from experts solving user problems with practical and proven design-solving methodologies"
+        />
+        {/* <meta
+          name="keywords"
+          content="UX design,UI engineering, Motion design, UX services, UI services, UX projects, UI projects, Video services, design team, design agency"
+        /> */}
+        <meta property="og:image" content={BannerSectionImage} />
+
+        <link
+          rel="canonical"
+          href="https://www.neointeraction.com/design-workshop"
+        />
+      </Head>
+      <div className="de-landing-container">
+        <div className="landing-banner pattern-right">
+          <div className="container-fluid custom-container">
+            <div className="row">
+              <div className="col-md-7">
                 <ReactWOW animation="fadeInDown" delay="0s">
-                  <h1 className="landing-title">About the Event</h1>
+                  <img
+                    style={{ marginBottom: 10 }}
+                    src={BadgeText}
+                    alt={"BadgeText"}
+                  />
                 </ReactWOW>
-                <ReactWOW animation="fadeInUp" delay="0s">
-                  <p className="landing-body-text">
-                    We'll take you on an action-packed journey filled with live
-                    case studies, proven design-solving methodologies, and rapid
-                    design thinking tasks. Don't miss out on the opportunity to
-                    learn from the experts in the field.
-                  </p>
-                  <p className="landing-body-text">
-                    Our goal is to enrich aspiring design heads and uplift their
-                    design career path. This is your chance to take your design
-                    skills to the next level.
-                  </p>
-                  <p className="landing-body-text">
-                    Neointeration Design studio started in 2008, has delivered
-                    User experience (UX & UI) designing, and UI Engineering
-                    services for B2B, B2C, Startups from different business
-                    domains.
-                  </p>
+                <ReactWOW animation="fadeInDown" delay="0s">
+                  <h1 className="landing-title">
+                    <span className="highlight">
+                      Practical and Effective Tools{" "}
+                    </span>
+                    to Accelerate Design Solutions
+                  </h1>
                 </ReactWOW>
-                <ReactWOW animation="fadeInUp" delay="0s">
-                  <div>
-                    <button class="custom-btn">Register Now !</button>
+                <ReactWOW animation="fadeInDown" delay="0s">
+                  <div className="venue-container">
+                    <ul className="vc-list">
+                      <li className="vc-item">1st July 2023</li>
+                      <li className="vc-item">10:00 am - 05:00 pm</li>
+                      <li className="vc-item">Orchid Hotel, Bangalore</li>
+                    </ul>
+                  </div>
+                </ReactWOW>
+                <ReactWOW animation="fadeInDown" delay="0s">
+                  <p className="landing-text">
+                    If you strongly believe that design can touch people's
+                    lives, solve user problems, and improve daily experiences,
+                    this design centric workshop is perfect for you.
+                  </p>
+                  <div className="registerblock-banner">
+                    <a href="https://rzp.io/l/oKso1anR64">
+                      <button class="custom-btn">Register Now !</button>
+                    </a>
+                    <p className="landing-text">*Limited seats</p>
+                  </div>
+                </ReactWOW>
+              </div>
+              <div className="col-md-5">
+                <ReactWOW animation="fadeInDown" delay="0s" duration="0.8s">
+                  <div className="contact-form-landing">
+                    <h1 className="landing-form-title">Contact Us</h1>
+                    <form
+                      onSubmit={handleSubmit}
+                      className="design-workshop__form"
+                    >
+                      <div className="form-block">
+                        <input
+                          type="text"
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
+                          placeholder="Name"
+                          className={`input-custom  ${
+                            formData?.name ? "" : "dark"
+                          }`}
+                          onBlur={() =>
+                            simpleValidator.current.showMessageFor("name")
+                          }
+                        />
+                      </div>
+                      {simpleValidator.current.message(
+                        "Name",
+                        formData?.name,
+                        "required|alpha_space"
+                      )}
+                      <div className="form-block">
+                        <input
+                          type="text"
+                          id="mobile"
+                          name="mobile"
+                          value={formData.mobile}
+                          onChange={handleChange}
+                          className={`input-custom  ${
+                            formData?.mobile ? "" : "dark"
+                          }`}
+                          placeholder="Mobile"
+                        />
+                      </div>
+                      {simpleValidator.current.message(
+                        "Mobile",
+                        formData?.mobile,
+                        "required|phone"
+                      )}
+                      <div className="form-block">
+                        <input
+                          type="email"
+                          id="email"
+                          name="email"
+                          value={formData.email}
+                          onChange={handleChange}
+                          className={`input-custom  ${
+                            formData?.email ? "" : "dark"
+                          }`}
+                          placeholder="Email"
+                        />
+                      </div>
+                      {simpleValidator.current.message(
+                        "email",
+                        formData?.email,
+                        "required|email"
+                      )}
+                      <div className="form-block">
+                        <input
+                          type="text"
+                          id="company"
+                          name="company"
+                          value={formData.company}
+                          onChange={handleChange}
+                          className={`input-custom  ${
+                            formData?.company ? "" : "dark"
+                          }`}
+                          placeholder="Company"
+                        />
+                      </div>
+                      <button
+                        type="submit"
+                        class={`loader-btns custom-btn submit-btn-landing ${
+                          submitted ? "pointer-events-none" : ""
+                        }`}
+                        disabled={submitted}
+                      >
+                        Submit
+                        {mailSent ? (
+                          <div className="progress-bar">
+                            <div className="circle border"></div>
+                          </div>
+                        ) : (
+                          <></>
+                        )}
+                      </button>
+                    </form>
                   </div>
                 </ReactWOW>
               </div>
             </div>
-          </ReactWOW>
+          </div>
         </div>
-      </div>
-      <div className="speaker-section">
-        <div className="container">
-          <ReactWOW animation="fadeInDown" delay="0s">
-            <h1 className="landing-title">Speakers</h1>
-          </ReactWOW>
-          <ReactWOW animation="fadeInUp" delay="0s">
-            <div className="speaker-card-container">
-              {data.map((item) => (
-                <SpeakerCard
-                  image={item.image}
-                  name={item.name}
-                  designation={item.designation}
-                  info={item.info}
-                />
-              ))}
+        <div className="landing-client">
+          <div className="container animated fadeIn">
+            <ReactWOW animation="fadeIn" delay="0s">
+              <div>
+                <h2 className="landing-title text-center mb-3">Trusted By</h2>
+                <ClientSlider landing />
+              </div>
+            </ReactWOW>
+          </div>
+        </div>
+        <div className="l-about-section">
+          <div>
+            <ReactWOW animation="fadeIn" delay="0s">
+              <div className="landing-about-section">
+                <div className="lbs-block">
+                  <img
+                    className="width-100"
+                    src={BannerSectionImage}
+                    alt={"UX design workshop by Neointeraction"}
+                  />
+                </div>
+                <div className="lbs-block content">
+                  <ReactWOW animation="fadeInDown" delay="0s">
+                    <h2 className="landing-title">About the Event</h2>
+                  </ReactWOW>
+                  <ReactWOW animation="fadeInUp" delay="0s">
+                    <p className="landing-body-text">
+                      We'll take you on an action-packed journey filled with
+                      live case studies, proven design-solving methodologies,
+                      and rapid design thinking tasks. Don't miss out on the
+                      opportunity to learn from the experts in the field.
+                    </p>
+                    <p className="landing-body-text">
+                      Our goal is to enrich aspiring design heads and uplift
+                      their design career path. This is your chance to take your
+                      design skills to the next level.
+                    </p>
+                    <p className="landing-body-text">
+                      Neointeration Design studio started in 2008, has delivered
+                      User experience (UX & UI) designing, and UI Engineering
+                      services for B2B, B2C, Startups from different business
+                      domains.
+                    </p>
+                  </ReactWOW>
+                  <ReactWOW animation="fadeInUp" delay="0s">
+                    <div>
+                      <a href="https://rzp.io/l/oKso1anR64">
+                        <button class="custom-btn">Register Now !</button>
+                      </a>
+                    </div>
+                  </ReactWOW>
+                </div>
+              </div>
+            </ReactWOW>
+          </div>
+        </div>
+        <div className="speaker-section">
+          <div className="container">
+            <ReactWOW animation="fadeInDown" delay="0s">
+              <h2 className="landing-title">Speakers</h2>
+            </ReactWOW>
+            <ReactWOW animation="fadeInUp" delay="0s">
+              <div className="speaker-card-container">
+                {data.map((item) => (
+                  <SpeakerCard
+                    image={item.image}
+                    name={item.name}
+                    designation={item.designation}
+                    info={item.info}
+                  />
+                ))}
+              </div>
+            </ReactWOW>
+          </div>
+        </div>
+        <ReactWOW animation="fadeIn" delay="0s">
+          <div className="info-section">
+            <div className="pattern-bottom">
+              <div className="pattern-left-center">
+                <div className="container">
+                  <ReactWOW animation="fadeInUp" delay="0s">
+                    <div className="info-section-card">
+                      <ReactWOW animation="fadeIn" delay="0s">
+                        <div className="is-block">
+                          <h2 className="landing-title">Who should Attend?</h2>
+                          <div className="info-content">
+                            <div className="row">
+                              <div className="col-md-4"></div>
+                              <div className="col-md-4">
+                                <ul className="info-list">
+                                  <li> Aspiring Design Heads </li>
+                                  <li> Product Design Manager</li>
+                                  <li>Senior Product Designer </li>
+                                  <li>Senior UX Designer </li>
+                                </ul>
+                              </div>
+                              <div className="col-md-4">
+                                <ul className="info-list">
+                                  <li> Senior UI Designer</li>
+                                  <li> UX Designer</li>
+                                  <li>Visual Designer</li>
+                                  <li>UI Designer </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="is-block">
+                          <h2 className="landing-title">Event Takeaways </h2>
+                          <div className="info-content">
+                            <div className="row">
+                              <div className="col-md-4"></div>
+                              <div className="col-md-8">
+                                <ul className="info-list">
+                                  <li>
+                                    Effective whiteboarding techniques for
+                                    successful team collaborations?
+                                  </li>
+                                  <li>
+                                    How to arrive at design objectives clearly
+                                    and concisely?
+                                  </li>
+                                  <li>
+                                    How to come out with a design strategy?
+                                  </li>
+                                  <li>
+                                    How to strategize and plan the design
+                                    sprints?
+                                  </li>
+                                  <li>
+                                    How to bring extraordinary aesthetics to
+                                    your design?
+                                  </li>
+                                  <li>
+                                    How to align designs with the business
+                                    objectives?
+                                  </li>
+                                  <li>
+                                    What makes a successful design manager?
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="is-block">
+                          <h2 className="landing-title">Program Schedule </h2>
+                          <div className="info-content">
+                            {programData.map((item) => (
+                              <div
+                                className={`program-block ${
+                                  item.break ? "break-time" : ""
+                                }`}
+                              >
+                                <div className="pb-time">{item.time}</div>
+                                <div className="pb-info">{item.info}</div>
+                              </div>
+                            ))}
+                          </div>
+                        </div>
+                      </ReactWOW>
+                    </div>
+                  </ReactWOW>
+                </div>
+              </div>
             </div>
-          </ReactWOW>
-        </div>
-      </div>
-      <ReactWOW animation="fadeIn" delay="0s">
-        <div className="info-section">
-          <div className="pattern-bottom">
-            <div className="pattern-left-center">
-              <div className="container">
-                <ReactWOW animation="fadeInUp" delay="0s">
-                  <div className="info-section-card">
-                    <ReactWOW animation="fadeIn" delay="0s">
-                      <div className="is-block">
-                        <h1 className="landing-title">Who should Attend?</h1>
-                        <div className="info-content">
-                          <div className="row">
-                            <div className="col-md-4"></div>
-                            <div className="col-md-4">
-                              <ul className="info-list">
-                                <li> Aspiring Design Heads </li>
-                                <li> Product Design Manager</li>
-                                <li>Senior Product Designer </li>
-                                <li>Senior UX Designer </li>
-                              </ul>
-                            </div>
-                            <div className="col-md-4">
-                              <ul className="info-list">
-                                <li> Senior UI Designer</li>
-                                <li> UX Designer</li>
-                                <li>Visual Designer</li>
-                                <li>UI Designer </li>
-                              </ul>
-                            </div>
+          </div>
+        </ReactWOW>
+        <ReactWOW animation="fadeIn" delay="0s">
+          <div className="register-container">
+            <div className="container">
+              <h2 className="landing-title">Register Now </h2>
+              {/* <p className="landing-subtitle">Limited seats . 5 Days Left !</p> */}
+              <div className="price-card-block">
+                <div className="row">
+                  {pricing.map((item) => (
+                    <ReactWOW animation="fadeInUp" delay="0s">
+                      <div className="col-md-4">
+                        <div className="landing-price-card">
+                          <h4 className="lpc-title">{item.name}</h4>
+                          <div className="price-block">
+                            <h4 className="lpc-price">{item.price}</h4>
+                            <h4 className="lpc-price-sub">
+                              (+18% gst) per person{" "}
+                            </h4>
                           </div>
-                        </div>
-                      </div>
-                      <div className="is-block">
-                        <h1 className="landing-title">Event Takeaways </h1>
-                        <div className="info-content">
-                          <div className="row">
-                            <div className="col-md-4"></div>
-                            <div className="col-md-8">
-                              <ul className="info-list">
-                                <li>
-                                  Effective whiteboarding techniques for
-                                  successful team collaborations?
-                                </li>
-                                <li>
-                                  How to arrive at design objectives clearly and
-                                  concisely?
-                                </li>
-                                <li>How to come out with a design strategy?</li>
-                                <li>
-                                  How to strategize and plan the design sprints?
-                                </li>
-                                <li>
-                                  How to bring extraordinary aesthetics to your
-                                  design?
-                                </li>
-                                <li>
-                                  How to align designs with the business
-                                  objectives?
-                                </li>
-                                <li>What makes a successful design manager?</li>
-                              </ul>
-                            </div>
+                          <div>
+                            <h4 className="lpc-offer">{item.ofrText} </h4>
+                            <h4 className="lpc-offer-sub">
+                              {item.name === "Early Bird Discount"
+                                ? "2023"
+                                : item.name === "Group Discount"
+                                ? "from same organization"
+                                : "-"}
+                            </h4>
                           </div>
-                        </div>
-                      </div>
-                      <div className="is-block">
-                        <h1 className="landing-title">Program Schedule </h1>
-                        <div className="info-content">
-                          {programData.map((item) => (
-                            <div
-                              className={`program-block ${
-                                item.break ? "break-time" : ""
-                              }`}
-                            >
-                              <div className="pb-time">{item.time}</div>
-                              <div className="pb-info">{item.info}</div>
-                            </div>
-                          ))}
+                          <a href="https://rzp.io/l/oKso1anR64">
+                            <button class="custom-btn">Register Now</button>
+                          </a>
                         </div>
                       </div>
                     </ReactWOW>
-                  </div>
-                </ReactWOW>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </ReactWOW>
-      <ReactWOW animation="fadeIn" delay="0s">
-        <div className="register-container">
+        </ReactWOW>
+        <div className="contact-terms-section">
           <div className="container">
-            <h1 className="landing-title">Register Now </h1>
-            {/* <p className="landing-subtitle">Limited seats . 5 Days Left !</p> */}
-            <div className="price-card-block">
-              <div className="row">
-                {pricing.map((item) => (
-                  <ReactWOW animation="fadeInUp" delay="0s">
-                    <div className="col-md-4">
-                      <div className="landing-price-card">
-                        <h4 className="lpc-title">{item.name}</h4>
-                        <div className="price-block">
-                          <h4 className="lpc-price">{item.price}</h4>
-                          <h4 className="lpc-price-sub">
-                            (+18% gst) per person{" "}
-                          </h4>
-                        </div>
-                        <div>
-                          <h4 className="lpc-offer">{item.ofrText} </h4>
-                          <h4 className="lpc-offer-sub">
-                            {item.name === "Early Bird Discount"
-                              ? "2023"
-                              : item.name === "Group Discount"
-                              ? "from same organization"
-                              : "-"}
-                          </h4>
-                        </div>
-                        <button class="custom-btn">Register Now</button>
-                      </div>
-                    </div>
-                  </ReactWOW>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </ReactWOW>
-      <div className="contact-terms-section">
-        <div className="container">
-          <div className="row">
-            {/* <div className="col-md-4">
+            <div className="row">
+              {/* <div className="col-md-4">
               <h1 className="contact-title">Contact</h1>
               <p className="landing-text">Allen Stephen</p>
               <p className="landing-text">+91 95133 38744</p>
               <p className="landing-text">allen@neointeraction.com</p>
             </div> */}
-            <div className="col-md-12">
-              <h1 className="contact-title">Terms & Conditions</h1>
-              <p className="landing-text width-100">
-                Participation in event implies agreement to event rules and
-                assumes personal responsibility for any associated risks. In
-                case of cancellations upto 2 weeks prior to the event you will
-                be accommodated for the upcoming events.
-              </p>
+              <div className="col-md-12">
+                <h3 className="contact-title">Terms & Conditions</h3>
+                <p className="landing-text width-100">
+                  Participation in event implies agreement to event rules and
+                  assumes personal responsibility for any associated risks. In
+                  case of cancellations upto 2 weeks prior to the event you will
+                  be accommodated for the upcoming events.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <ReactWOW animation="fadeInUp" delay="0s">
-        <div className="download-brochure">
-          <div className="container">
-            <div className="row align-center">
-              <div className="col-md-5">
-                <h1 className="landing-title">Download Brochure</h1>
-              </div>
-              <div className="col-md-7">
-                <div className="form-flex">
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={""}
-                    onChange={() => {}}
-                    className="input-custom dark"
-                    placeholder="E-mail ID"
-                  />
-                  <button class="custom-btn">Submit</button>
+        <ReactWOW animation="fadeInUp" delay="0s">
+          <div className="download-brochure">
+            <div className="container">
+              <div className="row align-center">
+                <div className="col-md-5">
+                  <h2 className="landing-title">Download Brochure</h2>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </ReactWOW>
-      <ReactWOW animation="fadeInUp" delay="0s">
-        <div className="testimonial-section">
-          <div className="container">
-            <h1 className="landing-title">Testimonials</h1>
-            <div className="t-card-block">
-              <div className="row">
-                {testimonial.map((item) => (
-                  <div className="col-md-4">
-                    <div className="testimonial-card">
-                      <div className="testimonial-img-container">
-                        <img
-                          className=""
-                          src={item.img}
-                          alt={"BannerSectionImage"}
-                        />
-                      </div>
-                      <h1 className="t-title">{item.name}</h1>
-                      <h1 className="t-quote">{item.quote}</h1>
-                    </div>
+                <div className="col-md-7">
+                  <div className="form-flex">
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={""}
+                      onChange={() => {}}
+                      className="input-custom dark"
+                      placeholder="E-mail ID"
+                    />
+                    <button class="custom-btn">Submit</button>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </ReactWOW>
-      <ReactWOW animation="fadeInUp" delay="0s">
-        <div className="download-brochure">
-          <div className="container">
-            <div className="row align-center">
-              <div className="col-md-5">
-                <h1 className="landing-title max-w-80">
-                  Subscribe to our latest design news
-                </h1>
-              </div>
-              <div className="col-md-7">
-                <div className="form-flex">
-                  <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={""}
-                    onChange={() => {}}
-                    className="input-custom dark"
-                    placeholder="E-mail ID"
-                  />
-                  <button class="custom-btn">Submit</button>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </ReactWOW>
-      <ReactWOW animation="fadeInUp" delay="0s">
-        <div className="faq-section">
-          <div className="container">
-            <h1 className="landing-title">FAQ's</h1>
-            <div className="faq-block">
-              <FAQAccordion data={faqData} />
+        </ReactWOW>
+        <ReactWOW animation="fadeInUp" delay="0s">
+          <div className="testimonial-section">
+            <div className="container">
+              <h1 className="landing-title">Testimonials</h1>
+              <div className="t-card-block">
+                <div className="row">
+                  {testimonial.map((item) => (
+                    <div className="col-md-4">
+                      <div className="testimonial-card">
+                        <div className="testimonial-img-container">
+                          <img
+                            className=""
+                            src={item.img}
+                            alt={"BannerSectionImage"}
+                          />
+                        </div>
+                        <h1 className="t-title">{item.name}</h1>
+                        <h1 className="t-quote">{item.quote}</h1>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </ReactWOW>
-      <ToastContainer />
-    </div>
+        </ReactWOW>
+        <ReactWOW animation="fadeInUp" delay="0s">
+          <div className="download-brochure">
+            <div className="container">
+              <div className="row align-center">
+                <div className="col-md-5">
+                  <h2 className="landing-title max-w-80">
+                    Subscribe to our latest design news
+                  </h2>
+                </div>
+                <div className="col-md-7">
+                  <div className="form-flex">
+                    <input
+                      type="text"
+                      id="company"
+                      name="company"
+                      value={""}
+                      onChange={() => {}}
+                      className="input-custom dark"
+                      placeholder="E-mail ID"
+                    />
+                    <button class="custom-btn">Submit</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ReactWOW>
+        <ReactWOW animation="fadeInUp" delay="0s">
+          <div className="faq-section">
+            <div className="container">
+              <h1 className="landing-title">FAQ's</h1>
+              <div className="faq-block">
+                <FAQAccordion data={faqData} />
+              </div>
+            </div>
+          </div>
+        </ReactWOW>
+        <ToastContainer />
+      </div>
+    </>
   );
 };
 
