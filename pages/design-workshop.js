@@ -198,6 +198,46 @@ const DesignEventLanding = () => {
   const [, forceUpdate] = useState();
   const [ip, setIp] = useState("");
   const [mailSent, setMailSent] = useState(false);
+  const [brochureDetails, setBrochureDetails] = useState({
+    name: "",
+    email:""
+  });
+  const [subscribeEmail, setSubscribeEmail] = useState("")
+
+  const handleSubscribe= () => {
+    // subscribeEmail
+  }
+
+  const handleDownloadBrochure= () => {
+    // subscribeEmail
+    if(brochureDetails.name && brochureDetails.email) {
+      
+      try {
+        axios
+          .post("https://www.neointeraction.com/server/brochure", {
+            ...brochureDetails,
+          })
+          .then((response) => {
+            if (response.data.status === "success") {
+              toast(SuccessToast, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: true,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+              });
+              resetForm();
+            } else if (response.data.status === "fail") {
+              alert("Message failed to send.");
+            }
+          });
+      } catch (err) {
+        console.log("Error", err);
+      }
+    }
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -747,14 +787,33 @@ const DesignEventLanding = () => {
                   <div className="form-flex">
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={""}
-                      onChange={() => {}}
-                      className="input-custom dark"
+                      id="brochure-name"
+                      name="brochure-name"
+                      value={brochureDetails.name}
+                      onChange={(e) => {
+                        setBrochureDetails({
+                          ...brochureDetails,
+                          name: e.target.value
+                        })
+                      }}
+                      className={`input-custom ${brochureDetails.name ? "" : "dark"}`}
+                      placeholder="Name"
+                    />
+                    <input
+                      type="email"
+                      id="brochure-email"
+                      name="brochure-email"
+                      value={brochureDetails.email}
+                      onChange={(e) => {
+                        setBrochureDetails({
+                          ...brochureDetails,
+                          email: e.target.value
+                        })
+                      }}
+                      className={`input-custom ${brochureDetails.email ? "" : "dark"}`}
                       placeholder="E-mail ID"
                     />
-                    <button class="custom-btn">Submit</button>
+                    <button class="custom-btn" onClick={handleDownloadBrochure}>Submit</button>
                   </div>
                 </div>
               </div>
@@ -800,14 +859,14 @@ const DesignEventLanding = () => {
                   <div className="form-flex">
                     <input
                       type="text"
-                      id="company"
-                      name="company"
-                      value={""}
-                      onChange={() => {}}
+                      id="subscribeEmail"
+                      name="subscribeEmail"
+                      value={subscribeEmail}
+                      onChange={(e) => setSubscribeEmail(e.target.value)}
                       className="input-custom dark"
                       placeholder="E-mail ID"
                     />
-                    <button class="custom-btn">Submit</button>
+                    <button class="custom-btn" onClick={handleSubscribe}>Submit</button>
                   </div>
                 </div>
               </div>

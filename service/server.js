@@ -482,7 +482,7 @@ app.post("/workshopmail", async (req, res) => {
   try {
     var mail = {
       from: email,
-      to: ["sam@neointeraction.com", "info@neointeraction.com"],
+      to: ["allen@neointeraction.com", "info@neointeraction.com"],
       subject: `Contact us - Design workshop : ${name}`,
       html: `<html>
        <body>
@@ -502,10 +502,21 @@ app.post("/workshopmail", async (req, res) => {
       html: `<html>
        <body>
        <h4>Hey ${name},</h4>
-       <h4>Thankyou for contacting us! We have received your details and our team will be reaching out to you soon. </h4>
+       <h4>Thankyou for contacting us! We have received your details and our </br>team will be reaching out to you soon. </h4>
+
+       <h4>Regards,</h4>
+       <h4>Team Neointeraction Design</h4>
+       <a href="https://www.neointeraction.com/"><h4>www.neointeraction.com</h4></a>
+       <h4>+91-95913338744</h4>
        </body> 
        </html>`,
     };
+
+    
+
+
+
+
 
     transporter.sendMail(mail, (err, data) => {
       if (err) {
@@ -562,6 +573,14 @@ app.post("/payment/orders", async (req, res) => {
 });
 
 app.post("/workshop/payment", async (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "unlhgudojkwsqwxg",
+    },
+  });
   try {
     // getting the details back from our font-end
     const {
@@ -596,22 +615,23 @@ app.post("/workshop/payment", async (req, res) => {
       html: `<html>
        <body>
        <h4>Hey ${name},</h4>
-       <p>Thank You for registering for our Design Workshop! We are thrilled to have you join us and be a part of this program.</p>
+       <p>Thank You for registering for our Design Workshop! We are thrilled to have you join </br>us and be a part of this program.</p>
 
        <p>Event Details: </br>
        Event Name: Design Workshop, 2023</br>
        Date: 1st July 2023</br>
        Time: 10:00 am to 05:00 pm</br>
-       Venue: Orchid Hotel, Banglore</br>
-       Address: </br>
+       Venue: Royal Orchid Hotel, Banglore</br>
        </p>
 
-       <p>We have lined up an incredible set of speakers and activities that promise to be both informative and engaging. The event aims to provide valuable insights and networking opportunities for all attendees.</p>
+       <p>We have lined up an incredible set of speakers and activities that promise to be </br>both informative and engaging. The event aims to provide valuable insights and </br>networking opportunities for all attendees.</p>
 
-       <p>If you have any questions, concerns or need further assistance, please do not hesitate to contact us at :</p>
+       <p>If you have any questions, concerns or need further assistance, please do not </br>hesitate to contact us at :</p>
        <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a>
-       <p>Ph number: +91 95133 38744</p>
+       <p>Ph: +91-95133 38744</p>
 
+       <p>Thanks & Regards,</p></br>
+       <p>Neointeraction Design</p>
        </body> 
        </html>`,
     };
@@ -637,4 +657,62 @@ app.post("/workshop/payment", async (req, res) => {
   } catch (error) {
     res.status(500).send(error);
   }
+});
+
+
+
+app.post("/brochure", (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "unlhgudojkwsqwxg",
+    },
+  });
+
+  var name = req.body.name;
+  var email = req.body.email;
+
+  var file = "../assets/Brochure.pdf"
+
+  var mail = {
+    from: 'allen@neointeraction.com',
+    to: email,
+    subject: `UX Design workshop - Brochure`,
+    attachments: [
+      {
+        filename: `Design Workshop 2023`,
+        path: file,
+      },
+    ],
+    html: `<html>
+    <body>
+    <h4>Hi ${name},</h4>
+    <p>Thank you for your interest in our ux design workshop! Attached to this email, you will find the brochure with all the essential details about the upcoming UX design workshop - “<strong>Practical and Effective Tools to Accelerate Design Solutions</strong>”</p>
+
+    <p>To secure your spot, we kindly request that you - <a href="https://www.neointeraction.com/design-workshop">Register Now</a>! </p>
+
+    <p>Please don't hesitate to reach out to us if you have any questions or require further assistance. We are here to help! </p>
+
+    <p><strong>Organizer Details:</strong></p> </br>
+    <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a>
+    <p>Ph: +91-95133 38744</p>
+
+    <p>Thanks & Regards,</p></br>
+    <p>Neointeraction Design</p>
+    </body> 
+    </html>`,
+  };
+  transporter.sendMail(mail, (err, data) => {
+    if (err) {
+      res.json({
+        status: "fail",
+      });
+    } else {
+      res.json({
+        status: "success",
+      });
+    }
+  });
 });
