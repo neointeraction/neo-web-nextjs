@@ -9,7 +9,7 @@ import Dribble from "assets/images/dribbble.svg";
 import Behance from "assets/images/behance.svg";
 import Youtube from "assets/images/youtube.svg";
 import Medium from "assets/images/medium.svg";
-
+import Subscription from "./Subscription";
 import {
   Accordion,
   AccordionItem,
@@ -132,22 +132,7 @@ const FooterLanding = () => {
                 </div>
                 <div className="col-md-4">
                   <h4 className="footer-links-title">Subscribe Newsletter</h4>
-
-                  {/* <form onSubmit={(e) => e.stopPropagation()}> */}
-                  <div className="form-flex">
-                    <input
-                      type="email"
-                      id="company"
-                      name="company"
-                      className={`input-custom ${email ? "" : "dark"}`}
-                      placeholder="E-mail ID"
-                      value={email}
-                      onChange={(e) => setEmail(e.currentTarget.value)}
-                    />
-                  </div>
-                  <br />
-                  {/* </form> */}
-                  <button class="custom-btn subscribe-btn">Subscribe</button>
+                  <Subscription isFooter={true} />
                 </div>
               </div>
               {/* <ul className="social-icons n-social-icons no-bg footer-social-icns">
@@ -354,22 +339,7 @@ const FooterLanding = () => {
                 </Accordion>
                 <div className="mob-nletter">
                   <h4 className="footer-links-title">Subscribe Newsletter</h4>
-
-                  {/* <form onSubmit={(e) => e.stopPropagation()}> */}
-                  <div className="form-flex">
-                    <input
-                      type="email"
-                      id="company"
-                      name="company"
-                      className={`input-custom ${email ? "" : "dark"}`}
-                      placeholder="E-mail ID"
-                      value={email}
-                      onChange={(e) => setEmail(e.currentTarget.value)}
-                    />
-                  </div>
-                  <br />
-                  {/* </form> */}
-                  <button class="custom-btn subscribe-btn">Subscribe</button>
+                  <Subscription isFooter={true} />
                 </div>
               </div>
             </div>

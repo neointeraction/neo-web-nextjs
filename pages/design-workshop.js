@@ -18,6 +18,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { useEffect } from "react";
 import logo from "../assets/images/LOGO.svg";
 import Head from "next/head";
+import Subscription from "components/Subscription";
 
 const axios = require("axios");
 
@@ -121,6 +122,13 @@ const SuccessToast = () => (
   </div>
 );
 
+const BrochureDownloadSuccessToast = () => (
+  <div className="success-msg-download width-md">
+    <div className="check-wrap"></div>
+    <p>We have successfully sent you the brochure. Please check your mail.!</p>
+  </div>
+);
+
 const testimonial = [
   {
     img: T1,
@@ -200,18 +208,12 @@ const DesignEventLanding = () => {
   const [mailSent, setMailSent] = useState(false);
   const [brochureDetails, setBrochureDetails] = useState({
     name: "",
-    email:""
+    email: "",
   });
-  const [subscribeEmail, setSubscribeEmail] = useState("")
 
-  const handleSubscribe= () => {
+  const handleDownloadBrochure = () => {
     // subscribeEmail
-  }
-
-  const handleDownloadBrochure= () => {
-    // subscribeEmail
-    if(brochureDetails.name && brochureDetails.email) {
-      
+    if (brochureDetails.name && brochureDetails.email) {
       try {
         axios
           .post("https://www.neointeraction.com/server/brochure", {
@@ -219,7 +221,7 @@ const DesignEventLanding = () => {
           })
           .then((response) => {
             if (response.data.status === "success") {
-              toast(SuccessToast, {
+              toast(BrochureDownloadSuccessToast, {
                 position: "top-right",
                 autoClose: 5000,
                 hideProgressBar: true,
@@ -228,7 +230,10 @@ const DesignEventLanding = () => {
                 draggable: true,
                 progress: undefined,
               });
-              resetForm();
+              setBrochureDetails({
+                name: "",
+                email: "",
+              });
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
             }
@@ -237,7 +242,7 @@ const DesignEventLanding = () => {
         console.log("Error", err);
       }
     }
-  }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -793,10 +798,12 @@ const DesignEventLanding = () => {
                       onChange={(e) => {
                         setBrochureDetails({
                           ...brochureDetails,
-                          name: e.target.value
-                        })
+                          name: e.target.value,
+                        });
                       }}
-                      className={`input-custom ${brochureDetails.name ? "" : "dark"}`}
+                      className={`input-custom ${
+                        brochureDetails.name ? "" : "dark"
+                      }`}
                       placeholder="Name"
                     />
                     <input
@@ -807,13 +814,17 @@ const DesignEventLanding = () => {
                       onChange={(e) => {
                         setBrochureDetails({
                           ...brochureDetails,
-                          email: e.target.value
-                        })
+                          email: e.target.value,
+                        });
                       }}
-                      className={`input-custom ${brochureDetails.email ? "" : "dark"}`}
+                      className={`input-custom ${
+                        brochureDetails.email ? "" : "dark"
+                      }`}
                       placeholder="E-mail ID"
                     />
-                    <button class="custom-btn" onClick={handleDownloadBrochure}>Submit</button>
+                    <button class="custom-btn" onClick={handleDownloadBrochure}>
+                      Submit
+                    </button>
                   </div>
                 </div>
               </div>
@@ -855,20 +866,7 @@ const DesignEventLanding = () => {
                     Subscribe to our latest design news
                   </h2>
                 </div>
-                <div className="col-md-7">
-                  <div className="form-flex">
-                    <input
-                      type="text"
-                      id="subscribeEmail"
-                      name="subscribeEmail"
-                      value={subscribeEmail}
-                      onChange={(e) => setSubscribeEmail(e.target.value)}
-                      className="input-custom dark"
-                      placeholder="E-mail ID"
-                    />
-                    <button class="custom-btn" onClick={handleSubscribe}>Submit</button>
-                  </div>
-                </div>
+                <Subscription />
               </div>
             </div>
           </div>

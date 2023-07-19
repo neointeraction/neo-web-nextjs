@@ -502,7 +502,7 @@ app.post("/workshopmail", async (req, res) => {
       html: `<html>
        <body>
        <h4>Hey ${name},</h4>
-       <h4>Thankyou for contacting us! We have received your details and our </br>team will be reaching out to you soon. </h4>
+       <h4>Thankyou for contacting us! We have received your details and our team will be reaching out to you soon. </h4>
 
        <h4>Regards,</h4>
        <h4>Team Neointeraction Design</h4>
@@ -511,12 +511,6 @@ app.post("/workshopmail", async (req, res) => {
        </body> 
        </html>`,
     };
-
-    
-
-
-
-
 
     transporter.sendMail(mail, (err, data) => {
       if (err) {
@@ -572,7 +566,7 @@ app.post("/payment/orders", async (req, res) => {
   }
 });
 
-app.post("/workshop/payment", async (req, res) => {
+app.post("/workshop/paid", async (req, res) => {
   var transporter = nodemailer.createTransport({
     service: "gmail",
     service: "gmail",
@@ -584,29 +578,29 @@ app.post("/workshop/payment", async (req, res) => {
   try {
     // getting the details back from our font-end
     const {
-      orderCreationId,
-      razorpayPaymentId,
-      razorpayOrderId,
-      razorpaySignature,
+      payload: {
+        payment: { entity },
+      },
     } = req.body;
 
-    // Creating our own digest
-    // The format should be like this:
-    // digest = hmac_sha256(orderCreationId + "|" + razorpayPaymentId, secret);
-    // const shasum = crypto.createHmac("sha256", "w2lBtgmeuDUfnJVp43UpcaiT");
+    const secret = "sam@123";
+    const orderCreationId = entity.order_id;
+    const razorpayPaymentId = entity.id;
 
-    // shasum.update(`${orderCreationId}|${razorpayPaymentId}`);
+    const crypto = require("crypto");
 
-    // const digest = shasum.digest("hex");
+    const shasum = crypto.createHmac("sha256", secret);
 
-    // comaparing our digest with the actual signature
-    // if (digest !== razorpaySignature)
-    //     return res.status(400).json({ msg: "Transaction not legit!" });
+    shasum.update(JSON.stringify(req.body));
 
-    // THE PAYMENT IS LEGIT & VERIFIED
-    // YOU CAN SAVE THE DETAILS IN YOUR DATABASE IF YOU WANT
+    const digest = shasum.digest("hex");
 
-    const { name, email } = req.body;
+    const razorpaySignature = req.headers["x-razorpay-signature"];
+
+    if (digest !== razorpaySignature)
+      return res.status(400).json({ msg: "Transaction not legit!" });
+
+    const { name, email } = entity.notes;
 
     var acknowledgementMail = {
       from: "Neointeraction <info@neointeraction.com>",
@@ -615,22 +609,21 @@ app.post("/workshop/payment", async (req, res) => {
       html: `<html>
        <body>
        <h4>Hey ${name},</h4>
-       <p>Thank You for registering for our Design Workshop! We are thrilled to have you join </br>us and be a part of this program.</p>
+       <p>Thank You for registering for our Design Workshop! We are thrilled to have you join us and be a part of this program.</p>
 
-       <p>Event Details: </br>
-       Event Name: Design Workshop, 2023</br>
-       Date: 1st July 2023</br>
-       Time: 10:00 am to 05:00 pm</br>
-       Venue: Royal Orchid Hotel, Banglore</br>
-       </p>
+       <p><strong>Event Details:</strong> </p>
+       <p>Event Name: Design Workshop, 2023</p>
+       <p>Date: 1st July 2023</p>
+       <p>Time: 10:00 am to 05:00 pm</p>
+       <p>Venue: Royal Orchid Hotel, Banglore</p>
 
-       <p>We have lined up an incredible set of speakers and activities that promise to be </br>both informative and engaging. The event aims to provide valuable insights and </br>networking opportunities for all attendees.</p>
+       <p>We have lined up an incredible set of speakers and activities that promise to be both informative and engaging. The event aims to provide valuable insights and networking opportunities for all attendees.</p>
 
-       <p>If you have any questions, concerns or need further assistance, please do not </br>hesitate to contact us at :</p>
-       <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a>
+       <p>If you have any questions, concerns or need further assistance, please do not hesitate to contact us at :</p>
+       <a href="mailto:allen@neointeraction.com"><p>allen@neointeraction.com</p></a>
        <p>Ph: +91-95133 38744</p>
 
-       <p>Thanks & Regards,</p></br>
+       <p>Thanks & Regards,</p>
        <p>Neointeraction Design</p>
        </body> 
        </html>`,
@@ -651,15 +644,13 @@ app.post("/workshop/payment", async (req, res) => {
 
     res.json({
       msg: "success",
-      orderId: razorpayOrderId,
+      orderId: orderCreationId,
       paymentId: razorpayPaymentId,
     });
   } catch (error) {
     res.status(500).send(error);
   }
 });
-
-
 
 app.post("/brochure", (req, res) => {
   var transporter = nodemailer.createTransport({
@@ -674,10 +665,10 @@ app.post("/brochure", (req, res) => {
   var name = req.body.name;
   var email = req.body.email;
 
-  var file = "../assets/Brochure.pdf"
+  var file = "../assets/Brochure.pdf";
 
   var mail = {
-    from: 'allen@neointeraction.com',
+    from: "Neointeraction Design <allen@neointeraction.com>",
     to: email,
     subject: `UX Design workshop - Brochure`,
     attachments: [
@@ -695,11 +686,11 @@ app.post("/brochure", (req, res) => {
 
     <p>Please don't hesitate to reach out to us if you have any questions or require further assistance. We are here to help! </p>
 
-    <p><strong>Organizer Details:</strong></p> </br>
-    <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a>
+    <p><strong>Organizer Details:</strong></p> 
+    <a href="mailto:allen@neointeraction.com"><p>allen@neointeraction.com</p></a>
     <p>Ph: +91-95133 38744</p>
 
-    <p>Thanks & Regards,</p></br>
+    <p>Thanks & Regards,</p>
     <p>Neointeraction Design</p>
     </body> 
     </html>`,
