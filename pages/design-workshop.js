@@ -323,60 +323,6 @@ const DesignEventLanding = () => {
     });
   }
 
-  async function displayRazorpay() {
-    const res = await loadScript(
-      "https://checkout.razorpay.com/v1/checkout.js"
-    );
-
-    if (!res) {
-      alert("Razorpay SDK failed to load. Are you online?");
-      return;
-    }
-
-    // creating a new order
-    const result = await axios.post(
-      "https://www.neointeraction.com/payment/orders"
-    );
-
-    if (!result) {
-      alert("Server error. Are you online?");
-      return;
-    }
-
-    // Getting the order details back
-    const { amount, id: order_id, currency } = result.data;
-
-    const options = {
-      key: process.env.NEXT_APP_RAZORPAY_ID,
-      amount: amount.toString(),
-      currency: currency,
-      name: "Neointeraction Designs",
-      description: "Test Transaction",
-      image: { logo },
-      order_id: order_id,
-      handler: async function (response) {
-        const data = {
-          orderCreationId: order_id,
-          razorpayPaymentId: response.razorpay_payment_id,
-          razorpayOrderId: response.razorpay_order_id,
-          razorpaySignature: response.razorpay_signature,
-          name: "John Doe",
-          email: "sam@neointeractin.com",
-        };
-
-        const result = await axios.post(
-          "http://localhost:5000/payment/success",
-          data
-        );
-
-        alert(result.data.msg);
-      },
-    };
-
-    const paymentObject = new window.Razorpay(options);
-    paymentObject.open();
-  }
-
   return (
     <>
       <Head>
