@@ -501,13 +501,13 @@ app.post("/workshopmail", async (req, res) => {
       subject: `Thank You for Contacting Us`,
       html: `<html>
        <body>
-       <h4>Hey ${name},</h4>
-       <h4>Thankyou for contacting us! We have received your details and our team will be reaching out to you soon. </h4>
+       <p>Hey ${name},</p>
+       <p>Thankyou for contacting us! We have received your details and our team will be reaching out to you soon. </p>
 
-       <h4>Regards,</h4>
-       <h4>Team Neointeraction Design</h4>
-       <a href="https://www.neointeraction.com/"><h4>www.neointeraction.com</h4></a>
-       <h4>+91-95913338744</h4>
+       <p>Regards,</p>
+       <p>Team Neointeraction Design</p>
+       <a href="https://www.neointeraction.com/">www.neointeraction.com</a>
+       <p>+91-95913338744</p>
        </body> 
        </html>`,
     };

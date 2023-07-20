@@ -205,7 +205,7 @@
     display: none !important;
   }
   .mobile-accord {
-    display: block;
+    display: none;
   }
   .nav-l,
   .nav-r {

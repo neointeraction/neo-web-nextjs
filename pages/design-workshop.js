@@ -210,10 +210,12 @@ const DesignEventLanding = () => {
     name: "",
     email: "",
   });
+  const [isBrochureSubmitting, setIsBrochureSubmitting] = useState(false);
 
   const handleDownloadBrochure = () => {
     // subscribeEmail
     if (brochureDetails.name && brochureDetails.email) {
+      setIsBrochureSubmitting(true);
       try {
         axios
           .post("https://www.neointeraction.com/server/brochure", {
@@ -234,11 +236,16 @@ const DesignEventLanding = () => {
                 name: "",
                 email: "",
               });
+
+              setIsBrochureSubmitting(false);
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
+
+              setIsBrochureSubmitting(false);
             }
           });
       } catch (err) {
+        setIsBrochureSubmitting(false);
         console.log("Error", err);
       }
     }
@@ -332,7 +339,7 @@ const DesignEventLanding = () => {
         </title>
         <meta
           name="description"
-          content="1-day UXUI design workshop from experts solving user problems with practical and proven design-solving methodologies"
+          content="1-day UX/UI design workshop from experts using practical and proven design-solving methodologies."
         />
         {/* <meta
           name="keywords"
@@ -477,7 +484,7 @@ const DesignEventLanding = () => {
                       </div>
                       <button
                         type="submit"
-                        class={`loader-btns custom-btn submit-btn-landing ${
+                        class={`loader-btns custom-btn submit-btn-landing contact__submit-button ${
                           submitted ? "pointer-events-none" : ""
                         }`}
                         disabled={submitted}
@@ -502,7 +509,9 @@ const DesignEventLanding = () => {
           <div className="container animated fadeIn">
             <ReactWOW animation="fadeIn" delay="0s">
               <div>
-                <h2 className="landing-title text-center mb-3">Trusted By</h2>
+                <h2 className="landing-title text-center mb-3 trusted__by">
+                  Trusted By
+                </h2>
                 <ClientSlider landing />
               </div>
             </ReactWOW>
@@ -534,12 +543,6 @@ const DesignEventLanding = () => {
                       Our goal is to enrich aspiring design heads and uplift
                       their design career path. This is your chance to take your
                       design skills to the next level.
-                    </p>
-                    <p className="landing-body-text">
-                      Neointeration Design studio started in 2008, has delivered
-                      User experience (UX & UI) designing, and UI Engineering
-                      services for B2B, B2C, Startups from different business
-                      domains.
                     </p>
                   </ReactWOW>
                   <ReactWOW animation="fadeInUp" delay="0s">
@@ -709,12 +712,12 @@ const DesignEventLanding = () => {
         <div className="contact-terms-section">
           <div className="container">
             <div className="row">
-              {/* <div className="col-md-4">
-              <h1 className="contact-title">Contact</h1>
-              <p className="landing-text">Allen Stephen</p>
-              <p className="landing-text">+91 95133 38744</p>
-              <p className="landing-text">allen@neointeraction.com</p>
-            </div> */}
+              <div className="col-md-4 contact">
+                <h1 className="contact-title">Contact</h1>
+                <p className="landing-text">Allen Stephen</p>
+                <p className="landing-text">+91 95133 38744</p>
+                <p className="landing-text">allen@neointeraction.com</p>
+              </div>
               <div className="col-md-12">
                 <h3 className="contact-title">Terms & Conditions</h3>
                 <p className="landing-text width-100">
@@ -768,7 +771,12 @@ const DesignEventLanding = () => {
                       }`}
                       placeholder="E-mail ID"
                     />
-                    <button class="custom-btn" onClick={handleDownloadBrochure}>
+                    <button
+                      type="submit"
+                      class="custom-btn"
+                      onClick={handleDownloadBrochure}
+                      disabled={isBrochureSubmitting}
+                    >
                       Submit
                     </button>
                   </div>

@@ -135,6 +135,90 @@ const FooterLanding = () => {
                   <Subscription isFooter={true} />
                 </div>
               </div>
+              <div className="row mob-show col-xs-12">
+                <div className="col-xs-4">
+                  <h4
+                    className="footer-links-title"
+                    onClick={() =>
+                      handleRoute(
+                        "/ui-ux-design-developer-services-company-bangalore"
+                      )
+                    }
+                  >
+                    Studio
+                  </h4>
+                  <ul className="footer-quick-links">
+                    <li onClick={() => handleRoute("/about-us")}>
+                      <div className="link">About</div>
+                    </li>
+                    <li onClick={() => handleRoute("/projects")}>
+                      <div className="link">Projects</div>
+                    </li>
+                    <li onClick={() => handleRoute("/contact-us")}>
+                      <div className="link">Contact Us</div>
+                    </li>
+                    <li onClick={() => handleRoute("/career")}>
+                      <div className="link">Careers</div>
+                    </li>
+                    <li onClick={() => handleRoute("/blogs")}>
+                      <div className="link">Blog</div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-xs-4">
+                  <h4 className="footer-links-title">Services</h4>
+                  <ul className="footer-quick-links">
+                    <li
+                      onClick={(e) =>
+                        handleRoute(
+                          "/ui-ux-design-developer-services-company-bangalore"
+                        )
+                      }
+                    >
+                      <div className="link">UX Design</div>
+                    </li>
+                    <li
+                      onClick={(e) =>
+                        handleRoute("/product-design-services-bangalore-india")
+                      }
+                    >
+                      <div className="link">Product Design </div>
+                    </li>
+                    <li
+                      onClick={(e) =>
+                        handleRoute(
+                          "/design-transformation-services-bangalore-india"
+                        )
+                      }
+                    >
+                      <div className="link">Design Tranformation</div>
+                    </li>
+                    <li
+                      onClick={(e) =>
+                        handleRoute("/ui-engineering-services-bangalore-india")
+                      }
+                    >
+                      <div className="link">UI Engineering</div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-xs-4">
+                  <h4 className="footer-links-title">Others</h4>
+                  <ul className="footer-quick-links">
+                    <li onClick={(e) => handleRoute("/Downloads")}>
+                      <div className="link">Downloads</div>
+                    </li>
+                    <li onClick={(e) => handleRoute("/privacy-policy")}>
+                      <div className="link">Privacy Policy</div>
+                    </li>
+                  </ul>
+                </div>
+                <div className="col-sm-12 p-0">
+                  <h4 className="footer-links-title">Subscribe Newsletter</h4>
+                  <Subscription isFooter={true} />
+                </div>
+              </div>
+
               {/* <ul className="social-icons n-social-icons no-bg footer-social-icns">
                 <li id="ln">
                   <a
@@ -347,6 +431,15 @@ const FooterLanding = () => {
           <div className="footer-copyright landing-footer-flex">
             <p>We love DESIGN.</p>
             <ul className="social-icons n-social-icons no-bg footer-social-icns landing-social-icons">
+              <li id="fb">
+                <a
+                  href="https://www.facebook.com/Neointeraction/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Facebook} alt="facebook" />
+                </a>
+              </li>
               <li id="ln">
                 <a
                   href="https://www.linkedin.com/company/neointeraction-designs/"
@@ -354,6 +447,24 @@ const FooterLanding = () => {
                   rel="noopener noreferrer"
                 >
                   <img src={LinkedIn} alt="LinkedIn" />
+                </a>
+              </li>
+              <li id="twitter">
+                <a
+                  href="https://twitter.com/neointeraction?lang=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Twitter} alt="Twitter" />
+                </a>
+              </li>
+              <li id="insta">
+                <a
+                  href="https://www.instagram.com/neointeraction/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={Instagram} alt="Instagram" />
                 </a>
               </li>
               {/* <li id="medium">
@@ -374,33 +485,7 @@ const FooterLanding = () => {
                   <img src={Dribble} alt="Dribble" />
                 </a>
               </li>
-              <li id="insta">
-                <a
-                  href="https://www.instagram.com/neointeraction/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={Instagram} alt="Instagram" />
-                </a>
-              </li>
-              <li id="twitter">
-                <a
-                  href="https://twitter.com/neointeraction?lang=en"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={Twitter} alt="Twitter" />
-                </a>
-              </li>
-              <li id="fb">
-                <a
-                  href="https://www.facebook.com/Neointeraction/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={Facebook} alt="facebook" />
-                </a>
-              </li>
+
               {/* <li id="behance">
                 <a
                   href="https://www.behance.net/neointeraction"
