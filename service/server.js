@@ -500,16 +500,20 @@ app.post("/workshopmail", async (req, res) => {
       to: email,
       subject: `Thank You for Contacting Us`,
       html: `<html>
-       <body>
-       <p>Hey ${name},</p>
-       <p>Thankyou for contacting us! We have received your details and our team will be reaching out to you soon. </p>
-
-       <p>Regards,</p>
-       <p>Team Neointeraction Design</p>
-       <a href="https://www.neointeraction.com/">www.neointeraction.com</a>
-       <p>+91-95913338744</p>
-       </body> 
-       </html>`,
+      <body>
+        <p>Hey ${name},</p>
+        <p>
+          Thankyou for contacting us! We have received your details and our team
+          will be reaching out to you soon.
+        </p>
+    
+        <div>Regards,</div>
+        <div>Team Neointeraction Design</div>
+        <a href="https://www.neointeraction.com/">www.neointeraction.com</a>
+        <div>+91-95913338744</div>
+      </body>
+    </html>
+    `,
     };
 
     transporter.sendMail(mail, (err, data) => {
@@ -623,8 +627,8 @@ app.post("/workshop/paid", async (req, res) => {
        <a href="mailto:allen@neointeraction.com"><p>allen@neointeraction.com</p></a>
        <p>Ph: +91-95133 38744</p>
 
-       <p>Thanks & Regards,</p>
-       <p>Neointeraction Design</p>
+       <div>Thanks & Regards,</div>
+       <div>Neointeraction Design</div>
        </body> 
        </html>`,
     };
@@ -690,8 +694,8 @@ app.post("/brochure", (req, res) => {
     <a href="mailto:allen@neointeraction.com"><p>allen@neointeraction.com</p></a>
     <p>Ph: +91-95133 38744</p>
 
-    <p>Thanks & Regards,</p>
-    <p>Neointeraction Design</p>
+    <div>Thanks & Regards,</div>
+    <div>Neointeraction Design</div>
     </body> 
     </html>`,
   };

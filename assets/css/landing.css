@@ -670,11 +670,11 @@
   margin-bottom: 10px;
 }
 
-@media screen and (min-width: 768px) {
+/* @media screen and (min-width: 768px) {
   .footer-landing .footer-copyright {
     margin-inline: -5em;
   }
-}
+} */
 
 .subscribe-btn {
   margin-left: auto;
@@ -686,6 +686,13 @@
 }
 .p-0 {
   padding: 0;
+}
+
+.testimonial-mobile {
+  display: none;
+}
+.testimonial-desktop {
+  display: flex;
 }
 
 @media screen and (max-width: 576px){
@@ -736,4 +743,13 @@
   .footer-social-icns {
     display: flex !important;
 }
+  .testimonial-desktop {
+    display: none;
+  }
+  .testimonial-mobile {
+    display: block;
+  }
+  .max-w-80 {
+    max-width: 100%;
+  }
 }

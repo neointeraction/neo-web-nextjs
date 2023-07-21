@@ -1,4 +1,5 @@
 import ClientSlider from "components/ClientSlider";
+import TestimonialSlider from "components/TestimonialSlider";
 import React, { useState, useRef } from "react";
 import ReactWOW from "react-wow";
 import BannerSectionImage from "../assets/images/landing/banner-section.png";
@@ -129,7 +130,7 @@ const BrochureDownloadSuccessToast = () => (
   </div>
 );
 
-const testimonial = [
+export const testimonial = [
   {
     img: T1,
     name: "Noah James",
@@ -790,7 +791,7 @@ const DesignEventLanding = () => {
             <div className="container">
               <h1 className="landing-title">Testimonials</h1>
               <div className="t-card-block">
-                <div className="row">
+                <div className="row testimonial-desktop">
                   {testimonial.map((item) => (
                     <div className="col-md-4">
                       <div className="testimonial-card">
@@ -806,6 +807,9 @@ const DesignEventLanding = () => {
                       </div>
                     </div>
                   ))}
+                </div>
+                <div className="row testimonial-mobile">
+                  <TestimonialSlider />
                 </div>
               </div>
             </div>
