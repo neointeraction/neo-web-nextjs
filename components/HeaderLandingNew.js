@@ -113,19 +113,35 @@ const HeaderLandingNew = ({ upfront }) => {
               </div>
             </div>
             <ul className="horizontal-menu-list">
-              <li
-                className={`${router.pathname === "/" ? "active" : ""}`}
-                onClick={() => handleRoute("/")}
-              >
-                Home
+              <li className={`${router.pathname === "/" ? "active" : ""}`}>
+                <a
+                  href="/"
+                  target="_blank"
+                  style={{
+                    color: "unset",
+                    textDecoration: "none",
+                    outline: "none",
+                  }}
+                >
+                  Home
+                </a>
               </li>
               <li
                 className={` ${
                   router.pathname === "/about-us" ? "active" : ""
                 }`}
-                onClick={() => handleRoute("/about-us")}
               >
-                About Us
+                <a
+                  href="/about-us"
+                  target="_blank"
+                  style={{
+                    color: "unset",
+                    textDecoration: "none",
+                    outline: "none",
+                  }}
+                >
+                  About Us
+                </a>
               </li>
             </ul>
             <div className="n-header-contact">

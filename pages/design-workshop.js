@@ -124,7 +124,7 @@ const SuccessToast = () => (
 );
 
 const BrochureDownloadSuccessToast = () => (
-  <div className="success-msg-download width-md">
+  <div className="success-msg-download width-md" style={{ width: "265px" }}>
     <div className="check-wrap"></div>
     <p>We have successfully sent you the brochure. Please check your mail.!</p>
   </div>

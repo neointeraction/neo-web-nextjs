@@ -382,7 +382,18 @@ function JobCard({ title, text, id }) {
     <div className={`modal-card career-card`}>
       <div>
         <h2 className="mc-title">{title}</h2>
-        <h3 className="mc-text">{text}</h3>
+        <div style={{ maxHeight: "300px" }}>
+          <h3
+            className="mc-text"
+            style={{
+              whiteSpace: "pre-wrap",
+              overflow: "hidden",
+              textOverflow: "ellipsis",
+            }}
+          >
+            {text}
+          </h3>
+        </div>
         <a
           href={`https://app.kapiree.com/info-candidate?id=${id}`}
           target="_blank"
