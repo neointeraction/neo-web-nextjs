@@ -147,7 +147,7 @@ const HeaderLandingNew = ({ upfront }) => {
             <div className="n-header-contact">
               <div className="right-menu-flex">
                 <div className="contact-block-btn">
-                  <a href="https://rzp.io/l/oKso1anR64">
+                  <a href="https://rzp.io/l/shJrvb6lSm">
                     <button class="custom-btn">Register</button>
                   </a>
                 </div>

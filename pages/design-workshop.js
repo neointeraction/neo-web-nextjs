@@ -394,7 +394,7 @@ const DesignEventLanding = () => {
                   </p>
                   <div className="registerblock-banner">
                     <a
-                      href="https://rzp.io/l/oKso1anR64"
+                      href="https://rzp.io/l/shJrvb6lSm"
                       style={{ textDecoration: "none" }}
                     >
                       <button class="custom-btn mob-btn-center">
@@ -548,7 +548,7 @@ const DesignEventLanding = () => {
                   </ReactWOW>
                   <ReactWOW animation="fadeInUp" delay="0s">
                     <div>
-                      <a href="https://rzp.io/l/oKso1anR64">
+                      <a href="https://rzp.io/l/shJrvb6lSm">
                         <button class="custom-btn">Register Now !</button>
                       </a>
                     </div>
@@ -698,7 +698,7 @@ const DesignEventLanding = () => {
                                 : "-"}
                             </h4>
                           </div>
-                          <a href="https://rzp.io/l/oKso1anR64">
+                          <a href="https://rzp.io/l/shJrvb6lSm">
                             <button class="custom-btn">Register Now</button>
                           </a>
                         </div>
