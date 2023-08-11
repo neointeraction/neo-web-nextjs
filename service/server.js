@@ -616,10 +616,9 @@ app.post("/workshop/paid", async (req, res) => {
        <p>Thank You for registering for our Design Workshop! We are thrilled to have you join us and be a part of this program.</p>
 
        <p><strong>Event Details:</strong> </p>
-       <p>Event Name: Design Workshop, 2023</p>
-       <p>Date: 1st July 2023</p>
+       <p>Date: 6th October 2023</p>
        <p>Time: 10:00 am to 05:00 pm</p>
-       <p>Venue: Royal Orchid Hotel, Banglore</p>
+       <p>Venue: Taj Vivanta, Banglore</p>
 
        <p>We have lined up an incredible set of speakers and activities that promise to be both informative and engaging. The event aims to provide valuable insights and networking opportunities for all attendees.</p>
 

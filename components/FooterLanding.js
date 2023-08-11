@@ -213,6 +213,20 @@ const FooterLanding = () => {
                     </li>
                   </ul>
                 </div>
+                <div className="col-xs-4">
+                  <h4 className="footer-links-title">Contact</h4>
+                  <ul className="footer-quick-links">
+                    <li>
+                      <div className="link">Allen Stephen</div>
+                    </li>
+                    <li>
+                      <div className="link">+91 95133 38744</div>
+                    </li>
+                    <li>
+                      <div className="link">allen@neointeraction.com</div>
+                    </li>
+                  </ul>
+                </div>
                 <div className="col-sm-12 p-0">
                   <h4 className="footer-links-title">Subscribe Newsletter</h4>
                   <Subscription isFooter={true} />

@@ -108,7 +108,7 @@ function SubscriptionForm({ status, message, onValidated }) {
     useSubscriptionForm(onValidated);
   return (
     <>
-      <div className="col-md-7">
+      <div className="max-w-50">
         <div className="form-flex">
           <input
             type="text"
