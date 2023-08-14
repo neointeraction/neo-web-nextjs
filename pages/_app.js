@@ -57,6 +57,7 @@ function MyApp({ Component, pageProps }) {
             <Layout>
               <Head>
                 <link rel="shortcut icon" href="/favicon.png" />
+                <meta property ="og:image" itemProp="image" content ="https://www.neointeraction.com/link preview image.png"/>
                 <script
                   async
                   src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"

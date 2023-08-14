@@ -497,8 +497,11 @@
   .mob-center {
     text-align: center;
   }
-  .vc-list {
+  /* .vc-list {
     background: #fef6f7;
+  } */
+  .venue-container {
+    background: #FEF6F7;
   }
   .mob-two {
     color: #e5283f !important;

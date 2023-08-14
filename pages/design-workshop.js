@@ -29,7 +29,7 @@ const data = [
     name: "Sam Thomas",
     designation: "CEO, UX Director ",
     info: [
-      "M. Des From IIT Bombay: 2001-03",
+      "M. Des From IIT Bombay: 2001-03.",
       "More than 23 years of industry experience.",
       "B.Arch from Madras University.",
       "Handled more than 100+ projects.",
@@ -43,11 +43,11 @@ const data = [
     name: "Vanessa Lobo",
     designation: "Aspiring Design Lead",
     info: [
-      "B.Arch from University of Mumbai (2011-16) ",
-      "More than 7 years of Industry Experience",
-      "Handled complete design delivery for 5 projects across diverse domains",
-      "Contributing Researcher and Writer for an anthological publication under People Place Project",
-      "Researcher for Art Deco Mumbai, documented and added 200 Heritage Buildings to the Art Deco Heritage Inventory",
+      "B.Arch from University of Mumbai (2011-16).",
+      "More than 7 years of Industry Experience.",
+      "Handled complete design delivery for 5 projects across diverse domains.",
+      "Contributed to anthologies for People Place Project, featured in Ted Talks, Midday, DNA, Radio Mirchi, Hindustan Times, and INTCESS Turkey, 2015.",
+      "Researcher for Art Deco Mumbai, documented and added 200 Heritage Buildings to the Art Deco Heritage Inventory.",
     ],
   },
 ];
@@ -55,7 +55,9 @@ const data = [
 const programData = [
   {
     time: "10:00 - 10:30",
-    info: "Welcome Message Introduction to the workshop session Faculty & Participants Introduction",
+    info: "Opening Remarks",
+    infotwo:"Introduction to the workshop session",
+    infothree:" Speakers & Participants Introduction",
     break: false,
   },
   {
@@ -70,7 +72,8 @@ const programData = [
   },
   {
     time: "12:30 - 13:00",
-    info: "Real-Life case studies Skill development Practices",
+    info: "Real-Life case studies",
+    infotwo: "Skill development Practices",
     break: false,
   },
   {
@@ -97,19 +100,19 @@ const programData = [
 
 const pricing = [
   {
-    name: "Entry Fee",
+    name: "Entry Fees",
     price: "Rs. 12,000/-",
-    ofrText: "Limited Seats !",
+    ofrText: "Last date to register 1st Oct, 23",
   },
   {
-    name: "Early Bird Discount",
+    name: "Early Bird",
     price: "10% Discount",
-    ofrText: "July 1st - 20th",
+    ofrText: "Last date to avail 25th Aug, 23",
   },
   {
-    name: "Group Discount",
+    name: "Group",
     price: "15% Discount",
-    ofrText: "3 or more Members ",
+    ofrText: "3 or more attendees from same organization",
   },
 ];
 
@@ -133,7 +136,7 @@ const BrochureDownloadSuccessToast = () => (
 export const testimonial = [
   {
     img: T1,
-    name: "Noah James",
+    name: " Ramesh Verma",
     quote:
       "It was an eye-opening experience, the  presentations were very informative!",
   },
@@ -154,10 +157,10 @@ const faqData = [
   {
     question: "If I pay and decide to cancel will I get a refund?",
     answer:
-      "In case of cancellations upto 2 weeks prior to the event you will be accommodated for the upcoming events.",
+      "Cancellations received up to two weeks before the event will be accommodated for future events.",
   },
   {
-    question: "Want to understand more about the event how can I ?",
+    question: "How can I learn more about the event ?",
     answer: `You can get in touch with us by sending us an email to <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a> . If you have any questions or require further assistance, please feel free to drop us a message in the mentioned email address. We will be more than happy to help you !`,
   },
   {
@@ -169,20 +172,20 @@ const faqData = [
   {
     question: "Where is the event happening?",
     answer:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi et justo in libero sodales faucibus quis sed ligula. ",
+      "Taj Vivanta, Bangalore ",
   },
   {
     question: "What all is covered in the fee?",
-    answer: `Included within the registration fee, participants will have access to the following amenities at no additional cost : <ol type="1"><li>Real life UX design case studies</li><li>Skill development practices</li><li>Participation certificate</li><li>Giveaways or goodies from our team</li></ol>`,
+    answer: `Included within the registration fee, participants will have access to the following amenities at no additional cost : <ol type="1"><li>Real-Life Industry case studies</li><li>Skill development practices</li><li>Participation certificate</li><li>Giveaways or goodies from our team</li></ol>`,
   },
   {
-    question: "Will i get  participation certificate?",
+    question: "Will I get  participation certificate?",
     answer:
       "Upon attending this event,you will be presented with a participation certificate as a token of acknowledgement for your active involvement and engagement.",
   },
   {
     question: "What is the last date for registration ?",
-    answer: "Last date of registration: Aug 08, 2023",
+    answer: "Last date of registration: Oct 1st, 2023",
   },
   {
     question: "Is there any other way to register for this event ?",
@@ -190,7 +193,7 @@ const faqData = [
   },
   {
     question:
-      "Can I share my registration to someone else if i am not able to make it ?",
+      "Can I share my registration to someone else if I am not able to make it ?",
     answer: `You are welcome to share your registration with others two weeks before the event.We kindly request that you keep us informed about this by sending an email to <a href="mailto:allen@neointeraction.com">allen@neointeraction.com</a> with the other participants details.`,
   },
 ];
@@ -379,10 +382,10 @@ const DesignEventLanding = () => {
                   <div className="venue-container">
                     <ul className="vc-list">
                       <li className="vc-item mob-one">
-                        Orchid Hotel, Bangalore
+                       6th Oct, 2023 
                       </li>
-                      <li className="vc-item mob-two">1st July 2023</li>
-                      <li className="vc-item mob-three">10:00 am - 05:00 pm</li>
+                      <li className="vc-item mob-two"> 10:00 am - 05:00 pm</li>
+                      <li className="vc-item mob-three">Taj Vivanta, Bangalore</li>
                     </ul>
                   </div>
                 </ReactWOW>
@@ -401,7 +404,7 @@ const DesignEventLanding = () => {
                         Register Now !
                       </button>
                     </a>
-                    <p className="landing-text mob-hide">*Limited seats</p>
+                    <p className="landing-text">*Limited seats</p>
                   </div>
                 </ReactWOW>
               </div>
@@ -521,7 +524,7 @@ const DesignEventLanding = () => {
         <div className="l-about-section">
           <div>
             <ReactWOW animation="fadeIn" delay="0s">
-              <div className="landing-about-section">
+              <div className="landing-about-section about-event-right">
                 <div className="lbs-block">
                   <img
                     className="width-100"
@@ -529,6 +532,7 @@ const DesignEventLanding = () => {
                     alt={"UX design workshop by Neointeraction"}
                   />
                 </div>
+                {/* lbs-block content */}
                 <div className="lbs-block content">
                   <ReactWOW animation="fadeInDown" delay="0s">
                     <h2 className="landing-title">About the Event</h2>
@@ -558,6 +562,7 @@ const DesignEventLanding = () => {
             </ReactWOW>
           </div>
         </div>
+        <div className="bg-long">
         <div className="speaker-section">
           <div className="container">
             <ReactWOW animation="fadeInDown" delay="0s">
@@ -592,18 +597,18 @@ const DesignEventLanding = () => {
                               <div className="col-md-4"></div>
                               <div className="col-md-4">
                                 <ul className="info-list">
-                                  <li> Aspiring Design Heads </li>
-                                  <li> Product Design Manager</li>
-                                  <li>Senior Product Designer </li>
-                                  <li>Senior UX Designer </li>
+                                  <li>Aspiring Design Heads </li>
+                                  <li> Product Design Managers</li>
+                                  <li>Senior Product Designers</li>
+                                  <li>Senior UX Designers</li>
                                 </ul>
                               </div>
                               <div className="col-md-4">
                                 <ul className="info-list">
-                                  <li> Senior UI Designer</li>
-                                  <li> UX Designer</li>
-                                  <li>Visual Designer</li>
-                                  <li>UI Designer </li>
+                                  <li> Senior UI Designers</li>
+                                  <li> UX Designers</li>
+                                  <li>Visual Designers</li>
+                                  <li>UI Designers</li>
                                 </ul>
                               </div>
                             </div>
@@ -617,30 +622,25 @@ const DesignEventLanding = () => {
                               <div className="col-md-8">
                                 <ul className="info-list">
                                   <li>
-                                    Effective whiteboarding techniques for
-                                    successful team collaborations?
+                                  How to design trendy & smart? 
                                   </li>
                                   <li>
-                                    How to arrive at design objectives clearly
-                                    and concisely?
+                                  Know how to validate your design.
                                   </li>
                                   <li>
-                                    How to come out with a design strategy?
+                                  Context setting with effective storyboarding 
                                   </li>
                                   <li>
-                                    How to strategize and plan the design
-                                    sprints?
+                                  How to design MVP's effectively? 
                                   </li>
                                   <li>
-                                    How to bring extraordinary aesthetics to
-                                    your design?
+                                  How to align design with business objectives? 
                                   </li>
                                   <li>
-                                    How to align designs with the business
-                                    objectives?
+                                  How to measure success in Design? 
                                   </li>
                                   <li>
-                                    What makes a successful design manager?
+                                  Driving the business to the leading position using Design.
                                   </li>
                                 </ul>
                               </div>
@@ -657,7 +657,11 @@ const DesignEventLanding = () => {
                                 }`}
                               >
                                 <div className="pb-time">{item.time}</div>
+                                <div className="info-items">
                                 <div className="pb-info">{item.info}</div>
+                                <div className="pb-info">{item.infotwo}</div>
+                                <div className="pb-info">{item.infothree}</div>
+                                </div>
                               </div>
                             ))}
                           </div>
@@ -674,6 +678,7 @@ const DesignEventLanding = () => {
           <div className="register-container">
             <div className="container">
               <h2 className="landing-title">Register Now </h2>
+              <h4 className="register-subtitle">Limited Seats !</h4>
               {/* <p className="landing-subtitle">Limited seats . 5 Days Left !</p> */}
               <div className="price-card-block">
                 <div className="row">
@@ -685,18 +690,18 @@ const DesignEventLanding = () => {
                           <div className="price-block">
                             <h4 className="lpc-price">{item.price}</h4>
                             <h4 className="lpc-price-sub">
-                              (+18% gst) per person{" "}
+                              +18% GST per person{" "}
                             </h4>
                           </div>
                           <div>
                             <h4 className="lpc-offer">{item.ofrText} </h4>
-                            <h4 className="lpc-offer-sub">
+                            {/* <h4 className="lpc-offer-sub">
                               {item.name === "Early Bird Discount"
                                 ? "2023"
                                 : item.name === "Group Discount"
                                 ? "from same organization"
                                 : "-"}
-                            </h4>
+                            </h4> */}
                           </div>
                           <a href="https://rzp.io/l/shJrvb6lSm">
                             <button class="custom-btn">Register Now</button>
@@ -710,35 +715,28 @@ const DesignEventLanding = () => {
             </div>
           </div>
         </ReactWOW>
+        
         <div className="contact-terms-section">
           <div className="container">
             <div className="row">
-              <div className="col-md-4 contact">
-                <h1 className="contact-title">Contact</h1>
-                <p className="landing-text">Allen Stephen</p>
-                <p className="landing-text">+91 95133 38744</p>
-                <p className="landing-text">allen@neointeraction.com</p>
-              </div>
-              <div className="col-md-12">
+              <div className="col-md-8">
                 <h3 className="contact-title">Terms & Conditions</h3>
                 <p className="landing-text width-100">
-                  Participation in event implies agreement to event rules and
-                  assumes personal responsibility for any associated risks. In
-                  case of cancellations upto 2 weeks prior to the event you will
-                  be accommodated for the upcoming events.
+                Participation in event implies agreement to event rules and assumes personal responsibility for any associated risks. Cancellations received up to two weeks before the event will be accommodated for future events.
                 </p>
               </div>
             </div>
           </div>
         </div>
+        </div>
         <ReactWOW animation="fadeInUp" delay="0s">
-          <div className="download-brochure">
+          <div className="download-brochure bg-download-brochure">
             <div className="container">
               <div className="row align-center">
-                <div className="col-md-5">
+                <div className="col-md-12">
                   <h2 className="landing-title">Download Brochure</h2>
                 </div>
-                <div className="col-md-7">
+                <div className="col-md-12">
                   <div className="form-flex">
                     <input
                       type="text"
@@ -795,13 +793,13 @@ const DesignEventLanding = () => {
                   {testimonial.map((item) => (
                     <div className="col-md-4">
                       <div className="testimonial-card">
-                        <div className="testimonial-img-container">
+                        {/* <div className="testimonial-img-container">
                           <img
                             className=""
                             src={item.img}
                             alt={"BannerSectionImage"}
                           />
-                        </div>
+                        </div> */}
                         <h1 className="t-title">{item.name}</h1>
                         <h1 className="t-quote">{item.quote}</h1>
                       </div>
@@ -816,15 +814,17 @@ const DesignEventLanding = () => {
           </div>
         </ReactWOW>
         <ReactWOW animation="fadeInUp" delay="0s">
-          <div className="download-brochure">
+          <div className="download-brochure newsletter-bg">
             <div className="container">
               <div className="row align-center">
-                <div className="col-md-5">
-                  <h2 className="landing-title max-w-80">
-                    Subscribe to our latest design news
+                <div className="col-md-12">
+                  <h2 className="landing-title">
+                    Subscribe to our latest <br/> design news
                   </h2>
                 </div>
+                <div className="col-md-12">
                 <Subscription />
+                </div>
               </div>
             </div>
           </div>
