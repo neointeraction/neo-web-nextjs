@@ -55,7 +55,9 @@ const data = [
 const programData = [
   {
     time: "10:00 - 10:30",
-    info: "Opening Remarks Introduction to the workshop session Speakers & Participants Introduction",
+    info: "Opening Remarks",
+    infotwo:"Introduction to the workshop session",
+    infothree:" Speakers & Participants Introduction",
     break: false,
   },
   {
@@ -70,7 +72,8 @@ const programData = [
   },
   {
     time: "12:30 - 13:00",
-    info: "Real-Life case studies Skill development Practices",
+    info: "Real-Life case studies",
+    infotwo: "Skill development Practices",
     break: false,
   },
   {
@@ -619,29 +622,25 @@ const DesignEventLanding = () => {
                               <div className="col-md-8">
                                 <ul className="info-list">
                                   <li>
-                                    Effective whiteboarding techniques for
-                                    successful team collaborations?
+                                  How to design trendy & smart? 
                                   </li>
                                   <li>
-                                  Know how to validate your design. 
+                                  Know how to validate your design.
                                   </li>
                                   <li>
-                                    How to come out with a design strategy?
+                                  Context setting with effective storyboarding 
                                   </li>
                                   <li>
-                                    How to strategize and plan the design
-                                    sprints?
+                                  How to design MVP's effectively? 
                                   </li>
                                   <li>
-                                    How to bring extraordinary aesthetics to
-                                    your design?
+                                  How to align design with business objectives? 
                                   </li>
                                   <li>
-                                    How to align designs with the business
-                                    objectives?
+                                  How to measure success in Design? 
                                   </li>
                                   <li>
-                                    What makes a successful design manager?
+                                  Driving the business to the leading position using Design.
                                   </li>
                                 </ul>
                               </div>
@@ -658,7 +657,11 @@ const DesignEventLanding = () => {
                                 }`}
                               >
                                 <div className="pb-time">{item.time}</div>
+                                <div className="info-items">
                                 <div className="pb-info">{item.info}</div>
+                                <div className="pb-info">{item.infotwo}</div>
+                                <div className="pb-info">{item.infothree}</div>
+                                </div>
                               </div>
                             ))}
                           </div>
