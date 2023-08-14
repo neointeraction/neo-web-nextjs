@@ -793,13 +793,13 @@ const DesignEventLanding = () => {
                   {testimonial.map((item) => (
                     <div className="col-md-4">
                       <div className="testimonial-card">
-                        <div className="testimonial-img-container">
+                        {/* <div className="testimonial-img-container">
                           <img
                             className=""
                             src={item.img}
                             alt={"BannerSectionImage"}
                           />
-                        </div>
+                        </div> */}
                         <h1 className="t-title">{item.name}</h1>
                         <h1 className="t-quote">{item.quote}</h1>
                       </div>
