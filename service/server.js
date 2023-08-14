@@ -616,16 +616,104 @@ app.post("/workshop/paid", async (req, res) => {
        <p>Thank You for registering for our Design Workshop! We are thrilled to have you join us and be a part of this program.</p>
 
        <p><strong>Event Details:</strong> </p>
-       <p>Event Name: Design Workshop, 2023</p>
-       <p>Date: 1st July 2023</p>
+       
+       <p>Date: 6th October 2023</p>
        <p>Time: 10:00 am to 05:00 pm</p>
-       <p>Venue: Royal Orchid Hotel, Banglore</p>
+       <p>Venue: Taj Vivanta, Bangalore</p>
 
        <p>We have lined up an incredible set of speakers and activities that promise to be both informative and engaging. The event aims to provide valuable insights and networking opportunities for all attendees.</p>
 
        <p>If you have any questions, concerns or need further assistance, please do not hesitate to contact us at :</p>
        <a href="mailto:allen@neointeraction.com"><p>allen@neointeraction.com</p></a>
        <p>Ph: +91-95133 38744</p>
+
+       <div>Thanks & Regards,</div>
+       <div>Neointeraction Design</div>
+       </body> 
+       </html>`,
+    };
+
+    transporter.sendMail(acknowledgementMail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+          error: err,
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+      }
+    });
+
+    res.json({
+      msg: "success",
+      orderId: orderCreationId,
+      paymentId: razorpayPaymentId,
+    });
+  } catch (error) {
+    res.status(500).send(error);
+  }
+});
+
+app.post("/workshop/failed", async (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "unlhgudojkwsqwxg",
+    },
+  });
+  try {
+    // getting the details back from our font-end
+    const {
+      payload: {
+        payment: { entity },
+      },
+    } = req.body;
+
+    const secret = "sam@123";
+    const orderCreationId = entity.order_id;
+    const razorpayPaymentId = entity.id;
+
+    const crypto = require("crypto");
+
+    const shasum = crypto.createHmac("sha256", secret);
+
+    shasum.update(JSON.stringify(req.body));
+
+    const digest = shasum.digest("hex");
+
+    const razorpaySignature = req.headers["x-razorpay-signature"];
+
+    if (digest !== razorpaySignature)
+      return res.status(400).json({ msg: "Transaction not legit!" });
+
+    const { name, email } = entity.notes;
+
+    var acknowledgementMail = {
+      from: "Neointeraction <info@neointeraction.com>",
+      to: email,
+      subject: `Registration Unsuccessful`,
+      html: `<html>
+       <body>
+       <h4>Hey ${name},</h4>
+       <p>We wanted to inform you that we encountered an issue with your payment, which unfortunately prevented us from completing your registration for the upcoming Design Workshop.</p>
+
+       <p><strong>Event Details:</strong> </p>
+
+       <p>Date: 6th October 2023</p>
+       <p>Time: 10:00 am to 05:00 pm</p>
+       <p>Venue: Taj Vivanta, Bangalore</p>
+
+       <p>If you intended to register, kindly using this link: <a href="https://rzp.io/l/shJrvb6lSm">Register Now!</a></p>
+
+       <p>We have lined up an incredible set of speakers and activities that promise to be both informative and engaging. The event aims to provide valuable insights and networking opportunities for all attendees.</p>
+
+       <p>If you have any questions, concerns or need further assistance, please do not hesitate to contact us at :</p>
+       <p>Email: <a href="mailto:allen@neointeraction.com"><p>allen@neointeraction.com</p></a></p>
+       <p>Phone: +91-95133 38744</p>
 
        <div>Thanks & Regards,</div>
        <div>Neointeraction Design</div>
