@@ -62,7 +62,7 @@ const FAQ = [
 
 export default withRouter(
   class career extends Component {
-    constructor(props) {
+    constructor() {
       super();
       this.state = {
         isMouseInside: false,
@@ -90,34 +90,12 @@ export default withRouter(
     };
 
     componentDidMount = async () => {
-      const JobrolesURL =
-        "https://api-vidrec.neointeraction.com/api/v1/plugin/getJobRolesUnderOrganization";
       try {
-        const response = await axios.post(
-          JobrolesURL,
-          {
-            orgId: 70,
-          },
-          {
-            headers: {
-              "Content-Type": "application/json",
-            },
-          }
-        );
-        this.setState({ career: response.data.data });
+        const response = await axios.get(baseUrl + "/careers");
+        this.setState({ career: response.data });
         this.setState({ loading: false });
       } catch (error) {
         this.setState({ error });
-      }
-    };
-
-    componentDidUpdate = async (prevProps, prevState) => {
-      if (
-        this.props.roomId !== prevProps.roomId ||
-        this.state.serverUrl !== prevState.serverUrl
-      ) {
-        this.destroyConnection();
-        this.setupConnection();
       }
     };
 
@@ -226,17 +204,76 @@ export default withRouter(
                     title="Current Openings"
                     subtitle="Here are the current work opportunities available at Neointeraction."
                   />
-                  <div className="row p-cards job-cards">
-                    {this.state.career?.map((item) => (
-                      <div className="col-md-4" key={item?.id}>
-                        <JobCard
-                          title={item?.roleName}
-                          text={item?.roleDiscription}
-                          id={item?.id}
-                        />
-                      </div>
-                    ))}
-                  </div>
+                  {this.state.career.map((item) => (
+                    <div className="row p-cards job-cards">
+                      {item.uxDesigner ? (
+                        <div className="col-md-4">
+                          <ModalCard
+                            className="career-card"
+                            title="ux designer"
+                            text="Responsible for developing functional design solutions that creates better product experiences. The broad responsibility of a UX designer is to ensure that the product logically flows from one step to the next."
+                            buttonText="Apply Now"
+                            cardId="ux"
+                          />
+                        </div>
+                      ) : null}
+                      {item.uiDesigner ? (
+                        <div className="col-md-4">
+                          <ModalCard
+                            className="career-card"
+                            title="ui designer"
+                            text="A creative individual who is responsible for creating the aesthetic look and feel of a product by using standard design principles and practices."
+                            buttonText="Apply Now"
+                            cardId="ui"
+                          />
+                        </div>
+                      ) : null}
+                      {item.uiDeveloper ? (
+                        <div className="col-md-4">
+                          <ModalCard
+                            className="career-card"
+                            title="ui engineer"
+                            text="Responsible for converting the designer’s pixels to codes using the latest UI programming languages. We are looking for candidates who believe in design and are ready to adapt to the latest UI technologies and standards."
+                            buttonText="Apply Now"
+                            cardId="uiEngineer"
+                          />
+                        </div>
+                      ) : null}
+                      {item.digitalMarketer ? (
+                        <div className="col-md-4">
+                          <ModalCard
+                            className="career-card"
+                            title="digital marketing"
+                            text="You will be working as a part of the Digital Marketing & Campaigning team that focuses on planning, executing, tracking and analysing direct marketing campaigns from inception to launch and to the evaluation of results."
+                            buttonText="Apply Now"
+                            cardId="marketing"
+                          />
+                        </div>
+                      ) : null}
+                      {item.projectManager ? (
+                        <div className="col-md-4">
+                          <ModalCard
+                            className="career-card"
+                            title="project manager"
+                            text="An experienced person who can take the lead of managing a design team while maintaining the project’s requirements."
+                            buttonText="Apply Now"
+                            cardId="manager"
+                          />
+                        </div>
+                      ) : null}
+                      {item.analyst ? (
+                        <div className="col-md-4">
+                          <ModalCard
+                            className="career-card"
+                            title="business analyst"
+                            text="This role requires gathering, analyzing, and delivering the requirements to the client along with validating the tasks thoroughly."
+                            buttonText="Apply Now"
+                            cardId="analyst"
+                          />
+                        </div>
+                      ) : null}
+                    </div>
+                  ))}
                 </div>
               </div>
             </ReactWOW>
@@ -373,32 +410,3 @@ export default withRouter(
     }
   }
 );
-
-function JobCard({ title, text, id }) {
-  return (
-    <div className={`modal-card career-card`}>
-      <div>
-        <h2 className="mc-title">{title}</h2>
-        <div style={{ maxHeight: "300px" }}>
-          <h3
-            className="mc-text"
-            style={{
-              whiteSpace: "pre-wrap",
-              overflow: "hidden",
-              textOverflow: "ellipsis",
-            }}
-          >
-            {text}
-          </h3>
-        </div>
-        <a
-          href={`https://app.kapiree.com/info-candidate?id=${id}`}
-          target="_blank"
-          style={{ textDecoration: "none" }}
-        >
-          <button className="custom-btn btn-text card-btn">Apply</button>
-        </a>
-      </div>
-    </div>
-  );
-}
