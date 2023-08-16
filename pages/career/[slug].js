@@ -89,6 +89,28 @@ export default withRouter(
       this.setState({ showModal: false });
     };
 
+    componentDidMount = async () => {
+      const JobrolesURL =
+        "https://api-vidrec.neointeraction.com/api/v1/plugin/getJobRolesUnderOrganization";
+      try {
+        const response = await axios.post(
+          JobrolesURL,
+          {
+            orgId: parseInt(this.props.router.query.slug),
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+        this.setState({ career: response.data.data });
+        this.setState({ loading: false });
+      } catch (error) {
+        this.setState({ error });
+      }
+    };
+
     componentDidUpdate = async (prevProps, prevState) => {
       if (
         this.props.roomId !== prevProps.roomId ||
@@ -191,16 +213,7 @@ export default withRouter(
                       className="custom-btn"
                       href="#openings"
                     >
-                      Job Openings
-                    </AnchorLink>
-                  </li>
-                  <li>
-                    <AnchorLink
-                      offset={() => 60}
-                      className="custom-btn"
-                      href="#intern"
-                    >
-                      Internships
+                      View Job/Internships Openings
                     </AnchorLink>
                   </li>
                 </ul>
@@ -382,16 +395,16 @@ function JobCard({ title, text, id }) {
     <div className={`modal-card career-card`}>
       <div>
         <h2 className="mc-title">{title}</h2>
-        <div style={{ maxHeight: "300px" }}>
+        <div>
           <h3
             className="mc-text"
             style={{
-              whiteSpace: "pre-wrap",
+              whiteSpace: "wrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}
           >
-            {text}
+            {text.substr(0, 190)}...
           </h3>
         </div>
         <a

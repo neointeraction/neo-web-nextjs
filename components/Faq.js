@@ -5,7 +5,7 @@ export default class Faq extends Component {
   render() {
     const { id, faqQue, faqAns } = this.props;
     return (
-      <div className="faq-section">
+      <div className="faq-section-career">
         <h4 className="faq-question">
           {id} {faqQue}
         </h4>

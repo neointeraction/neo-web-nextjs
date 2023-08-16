@@ -188,16 +188,7 @@ export default withRouter(
                       className="custom-btn"
                       href="#openings"
                     >
-                      Job Openings
-                    </AnchorLink>
-                  </li>
-                  <li>
-                    <AnchorLink
-                      offset={() => 60}
-                      className="custom-btn"
-                      href="#intern"
-                    >
-                      Internships
+                      View Job/Internship Openings
                     </AnchorLink>
                   </li>
                 </ul>
@@ -379,16 +370,16 @@ function JobCard({ title, text, id }) {
     <div className={`modal-card career-card`}>
       <div>
         <h2 className="mc-title">{title}</h2>
-        <div style={{ maxHeight: "300px" }}>
+        <div>
           <h3
             className="mc-text"
             style={{
-              whiteSpace: "pre-wrap",
+              whiteSpace: "wrap",
               overflow: "hidden",
               textOverflow: "ellipsis",
             }}
           >
-            {text}
+            {text.substr(0, 190)}...
           </h3>
         </div>
         <a
