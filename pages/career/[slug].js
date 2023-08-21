@@ -282,12 +282,12 @@ export default withRouter(
                           <li>UI Engineer</li>
                           <li>Digital Marketing</li>
                         </ul>
-                        <button
+                        {/* <button
                           className="custom-btn margin-top"
                           onClick={this.handleOpenModal}
                         >
                           Apply Now
-                        </button>
+                        </button> */}
                       </div>
                     }
                   />
