@@ -4,6 +4,7 @@ import Head from "next/head";
 
 import MainLayout from "layouts/MainLayout/MainLayout";
 import LandingLayout from "layouts/LandingLayout/LandingLayout";
+import LandingHeaderOnlyLayout from "layouts/LandingHeaderOnlyLayout/LandingHeaderOnlyLayout";
 
 import { DataProvider } from "context/DataContext";
 import { VideoProvider } from "context/VideoContext";
@@ -49,6 +50,10 @@ function MyApp({ Component, pageProps }) {
     Layout = LandingLayout;
   }
 
+  if (pathname === "/registration-thank-you") {
+    Layout = LandingHeaderOnlyLayout;
+  }
+
   return (
     <DataProvider>
       <VideoProvider>
@@ -57,7 +62,11 @@ function MyApp({ Component, pageProps }) {
             <Layout>
               <Head>
                 <link rel="shortcut icon" href="/favicon.png" />
-                <meta property ="og:image" itemProp="image" content ="https://www.neointeraction.com/link preview image.png"/>
+                <meta
+                  property="og:image"
+                  itemProp="image"
+                  content="https://www.neointeraction.com/link preview image.png"
+                />
                 <script
                   async
                   src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"

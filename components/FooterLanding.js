@@ -116,7 +116,7 @@ const FooterLanding = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="col-md-2">
+                <div className="col-md-2" style={{ padding: 0 }}>
                   <h4 className="footer-links-title">Contact</h4>
                   <ul className="footer-quick-links">
                     <li>

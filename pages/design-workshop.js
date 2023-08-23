@@ -56,8 +56,8 @@ const programData = [
   {
     time: "10:00 - 10:30",
     info: "Opening Remarks",
-    infotwo:"Introduction to the workshop session",
-    infothree:" Speakers & Participants Introduction",
+    infotwo: "Introduction to the workshop session",
+    infothree: " Speakers & Participants Introduction",
     break: false,
   },
   {
@@ -171,8 +171,7 @@ const faqData = [
   },
   {
     question: "Where is the event happening?",
-    answer:
-      "Taj Vivanta, Bangalore ",
+    answer: "Taj Vivanta, Bangalore ",
   },
   {
     question: "What all is covered in the fee?",
@@ -381,11 +380,11 @@ const DesignEventLanding = () => {
                 <ReactWOW animation="fadeInDown" delay="0s">
                   <div className="venue-container">
                     <ul className="vc-list">
-                      <li className="vc-item mob-one">
-                       6th Oct, 2023 
-                      </li>
+                      <li className="vc-item mob-one">6th Oct, 2023</li>
                       <li className="vc-item mob-two"> 10:00 am - 05:00 pm</li>
-                      <li className="vc-item mob-three">Taj Vivanta, Bangalore</li>
+                      <li className="vc-item mob-three">
+                        Taj Vivanta, Bangalore
+                      </li>
                     </ul>
                   </div>
                 </ReactWOW>
@@ -509,226 +508,6 @@ const DesignEventLanding = () => {
             </div>
           </div>
         </div>
-        <div className="landing-client">
-          <div className="container animated fadeIn">
-            <ReactWOW animation="fadeIn" delay="0s">
-              <div>
-                <h2 className="landing-title text-center mb-3 trusted__by">
-                  Trusted By
-                </h2>
-                <ClientSlider landing />
-              </div>
-            </ReactWOW>
-          </div>
-        </div>
-        <div className="l-about-section">
-          <div>
-            <ReactWOW animation="fadeIn" delay="0s">
-              <div className="landing-about-section about-event-right">
-                <div className="lbs-block">
-                  <img
-                    className="width-100"
-                    src={BannerSectionImage}
-                    alt={"UX design workshop by Neointeraction"}
-                  />
-                </div>
-                {/* lbs-block content */}
-                <div className="lbs-block content">
-                  <ReactWOW animation="fadeInDown" delay="0s">
-                    <h2 className="landing-title">About the Event</h2>
-                  </ReactWOW>
-                  <ReactWOW animation="fadeInUp" delay="0s">
-                    <p className="landing-body-text">
-                      We'll take you on an action-packed journey filled with
-                      live case studies, proven design-solving methodologies,
-                      and rapid design thinking tasks. Don't miss out on the
-                      opportunity to learn from the experts in the field.
-                    </p>
-                    <p className="landing-body-text">
-                      Our goal is to enrich aspiring design heads and uplift
-                      their design career path. This is your chance to take your
-                      design skills to the next level.
-                    </p>
-                  </ReactWOW>
-                  <ReactWOW animation="fadeInUp" delay="0s">
-                    <div>
-                      <a href="https://rzp.io/l/shJrvb6lSm">
-                        <button class="custom-btn">Register Now !</button>
-                      </a>
-                    </div>
-                  </ReactWOW>
-                </div>
-              </div>
-            </ReactWOW>
-          </div>
-        </div>
-        <div className="bg-long">
-        <div className="speaker-section">
-          <div className="container">
-            <ReactWOW animation="fadeInDown" delay="0s">
-              <h2 className="landing-title">Speakers</h2>
-            </ReactWOW>
-            <ReactWOW animation="fadeInUp" delay="0s">
-              <div className="speaker-card-container">
-                {data.map((item) => (
-                  <SpeakerCard
-                    image={item.image}
-                    name={item.name}
-                    designation={item.designation}
-                    info={item.info}
-                  />
-                ))}
-              </div>
-            </ReactWOW>
-          </div>
-        </div>
-        <ReactWOW animation="fadeIn" delay="0s">
-          <div className="info-section">
-            <div className="pattern-bottom">
-              <div className="pattern-left-center">
-                <div className="container">
-                  <ReactWOW animation="fadeInUp" delay="0s">
-                    <div className="info-section-card">
-                      <ReactWOW animation="fadeIn" delay="0s">
-                        <div className="is-block">
-                          <h2 className="landing-title">Who should Attend?</h2>
-                          <div className="info-content">
-                            <div className="row">
-                              <div className="col-md-4"></div>
-                              <div className="col-md-4">
-                                <ul className="info-list">
-                                  <li>Aspiring Design Heads </li>
-                                  <li> Product Design Managers</li>
-                                  <li>Senior Product Designers</li>
-                                  <li>Senior UX Designers</li>
-                                </ul>
-                              </div>
-                              <div className="col-md-4">
-                                <ul className="info-list">
-                                  <li> Senior UI Designers</li>
-                                  <li> UX Designers</li>
-                                  <li>Visual Designers</li>
-                                  <li>UI Designers</li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="is-block">
-                          <h2 className="landing-title">Event Takeaways </h2>
-                          <div className="info-content">
-                            <div className="row">
-                              <div className="col-md-4"></div>
-                              <div className="col-md-8">
-                                <ul className="info-list">
-                                  <li>
-                                  How to design trendy & smart? 
-                                  </li>
-                                  <li>
-                                  Know how to validate your design.
-                                  </li>
-                                  <li>
-                                  Context setting with effective storyboarding 
-                                  </li>
-                                  <li>
-                                  How to design MVP's effectively? 
-                                  </li>
-                                  <li>
-                                  How to align design with business objectives? 
-                                  </li>
-                                  <li>
-                                  How to measure success in Design? 
-                                  </li>
-                                  <li>
-                                  Driving the business to the leading position using Design.
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div className="is-block">
-                          <h2 className="landing-title">Program Schedule </h2>
-                          <div className="info-content">
-                            {programData.map((item) => (
-                              <div
-                                className={`program-block ${
-                                  item.break ? "break-time" : ""
-                                }`}
-                              >
-                                <div className="pb-time">{item.time}</div>
-                                <div className="info-items">
-                                <div className="pb-info">{item.info}</div>
-                                <div className="pb-info">{item.infotwo}</div>
-                                <div className="pb-info">{item.infothree}</div>
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
-                      </ReactWOW>
-                    </div>
-                  </ReactWOW>
-                </div>
-              </div>
-            </div>
-          </div>
-        </ReactWOW>
-        <ReactWOW animation="fadeIn" delay="0s">
-          <div className="register-container">
-            <div className="container">
-              <h2 className="landing-title">Register Now </h2>
-              <h4 className="register-subtitle">Limited Seats !</h4>
-              {/* <p className="landing-subtitle">Limited seats . 5 Days Left !</p> */}
-              <div className="price-card-block">
-                <div className="row">
-                  {pricing.map((item) => (
-                    <ReactWOW animation="fadeInUp" delay="0s">
-                      <div className="col-md-4">
-                        <div className="landing-price-card">
-                          <h4 className="lpc-title">{item.name}</h4>
-                          <div className="price-block">
-                            <h4 className="lpc-price">{item.price}</h4>
-                            <h4 className="lpc-price-sub">
-                              +18% GST per person{" "}
-                            </h4>
-                          </div>
-                          <div>
-                            <h4 className="lpc-offer">{item.ofrText} </h4>
-                            {/* <h4 className="lpc-offer-sub">
-                              {item.name === "Early Bird Discount"
-                                ? "2023"
-                                : item.name === "Group Discount"
-                                ? "from same organization"
-                                : "-"}
-                            </h4> */}
-                          </div>
-                          <a href="https://rzp.io/l/shJrvb6lSm">
-                            <button class="custom-btn">Register Now</button>
-                          </a>
-                        </div>
-                      </div>
-                    </ReactWOW>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </ReactWOW>
-        
-        <div className="contact-terms-section">
-          <div className="container">
-            <div className="row">
-              <div className="col-md-8">
-                <h3 className="contact-title">Terms & Conditions</h3>
-                <p className="landing-text width-100">
-                Participation in event implies agreement to event rules and assumes personal responsibility for any associated risks. Cancellations received up to two weeks before the event will be accommodated for future events.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        </div>
         <ReactWOW animation="fadeInUp" delay="0s">
           <div className="download-brochure bg-download-brochure">
             <div className="container">
@@ -784,6 +563,269 @@ const DesignEventLanding = () => {
             </div>
           </div>
         </ReactWOW>
+        <div className="landing-client">
+          <div className="container animated fadeIn">
+            <ReactWOW animation="fadeIn" delay="0s">
+              <div>
+                <h2 className="landing-title text-center mb-3 trusted__by">
+                  Trusted By
+                </h2>
+                <ClientSlider landing />
+              </div>
+            </ReactWOW>
+          </div>
+        </div>
+        <div className="l-about-section">
+          <div>
+            <ReactWOW animation="fadeIn" delay="0s">
+              <div className="landing-about-section about-event-right">
+                <div className="lbs-block">
+                  <img
+                    className="width-100"
+                    src={BannerSectionImage}
+                    alt={"UX design workshop by Neointeraction"}
+                  />
+                </div>
+                {/* lbs-block content */}
+                <div className="lbs-block content">
+                  <ReactWOW animation="fadeInDown" delay="0s">
+                    <h2 className="landing-title">About the Event</h2>
+                  </ReactWOW>
+                  <ReactWOW animation="fadeInUp" delay="0s">
+                    <p className="landing-body-text">
+                      We'll take you on an action-packed journey filled with
+                      live case studies, proven design-solving methodologies,
+                      and rapid design thinking tasks. Don't miss out on the
+                      opportunity to learn from the experts in the field.
+                    </p>
+                    <p className="landing-body-text">
+                      Our goal is to enrich aspiring design heads and uplift
+                      their design career path. This is your chance to take your
+                      design skills to the next level.
+                    </p>
+                  </ReactWOW>
+                  <ReactWOW animation="fadeInUp" delay="0s">
+                    <div>
+                      <a href="https://rzp.io/l/shJrvb6lSm">
+                        <button class="custom-btn">Register Now !</button>
+                      </a>
+                    </div>
+                  </ReactWOW>
+                </div>
+              </div>
+            </ReactWOW>
+          </div>
+        </div>
+        <div className="bg-long">
+          <div className="speaker-section">
+            <div className="container">
+              <ReactWOW animation="fadeInDown" delay="0s">
+                <h2 className="landing-title">Speakers</h2>
+              </ReactWOW>
+              <ReactWOW animation="fadeInUp" delay="0s">
+                <div className="speaker-card-container">
+                  {data.map((item) => (
+                    <SpeakerCard
+                      image={item.image}
+                      name={item.name}
+                      designation={item.designation}
+                      info={item.info}
+                    />
+                  ))}
+                </div>
+              </ReactWOW>
+            </div>
+          </div>
+          <ReactWOW animation="fadeIn" delay="0s">
+            <div className="info-section">
+              <div className="pattern-bottom">
+                <div className="pattern-left-center">
+                  <div className="container">
+                    <ReactWOW animation="fadeInUp" delay="0s">
+                      <div className="info-section-card">
+                        <ReactWOW animation="fadeIn" delay="0s">
+                          <div className="is-block">
+                            <h2 className="landing-title">
+                              Who should Attend?
+                            </h2>
+                            <div className="info-content">
+                              <div className="row">
+                                <div className="col-md-4"></div>
+                                <div className="col-md-4">
+                                  <ul className="info-list">
+                                    <li>Aspiring Design Heads </li>
+                                    <li> Product Design Managers</li>
+                                    <li>Senior Product Designers</li>
+                                    <li>Senior UX Designers</li>
+                                  </ul>
+                                </div>
+                                <div className="col-md-4">
+                                  <ul className="info-list">
+                                    <li> Senior UI Designers</li>
+                                    <li> UX Designers</li>
+                                    <li>Visual Designers</li>
+                                    <li>UI Designers</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="is-block">
+                            <h2 className="landing-title">Event Takeaways </h2>
+                            <div className="info-content">
+                              <div className="row">
+                                <div className="col-md-4"></div>
+                                <div className="col-md-8">
+                                  <ul className="info-list">
+                                    <li>How to design trendy & smart?</li>
+                                    <li>Know how to validate your design.</li>
+                                    <li>
+                                      Context setting with effective
+                                      storyboarding
+                                    </li>
+                                    <li>How to design MVP's effectively?</li>
+                                    <li>
+                                      How to align design with business
+                                      objectives?
+                                    </li>
+                                    <li>How to measure success in Design?</li>
+                                    <li>
+                                      Driving the business to the leading
+                                      position using Design.
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="is-block">
+                            <h2 className="landing-title">Program Schedule </h2>
+                            <div className="info-content">
+                              {programData.map((item) => (
+                                <div
+                                  className={`program-block ${
+                                    item.break ? "break-time" : ""
+                                  }`}
+                                >
+                                  <div className="pb-time">{item.time}</div>
+                                  <div className="info-items">
+                                    <div className="pb-info">{item.info}</div>
+                                    <div className="pb-info">
+                                      {item.infotwo}
+                                    </div>
+                                    <div className="pb-info">
+                                      {item.infothree}
+                                    </div>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        </ReactWOW>
+                      </div>
+                    </ReactWOW>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ReactWOW>
+          <ReactWOW animation="fadeIn" delay="0s">
+            <div className="register-container">
+              <div className="container">
+                <h2 className="landing-title">
+                  Register Now{" "}
+                  <span className="early__bird--discount">
+                    *Early Bird 10% Discount
+                  </span>
+                </h2>
+                <h4 className="register-subtitle">Limited Seats !</h4>
+                {/* <p className="landing-subtitle">Limited seats . 5 Days Left !</p> */}
+                <div className="price-card-block">
+                  <div className="row">
+                    {/* {pricing.map((item) => (
+                    <ReactWOW animation="fadeInUp" delay="0s">
+                      <div className="col-md-4">
+                        <div className="landing-price-card">
+                          <h4 className="lpc-title">{item.name}</h4>
+                          <div className="price-block">
+                            <h4 className="lpc-price">{item.price}</h4>
+                            <h4 className="lpc-price-sub">
+                              +18% GST per person{" "}
+                            </h4>
+                          </div>
+                          <div>
+                            <h4 className="lpc-offer">{item.ofrText} </h4>
+                          </div>
+                          <a href="https://rzp.io/l/shJrvb6lSm">
+                            <button class="custom-btn">Register Now</button>
+                          </a>
+                        </div>
+                      </div>
+                    </ReactWOW>
+                  ))} */}
+                    <ReactWOW animation="fadeInUp" delay="0s">
+                      <div className="col-md-12">
+                        <div className="landing-price-card">
+                          <div className="price__card--content">
+                            <div>
+                              <h4 className="price__card--content-price">
+                                Entry Fee
+                                <span className="lpc-price">Rs.12,000/-</span>
+                              </h4>
+                              <p>(per person)</p>
+                            </div>
+                            <div>
+                              <a href="https://rzp.io/l/shJrvb6lSm">
+                                <button class="custom-btn">Register Now</button>
+                              </a>
+                              <p>
+                                <strong>*</strong>15% <i>Group Discount</i> for
+                                3 or more attendees
+                              </p>
+                            </div>
+                          </div>
+                          <div>
+                            <h5>Note</h5>
+                            <ol>
+                              <li>
+                                Early Bird 10% discount till September 11th,
+                                2023
+                              </li>
+                              <li>
+                                15% Group Discount for 3 or more attendees
+                              </li>
+                              <li>
+                                Last date for registration is 1st October, 2023
+                              </li>
+                              <li>18% GST applicable</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </ReactWOW>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ReactWOW>
+
+          <div className="contact-terms-section">
+            <div className="container">
+              <div className="row">
+                <div className="col-md-8">
+                  <h3 className="contact-title">Terms & Conditions</h3>
+                  <p className="landing-text width-100">
+                    Participation in event implies agreement to event rules and
+                    assumes personal responsibility for any associated risks.
+                    Cancellations received up to two weeks before the event will
+                    be accommodated for future events.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <ReactWOW animation="fadeInUp" delay="0s">
           <div className="testimonial-section">
             <div className="container">
@@ -819,11 +861,11 @@ const DesignEventLanding = () => {
               <div className="row align-center">
                 <div className="col-md-12">
                   <h2 className="landing-title">
-                    Subscribe to our latest <br/> design news
+                    Subscribe to our latest <br /> design news
                   </h2>
                 </div>
                 <div className="col-md-12">
-                <Subscription />
+                  <Subscription />
                 </div>
               </div>
             </div>
