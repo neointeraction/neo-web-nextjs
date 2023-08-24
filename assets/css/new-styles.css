@@ -49,6 +49,11 @@ input[type="number"] {
   width: 100%;
 }
 
+.n-menu-item a {
+  text-decoration: none;
+  color: unset;
+}
+
 .section-overlay {
   position: absolute;
   bottom: 0;

@@ -1,10 +1,15 @@
-import React, { useState, useRef } from "react";
+import React, { useEffect } from "react";
 import ReactWOW from "react-wow";
-import { useEffect } from "react";
 import Head from "next/head";
 import Logo from "assets/images/landing/logo.png";
+import Router from "next/router";
 
 const RegistrationThankYou = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      Router.push("/design-workshop");
+    }, 6000);
+  }, []);
   return (
     <>
       <Head>

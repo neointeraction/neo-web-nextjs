@@ -185,7 +185,7 @@
   background-size: cover;
 }
 .speaker-section {
-  padding: 100px 0 100px 0;
+  padding: 100px 0 0 0;
   /* background-image: url(../images/landing/speaker-bg.png); */
   background-position: 0 0;
   background-repeat: no-repeat;
@@ -373,23 +373,28 @@
 .price__card--content > div:nth-child(2) p {
   max-width: 55%;
   margin-top: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #a3a3ad;
 }
 
 .price__card--content > div:nth-child(2) p i {
   font-style: italic;
 }
-
+.landing-price-card > div:nth-child(2) h5 {
+  color: #a3a3ad;
+  font-size: 1rem;
+}
 .landing-price-card > div:nth-child(2) ol {
   list-style: decimal;
   padding-left: 20px;
   padding-top: 10px;
-  font-size: 0.9rem;
+  font-size: 1rem;
+  color: #a3a3ad;
 }
 
 .early__bird--discount {
-  font-size: 1rem;
-  color: red;
+  font-size: 1.2rem;
+  font-weight: 500;
 }
 
 .price__card--content-price {
@@ -408,7 +413,7 @@
 
 .lpc-price {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 2rem;
   line-height: 150%;
   color: #e5283f;
   padding-left: 10px;
@@ -468,6 +473,10 @@
   color: #fff;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.download-brochure .landing-title span {
+  display: block;
 }
 
 .form-flex {
@@ -846,7 +855,7 @@
     margin: 32px 0;
   }
   .landing-title {
-    font-size: 20px;
+    font-size: 2rem;
   }
   .register-subtitle {
     font-size: 14px;
@@ -940,5 +949,25 @@
   .price__card--content {
     flex-direction: column;
     margin-top: 1.2rem;
+  }
+  .price__card--content > div:first-child {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .price__card--content > div:nth-child(2) {
+    margin: 10px auto;
+    text-align: center;
+  }
+  .price__card--content > div:nth-child(2) p {
+    margin: 10px auto;
+    text-align: center;
+  }
+  .download-brochure .landing-title {
+    text-align: left;
+    margin-bottom: 0;
+  }
+  .download-brochure .landing-title span {
+    display: unset !important;
   }
 }

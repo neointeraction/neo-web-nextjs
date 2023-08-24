@@ -272,41 +272,49 @@ const HeaderLanding = ({ upfront }) => {
         </div>
       ) : (
         <div className={`header-with-panel ${fixed ? "fixed" : ""}`}>
-          <div className="n-header-container">
-            <motion.div
-              className="n-menu"
-              onClick={handleMenuOpen}
-              initial="rest"
-              whileHover="hover"
-              animate="rest"
-            >
-              <motion.img src={Menu} alt="Menu" variants={textMotion} />
-              <motion.p variants={slashMotion} className="n-menu-text">
-                Menu
-              </motion.p>
-            </motion.div>
+          <div className="n-header-container n-header-container-bg">
             <div
-              className="logo-container n-logo-container"
-              onClick={() => handleRoute("/")}
+              style={{
+                display: "flex",
+                minWidth: "65%",
+                justifyContent: "space-between",
+              }}
             >
-              <div className="logo-container n-logo-container">
-                <div className="logo-block block1 blockflip1" />
-                <div className="logo-block block2 blockflip2" />
-                <div className="logo-block block3 blockflip3" />
-                <div className="logo-block block4 blockflip4" />
-                <motion.div
-                  animate={{ opacity: [0, 1] }}
-                  initial="hidden"
-                  transition={{ delay: 0.5, duration: 0.5 }}
-                  className="logo-text"
-                >
-                  <div className="logo-text">
-                    <p>neointeraction design</p>
-                  </div>
-                </motion.div>
+              <motion.div
+                className="n-menu"
+                onClick={handleMenuOpen}
+                initial="rest"
+                whileHover="hover"
+                animate="rest"
+              >
+                <motion.img src={Menu} alt="Menu" variants={textMotion} />
+                <motion.p variants={slashMotion} className="n-menu-text">
+                  Menu
+                </motion.p>
+              </motion.div>
+              <div
+                className="logo-container n-logo-container"
+                onClick={() => handleRoute("/")}
+              >
+                <div className="logo-container n-logo-container">
+                  <div className="logo-block block1 blockflip1" />
+                  <div className="logo-block block2 blockflip2" />
+                  <div className="logo-block block3 blockflip3" />
+                  <div className="logo-block block4 blockflip4" />
+                  <motion.div
+                    animate={{ opacity: [0, 1] }}
+                    initial="hidden"
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                    className="logo-text"
+                  >
+                    <div className="logo-text">
+                      <p>neointeraction design</p>
+                    </div>
+                  </motion.div>
+                </div>
               </div>
             </div>
-            <div className="n-header-contact" style={{ visibility: "hidden" }}>
+            <div className="n-header-contact" style={{ display: "none" }}>
               <motion.div
                 className="n-menu contact-menu-btn"
                 onClick={() => handleRoute("/contact-us")}
@@ -324,6 +332,17 @@ const HeaderLanding = ({ upfront }) => {
                   Contact Us
                 </motion.p>
               </motion.div>
+            </div>
+            <div style={{ marginLeft: "auto" }}>
+              <a href="https://rzp.io/l/shJrvb6lSm">
+                <button
+                  type="button"
+                  class="custom-btn"
+                  style={{ background: "#e5283f", padding: "0.4rem 1.5rem" }}
+                >
+                  Register
+                </button>
+              </a>
             </div>
           </div>
           <AnimatePresence>
@@ -360,19 +379,51 @@ const HeaderLanding = ({ upfront }) => {
                       >
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/" ? "active" : ""
+                            router.pathname === "about" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/")}
+                          onClick={() => handleRoute("/design-workshop#about")}
                         >
-                          Home
+                          About
                         </li>
                         <li
                           className={`n-menu-item ${
-                            router.pathname === "/about-us" ? "active" : ""
+                            router.pathname === "speakers" ? "active" : ""
                           }`}
-                          onClick={() => handleRoute("/about-us")}
+                          onClick={() =>
+                            handleRoute("/design-workshop#speakers")
+                          }
                         >
-                          About Us
+                          Speakers
+                        </li>
+                        <li
+                          className={`n-menu-item ${
+                            router.pathname === "schedule" ? "active" : ""
+                          }`}
+                          onClick={() =>
+                            handleRoute("/design-workshop#schedule")
+                          }
+                        >
+                          Schedule
+                        </li>
+                        <li
+                          className={`n-menu-item ${
+                            router.pathname === "pricing" ? "active" : ""
+                          }`}
+                          onClick={() =>
+                            handleRoute("/design-workshop#pricing")
+                          }
+                        >
+                          Pricing
+                        </li>
+                        <li
+                          className={`n-menu-item ${
+                            router.pathname === "register" ? "active" : ""
+                          }`}
+                          onClick={() =>
+                            handleRoute("/design-workshop#register")
+                          }
+                        >
+                          Register
                         </li>
 
                         <li>

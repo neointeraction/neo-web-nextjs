@@ -112,35 +112,78 @@ const HeaderLandingNew = ({ upfront }) => {
                 </motion.div>
               </div>
             </div>
+            {console.log(router.pathname)}
             <ul className="horizontal-menu-list">
-              <li className={`${router.pathname === "/" ? "active" : ""}`}>
+              <li className={`${router.pathname == "about" ? "active" : ""}`}>
                 <a
-                  href="/"
-                  target="_blank"
+                  href="#about"
                   style={{
                     color: "unset",
                     textDecoration: "none",
                     outline: "none",
                   }}
                 >
-                  Home
+                  About
+                </a>
+              </li>
+              <li
+                className={` ${router.pathname == "speakers" ? "active" : ""}`}
+              >
+                <a
+                  href="#speakers"
+                  style={{
+                    color: "unset",
+                    textDecoration: "none",
+                    outline: "none",
+                  }}
+                >
+                  Speakers
                 </a>
               </li>
               <li
                 className={` ${
-                  router.pathname === "/about-us" ? "active" : ""
+                  router.pathname === "#schedule" ? "active" : ""
                 }`}
               >
                 <a
-                  href="/about-us"
-                  target="_blank"
+                  href="#schedule"
                   style={{
                     color: "unset",
                     textDecoration: "none",
                     outline: "none",
                   }}
                 >
-                  About Us
+                  Schedule
+                </a>
+              </li>
+              <li
+                className={` ${router.pathname === "#pricing" ? "active" : ""}`}
+              >
+                <a
+                  href="#pricing"
+                  style={{
+                    color: "unset",
+                    textDecoration: "none",
+                    outline: "none",
+                  }}
+                >
+                  Pricing
+                </a>
+              </li>
+              <li
+                className={` ${
+                  router.pathname === "#register" ? "active" : ""
+                }`}
+              >
+                <a
+                  href="#register"
+                  style={{
+                    color: "unset",
+                    textDecoration: "none",
+                    outline: "none",
+                  }}
+                >
+                  Register
                 </a>
               </li>
             </ul>

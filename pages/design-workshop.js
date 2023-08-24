@@ -3,7 +3,7 @@ import TestimonialSlider from "components/TestimonialSlider";
 import React, { useState, useRef } from "react";
 import ReactWOW from "react-wow";
 import BannerSectionImage from "../assets/images/landing/banner-section.png";
-import BadgeText from "../assets/images/landing/badge.svg";
+import BadgeText from "../assets/images/landing/logo.png";
 import SpeakerCard from "components/SpeakerCard";
 
 import Sp1 from "../assets/images/landing/sp1.jpg";
@@ -371,20 +371,20 @@ const DesignEventLanding = () => {
                 </ReactWOW>
                 <ReactWOW animation="fadeInDown" delay="0s">
                   <h1 className="landing-title mob-center">
+                    Effective Methods to{" "}
                     <span className="highlight">
-                      Practical and Effective Tools{" "}
+                      Accelerate Design Decisions
                     </span>
-                    to Accelerate Design Solutions
                   </h1>
                 </ReactWOW>
                 <ReactWOW animation="fadeInDown" delay="0s">
                   <div className="venue-container">
                     <ul className="vc-list">
-                      <li className="vc-item mob-one">6th Oct, 2023</li>
-                      <li className="vc-item mob-two"> 10:00 am - 05:00 pm</li>
                       <li className="vc-item mob-three">
                         Taj Vivanta, Bangalore
                       </li>
+                      <li className="vc-item mob-two">6th Oct, 2023</li>
+                      <li className="vc-item mob-three">10:00 am - 05:00 pm</li>
                     </ul>
                   </div>
                 </ReactWOW>
@@ -403,7 +403,12 @@ const DesignEventLanding = () => {
                         Register Now !
                       </button>
                     </a>
-                    <p className="landing-text">*Limited seats</p>
+                    <p
+                      className="landing-text"
+                      style={{ color: "#858585", marginBottom: "4em" }}
+                    >
+                      *Limited seats
+                    </p>
                   </div>
                 </ReactWOW>
               </div>
@@ -482,7 +487,7 @@ const DesignEventLanding = () => {
                           className={`input-custom  ${
                             formData?.company ? "" : "dark"
                           }`}
-                          placeholder="Company"
+                          placeholder="Linkedin"
                         />
                       </div>
                       <button
@@ -529,7 +534,7 @@ const DesignEventLanding = () => {
                         });
                       }}
                       className={`input-custom ${
-                        brochureDetails.name ? "" : "dark"
+                        brochureDetails.name ? "" : ""
                       }`}
                       placeholder="Name"
                     />
@@ -544,9 +549,7 @@ const DesignEventLanding = () => {
                           email: e.target.value,
                         });
                       }}
-                      className={`input-custom ${
-                        brochureDetails.email ? "" : "dark"
-                      }`}
+                      className={`input-custom`}
                       placeholder="E-mail ID"
                     />
                     <button
@@ -575,7 +578,7 @@ const DesignEventLanding = () => {
             </ReactWOW>
           </div>
         </div>
-        <div className="l-about-section">
+        <div className="l-about-section" id="about">
           <div>
             <ReactWOW animation="fadeIn" delay="0s">
               <div className="landing-about-section about-event-right">
@@ -594,9 +597,9 @@ const DesignEventLanding = () => {
                   <ReactWOW animation="fadeInUp" delay="0s">
                     <p className="landing-body-text">
                       We'll take you on an action-packed journey filled with
-                      live case studies, proven design-solving methodologies,
-                      and rapid design thinking tasks. Don't miss out on the
-                      opportunity to learn from the experts in the field.
+                      real-life UX case studies, proven methodologies and rapid
+                      design thinking tasks. Don't miss out on the opportunity
+                      to learn from the experts in the field!
                     </p>
                     <p className="landing-body-text">
                       Our goal is to enrich aspiring design heads and uplift
@@ -604,19 +607,19 @@ const DesignEventLanding = () => {
                       design skills to the next level.
                     </p>
                   </ReactWOW>
-                  <ReactWOW animation="fadeInUp" delay="0s">
+                  {/* <ReactWOW animation="fadeInUp" delay="0s">
                     <div>
                       <a href="https://rzp.io/l/shJrvb6lSm">
                         <button class="custom-btn">Register Now !</button>
                       </a>
                     </div>
-                  </ReactWOW>
+                  </ReactWOW> */}
                 </div>
               </div>
             </ReactWOW>
           </div>
         </div>
-        <div className="bg-long">
+        <div className="bg-long" id="speakers">
           <div className="speaker-section">
             <div className="container">
               <ReactWOW animation="fadeInDown" delay="0s">
@@ -637,7 +640,7 @@ const DesignEventLanding = () => {
             </div>
           </div>
           <ReactWOW animation="fadeIn" delay="0s">
-            <div className="info-section">
+            <div className="info-section" id="schedule">
               <div className="pattern-bottom">
                 <div className="pattern-left-center">
                   <div className="container">
@@ -730,12 +733,12 @@ const DesignEventLanding = () => {
             </div>
           </ReactWOW>
           <ReactWOW animation="fadeIn" delay="0s">
-            <div className="register-container">
+            <div className="register-container" id="register">
               <div className="container">
                 <h2 className="landing-title">
                   Register Now{" "}
                   <span className="early__bird--discount">
-                    *Early Bird 10% Discount
+                    (Early Bird Discount)
                   </span>
                 </h2>
                 <h4 className="register-subtitle">Limited Seats !</h4>
@@ -770,8 +773,8 @@ const DesignEventLanding = () => {
                             <div>
                               <h4 className="price__card--content-price">
                                 Entry Fee
-                                <span className="lpc-price">Rs.12,000/-</span>
                               </h4>
+                              <h4 className="lpc-price">Rs.12,000/-</h4>
                               <p>(per person)</p>
                             </div>
                             <div>
@@ -861,7 +864,7 @@ const DesignEventLanding = () => {
               <div className="row align-center">
                 <div className="col-md-12">
                   <h2 className="landing-title">
-                    Subscribe to our latest <br /> design news
+                    Subscribe to Latest <span> Design News!</span>
                   </h2>
                 </div>
                 <div className="col-md-12">

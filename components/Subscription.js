@@ -74,7 +74,7 @@ function FooterSubscriptionForm({ status, message, onValidated }) {
           type="email"
           id="company"
           name="company"
-          className={`input-custom ${email ? "" : "dark"}`}
+          className={`input-custom`}
           placeholder="E-mail ID"
           value={email}
           onChange={(e) => setEmail(e.currentTarget.value)}
@@ -116,7 +116,7 @@ function SubscriptionForm({ status, message, onValidated }) {
             name="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="input-custom dark"
+            className="input-custom"
             placeholder="E-mail ID"
           />
           <button class="custom-btn" onClick={handleSubscribe}>
