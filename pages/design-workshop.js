@@ -20,6 +20,7 @@ import { useEffect } from "react";
 import logo from "../assets/images/LOGO.svg";
 import Head from "next/head";
 import Subscription from "components/Subscription";
+import Script from "next/script";
 
 const axios = require("axios");
 
@@ -308,6 +309,7 @@ const DesignEventLanding = () => {
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
             }
+            setSubmitted(false);
           });
       } catch (err) {
         console.log("Error", err);
@@ -316,7 +318,6 @@ const DesignEventLanding = () => {
       simpleValidator.current.showMessages();
       forceUpdate(1);
     }
-    setTimeout(() => setSubmitted(false), 5000);
   };
 
   function loadScript(src) {
@@ -354,6 +355,28 @@ const DesignEventLanding = () => {
           rel="canonical"
           href="https://www.neointeraction.com/design-workshop"
         />
+        <Script>
+          {`
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '832998114814348');
+        fbq('track', 'PageView');
+        `}
+          <noscript>
+            <img
+              height="1"
+              width="1"
+              style="display:none"
+              src="https://www.facebook.com/tr?id=832998114814348&ev=PageView&noscript=1"
+            />
+          </noscript>
+        </Script>
       </Head>
       <div className="de-landing-container">
         <div className="landing-banner pattern-right">
@@ -607,13 +630,13 @@ const DesignEventLanding = () => {
                       design skills to the next level.
                     </p>
                   </ReactWOW>
-                  {/* <ReactWOW animation="fadeInUp" delay="0s">
+                  <ReactWOW animation="fadeInUp" delay="0s">
                     <div>
                       <a href="https://rzp.io/l/shJrvb6lSm">
-                        <button class="custom-btn">Register Now !</button>
+                        <button class="custom-btn">Register Now</button>
                       </a>
                     </div>
-                  </ReactWOW> */}
+                  </ReactWOW>
                 </div>
               </div>
             </ReactWOW>
@@ -734,7 +757,7 @@ const DesignEventLanding = () => {
           </ReactWOW>
           <ReactWOW animation="fadeIn" delay="0s">
             <div className="register-container" id="register">
-              <div className="container">
+              <div className="container" id="pricing">
                 <h2 className="landing-title">
                   Register Now{" "}
                   <span className="early__bird--discount">

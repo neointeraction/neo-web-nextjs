@@ -871,7 +871,7 @@
     text-align: left;
   }
   .contact-terms-section {
-    padding-bottom: 40px;
+    padding-bottom: 60px;
   }
   .download-brochure {
     padding: 32px 16px;
@@ -969,5 +969,25 @@
   }
   .download-brochure .landing-title span {
     display: unset !important;
+  }
+  .about-event-right {
+    background-image: none;
+  }
+  .lbs-block.content {
+    background-image: url("../images/landing/mobile-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    min-height: 31em;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .lbs-block.content > * {
+    padding: 0 20px;
+  }
+  .testimonial-section {
+    background-image: none;
   }
 }
