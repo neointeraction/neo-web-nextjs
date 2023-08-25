@@ -990,4 +990,9 @@
   .testimonial-section {
     background-image: none;
   }
+  .bg-long {
+    background-image: url("../images/landing/speaker-mobile-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
