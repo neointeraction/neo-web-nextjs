@@ -1,11 +1,11 @@
 .pookalam {
   /* background: #fbebce; */
   width: 55em;
-  height: 60em;
+  height: 50em;
   color: #d03926;
   margin: 3em auto;
   object-fit: cover;
-  background-image: url("../images/pookalam-bg.png");
+  background-image: url("../images/pookalam_bg_2.png");
   background-size: cover;
   background-repeat: no-repeat;
 }
