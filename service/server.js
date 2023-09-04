@@ -490,7 +490,7 @@ app.post("/workshopmail", async (req, res) => {
        <p>Email - ${email}</p>
        <p>Mobile - ${mobile}</p>
        <p>IP Address - ${ip}</p>
-       <p>company - ${company}</p>     
+       <p>LinkedIn - ${company}</p>     
        </body> 
        </html>`,
     };

@@ -273,15 +273,6 @@ const DesignEventLanding = () => {
     })();
   }, []);
 
-  const resetForm = () => {
-    setFormData({
-      name: "",
-      mobile: "",
-      email: "",
-      company: "",
-    });
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     if (simpleValidator.current.allValid()) {
@@ -304,8 +295,13 @@ const DesignEventLanding = () => {
                 draggable: true,
                 progress: undefined,
               });
-              resetForm();
               setMailSent(false);
+              setFormData({
+                name: "",
+                mobile: "",
+                email: "",
+                company: "",
+              });
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
             }
@@ -319,20 +315,6 @@ const DesignEventLanding = () => {
       forceUpdate(1);
     }
   };
-
-  function loadScript(src) {
-    return new Promise((resolve) => {
-      const script = document.createElement("script");
-      script.src = src;
-      script.onload = () => {
-        resolve(true);
-      };
-      script.onerror = () => {
-        resolve(false);
-      };
-      document.body.appendChild(script);
-    });
-  }
 
   return (
     <>
@@ -510,9 +492,14 @@ const DesignEventLanding = () => {
                           className={`input-custom  ${
                             formData?.company ? "" : "dark"
                           }`}
-                          placeholder="Linkedin"
+                          placeholder="www.linkedin.com/in/kristina-uskova/"
                         />
                       </div>
+                      {simpleValidator.current.message(
+                        "linkedin",
+                        formData?.company,
+                        "required"
+                      )}
                       <button
                         type="submit"
                         class={`loader-btns custom-btn submit-btn-landing contact__submit-button ${
