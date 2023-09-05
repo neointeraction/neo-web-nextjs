@@ -1264,6 +1264,10 @@ input[type="number"] {
   margin-left: 20px;
 }
 
+.header-with-panel.promo-banner-active {
+  transform: translateY(0px);
+}
+
 .horizontal-menu-list li.active {
   font-weight: 600;
   color: #f90400;
@@ -1292,6 +1296,10 @@ input[type="number"] {
 .header-floating.fixed {
   top: 0;
   transition: 0.3s all ease-in-out;
+}
+
+.header-floating.promo-banner-active {
+  top: 200px;
 }
 
 .header-floating .n-header-container {

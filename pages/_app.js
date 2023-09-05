@@ -50,7 +50,10 @@ function MyApp({ Component, pageProps }) {
     Layout = LandingLayout;
   }
 
-  if (pathname === "/registration-thank-you") {
+  if (
+    pathname === "/registration-thank-you" ||
+    pathname === "/contact-thank-you"
+  ) {
     Layout = LandingHeaderOnlyLayout;
   }
 

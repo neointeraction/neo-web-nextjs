@@ -4,7 +4,7 @@ import FooterLanding from "components/FooterLanding";
 
 import HeaderLanding from "components/HeaderLanding";
 import HeaderLandingNew from "components/HeaderLandingNew";
-
+import { Helmet } from "react-helmet";
 import React, { useEffect, useState } from "react";
 
 function LandingLayout({ children }) {
@@ -33,6 +33,11 @@ function LandingLayout({ children }) {
 
       <FooterLanding />
       <Chat phoneNumber="9513338744" />
+
+      <Helmet>
+        <script src="../../assets/js/payment-conversion.js" />
+        <script src="../../assets/js/meta-pixel.js" />
+      </Helmet>
     </div>
   );
 }

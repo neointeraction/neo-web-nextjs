@@ -16,11 +16,12 @@ import FAQAccordion from "components/FAQAccordion";
 import SimpleReactValidator from "simple-react-validator";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect } from "react";
+import { useEffect, createRef } from "react";
 import logo from "../assets/images/LOGO.svg";
 import Head from "next/head";
 import Subscription from "components/Subscription";
-import Script from "next/script";
+import ReCAPTCHA from "react-google-recaptcha";
+import Router from "next/router";
 
 const axios = require("axios");
 
@@ -63,7 +64,7 @@ const programData = [
   },
   {
     time: "10:30 - 12:00",
-    info: "Practical & Effective Tools to Accelerate Design Solutions - Part 1 ",
+    info: "Effective Methods to Accelerate Design Decisions - Part 1",
     break: false,
   },
   {
@@ -84,7 +85,7 @@ const programData = [
   },
   {
     time: "14:00 - 16:00",
-    info: "Practical & Effective Tools to Accelerate Design Solutions - Part 2 ",
+    info: "Effective Methods to Accelerate Design Decisions - Part 2",
     break: false,
   },
   {
@@ -176,7 +177,7 @@ const faqData = [
   },
   {
     question: "What all is covered in the fee?",
-    answer: `Included within the registration fee, participants will have access to the following amenities at no additional cost : <ol type="1"><li>Real-Life Industry case studies</li><li>Skill development practices</li><li>Participation certificate</li><li>Giveaways or goodies from our team</li></ol>`,
+    answer: `Included within the registration fee, participants will have access to the following amenities at no additional cost : <ol type="1"><li>Real-Life Industry case studies</li><li>Skill development practices</li><li>Participation certificate</li><li>Giveaways or goodies from our team</li><li>Lunch</li><li>High Tea</li></ol>`,
   },
   {
     question: "Will I get  participation certificate?",
@@ -204,6 +205,9 @@ const DesignEventLanding = () => {
     mobile: "",
     email: "",
     company: "",
+    employmentType: "",
+    organizationName: "",
+    specify: "",
   });
   const [submitted, setSubmitted] = useState(false);
   const simpleValidator = useRef(new SimpleReactValidator());
@@ -215,6 +219,7 @@ const DesignEventLanding = () => {
     email: "",
   });
   const [isBrochureSubmitting, setIsBrochureSubmitting] = useState(false);
+  const recaptchaRef = createRef();
 
   const handleDownloadBrochure = () => {
     // subscribeEmail
@@ -273,9 +278,28 @@ const DesignEventLanding = () => {
     })();
   }, []);
 
+  function gtag_report_conversion(url) {
+    var callback = function () {
+      if (typeof url != "undefined") {
+        window.location = url;
+      }
+    };
+    gtag("event", "conversion", {
+      send_to: "AW-1067948097/D8-iCJ_VoNwYEMGwnv0D",
+      event_callback: callback,
+    });
+    return false;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     if (simpleValidator.current.allValid()) {
+      const captchaCode = recaptchaRef.current.getValue();
+      if (captchaCode === "") {
+        alert("Please click <I'm not a robot> before sending the submitting");
+        setSubmitted(false);
+        return;
+      }
       setSubmitted(true);
       setMailSent(true);
       formData["ip"] = ip;
@@ -286,22 +310,27 @@ const DesignEventLanding = () => {
           })
           .then((response) => {
             if (response.data.status === "success") {
-              toast(SuccessToast, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-              });
+              // toast(SuccessToast, {
+              //   position: "top-right",
+              //   autoClose: 5000,
+              //   hideProgressBar: true,
+              //   closeOnClick: true,
+              //   pauseOnHover: true,
+              //   draggable: true,
+              //   progress: undefined,
+              // });
               setMailSent(false);
               setFormData({
                 name: "",
                 mobile: "",
                 email: "",
                 company: "",
+                employmentType: "",
+                organizationName: "",
+                specify: "",
               });
+              Router.push("/contact-thank-you");
+              // gtag_report_conversion("");
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
             }
@@ -315,6 +344,10 @@ const DesignEventLanding = () => {
       forceUpdate(1);
     }
   };
+
+  function onCaptchaChange(value) {
+    console.log("Captcha value:", value);
+  }
 
   return (
     <>
@@ -337,28 +370,6 @@ const DesignEventLanding = () => {
           rel="canonical"
           href="https://www.neointeraction.com/design-workshop"
         />
-        <Script>
-          {`
-        !function(f,b,e,v,n,t,s)
-        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-        'https://connect.facebook.net/en_US/fbevents.js');
-        fbq('init', '832998114814348');
-        fbq('track', 'PageView');
-        `}
-          <noscript>
-            <img
-              height="1"
-              width="1"
-              style="display:none"
-              src="https://www.facebook.com/tr?id=832998114814348&ev=PageView&noscript=1"
-            />
-          </noscript>
-        </Script>
       </Head>
       <div className="de-landing-container">
         <div className="landing-banner pattern-right">
@@ -500,6 +511,80 @@ const DesignEventLanding = () => {
                         formData?.company,
                         "required"
                       )}
+                      <div className="form-block">
+                        <select
+                          id="employmentType"
+                          name="employmentType"
+                          value={formData.employmentType}
+                          onChange={handleChange}
+                          className={`input-custom ${
+                            formData?.employmentType ? "" : "dark select-custom"
+                          }`}
+                          placeholder="Type of employment"
+                        >
+                          <option value="">Type of employment</option>
+                          <option value="organization">Organization</option>
+                          <option value="self employed">Self employed</option>
+                          <option value="other">Other</option>
+                        </select>
+                      </div>
+                      {simpleValidator.current.message(
+                        "employmentType",
+                        formData?.employmentType,
+                        "required"
+                      )}
+                      {formData.employmentType == "organization" && (
+                        <>
+                          <div className="form-block">
+                            <input
+                              type="text"
+                              id="organizationName"
+                              name="organizationName"
+                              value={formData.organizationName}
+                              onChange={handleChange}
+                              className={`input-custom  ${
+                                formData?.organizationName ? "" : "dark"
+                              }`}
+                              placeholder="Organization Name"
+                            />
+                          </div>
+                          {simpleValidator.current.message(
+                            "organizationName",
+                            formData?.organizationName,
+                            "required"
+                          )}
+                        </>
+                      )}
+
+                      {(formData.employmentType == "self employed" ||
+                        formData.employmentType == "other") && (
+                        <>
+                          <div className="form-block">
+                            <input
+                              type="text"
+                              id="specify"
+                              name="specify"
+                              value={formData.specify}
+                              onChange={handleChange}
+                              className={`input-custom  ${
+                                formData?.specify ? "" : "dark"
+                              }`}
+                              placeholder="Please Specify"
+                            />
+                          </div>
+                          {simpleValidator.current.message(
+                            "specify",
+                            formData?.specify,
+                            "required"
+                          )}
+                        </>
+                      )}
+                      <ReCAPTCHA
+                        sitekey="6Lcux_0nAAAAAHpUZ0no7GR7f5PtLn7rsB8WLtmH"
+                        ref={recaptchaRef}
+                        size="normal"
+                        onChange={onCaptchaChange}
+                      />
                       <button
                         type="submit"
                         class={`loader-btns custom-btn submit-btn-landing contact__submit-button ${

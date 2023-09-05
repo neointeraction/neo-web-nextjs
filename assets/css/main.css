@@ -1419,6 +1419,12 @@ textarea {
   color: #ababab !important;
 }
 
+.select-custom {
+  font-size: 1rem !important;
+  font-weight: 400 !important;
+  color: #ababab !important;
+}
+
 .input-custom:focus {
   background: #ffffff;
   transition: 0.3s all ease-in-out;
