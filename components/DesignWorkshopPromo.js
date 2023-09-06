@@ -66,17 +66,22 @@ const Wrapper = styled.div`
 
 const LogoContainer = styled.div`
   padding: 2rem;
+  max-width: 15.688em;
+  object-fit: cover;
   img {
     max-width: 100%;
-    width: 15.688em;
-    height: 6.625em;
+    // width: 15.688em;
+    // height: 6.625em;
   }
   @media (max-width: 567px) {
-    padding: 1rem;
-    img {
-      width: 70px;
-      height: 29px;
-    }
+    padding: 0.5rem;
+    max-width: 70px;
+  }
+  @media screen and (max-width: 423px) {
+    padding: 0.5rem;
+  }
+  @media screen and (max-width: 340px) {
+    padding: 0.2rem;
   }
 `;
 
@@ -130,13 +135,21 @@ const Heading = styled.div`
   font-weight: 800;
   line-height: 2.507rem;
   letter-spacing: -0.365px;
-  @media (max-width: 567px) {
+  @media (min-width: 567px) and (max-width: 908px) {
     font-size: 1.2rem;
     line-height: 1.5rem;
   }
-  @media (max-width: 908px) {
+  @media screen and (max-width: 567px) {
     font-size: 1.2rem;
-    line-height: 1.5rem;
+    line-height: 1.6rem;
+  }
+  @media screen and (max-width: 423px) {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  @media screen and (max-width: 340px) {
+    font-size: 0.8rem;
+    line-height: 1rem;
   }
 `;
 
@@ -186,12 +199,21 @@ const Button = styled.button`
     padding: 10px;
     transform: translateX(-25px);
   }
+  @media screen and (max-width: 423px) {
+    font-size: 1rem;
+    padding: 5px;
+  }
+  @media screen and (max-width: 340px) {
+    font-size: 0.8rem;
+    transform: translateX(-5px);
+  }
 `;
 
 const CloseIcon = styled.div`
   position: absolute;
   right: 10px;
   top: 10px;
+  cursor: pointer;
   @media (max-width: 567px) {
     top: 0;
     right: 5px;
