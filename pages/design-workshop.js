@@ -518,7 +518,7 @@ const DesignEventLanding = () => {
                           value={formData.employmentType}
                           onChange={handleChange}
                           className={`input-custom ${
-                            formData?.employmentType ? "" : "dark select-custom"
+                            formData?.employmentType ? "" : "select-custom dark"
                           }`}
                           placeholder="Type of employment"
                         >

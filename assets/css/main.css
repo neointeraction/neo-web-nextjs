@@ -1419,10 +1419,13 @@ textarea {
   color: #ababab !important;
 }
 
-.select-custom {
+.select-custom.dark {
   font-size: 1rem !important;
   font-weight: 400 !important;
   color: #ababab !important;
+}
+.input-custom:focus option {
+  color: #292934;
 }
 
 .input-custom:focus {
@@ -5829,13 +5832,12 @@ textarea {
 }
 
 .footer-landing {
-  background: #2B2B36;
+  background: #2b2b36;
 }
 
-.footer-landing .custom-btn, .header-landing .custom-btn{
-  background: #E5283F;
+.footer-landing .custom-btn,
+.header-landing .custom-btn {
+  background: #e5283f;
 }
-
-
 
 @import url("./landing.css");

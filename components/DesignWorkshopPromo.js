@@ -4,6 +4,7 @@ import Background from "assets/images/landing/promo-banner-bg.jpg";
 import Logo from "assets/images/landing/promo-banner-logo.png";
 import Arrow from "assets/images/landing/promo-banner-arrow.png";
 import Close from "assets/images/landing/promo-banner-close.png";
+import ReactWOW from "react-wow";
 
 import Router from "next/router";
 
@@ -14,31 +15,33 @@ const DesignWorkshopPromo = ({ handleIsOpen }) => {
         background: "#dfce2a",
       }}
     >
-      <Wrapper>
-        <LogoContainer>
-          <img src={Logo} alt="logo" />
-        </LogoContainer>
-        <Content>
-          <Details>
-            <TimeWrapper>
-              <span>Oct, 6th</span> 2023
-            </TimeWrapper>
-            <Separtator>.</Separtator>
-            <PlaceWrapper>Taj Vivanta, Bangalore</PlaceWrapper>
-          </Details>
-          <Heading>Crafted for Design Heads & Product Managers.</Heading>
-          <Tagline>Effective Methods to Accelerate Design Decisions</Tagline>
-        </Content>
-        <ArrowContainer>
-          <img src={Arrow} alt="arrow" />
-        </ArrowContainer>
-        <Button onClick={() => Router.push("/design-workshop")} type="button">
-          Register
-        </Button>
-        <CloseIcon>
-          <img src={Close} alt="close" onClick={handleIsOpen} />
-        </CloseIcon>
-      </Wrapper>
+      <ReactWOW animation="fadeInDown" delay="0s">
+        <Wrapper>
+          <LogoContainer>
+            <img src={Logo} alt="logo" />
+          </LogoContainer>
+          <Content>
+            <Details>
+              <TimeWrapper>
+                <span>Oct, 6th</span> 2023
+              </TimeWrapper>
+              <Separtator>.</Separtator>
+              <PlaceWrapper>Taj Vivanta, Bangalore</PlaceWrapper>
+            </Details>
+            <Heading>Crafted for Design Heads & Product Managers.</Heading>
+            <Tagline>Effective Methods to Accelerate Design Decisions</Tagline>
+          </Content>
+          <ArrowContainer>
+            <img src={Arrow} alt="arrow" />
+          </ArrowContainer>
+          <Button onClick={() => Router.push("/design-workshop")} type="button">
+            Register
+          </Button>
+          <CloseIcon>
+            <img src={Close} alt="close" onClick={handleIsOpen} />
+          </CloseIcon>
+        </Wrapper>
+      </ReactWOW>
     </div>
   );
 };

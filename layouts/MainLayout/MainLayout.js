@@ -12,11 +12,6 @@ function MainLayout({ children }) {
   const [width, setWidth] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
-  useEffect(() => {
-    setTimeout(() => {
-      setIsOpen(true);
-    }, 1000);
-  }, []);
 
   function handleWindowSizeChange() {
     setWidth(window.innerWidth);
@@ -28,12 +23,13 @@ function MainLayout({ children }) {
   }, []);
 
   useEffect(() => {
+    setIsOpen(false);
     if (router.pathname === "/" || router.pathname === "/career") {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
+      setTimeout(() => {
+        setIsOpen(true);
+      }, 3000);
     }
-  }, [router.pathname]);
+  }, [router]);
 
   return (
     <div>
@@ -45,7 +41,7 @@ function MainLayout({ children }) {
           rel="stylesheet"
         ></link>
       </Head>
-      {isOpen && (router.pathname === "/" || router.pathname === "/career") && (
+      {isOpen && (
         <DesignWorkshopPromo
           isOpen={isOpen}
           handleIsOpen={() => setIsOpen(false)}
