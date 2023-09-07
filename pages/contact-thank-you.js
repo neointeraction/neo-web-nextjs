@@ -18,11 +18,6 @@ const ContactThankYou = () => {
           async
           src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
         ></script>
-        <script>
-          {gtag("event", "conversion", {
-            send_to: "AW-1067948097/1Af2CPaoi90YEMGwnv0D",
-          })}
-        </script>
       </Head>
       <ReactWOW animation="fadeInUp" delay="0s">
         <div className="thankyou-section">
