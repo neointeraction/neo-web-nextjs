@@ -14,10 +14,6 @@ const ContactThankYou = () => {
     <>
       <Head>
         <title>Thank You for Contacting Us!</title>
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
-        ></script>
       </Head>
       <ReactWOW animation="fadeInUp" delay="0s">
         <div className="thankyou-section">
