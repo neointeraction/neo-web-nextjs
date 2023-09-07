@@ -14,6 +14,10 @@ const ContactThankYou = () => {
     <>
       <Head>
         <title>Thank You for Contacting Us!</title>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
+        ></script>
         <script>
           {gtag("event", "conversion", {
             send_to: "AW-1067948097/1Af2CPaoi90YEMGwnv0D",

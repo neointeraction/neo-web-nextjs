@@ -365,7 +365,10 @@ const DesignEventLanding = () => {
           content="UX design,UI engineering, Motion design, UX services, UI services, UX projects, UI projects, Video services, design team, design agency"
         /> */}
         <meta property="og:image" content={BannerSectionImage} />
-
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
+        ></script>
         <link
           rel="canonical"
           href="https://www.neointeraction.com/design-workshop"
