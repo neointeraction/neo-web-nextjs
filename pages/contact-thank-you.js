@@ -14,6 +14,11 @@ const ContactThankYou = () => {
     <>
       <Head>
         <title>Thank You for Contacting Us!</title>
+        <script>
+          {gtag("event", "conversion", {
+            send_to: "AW-1067948097/1Af2CPaoi90YEMGwnv0D",
+          })}
+        </script>
       </Head>
       <ReactWOW animation="fadeInUp" delay="0s">
         <div className="thankyou-section">

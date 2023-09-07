@@ -95,6 +95,9 @@ const Content = styled.div`
     flex-direction: column-reverse;
     width: 250px;
   }
+  @media screen and (max-width: 390px) {
+    width: 190px;
+  }
 `;
 
 const Details = styled.div`
@@ -116,6 +119,7 @@ const Separtator = styled.h6`
 
 const TimeWrapper = styled.div`
   padding-right: 0.625rem;
+  color: #181711;
   span {
     font-weight: bold;
   }
@@ -124,6 +128,7 @@ const TimeWrapper = styled.div`
 const PlaceWrapper = styled.h3`
   padding-left: 0.625rem;
   font-weight: 400;
+  color: #181711;
 `;
 
 const Heading = styled.div`
@@ -203,9 +208,10 @@ const Button = styled.button`
     font-size: 1rem;
     padding: 5px;
   }
-  @media screen and (max-width: 340px) {
+  @media screen and (max-width: 390px) {
     font-size: 0.8rem;
     transform: translateX(-5px);
+    border-radius: 2.766px;
   }
 `;
 
