@@ -496,7 +496,7 @@ const DesignEventLanding = () => {
                         formData?.email,
                         "required|email"
                       )}
-                      <div className="form-block">
+                      {/* <div className="form-block">
                         <input
                           type="text"
                           id="company"
@@ -513,7 +513,7 @@ const DesignEventLanding = () => {
                         "linkedin",
                         formData?.company,
                         "required"
-                      )}
+                      )} */}
                       <div className="form-block">
                         <select
                           id="employmentType"

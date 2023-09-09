@@ -477,7 +477,8 @@ app.post("/workshopmail", async (req, res) => {
     },
   });
 
-  const { name, mobile, email, company, ip } = req.body;
+  const { name, mobile, email, employmentType, organizationName, specify, ip } =
+    req.body;
 
   try {
     var mail = {
@@ -490,7 +491,9 @@ app.post("/workshopmail", async (req, res) => {
        <p>Email - ${email}</p>
        <p>Mobile - ${mobile}</p>
        <p>IP Address - ${ip}</p>
-       <p>LinkedIn - ${company}</p>     
+       <p>Employment Type - ${employmentType}</p>  
+       <p>Organization Name - ${organizationName}</p>
+       <p>Specify - ${specify}</p>   
        </body> 
        </html>`,
     };
@@ -503,7 +506,7 @@ app.post("/workshopmail", async (req, res) => {
       <body>
         <p>Hey ${name},</p>
         <p>
-          Thankyou for contacting us! We have received your details and our team
+          Thank you for contacting us! We have received your details and our team
           will be reaching out to you soon.
         </p>
     
