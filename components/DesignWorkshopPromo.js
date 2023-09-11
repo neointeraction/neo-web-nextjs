@@ -61,6 +61,7 @@ const Wrapper = styled.div`
   transition: 0.5s all;
   @media (max-width: 567px) {
     height: 75px;
+    padding: 0.5rem;
   }
 `;
 
@@ -75,7 +76,7 @@ const LogoContainer = styled.div`
   }
   @media (max-width: 567px) {
     padding: 0.5rem;
-    max-width: 70px;
+    max-width: 120px;
   }
   @media screen and (max-width: 423px) {
     padding: 0.5rem;
@@ -123,12 +124,18 @@ const TimeWrapper = styled.div`
   span {
     font-weight: bold;
   }
+  @media (max-width: 567px) {
+    padding-right: 0.225rem;
+  }
 `;
 
 const PlaceWrapper = styled.h3`
   padding-left: 0.625rem;
   font-weight: 400;
   color: #181711;
+  @media (max-width: 567px) {
+    padding-left: 0.225rem;
+  }
 `;
 
 const Heading = styled.div`
@@ -145,15 +152,15 @@ const Heading = styled.div`
     line-height: 1.5rem;
   }
   @media screen and (max-width: 567px) {
-    font-size: 1.2rem;
-    line-height: 1.6rem;
-  }
-  @media screen and (max-width: 423px) {
     font-size: 1rem;
     line-height: 1.2rem;
   }
+  @media screen and (max-width: 423px) {
+    font-size: 0.72rem;
+    line-height: 0.8rem;
+  }
   @media screen and (max-width: 340px) {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     line-height: 1rem;
   }
 `;
@@ -201,17 +208,19 @@ const Button = styled.button`
   transform: translateX(-15px);
   @media (max-width: 567px) {
     font-size: 1rem;
-    padding: 10px;
     transform: translateX(-25px);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 2.766px;
   }
   @media screen and (max-width: 423px) {
     font-size: 1rem;
     padding: 5px;
+    transform: translateX(-10px);
   }
   @media screen and (max-width: 390px) {
     font-size: 0.8rem;
-    transform: translateX(-5px);
-    border-radius: 2.766px;
+    text-decoration: none;
   }
 `;
 
