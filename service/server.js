@@ -636,6 +636,26 @@ app.post("/workshop/paid", async (req, res) => {
        </html>`,
     };
 
+    const { amount, currency, contact, method } = entity;
+
+    var supportMail = {
+      from: email,
+      to: ["allen@neointeraction.com", "info@neointeraction.com"],
+      subject: `Registration Confirmed - Design workshop : ${name}`,
+      html: `<html>
+       <body>
+       <p>Name - ${name}</p>
+       <p>Email - ${email}</p>
+       <p>Contact - ${contact}</p>
+       <p>Amount - ${amount}</p>
+       <p>Currency - ${currency}</p>
+       <p>Method - ${method}</p>
+       <p>Order ID - ${orderCreationId}</p>
+       <p>Payment ID - ${razorpayPaymentId}</p>
+       </body> 
+       </html>`,
+    };
+
     transporter.sendMail(acknowledgementMail, (err, data) => {
       if (err) {
         res.json({
@@ -645,6 +665,17 @@ app.post("/workshop/paid", async (req, res) => {
       } else {
         res.json({
           status: "success",
+        });
+        transporter.sendMail(supportMail, (err, data) => {
+          if (err) {
+            res.json({
+              status: "fail",
+            });
+          } else {
+            res.json({
+              status: "success",
+            });
+          }
         });
       }
     });
