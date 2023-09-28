@@ -25,6 +25,7 @@ import internImg from "assets/images/internship.jpeg";
 import HomeTeam from "pageComponents/homepage/HomeTeam";
 import Breadcrumbs from "nextjs-breadcrumbs";
 // import testVideo from "assets/images/testimonial-temp.png";
+import KapireeLogo from "assets/images/Kapiree-logo.jpg";
 
 const FAQ = [
   {
@@ -213,10 +214,20 @@ export default withRouter(
             <ReactWOW animation="fadeIn" offset={-200}>
               <div className="opening-section" id="openings">
                 <div className="container">
-                  <SectionTitle
-                    title="Current Openings"
-                    subtitle="Here are the current work opportunities available at Neointeraction."
-                  />
+                  <div className="flex-space-between">
+                    <SectionTitle
+                      title="Current Openings"
+                      subtitle="Here are the current work opportunities available at Neointeraction."
+                    />
+                    <div>
+                      <h5>Powered by</h5>
+                      <img
+                        src={KapireeLogo}
+                        width={150}
+                        alt="powered by Kapiree"
+                      />
+                    </div>
+                  </div>
                   <div className="row p-cards job-cards">
                     {this.state.career?.map((item) => (
                       <div className="col-md-4" key={item?.id}>
