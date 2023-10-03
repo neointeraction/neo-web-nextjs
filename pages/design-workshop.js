@@ -28,22 +28,24 @@ const axios = require("axios");
 const data = [
   {
     image: Sp1,
+    title: "Key Speaker",
     name: "Sam Thomas",
     designation: "CEO, UX Director ",
     info: [
       "M. Des From IIT Bombay: 2001-03.",
-      "More than 23 years of industry experience.",
+      "23 yr of Industry experience",
       "B.Arch from Madras University.",
-      "Handled more than 100+ projects.",
-      "Handled more than 100+ clients.",
+      "Lead and delivered 100+ projects",
+      "Collaborated with 100+ clients",
       "Advisor for many startups and corporates nationally and internationally.",
       "Specialist in ROI based Design Approach",
     ],
   },
   {
     image: Sp2,
+    title: "Workshop coordinator",
     name: "Vanessa Lobo",
-    designation: "Aspiring Design Lead",
+    designation: "UX Designer",
     info: [
       "B.Arch from University of Mumbai (2011-16).",
       "More than 7 years of Industry Experience.",
@@ -57,23 +59,23 @@ const data = [
 const programData = [
   {
     time: "10:00 - 10:30",
-    info: "Opening Remarks",
+    info: "Opening remarks",
     infotwo: "Introduction to the workshop session",
-    infothree: " Speakers & Participants Introduction",
+    infothree: " Speakers & participants introduction",
     break: false,
   },
   {
-    time: "10:30 - 12:00",
+    time: "10:30 - 11:30",
     info: "Effective Methods to Accelerate Design Decisions - Part 1",
     break: false,
   },
   {
-    time: "12:00 - 12:30",
+    time: "11:30 - 12:00",
     info: "High Tea",
     break: true,
   },
   {
-    time: "12:30 - 13:00",
+    time: "12:00 - 13:00",
     info: "Real-Life case studies",
     infotwo: "Skill development Practices",
     break: false,
@@ -694,15 +696,16 @@ const DesignEventLanding = () => {
                   </ReactWOW>
                   <ReactWOW animation="fadeInUp" delay="0s">
                     <p className="landing-body-text">
-                      We'll take you on an action-packed journey filled with
-                      real-life UX case studies, proven methodologies and rapid
-                      design thinking tasks. Don't miss out on the opportunity
-                      to learn from the experts in the field!
+                      Learn “Industry vetted design decision taking skills”
+                      through an engaging session filled with real-life UX case
+                      studies, proven methodologies and rapid design thinking
+                      tasks. Don't miss out on the opportunity to learn from the
+                      experts in the field!
                     </p>
                     <p className="landing-body-text">
                       Our goal is to enrich aspiring design heads and uplift
-                      their design career path. This is your chance to take your
-                      design skills to the next level.
+                      your design career path. This is a great chance to take
+                      design decision making skills to the next level.
                     </p>
                   </ReactWOW>
                   <ReactWOW animation="fadeInUp" delay="0s">
@@ -720,9 +723,9 @@ const DesignEventLanding = () => {
         <div className="bg-long" id="speakers">
           <div className="speaker-section">
             <div className="container">
-              <ReactWOW animation="fadeInDown" delay="0s">
+              {/* <ReactWOW animation="fadeInDown" delay="0s">
                 <h2 className="landing-title">Speakers</h2>
-              </ReactWOW>
+              </ReactWOW> */}
               <ReactWOW animation="fadeInUp" delay="0s">
                 <div className="speaker-card-container">
                   {data.map((item) => (
@@ -731,6 +734,7 @@ const DesignEventLanding = () => {
                       name={item.name}
                       designation={item.designation}
                       info={item.info}
+                      title={item.title}
                     />
                   ))}
                 </div>
