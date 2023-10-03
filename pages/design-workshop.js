@@ -35,7 +35,7 @@ const data = [
       "M. Des From IIT Bombay: 2001-03.",
       "23 yr of Industry experience",
       "B.Arch from Madras University.",
-      "Lead and delivered 100+ projects",
+      "Managed and delivered 500+ projects",
       "Collaborated with 100+ clients",
       "Advisor for many startups and corporates nationally and internationally.",
       "Specialist in ROI based Design Approach",
@@ -696,7 +696,7 @@ const DesignEventLanding = () => {
                   </ReactWOW>
                   <ReactWOW animation="fadeInUp" delay="0s">
                     <p className="landing-body-text">
-                      Learn “Industry vetted design decision taking skills”
+                      Learn “Industry vetted design decision making skills”
                       through an engaging session filled with real-life UX case
                       studies, proven methodologies and rapid design thinking
                       tasks. Don't miss out on the opportunity to learn from the
@@ -782,21 +782,21 @@ const DesignEventLanding = () => {
                                 <div className="col-md-4"></div>
                                 <div className="col-md-8">
                                   <ul className="info-list">
-                                    <li>How to design trendy & smart?</li>
+                                    {/* <li>How to design trendy & smart?</li> */}
                                     <li>Know how to validate your design.</li>
+                                    <li>Context setting with storyboarding</li>
                                     <li>
-                                      Context setting with effective
-                                      storyboarding
+                                      How to design MLP's(minimum lovable
+                                      product) effectively?
                                     </li>
-                                    <li>How to design MVP's effectively?</li>
                                     <li>
                                       How to align design with business
                                       objectives?
                                     </li>
-                                    <li>How to measure success in Design?</li>
+                                    <li>How to measure success in design?</li>
                                     <li>
                                       Driving the business to the leading
-                                      position using Design.
+                                      position using design.
                                     </li>
                                   </ul>
                                 </div>
