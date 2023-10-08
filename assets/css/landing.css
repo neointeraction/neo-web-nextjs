@@ -204,8 +204,14 @@
   background: #ffffff;
   box-shadow: 5px 4px 10px rgba(255, 158, 158, 0.25);
   border-radius: 20px;
-  padding: 60px 40px;
+  padding: 40px;
   width: 100%;
+}
+
+.speaker-title {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 15px;
 }
 
 .speaker-dp {
