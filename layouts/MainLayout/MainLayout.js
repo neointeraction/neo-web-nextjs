@@ -22,14 +22,14 @@ function MainLayout({ children }) {
     window.addEventListener("resize", handleWindowSizeChange);
   }, []);
 
-  useEffect(() => {
-    setIsOpen(false);
-    if (router.pathname === "/" || router.pathname === "/career") {
-      setTimeout(() => {
-        setIsOpen(true);
-      }, 3000);
-    }
-  }, [router]);
+  // useEffect(() => {
+  //   setIsOpen(false);
+  //   if (router.pathname === "/" || router.pathname === "/career") {
+  //     setTimeout(() => {
+  //       setIsOpen(true);
+  //     }, 3000);
+  //   }
+  // }, [router]);
 
   return (
     <div>
@@ -41,16 +41,16 @@ function MainLayout({ children }) {
           rel="stylesheet"
         ></link>
       </Head>
-      {isOpen && (
+      {/* {isOpen && (
         <DesignWorkshopPromo
           isOpen={isOpen}
           handleIsOpen={() => setIsOpen(false)}
         />
-      )}
+      )} */}
       {width === 0 ? null : width <= 768 ? (
-        <Header upfront={width <= 768 ? false : true} isOpen={isOpen} />
+        <Header upfront={width <= 768 ? false : true} />
       ) : width >= 769 ? (
-        <HeaderNew isOpen={isOpen} />
+        <HeaderNew />
       ) : null}
 
       {children}

@@ -660,6 +660,11 @@ input.form-control {
   cursor: pointer;
 }
 
+.custom-btn:disabled {
+  background: #ccc;
+  pointer-events: none;
+}
+
 .custom-btn:hover {
   background: #be0315;
   transition: 0.3s all ease-in-out;
@@ -5863,6 +5868,9 @@ textarea {
     justify-content: flex-end;
     align-items: center;
   }
+}
+.header-landing .custom-btn:disabled {
+  background: #ccc;
 }
 
 @import url("./landing.css");

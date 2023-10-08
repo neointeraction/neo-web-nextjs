@@ -414,14 +414,14 @@ const DesignEventLanding = () => {
                     this design centric workshop is perfect for you.
                   </p>
                   <div className="registerblock-banner">
-                    <a
+                    {/* <a
                       href="https://rzp.io/l/shJrvb6lSm"
                       style={{ textDecoration: "none" }}
-                    >
-                      <button class="custom-btn mob-btn-center">
-                        Register Now !
-                      </button>
-                    </a>
+                    > */}
+                    <button class="custom-btn mob-btn-center" disabled>
+                      Register Now !
+                    </button>
+                    {/* </a> */}
                     <p
                       className="landing-text"
                       style={{ color: "#858585", marginBottom: "4em" }}
@@ -593,7 +593,7 @@ const DesignEventLanding = () => {
                         class={`loader-btns custom-btn submit-btn-landing contact__submit-button ${
                           submitted ? "pointer-events-none" : ""
                         }`}
-                        disabled={submitted}
+                        disabled={true}
                       >
                         Submit
                         {mailSent ? (
@@ -707,9 +707,11 @@ const DesignEventLanding = () => {
                   </ReactWOW>
                   <ReactWOW animation="fadeInUp" delay="0s">
                     <div>
-                      <a href="https://rzp.io/l/shJrvb6lSm">
-                        <button class="custom-btn">Register Now</button>
-                      </a>
+                      {/* <a href="https://rzp.io/l/shJrvb6lSm"> */}
+                      <button class="custom-btn" disabled>
+                        Register Now
+                      </button>
+                      {/* </a> */}
                     </div>
                   </ReactWOW>
                 </div>
@@ -876,9 +878,11 @@ const DesignEventLanding = () => {
                               <p>(per person)</p>
                             </div>
                             <div>
-                              <a href="https://rzp.io/l/shJrvb6lSm">
-                                <button class="custom-btn">Register Now</button>
-                              </a>
+                              {/* <a href="https://rzp.io/l/shJrvb6lSm"> */}
+                              <button disabled class="custom-btn">
+                                Register Now
+                              </button>
+                              {/* </a> */}
                               <p>
                                 <strong>*</strong>15% <i>Group Discount</i> for
                                 3 or more attendees

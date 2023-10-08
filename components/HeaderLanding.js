@@ -334,15 +334,16 @@ const HeaderLanding = ({ upfront }) => {
               </motion.div>
             </div>
             <div style={{ marginLeft: "auto" }}>
-              <a href="https://rzp.io/l/shJrvb6lSm">
-                <button
-                  type="button"
-                  class="custom-btn"
-                  style={{ background: "#e5283f", padding: "0.4rem 1.5rem" }}
-                >
-                  Register
-                </button>
-              </a>
+              {/* <a href="https://rzp.io/l/shJrvb6lSm"> */}
+              <button
+                type="button"
+                class="custom-btn"
+                style={{ background: "#e5283f", padding: "0.4rem 1.5rem" }}
+                disabled
+              >
+                Register
+              </button>
+              {/* </a> */}
             </div>
           </div>
           <AnimatePresence>
