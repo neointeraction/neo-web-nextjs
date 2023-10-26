@@ -4101,11 +4101,11 @@ textarea {
 
 .slick-next {
   right: 0;
-  z-index: 9;
+  z-index: 8;
 }
 .slick-prev {
   left: 0;
-  z-index: 9;
+  z-index: 8;
 }
 
 .process-outcom-card {

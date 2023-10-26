@@ -49,6 +49,7 @@ const Footer = () => {
                     Services
                   </li>
                   <li onClick={() => handleRoute("/career")}>Careers</li>
+                  <li onClick={() => handleRoute("/events")}>Events</li>
                   <li onClick={() => handleRoute("/contact-us")}>Contact Us</li>
                   <li onClick={() => handleRoute("/blogs")}>Blogs</li>
                 </ul>

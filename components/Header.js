@@ -463,6 +463,14 @@ const Header = ({ upfront }) => {
                         </li>
                         <li
                           className={`n-menu-item ${
+                            router.pathname === "/events" ? "active" : ""
+                          }`}
+                          onClick={() => handleRoute("/events")}
+                        >
+                          Events
+                        </li>
+                        <li
+                          className={`n-menu-item ${
                             router.pathname ===
                               "/ui-ux-design-developer-services-company-bangalore" ||
                             router.pathname ===

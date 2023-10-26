@@ -520,4 +520,124 @@
   .mob-hide {
     display: none;
   }
+
+  /* events  */
+
+  .event-section-home {
+    margin-top: 0;
+  }
+
+  .event-why .image-right img {
+    width: 100%;
+  }
+
+  .event-connect {
+    margin-right: 0;
+  }
+
+  .event-filter-btn-group {
+    font-size: 14px;
+    flex-wrap: wrap;
+  }
+
+  .event-slider-container {
+    width: 100%;
+  }
+
+  .event-section-home .slick-prev {
+    display: none !important;
+  }
+
+  .event-section-home .slick-next {
+    display: none !important;
+  }
+  .event-text-block {
+    width: 400px;
+  }
+
+  .event-section-home .b-banner-subtext .underline-highlight::after {
+    bottom: -3px;
+  }
+
+  .event-slider1 {
+    height: 600px;
+    background-position: 24% 0;
+  }
+  .event-slider2 {
+    height: 600px;
+    background-position: 80% 0;
+  }
+  .event-slider3 {
+    height: 600px;
+    background-position: 70% 0;
+  }
+
+  .event-page-title {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+
+  .event-section-title {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left !important;
+  }
+
+  .event-title {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 109%;
+    letter-spacing: -0.264px;
+  }
+
+  .featured-event-tag {
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .event-content {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .event-date-location li {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .featured-event-summary {
+    display: block !important;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 350;
+  }
+
+  .event-contact-card .event-image {
+    display: none !important;
+  }
+
+  .event-connect {
+    padding-bottom: 20px;
+  }
+
+  .event-contact-card {
+    margin-bottom: 40px !important;
+    margin-top: -30px !important;
+  }
+
+  .event-body {
+    padding-top: 20px !important;
+  }
+
+  .event-tm-card {
+    margin-bottom: 20px;
+  }
 }

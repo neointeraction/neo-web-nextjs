@@ -12,6 +12,8 @@ import { BlogProvider } from "context/BlogContext";
 import { BFSIProvider } from "context/BFSIContext";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { EventProvider } from "context/EventContext";
+import { TestimonialProvider } from "context/TestimonialContext";
 
 function MyApp({ Component, pageProps }) {
   // useEffect(() => {
@@ -62,33 +64,37 @@ function MyApp({ Component, pageProps }) {
       <VideoProvider>
         <BlogProvider>
           <BFSIProvider>
-            <Layout>
-              <Head>
-                <link rel="shortcut icon" href="/favicon.png" />
-                <meta
-                  property="og:image"
-                  itemProp="image"
-                  content="https://www.neointeraction.com/link preview image.png"
-                />
-                <script
-                  async
-                  src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
-                ></script>
-                <script
-                  dangerouslySetInnerHTML={{
-                    __html: `
+            <EventProvider>
+              <TestimonialProvider>
+                <Layout>
+                  <Head>
+                    <link rel="shortcut icon" href="/favicon.png" />
+                    <meta
+                      property="og:image"
+                      itemProp="image"
+                      content="https://www.neointeraction.com/link preview image.png"
+                    />
+                    <script
+                      async
+                      src="https://www.googletagmanager.com/gtag/js?id=UA-12661901-1"
+                    ></script>
+                    <script
+                      dangerouslySetInnerHTML={{
+                        __html: `
      (function(c,l,a,r,i,t,y){
       c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
       t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
       y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
   })(window, document, "clarity", "script", "cr09zcax3l");
 `,
-                  }}
-                />
-                ;
-              </Head>
-              <Component {...pageProps} />
-            </Layout>
+                      }}
+                    />
+                    ;
+                  </Head>
+                  <Component {...pageProps} />
+                </Layout>
+              </TestimonialProvider>
+            </EventProvider>
           </BFSIProvider>
         </BlogProvider>
       </VideoProvider>

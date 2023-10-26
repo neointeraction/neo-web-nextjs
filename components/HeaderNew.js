@@ -155,6 +155,12 @@ const HeaderNew = () => {
                 Projects
               </li>
               <li
+                className={`${router.pathname === "/events" ? "active" : ""}`}
+                onClick={() => handleRoute("/events")}
+              >
+                Events
+              </li>
+              <li
                 className={`${router.pathname === "/blogs" ? "active" : ""}`}
                 onClick={() => handleRoute("/blogs")}
               >
