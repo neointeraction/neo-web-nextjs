@@ -221,7 +221,7 @@ class ProjectDetailPage extends Component {
                           <p className="featured-blog-author">
                             by&nbsp;
                             <span className="author-name">
-                              {data.blogAuthor ? data.blogAuthor : null}
+                              {data.eventAuthor ? data.eventAuthor : null}
                               &nbsp;
                             </span>
                             <span className="posted-time">
@@ -342,7 +342,7 @@ class ProjectDetailPage extends Component {
                           />
                         </div>
                         <div className="col-md-9">
-                          <p className="blog-author-name">{data.blogAuthor}</p>
+                          <p className="blog-author-name">{data.eventAuthor}</p>
                           <p className="blog-text">
                             {data.event_detail?.aboutAuthor}
                           </p>

@@ -35,7 +35,7 @@ const EventsBannerSlider = () => {
   }, [controls, inView, inView1, controls1]);
 
   var slideSettings = {
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 6000,
     fade: true,
     dots: false,
@@ -82,8 +82,10 @@ const EventsBannerSlider = () => {
                   variants={titleVariant}
                   className="b-banner-title"
                 >
-                  Designing for Impact <br />
-                  <span className="highlight"> From Concept to Reality </span>
+                  Designing Profits:{" "}
+                  <span className="highlight">
+                    A Journey to Crafting Success{" "}
+                  </span>
                 </motion.h2>
                 <motion.h4
                   initial="hidden"
@@ -91,7 +93,11 @@ const EventsBannerSlider = () => {
                   variants={subTitleVariant}
                   className="b-banner-subtext"
                 >
-                  Empowering Design Enthusiasts
+                  Unlocking{" "}
+                  <span className="underline-highlight">
+                    Business Potential
+                  </span>{" "}
+                  Through Thoughtful UX/UI
                 </motion.h4>
               </div>
             </div>
@@ -109,8 +115,8 @@ const EventsBannerSlider = () => {
                     variants={titleVariant}
                     className="b-banner-title"
                   >
-                    Design Event Series for the
-                    <span className="highlight"> Design Community </span>
+                    Navigate Business
+                    <span className="highlight"> Transformation </span>
                   </motion.h2>
                 </AnimatePresence>
                 <motion.h4
@@ -119,11 +125,11 @@ const EventsBannerSlider = () => {
                   variants={subTitleVariant}
                   className="b-banner-subtext"
                 >
-                  Where{" "}
+                  Maximizing
                   <span className="underline-highlight">
-                    Creativity Meets Community
+                    Business Impact
                   </span>{" "}
-                  Join Us for Exclusive Workshops and Events!
+                  Through UX/UI Master
                 </motion.h4>
               </div>
             </div>
@@ -140,8 +146,9 @@ const EventsBannerSlider = () => {
                   variants={titleVariant}
                   className="b-banner-title"
                 >
-                  Design & Development Synergy:
-                  <span className="highlight"> Bridging the Gap </span>
+                  Discovering the
+                  <span className="highlight"> ROI </span>
+                  of Exceptional UX/UI
                 </motion.h2>
                 <motion.h4
                   ref={ref}
@@ -150,11 +157,8 @@ const EventsBannerSlider = () => {
                   variants={subTitleVariant}
                   className="b-banner-subtext"
                 >
-                  Where{" "}
-                  <span className="underline-highlight">
-                    Collaboration Meets Creation
-                  </span>{" "}
-                  Join the revolution of UX/UI
+                  <span className="underline-highlight">Proven Strategies</span>{" "}
+                  for Real-World Results
                 </motion.h4>
               </div>
             </div>

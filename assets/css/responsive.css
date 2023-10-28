@@ -552,7 +552,8 @@
     display: none !important;
   }
   .event-text-block {
-    width: 400px;
+    width: 345px;
+    padding: 15px 0px 15px 30px;
   }
 
   .event-section-home .b-banner-subtext .underline-highlight::after {
@@ -639,5 +640,25 @@
 
   .event-tm-card {
     margin-bottom: 20px;
+  }
+
+  .event-why .image-right {
+    flex-direction: column-reverse;
+  }
+
+  .event-why .image-right .it-content {
+    margin-bottom: 20px;
+  }
+  .events-card-section .row {
+    flex-direction: column-reverse;
+  }
+
+  .events-card-section {
+    border-radius: 8px !important;
+  }
+
+  .event-image img {
+    width: 100%;
+    height: 226px;
   }
 }

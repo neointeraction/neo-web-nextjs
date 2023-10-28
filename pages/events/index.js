@@ -270,7 +270,13 @@ export default withRouter(
                                   >
                                     <a
                                       target="_blank"
-                                      style={{ textDecoration: "none" }}
+                                      style={{
+                                        pointerEvents:
+                                          item.eventTag === "Upcoming Event"
+                                            ? "none"
+                                            : "auto",
+                                        textDecoration: "none",
+                                      }}
                                     >
                                       <div className="link">
                                         <div className="featured-blog-card events-card-section">
@@ -319,7 +325,16 @@ export default withRouter(
                                                   </p>
                                                 </div>
                                                 <div>
-                                                  <button class="custom-btn">
+                                                  <button
+                                                    class="custom-btn"
+                                                    style={{
+                                                      visibility:
+                                                        item.eventTag ===
+                                                        "Upcoming Event"
+                                                          ? "hidden"
+                                                          : "visible",
+                                                    }}
+                                                  >
                                                     Read More
                                                   </button>
                                                 </div>
