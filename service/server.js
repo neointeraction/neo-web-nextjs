@@ -833,3 +833,81 @@ app.post("/brochure", (req, res) => {
     }
   });
 });
+
+app.post("/eventUpdateMail", async (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "unlhgudojkwsqwxg",
+    },
+  });
+
+  const { email } = req.body;
+
+  try {
+    var mail = {
+      from: "Neointeraction Design <info@neointeraction.com>",
+      to: email,
+      subject: `Welcome Aboard: Your Event Updates Are on the Way!`,
+      html: `<html>
+       <body>
+       <h4>Hello,</h4>
+
+       <p>Thank you for signing up to stay informed about our future events. We're thrilled to have you as part of our community!Exciting times ahead!</p>
+
+       <p>We'll keep it brief and relevant – no inbox clutter, just valuable insights and opportunities. You're in control, and you can adjust your preferences anytime.</p>
+
+       <p>Stay tuned for what's coming next.</p>
+       
+       <div>Thanks & Regards,</div>
+       <div>Neointeraction Design</div>
+       </body> 
+       </html>`,
+    };
+
+    var acknowledgementMail = {
+      from: "Neointeraction <info@neointeraction.com>",
+      to: ["allen@neointeraction.com", "sam@neointeraction.com"],
+      subject: `New email registered for event updates`,
+      html: `<html>
+      <body>
+        <p>Hey,</p>
+        <p>
+          email: ${email}
+        </p>
+      </body>
+    </html>
+    `,
+    };
+
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+          error: err,
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+        transporter.sendMail(acknowledgementMail, (err, data) => {
+          if (err) {
+            res.json({
+              status: "fail",
+            });
+          } else {
+            res.json({
+              status: "success",
+            });
+          }
+        });
+      }
+    });
+  } catch (error) {
+    res.json({
+      status: "fail",
+      error: error.message,
+    });
+  }
+});

@@ -8,6 +8,7 @@ import axios from "axios";
 
 import { withRouter } from "next/router";
 
+import { ToastContainer, toast } from "react-toastify";
 import Loader from "components/Loader";
 import { BlogContext } from "context/BlogContext";
 import SectionTitle from "components/SectionTitle";
@@ -22,7 +23,7 @@ import EventImage from "assets/images/events/event1.jpg";
 import ClientSlider from "components/ClientSlider";
 import { EventContext } from "context/EventContext";
 import { TestimonialContext } from "context/TestimonialContext";
-
+import SimpleReactValidator from "simple-react-validator";
 import ECBanner from "assets/images/events/ec.jpg";
 
 // export async function getStaticProps(context) {
@@ -49,8 +50,12 @@ export default withRouter(
         filter: undefined,
         eventCategory: [],
         loading: true,
+        eventEmail: "",
+        isMailSent: false,
       };
       this.handleBack = this.handleBack.bind(this);
+      this.submitEventUpdateMail = this.submitEventUpdateMail.bind(this);
+      this.validator = new SimpleReactValidator();
     }
 
     mouseEnter = () => {
@@ -80,6 +85,57 @@ export default withRouter(
 
     handleBack() {
       this.props.router.back();
+    }
+
+    submitEventUpdateMail(e) {
+      e.preventDefault();
+      if (this.validator.allValid()) {
+        this.setState({ isMailSent: true });
+        // const url = "https://www.neointeraction.com/server/eventUpdateMail"
+        const url = "http://localhost:4000/eventUpdateMail";
+        try {
+          axios
+            .post(url, {
+              email: this.state.eventEmail,
+            })
+            .then((response) => {
+              if (response.data.status === "success") {
+                toast(
+                  <div className="success-msg-download width-md">
+                    <div
+                      className="check-wrap"
+                      style={{ flexBasis: "17%" }}
+                    ></div>
+                    <p>
+                      Thank you for registering. We will send you the event
+                      updates shortly.
+                    </p>
+                  </div>,
+                  {
+                    position: "top-right",
+                    autoClose: 5000,
+                    hideProgressBar: true,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                    progress: undefined,
+                  }
+                );
+                this.setState({ isMailSent: false });
+                this.setState({ eventEmail: "" });
+              } else if (response.data.status === "fail") {
+                alert("Message failed to send.");
+              }
+            });
+        } catch (err) {
+          console.log("Error", err);
+        }
+      } else {
+        this.validator.showMessages();
+        // rerender to show messages for the first time
+        // you can use the autoForceUpdate option to do this automatically`
+        this.forceUpdate();
+      }
     }
 
     render() {
@@ -416,16 +472,38 @@ export default withRouter(
                               Don’t want to miss out on {""}
                               <span>future events ?</span>
                             </h2>
-                            <div class="form-flex event-form-flex">
-                              <input
-                                type="text"
-                                id="email"
-                                name="email"
-                                value=""
-                                class="input-custom"
-                                placeholder="E-mail ID"
-                              />
-                              <button class="custom-btn">Submit</button>
+                            <div className="event-form-flex">
+                              <div
+                                class="form-flex"
+                                style={{ gridGap: 0, gap: 0 }}
+                              >
+                                <input
+                                  type="text"
+                                  id="email"
+                                  name="email"
+                                  value={this.state.eventEmail}
+                                  class="input-custom"
+                                  placeholder="E-mail ID"
+                                  onChange={(e) =>
+                                    this.setState({
+                                      eventEmail: e.target.value,
+                                    })
+                                  }
+                                />
+                                <button
+                                  type="button"
+                                  class="custom-btn"
+                                  disabled={this.state.isMailSent}
+                                  onClick={this.submitEventUpdateMail}
+                                >
+                                  Submit
+                                </button>
+                              </div>
+                              {this.validator.message(
+                                "email",
+                                this.state.eventEmail,
+                                "required|email"
+                              )}
                             </div>
                             <p className="event-sub-text">
                               Whether you would like to be our sponsor or a
@@ -449,6 +527,7 @@ export default withRouter(
               </div>
             </div>
           )}
+          <ToastContainer />
         </div>
       );
     }
