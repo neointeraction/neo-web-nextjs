@@ -91,8 +91,8 @@ export default withRouter(
       e.preventDefault();
       if (this.validator.allValid()) {
         this.setState({ isMailSent: true });
-        // const url = "https://www.neointeraction.com/server/eventUpdateMail"
-        const url = "http://localhost:4000/eventUpdateMail";
+        const url = "https://www.neointeraction.com/server/eventUpdateMail";
+        // const url = "http://localhost:4000/eventUpdateMail";
         try {
           axios
             .post(url, {
