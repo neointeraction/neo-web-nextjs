@@ -95,6 +95,10 @@ function MyApp({ Component, pageProps }) {
                       }}
                     />
                     ;
+                    <link
+                      href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap"
+                      rel="stylesheet"
+                    ></link>
                   </Head>
                   <Component {...pageProps} />
                 </Layout>
