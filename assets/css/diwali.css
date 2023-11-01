@@ -21,9 +21,6 @@
   line-height: normal;
   background: #4a0c9b;
   border-radius: 10px;
-  filter: drop-shadow(
-    0px 2.1558823585510254px 2.1558823585510254px rgba(0, 0, 0, 0.1)
-  );
   padding: 0 5px 5px;
 }
 
@@ -140,8 +137,7 @@ section h2 {
 }
 
 .diwali .main-pattern {
-  content: "";
-  background-image: url(../images/diwali/Header.png);
+  background-image: url(../images/diwali/header-logo.png);
   height: 381px;
   background-repeat: no-repeat;
   width: 805px;
