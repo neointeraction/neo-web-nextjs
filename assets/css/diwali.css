@@ -116,7 +116,7 @@ section h2 {
 }
 
 .diwali .pattern {
-  background-image: url("../images/diwali/footer.png");
+  background-image: url(../images/diwali/footer.png);
   height: 91px;
   width: 1443px;
   position: absolute;
@@ -130,7 +130,7 @@ section h2 {
 }
 
 .diwali .left-pattern {
-  background-image: url("../images/diwali/left-pattern.png");
+  background-image: url(../images/diwali/left-pattern.png);
   height: 726px;
   background-repeat: no-repeat;
   width: 247px;
@@ -141,7 +141,7 @@ section h2 {
 
 .diwali .main-pattern {
   content: "";
-  background-image: url("../images/diwali/Header.png");
+  background-image: url(../images/diwali/Header.png);
   height: 381px;
   background-repeat: no-repeat;
   width: 805px;
@@ -152,7 +152,7 @@ section h2 {
 }
 
 .diwali .right-pattern {
-  background-image: url("../images/diwali/right-pattern.png");
+  background-image: url(../images/diwali/right-pattern.png);
   height: 726px;
   background-repeat: no-repeat;
   width: 247px;
