@@ -76,7 +76,7 @@ const diwali = () => {
         </div>
       </section>
 
-      <section>
+      <section className="guidelines">
         <h2>Submission Guidelines:</h2>
         <ol>
           <li>
@@ -92,9 +92,9 @@ const diwali = () => {
             </p>
           </li>
         </ol>
-      </section>
 
-      <section className="pattern"></section>
+        <div className="pattern"></div>
+      </section>
     </div>
   );
 };
