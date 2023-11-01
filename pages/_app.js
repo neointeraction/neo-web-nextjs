@@ -14,6 +14,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { EventProvider } from "context/EventContext";
 import { TestimonialProvider } from "context/TestimonialContext";
+import MainHeaderOnlyLayout from "layouts/MainHeaderOnlyLayout/MainHeaderOnlyLayout";
 
 function MyApp({ Component, pageProps }) {
   // useEffect(() => {
@@ -57,6 +58,10 @@ function MyApp({ Component, pageProps }) {
     pathname === "/contact-thank-you"
   ) {
     Layout = LandingHeaderOnlyLayout;
+  }
+
+  if (pathname === "/diwali") {
+    Layout = MainHeaderOnlyLayout;
   }
 
   return (
