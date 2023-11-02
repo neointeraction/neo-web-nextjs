@@ -13,7 +13,7 @@
   color: #f5fa09;
   text-align: center;
   font-family: Rowdies;
-  font-size: 21.559px;
+  font-size: 1.35rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -35,7 +35,7 @@
 
   text-align: center;
   /* font-family: Montserrat; */
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -56,24 +56,28 @@
   color: #180037;
 
   text-align: center;
-  font-size: 26.55px;
+  font-size: 1.65rem;
   font-weight: 500;
   padding: 0.5em 1em;
   margin: 0 20px;
+}
+
+.diwali .button-container {
+  z-index: 2;
 }
 
 .diwali .condition {
   padding-top: 8px;
   font-style: italic;
   color: #e4d0ff;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
 }
 
 .diwali section h2 {
   color: #f2f2f2;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 700;
   margin-top: 2em;
   margin-bottom: 1em;
@@ -86,7 +90,7 @@
 .diwali ol li {
   color: #e4d0ff;
   max-width: 468px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 500;
   padding-bottom: 10px;
 }
@@ -154,11 +158,6 @@
 }
 
 @media (max-width: 576px) {
-  .diwali .main-pattern {
-    transform: scaleX(0.7) translateX(-78%);
-    width: 706px;
-  }
-
   .diwali .content {
     max-width: 500px;
   }
@@ -169,5 +168,32 @@
 
   .diwali .category {
     max-width: 150px;
+  }
+  .diwali .main-pattern {
+    background-image: url(../images/diwali/header.svg);
+    transform: scale(0.7) translateX(-70%);
+  }
+}
+
+@media (max-width: 428px) {
+  .diwali .content {
+    max-width: 327px;
+    text-align: center;
+    /* font-size: 11.497px; */
+    font-weight: 500;
+  }
+
+  /* .diwali section h2 {
+    font-size: 13.797px;
+  }
+  .diwali p {
+    font-size: 11.497px;
+  }
+  .diwali .highlight {
+    font-size: 11.277px;
+  } */
+  .diwali button {
+    /* font-size: 15.263px; */
+    padding: 0.3em;
   }
 }
