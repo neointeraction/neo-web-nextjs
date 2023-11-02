@@ -70,13 +70,11 @@
   font-weight: 400;
 }
 
-section h2 {
+.diwali section h2 {
   color: #f2f2f2;
   text-align: center;
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   margin-top: 2em;
   margin-bottom: 1em;
 }
@@ -93,7 +91,7 @@ section h2 {
   padding-bottom: 10px;
 }
 
-.flex {
+.diwali .flex {
   display: flex;
 }
 
