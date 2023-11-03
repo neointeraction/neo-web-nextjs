@@ -12,6 +12,7 @@ import HomeTeam from "pageComponents/homepage/HomeTeam";
 import BlogSection from "pageComponents/homepage/BlogSection";
 import ContactSection from "pageComponents/homepage/ContactSection";
 import HomeBannerSlider from "pageComponents/homepage/HomeBannerSlider";
+import EventsSection from "pageComponents/homepage/EventsSection";
 
 const Home = () => {
   const router = useRouter();
@@ -57,6 +58,9 @@ const Home = () => {
           </section>
           <section className="section">
             <Clients />
+          </section>
+          <section className="section">
+            <EventsSection />
           </section>
           <section className="section">
             <HomeTeam />

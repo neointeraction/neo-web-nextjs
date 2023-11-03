@@ -72,32 +72,30 @@ const EventsBannerSlider = () => {
   return (
     <div>
       <Slider {...slideSettings}>
-        <div className="event-slider1" ref={ref}>
+        <div className="event-slider3">
           <div className="event-slider-container">
             <div className="slider-content">
               <div className="event-text-block">
                 <motion.h2
+                  ref={ref}
                   initial="hidden"
                   animate={controls}
                   variants={titleVariant}
                   className="b-banner-title"
                 >
-                  Designing Profits:{" "}
-                  <span className="highlight">
-                    A Journey to Crafting Success{" "}
-                  </span>
+                  Discovering the
+                  <span className="highlight"> ROI </span>
+                  of Exceptional UXUI
                 </motion.h2>
                 <motion.h4
+                  ref={ref}
                   initial="hidden"
                   animate={controls}
                   variants={subTitleVariant}
                   className="b-banner-subtext"
                 >
-                  Unlocking{" "}
-                  <span className="underline-highlight">
-                    Business Potential
-                  </span>{" "}
-                  Through Thoughtful UX/UI
+                  <span className="underline-highlight">Proven Strategies</span>{" "}
+                  for Real World Results
                 </motion.h4>
               </div>
             </div>
@@ -125,40 +123,38 @@ const EventsBannerSlider = () => {
                   variants={subTitleVariant}
                   className="b-banner-subtext"
                 >
-                  Maximizing
-                  <span className="underline-highlight">
-                    Business Impact
-                  </span>{" "}
-                  Through UX/UI Master
+                  Maximizing{" "}
+                  <span className="underline-highlight">Business Impact</span>{" "}
+                  through UX/UI Masterclass
                 </motion.h4>
               </div>
             </div>
           </div>
         </div>
-        <div className="event-slider3">
+        <div className="event-slider1" ref={ref}>
           <div className="event-slider-container">
             <div className="slider-content">
               <div className="event-text-block">
                 <motion.h2
-                  ref={ref}
                   initial="hidden"
                   animate={controls}
                   variants={titleVariant}
                   className="b-banner-title"
                 >
-                  Discovering the
-                  <span className="highlight"> ROI </span>
-                  of Exceptional UX/UI
+                  Journey to
+                  <span className="highlight">Crafting Success </span>
                 </motion.h2>
                 <motion.h4
-                  ref={ref}
                   initial="hidden"
                   animate={controls}
                   variants={subTitleVariant}
                   className="b-banner-subtext"
                 >
-                  <span className="underline-highlight">Proven Strategies</span>{" "}
-                  for Real-World Results
+                  Unlocking{" "}
+                  <span className="underline-highlight">
+                    Business Potential
+                  </span>{" "}
+                  Through Thoughtful UX/UI
                 </motion.h4>
               </div>
             </div>

@@ -20,6 +20,11 @@ import UI from "assets/images/n-images/animated/ui.svg";
 import Design from "assets/images/n-images/animated/design.svg";
 import ArrowRight from "assets/images/n-images/view-more-arrow.svg";
 
+import UXDesign from "assets/images/ux-design.svg";
+import ProductDesign from "assets/images/product-design.svg";
+import UIEngineering from "assets/images/ui-eng.svg";
+import DesignTransformation from "assets/images/design-transformation.svg";
+
 const titleVariant = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
   hidden: { opacity: 0, y: -5 },
@@ -70,72 +75,100 @@ const ServiceSection = ({ inner }) => {
       )}
 
       <div className="row">
-        <div className={`${inner ? "col-md-5" : "col-md-6"}`}>
+        <div
+          className={`${
+            inner ? "col-md-5" : "col-md-6"
+          } justify-content-center`}
+        >
           <AnimatePresence>
             {activeAccord === "ux" && (
-              // <motion.img
-              //   // initial={{ opacity: 0 }}
-              //   // animate={{ opacity: 1, transition: { duration: 0.5 } }}
-              //   // exit={{ opacity: 0 }}
-              //   key="ux"
-              //   initial={{ x: -200, y: 0, opacity: 0 }}
-              //   animate={{ x: 0, y: 0, opacity: 1 }}
-              //   src={UX}
-              //   alt="UX"
-              //   className="service-img"
-              // />
-              <motion.div
-                key="product"
+              <motion.img
+                // initial={{ opacity: 0 }}
+                // animate={{ opacity: 1, transition: { duration: 0.5 } }}
+                // exit={{ opacity: 0 }}
+                key="ux"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
+                src={UXDesign}
+                alt="UX"
                 className="service-img"
-              >
-                <object type="image/svg+xml" data={UX}>
-                  <img key="ux" src={UX} alt="UX" />
-                </object>
-              </motion.div>
+              />
+              // <motion.div
+              //   key="product"
+              //   initial={{ x: -200, y: 0, opacity: 0 }}
+              //   animate={{ x: 0, y: 0, opacity: 1 }}
+              //   className="service-img"
+              // >
+              //   <object type="image/svg+xml" data={UX}>
+              //     <img key="ux" src={UX} alt="UX" />
+              //   </object>
+              // </motion.div>
             )}
           </AnimatePresence>
           <AnimatePresence>
             {activeAccord === "product" && (
-              <motion.div
-                key="product"
+              // <motion.div
+              //   key="product"
+              //   initial={{ x: -200, y: 0, opacity: 0 }}
+              //   animate={{ x: 0, y: 0, opacity: 1 }}
+              //   className="service-img"
+              // >
+              //   <object type="image/svg+xml" data={Product}>
+              //     <img key="ux" src={Product} alt="UX" />
+              //   </object>
+              // </motion.div>
+              <motion.img
+                key="ux"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
+                src={ProductDesign}
+                alt="UX"
                 className="service-img"
-              >
-                <object type="image/svg+xml" data={Product}>
-                  <img key="ux" src={Product} alt="UX" />
-                </object>
-              </motion.div>
+              />
             )}
           </AnimatePresence>
           <AnimatePresence>
             {activeAccord === "ui" && (
-              <motion.div
-                key="product"
+              // <motion.div
+              //   key="product"
+              //   initial={{ x: -200, y: 0, opacity: 0 }}
+              //   animate={{ x: 0, y: 0, opacity: 1 }}
+              //   className="service-img"
+              // >
+              //   <object type="image/svg+xml" data={UI}>
+              //     <img key="ux" src={UI} alt="UX" />
+              //   </object>
+              // </motion.div>
+              <motion.img
+                key="ux"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
+                src={UIEngineering}
+                alt="UX"
                 className="service-img"
-              >
-                <object type="image/svg+xml" data={UI}>
-                  <img key="ux" src={UI} alt="UX" />
-                </object>
-              </motion.div>
+              />
             )}
           </AnimatePresence>
           <AnimatePresence>
             {activeAccord === "design" && (
-              <motion.div
-                key="product"
+              // <motion.div
+              //   key="product"
+              //   initial={{ x: -200, y: 0, opacity: 0 }}
+              //   animate={{ x: 0, y: 0, opacity: 1 }}
+              //   className="service-img"
+              // >
+              //   <object type="image/svg+xml" data={Design}>
+              //     <img key="ux" src={Design} alt="UX" />
+              //   </object>
+              // </motion.div>
+              <motion.img
+                key="ux"
                 initial={{ x: -200, y: 0, opacity: 0 }}
                 animate={{ x: 0, y: 0, opacity: 1 }}
+                src={DesignTransformation}
+                alt="UX"
                 className="service-img"
-              >
-                <object type="image/svg+xml" data={Design}>
-                  <img key="ux" src={Design} alt="UX" />
-                </object>
-              </motion.div>
+              />
             )}
           </AnimatePresence>
         </div>

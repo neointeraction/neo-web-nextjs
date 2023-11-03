@@ -46,7 +46,7 @@
 }
 
 .diwali .deadline {
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 1em;
 }
 
@@ -79,7 +79,7 @@
   text-align: center;
   font-size: 1.5rem;
   font-weight: 700;
-  margin-top: 2em;
+  margin-top: 3em;
   margin-bottom: 1em;
 }
 
@@ -114,18 +114,24 @@
 
 .diwali .pattern {
   background-image: url(../images/diwali/footer.png);
-  height: 91px;
+  background-size: cover;
+  height: 110px;
   width: 1443px;
   position: absolute;
-  bottom: -100px;
+  top: -150px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
 }
 
 .diwali .logo {
   height: 25em;
 }
 
+.diwali .pattern-container {
+  position: relative;
+  width: 100%;
+}
 .diwali .left-pattern {
   background-image: url(../images/diwali/left-pattern.png);
   height: 726px;
@@ -156,7 +162,6 @@
   top: 8em;
   right: 0;
 }
-
 @media (max-width: 576px) {
   .diwali .content {
     max-width: 500px;
@@ -172,6 +177,34 @@
   .diwali .main-pattern {
     background-image: url(../images/diwali/header.svg);
     transform: scale(0.7) translateX(-70%);
+    /* width: 100%; */
+  }
+  .diwali .logo {
+    transform: scale(0.5);
+    height: 15em;
+  }
+  .diwali button {
+    font-size: 1.2rem;
+  }
+  .diwali p {
+    font-size: 1rem;
+  }
+  .diwali .highlight {
+    font-size: 1.2rem;
+  }
+  .flex {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5em;
+  }
+  .button-container svg {
+    display: none;
+  }
+  .diwali .condition {
+    font-size: 0.8rem;
+  }
+  .diwali .guidelines {
+    padding: 0 20px;
   }
 }
 
@@ -195,5 +228,9 @@
   .diwali button {
     /* font-size: 15.263px; */
     padding: 0.3em;
+  }
+
+  .diwali .pattern {
+    width: 100%;
   }
 }

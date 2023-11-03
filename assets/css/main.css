@@ -5873,5 +5873,55 @@ textarea {
   background: #ccc;
 }
 
+.justify-content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.homepage-event-container {
+  padding: 5em;
+  display: flex;
+  align-items: center;
+}
+
+.homepage-event-container h2 {
+  color: #262525;
+  font-family: "Avenir";
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 109%; /* 43.6px */
+  letter-spacing: -0.44px;
+}
+
+.homepage-event-container h2 span {
+  color: #f90400;
+}
+
+.homepage-event-container p {
+  color: #262525;
+  font-size: 18px;
+  font-weight: 350;
+  line-height: 150%; /* 27px */
+  letter-spacing: -0.198px;
+  margin: 0.8em 0 1.2em;
+}
+
+.homepage-event-container button {
+  border-radius: 4px;
+  background: var(--Red, #e5283f);
+  color: #fff;
+  text-align: center;
+  font-family: Avenir;
+  font-size: 1.125rem;
+  font-weight: 600;
+  padding: 0.56em 1.875em;
+}
+
+.homepage-event-container img {
+  border-radius: 16px;
+  max-width: 40em;
+  width: 100%;
+}
+
 @import url("./landing.css");
 @import url("./diwali.css");

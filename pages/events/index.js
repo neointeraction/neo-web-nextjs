@@ -25,6 +25,7 @@ import { EventContext } from "context/EventContext";
 import { TestimonialContext } from "context/TestimonialContext";
 import SimpleReactValidator from "simple-react-validator";
 import ECBanner from "assets/images/events/ec.jpg";
+import Upcoming from "assets/images/events/upcoming.png";
 
 // export async function getStaticProps(context) {
 //   // Call an external API endpoint to get posts.
@@ -194,7 +195,7 @@ export default withRouter(
                     imageAlt="Hire React Developer - Neointeraction"
                     titleText={
                       <h2 className="event-page-title">
-                        Why you should <span>join us</span>
+                        Why you should <span>attend our events</span>
                       </h2>
                     }
                     contentText={
@@ -216,7 +217,7 @@ export default withRouter(
                   />
                 </div>
               </div>
-              <div className="landing-client">
+              {/* <div className="landing-client">
                 <div className="container animated fadeIn">
                   <ReactWOW animation="fadeIn" delay="0s">
                     <div>
@@ -227,7 +228,7 @@ export default withRouter(
                     </div>
                   </ReactWOW>
                 </div>
-              </div>
+              </div> */}
               <div>
                 <EventContext.Consumer>
                   {(context) => (
@@ -317,7 +318,7 @@ export default withRouter(
                                       item.event_detail?.SEOUrl === null
                                         ? "/"
                                         : {
-                                            pathname: `/events/${item.event_detail?.SEOUrl.replace(
+                                            pathname: `/blogs/${item.event_detail?.SEOUrl.replace(
                                               /[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi,
                                               ""
                                             ).replace(/ /g, "-")}`,
@@ -340,7 +341,12 @@ export default withRouter(
                                             <div className="col-md-6">
                                               <div className="event-image">
                                                 <img
-                                                  src={`${baseUrl}${item.eventCoverImg?.url}`}
+                                                  src={
+                                                    item.eventTag ===
+                                                    "Upcoming Event"
+                                                      ? Upcoming
+                                                      : `${baseUrl}${item.eventCoverImg?.url}`
+                                                  }
                                                   alt="blog-cover"
                                                 />
                                               </div>

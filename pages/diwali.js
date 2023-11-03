@@ -92,7 +92,9 @@ const diwali = () => {
             </p>
           </li>
         </ol>
+      </section>
 
+      <section className="pattern-container">
         <div className="pattern"></div>
       </section>
     </div>
