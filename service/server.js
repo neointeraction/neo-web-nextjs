@@ -911,3 +911,83 @@ app.post("/eventUpdateMail", async (req, res) => {
     });
   }
 });
+
+app.post("/auditemail", async (req, res) => {
+  var transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: "neointeraction.mailer@gmail.com",
+      pass: "unlhgudojkwsqwxg",
+    },
+  });
+
+  const { name, mobile, email, website, pack, ip } = req.body;
+
+  try {
+    var mail = {
+      from: email,
+      to: ["allen@neointeraction.com", "info@neointeraction.com"],
+      subject: `Contact us - UX Audit : ${name}`,
+      html: `<html>
+       <body>
+       <p>Name - ${name}</p>
+       <p>Email - ${email}</p>
+       <p>Mobile - ${mobile}</p>
+       <p>Pack - ${pack}</p>
+       <p>IP Address - ${ip}</p>
+       <p>Website - ${website}</p>
+       </body> 
+       </html>`,
+    };
+
+    var acknowledgementMail = {
+      from: "Neointeraction <info@neointeraction.com>",
+      to: email,
+      subject: `Thank You for Contacting Us`,
+      html: `<html>
+      <body>
+        <p>Hey ${name},</p>
+        <p>
+          Thank you for booking an UX Audit! We have received your details and our team
+          will be reaching out to you soon.
+        </p>
+    
+        <div>Regards,</div>
+        <div>Team Neointeraction Design</div>
+        <a href="https://www.neointeraction.com/">www.neointeraction.com</a>
+        <div>+91-95913338744</div>
+      </body>
+    </html>
+    `,
+    };
+
+    transporter.sendMail(mail, (err, data) => {
+      if (err) {
+        res.json({
+          status: "fail",
+          error: err,
+        });
+      } else {
+        res.json({
+          status: "success",
+        });
+        transporter.sendMail(acknowledgementMail, (err, data) => {
+          if (err) {
+            res.json({
+              status: "fail",
+            });
+          } else {
+            res.json({
+              status: "success",
+            });
+          }
+        });
+      }
+    });
+  } catch (error) {
+    res.json({
+      status: "fail",
+      error: error.message,
+    });
+  }
+});
