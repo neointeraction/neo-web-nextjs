@@ -355,7 +355,7 @@ section.why p {
   background-image: none !important;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 567px) {
   .audit-page {
     padding: 10px;
   }
@@ -372,7 +372,7 @@ section.why p {
     width: auto;
     grid-template-columns: repeat(2, 145px);
   }
-  .why .why-container {
+  .audit-page .why .why-container {
     padding: 10px;
   }
   .audit-page .why .why-container p {
@@ -410,7 +410,7 @@ section.why p {
     text-align: left;
     font-size: 2rem;
   }
-  section.why .subheading {
+  .audit-page section.why .subheading {
     text-align: left;
   }
   .audit-page .case-studies .case-study-card {
@@ -435,58 +435,49 @@ section.why p {
   .audit-page .ux-audit-packs .audit-pack-card button {
     padding: 10px 20px;
   }
-  section.need {
+  .audit-page section.need {
     margin: auto;
   }
 }
 
 @media (min-width: 576px) {
-  section {
+  /* section {
     max-width: 540px;
-  }
+  } */
   .audit-page .why .why-cards {
     width: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, min-max(50px, 1fr));
     gap: 10px;
   }
-  .why .why-container {
+  .audit-page .why .why-container {
     width: auto;
   }
-  .flex-column {
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-  }
-  .flex-column-reverse {
-    flex-direction: column-reverse;
-    align-items: center;
-  }
-  .need,
-  .expect,
-  .case-study-card {
+  .audit-page .need,
+  .audit-page .expect,
+  .audit-page .case-study-card {
     flex-direction: column-reverse;
   }
-  .pack-cards {
+  .audit-page .pack-cards {
     flex-direction: column;
   }
 }
 
 @media (min-width: 768px) {
-  section {
+  /* section {
     max-width: 720px;
-  }
-  .need,
-  .expect,
-  .case-study-card {
+  } */
+  .audit-page .need,
+  .audit-page .expect,
+  .audit-page .case-study-card {
     flex-direction: row;
   }
-  .pack-cards {
+  .audit-page .pack-cards {
     flex-direction: row;
   }
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
   section {
     max-width: 960px;
   }
@@ -496,7 +487,7 @@ section.why p {
   section {
     max-width: 1140px;
   }
-}
+} */
 
 .audit-page img {
   max-width: 100%;

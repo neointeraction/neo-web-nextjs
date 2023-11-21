@@ -552,7 +552,7 @@ const UXAudit = () => {
                   ))}
                 </div>
                 <div className="row testimonial-mobile">
-                  <TestimonialSlider />
+                  {/* <TestimonialSlider /> */}
                 </div>
               </div>
             </div>
