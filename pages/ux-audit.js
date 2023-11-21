@@ -21,7 +21,7 @@ import WhyThree from "../assets/images/audit/why-three.png";
 import WhyFour from "../assets/images/audit/why-four.png";
 import WhyFive from "../assets/images/audit/why-five.png";
 import WhySix from "../assets/images/audit/why-six.png";
-import T1 from "../assets/images/audit/t1.png";
+import T1 from "../assets/images/audit/T1.png";
 import T2 from "../assets/images/audit/T2.png";
 import T3 from "../assets/images/audit/T3.png";
 import Expect from "../assets/images/audit/expect.png";
