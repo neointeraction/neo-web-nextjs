@@ -229,6 +229,7 @@ const UXAudit = () => {
   const [ip, setIp] = useState("");
   const [mailSent, setMailSent] = useState(false);
   const recaptchaRef = createRef();
+  const [selectedPack, setSelectedPack] = useState("Standard");
 
   const handleChange = (e) => {
     const { name, value } = e.target;

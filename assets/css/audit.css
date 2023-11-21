@@ -283,9 +283,11 @@ section.why p {
   overflow: hidden;
   position: relative;
 }
-/* .audit-page .ux-audit-packs .audit-pack-card:hover {
+.audit-page .ux-audit-packs .audit-pack-card:hover,
+.audit-page .ux-audit-packs .audit-pack-card:focus,
+.audit-page .ux-audit-packs .audit-pack-card.selected {
   border: 2px solid #e5283f;
-} */
+}
 
 .audit-pack-card.recommand::after {
   content: "Recommanded";
