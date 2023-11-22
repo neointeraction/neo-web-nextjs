@@ -355,7 +355,38 @@ section.why p {
   background-image: none !important;
 }
 
-@media screen and (max-width: 567px) {
+@media (max-width: 360px) {
+  .audit-page {
+    padding: 10px;
+  }
+  .audit-page .why .why-cards {
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 1fr);
+    gap: 10px;
+  }
+  .audit-page .need,
+  .audit-page .expect,
+  .audit-page .case-study-card {
+    flex-direction: column-reverse;
+  }
+  .audit-page .pack-cards {
+    flex-direction: column;
+  }
+  .audit-page .custom-container img {
+    display: none;
+  }
+  .audit-page .client-testimonials .testimonial-card,
+  .audit-page .ux-audit-packs .audit-pack-card {
+    width: auto;
+    height: auto;
+  }
+  .audit-page .ux-audit-packs .audit-pack-card button {
+    bottom: 10px;
+  }
+}
+
+@media (min-width: 360px) and (max-width: 576px) {
   .audit-page {
     padding: 10px;
   }
@@ -370,7 +401,7 @@ section.why p {
   }
   .audit-page .why .why-cards {
     width: auto;
-    grid-template-columns: repeat(2, 145px);
+    grid-template-columns: repeat(2, 13.125em);
   }
   .audit-page .why .why-container {
     padding: 10px;
@@ -438,12 +469,6 @@ section.why p {
   .audit-page section.need {
     margin: auto;
   }
-}
-
-@media (min-width: 576px) {
-  /* section {
-    max-width: 540px;
-  } */
   .audit-page .why .why-cards {
     width: auto;
     display: grid;
