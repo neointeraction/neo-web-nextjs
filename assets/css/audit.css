@@ -372,7 +372,15 @@ section.why p {
   .image-container {
     display: none;
   }
-
+  .mobile-accord {
+    display: block;
+  }
+  .mob-hide {
+    display: none;
+  }
+  .mob-social-icons {
+    display: none !important;
+  }
   .audit-page .why .why-cards {
     width: auto;
     display: grid;
@@ -398,6 +406,9 @@ section.why p {
   .audit-page .ux-audit-packs .audit-pack-card button {
     bottom: 10px;
   }
+  section.need img {
+    max-width: -webkit-fill-available;
+  }
 }
 
 @media (min-width: 360px) and (max-width: 576px) {
@@ -421,10 +432,6 @@ section.why p {
   }
   .audit-page .need {
     flex-direction: column-reverse;
-  }
-  .audit-page .why .why-cards {
-    width: auto;
-    grid-template-columns: repeat(2, 13.125em);
   }
   .audit-page .why .why-container {
     padding: 10px;
@@ -497,6 +504,7 @@ section.why p {
     display: grid;
     grid-template-columns: repeat(auto-fit, min-max(50px, 1fr));
     gap: 10px;
+    justify-content: center;
   }
   .audit-page .why .why-container {
     width: auto;
