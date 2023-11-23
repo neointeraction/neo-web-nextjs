@@ -344,20 +344,20 @@ const UXAudit = () => {
       </Head>
       <div className="de-landing-container audit-page">
         <div className="landing-banner pattern-right">
-          <div className="container-fluid custom-container">
-            <div className="row">
-              <div className="col-md-7 col-sm-5 flex justify-content-center align-items-center">
+          <div className="container-fluid">
+            <div className="row audit-page-header">
+              <div className="col-md-7 col-sm-5 image-container">
                 <img src={HeaderImg} alt="Logo" />
               </div>
-              <div className="col-md-5 col-sm-7">
+              <div className="col-md-5 col-sm-12 col-xs-12 form-container">
                 <ReactWOW animation="fadeInDown" delay="0s" duration="0.8s">
                   <div
                     id="form"
                     className="contact-form-landing book-audit-form"
                   >
-                    <h1 className="landing-form-title">
+                    <h2 className="landing-form-title">
                       Unlock Business Success with <span>Free UX Audit</span>
-                    </h1>
+                    </h2>
                     <p>
                       Unearth the untapped potential of your digital product
                     </p>
@@ -485,10 +485,10 @@ const UXAudit = () => {
         </div>
         <section className="need">
           <div>
-            <h1>
+            <h2>
               Need a fresh set of eyes on your{" "}
               <span className="highlight">digital product</span>?
-            </h1>
+            </h2>
             <p>
               Do you ever wonder if your website or app is as user-friendly as
               it could be? Are you getting the results you want from your
@@ -541,13 +541,11 @@ const UXAudit = () => {
               <div className="t-card-block">
                 <div className="row testimonial-desktop">
                   {testimonial.map((item) => (
-                    <div className="col-md-4">
-                      <div className="testimonial-card">
-                        <img src={item.img} alt={item.name} />
-                        <h3>{item.name}</h3>
-                        <h5>{item.title}</h5>
-                        <p>{item.desc}</p>
-                      </div>
+                    <div className="testimonial-card">
+                      <img src={item.img} alt={item.name} />
+                      <h3>{item.name}</h3>
+                      <h5>{item.title}</h5>
+                      <p>{item.desc}</p>
                     </div>
                   ))}
                 </div>

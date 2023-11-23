@@ -251,7 +251,7 @@ const Footer = () => {
                   </ul>
                 </div>
               </div>
-              <ul className="social-icons n-social-icons no-bg footer-social-icns">
+              <ul className="social-icons n-social-icons no-bg footer-social-icns mob-social-icons">
                 <li id="ln">
                   <a
                     href="https://www.linkedin.com/company/neointeraction-designs/"
