@@ -365,6 +365,10 @@ section.why p {
   transform: translateX(0%);
 }
 
+.audit-page .expect h2 {
+  font-weight: 750;
+}
+
 @media (max-width: 360px) {
   .audit-page {
     padding: 10px;
@@ -384,13 +388,15 @@ section.why p {
   .audit-page .why .why-cards {
     width: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    grid-template-columns: repeat(2, minmax(5em, 1fr));
     gap: 10px;
   }
   .audit-page .need,
   .audit-page .expect,
   .audit-page .case-study-card {
     flex-direction: column-reverse;
+    margin: 0 auto;
+    gap: 1em;
   }
   .audit-page .pack-cards {
     flex-direction: column;
@@ -403,11 +409,113 @@ section.why p {
     width: auto;
     height: auto;
   }
+  .audit-page .client-testimonials .testimonial-card {
+    max-height: unset;
+  }
   .audit-page .ux-audit-packs .audit-pack-card button {
-    bottom: 10px;
+    position: unset;
+    left: unset;
+    transform: none;
   }
   section.need img {
     max-width: -webkit-fill-available;
+  }
+  .audit-page .client-testimonials {
+    background: none;
+    padding: 0;
+  }
+  .book-audit-form h2,
+  h2,
+  .audit-page .why h2,
+  .audit-page .case-studies h2,
+  .audit-page .ux-audit-packs h2,
+  .audit-page .client-testimonials h2 {
+    font-size: 24px;
+    font-weight: 750;
+    line-height: normal;
+    text-align: left;
+  }
+  .audit-page-header {
+    padding-top: 50px;
+  }
+  .audit-page .container-fluid {
+    padding: 0;
+  }
+  .book-audit-form p {
+    font-size: 12px;
+  }
+  .why .why-container {
+    width: auto;
+    padding: 10px;
+  }
+  .audit-page .why .why-container p {
+    font-size: 14px;
+    padding-bottom: 0;
+    text-align: center;
+  }
+  .audit-page .why-container img {
+    width: 40px;
+  }
+  .audit-page .ux-audit-packs .pack-cards {
+    gap: 1em;
+  }
+  .audit-pack-card.recommand::after {
+    font-size: 16px;
+    width: 390px;
+  }
+  .audit-page .ux-audit-packs .audit-pack-card a {
+    width: 200px;
+    display: block;
+    position: relative;
+    margin-top: 2em;
+  }
+  .audit-page .case-studies .case-study-card {
+    padding: 20px;
+  }
+  .audit-page .case-studies .case-study-card h3 {
+    font-size: 18px;
+  }
+  .audit-page .case-studies .case-study-card p {
+    font-size: 14px;
+    padding-bottom: 20px;
+  }
+  .audit-page .case-studies .case-study-card button {
+    padding: 10px 20px;
+  }
+  .audit-page .ux-audit-packs .audit-pack-card p {
+    font-size: 16px;
+  }
+  .audit-page .ux-audit-packs .audit-pack-card {
+    min-height: unset;
+  }
+  .audit-page .faq-section {
+    padding: 0;
+  }
+  .audit-page .faq-section .landing-title {
+    font-size: 24px;
+  }
+  .audit-page .expect div .subheading,
+  .audit-page .expect .expected h2 {
+    font-size: 14px;
+  }
+  .audit-page .expect .expected p {
+    font-size: 12px;
+    padding-top: 5px;
+  }
+  section.why p {
+    font-size: 14px;
+    text-align: left;
+  }
+  section.need p,
+  section.need ul li {
+    font-size: 14px;
+  }
+  .contact-form-landing {
+    padding: 20px 15px;
+    border-radius: 10px;
+  }
+  .audit-page .case-studies {
+    margin: 2em auto;
   }
 }
 
@@ -461,9 +569,6 @@ section.why p {
   }
   .audit-page .why .why-container {
     width: auto;
-  }
-  .audit-page .expect h1 {
-    font-size: 2rem;
   }
   .audit-page .case-studies h2,
   .audit-page .ux-audit-packs h2,

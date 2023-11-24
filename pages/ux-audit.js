@@ -520,7 +520,7 @@ const UXAudit = () => {
         </section>
         <section className="expect">
           <div>
-            <h1>What to expect?</h1>
+            <h2>What to expect?</h2>
             <p className="subheading">Our audit team conducts:</p>
             <ul>
               <li>
@@ -535,9 +535,9 @@ const UXAudit = () => {
         <ReactWOW animation="fadeInUp" delay="0s">
           <div className="client-testimonials">
             <div className=" ">
-              <h1 className="landing-title">
+              <h2 className="landing-title">
                 Client <span className="highlight">Testimonials</span>
-              </h1>
+              </h2>
               <div className="t-card-block">
                 <div className="row testimonial-desktop">
                   {testimonial.map((item) => (
@@ -605,7 +605,9 @@ const UXAudit = () => {
                         }));
                       }}
                     >
-                      Book Now
+                      {pack.heading == "Lets Connect"
+                        ? "Contact Us"
+                        : "Book Now"}
                     </button>
                   </a>
                 </div>
