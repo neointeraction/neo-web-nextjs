@@ -265,12 +265,12 @@ const UXAudit = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (simpleValidator.current.allValid()) {
-      const captchaCode = recaptchaRef.current.getValue();
-      if (captchaCode === "") {
-        alert("Please click <I'm not a robot> before sending the submitting");
-        setSubmitted(false);
-        return;
-      }
+      // const captchaCode = recaptchaRef.current.getValue();
+      // if (captchaCode === "") {
+      //   alert("Please click <I'm not a robot> before sending the submitting");
+      //   setSubmitted(false);
+      //   return;
+      // }
       setSubmitted(true);
       setMailSent(true);
       formData["ip"] = ip;
