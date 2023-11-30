@@ -288,6 +288,7 @@ section.why p {
   text-align: center;
   overflow: hidden;
   position: relative;
+  transition: all 0.5s;
 }
 .audit-page .ux-audit-packs .audit-pack-card:hover,
 .audit-page .ux-audit-packs .audit-pack-card:focus,
@@ -596,10 +597,11 @@ section.why p {
     height: auto;
   }
   .audit-page .ux-audit-packs .audit-pack-card button {
-    bottom: 10px;
-  }
-  .audit-page .ux-audit-packs .audit-pack-card button {
     padding: 10px 20px;
+    position: unset;
+    left: unset;
+    transform: none;
+    margin-top: 2rem;
   }
   .audit-page section.need {
     margin: auto;
@@ -628,6 +630,10 @@ section.why p {
   }
   .audit-page .pattern-right {
     padding-top: 70px;
+  }
+  .audit-page .ux-audit-packs .audit-pack-card {
+    min-height: unset;
+    padding: 3rem 3.125em;
   }
 }
 
