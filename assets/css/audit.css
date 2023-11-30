@@ -141,7 +141,7 @@ section.why p {
 }
 
 .audit-page .expect .expected img {
-  padding-right: 1em;
+  padding-right: 8px;
 }
 
 .audit-page .expect .expected h2 {
@@ -604,10 +604,11 @@ section.why p {
   .audit-page section.need {
     margin: auto;
   }
+
   .audit-page .why .why-cards {
     width: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, min-max(50px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(11.19em, 1fr));
     gap: 10px;
     justify-content: center;
   }
@@ -621,6 +622,12 @@ section.why p {
   }
   .audit-page .pack-cards {
     flex-direction: column;
+  }
+  .audit-page .client-testimonials {
+    background: transparent;
+  }
+  .audit-page .pattern-right {
+    padding-top: 70px;
   }
 }
 

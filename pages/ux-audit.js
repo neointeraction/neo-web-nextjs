@@ -221,7 +221,7 @@ const UXAudit = () => {
     mobile: "",
     email: "",
     website: "",
-    pack: "",
+    pack: "Standard",
   });
   const [submitted, setSubmitted] = useState(false);
   const simpleValidator = useRef(new SimpleReactValidator());
@@ -264,6 +264,7 @@ const UXAudit = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Reaching here", formData);
     if (simpleValidator.current.allValid()) {
       // const captchaCode = recaptchaRef.current.getValue();
       // if (captchaCode === "") {
@@ -295,10 +296,8 @@ const UXAudit = () => {
                 name: "",
                 mobile: "",
                 email: "",
-                company: "",
-                employmentType: "",
-                organizationName: "",
-                specify: "",
+                website: "",
+                pack: "Standard",
               });
               // Router.push("/contact-thank-you");
               // gtag_report_conversion("");
@@ -364,6 +363,7 @@ const UXAudit = () => {
                     <form
                       onSubmit={handleSubmit}
                       className="design-workshop__form"
+                      id="audit-form"
                     >
                       <div className="form-block">
                         <input
@@ -376,13 +376,10 @@ const UXAudit = () => {
                           className={`input-custom  ${
                             formData?.name ? "" : "dark"
                           }`}
-                          onBlur={() =>
-                            simpleValidator.current.showMessageFor("name")
-                          }
                         />
                       </div>
                       {simpleValidator.current.message(
-                        "Name",
+                        "name",
                         formData?.name,
                         "required|alpha_space"
                       )}
@@ -418,7 +415,7 @@ const UXAudit = () => {
                         />
                       </div>
                       {simpleValidator.current.message(
-                        "Mobile",
+                        "mobile",
                         formData?.mobile,
                         "required|phone"
                       )}
@@ -433,9 +430,6 @@ const UXAudit = () => {
                           className={`input-custom  ${
                             formData?.name ? "" : "dark"
                           }`}
-                          onBlur={() =>
-                            simpleValidator.current.showMessageFor("website")
-                          }
                         />
                       </div>
                       {simpleValidator.current.message(
@@ -454,6 +448,7 @@ const UXAudit = () => {
                         class={`loader-btns custom-btn submit-btn-landing contact__submit-button ${
                           submitted ? "pointer-events-none" : ""
                         }`}
+                        form="audit-form"
                       >
                         Book now
                         {mailSent ? (
@@ -605,9 +600,7 @@ const UXAudit = () => {
                         }));
                       }}
                     >
-                      {pack.heading == "Lets Connect"
-                        ? "Contact Us"
-                        : "Book Now"}
+                      {pack.price == "Lets Connect" ? "Contact Us" : "Book Now"}
                     </button>
                   </a>
                 </div>
