@@ -282,15 +282,15 @@ const UXAudit = () => {
           })
           .then((response) => {
             if (response.data.status === "success") {
-              toast(SuccessToast, {
-                position: "top-right",
-                autoClose: 5000,
-                hideProgressBar: true,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-              });
+              // toast(SuccessToast, {
+              //   position: "top-right",
+              //   autoClose: 5000,
+              //   hideProgressBar: true,
+              //   closeOnClick: true,
+              //   pauseOnHover: true,
+              //   draggable: true,
+              //   progress: undefined,
+              // });
               setMailSent(false);
               setFormData({
                 name: "",
@@ -299,7 +299,7 @@ const UXAudit = () => {
                 website: "",
                 pack: "Standard",
               });
-              // Router.push("/contact-thank-you");
+              Router.push("/ux-audit-booking-success");
               // gtag_report_conversion("");
             } else if (response.data.status === "fail") {
               alert("Message failed to send.");
