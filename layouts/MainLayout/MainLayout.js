@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import HeaderNew from "components/HeaderNew";
-import DesignWorkshopPromo from "components/DesignWorkshopPromo";
+import UXDesignWebinarPromo from "components/UXDesignWebinarPromo";
 import Chat from "components/Chat";
 import { Helmet } from "react-helmet";
 import Head from "next/head";
@@ -22,14 +22,14 @@ function MainLayout({ children }) {
     window.addEventListener("resize", handleWindowSizeChange);
   }, []);
 
-  // useEffect(() => {
-  //   setIsOpen(false);
-  //   if (router.pathname === "/" || router.pathname === "/career") {
-  //     setTimeout(() => {
-  //       setIsOpen(true);
-  //     }, 3000);
-  //   }
-  // }, [router]);
+  useEffect(() => {
+    setIsOpen(false);
+    if (router.pathname === "/") {
+      setTimeout(() => {
+        setIsOpen(true);
+      }, 3000);
+    }
+  }, [router]);
 
   return (
     <div>
@@ -41,16 +41,11 @@ function MainLayout({ children }) {
           rel="stylesheet"
         ></link>
       </Head>
-      {/* {isOpen && (
-        <DesignWorkshopPromo
-          isOpen={isOpen}
-          handleIsOpen={() => setIsOpen(false)}
-        />
-      )} */}
+      {isOpen && <UXDesignWebinarPromo handleIsOpen={() => setIsOpen(false)} />}
       {width === 0 ? null : width <= 768 ? (
-        <Header upfront={width <= 768 ? false : true} />
+        <Header upfront={width <= 768 ? false : true} isOpen={isOpen} />
       ) : width >= 769 ? (
-        <HeaderNew />
+        <HeaderNew isOpen={isOpen} />
       ) : null}
 
       {children}

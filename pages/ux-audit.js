@@ -551,7 +551,7 @@ const UXAudit = () => {
             </div>
           </div>
         </ReactWOW>
-        <ReactWOW animation="fadeInUp" delay="0s">
+        {/*  <ReactWOW animation="fadeInUp" delay="0s">
           <section className="case-studies">
             <h2>
               Our <span className="highlight">Case Studies</span>
@@ -568,8 +568,8 @@ const UXAudit = () => {
               <img src={CaseStudy} alt="case study" />
             </div>
           </section>
-        </ReactWOW>
-        <ReactWOW animation="fadeInUp" delay="0s">
+                  </ReactWOW> */}
+        {/* <ReactWOW animation="fadeInUp" delay="0s">
           <section className="ux-audit-packs ">
             <h2>
               UX Audit <span className="highlight">Packs</span>
@@ -605,6 +605,24 @@ const UXAudit = () => {
                   </a>
                 </div>
               ))}
+            </div>
+          </section>
+        </ReactWOW> */}
+        <ReactWOW animation="fadeInUp" delay="0s">
+          <section className="case-studies">
+            <h2>
+              Schedule a UX Audit <span className="highlight">Today</span>
+            </h2>
+            <div className="case-study-card">
+              <div>
+                <p>
+                  Get a FREE 1-hour discovery consultation with our UX experts !
+                  Gain valuable insights for optimizing the user experience of
+                  your products.
+                </p>
+                <button>Download</button>
+              </div>
+              <img src={CaseStudy} alt="case study" />
             </div>
           </section>
         </ReactWOW>

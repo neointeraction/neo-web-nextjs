@@ -17,9 +17,14 @@ import Medium from "assets/images/medium.svg";
 import Contact from "assets/images/n-images/header-contact.svg";
 import Illustration from "assets/images/n-images/animated/menu-illustration.svg";
 
-const Header = ({ upfront }) => {
+const Header = ({ upfront, isOpen }) => {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
+  const [isPromoActive, setIsPromoActive] = useState(false);
+
+  useEffect(() => {
+    setIsPromoActive(isOpen);
+  }, [isOpen]);
 
   const handleMenuOpen = () => {
     setOpenMenu(true);
@@ -75,8 +80,13 @@ const Header = ({ upfront }) => {
       const scrollCheck = window.scrollY > 0;
       if (scrollCheck) {
         setfixed(true);
+        setIsPromoActive(false);
       } else {
         setfixed(false);
+        setIsPromoActive(false);
+        if (isOpen) {
+          setIsPromoActive(true);
+        }
       }
     });
   });
@@ -88,7 +98,11 @@ const Header = ({ upfront }) => {
   return (
     <>
       {upfront ? (
-        <div className={`header-with-panel ${fixed ? "fixed" : ""}`}>
+        <div
+          className={`header-with-panel ${fixed ? "fixed" : ""} ${
+            isPromoActive ? "promo-banner-active" : ""
+          }`}
+        >
           <div className="n-header-container">
             <div
               className="logo-container n-logo-container upfront-logo-container"
@@ -350,7 +364,11 @@ const Header = ({ upfront }) => {
           </AnimatePresence>
         </div>
       ) : (
-        <div className={`header-with-panel ${fixed ? "fixed" : ""}`}>
+        <div
+          className={`header-with-panel ${fixed ? "fixed" : ""} ${
+            isPromoActive ? "promo-banner-active" : ""
+          }`}
+        >
           <div className="n-header-container">
             <motion.div
               className="n-menu"

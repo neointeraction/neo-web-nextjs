@@ -16,7 +16,7 @@ import ModalCard from "components/ModalCard";
 import ImageVideoText from "components/ImageVideoText";
 import InternModal from "components/InternModal";
 import CardTileUpfront from "components/CardTileUpfront";
-
+import UXDesignWebinarAd from "assets/images/audit/closing_soon_popup.png";
 import BackArrow from "assets/images/BackArrow.svg";
 // import CareerImg1 from "assets/images/ux-img.jpg";
 // import CareerImg2 from "assets/images/ux-img.jpg";
@@ -69,6 +69,7 @@ export default withRouter(
         isMouseInside: false,
         showModal: false,
         career: [],
+        webinarEnabled: true,
       };
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -110,6 +111,11 @@ export default withRouter(
       } catch (error) {
         this.setState({ error });
       }
+      setTimeout(() => {
+        this.setState({
+          webinarEnabled: false,
+        });
+      }, 3000);
     };
 
     componentDidUpdate = async (prevProps, prevState) => {
@@ -370,6 +376,14 @@ export default withRouter(
           >
             <InternModal togglePopover={this.handleCloseModal} />
           </ReactModal>
+          {this.state.webinarEnabled && (
+            <div className="webinar-ad">
+              <img src={UXDesignWebinarAd} alt="UX design Webinar" />
+              <a href="https://forms.gle/d6mXttnFZ1fPpwrn9">
+                <button>Register Now</button>
+              </a>
+            </div>
+          )}
         </div>
       );
     }

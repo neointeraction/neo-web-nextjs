@@ -724,3 +724,40 @@ section.why p {
     margin: auto;
   }
 }
+
+.webinar-ad {
+  position: fixed;
+  inset: 0px;
+  background-color: rgba(255, 255, 255, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.webinar-ad img {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  overflow: auto;
+  border-radius: 4px;
+  outline: none;
+  width: 500px;
+}
+
+.webinar-ad a {
+  position: relative;
+}
+
+.webinar-ad button {
+  position: absolute;
+  background: rgb(255, 255, 255);
+  color: black;
+  font-size: 16px;
+  width: 120px;
+  border-radius: 20px;
+  padding: 8px 0;
+  font-weight: bold;
+  box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
+  margin-top: 4.5em;
+  margin-left: -53px;
+}
