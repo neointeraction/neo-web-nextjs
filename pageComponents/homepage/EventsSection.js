@@ -33,7 +33,11 @@ const EventsSection = ({ inner }) => {
   return (
     <div className={`homepage-event-container ${inner ? "nobg" : ""}`}>
       <div className="row">
-        <div className={`${inner ? "col-md-5" : "col-md-6"} `}>
+        <div
+          className={`${
+            inner ? "col-md-5" : "col-md-6"
+          } homepage-event-content`}
+        >
           <h2>
             Neointeraction <span>Design Events</span>
           </h2>
@@ -51,7 +55,11 @@ const EventsSection = ({ inner }) => {
             Explore
           </button>
         </div>
-        <div className={` ${inner ? "col-md-7" : "col-md-6"}`}>
+        <div
+          className={` ${
+            inner ? "col-md-7" : "col-md-6"
+          } homepage-event-image-container`}
+        >
           <div>
             <img src={HomePageEvent} alt="lady watching an event" />
           </div>

@@ -124,6 +124,12 @@ const Details = styled.div`
   text-align: center;
   font-family: Poppins;
   font-size: 16.35px;
+  @media (max-width: 716px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 640px) {
+    font-size: 0.6rem;
+  }
   @media (max-width: 567px) {
     font-size: 0.5rem;
   }

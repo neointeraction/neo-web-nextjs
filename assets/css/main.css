@@ -5882,6 +5882,27 @@ textarea {
   padding: 5em;
   display: flex;
   align-items: center;
+  gap: 1em;
+}
+
+@media (max-width: 768px) {
+  .homepage-event-container {
+    padding: 0;
+  }
+  .homepage-event-container .homepage-event-content {
+    margin-bottom: 25px;
+  }
+}
+
+.homepage-event-container .homepage-event-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.homepage-event-container .homepage-event-image-container {
+  text-align: center;
 }
 
 .homepage-event-container h2 {

@@ -620,7 +620,9 @@ const UXAudit = () => {
                   Gain valuable insights for optimizing the user experience of
                   your products.
                 </p>
-                <button>Download</button>
+                <a href="#form">
+                  <button>Book Now</button>
+                </a>
               </div>
               <img src={CaseStudy} alt="case study" />
             </div>

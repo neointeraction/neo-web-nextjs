@@ -9,7 +9,7 @@ import axios from "axios";
 import { BlogContext } from "context/BlogContext";
 
 import { withRouter } from "next/router";
-
+import Close from "assets/images/landing/promo-banner-close.png";
 import SectionTitle from "components/SectionTitle";
 import Faq from "components/Faq";
 import ModalCard from "components/ModalCard";
@@ -69,7 +69,7 @@ export default withRouter(
         isMouseInside: false,
         showModal: false,
         career: [],
-        webinarEnabled: true,
+        webinarEnabled: false,
       };
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -113,7 +113,7 @@ export default withRouter(
       }
       setTimeout(() => {
         this.setState({
-          webinarEnabled: false,
+          webinarEnabled: true,
         });
       }, 3000);
     };
@@ -378,10 +378,26 @@ export default withRouter(
           </ReactModal>
           {this.state.webinarEnabled && (
             <div className="webinar-ad">
-              <img src={UXDesignWebinarAd} alt="UX design Webinar" />
-              <a href="https://forms.gle/d6mXttnFZ1fPpwrn9">
-                <button>Register Now</button>
-              </a>
+              <div style={{ position: "relative" }}>
+                <img src={UXDesignWebinarAd} alt="UX design Webinar" />
+                <a href="https://forms.gle/d6mXttnFZ1fPpwrn9">
+                  <button>Register Now</button>
+                </a>
+                <div
+                  style={{
+                    position: "absolute",
+                    right: "10px",
+                    top: "10px",
+                    cursor: "pointer",
+                  }}
+                >
+                  <img
+                    src={Close}
+                    alt="close"
+                    onClick={() => this.setState({ webinarEnabled: false })}
+                  />
+                </div>
+              </div>
             </div>
           )}
         </div>

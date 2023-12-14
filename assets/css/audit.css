@@ -736,16 +736,12 @@ section.why p {
 }
 
 .webinar-ad img {
-  position: absolute;
+  /* position: absolute; */
   background: rgb(255, 255, 255);
   overflow: auto;
   border-radius: 4px;
   outline: none;
-  width: 500px;
-}
-
-.webinar-ad a {
-  position: relative;
+  max-width: 600px;
 }
 
 .webinar-ad button {
@@ -758,6 +754,16 @@ section.why p {
   padding: 8px 0;
   font-weight: bold;
   box-shadow: 1px 5px 15px rgba(0, 0, 0, 0.5);
-  margin-top: 4.5em;
-  margin-left: -53px;
+  margin-top: 65%;
+  margin-left: -351px;
+}
+
+@media (max-width: 567px) {
+  .webinar-ad img {
+    max-width: 350px;
+  }
+
+  .webinar-ad button {
+    margin-left: -240px;
+  }
 }
