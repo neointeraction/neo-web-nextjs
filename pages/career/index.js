@@ -69,7 +69,6 @@ export default withRouter(
         isMouseInside: false,
         showModal: false,
         career: [],
-        webinarEnabled: false,
       };
       this.handleOpenModal = this.handleOpenModal.bind(this);
       this.handleCloseModal = this.handleCloseModal.bind(this);
@@ -111,11 +110,6 @@ export default withRouter(
       } catch (error) {
         this.setState({ error });
       }
-      setTimeout(() => {
-        this.setState({
-          webinarEnabled: true,
-        });
-      }, 3000);
     };
 
     componentDidUpdate = async (prevProps, prevState) => {
@@ -376,30 +370,6 @@ export default withRouter(
           >
             <InternModal togglePopover={this.handleCloseModal} />
           </ReactModal>
-          {this.state.webinarEnabled && (
-            <div className="webinar-ad">
-              <div style={{ position: "relative" }}>
-                <img src={UXDesignWebinarAd} alt="UX design Webinar" />
-                <a href="https://forms.gle/d6mXttnFZ1fPpwrn9">
-                  <button>Register Now</button>
-                </a>
-                <div
-                  style={{
-                    position: "absolute",
-                    right: "10px",
-                    top: "10px",
-                    cursor: "pointer",
-                  }}
-                >
-                  <img
-                    src={Close}
-                    alt="close"
-                    onClick={() => this.setState({ webinarEnabled: false })}
-                  />
-                </div>
-              </div>
-            </div>
-          )}
         </div>
       );
     }

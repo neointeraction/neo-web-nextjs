@@ -17,16 +17,11 @@ import Medium from "assets/images/medium.svg";
 import Contact from "assets/images/n-images/header-contact.svg";
 import Illustration from "assets/images/n-images/animated/menu-illustration.svg";
 
-const HeaderNew = ({ isOpen }) => {
+const HeaderNew = () => {
   const router = useRouter();
   const [openMenu, setOpenMenu] = useState(false);
-  const [isPromoActive, setIsPromoActive] = useState(false);
 
   const [fixed, setfixed] = useState(false);
-
-  useEffect(() => {
-    setIsPromoActive(isOpen);
-  }, [isOpen]);
 
   const handleMenuOpen = () => {
     setOpenMenu(true);
@@ -80,13 +75,8 @@ const HeaderNew = ({ isOpen }) => {
       const scrollCheck = window.scrollY > 0;
       if (scrollCheck) {
         setfixed(true);
-        setIsPromoActive(false);
       } else {
         setfixed(false);
-        setIsPromoActive(false);
-        if (isOpen) {
-          setIsPromoActive(true);
-        }
       }
     });
   });
@@ -98,11 +88,7 @@ const HeaderNew = ({ isOpen }) => {
   return (
     <>
       <div className="header-block">
-        <div
-          className={`header-floating ${fixed ? "fixed" : ""} ${
-            isPromoActive ? "promo-banner-active" : ""
-          }`}
-        >
+        <div className={`header-floating ${fixed ? "fixed" : ""}`}>
           <div className="n-header-container">
             <div
               className="logo-container n-logo-container upfront-logo-container"
